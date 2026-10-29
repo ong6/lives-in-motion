@@ -1,0 +1,465 @@
+{
+  "slug": "jack-sim",
+  "name": "Jack Sim",
+  "born": "1957",
+  "died": null,
+  "tagline": "The man who made toilets a global conversation.",
+  "direction": "paper-theatre",
+  "generated": false,
+  "scenes": [
+    {
+      "id": "s1",
+      "year": "1957",
+      "title": "A village with no plumbing",
+      "caption": "Jack Sim is born, the second of three children, in an impoverished village in Upper Serangoon with no plumbing. His mother is a beautician.",
+      "visual": "1950s-60s Singapore village: zinc-roofed wooden huts on stilts, a bucket latrine behind a hut, kerosene lamp, a child silhouette seen from behind carrying a pail.",
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "WEF profile",
+          "url": "https://www.weforum.org/people/jack-sim/"
+        },
+        {
+          "label": "Skoll",
+          "url": "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
+        }
+      ],
+      "layers": [
+        {
+          "id": "sun",
+          "concept": "sun",
+          "motif": "sky-sun",
+          "depth": 0.05,
+          "x": 78,
+          "y": 40,
+          "w": 14,
+          "enter": "fade"
+        },
+        {
+          "id": "huts",
+          "concept": "wooden huts on stilts",
+          "motif": "stilt-huts",
+          "depth": 0.3,
+          "x": 40,
+          "y": 86,
+          "w": 52,
+          "enter": "rise"
+        },
+        {
+          "id": "latrine",
+          "concept": "latrine shed",
+          "motif": "latrine-shed",
+          "depth": 0.55,
+          "x": 80,
+          "y": 90,
+          "w": 13,
+          "enter": "slide-right"
+        },
+        {
+          "id": "bucket",
+          "concept": "bucket",
+          "motif": "bucket",
+          "depth": 0.75,
+          "x": 66,
+          "y": 92,
+          "w": 7,
+          "enter": "drop"
+        },
+        {
+          "id": "figure",
+          "concept": "person seen from behind",
+          "motif": "figure-child",
+          "depth": 0.85,
+          "x": 24,
+          "y": 92,
+          "w": 8,
+          "enter": "rise"
+        },
+        {
+          "id": "lamp",
+          "concept": "kerosene lamp",
+          "motif": "lamp",
+          "depth": 0.95,
+          "x": 10,
+          "y": 96,
+          "w": 6,
+          "enter": "drop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "year": "1982",
+      "title": "Building a business",
+      "caption": "After working as a site supervisor and salesman, he starts his own firm. In 1982 he founds Besco Building Supplies; by his early 40s he runs 15 companies.",
+      "visual": "Construction site and hardhat on a desk, building-material crates, blueprint, rising shophouse skyline; figure as a back-turned silhouette in a short-sleeved shirt.",
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "AsiaOne",
+          "url": "https://www.asiaone.com/health/toilet-man-jack-sim-has-last-laugh"
+        }
+      ],
+      "layers": [
+        {
+          "id": "skyline",
+          "concept": "shophouse row",
+          "motif": "shophouses",
+          "depth": 0.2,
+          "x": 50,
+          "y": 82,
+          "w": 70,
+          "enter": "rise"
+        },
+        {
+          "id": "blueprint",
+          "concept": "blueprint",
+          "motif": "blueprint",
+          "depth": 0.5,
+          "x": 30,
+          "y": 92,
+          "w": 24,
+          "enter": "slide-left"
+        },
+        {
+          "id": "crates",
+          "concept": "crates",
+          "motif": "crates",
+          "depth": 0.6,
+          "x": 74,
+          "y": 94,
+          "w": 22,
+          "enter": "slide-right"
+        },
+        {
+          "id": "figure",
+          "concept": "person seen from behind",
+          "motif": "figure-adult",
+          "depth": 0.85,
+          "x": 52,
+          "y": 92,
+          "w": 9,
+          "enter": "rise"
+        },
+        {
+          "id": "hardhat",
+          "concept": "hard hat",
+          "motif": "hardhat",
+          "depth": 0.95,
+          "x": 86,
+          "y": 98,
+          "w": 11,
+          "enter": "drop"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "year": "1998",
+      "title": "A change of course",
+      "caption": "Around 40, with the Asian financial crisis behind him, he sells part of his businesses and turns to social work. In December 1998 he founds the Restroom Association of Singapore.",
+      "visual": "Office door closing on a desk of papers; a public toilet sign and a clipboard rating chart; silhouette walking out toward a public restroom block.",
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "WEF profile",
+          "url": "https://www.weforum.org/people/jack-sim/"
+        }
+      ],
+      "layers": [
+        {
+          "id": "door",
+          "concept": "office door",
+          "motif": "door",
+          "depth": 0.25,
+          "x": 24,
+          "y": 90,
+          "w": 14,
+          "enter": "unfold"
+        },
+        {
+          "id": "sign",
+          "concept": "toilet sign",
+          "motif": "wc-sign",
+          "depth": 0.5,
+          "x": 64,
+          "y": 60,
+          "w": 14,
+          "enter": "drop"
+        },
+        {
+          "id": "figure",
+          "concept": "person walking",
+          "motif": "figure-walk",
+          "depth": 0.85,
+          "x": 48,
+          "y": 92,
+          "w": 9,
+          "enter": "slide-right"
+        },
+        {
+          "id": "toilet",
+          "concept": "toilet",
+          "motif": "toilet",
+          "depth": 0.8,
+          "x": 82,
+          "y": 96,
+          "w": 15,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "year": "2001",
+      "title": "The World Toilet Organization",
+      "caption": "On 19 November 2001 he founds the World Toilet Organization. He uses humour and shock to get people talking about a taboo subject.",
+      "visual": "Globe with a toilet-seat icon, banners with cheeky slogans, a golden toilet trophy prop, small crowd silhouettes laughing.",
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "Georgetown Berkley Center",
+          "url": "https://berkleycenter.georgetown.edu/posts/a-stink-over-sanitation"
+        },
+        {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/articles/ads-for-bathroom-products-flush-with-potty-humor-1423529356"
+        }
+      ],
+      "layers": [
+        {
+          "id": "globe",
+          "concept": "globe",
+          "motif": "globe",
+          "depth": 0.3,
+          "x": 50,
+          "y": 80,
+          "w": 28,
+          "enter": "unfold"
+        },
+        {
+          "id": "banner",
+          "concept": "banner",
+          "motif": "banner",
+          "depth": 0.55,
+          "x": 50,
+          "y": 30,
+          "w": 40,
+          "enter": "drop",
+          "text": "LET'S TALK TOILETS"
+        },
+        {
+          "id": "crowd",
+          "concept": "crowd",
+          "motif": "crowd",
+          "depth": 0.75,
+          "x": 50,
+          "y": 98,
+          "w": 70,
+          "enter": "rise"
+        },
+        {
+          "id": "gold",
+          "concept": "golden toilet",
+          "motif": "toilet-gold",
+          "depth": 0.95,
+          "x": 84,
+          "y": 96,
+          "w": 13,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "year": "2008",
+      "title": "A hero of the environment",
+      "caption": "TIME names him a Hero of the Environment in 2008. In 2011 he founds the BOP Hub to back social enterprises serving the world's poorest.",
+      "visual": "Magazine cover frame with a dark silhouette, award medal, a seedling growing from a toilet bowl, network of small startup icons.",
+      "sources": [
+        {
+          "label": "TIME 2008 (archived)",
+          "url": "https://web.archive.org/web/20090501144846/http://www.time.com/time/specials/packages/article/0,28804,1841778_1841781_1841822,00.html"
+        },
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        }
+      ],
+      "layers": [
+        {
+          "id": "magazine",
+          "concept": "magazine cover",
+          "motif": "magazine",
+          "depth": 0.3,
+          "x": 28,
+          "y": 84,
+          "w": 20,
+          "enter": "unfold",
+          "text": "HEROES"
+        },
+        {
+          "id": "medal",
+          "concept": "medal",
+          "motif": "medal",
+          "depth": 0.55,
+          "x": 52,
+          "y": 70,
+          "w": 10,
+          "enter": "drop"
+        },
+        {
+          "id": "toilet",
+          "concept": "toilet",
+          "motif": "toilet",
+          "depth": 0.7,
+          "x": 74,
+          "y": 94,
+          "w": 18,
+          "enter": "rise"
+        },
+        {
+          "id": "seedling",
+          "concept": "seedling",
+          "motif": "seedling",
+          "depth": 0.9,
+          "x": 72,
+          "y": 62,
+          "w": 8,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "year": "2013",
+      "title": "A day at the UN",
+      "caption": "On 24 July 2013 the UN General Assembly adopts resolution A/RES/67/291, 'Sanitation for All', making 19 November World Toilet Day. It was Singapore's first UN resolution.",
+      "visual": "UN General Assembly hall from behind, rows of flags, a calendar page showing 19 November, a toilet-icon banner.",
+      "sources": [
+        {
+          "label": "Straits Times",
+          "url": "https://www.straitstimes.com/singapore/singapores-first-un-resolution-adopted-now-every-nov-19-is-world-toilet-day"
+        },
+        {
+          "label": "UN-Project vote record, res. 67/291",
+          "url": "https://un-project.org/votes/resolution/67-291/"
+        }
+      ],
+      "layers": [
+        {
+          "id": "hall",
+          "concept": "assembly hall",
+          "motif": "un-hall",
+          "depth": 0.15,
+          "x": 50,
+          "y": 80,
+          "w": 80,
+          "enter": "fade"
+        },
+        {
+          "id": "flags",
+          "concept": "row of flags",
+          "motif": "flags-row",
+          "depth": 0.45,
+          "x": 50,
+          "y": 72,
+          "w": 56,
+          "enter": "unfold"
+        },
+        {
+          "id": "calendar",
+          "concept": "calendar page",
+          "motif": "calendar",
+          "depth": 0.7,
+          "x": 80,
+          "y": 90,
+          "w": 14,
+          "enter": "drop",
+          "text": "19 NOV"
+        },
+        {
+          "id": "crowd",
+          "concept": "delegates",
+          "motif": "crowd",
+          "depth": 0.9,
+          "x": 40,
+          "y": 100,
+          "w": 64,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "year": "2019",
+      "title": "Mr. Toilet on film",
+      "caption": "The documentary 'Mr. Toilet: The World's #2 Man' premieres at Hot Docs on 27 April 2019, following his funny, relentless campaign.",
+      "visual": "Cinema screen with film-reel border, a rubber duck on a toilet seat as a mascot, audience silhouettes, clapperboard.",
+      "sources": [
+        {
+          "label": "Wikipedia: Mr. Toilet",
+          "url": "https://en.wikipedia.org/wiki/Mr._Toilet"
+        },
+        {
+          "label": "Straits Times",
+          "url": "https://www.straitstimes.com/lifestyle/entertainment/singapore-toilet-activists-documentary-to-premiere-at-festival"
+        }
+      ],
+      "layers": [
+        {
+          "id": "screen",
+          "concept": "cinema screen",
+          "motif": "film-screen",
+          "depth": 0.2,
+          "x": 50,
+          "y": 72,
+          "w": 60,
+          "enter": "fade"
+        },
+        {
+          "id": "duck",
+          "concept": "rubber duck",
+          "motif": "duck",
+          "depth": 0.55,
+          "x": 50,
+          "y": 58,
+          "w": 14,
+          "enter": "rise"
+        },
+        {
+          "id": "toilet",
+          "concept": "toilet",
+          "motif": "toilet",
+          "depth": 0.4,
+          "x": 50,
+          "y": 66,
+          "w": 18,
+          "enter": "rise"
+        },
+        {
+          "id": "crowd",
+          "concept": "audience",
+          "motif": "crowd",
+          "depth": 0.95,
+          "x": 50,
+          "y": 104,
+          "w": 90,
+          "enter": "rise"
+        }
+      ]
+    }
+  ]
+}

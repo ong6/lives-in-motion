@@ -1,0 +1,431 @@
+{
+  "slug": "lee-kuan-yew",
+  "name": "Lee Kuan Yew",
+  "born": "1923",
+  "died": "2015-03-23",
+  "tagline": "The founding prime minister who led Singapore from 1959 to 1990.",
+  "direction": "paper-theatre",
+  "generated": false,
+  "scenes": [
+    {
+      "id": "s1",
+      "year": "1923",
+      "title": "Born in Singapore",
+      "caption": "Lee Kuan Yew is born on 16 September 1923. He studies at Raffles Institution, then at Raffles College on a scholarship.",
+      "visual": "1920s Singapore shophouse street, rickshaw, colonial school building with clock tower; child silhouette in school uniform seen from behind.",
+      "sources": [
+        {
+          "label": "Infopedia: Lee Kuan Yew",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-03-18_164023.html"
+        },
+        {
+          "label": "PMO",
+          "url": "https://www.pmo.gov.sg/Past-Prime-Ministers/Mr-LEE-Kuan-Yew"
+        }
+      ],
+      "layers": [
+        {
+          "id": "tower",
+          "concept": "colonial clock tower",
+          "motif": "clock-tower",
+          "depth": 0.2,
+          "x": 62,
+          "y": 86,
+          "w": 36,
+          "enter": "rise"
+        },
+        {
+          "id": "shops",
+          "concept": "shophouse street",
+          "motif": "shophouses",
+          "depth": 0.4,
+          "x": 30,
+          "y": 92,
+          "w": 44,
+          "enter": "slide-left"
+        },
+        {
+          "id": "rickshaw",
+          "concept": "rickshaw",
+          "motif": "rickshaw",
+          "depth": 0.7,
+          "x": 76,
+          "y": 96,
+          "w": 20,
+          "enter": "slide-right"
+        },
+        {
+          "id": "figure",
+          "concept": "person seen from behind",
+          "motif": "figure-child",
+          "depth": 0.85,
+          "x": 46,
+          "y": 92,
+          "w": 7,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "year": "1942",
+      "title": "The Japanese Occupation",
+      "caption": "The Japanese Occupation (1942-1945) interrupts his studies at Raffles College and shapes his view of how fragile Singapore is.",
+      "visual": "Wartime Singapore: blackout lamps, ration queue, rising-sun flag on a building, bicycles; silhouettes only.",
+      "sources": [
+        {
+          "label": "Infopedia: Lee Kuan Yew",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-03-18_164023.html"
+        },
+        {
+          "label": "Wikipedia: Lee Kuan Yew",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kuan_Yew"
+        }
+      ],
+      "layers": [
+        {
+          "id": "sun",
+          "concept": "rising-sun flag",
+          "motif": "rising-sun",
+          "depth": 0.2,
+          "x": 62,
+          "y": 58,
+          "w": 28,
+          "enter": "unfold"
+        },
+        {
+          "id": "bikes",
+          "concept": "bicycle",
+          "motif": "bicycle",
+          "depth": 0.6,
+          "x": 26,
+          "y": 94,
+          "w": 18,
+          "enter": "slide-left"
+        },
+        {
+          "id": "crowd",
+          "concept": "ration queue",
+          "motif": "crowd",
+          "depth": 0.8,
+          "x": 56,
+          "y": 98,
+          "w": 56,
+          "enter": "rise"
+        },
+        {
+          "id": "lamp",
+          "concept": "blackout lamp",
+          "motif": "lamp",
+          "depth": 0.95,
+          "x": 88,
+          "y": 98,
+          "w": 6,
+          "enter": "drop"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "year": "1947",
+      "title": "Law at Cambridge",
+      "caption": "After the war he goes to England, transferring to Cambridge in 1947. He graduates in law with a starred first in 1949 and is called to the bar in 1950.",
+      "visual": "Cambridge college courtyard, stacked law books, ocean liner, black gown on a hook; silhouette back view.",
+      "sources": [
+        {
+          "label": "Infopedia: Lee Kuan Yew",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-03-18_164023.html"
+        },
+        {
+          "label": "PMO",
+          "url": "https://www.pmo.gov.sg/Past-Prime-Ministers/Mr-LEE-Kuan-Yew"
+        },
+        {
+          "label": "Wikipedia: Lee Kuan Yew",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kuan_Yew"
+        }
+      ],
+      "layers": [
+        {
+          "id": "ship",
+          "concept": "ocean liner",
+          "motif": "ship",
+          "depth": 0.2,
+          "x": 40,
+          "y": 64,
+          "w": 46,
+          "enter": "slide-left"
+        },
+        {
+          "id": "tower",
+          "concept": "college building",
+          "motif": "clock-tower",
+          "depth": 0.45,
+          "x": 76,
+          "y": 92,
+          "w": 30,
+          "enter": "rise"
+        },
+        {
+          "id": "books",
+          "concept": "law books",
+          "motif": "books",
+          "depth": 0.75,
+          "x": 24,
+          "y": 96,
+          "w": 16,
+          "enter": "drop"
+        },
+        {
+          "id": "figure",
+          "concept": "person seen from behind",
+          "motif": "figure-adult",
+          "depth": 0.85,
+          "x": 54,
+          "y": 92,
+          "w": 9,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "year": "1954",
+      "title": "A party, then power",
+      "caption": "Political meetings at his home lead to the founding of the People's Action Party in 1954. On 5 June 1959 he is sworn in as prime minister.",
+      "visual": "Living room with a round table and papers, rally banners, City Hall steps with a crowd of silhouettes.",
+      "sources": [
+        {
+          "label": "Infopedia: Lee Kuan Yew",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2013-03-18_164023.html"
+        },
+        {
+          "label": "Wikipedia: Lee Kuan Yew",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kuan_Yew"
+        }
+      ],
+      "layers": [
+        {
+          "id": "table",
+          "concept": "round table with papers",
+          "motif": "round-table",
+          "depth": 0.5,
+          "x": 32,
+          "y": 94,
+          "w": 30,
+          "enter": "unfold"
+        },
+        {
+          "id": "banner",
+          "concept": "rally banner",
+          "motif": "banner",
+          "depth": 0.3,
+          "x": 62,
+          "y": 34,
+          "w": 38,
+          "enter": "drop",
+          "text": "MERDEKA"
+        },
+        {
+          "id": "crowd",
+          "concept": "crowd",
+          "motif": "crowd",
+          "depth": 0.85,
+          "x": 64,
+          "y": 100,
+          "w": 60,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "year": "1965",
+      "title": "Merger and separation",
+      "caption": "Singapore joins Malaysia on 16 September 1963. Less than two years later, on 9 August 1965, separation is announced and a visibly emotional Lee breaks down at the press conference.",
+      "visual": "Two flags being separated, TV cameras and microphones on a table, a handkerchief; speaker as a back-view silhouette.",
+      "sources": [
+        {
+          "label": "Infopedia: Separation",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_2020-08-03_151233.html"
+        },
+        {
+          "label": "National Archives photo record",
+          "url": "https://www.nas.gov.sg/archivesonline/photographs/record-details/61c671b2-1162-11e3-83d5-0050568939ad"
+        },
+        {
+          "label": "Remembering.sg",
+          "url": "https://www.remembering.gov.sg/life-and-contributions/mr-lee-and-singapore/singapore-is-out/"
+        }
+      ],
+      "layers": [
+        {
+          "id": "flags",
+          "concept": "two flags",
+          "motif": "two-flags",
+          "depth": 0.25,
+          "x": 50,
+          "y": 62,
+          "w": 40,
+          "enter": "unfold"
+        },
+        {
+          "id": "mics",
+          "concept": "microphones",
+          "motif": "microphones",
+          "depth": 0.65,
+          "x": 50,
+          "y": 94,
+          "w": 36,
+          "enter": "rise"
+        },
+        {
+          "id": "figure",
+          "concept": "speaker seen from behind",
+          "motif": "figure-tall",
+          "depth": 0.85,
+          "x": 50,
+          "y": 92,
+          "w": 10,
+          "enter": "rise"
+        },
+        {
+          "id": "hanky",
+          "concept": "handkerchief",
+          "motif": "handkerchief",
+          "depth": 0.95,
+          "x": 80,
+          "y": 96,
+          "w": 9,
+          "enter": "drop"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "year": "1967",
+      "title": "Building a garden city",
+      "caption": "The Housing Board starts in 1960 to clear the housing shortage. In May 1967 Lee sets out a vision of a 'garden city', after the 1963 tree-planting drive.",
+      "visual": "New HDB blocks rising beside a row of freshly planted rain trees, a young sapling with a stake, cranes.",
+      "sources": [
+        {
+          "label": "Infopedia: HDB",
+          "url": "https://eresources.nlb.gov.sg/infopedia/articles/SIP_1589_2009-10-26.html"
+        },
+        {
+          "label": "National Archives: Garden City",
+          "url": "https://www.nas.gov.sg/archivesonline/gardencity"
+        },
+        {
+          "label": "NParks: 1963 greening",
+          "url": "https://nparks.gov.sg/sbg/about/our-history/1963-the-greening-of-singapore"
+        }
+      ],
+      "layers": [
+        {
+          "id": "blocks",
+          "concept": "housing blocks",
+          "motif": "hdb-blocks",
+          "depth": 0.2,
+          "x": 36,
+          "y": 86,
+          "w": 40,
+          "enter": "rise"
+        },
+        {
+          "id": "crane",
+          "concept": "crane",
+          "motif": "crane",
+          "depth": 0.35,
+          "x": 78,
+          "y": 80,
+          "w": 18,
+          "enter": "slide-right"
+        },
+        {
+          "id": "tree",
+          "concept": "rain tree",
+          "motif": "rain-tree",
+          "depth": 0.65,
+          "x": 62,
+          "y": 96,
+          "w": 34,
+          "enter": "rise"
+        },
+        {
+          "id": "sapling",
+          "concept": "sapling",
+          "motif": "seedling",
+          "depth": 0.9,
+          "x": 20,
+          "y": 98,
+          "w": 7,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "year": "2015",
+      "title": "Stepping down, and farewell",
+      "caption": "Lee hands the premiership to Goh Chok Tong on 28 November 1990. He dies on 23 March 2015, aged 91; a week of national mourning follows.",
+      "visual": "Handover of a briefcase between two silhouettes; later, half-mast flag, flowers, long queue of silhouettes outside Parliament House at dusk.",
+      "sources": [
+        {
+          "label": "PMO: Lee Kuan Yew",
+          "url": "https://www.pmo.gov.sg/Past-Prime-Ministers/Mr-LEE-Kuan-Yew"
+        },
+        {
+          "label": "PMO: National Mourning",
+          "url": "https://www.pmo.gov.sg/Newsroom/period-of-national-mourning-declared"
+        },
+        {
+          "label": "Wikipedia: Death and state funeral",
+          "url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Lee_Kuan_Yew"
+        }
+      ],
+      "layers": [
+        {
+          "id": "flag",
+          "concept": "half-mast flag",
+          "motif": "flag-half",
+          "depth": 0.25,
+          "x": 20,
+          "y": 90,
+          "w": 12,
+          "enter": "rise"
+        },
+        {
+          "id": "case",
+          "concept": "briefcase",
+          "motif": "briefcase",
+          "depth": 0.55,
+          "x": 52,
+          "y": 74,
+          "w": 12,
+          "enter": "drop"
+        },
+        {
+          "id": "crowd",
+          "concept": "queue of mourners",
+          "motif": "crowd",
+          "depth": 0.75,
+          "x": 60,
+          "y": 100,
+          "w": 74,
+          "enter": "rise"
+        },
+        {
+          "id": "flowers",
+          "concept": "flowers",
+          "motif": "flowers",
+          "depth": 0.95,
+          "x": 82,
+          "y": 100,
+          "w": 22,
+          "enter": "rise"
+        }
+      ]
+    }
+  ]
+}

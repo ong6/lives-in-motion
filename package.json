@@ -1,0 +1,39 @@
+{
+  "name": "lives-in-motion",
+  "version": "1.0.0",
+  "description": "Lives in Motion: Singapore lives told as layered, era-styled scroll animations, made with Meta's Muse Spark, Muse Image and SAM 3.1.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "make": "tsx pipeline/cli.ts",
+    "design-system": "tsx design-system/build.ts",
+    "shoot": "tsx scripts/shoot.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@12.10.1",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "playwright-core": "^1.64.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "@meta-sam/parser": "^0.1.0",
+    "gsap": "^3.15.0",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  },
+  "private": true,
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
+  }
+}

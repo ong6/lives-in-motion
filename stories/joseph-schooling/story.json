@@ -1,0 +1,423 @@
+{
+  "slug": "joseph-schooling",
+  "name": "Joseph Schooling",
+  "born": "1995",
+  "died": null,
+  "tagline": "Singapore's first Olympic champion.",
+  "direction": "paper-theatre",
+  "generated": false,
+  "scenes": [
+    {
+      "id": "s1",
+      "year": "1995",
+      "title": "A swimmer's start",
+      "caption": "Joseph Schooling is born on 16 June 1995 in Singapore and grows up in the pool.",
+      "visual": "Neighbourhood swimming pool with lane ropes, kickboard, child swimmer seen from behind, HDB blocks in the distance.",
+      "sources": [
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        }
+      ],
+      "layers": [
+        {
+          "id": "blocks",
+          "concept": "housing blocks",
+          "motif": "hdb-blocks",
+          "depth": 0.15,
+          "x": 70,
+          "y": 62,
+          "w": 34,
+          "enter": "fade"
+        },
+        {
+          "id": "pool",
+          "concept": "pool with lane ropes",
+          "motif": "pool-lanes",
+          "depth": 0.45,
+          "x": 50,
+          "y": 100,
+          "w": 90,
+          "enter": "fade"
+        },
+        {
+          "id": "figure",
+          "concept": "person seen from behind",
+          "motif": "figure-child",
+          "depth": 0.85,
+          "x": 30,
+          "y": 92,
+          "w": 7,
+          "enter": "rise"
+        },
+        {
+          "id": "goggles",
+          "concept": "goggles",
+          "motif": "goggles",
+          "depth": 0.95,
+          "x": 84,
+          "y": 98,
+          "w": 12,
+          "enter": "drop"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "year": "2008",
+      "title": "Meeting his idol",
+      "caption": "At 13, he meets Michael Phelps on a visit to Singapore before the Beijing Olympics. It pushes him to train in the US.",
+      "visual": "Two silhouettes, one tall, one small, side by side beside a pool; a camera flash; Olympic rings banner.",
+      "sources": [
+        {
+          "label": "Intl Swimming Hall of Fame",
+          "url": "https://ishof.org/honoree/joseph-schooling/"
+        },
+        {
+          "label": "The Week",
+          "url": "https://www.theweek.in/news/sports/joseph-schooling-man-who-schooled-great-phelps.html"
+        }
+      ],
+      "layers": [
+        {
+          "id": "flash",
+          "concept": "camera flash",
+          "motif": "camera-flash",
+          "depth": 0.25,
+          "x": 60,
+          "y": 54,
+          "w": 20,
+          "enter": "unfold"
+        },
+        {
+          "id": "pool",
+          "concept": "pool",
+          "motif": "pool-lanes",
+          "depth": 0.35,
+          "x": 50,
+          "y": 104,
+          "w": 96,
+          "enter": "fade"
+        },
+        {
+          "id": "tall",
+          "concept": "tall swimmer from behind",
+          "motif": "figure-tall",
+          "depth": 0.75,
+          "x": 58,
+          "y": 92,
+          "w": 10,
+          "enter": "rise"
+        },
+        {
+          "id": "figure",
+          "concept": "person seen from behind",
+          "motif": "figure-child",
+          "depth": 0.85,
+          "x": 44,
+          "y": 92,
+          "w": 8,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "year": "2009",
+      "title": "Off to Bolles",
+      "caption": "In 2009 he enrols at the Bolles School in Jacksonville, Florida, a year after meeting Phelps.",
+      "visual": "Suitcase and boarding pass, Florida palm trees, school swim-team banner, a pool deck at sunrise.",
+      "sources": [
+        {
+          "label": "CNN",
+          "url": "https://amp.cnn.com/cnn/2016/08/13/sport/schooling-phelps-swimming-rio"
+        },
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        }
+      ],
+      "layers": [
+        {
+          "id": "palm",
+          "concept": "palm tree",
+          "motif": "palm",
+          "depth": 0.3,
+          "x": 22,
+          "y": 90,
+          "w": 16,
+          "enter": "rise"
+        },
+        {
+          "id": "palm2",
+          "concept": "palm tree",
+          "motif": "palm",
+          "depth": 0.4,
+          "x": 80,
+          "y": 88,
+          "w": 14,
+          "enter": "rise"
+        },
+        {
+          "id": "suitcase",
+          "concept": "suitcase",
+          "motif": "suitcase",
+          "depth": 0.75,
+          "x": 44,
+          "y": 96,
+          "w": 17,
+          "enter": "slide-right"
+        },
+        {
+          "id": "figure",
+          "concept": "teenager seen from behind",
+          "motif": "figure-adult",
+          "depth": 0.85,
+          "x": 62,
+          "y": 92,
+          "w": 8,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "year": "2014",
+      "title": "A Longhorn in Texas",
+      "caption": "He enrols at the University of Texas at Austin in 2014, training and racing for the Longhorns.",
+      "visual": "Burnt-orange longhorn emblem, collegiate natatorium, stopwatch, lane-timing boards.",
+      "sources": [
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        },
+        {
+          "label": "USA Today",
+          "url": "https://www.usatoday.com/story/sports/olympics/rio-2016/2016/08/02/rio-olympics-joseph-schooling-university-of-texas/87970932/"
+        }
+      ],
+      "layers": [
+        {
+          "id": "pool",
+          "concept": "pool",
+          "motif": "pool-lanes",
+          "depth": 0.2,
+          "x": 50,
+          "y": 100,
+          "w": 90,
+          "enter": "fade"
+        },
+        {
+          "id": "watch",
+          "concept": "stopwatch",
+          "motif": "stopwatch",
+          "depth": 0.6,
+          "x": 26,
+          "y": 80,
+          "w": 14,
+          "enter": "drop"
+        },
+        {
+          "id": "swimmer",
+          "concept": "swimmer",
+          "motif": "swimmer",
+          "depth": 0.85,
+          "x": 58,
+          "y": 86,
+          "w": 30,
+          "enter": "slide-left"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "year": "2016",
+      "title": "Gold in Rio",
+      "caption": "On 12 August 2016 he wins the 100 m butterfly in 50.39 seconds, an Olympic record, ahead of Phelps. It is Singapore's first Olympic gold.",
+      "visual": "Rio Olympic pool, scoreboard reading 50.39, flag-draped silhouettes in the stands, podium.",
+      "sources": [
+        {
+          "label": "Rio 2016 (archived)",
+          "url": "https://web.archive.org/web/20160826191932/https://www.rio2016.com/en/news/rio-2016-olympic-games-schooling-phelps-usa-singapore-gold-medal-100m-butterfly"
+        },
+        {
+          "label": "SwimSwam",
+          "url": "https://swimswam.com/joseph-schooling-stuns-world-defeats-phelps-win-100-fly-gold/"
+        },
+        {
+          "label": "CNN",
+          "url": "https://amp.cnn.com/cnn/2016/08/12/sport/michael-phelps-swimming-rio"
+        }
+      ],
+      "layers": [
+        {
+          "id": "board",
+          "concept": "scoreboard",
+          "motif": "scoreboard",
+          "depth": 0.2,
+          "x": 50,
+          "y": 52,
+          "w": 40,
+          "enter": "unfold",
+          "text": "50.39"
+        },
+        {
+          "id": "pool",
+          "concept": "pool",
+          "motif": "pool-lanes",
+          "depth": 0.5,
+          "x": 50,
+          "y": 104,
+          "w": 96,
+          "enter": "fade"
+        },
+        {
+          "id": "swimmer",
+          "concept": "swimmer",
+          "motif": "swimmer",
+          "depth": 0.85,
+          "x": 44,
+          "y": 90,
+          "w": 28,
+          "enter": "slide-left"
+        },
+        {
+          "id": "flag",
+          "concept": "flag",
+          "motif": "flag-sg",
+          "depth": 0.95,
+          "x": 86,
+          "y": 84,
+          "w": 14,
+          "enter": "rise"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "year": "2016",
+      "title": "A hero's return",
+      "caption": "Singapore erupts in celebration. He receives S$1 million under the national reward scheme, and his National Service is deferred until after Tokyo 2020.",
+      "visual": "Airport arrival hall with crowds waving flags, open-top bus, confetti, giant cheque prop.",
+      "sources": [
+        {
+          "label": "AsiaOne (archived)",
+          "url": "https://web.archive.org/web/20170501144639/http://news.asiaone.com/news/singapore/joseph-schooling-wins-singapores-first-olympic-gold-beating-childhood-idol-phelps"
+        },
+        {
+          "label": "Straits Times",
+          "url": "https://www.straitstimes.com/singapore/joseph-schoolings-ns-deferred-till-after-2020-olympics"
+        },
+        {
+          "label": "Daily Star",
+          "url": "https://www.thedailystar.net/sports/rio2016olympics/singapore-erupts-joy-1269370"
+        }
+      ],
+      "layers": [
+        {
+          "id": "confetti",
+          "concept": "confetti",
+          "motif": "confetti",
+          "depth": 0.1,
+          "x": 50,
+          "y": 70,
+          "w": 90,
+          "enter": "drop"
+        },
+        {
+          "id": "crowd",
+          "concept": "crowd",
+          "motif": "crowd",
+          "depth": 0.6,
+          "x": 50,
+          "y": 100,
+          "w": 90,
+          "enter": "rise"
+        },
+        {
+          "id": "flag",
+          "concept": "flag",
+          "motif": "flag-sg",
+          "depth": 0.8,
+          "x": 22,
+          "y": 80,
+          "w": 14,
+          "enter": "rise"
+        },
+        {
+          "id": "medal",
+          "concept": "medal",
+          "motif": "medal",
+          "depth": 0.95,
+          "x": 74,
+          "y": 70,
+          "w": 9,
+          "enter": "drop"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "year": "2024",
+      "title": "The final lap",
+      "caption": "After a 2017 world bronze, an early exit at Tokyo 2020 and a 2022 admission of cannabis use abroad, he retires from competitive swimming on 2 April 2024.",
+      "visual": "Empty pool at dusk, a gold medal hung on a lane rope, swim cap and goggles on a starting block.",
+      "sources": [
+        {
+          "label": "NBC Sports",
+          "url": "https://www.nbcsports.com/olympics/news/joseph-schooling-retires-swimming"
+        },
+        {
+          "label": "Malay Mail (AFP)",
+          "url": "https://www.malaymail.com/news/sports/2024/04/02/singapores-only-olympic-champion-schooling-retires/126832"
+        },
+        {
+          "label": "CNA: cannabis",
+          "url": "https://www.channelnewsasia.com/singapore/joseph-schooling-drugs-test-failed-mindef-swimming-2901816"
+        }
+      ],
+      "layers": [
+        {
+          "id": "pool",
+          "concept": "empty pool",
+          "motif": "pool-lanes",
+          "depth": 0.2,
+          "x": 50,
+          "y": 100,
+          "w": 90,
+          "enter": "fade"
+        },
+        {
+          "id": "block",
+          "concept": "starting block",
+          "motif": "starting-block",
+          "depth": 0.6,
+          "x": 40,
+          "y": 90,
+          "w": 14,
+          "enter": "rise"
+        },
+        {
+          "id": "medal",
+          "concept": "medal",
+          "motif": "medal",
+          "depth": 0.75,
+          "x": 40,
+          "y": 66,
+          "w": 7,
+          "enter": "drop"
+        },
+        {
+          "id": "goggles",
+          "concept": "goggles",
+          "motif": "goggles",
+          "depth": 0.95,
+          "x": 70,
+          "y": 98,
+          "w": 12,
+          "enter": "slide-right"
+        }
+      ]
+    }
+  ]
+}

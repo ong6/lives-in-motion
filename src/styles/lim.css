@@ -1,0 +1,227 @@
+/* Lives in Motion: one stage, three directions. Era tokens arrive as custom properties
+   (--paper, --ink, --accent, --accent2, --display, --body, --grain) on each scene, caption
+   and, while a story plays, on :root. */
+
+:root {
+  --paper: #f4ecd9;
+  --ink: #1f2a44;
+  --accent: #d6402b;
+  --accent2: #2f7c84;
+  --display: "Playfair Display", serif;
+  --body: "Source Serif 4", serif;
+  --grain: 0.3;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --noise: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .55 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: var(--body);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button, select { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+/* ---------- Hero ---------- */
+.lim-hero {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 8vh 6vw;
+  background: var(--paper);
+  color: var(--ink);
+  position: relative;
+}
+.lim-kicker { font-family: var(--mono); letter-spacing: .18em; text-transform: uppercase; font-size: 12px; opacity: .7; }
+.lim-name { font-family: var(--display); font-size: clamp(56px, 11vw, 168px); line-height: .9; margin: .1em 0; letter-spacing: -.02em; }
+.lim-dates { font-family: var(--mono); font-size: 14px; }
+.lim-tagline { font-size: clamp(18px, 2vw, 26px); max-width: 32ch; margin: 1em auto 0; font-style: italic; }
+.lim-cue { margin-top: 10vh; font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; animation: cue 2.4s ease-in-out infinite; }
+@keyframes cue { 50% { transform: translateY(8px); opacity: .5; } }
+
+/* ---------- Track & stage ---------- */
+.lim-track { height: calc(var(--scenes) * 140svh); position: relative; }
+.lim-track > .lim-stage { position: sticky; top: 0; height: 100svh; }
+.lim-stage { position: relative; overflow: hidden; perspective: 1600px; background: var(--paper); transition: background-color .9s ease; }
+
+.lim-scene {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform .9s cubic-bezier(.2, .8, .2, 1);
+  container-type: size;
+}
+.lim-still .lim-scene, .lim-static .lim-scene { visibility: visible; }
+.lim-backdrop { position: absolute; inset: 0; background: var(--paper); }
+.lim-grain { position: absolute; inset: 0; background-image: var(--noise); opacity: var(--grain); mix-blend-mode: multiply; pointer-events: none; z-index: 200; }
+
+/* Layers sit on a 16:9 field centred in the stage so placements hold at any viewport. */
+.lim-layers {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(100cqw, 100cqh * 16 / 9);
+  aspect-ratio: 16 / 9;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+.lim-layer { position: absolute; transform: translate(-50%, -100%); transform-style: preserve-3d; transition: transform .9s cubic-bezier(.2, .8, .2, 1); }
+.lim-layer-inner { will-change: transform, opacity; }
+.lim-layer svg, .lim-layer img { display: block; width: 100%; height: auto; }
+.lim-plate-no { display: none; }
+
+/* ---------- Captions ---------- */
+.lim-caption {
+  position: absolute;
+  z-index: 300;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .5s ease, transform .5s ease;
+  pointer-events: none;
+}
+.lim-caption.is-active { opacity: 1; transform: none; pointer-events: auto; }
+.lim-cap-meta { font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; display: flex; gap: 1.2em; opacity: .75; }
+.lim-cap-year { font-family: var(--display); line-height: .85; }
+.lim-cap-title { font-family: var(--display); margin: .2em 0 .3em; font-weight: 700; }
+.lim-cap-text { margin: 0 0 .8em; line-height: 1.45; }
+.lim-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.lim-chip { font-family: var(--mono); font-size: 11px; padding: 3px 8px; border: 1px solid currentColor; border-radius: 99px; text-decoration: none; opacity: .8; }
+.lim-chip:hover { opacity: 1; background: var(--ink); color: var(--paper); }
+
+/* ---------- Rail & tools ---------- */
+.lim-rail { position: absolute; z-index: 320; display: flex; gap: 4px; }
+.lim-rail button { background: none; border: 0; cursor: pointer; padding: 10px 4px; min-width: 44px; min-height: 44px; font-family: var(--mono); font-size: 11px; opacity: .5; }
+.lim-rail button.is-active { opacity: 1; }
+.lim-rail button span { display: block; border-top: 3px solid currentColor; padding-top: 6px; }
+.lim-tools { position: absolute; z-index: 330; top: 16px; right: 16px; display: flex; gap: 8px; align-items: center; font-family: var(--mono); font-size: 12px; }
+.lim-tools button, .lim-tools select { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 99px; padding: 8px 14px; min-height: 40px; cursor: pointer; }
+.lim-tools button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.lim-switch { display: flex; gap: 6px; align-items: center; }
+
+/* ---------- X-ray: the SAM 3.1 layers pulled apart in depth ---------- */
+.lim-stage.xray .lim-scene.is-active { transform: rotateY(-24deg) rotateX(6deg) scale(.78); }
+.lim-stage.xray .lim-scene.is-active .lim-layer { transform: translate(-50%, -100%) translateZ(calc(var(--depth) * 360px)); }
+.lim-stage.xray .lim-layer-inner { outline: 1.5px dashed var(--accent); outline-offset: 4px; }
+.lim-stage.xray .lim-layer::after {
+  content: "SAM 3.1 · " attr(data-concept);
+  position: absolute; left: 0; top: -26px; white-space: nowrap;
+  font: 500 11px var(--mono); background: var(--ink); color: var(--paper); padding: 3px 7px; border-radius: 4px;
+}
+.lim-stage.xray .lim-grain, .lim-stage.xray .lim-caption { opacity: 0; }
+
+/* ---------- Footer ---------- */
+.lim-foot { padding: 10vh 6vw; max-width: 900px; margin: 0 auto; font-size: 15px; }
+.lim-foot ol { columns: 2; gap: 3em; font-family: var(--mono); font-size: 12px; }
+.lim-foot li { margin-bottom: .5em; break-inside: avoid; }
+.lim-ai-note { font-style: italic; opacity: .8; }
+
+/* ---------- Reduced motion: a still, readable timeline ---------- */
+.lim-static .lim-track { height: auto; }
+.lim-static .lim-track > .lim-stage { position: relative; height: auto; overflow: visible; display: grid; gap: 0; }
+.lim-static .lim-scene { position: relative; height: 70svh; }
+.lim-static .lim-caption { position: relative; inset: auto; opacity: 1; transform: none; padding: 24px 6vw 64px; }
+.lim-static .lim-rail, .lim-static .lim-tools .lim-xray { display: none; }
+
+/* =====================================================================
+   Direction 1 · Paper Theatre: a shophouse proscenium, cut-paper puppets
+   ===================================================================== */
+.d-paper-theatre .lim-stage { background: #1b1411; }
+.d-paper-theatre .lim-scene { inset: 7% 6% 13%; }
+.d-paper-theatre .lim-backdrop {
+  background:
+    radial-gradient(120% 90% at 50% 10%, color-mix(in srgb, var(--paper) 100%, white 20%), var(--paper) 60%, color-mix(in srgb, var(--paper), var(--ink) 18%));
+}
+.d-paper-theatre .lim-layer-inner { filter: drop-shadow(5px 7px 0 rgba(20, 12, 6, .22)) drop-shadow(0 1px 0 rgba(255, 255, 255, .5)); }
+.d-paper-theatre .lim-frame {
+  position: absolute; inset: 0; z-index: 250; pointer-events: none;
+  /* scalloped valance + side wings + floorboards, all in era colours */
+  background:
+    radial-gradient(circle at 50% 0, transparent 22px, var(--accent) 23px) top / 64px 54px repeat-x,
+    linear-gradient(var(--accent), var(--accent)) top / 100% 7% no-repeat,
+    linear-gradient(90deg, var(--accent2) 0 6%, transparent 6% 94%, var(--accent2) 94%) ,
+    repeating-linear-gradient(90deg, #3a2516 0 120px, #2c1c11 120px 124px) bottom / 100% 13% no-repeat;
+  -webkit-mask: linear-gradient(#000 0 0);
+}
+.d-paper-theatre .lim-frame::after {
+  content: ""; position: absolute; inset: 7% 6% 13%;
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, .35), inset 0 30px 60px -20px rgba(0, 0, 0, .35);
+}
+.d-paper-theatre .lim-caption {
+  left: 8%; bottom: 3%; width: min(440px, 44%);
+  background: var(--paper); color: var(--ink);
+  padding: 16px 20px 18px; transform: rotate(-1.2deg) translateY(14px);
+  box-shadow: 6px 8px 0 rgba(0, 0, 0, .35);
+  clip-path: polygon(0 4%, 3% 0, 97% 2%, 100% 0, 99% 96%, 100% 100%, 2% 98%, 0 100%);
+}
+.d-paper-theatre .lim-caption.is-active { transform: rotate(-1.2deg); }
+.d-paper-theatre .lim-cap-year { font-size: 64px; color: var(--accent); position: absolute; right: 16px; top: 8px; opacity: .9; }
+.d-paper-theatre .lim-cap-title { font-size: 26px; max-width: 70%; }
+.d-paper-theatre .lim-cap-text { font-size: 15px; }
+.d-paper-theatre .lim-rail { right: 7%; bottom: 3.5%; color: #f4ead4; }
+.d-paper-theatre .lim-tools { color: var(--ink); }
+.d-paper-theatre.lim-story .lim-hero {
+  background: radial-gradient(80% 70% at 50% 40%, var(--paper), color-mix(in srgb, var(--paper), var(--ink) 25%));
+}
+
+/* =====================================================================
+   Direction 2 · Living Archive: catalogue plates and museum labels
+   ===================================================================== */
+.d-living-archive .lim-stage { background: #f3eee2; color: #2b2620; }
+.d-living-archive .lim-scene { inset: 8% 34% 10% 6%; }
+.d-living-archive .lim-backdrop { background: var(--paper); filter: sepia(.25); }
+.d-living-archive .lim-scene::before {
+  content: ""; position: absolute; inset: -14px; border: 1px solid #2b2620; outline: 4px double #2b2620; outline-offset: 6px; pointer-events: none;
+}
+.d-living-archive .lim-layers { mix-blend-mode: multiply; filter: saturate(.75) contrast(1.05); }
+.d-living-archive .lim-grain { opacity: calc(var(--grain) + .25); }
+.d-living-archive .lim-plate-no {
+  display: block; position: absolute; left: 0; bottom: -40px; font: 500 12px var(--mono); letter-spacing: .2em; text-transform: uppercase; color: #2b2620;
+}
+.d-living-archive .lim-caption { right: 5%; top: 14%; width: 25%; color: #2b2620; border-top: 1px solid; padding-top: 14px; }
+.d-living-archive .lim-cap-year { font-size: clamp(54px, 7vw, 110px); font-family: "Cormorant Garamond", var(--display); font-weight: 400; }
+.d-living-archive .lim-cap-title { font-family: "Source Serif 4", serif; font-size: 22px; font-variant: small-caps; letter-spacing: .04em; }
+.d-living-archive .lim-cap-text { font-size: 15px; }
+.d-living-archive .lim-chip { border-radius: 0; border-width: 0 0 1px; padding: 0; margin-right: 10px; }
+.d-living-archive .lim-rail { left: 6%; bottom: 3%; color: #2b2620; }
+.d-living-archive .lim-scene.is-active .lim-layers { animation: bleed 1.2s ease-out both; }
+@keyframes bleed { from { clip-path: circle(0% at 50% 60%); } to { clip-path: circle(85% at 50% 60%); } }
+.d-living-archive.lim-story .lim-hero { background: #f3eee2; color: #2b2620; }
+.d-living-archive.lim-story .lim-name { font-family: "Cormorant Garamond", serif; font-weight: 500; }
+
+/* =====================================================================
+   Direction 3 · Era Shift: the interface itself becomes the decade
+   ===================================================================== */
+.d-era-shift .lim-stage { background: var(--paper); color: var(--ink); }
+.d-era-shift .lim-scene { inset: 0; }
+.d-era-shift .lim-layers { left: auto; right: 4%; transform: translateY(-50%); width: min(60cqw, 100cqh * 16 / 9); }
+.d-era-shift .lim-backdrop { background: linear-gradient(transparent 62%, color-mix(in srgb, var(--paper), var(--ink) 10%) 62%); }
+.d-era-shift .lim-caption { left: 5%; top: 6%; width: min(560px, 46%); color: var(--ink); }
+.d-era-shift .lim-cap-year { font-size: clamp(90px, 14vw, 220px); color: var(--accent); letter-spacing: -.04em; }
+.d-era-shift .lim-cap-title { font-size: clamp(22px, 2.4vw, 34px); }
+.d-era-shift .lim-cap-text { font-size: 16px; max-width: 40ch; }
+.d-era-shift .lim-chip { border-radius: 0; }
+.d-era-shift .lim-rail { right: 0; top: 0; bottom: 0; flex-direction: column; justify-content: center; padding-right: 18px; color: var(--ink); }
+.d-era-shift .lim-rail button span { border-top: 0; border-right: 3px solid currentColor; padding: 4px 10px 4px 0; text-align: right; }
+.d-era-shift .lim-tools button, .d-era-shift .lim-tools select { border-radius: 0; font-family: var(--display); }
+[data-direction="era-shift"] body, .d-era-shift.lim-story .lim-hero { transition: background-color .9s ease, color .9s ease; }
+.d-era-shift .lim-stage[data-era="nation-building"] .lim-tools button { border-width: 3px; }
+.d-era-shift .lim-stage[data-era="colonial"] .lim-cap-year,
+.d-era-shift .lim-stage[data-era="merdeka"] .lim-cap-year { font-style: italic; }
+
+/* ---------- Small screens ---------- */
+@media (max-width: 760px) {
+  .d-paper-theatre .lim-scene { inset: 6% 4% 40%; }
+  .d-paper-theatre .lim-caption { left: 4%; right: 4%; width: auto; bottom: 8%; }
+  .d-living-archive .lim-scene { inset: 6% 6% 44%; }
+  .d-living-archive .lim-caption { left: 6%; right: 6%; width: auto; top: auto; bottom: 7%; }
+  .d-era-shift .lim-caption { width: 88%; }
+  .d-era-shift .lim-rail { display: none; }
+  .lim-rail { overflow-x: auto; max-width: 92vw; }
+  .lim-tools { top: auto; bottom: 12px; right: 12px; }
+}
