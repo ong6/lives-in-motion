@@ -1,13 +1,11 @@
 /**
- * The shape of a family-book job as the /family page sees it (job.json on disk, SSE on the wire).
- * Type-only: safe to import from client components.
+ * A family-book job as the /family page sees it (family-job.json on disk, SSE on the wire); the
+ * parts every job shares are in pipeline/jobs/types.ts. Type-only: safe to import from client components.
  */
-import type { JobCut, JobLog, JobScene, StepStatus } from "../create/types";
+import type { BaseJob, Rails } from "../jobs/types";
 
 export type FamilyStepId = "transcribe" | "facts" | "storyboard" | "plates" | "cutouts" | "frontispiece" | "films";
 export const FAMILY_STEPS: FamilyStepId[] = ["transcribe", "facts", "storyboard", "plates", "cutouts", "frontispiece", "films"];
-
-export type { JobCut, StepStatus };
 
 export interface FamilyTurn {
   n: number;
@@ -34,26 +32,11 @@ export interface FamilyFact {
   source: { label: string; url: string };
 }
 
-export type FamilyLog = Omit<JobLog, "step"> & { step: FamilyStepId };
-export type FamilyScene = JobScene;
-
-export interface FamilyJob {
-  slug: string;
-  name: string;
-  hint: string;
+export interface FamilyJob extends BaseJob<FamilyStepId> {
   /** Family photos supplied (with consent) for the frontispiece. */
   photos: number;
-  /** A free replay of the sample book: no Meta calls, nothing written. */
-  mock?: boolean;
   /** The demo book made from the fictional sample recording. */
   sample?: boolean;
-  bookSlug: string;
-  status: "running" | "done" | "failed" | "interrupted";
-  startedAt: string;
-  updatedAt: string;
-  finishedAt?: string;
-  error?: string;
-  steps: Record<FamilyStepId, { status: StepStatus; startedAt?: string; endedAt?: string; usd: number; note?: string }>;
   /** Where the recording plays from (the book's audio route). */
   audio?: string;
   durationMs?: number;
@@ -62,24 +45,9 @@ export interface FamilyJob {
   /** Speaker label of the person whose life it is, when the model could tell. */
   subject?: string;
   facts: FamilyFact[];
-  tagline?: string;
-  born?: string;
-  scenes: FamilyScene[];
-  frontispiece?: { kind: "photo" | "emblem"; image?: string; lines?: string; strokes?: number; note?: string };
-  usd: number;
-  ceiling: number;
-  spend: Record<string, number>;
-  models: Record<string, string>;
-  log: FamilyLog[];
 }
 
-export interface FamilyInfo {
-  enabled: boolean;
-  reason?: string;
-  needsToken: boolean;
-  mockAllowed: boolean;
-  budget: { spent: number; stop: number; left: number; today: number; dailyCap: number };
-  ceiling: number;
+export interface FamilyInfo extends Rails {
   /** Seconds, by step, for a 3-minute recording. */
   estimate: Record<FamilyStepId, number>;
   limits: { seconds: number; uploadMb: number; photos: number; photoMb: number };

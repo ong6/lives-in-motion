@@ -2,7 +2,7 @@ import "server-only";
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import { getStory } from "@/lib/stories";
-import { audioUrl, readRecord } from "@/pipeline/family";
+import { audioUrl, readRecord } from "@/pipeline/family/record";
 import type { RecordProps } from "@/components/family/RecordView";
 
 /** What a family book's recording page shows, or null when there is no such family book. */

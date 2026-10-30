@@ -1,11 +1,14 @@
 /**
- * Guard rails for /create, a public page that spends real money. Pure functions over the ledger
- * entries and env, so they are tested without a server.
+ * Guard rails for /create and /family, public pages that spend real money: the on switch, the
+ * passcode, one run at a time, the budget's headroom, the daily cap, the per-book ceiling, the
+ * per-visitor limit and input checks. Pure functions over the ledger entries and env (plus
+ * `budgetNow`, which reads the ledger), so they are tested without a server.
  */
 import { timingSafeEqual } from "node:crypto";
-import type { Entry } from "../budget";
+import { STOP, entries, spent, type Entry } from "../budget";
+import type { Budget, Rails } from "./types";
 
-/** Ledger `job` prefix for lives made on /create. */
+/** Ledger `job` prefix for books made on /create and /family (they share the daily allowance). */
 export const JOB_PREFIX = "create:";
 export const jobTag = (slug: string) => `${JOB_PREFIX}${slug}`;
 
@@ -36,12 +39,17 @@ export const dailyCap = (env: Env = process.env) => {
   return Number.isFinite(v) && v >= 0 ? v : 10;
 };
 
+/** Compare secrets in constant time. */
+export function safeEqual(given: string, want: string): boolean {
+  const a = Buffer.from(given), b = Buffer.from(want);
+  return a.length === b.length && timingSafeEqual(a, b);
+}
+
 export function tokenOk(given: string | null | undefined, env: Env = process.env): boolean {
   const want = env.CREATE_TOKEN;
   if (!want) return true;
   if (!given) return false;
-  const a = Buffer.from(given), b = Buffer.from(want);
-  return a.length === b.length && timingSafeEqual(a, b);
+  return safeEqual(given, want);
 }
 
 /** Start of the server's local day, so "today" matches the owner's clock. */
@@ -51,6 +59,18 @@ export const startOfDay = (now: Date) => new Date(now.getFullYear(), now.getMont
 export function spentToday(entries: Entry[], now = new Date()): number {
   const from = startOfDay(now).getTime();
   return entries.filter((e) => e.job?.startsWith(JOB_PREFIX) && Date.parse(e.at) >= from).reduce((a, e) => a + e.usd, 0);
+}
+
+/** The ledger as a workbench shows it: the event budget and today's spend on new books. */
+export function budgetNow(): Budget {
+  const total = spent();
+  return { spent: total, stop: STOP, left: STOP - total, today: spentToday(entries()), dailyCap: dailyCap() };
+}
+
+/** Whether a workbench may run, and what it may spend; `off` is shown when it may not. */
+export function rails(off: string, env: Env = process.env): Rails {
+  const enabled = createEnabled(env);
+  return { enabled, reason: enabled ? undefined : off, needsToken: Boolean(env.CREATE_TOKEN), mockAllowed: mockAllowed(env), budget: budgetNow(), ceiling: LIFE_CEILING };
 }
 
 export interface Refusal {

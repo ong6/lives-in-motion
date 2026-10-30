@@ -6,7 +6,7 @@
  *      visitor's limit (CREATE_PER_IP_DAILY, shared with /create's rules; replays don't count).
  */
 import { info, start } from "@/pipeline/family";
-import { IpLimit, clientIp, mockForced, perIpDaily } from "@/pipeline/create/guard";
+import { IpLimit, clientIp, mockForced, perIpDaily } from "@/pipeline/jobs/guard";
 import { AUDIO_LIMITS } from "@/pipeline/family/audio";
 
 export const runtime = "nodejs";

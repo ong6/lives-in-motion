@@ -5,14 +5,15 @@
  */
 import { createReadStream, existsSync, statSync } from "node:fs";
 import { Readable } from "node:stream";
-import { recordingFile } from "@/pipeline/family";
+import { SLUG } from "@/pipeline/jobs/runner";
+import { recordingFile } from "@/pipeline/family/record";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function GET(req: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const file = /^[a-z0-9-]{1,80}$/.test(slug) ? recordingFile(slug, "m4a") : "";
+  const file = SLUG.test(slug) ? recordingFile(slug, "m4a") : "";
   if (!file || !existsSync(file)) return new Response("No such recording.", { status: 404 });
   const size = statSync(file).size;
   const head = { "Content-Type": "audio/mp4", "Accept-Ranges": "bytes", "Cache-Control": "private, max-age=3600", "X-Robots-Tag": "noindex" };

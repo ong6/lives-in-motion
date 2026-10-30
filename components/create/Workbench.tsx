@@ -4,7 +4,8 @@ import { useCallback, useEffect, useRef, useState, type CSSProperties, type Form
 import Link from "next/link";
 import { LineDrawing } from "@/components/LineDrawing";
 import { Cover } from "@/components/book/Cover";
-import type { Budget, CreateInfo, Job, JobScene, StepId } from "@/pipeline/create/types";
+import type { CreateInfo, Job, StepId } from "@/pipeline/create/types";
+import type { Budget, JobScene } from "@/pipeline/jobs/types";
 import { explain } from "./explain";
 import s from "./create.module.css";
 

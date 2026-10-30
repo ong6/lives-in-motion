@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { BudgetError, guard, record, spent, withScope, type Entry } from "../pipeline/budget";
-import { LIFE_CEILING, MIN_HEADROOM, createEnabled, dailyCap, preflight, slugify, sniffImage, spentToday, tokenOk, uniqueSlug, validateInput, validatePhoto } from "../pipeline/create/guard";
+import { LIFE_CEILING, MIN_HEADROOM, createEnabled, dailyCap, preflight, slugify, sniffImage, spentToday, tokenOk, uniqueSlug, validateInput, validatePhoto } from "../pipeline/jobs/guard";
 import { fitCaption, pool } from "../pipeline/stages";
 
 const ledger = () => join(mkdtempSync(join(tmpdir(), "lim-create-")), "spend.jsonl");
@@ -162,14 +162,14 @@ describe("frontispiece framing", () => {
 
 describe("rehearsals and per-visitor limits", () => {
   it("run without the on switch or the passcode, but wait for a busy server", async () => {
-    const { preflight } = await import("../pipeline/create/guard");
+    const { preflight } = await import("../pipeline/jobs/guard");
     const prodMock = { NODE_ENV: "production", CREATE_MOCK: "1", CREATE_TOKEN: "secret" };
     expect(preflight({ entries: [], left: 0, env: prodMock, mock: true })).toBeNull();
     expect(preflight({ entries: [], left: 0, env: prodMock, mock: true, busy: "x" })?.status).toBe(409);
     expect(preflight({ entries: [], left: 100, env: { ...prodMock, ALLOW_CREATE: "1" }, token: "nope" })?.status).toBe(401);
   });
   it("allow two real lives per visitor per day", async () => {
-    const { IpLimit, clientIp } = await import("../pipeline/create/guard");
+    const { IpLimit, clientIp } = await import("../pipeline/jobs/guard");
     const lim = new IpLimit(() => 2);
     const day = new Date(2026, 9, 30, 10), next = new Date(2026, 9, 31, 9);
     expect(lim.check("1.2.3.4", day)).toBeNull();
@@ -180,7 +180,7 @@ describe("rehearsals and per-visitor limits", () => {
     expect(lim.check("1.2.3.4", next)).toBeNull();
   });
   it("trust X-Forwarded-For only behind a proxy (TRUST_PROXY=1)", async () => {
-    const { IpLimit, clientIp, GLOBAL_BUCKET } = await import("../pipeline/create/guard");
+    const { IpLimit, clientIp, GLOBAL_BUCKET } = await import("../pipeline/jobs/guard");
     const proxied = { TRUST_PROXY: "1" };
     expect(clientIp(new Headers({ "x-forwarded-for": "9.9.9.9, 10.0.0.1" }), proxied)).toBe("9.9.9.9");
     expect(clientIp(new Headers({ "x-real-ip": "8.8.8.8" }), proxied)).toBe("8.8.8.8");

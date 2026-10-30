@@ -6,7 +6,8 @@ import { PRICES, transcribeCost } from "@/pipeline/budget";
 import { asResearch, checkFacts, citationLabel, citationUrl, findQuote, norm, shortQuote, type RawFacts } from "@/pipeline/family/facts";
 import { applyChecks } from "@/pipeline/family/check";
 import { parseScript } from "@/pipeline/family/sample";
-import { cleanKeywords, creditFor, familySlug, keyHash, keyOk } from "@/pipeline/family";
+import { creditFor } from "@/pipeline/family";
+import { cleanKeywords, familySlug, keyHash, keyOk } from "@/pipeline/family/record";
 import type { FamilyTurn } from "@/pipeline/family/types";
 
 const turns: FamilyTurn[] = [

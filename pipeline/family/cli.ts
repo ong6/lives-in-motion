@@ -30,6 +30,7 @@ if (cmd === "voice") {
   console.log(await voiceSample());
 } else if (cmd === "make") {
   const fam = await import("./index");
+  const { cleanKeywords, jobFile } = await import("./record");
   const { storyDir } = await import("../stages");
   const audio = rest[0] ?? SAMPLE.publicWav;
   const sample = !rest[0];
@@ -38,7 +39,7 @@ if (cmd === "voice") {
   const name = values.name ?? (sample ? SAMPLE.name : undefined);
   if (!name) throw new Error("--name is needed for your own recording");
   // The sample is a fictional family, so it gets the names a family would type in.
-  const keywords = values.keywords ? fam.cleanKeywords(values.keywords) : sample ? ["Teluk Ayer", "Potong Pasir", "Queenstown", "mee pok", "Singer", "Wei Ling"] : [];
+  const keywords = values.keywords ? cleanKeywords(values.keywords) : sample ? ["Teluk Ayer", "Potong Pasir", "Queenstown", "mee pok", "Singer", "Wei Ling"] : [];
   const old = fam.getJob(slug);
   const hint = values.hint ?? (sample ? SAMPLE.hint : "");
   const started = Date.now();
@@ -54,7 +55,7 @@ if (cmd === "voice") {
   await fam.launch(job, () => fam.runReal({ slug, name, hint, keywords, origin: ORIGIN, audio: { file: audio }, photos: [], sample }));
   const j = fam.getJob(slug)!;
   // The runner saves asynchronously; write the final state before the process exits.
-  writeFileSync(fam.jobFile(slug), JSON.stringify(j, null, 1));
+  writeFileSync(jobFile(slug), JSON.stringify(j, null, 1));
   console.log(`\n${j.status} in ${Math.round((Date.now() - started) / 1000)} s, $${j.usd.toFixed(4)}${j.error ? `: ${j.error}` : ""}`);
   console.log(`book: ${ORIGIN}/${slug}   record: ${ORIGIN}/family/${slug}   folder: ${storyDir(slug)}`);
   process.exit(j.status === "done" ? 0 : 1);
@@ -83,11 +84,11 @@ if (cmd === "voice") {
 } else if (cmd === "check") {
   // Check a finished book's captions against its recording (what a new run does after the storyboard).
   const slug = rest[0] ?? SAMPLE.slug;
-  const { readRecord, jobFile } = await import("./index");
+  const { readRecord, jobFile } = await import("./record");
   const { applyChecks, checkCaptions } = await import("./check");
   const { edit, loadStory } = await import("../stages");
   const { withScope } = await import("../budget");
-  const { jobTag } = await import("../create/guard");
+  const { jobTag } = await import("../jobs/guard");
   const r = readRecord(slug);
   if (!r?.facts || !r.transcript) throw new Error(`${slug} has no facts or transcript`);
   let usd = 0;

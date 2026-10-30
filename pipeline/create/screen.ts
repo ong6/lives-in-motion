@@ -13,7 +13,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { sparkJson, sparkSearch, type Cited } from "../meta";
 import { ROOT } from "../root";
-import { slugify } from "./guard";
+import { slugify } from "../jobs/guard";
 
 export const CATEGORIES = [
   "politician",

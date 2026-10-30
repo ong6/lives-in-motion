@@ -7,7 +7,7 @@
  *      it); otherwise every visitor shares one bucket, since the header can be spoofed.
  */
 import { info, start } from "@/pipeline/create";
-import { IpLimit, clientIp, mockForced, perIpDaily } from "@/pipeline/create/guard";
+import { IpLimit, clientIp, mockForced, perIpDaily } from "@/pipeline/jobs/guard";
 import { withShelf } from "@/components/create/shelf";
 
 export const runtime = "nodejs";
