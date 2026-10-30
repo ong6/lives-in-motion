@@ -1,21 +1,39 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
+import { useCallback, useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import Link from "next/link";
 import { LineDrawing } from "@/components/LineDrawing";
-import type { Budget, CreateInfo, Job, JobScene, Spend, StepId } from "@/pipeline/create/types";
+import { Cover } from "@/components/book/Cover";
+import type { Budget, CreateInfo, Job, JobScene, StepId } from "@/pipeline/create/types";
+import { explain } from "./explain";
 import s from "./create.module.css";
 
-const STEPS: { id: StepId; name: string; model: (j: Job["models"]) => string; does: string }[] = [
-  { id: "research", name: "Research", model: (m) => `Muse Spark + web search`, does: "finds dated facts, each with its sources" },
-  { id: "storyboard", name: "Storyboard", model: () => "Muse Spark", does: "turns the facts into seven scenes" },
-  { id: "plates", name: "Plates", model: () => "Muse Image", does: "paints each scene in its decade's print style" },
-  { id: "cutouts", name: "Cut-outs", model: () => "SAM 3.1 + Muse Image", does: "lifts the subject off each plate and repaints what was behind it" },
-  { id: "frontispiece", name: "Frontispiece", model: () => "Muse Image + SAM 3.1", does: "an emblem of the life, traced in pen lines" },
-  { id: "films", name: "Films", model: () => "on this machine", does: "renders the scroll films, no API calls" },
+const STEPS: { id: StepId; name: string; model: string; does: string }[] = [
+  { id: "screen", name: "Subject check", model: "Muse Spark", does: "declines politicians and lives defined by war or crime" },
+  { id: "research", name: "Research", model: "Muse Spark + web search", does: "finds dated facts, each with its sources" },
+  { id: "storyboard", name: "Storyboard", model: "Muse Spark", does: "turns the facts into seven scenes" },
+  { id: "plates", name: "Plates", model: "Muse Image", does: "paints each scene in its decade’s print style" },
+  { id: "cutouts", name: "Cut-outs", model: "SAM 3.1 + Muse Image", does: "lifts the subject off each plate and repaints what was behind it" },
+  { id: "frontispiece", name: "Frontispiece", model: "Muse Image + SAM 3.1", does: "an emblem of the life, traced in pen lines" },
+  { id: "films", name: "Films", model: "this server, no API calls", does: "renders the scroll films" },
 ];
 
-const MODEL_NAME: Record<string, string> = { spark: "Muse Spark", search: "Muse Spark search", image: "Muse Image", sam: "SAM 3.1" };
+/**
+ * One click fills the form: Singaporeans from the arts, sport, medicine and business, each with an
+ * NLB Infopedia article, who aren't on the shelf yet. No politicians and no lives defined by war.
+ */
+const EXAMPLES = [
+  { name: "Georgette Chen", hint: "painter, a pioneer of the Nanyang style" },
+  { name: "C. Kunalan", hint: "sprinter, Singapore’s 100 m record holder for 33 years" },
+  { name: "Chen Su Lan", hint: "physician, anti-opium campaigner and founder of the Chinese YMCA" },
+  { name: "Lee Kong Chian", hint: "rubber industrialist and philanthropist, the Lee Foundation" },
+];
+
+const MODEL_NAME: Record<string, string> = { spark: "Muse Spark", search: "Muse Spark search", image: "Muse Image", sam: "SAM 3.1", wonder: "Muse Wonder", manual: "Other" };
+
+/** A step an older job.json doesn't have yet. */
+const NO_STEP = { status: "skipped", usd: 0 } as const;
+const stepOf = (job: Job, id: StepId): Job["steps"][StepId] => job.steps[id] ?? NO_STEP;
 
 const usd = (v: number, digits = 2) => `$${v.toFixed(v > 0 && v < 0.01 ? 4 : digits)}`;
 const mins = (sec: number) => (sec < 90 ? `${Math.max(1, Math.round(sec / 10) * 10)} s` : `${Math.round(sec / 60)} min`);
@@ -30,20 +48,45 @@ const clock = (from: string, at: string) => {
   const t = Math.max(0, Math.round((Date.parse(at) - Date.parse(from)) / 1000));
   return `${Math.floor(t / 60)}:${String(t % 60).padStart(2, "0")}`;
 };
+const duration = (sec: number) => (sec < 60 ? `${sec} s` : `${Math.floor(sec / 60)} min ${sec % 60} s`);
 
 /** Wall time left, from the typical step times: research, storyboard, then plates+cut-outs beside the frontispiece, then films. */
 function remaining(job: Job, est: CreateInfo["estimate"], now: number): number {
   const left = (id: StepId) => {
-    const st = job.steps[id];
-    if (st.status === "done" || st.status === "skipped" || st.status === "failed") return 0;
+    const st = stepOf(job, id);
+    if (st.status !== "running" && st.status !== "waiting") return 0;
     if (st.status === "running" && st.startedAt) return Math.max(est[id] * 0.15, est[id] - (now - Date.parse(st.startedAt)) / 1000);
     return est[id];
   };
   // Cut-outs run beside the plates; about 60% of their time is left once the last plate lands.
   const art = job.steps.plates.status === "done" || job.steps.plates.status === "failed" ? left("cutouts") : left("plates") + est.cutouts * 0.6;
-  return left("research") + left("storyboard") + Math.max(art, left("frontispiece")) + left("films");
+  return left("screen") + left("research") + left("storyboard") + Math.max(art, left("frontispiece")) + left("films");
 }
-const total = (est: CreateInfo["estimate"]) => est.research + est.storyboard + Math.max(est.plates + est.cutouts * 0.6, est.frontispiece) + est.films;
+const total = (est: CreateInfo["estimate"]) => (est.screen ?? 0) + est.research + est.storyboard + Math.max(est.plates + est.cutouts * 0.6, est.frontispiece) + est.films;
+
+/** Honest range: the estimate at the low end, the last real run (or 10 min) at the high end. */
+function timeRange(info: CreateInfo) {
+  const lo = Math.round(total(info.estimate) / 60);
+  const hi = Math.max(10, Math.ceil((info.last?.seconds ?? 0) / 60));
+  return `${lo}–${hi} minutes`;
+}
+
+/** An error line in plain words; the raw text, if any, behind a disclosure. */
+function Problem({ raw, className }: { raw?: string | null; className?: string }) {
+  const e = explain(raw);
+  if (!e.text) return null;
+  return (
+    <span className={`${s.problem} ${className ?? ""}`}>
+      {e.text}
+      {e.detail && (
+        <details className={s.detail}>
+          <summary>Details</summary>
+          <code>{e.detail}</code>
+        </details>
+      )}
+    </span>
+  );
+}
 
 export function Workbench({ initial }: { initial: CreateInfo }) {
   const [info, setInfo] = useState(initial);
@@ -56,7 +99,16 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
   const [now, setNow] = useState(0);
   const [preview, setPreview] = useState<string | null>(null);
   const [another, setAnother] = useState(false);
+  const [name, setName] = useState("");
+  const [hint, setHint] = useState("");
   const es = useRef<EventSource | null>(null);
+  const nameRef = useRef<HTMLInputElement>(null);
+
+  const refreshInfo = useCallback(() => {
+    fetch("/api/create")
+      .then((r) => r.json())
+      .then(setInfo, () => {});
+  }, []);
 
   const follow = useCallback((slug: string) => {
     es.current?.close();
@@ -99,22 +151,28 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
     return () => clearInterval(t);
   }, [job?.status]);
 
+  // A finished life is on the shelf now: fetch the shelf again so its cover can be drawn.
+  const finished = job && job.status !== "running";
+  useEffect(() => {
+    if (finished) refreshInfo();
+  }, [finished, refreshInfo]);
+
   async function submit(form: FormData) {
     setSending(true);
     setError(null);
     try {
       const r = await fetch("/api/create", { method: "POST", body: form });
-      const d = await r.json();
-      if (!r.ok) return setError(d.error ?? "The server refused the request.");
+      const d = await r.json().catch(() => ({}));
+      if (!r.ok) return setError(d.error ?? `The server refused the request (HTTP ${r.status}).`);
       history.replaceState(null, "", `/create?job=${d.slug}`);
       setJob(null);
       setAnother(false);
       follow(d.slug);
     } catch {
-      setError("Couldn't reach the server. Check the connection and try again.");
+      setError("Couldn’t reach the server. Check the connection and try again.");
     } finally {
       setSending(false);
-      fetch("/api/create").then((r) => r.json()).then(setInfo, () => {});
+      refreshInfo();
     }
   }
 
@@ -132,112 +190,158 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
     void submit(f);
   };
 
-  const running = job?.status === "running";
   const est = info.estimate;
-  const plates = job?.scenes.filter((x) => x.plate).length ?? 0;
-  const canRead = Boolean(job && job.steps.storyboard.status === "done" && plates > 0);
 
-  return (
-    <div className={s.desk} data-desk>
-      <header className={s.top}>
-        <Link href="/" className={s.home}>
-          Lives in Motion
-        </Link>
-        <span className={s.where}>Make a new life</span>
-        <Link href="/" className={s.back}>
-          Back to the book
-        </Link>
-      </header>
-
-      <div className={s.bench}>
-        <aside className={s.ticket} aria-label="Order and progress">
-          {!job || another ? (
-            <form className={s.form} onSubmit={onSubmit}>
-              <h1 className={s.formTitle}>Whose life should we make?</h1>
-              <p className={s.formLede}>A Singaporean with a public record. Muse Spark looks them up on the web; nothing is invented without a source.</p>
-              <label className={s.field}>
-                <span>Name</span>
-                <input name="name" required maxLength={80} autoComplete="off" placeholder="Tan Howe Liang" disabled={!info.enabled} />
-              </label>
-              <label className={s.field}>
-                <span>
-                  Who they are <em>optional</em>
-                </span>
-                <input name="hint" maxLength={120} autoComplete="off" placeholder="weightlifter, Singapore's first Olympic medallist" disabled={!info.enabled} />
-              </label>
-              <label className={s.field}>
-                <span>
-                  A photo for the frontispiece <em>optional</em>
-                </span>
-                <input
-                  type="file"
-                  name="photo"
-                  accept="image/jpeg,image/png,image/webp"
+  if (!job || another)
+    return (
+      <div className={s.page}>
+        <Masthead />
+        <div className={s.intake}>
+          <form className={s.form} onSubmit={onSubmit}>
+            <h1 className={s.formTitle}>Make a new life</h1>
+            <p className={s.formLede}>
+              Name a Singaporean with a public record. Muse Spark looks them up on the web and cites every fact; Muse Image paints the scenes; SAM 3.1 cuts them into layers. You watch each step happen.
+            </p>
+            <label className={s.field}>
+              <span className={s.fieldLabel}>Name</span>
+              <input ref={nameRef} name="name" required maxLength={80} autoComplete="off" placeholder="Georgette Chen" disabled={!info.enabled} value={name} onChange={(e) => setName(e.target.value)} />
+            </label>
+            <div className={s.examples}>
+              <span className={s.examplesLabel}>Try</span>
+              {EXAMPLES.map((x) => (
+                <button
+                  key={x.name}
+                  type="button"
+                  className={s.chip}
+                  aria-pressed={name === x.name}
                   disabled={!info.enabled}
-                  onChange={(e) => {
-                    const f = e.currentTarget.files?.[0];
-                    if (preview) URL.revokeObjectURL(preview);
-                    setPreview(f ? URL.createObjectURL(f) : null);
-                    if (f && f.size > 8 * 1024 * 1024) setError("The photo is over 8 MB; use a smaller one.");
+                  onClick={() => {
+                    setName(x.name);
+                    setHint(x.hint);
+                    nameRef.current?.focus();
                   }}
-                />
-              </label>
-              {preview && (
-                <div className={s.photo}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={preview} alt="The photo you chose" />
-                  <label className={s.check}>
-                    <input type="checkbox" name="rights" required />
-                    <span>I took this photo or have the right to use it. It will be traced into a line drawing and credited as supplied by the reader.</span>
-                  </label>
-                </div>
-              )}
-              {!preview && <p className={s.hint}>Without a photo, Muse Image paints an emblem of the life instead of a likeness.</p>}
-              {info.needsToken && (
-                <label className={s.field}>
-                  <span>Passcode</span>
-                  <input name="token" type="password" required autoComplete="off" />
+                >
+                  {x.name}
+                </button>
+              ))}
+            </div>
+            <label className={s.field}>
+              <span className={s.fieldLabel}>
+                Who they are <em>optional, helps the search</em>
+              </span>
+              <input name="hint" maxLength={120} autoComplete="off" placeholder="painter, a pioneer of the Nanyang style" disabled={!info.enabled} value={hint} onChange={(e) => setHint(e.target.value)} />
+            </label>
+            <label className={s.field}>
+              <span className={s.fieldLabel}>
+                A photo for the frontispiece <em>optional</em>
+              </span>
+              <input
+                type="file"
+                name="photo"
+                accept="image/jpeg,image/png,image/webp"
+                disabled={!info.enabled}
+                onChange={(e) => {
+                  const f = e.currentTarget.files?.[0];
+                  if (preview) URL.revokeObjectURL(preview);
+                  setPreview(f ? URL.createObjectURL(f) : null);
+                  if (f && f.size > 8 * 1024 * 1024) setError("The photo is over 8 MB; use a smaller one.");
+                }}
+              />
+            </label>
+            {preview ? (
+              <div className={s.photo}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={preview} alt="The photo you chose" />
+                <label className={s.check}>
+                  <input type="checkbox" name="rights" required />
+                  <span>I took this photo or have the right to use it. It will be traced into a line drawing and credited as supplied by the reader.</span>
                 </label>
-              )}
-              {error && (
-                <p className={s.error} role="alert">
-                  {error}
-                </p>
-              )}
-              {!info.enabled && <p className={s.error}>{info.reason}</p>}
+              </div>
+            ) : (
+              <p className={s.hint}>Without a photo, Muse Image paints an emblem of the life instead of a likeness.</p>
+            )}
+            {info.needsToken && (
+              <label className={s.field}>
+                <span className={s.fieldLabel}>Passcode</span>
+                <input name="token" type="password" required autoComplete="off" />
+              </label>
+            )}
+            {error && (
+              <p className={s.error} role="alert">
+                {error}
+              </p>
+            )}
+            {!info.enabled && <p className={s.error}>{info.reason}{info.mockAllowed ? " Rehearsals still run." : ""}</p>}
+            <div className={s.actions}>
               <button className={s.make} disabled={!info.enabled || sending} value="make">
                 {sending ? "Starting…" : "Make this life"}
               </button>
-              <p className={s.terms}>
-                Takes about {mins(total(est))}. Typically $0.25–0.40 of Meta API time, never more than {usd(info.ceiling)}; today {usd(budget.today)} of the {usd(budget.dailyCap)} daily allowance is used.
-              </p>
               {info.mockAllowed && (
-                <button className={s.rehearse} disabled={!info.enabled || sending} value="mock" formNoValidate={false}>
-                  Rehearse with Jack Sim’s finished life (no Meta calls)
-                </button>
-              )}
-            </form>
-          ) : (
-            <div className={s.order}>
-              <p className={s.orderLabel}>{job.mock ? "Rehearsal" : running ? "Now making" : job.status === "done" ? "Made" : "Stopped"}</p>
-              <h1 className={s.orderName}>{job.name}</h1>
-              {job.hint && <p className={s.orderHint}>{job.hint}</p>}
-              {!running && (
-                <button className={s.rehearse} onClick={() => setAnother(true)}>
-                  Make another life
+                // formNoValidate: a rehearsal replays a finished life under its own name, so the name field isn't needed.
+                <button className={s.rehearse} disabled={sending} value="mock" formNoValidate>
+                  Rehearse for free
                 </button>
               )}
             </div>
-          )}
+            <dl className={s.terms}>
+              <div>
+                <dt>Time</dt>
+                <dd>{timeRange(info)}. You can start reading once the first plates are in.</dd>
+              </div>
+              <div>
+                <dt>Cost</dt>
+                <dd>
+                  About $0.40 of Meta API time, stopped at {usd(info.ceiling)} whatever happens.
+                  {info.last && (
+                    <>
+                      {" "}
+                      The last one, {info.last.name}, took {duration(info.last.seconds)} and cost {usd(info.last.usd)}.
+                    </>
+                  )}
+                </dd>
+              </div>
+              <div>
+                <dt>Today</dt>
+                <dd>
+                  {usd(budget.today)} of the {usd(budget.dailyCap)} daily allowance used.
+                </dd>
+              </div>
+            </dl>
+            {info.mockAllowed && <p className={s.hint}>Rehearse replays Jack Sim’s finished life, under his own name, with typical timings and costs. No name needed, no Meta calls, nothing charged.</p>}
+            <p className={s.hint}>A new life is a draft: you can read it at once, and it joins the shelf once approved. Politicians, heads of state and lives defined by war or crime are declined.</p>
+          </form>
 
-          {job && <Steps job={job} est={est} now={now} />}
-          {job && <Meter job={job} budget={budget} />}
+          <WhatYouGet info={info} />
+        </div>
+      </div>
+    );
 
-          {job && job.status !== "running" && (
+  const running = job.status === "running";
+  const plates = job.scenes.filter((x) => x.plate).length;
+  const canRead = Boolean(job.steps.storyboard.status === "done" && plates > 0);
+  const book = info.shelf?.find((b) => b.slug === job.bookSlug);
+
+  return (
+    <div className={s.page}>
+      <Masthead />
+      <div className={s.bench}>
+        <aside className={s.ticket} aria-label="Order and progress">
+          <div className={s.order}>
+            <p className={s.orderLabel} data-live={running || undefined}>
+              {job.mock ? (running ? "Rehearsing" : "Rehearsal") : running ? "Now making" : job.status === "done" ? "Made, as a draft" : job.status === "declined" ? "Declined" : "Stopped"}
+            </p>
+            <h1 className={s.orderName}>{job.name}</h1>
+            {job.hint && <p className={s.orderHint}>{job.hint}</p>}
+          </div>
+
+          <Steps job={job} est={est} now={now} />
+          <Meter job={job} budget={budget} />
+
+          {!running && (
             <div className={s.ending} role="status">
-              {job.status === "done" && <p className={s.ok}>Finished in {clock(job.startedAt, job.finishedAt ?? job.updatedAt)}.</p>}
-              {job.status === "failed" && <p className={s.error}>{job.error}</p>}
+              {job.status === "failed" && <Problem raw={job.error} className={s.error} />}
               {job.status === "interrupted" && <p className={s.error}>The server restarted while this life was being made. Finished plates and cut-outs are kept.</p>}
+              {job.status === "declined" && <p className={s.declined}>Declined by the subject check. Nothing was researched and nothing was saved.</p>}
               {(job.status === "failed" || job.status === "interrupted") && !job.mock && (
                 <button className={s.rehearse} onClick={resume} disabled={sending}>
                   Pick up where it stopped
@@ -248,42 +352,86 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
                   Retry what didn’t finish
                 </button>
               )}
+              {error && (
+                <p className={s.error} role="alert">
+                  {error}
+                </p>
+              )}
+              <button className={s.rehearse} onClick={() => setAnother(true)}>
+                Make another life
+              </button>
             </div>
           )}
         </aside>
 
         <main className={s.sheet}>
-          {job ? <Proof job={job} now={now} canRead={canRead} link={link} remaining={running ? remaining(job, est, now) : 0} /> : <Empty info={info} />}
+          <Proof job={job} now={now} canRead={canRead} link={link} remaining={running ? remaining(job, est, now) : 0} book={book} onAnother={() => setAnother(true)} />
         </main>
 
         <aside className={s.margin} aria-label="What the models are doing">
-          <h2 className={s.marginTitle}>Press log</h2>
-          {job ? <Log job={job} /> : <p className={s.quiet}>Each call to a Meta model appears here as it happens, with what it made and what it cost.</p>}
+          <Log job={job} />
         </aside>
       </div>
     </div>
   );
 }
 
-function Empty({ info }: { info: CreateInfo }) {
+function Masthead() {
   return (
-    <div className={s.empty}>
-      <p className={s.kicker}>How a life is made</p>
-      <h2 className={s.emptyTitle}>Three Meta models, one book, about {mins(total(info.estimate))}.</h2>
+    <header className={s.masthead}>
+      <Link href="/" className={s.wordmark}>
+        Lives in Motion
+      </Link>
+      <nav aria-label="Site">
+        <Link href="/#shelf">The shelf</Link>
+        <Link href="/#making">How a page is made</Link>
+        <Link href="/create" aria-current="page">
+          Make a new life
+        </Link>
+      </nav>
+    </header>
+  );
+}
+
+/** The empty page's other half: what a run makes, shown with a real one, and the steps it takes. */
+function WhatYouGet({ info }: { info: CreateInfo }) {
+  const sample = info.sample;
+  return (
+    <section className={s.promise} aria-labelledby="promise">
+      <h2 id="promise" className={s.promiseTitle}>
+        What you get
+      </h2>
+      <p className={s.promiseLede}>A book of seven illustrated scenes you read by scrolling, each painted in the print style of its decade, cut into layers that move, and footnoted with its sources.</p>
+      {sample && sample.plates.length > 0 && (
+        <figure className={s.contact}>
+          <div className={s.contactRow}>
+            {sample.plates.slice(0, 7).map((p) => (
+              <div key={p.src} className={s.contactPlate}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.src} alt={`${p.year}: ${p.title}`} loading="lazy" />
+                <span>{p.year}</span>
+              </div>
+            ))}
+          </div>
+          <figcaption>
+            The seven plates of <Link href={`/${sample.slug}`}>{sample.name}’s book</Link>, made this way.
+          </figcaption>
+        </figure>
+      )}
       <ol className={s.plan}>
         {STEPS.map((st) => (
           <li key={st.id}>
             <span className={s.planName}>{st.name}</span>
-            <span className={s.planModel}>{st.model({ spark: "", image: "", sam: "" })}</span>
-            <span className={s.planDoes}>{st.does}</span>
-            <span className={s.planTime}>{mins(info.estimate[st.id])}</span>
+            <span className={s.planDoes}>
+              {st.does}
+              <span className={s.planModel}>{st.model}</span>
+            </span>
+            <span className={s.planTime}>~{mins(info.estimate[st.id])}</span>
           </li>
         ))}
       </ol>
-      <p className={s.emptyFoot}>
-        You can read the book as soon as the storyboard and the first plates are in; the rest fills in while you read. Event budget: {usd(info.budget.spent)} spent, {usd(info.budget.left)} left before the stop line.
-      </p>
-    </div>
+      <p className={s.promiseFoot}>Plates, cut-outs and the frontispiece run side by side, so the whole is shorter than the sum.</p>
+    </section>
   );
 }
 
@@ -291,18 +439,16 @@ function Steps({ job, est, now }: { job: Job; est: CreateInfo["estimate"]; now: 
   return (
     <ol className={s.steps}>
       {STEPS.map((st) => {
-        const x = job.steps[st.id];
+        const x = stepOf(job, st.id);
         const took = x.startedAt ? ((x.endedAt ? Date.parse(x.endedAt) : now) - Date.parse(x.startedAt)) / 1000 : 0;
         return (
           <li key={st.id} className={s.step} data-status={x.status}>
             <span className={s.stepMark} aria-hidden />
             <span className={s.stepName}>{st.name}</span>
-            <span className={s.stepModel}>{st.model(job.models)}</span>
-            <span className={s.stepFig}>
-              {x.status === "waiting" ? `~${mins(est[st.id])}` : x.status === "skipped" ? "skipped" : `${Math.max(0, Math.round(took))} s`}
-              {x.usd > 0 && <> {usd(x.usd, 3)}</>}
-            </span>
-            {x.note && <span className={s.stepNote}>{x.note}</span>}
+            <span className={s.stepFig}>{x.status === "waiting" ? `~${mins(est[st.id])}` : x.status === "skipped" ? "skipped" : x.status === "declined" ? "declined" : mins(Math.max(1, took))}</span>
+            <span className={s.stepModel}>{st.model}</span>
+            <span className={s.stepCost}>{x.usd > 0 ? usd(x.usd, 3) : ""}</span>
+            {x.note && (x.status === "failed" || x.status === "declined" ? <Problem raw={x.note} className={s.stepErr} /> : <span className={s.stepNote}>{x.note}</span>)}
           </li>
         );
       })}
@@ -312,26 +458,51 @@ function Steps({ job, est, now }: { job: Job; est: CreateInfo["estimate"]; now: 
 
 function Meter({ job, budget }: { job: Job; budget: Budget }) {
   const pct = Math.min(100, (job.usd / job.ceiling) * 100);
+  const parts = Object.entries(job.spend).filter(([, v]) => (v ?? 0) > 0);
   return (
     <div className={s.meter}>
       <div className={s.meterRow}>
-        <span>{job.mock ? "Would cost" : "This life so far"}</span>
+        <span>{job.mock ? "Would have cost" : "This life so far"}</span>
         <strong>{usd(job.usd, 3)}</strong>
       </div>
       <div className={s.bar} role="meter" aria-valuemin={0} aria-valuemax={job.ceiling} aria-valuenow={job.usd} aria-label="Spend against this life's ceiling">
         <span style={{ width: `${pct}%` }} />
       </div>
+      <p className={s.meterNote}>of the {usd(job.ceiling)} ceiling for one life</p>
+      {parts.length > 0 && (
+        <dl className={s.split}>
+          {parts.map(([k, v]) => (
+            <div key={k}>
+              <dt>{MODEL_NAME[k] ?? k}</dt>
+              <dd>{usd(v ?? 0, 3)}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
       <p className={s.meterNote}>
-        Ceiling {usd(job.ceiling)} a life. {Object.entries(job.spend).map(([k, v]) => `${MODEL_NAME[k] ?? k} ${usd(v ?? 0, 3)}`).join(", ")}
-      </p>
-      <p className={s.meterNote}>
-        {job.mock ? "Rehearsal: nothing is charged. " : ""}Event budget {usd(budget.spent)} of the {usd(budget.stop, 0)} stop line; new lives today {usd(budget.today)} of {usd(budget.dailyCap)}.
+        {job.mock ? "Rehearsal: nothing is charged. " : ""}Today’s new lives {usd(budget.today)} of {usd(budget.dailyCap)}; event budget {usd(budget.spent)} of {usd(budget.stop, 0)}.
       </p>
     </div>
   );
 }
 
-function Proof({ job, now, canRead, link, remaining }: { job: Job; now: number; canRead: boolean; link: string; remaining: number }) {
+function Proof({
+  job,
+  now,
+  canRead,
+  link,
+  remaining,
+  book,
+  onAnother,
+}: {
+  job: Job;
+  now: number;
+  canRead: boolean;
+  link: string;
+  remaining: number;
+  book?: NonNullable<CreateInfo["shelf"]>[number];
+  onAnother: () => void;
+}) {
   const running = job.status === "running";
   // Once the scenes are written the record folds to a few lines, so the plates are in view.
   const [open, setOpen] = useState(false);
@@ -339,62 +510,85 @@ function Proof({ job, now, canRead, link, remaining }: { job: Job; now: number; 
   const sources = new Set(job.facts.flatMap((f) => f.sources.map((x) => x.url))).size;
   return (
     <article className={s.proof}>
-      <header className={s.proofHead}>
-        <div>
-          <h2 className={s.name}>{job.name}</h2>
-          <p className={s.tagline}>{job.tagline ?? (job.steps.storyboard.status === "done" ? "" : job.hint || " ")}</p>
-        </div>
-        <div className={s.read}>
-          {canRead ? (
-            <Link className={s.readBtn} href={`/${job.bookSlug}`}>
-              Read the book
-            </Link>
-          ) : (
-            <span className={s.readBtn} aria-disabled>
-              Read the book
+      {job.status === "declined" ? (
+        <header className={s.declineCard}>
+          <div>
+            <p className={s.boundLabel}>Subject check · Muse Spark</p>
+            <h2 className={s.boundName}>{job.name}</h2>
+            <p className={s.declineMsg} role="status">
+              {job.screen?.message ?? "This life is outside what Lives in Motion makes."}
+            </p>
+            <p className={s.boundFacts}>The check cost {usd(job.usd, 4)}; nothing else was called.</p>
+            <div className={s.boundActions}>
+              <button className={s.readBtn} onClick={onAnother}>
+                Try another name
+              </button>
+              <Link className={s.quiet} href="/#shelf">
+                Read a book on the shelf
+              </Link>
+            </div>
+          </div>
+        </header>
+      ) : job.status === "done" ? (
+        <Bound job={job} book={book} sources={sources} onAnother={onAnother} />
+      ) : (
+        <header className={s.proofHead}>
+          <div>
+            <h2 className={s.name}>{job.name}</h2>
+            <p className={s.tagline}>{job.tagline ?? (job.steps.storyboard.status === "done" ? "" : job.hint || " ")}</p>
+          </div>
+          <div className={s.read}>
+            {canRead ? (
+              <Link className={s.readBtn} href={`/${job.bookSlug}`}>
+                Read the book so far
+              </Link>
+            ) : (
+              <span className={s.readBtn} aria-disabled>
+                Read the book
+              </span>
+            )}
+            <span className={s.eta} aria-live="polite">
+              {running && !now
+                ? " "
+                : running
+                  ? `${canRead ? "Readable now. " : "Readable once the first plate is in. "}About ${mins(remaining)} left; ${clock(job.startedAt, new Date(now).toISOString())} so far.`
+                  : "Stopped. What was made is kept."}
+              {link === "reconnecting" && running ? " Reconnecting to the server…" : ""}
             </span>
-          )}
-          <span className={s.eta} aria-live="polite">
-            {running && !now
-              ? "\u00a0"
-              : running
-              ? `${canRead ? "Readable now; " : ""}about ${mins(remaining)} left, ${clock(job.startedAt, new Date(now).toISOString())} so far`
-              : job.status === "done"
-                ? "Bound and on the shelf"
-                : "Stopped"}
-            {link === "reconnecting" && running ? ". Reconnecting to the server…" : ""}
-          </span>
-        </div>
-      </header>
+          </div>
+        </header>
+      )}
 
-      {job.mock && <p className={s.mockNote}>Rehearsal: this replays Jack Sim’s finished life with typical timings and costs. No Meta calls are made and nothing is charged.</p>}
+      {job.status !== "declined" && job.mock && <p className={s.mockNote}>Rehearsal: this replays Jack Sim’s finished life with typical timings and costs. No Meta calls are made and nothing is charged.</p>}
 
+      {job.status !== "declined" && (
+      <>
       <section className={s.galley} aria-labelledby="galley">
         <h3 id="galley" className={s.sectionTitle}>
-          The record <span>Muse Spark, web search, {job.facts.length ? `${job.facts.length} facts from ${sources} sources` : "searching…"}</span>
+          The record <span>Muse Spark with web search{job.facts.length ? `: ${job.facts.length} facts from ${sources} sources` : ""}</span>
         </h3>
         {job.facts.length ? (
           <>
-          <ol className={s.facts} data-folded={folded || undefined}>
-            {job.facts.map((f, i) => (
-              <li key={f.n} className={s.fact} style={{ animationDelay: `${Math.min(i, 12) * 40}ms` }}>
-                <span className={s.factYear}>{f.year}</span>
-                <span className={s.factText}>
-                  {f.text}{" "}
-                  {f.sources.map((src, k) => (
-                    <a key={k} className={s.cite} href={src.url} target="_blank" rel="noopener noreferrer" title={src.label}>
-                      {host(src.url)}
-                    </a>
-                  ))}
-                </span>
-              </li>
-            ))}
-          </ol>
-          {job.scenes.length > 0 && job.facts.length > 6 && (
-            <button className={s.unfold} onClick={() => setOpen(!open)} aria-expanded={open}>
-              {open ? "Fold the record" : `Show all ${job.facts.length} facts`}
-            </button>
-          )}
+            <ol className={s.facts} data-folded={folded || undefined}>
+              {job.facts.map((f, i) => (
+                <li key={f.n} className={s.fact} style={{ animationDelay: `${Math.min(i, 12) * 40}ms` }}>
+                  <span className={s.factYear}>{f.year}</span>
+                  <span className={s.factText}>
+                    {f.text}{" "}
+                    {f.sources.map((src, k) => (
+                      <a key={k} className={s.cite} href={src.url} target="_blank" rel="noopener noreferrer" title={src.label}>
+                        {host(src.url)}
+                      </a>
+                    ))}
+                  </span>
+                </li>
+              ))}
+            </ol>
+            {job.scenes.length > 0 && job.facts.length > 6 && (
+              <button className={s.unfold} onClick={() => setOpen(!open)} aria-expanded={open}>
+                {open ? "Fold the record" : `Show all ${job.facts.length} facts`}
+              </button>
+            )}
           </>
         ) : (
           <div className={s.searching} aria-live="polite">
@@ -405,37 +599,80 @@ function Proof({ job, now, canRead, link, remaining }: { job: Job; now: number; 
 
       <section className={s.platesSec} aria-labelledby="plates">
         <h3 id="plates" className={s.sectionTitle}>
-          Seven scenes <span>Muse Image paints, SAM 3.1 cuts out</span>
+          Seven scenes <span>Muse Image paints, SAM 3.1 cuts out{job.status === "done" ? "; hover a plate to play its film" : ""}</span>
         </h3>
         <div className={s.plates}>
-          {(job.scenes.length ? job.scenes : Array.from({ length: 7 }, (_, i) => null)).map((sc, i) => (sc ? <Plate key={sc.id} scene={sc} n={i + 1} /> : <div key={i} className={s.slot} data-status="pending" />))}
+          {(job.scenes.length ? job.scenes : Array.from({ length: 7 }, () => null)).map((sc, i) => (sc ? <Plate key={sc.id} scene={sc} n={i + 1} /> : <div key={i} className={s.slot} data-status="pending" />))}
         </div>
       </section>
 
       {job.frontispiece && (
         <section className={s.frontSec} aria-labelledby="front">
           <h3 id="front" className={s.sectionTitle}>
-            Frontispiece <span>{job.frontispiece.kind === "photo" ? "your photo, SAM 3.1 person mask, traced in pen lines" : "an emblem by Muse Image, SAM 3.1 mask, traced in pen lines"}</span>
+            Frontispiece{" "}
+            <span>
+              {job.frontispiece.kind === "emblem"
+                ? "an emblem by Muse Image, SAM 3.1 mask, traced in pen lines"
+                : job.frontispiece.credit
+                  ? "a credited portrait photo, SAM 3.1 person mask, traced in pen lines"
+                  : "your photo, SAM 3.1 person mask, traced in pen lines"}
+            </span>
           </h3>
           <div className={s.front}>
             <figure className={s.frontFig}>
               {job.frontispiece.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={job.frontispiece.image} alt={job.frontispiece.kind === "photo" ? "The photo supplied" : "The emblem Muse Image painted"} />
+                <img src={job.frontispiece.image} alt={job.frontispiece.kind === "emblem" ? "The emblem Muse Image painted" : job.frontispiece.credit ? `Portrait photo of ${job.name}` : "The photo supplied"} />
               ) : (
                 <div className={s.frontWait}>{job.steps.frontispiece.status === "failed" ? "No picture" : "Painting…"}</div>
               )}
-              <figcaption>{job.mock ? "Rehearsal: Jack Sim’s credited portrait" : job.frontispiece.kind === "photo" ? "Supplied by the reader" : "Muse Image"}</figcaption>
+              <figcaption>{job.frontispiece.credit ?? (job.frontispiece.kind === "photo" ? "Supplied by the reader" : "Muse Image")}</figcaption>
             </figure>
             <figure className={s.frontFig}>
-              {job.frontispiece.lines ? <LineDrawing src={job.frontispiece.lines} loop label={`${job.name}, frontispiece in pen strokes`} className={s.frontLines} /> : <div className={s.frontWait}>{job.frontispiece.note ?? "Tracing comes next"}</div>}
-              <figcaption>{job.frontispiece.strokes ? `${job.frontispiece.strokes.toLocaleString()} pen strokes, linedraw` : "linedraw"}</figcaption>
+              {job.frontispiece.lines ? <LineDrawing src={job.frontispiece.lines} loop label={`${job.name}, frontispiece in pen strokes`} className={s.frontLines} /> : <div className={s.frontWait}>{job.steps.frontispiece.status === "failed" ? "Not traced" : "Tracing comes next"}</div>}
+              <figcaption>{job.frontispiece.strokes ? `${job.frontispiece.strokes.toLocaleString()} pen strokes` : "Pen lines"}</figcaption>
             </figure>
-            {job.frontispiece.note && <p className={s.frontNote}>{job.frontispiece.note}</p>}
+            {job.frontispiece.note && <Problem raw={job.frontispiece.note} className={job.steps.frontispiece.status === "failed" ? s.error : s.frontNote} />}
           </div>
         </section>
       )}
+      </>
+      )}
     </article>
+  );
+}
+
+/** The done moment: the life bound in its cloth, turning to face the reader, and the way in. */
+function Bound({ job, book, sources, onAnother }: { job: Job; book?: NonNullable<CreateInfo["shelf"]>[number]; sources: number; onAnother: () => void }) {
+  const plates = job.scenes.filter((x) => x.plate).length;
+  const cuts = job.scenes.reduce((n, x) => n + x.cuts.length, 0);
+  const films = job.scenes.filter((x) => x.video).length;
+  const name = book?.name ?? job.name;
+  const took = clock(job.startedAt, job.finishedAt ?? job.updatedAt);
+  return (
+    <header className={s.bound}>
+      <Link href={`/${job.bookSlug}`} className={s.boundBook} aria-label={`Read ${name}’s book`}>
+        <div className={s.boundVolume} style={{ ["--cloth" as string]: book?.cloth ?? "#3b4a3f" } as CSSProperties}>
+          <Cover slug={job.bookSlug} name={name} lifespan={book?.lifespan ?? ""} part={book?.part ?? "Lives in Motion"} className={s.boundCover} />
+        </div>
+      </Link>
+      <div className={s.boundText}>
+        <p className={s.boundLabel}>{job.mock ? `Rehearsal finished: ${name}’s book, replayed` : job.draft ? "Draft. Read it here; it joins the shelf once approved." : `Bound and on the shelf${book ? ` as ${book.part}` : ""}`}</p>
+        <h2 className={s.boundName}>{job.name}</h2>
+        {job.tagline && <p className={s.tagline}>{job.tagline}</p>}
+        <p className={s.boundFacts}>
+          {job.facts.length} facts from {sources} sources, {plates} of 7 plates, {cuts} cut-outs and {films} films, {job.mock ? `replayed in ${took}; a real run would cost about ${usd(job.usd)}` : `made in ${took} for ${usd(job.usd)}`}.
+        </p>
+        <div className={s.boundActions}>
+          <Link className={s.readBtn} href={`/${job.bookSlug}`}>
+            Read the book
+          </Link>
+          <button className={s.quiet} onClick={onAnother}>
+            Make another life
+          </button>
+        </div>
+      </div>
+    </header>
   );
 }
 
@@ -492,11 +729,13 @@ function Plate({ scene, n }: { scene: JobScene; n: number }) {
           {scene.video && <span>film</span>}
           {scene.line && <span>pen line</span>}
         </span>
-        {scene.note && <span className={status === "refused" || status === "failed" ? s.plateErr : s.plateNote}>{scene.note}</span>}
+        {scene.note && (status === "refused" || status === "failed" ? <Problem raw={scene.note} className={s.plateErr} /> : <span className={s.plateNote}>{scene.note}</span>)}
       </figcaption>
     </figure>
   );
 }
+
+const prettyModel = (id: string) => (id.startsWith("muse-spark") ? "Muse Spark" : id.startsWith("muse-image") ? "Muse Image" : id.startsWith("sam") ? "SAM 3.1" : id);
 
 function Log({ job }: { job: Job }) {
   const box = useRef<HTMLOListElement>(null);
@@ -504,37 +743,52 @@ function Log({ job }: { job: Job }) {
   useEffect(() => {
     if (pinned && box.current) box.current.scrollTop = box.current.scrollHeight;
   }, [job.log.length, pinned]);
+  const calls = job.log.filter((l) => l.model).length;
   return (
-    <ol
-      className={s.log}
-      ref={box}
-      onScroll={(e) => {
-        const el = e.currentTarget;
-        setPinned(el.scrollHeight - el.scrollTop - el.clientHeight < 24);
-      }}
-      aria-live="polite"
-    >
-      {job.log.map((l, i) => (
-        <li key={i} className={s.logLine} data-kind={l.kind}>
-          <span className={s.logAt}>{clock(job.startedAt, l.at)}</span>
-          <span className={s.logBody}>
-            {(l.model || l.scene) && (
-              <span className={s.logWho}>
-                {l.scene ? `Scene ${l.scene.slice(1)}` : ""}
-                {l.scene && l.model ? ", " : ""}
-                {l.model ? prettyModel(l.model) : ""}
+    <>
+      <div className={s.logHead}>
+        <h2 className={s.marginTitle}>Press log</h2>
+        <span>{calls ? `${calls} model events` : "waiting for the first call"}</span>
+      </div>
+      <ol
+        className={s.log}
+        ref={box}
+        onScroll={(e) => {
+          const el = e.currentTarget;
+          setPinned(el.scrollHeight - el.scrollTop - el.clientHeight < 24);
+        }}
+        aria-live="polite"
+        aria-relevant="additions"
+      >
+        {job.log.map((l, i) => {
+          const who = [l.scene ? `Scene ${l.scene.slice(1)}` : "", l.model ? prettyModel(l.model) : ""].filter(Boolean).join(", ");
+          const bad = l.kind === "error" || l.kind === "refused";
+          return (
+            <li key={i} className={s.logLine} data-kind={l.kind}>
+              <span className={s.logAt}>{clock(job.startedAt, l.at)}</span>
+              <span className={s.logBody}>
+                {who && <span className={s.logWho}>{who}</span>}
+                {bad ? <Problem raw={l.message} /> : <span className={s.logMsg}>{l.message}</span>}
               </span>
-            )}
-            {l.message}
-            {l.url && /\.(webp|png|jpg)/.test(l.url) && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img className={s.logThumb} src={l.url} alt="" loading="lazy" />
-            )}
-          </span>
-        </li>
-      ))}
-    </ol>
+              {l.url && /\.(webp|png|jpg)/.test(l.url) ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img className={s.logThumb} src={l.url} alt="" loading="lazy" />
+              ) : null}
+            </li>
+          );
+        })}
+      </ol>
+      {!pinned && (
+        <button
+          className={s.latest}
+          onClick={() => {
+            setPinned(true);
+            if (box.current) box.current.scrollTop = box.current.scrollHeight;
+          }}
+        >
+          Jump to latest
+        </button>
+      )}
+    </>
   );
 }
-
-const prettyModel = (id: string) => (id.startsWith("muse-spark") ? "Muse Spark" : id.startsWith("muse-image") ? "Muse Image" : id.startsWith("sam") ? "SAM 3.1" : id);

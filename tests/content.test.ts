@@ -16,8 +16,8 @@ function contrast(a: string, b: string) {
 }
 
 describe("stories", () => {
-  it("open with the three hand-made lives, in gallery order", () => {
-    expect(stories.slice(0, 3).map((s) => s.slug)).toEqual(["jack-sim", "lee-kuan-yew", "joseph-schooling"]);
+  it("open the shelf in gallery order, with Lee Kuan Yew withdrawn", () => {
+    expect(stories.slice(0, 3).map((s) => s.slug)).toEqual(["jack-sim", "joseph-schooling", "tan-howe-liang"]);
   });
   for (const s of stories) {
     describe(s.name, () => {

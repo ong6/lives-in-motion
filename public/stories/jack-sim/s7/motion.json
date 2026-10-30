@@ -1,0 +1,108 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:33:52.344Z",
+  "usd": 0.0547,
+  "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient",
+  "plan": {
+    "focusX": 0.495,
+    "focusY": 0.36,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.12,
+        "panX": -0.005,
+        "panY": 0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.25,
+        "panX": -0.01,
+        "panY": 0.02,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.65,
+        "driftX": 0,
+        "driftY": -0.008,
+        "scale": 1.07,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient"
+  },
+  "critic": {
+    "score": 7,
+    "ok": true,
+    "verdict": "Publishable: a coherent, deliberate push toward the duck on screen that serves the premiere scene, though it remains close to a simple push-in.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 7,
+      "ok": true,
+      "verdict": "Publishable: a coherent, deliberate push toward the duck on screen that serves the premiere scene, though it remains close to a simple push-in.",
+      "filmIssues": [
+        "The push-in is clear and scroll-friendly, with the duck growing slightly forward of the toilet and screen without tearing, doubled edges, or a visible ghost at its original position.",
+        "The poster frame at t=0 reads well as a complete cinema tableau, and the later frames crop the audience and frame edges naturally as the camera moves toward the screen without awkward layer clipping.",
+        "The light-sweep is subtle and fitting for a projector/cinema scene, and the cut-paper print style is preserved throughout.",
+        "The motion is only modestly more expressive than a plain centred push-in, as the duck is the sole parallax layer, but its lift and growth do focus attention on the film-within-the-film."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.495,
+        "focusY": 0.36,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.12,
+            "panX": -0.005,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.25,
+            "panX": -0.01,
+            "panY": 0.02,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.65,
+            "driftX": 0,
+            "driftY": -0.008,
+            "scale": 1.07,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient"
+      }
+    }
+  ]
+}

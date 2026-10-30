@@ -1,0 +1,92 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:17:05.478Z",
+  "usd": 0.0544,
+  "rationale": "A slow pull-back is the setback itself: opening close on the slumped lifter, the camera retreats to reveal the barbell untouched on its platform and the vast empty stadium around him, so he diminishes into the arena as the 1956 result sinks in. Set nearest in depth, he parallaxes most against the stands during the retreat, while his own tiny downward drift and slight shrink extend the slump withou",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.68,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.16,
+        "panX": 0,
+        "panY": -0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.95,
+        "driftX": 0,
+        "driftY": 0.012,
+        "scale": 0.98,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.5
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A slow pull-back is the setback itself: opening close on the slumped lifter, the camera retreats to reveal the barbell untouched on its platform and the vast empty stadium around him, so he diminishes into the arena as the 1956 result sinks in. Set nearest in depth, he parallaxes most against the stands during the retreat, while his own tiny downward drift and slight shrink extend the slump withou"
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "verdict": "Publishable. The slow pull-back clearly expresses the setback: the poster opens closer on the slumped lifter, then he diminishes as the untouched barbell, platform and vast empty stadium are revealed. The lifter stays coherent against the bench with no visible tearing, doubling, halo or painted-over ghost, no layer clips the frame awkwardly, and the move should read smoothly in both scroll directions. The light-sweep is subtle and fitting for floodlights, and the 1950s flat-ink print character is preserved. The plate itself shows the lifter correctly from behind with no stray text, face, anachronism or mangled anatomy.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publishable. The slow pull-back clearly expresses the setback: the poster opens closer on the slumped lifter, then he diminishes as the untouched barbell, platform and vast empty stadium are revealed. The lifter stays coherent against the bench with no visible tearing, doubling, halo or painted-over ghost, no layer clips the frame awkwardly, and the move should read smoothly in both scroll directions. The light-sweep is subtle and fitting for floodlights, and the 1950s flat-ink print character is preserved. The plate itself shows the lifter correctly from behind with no stray text, face, anachronism or mangled anatomy.",
+      "filmIssues": [],
+      "fixes": [
+        "camera[1].t 3.500 → 1.000",
+        "cut-1.enterFor 0.600 → 0.500"
+      ],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.16,
+            "panX": 0,
+            "panY": -0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.95,
+            "driftX": 0,
+            "driftY": 0.012,
+            "scale": 0.98,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A slow pull-back is the setback itself: opening close on the slumped lifter, the camera retreats to reveal the barbell untouched on its platform and the vast empty stadium around him, so he diminishes into the arena as the 1956 result sinks in. Set nearest in depth, he parallaxes most against the stands during the retreat, while his own tiny downward drift and slight shrink extend the slump withou"
+      }
+    }
+  ]
+}

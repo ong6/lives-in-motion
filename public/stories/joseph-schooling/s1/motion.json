@@ -1,0 +1,105 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:15:50.014Z",
+  "usd": 0.054,
+  "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge — HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather.",
+  "plan": {
+    "focusX": 0.51,
+    "focusY": 0.57,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.1,
+        "panX": 0,
+        "panY": 0.015,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.22,
+        "panX": 0,
+        "panY": 0.03,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.7,
+        "driftX": 0,
+        "driftY": 0.008,
+        "scale": 1.04,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.5
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge — HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather."
+  },
+  "critic": {
+    "score": 7,
+    "ok": true,
+    "verdict": "Publishable. The slow downward push-in with slight parallax on the boy clearly centres him against the HDB blocks, palms and pool without stalling and reads equally well in reverse. The boy stays coherent throughout, with no tearing, doubled edges, halo or visible ghost from the painted-over background, and nothing clips the frame edge awkwardly. The t=0 wide composition is a good poster frame. The warm light-sweep suits the sunny morning and remains subtle while preserving the teal-and-orange risograph grain. Only slightly beyond a plain centred push-in, but the focus shift and settling movement express the swimmer's starting moment well.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 7,
+      "ok": true,
+      "verdict": "Publishable. The slow downward push-in with slight parallax on the boy clearly centres him against the HDB blocks, palms and pool without stalling and reads equally well in reverse. The boy stays coherent throughout, with no tearing, doubled edges, halo or visible ghost from the painted-over background, and nothing clips the frame edge awkwardly. The t=0 wide composition is a good poster frame. The warm light-sweep suits the sunny morning and remains subtle while preserving the teal-and-orange risograph grain. Only slightly beyond a plain centred push-in, but the focus shift and settling movement express the swimmer's starting moment well.",
+      "filmIssues": [],
+      "fixes": [
+        "cut-1.enterFor 1.000 → 0.500"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.57,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.1,
+            "panX": 0,
+            "panY": 0.015,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.7,
+            "driftX": 0,
+            "driftY": 0.008,
+            "scale": 1.04,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge — HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather."
+      }
+    }
+  ]
+}

@@ -35,7 +35,7 @@ for (const stage of values.stages!.split(",")) {
     console.log(`  ${(await research(slug, values.name, values.hint!)).length} cited facts`);
   } else if (stage === "storyboard") await storyboard(slug);
   else if (stage === "verify") {
-    const disputed = await verify(slug);
+    const disputed = await verify(slug, undefined, { only });
     if (disputed.length) console.log(`  ${disputed.length} disputed: see stories/${slug}/verify.json`);
   } else if (stage === "illustrate") await illustrate(slug, { only });
   else if (stage === "segment") await segment(slug, { only });

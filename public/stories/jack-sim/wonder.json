@@ -1,0 +1,95 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-30T13:33:52.346Z",
+  "usd": 0.5751,
+  "scenes": {
+    "s4": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "Publishable. The poster frame at t=0 is a strong, complete opening picture \u2014 full globe-and-toilet-seat ring centred under both spotlights, curtains framing the stage and the laughing crowd silhouetted below. The slow push-in (zoom 1 to 1.13) reads clearly forwards and backwards with no stall, and the globe's restrained depth, drift and scale keep the combined globe-and-ring subject intact while giving gentle parallax against crowd and curtains. The light-sweep suits the theatre spotlights and stays subtle, and the fluorescent orange/teal risograph grain and overprint character are preserved. It rises above a plain push-in only modestly through that parallax and sweep, hence 7 rather than higher.",
+      "rationale": "Keep the theatrical push-in and light-sweep, but greatly reduce globe drift and scale so it stays seated in its ring and on the platform, and cap the zoom so the ring tips remain inside the frame. Parallax from depth still separates globe from crowd and curtains without tearing the combined globe-and-ring subject.",
+      "ambient": "light-sweep",
+      "rounds": 2,
+      "usd": 0.1063,
+      "seconds": 195,
+      "filmIssues": [
+        "Motion is coherent and theatrical but modest: a centred push-in with only slight globe parallax and a barely discernible light-sweep in the stills.",
+        "At t=1 the ring tips come close to the side edges, but they remain inside the frame and do not clip awkwardly.",
+        "No tearing, doubled edges, halo, or ghost of the painted-over background is visible where the globe layer moves; the globe stays seated in its ring and on the platform throughout."
+      ],
+      "plateDefects": [
+        {
+          "type": "mangled-subject",
+          "detail": "The ring around the globe reads as a plain striped Saturn ring, not a white toilet seat: there is no seat shape, opening, lid or hinge, so the central toilet-seat joke required by the art direction is missing."
+        },
+        {
+          "type": "mangled-subject",
+          "detail": "The globe's continents are incoherent and merged: the Americas are repeated/prominent on the left while Europe/Africa forms are compressed and distorted across the top and right, giving the globe a melted, duplicated geography."
+        }
+      ]
+    },
+    "s1": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "The film reads clearly: the boy's small rightward and upward drift, combined with his slight shrink, moves him along the plank walkway toward the outhouse and reads as receding into the scene rather than as a plain camera push-in. Across the six frames he stays coherent, with no tearing, doubled edges, halo or visible ghost on the plank where he started, and his feet remain plausibly on the walkway. No layer clips the frame edge awkwardly. The t=0 poster frame is a strong, balanced opening picture that matches the plate's composition. The light-sweep is subtle and fits the dusk/kerosene mood without breaking the 1950s offset-lithograph print style. The plate itself shows no stray text, no unwanted faces (the boy is correctly seen from behind), no anachronism, and no mangled anatomy or objects.",
+      "rationale": "Keep the camera almost still so it no longer cancels the boy's shrink, lower his depth to 0.3 to reduce parallax growth, and retain the maximum rightward drift with a smaller upward drift matched to the plank's slope. This makes him visibly recede up the walkway toward the outhouse while keeping his feet on the planks, with the subtle light-sweep retained for the dusk kerosene mood.",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1356,
+      "seconds": 86,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s2": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "Publish. The gentle push-in toward the man and drafting table reads clearly forwards and backwards, with a subtle settling motion suggesting he is leaning into his work. The man remains coherent against the table, with no visible tearing, doubled edges, halo or ghosting, and no layer is pushed awkwardly out of frame. The t=0 poster preserves the plate's balanced composition of man, construction site, crates and cement bags. The modest zoom, limited drift and halftone-shimmer suit the 1970s silkscreen campaign-poster treatment without overwhelming it. The plate itself shows no stray text, no visible face where a rear view is required, no anachronism, and no obvious anatomy or object defects.",
+      "rationale": "Keep the intact t=0 poster and the same focus on the man and drafting table, but reduce the total zoom to 1.17 and return the man to his SAM depth of 0.6. A very small downward drift of 0.006 and scale of 1.02 suggests settling over the blueprints without separating him from the table, revealing doubled rolls, or pushing his legs and the foreground props out of frame. Halftone-shimmer replaces the",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1392,
+      "seconds": 104,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s6": {
+      "status": "kept-fixed-move",
+      "score": 6,
+      "ok": false,
+      "verdict": "reject",
+      "rationale": "A slow advance down the central aisle from the back rows toward the standing figure and the golden wall with its circular emblem \u2014 the moment of adoption drawing closer. The nearer delegate silhouette parallaxes and grows slightly more than the hall, preserving the cut-paper depth, while a single soft warm light-sweep passes across the golden wall. No entrances: the poster frame is already the com",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1393,
+      "seconds": 86,
+      "filmIssues": [
+        "The move is effectively a plain, very slow centred push-in: zoom only reaches about 1.11, so the six frames read as almost identical and the advance down the aisle has little scroll payoff forwards or backwards.",
+        "The single delegate layer is given only a tiny drift and scale change, so its parallax is barely perceptible and does not meaningfully separate the delegate rows from the standing figure, desks and golden wall.",
+        "The poster frame is clean and legible, and I see no tearing, doubled edges, ghosting or awkward frame-edge clipping, but the light-sweep is not legible enough in the sampled frames to add expression beyond the push-in.",
+        "Because the motion does not clearly exceed a basic push-in, it does not meet the bar for a scene-expressing scroll film as planned."
+      ],
+      "plateDefects": []
+    },
+    "s7": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "Publishable: a coherent, deliberate push toward the duck on screen that serves the premiere scene, though it remains close to a simple push-in.",
+      "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.0547,
+      "seconds": 24,
+      "filmIssues": [
+        "The push-in is clear and scroll-friendly, with the duck growing slightly forward of the toilet and screen without tearing, doubled edges, or a visible ghost at its original position.",
+        "The poster frame at t=0 reads well as a complete cinema tableau, and the later frames crop the audience and frame edges naturally as the camera moves toward the screen without awkward layer clipping.",
+        "The light-sweep is subtle and fitting for a projector/cinema scene, and the cut-paper print style is preserved throughout.",
+        "The motion is only modestly more expressive than a plain centred push-in, as the duck is the sole parallax layer, but its lift and growth do focus attention on the film-within-the-film."
+      ],
+      "plateDefects": []
+    }
+  }
+}

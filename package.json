@@ -12,10 +12,12 @@
     "portrait": "tsx pipeline/portrait.ts",
     "video": "tsx pipeline/video.ts",
     "shoot": "tsx scripts/shoot.ts",
-    "spend": "tsx pipeline/budget.ts"
+    "spend": "tsx pipeline/budget.ts",
+    "wonder": "tsx pipeline/wonder.ts",
+    "approve": "tsx pipeline/approve.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "ong6",
+  "license": "MIT",
   "packageManager": "pnpm@12.10.1",
   "type": "module",
   "devDependencies": {

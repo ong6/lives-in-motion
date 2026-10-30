@@ -1,0 +1,86 @@
+[
+  {
+    "id": "s1",
+    "year": "1957",
+    "caption": "Jack Sim is born, the second of three children, in an impoverished village in Upper Serangoon with no plumbing. His mother is a beautician.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:47.950Z",
+    "verdict": "ok",
+    "reason": "Born second of three in 1957 to a beautician, family in impoverished Upper Serangoon village without plumbing",
+    "raw": "I'll verify each claim in the caption with a web search.The caption matches the initial results, so I'll open the full biography to confirm the sources.OK | Born second of three in 1957 to a beautician, family in impoverished Upper Serangoon village without plumbing",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Jack_Sim"
+    ]
+  },
+  {
+    "id": "s2",
+    "year": "1982",
+    "caption": "After working as a site supervisor and salesman, he starts his own firm. In 1982 he founds Besco Building Supplies; by his early 40s he runs 15 companies.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:01.709Z",
+    "verdict": "corrected",
+    "reason": "Besco was founded in 1984, not 1982, while supervisor/salesman and 15 companies parts match.",
+    "raw": "Fact-checking that Jack Sim caption — searching for sources.Early findings show a possible date discrepancy. I'll search deeper into his career details.I've corroborated the supervisor and company details. Now I'll open the primary sources to verify the founding year.The year looks off, so I'll pull one more official company record to confirm.WRONG | Besco was founded in 1984, not 1982, while supervisor/salesman and 15 companies parts match.",
+    "sources": [
+      "https://localnewsingapore.com/from-o-level-failure-to-millionaire-at-29-on-a-policy-of-honesty-first/",
+      "https://en.wikipedia.org/wiki/Jack_Sim"
+    ],
+    "fix": "Muse Spark found Besco's founding year given as 1984 as well as 1982; the caption no longer states a year.",
+    "corrected": "After working as a site supervisor and salesman, he starts his own firm in his mid-twenties, Besco Building Supplies; by his early 40s he runs 15 companies."
+  },
+  {
+    "id": "s3",
+    "year": "1998",
+    "caption": "Around 40, with the Asian financial crisis behind him, he sells part of his businesses and turns to social work. In December 1998 he founds the Restroom Association of Singapore.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:53.420Z",
+    "verdict": "ok",
+    "reason": "Born 1957 (~41 in 1998), sold portion of businesses to volunteer after 1997 crisis and dedicated age 40 to founding RAS, RAS set up 8 Dec 1998.",
+    "raw": "Fact-checking that 1998 caption — pulling sources on Jack Sim.First sources corroborate the core dates — now checking the crisis timeline wording.OK | Born 1957 (~41 in 1998), sold portion of businesses to volunteer after 1997 crisis and dedicated age 40 to founding RAS, RAS set up 8 Dec 1998.",
+    "sources": []
+  },
+  {
+    "id": "s4",
+    "year": "2001",
+    "caption": "On 19 November 2001 he founds the World Toilet Organization. He uses humour and shock to get people talking about a taboo subject.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:57.015Z",
+    "verdict": "ok",
+    "reason": "Founded 19 Nov 2001 in Singapore; uses humor and sometimes shock to get attention to break toilet taboo.",
+    "raw": "I'll fact-check the Jack Sim caption, starting with a web search on the founding date.The founding date checks out. Now I'll verify the second claim about his use of humour.Sources confirm the humour angle. I'll check whether the \"shock\" description is also supported.OK | Founded 19 Nov 2001 in Singapore; uses humor and sometimes shock to get attention to break toilet taboo.",
+    "sources": []
+  },
+  {
+    "id": "s5",
+    "year": "2008",
+    "caption": "TIME names him a Hero of the Environment in 2008. In 2011 he founds the BOP Hub to back social enterprises serving the world's poorest.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:58.391Z",
+    "verdict": "ok",
+    "reason": "TIME Hero of the Environment in 2008 and BOP Hub founded in 2011 for poorest bottom-of-pyramid both confirmed.",
+    "raw": "Fact-checking that caption — verifying the TIME honor and BOP Hub date.OK | TIME Hero of the Environment in 2008 and BOP Hub founded in 2011 for poorest bottom-of-pyramid both confirmed.",
+    "sources": []
+  },
+  {
+    "id": "s6",
+    "year": "2013",
+    "caption": "On 24 July 2013 the UN General Assembly adopts resolution A/RES/67/291, 'Sanitation for All', making 19 November World Toilet Day. It was Singapore's first UN resolution.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:02.792Z",
+    "verdict": "ok",
+    "reason": "Adopted 24 July 2013 as 67/291 “Sanitation for All” designating 19 Nov World Toilet Day, Singapore's first UN resolution",
+    "raw": "Checking the caption against sources — one-line verdict coming up.OK | Adopted 24 July 2013 as 67/291 “Sanitation for All” designating 19 Nov World Toilet Day, Singapore's first UN resolution",
+    "sources": []
+  },
+  {
+    "id": "s7",
+    "year": "2019",
+    "caption": "The documentary 'Mr. Toilet: The World's #2 Man' premieres at Hot Docs on 27 April 2019, following his funny, relentless campaign.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:04.550Z",
+    "verdict": "ok",
+    "reason": "World premiere at Hot Docs on 27 April 2019 about Jack Sim's humour-driven sanitation campaign confirmed",
+    "raw": "I'll verify the Hot Docs premiere date with a web search.OK | World premiere at Hot Docs on 27 April 2019 about Jack Sim's humour-driven sanitation campaign confirmed",
+    "sources": []
+  }
+]

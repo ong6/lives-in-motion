@@ -18,6 +18,7 @@ import { BudgetError, STOP, entries, spent, withScope, type Entry, type SpendSco
 import { MODELS, museImage } from "../meta";
 import { frontispiece } from "../portrait";
 import { emblemPrompt } from "../prompts";
+import { Declined, screen } from "./screen";
 import { ROOT } from "../root";
 import {
   asset,
@@ -42,7 +43,7 @@ import type { Budget, CreateInfo, Job, JobLog, JobScene, Spend, StepId } from ".
  * research 44 s, storyboard 20 s, plates 20–50 s each, Muse Image clean-background edits 30 s to
  * 3 min each, films 7 s a scene). The cut-outs overlap the plates.
  */
-export const ESTIMATE: Record<StepId, number> = { research: 50, storyboard: 25, plates: 160, cutouts: 200, frontispiece: 40, films: 50 };
+export const ESTIMATE: Record<StepId, number> = { screen: 5, research: 50, storyboard: 25, plates: 160, cutouts: 200, frontispiece: 40, films: 50 };
 /** Scenes worked on at once after plate 1. */
 const PARALLEL = 3;
 
@@ -79,13 +80,27 @@ export function info(): CreateInfo {
   };
 }
 
+/**
+ * The life a rehearsal replays, under its own name and hint (never the typed one). Jack Sim:
+ * a social entrepreneur, made with every stage of the pipeline.
+ */
+export const REHEARSAL = { slug: "jack-sim", hint: "social entrepreneur, founder of the World Toilet Organization" };
+
+/** Every step a job has, including ones added since an old job.json was written. */
+export function withAllSteps(job: Job): Job {
+  const steps = job.steps as Partial<Job["steps"]>;
+  for (const id of ["screen", "research", "storyboard", "plates", "cutouts", "frontispiece", "films"] as StepId[])
+    steps[id] ??= { status: id === "screen" && steps.research?.status !== "waiting" ? "skipped" : "waiting", usd: 0 };
+  return job;
+}
+
 /** The job for a slug: the live one, else its job.json (a "running" file with no runner was interrupted). */
 export function getJob(slug: string): Job | null {
   if (state.job?.slug === slug) return state.job;
   const f = jobFile(slug);
   if (!existsSync(f)) return null;
   try {
-    const job = JSON.parse(readFileSync(f, "utf8")) as Job;
+    const job = withAllSteps(JSON.parse(readFileSync(f, "utf8")) as Job);
     if (job.status === "running") job.status = "interrupted";
     return job;
   } catch {
@@ -103,7 +118,8 @@ export function subscribe(fn: (job: Job) => void): () => void {
 // ---------- Writing ----------
 
 function persist(job: Job) {
-  if (job.mock) return;
+  // Nothing is written for a rehearsal, or for a name until the subject screen has passed it.
+  if (job.mock || job.status === "declined" || job.steps.screen?.status === "waiting" || job.steps.screen?.status === "running") return;
   const f = jobFile(job.slug);
   const tmp = `${f}.tmp`;
   mkdir(storyDir(job.slug), { recursive: true })
@@ -183,7 +199,7 @@ function onStage(stepId: StepId) {
 
 function newJob(o: { slug: string; name: string; hint: string; photo: boolean; mock?: boolean; bookSlug?: string }): Job {
   const now = new Date().toISOString();
-  const steps = Object.fromEntries((["research", "storyboard", "plates", "cutouts", "frontispiece", "films"] as StepId[]).map((s) => [s, { status: "waiting", usd: 0 }])) as Job["steps"];
+  const steps = Object.fromEntries((["screen", "research", "storyboard", "plates", "cutouts", "frontispiece", "films"] as StepId[]).map((s) => [s, { status: "waiting", usd: 0 }])) as Job["steps"];
   return {
     slug: o.slug,
     name: o.name,
@@ -191,6 +207,7 @@ function newJob(o: { slug: string; name: string; hint: string; photo: boolean; m
     photo: o.photo,
     mock: o.mock,
     bookSlug: o.bookSlug ?? o.slug,
+    draft: !o.mock,
     status: "running",
     startedAt: now,
     updatedAt: now,
@@ -222,14 +239,22 @@ export async function start(req: StartRequest): Promise<{ ok: true; slug: string
   const refused = preflight({ entries: entries(), left: STOP - spent(), busy: busy(), token: req.token, mock });
   if (refused) return { ok: false, ...refused };
 
+  // A rehearsal needs no name: it replays a finished life under that life's own name and hint.
+  if (mock && !req.resume) {
+    const story = await loadStory(REHEARSAL.slug);
+    const slug = `rehearsal-${Date.now().toString(36)}`;
+    launch(newJob({ slug, name: story.name, hint: REHEARSAL.hint, photo: false, mock: true, bookSlug: REHEARSAL.slug }), () => runMock());
+    return { ok: true, slug };
+  }
+
   if (req.resume) {
     const old = getJob(req.resume);
     if (!old || old.mock) return { ok: false, status: 404, error: "There is no unfinished life by that name to pick up." };
     if (old.status === "done" && !Object.values(old.steps).some((x) => x.status === "failed") && !old.scenes.some((x) => x.cuts.length && !x.background))
       return { ok: false, status: 409, error: "That life is already finished." };
-    const job = { ...newJob(old), facts: old.facts, scenes: old.scenes, usd: old.usd, spend: old.spend, log: old.log, startedAt: old.startedAt, steps: old.steps };
+    const job = { ...newJob(old), screen: old.screen, facts: old.facts, scenes: old.scenes, usd: old.usd, spend: old.spend, log: old.log, startedAt: old.startedAt, steps: old.steps };
     for (const s of Object.values(job.steps)) if (s.status !== "done") Object.assign(s, { status: "waiting", startedAt: undefined, endedAt: undefined, note: undefined });
-    launch(job, () => runReal(job.slug, null));
+    launch(job, () => runReal(job.slug, null, null));
     log({ step: "research", kind: "info", message: "picked up where the last run stopped; finished work is kept" });
     return { ok: true, slug: job.slug };
   }
@@ -243,20 +268,10 @@ export async function start(req: StartRequest): Promise<{ ok: true; slug: string
     photo = { bytes: req.photo.bytes, type: p.type };
   }
 
-  if (mock) {
-    const slug = `rehearsal-${Date.now().toString(36)}`;
-    launch(newJob({ slug, name: v.value.name, hint: v.value.hint, photo: Boolean(photo), mock: true, bookSlug: "jack-sim" }), () => runMock());
-    return { ok: true, slug };
-  }
-
   const slug = uniqueSlug(v.value.name, (s) => existsSync(storyDir(s)) || existsSync(join(ROOT, "public/stories", s)) || existsSync(join(ROOT, "public/lines", `${s}.json`)));
-  await mkdir(join(storyDir(slug), "source"), { recursive: true });
-  if (photo) {
-    // Re-encoded, which also drops EXIF (camera, GPS) from the reader's file.
-    await sharp(Buffer.from(photo.bytes)).rotate().resize(2000, 2000, { fit: "inside", withoutEnlargement: true }).jpeg({ quality: 90 }).toFile(join(storyDir(slug), "source/photo.jpg"));
-  }
   const job = newJob({ slug, name: v.value.name, hint: v.value.hint || "Singaporean", photo: Boolean(photo) });
-  launch(job, () => runReal(slug, v.value));
+  // Nothing is written to stories/ until the subject screen has passed the name.
+  launch(job, () => runReal(slug, v.value, photo));
   return { ok: true, slug };
 }
 
@@ -272,6 +287,17 @@ function launch(job: Job, run: () => Promise<void>) {
         j.finishedAt = new Date().toISOString();
       }, true);
     } catch (e) {
+      if (e instanceof Declined) {
+        update((j) => {
+          j.status = "declined";
+          j.finishedAt = new Date().toISOString();
+          j.screen = { ...e.result };
+          j.steps.screen.status = "declined";
+          j.steps.screen.endedAt = j.finishedAt;
+          j.log.push({ at: j.finishedAt, step: "screen", kind: "refused", model: MODELS.spark, message: `declined: ${e.result.category.replace(/_/g, " ")}` });
+        }, true);
+        return;
+      }
       const budgetStop = e instanceof BudgetError;
       update((j) => {
         j.status = "failed";
@@ -289,7 +315,7 @@ function launch(job: Job, run: () => Promise<void>) {
 
 // ---------- The real run ----------
 
-async function runReal(slug: string, input: { name: string; hint: string } | null) {
+async function runReal(slug: string, input: { name: string; hint: string } | null, photo: { bytes: Uint8Array } | null) {
   const scope: SpendScope = {
     job: jobTag(slug),
     limit: LIFE_CEILING,
@@ -303,6 +329,22 @@ async function runReal(slug: string, input: { name: string; hint: string } | nul
     const job = state.job!;
     const dir = storyDir(slug);
 
+    // Subject screen: one small Muse Spark call decides whether this life is made at all.
+    if (job.steps.screen.status !== "done") {
+      step("screen", "running");
+      log({ step: "screen", kind: "info", model: MODELS.spark, message: `checking who ${job.name} is before any research` });
+      const r = await scoped("screen", undefined, () => screen(input?.name ?? job.name, input?.hint ?? job.hint));
+      if (!r.ok) throw new Declined(r);
+      update((j) => void (j.screen = r));
+      log({ step: "screen", kind: "info", model: MODELS.spark, message: `${r.known_for || r.category.replace(/_/g, " ")}: go ahead` });
+      step("screen", "done", r.category.replace(/_/g, " "));
+    }
+    await mkdir(join(dir, "source"), { recursive: true });
+    if (photo) {
+      // Re-encoded, which also drops EXIF (camera, GPS) from the reader's file.
+      await sharp(Buffer.from(photo.bytes)).rotate().resize(2000, 2000, { fit: "inside", withoutEnlargement: true }).jpeg({ quality: 90 }).toFile(join(dir, "source/photo.jpg"));
+    }
+
     // Research: Muse Spark + web search, every fact with its url citations.
     step("research", "running");
     if (existsSync(join(dir, "research.json"))) {
@@ -313,7 +355,7 @@ async function runReal(slug: string, input: { name: string; hint: string } | nul
 
     // Storyboard: Muse Spark structured output → story.json, which the site can already show.
     step("storyboard", "running");
-    if (!existsSync(join(dir, "story.json"))) await scoped("storyboard", undefined, () => storyboard(slug, onStage("storyboard")));
+    if (!existsSync(join(dir, "story.json"))) await scoped("storyboard", undefined, () => storyboard(slug, onStage("storyboard"), { listed: false }));
     const story = await loadStory(slug);
     update((j) => {
       j.tagline = story.tagline;
@@ -531,6 +573,14 @@ async function runMock() {
     });
   const say = (stepId: StepId, e: Omit<StageEvent, "stage">) => onStage(stepId)({ stage: "research", ...e });
 
+  step("screen", "running");
+  say("screen", { kind: "info", model: MODELS.spark, message: `checking who ${job.name} is before any research` });
+  await sleep(1500);
+  fake("screen", undefined, "spark", 0.0021);
+  update((j) => void (j.screen = { ok: true, category: "social_enterprise", known_for: "founder of the World Toilet Organization" }));
+  say("screen", { kind: "info", model: MODELS.spark, message: "founder of the World Toilet Organization: go ahead" });
+  step("screen", "done", "social enterprise");
+
   step("research", "running");
   say("research", { kind: "info", model: MODELS.spark, message: `searching the web for ${job.name}` });
   await sleep(2500);
@@ -559,11 +609,12 @@ async function runMock() {
 
   const front = (async () => {
     step("frontispiece", "running");
-    update((j) => void (j.frontispiece = { kind: "emblem" }));
-    await sleep(6000);
-    fake("frontispiece", undefined, "image", 0.01);
+    // Jack Sim's frontispiece is traced from a credited Commons photo, not a Muse Image emblem.
+    update((j) => void (j.frontispiece = { kind: "photo", credit: "Photo: Clorox Toilet Products, CC BY 2.0, via Wikimedia Commons" }));
+    await sleep(4000);
     update((j) => void (j.frontispiece!.image = "/portraits/jack-sim.webp"));
-    log({ step: "frontispiece", kind: "asset", model: MODELS.image, message: "emblem", url: "/portraits/jack-sim.webp" });
+    log({ step: "frontispiece", kind: "asset", message: "credited portrait photo (CC BY 2.0), ready to trace", url: "/portraits/jack-sim.webp" });
+    log({ step: "frontispiece", kind: "info", model: MODELS.sam, message: "masking the person, then tracing it in pen lines" });
     await sleep(4000);
     fake("frontispiece", undefined, "sam", 0.0025);
     update((j) => Object.assign(j.frontispiece!, { lines: "/lines/jack-sim.json", strokes: 2400 }));

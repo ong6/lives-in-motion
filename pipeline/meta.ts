@@ -1,8 +1,8 @@
 /**
  * Minimal Meta Model API client (https://dev.meta.ai/docs). One key covers Muse Spark,
- * Muse Image and SAM 3.1. Shapes the docs give no full example for are marked UNVERIFIED.
+ * Muse Wonder, Muse Image and SAM 3.1. Shapes the docs give no full example for are marked UNVERIFIED.
  */
-import { PRICES, currentScope, guard, sparkCost, sparkWorst } from "./budget";
+import { PRICES, currentScope, guard, sparkCost, sparkWorst, wonderCost, wonderWorst } from "./budget";
 
 const BASE = process.env.META_API_BASE ?? "https://api.meta.ai/v1";
 
@@ -10,6 +10,7 @@ export const MODELS = {
   spark: process.env.META_SPARK_MODEL ?? "muse-spark-1.3",
   image: process.env.META_IMAGE_MODEL ?? "muse-image-1.0",
   sam: process.env.META_SAM_MODEL ?? "sam-3.1",
+  wonder: process.env.META_WONDER_MODEL ?? "muse-wonder-1.0",
 };
 
 const auth = () => {
@@ -189,4 +190,62 @@ export async function samRaw(image: Buffer, concept: string): Promise<string> {
   return (r.output ?? [])
     .flatMap((o: any) => (o.content ?? []).filter((c: any) => c.type === "output_text").map((c: any) => c.text))
     .join("");
+}
+
+export interface WonderImage {
+  /** Short caption placed just before the image so the model knows what it is looking at. */
+  label: string;
+  data: Buffer;
+  mime?: "image/png" | "image/jpeg" | "image/webp";
+}
+
+export interface WonderResult<T> {
+  value: T;
+  usd: number;
+}
+
+/**
+ * Muse Wonder with image input and json_schema output (Chat Completions; the model takes images
+ * as image_url parts and returns text only: https://dev.meta.ai/docs/models#muse-wonder).
+ * Billed per token at $4 in / $20 out per million; reasoning tokens count as output, so the
+ * worst case charges the whole max_tokens cap. A response lost mid-read is recorded at the worst
+ * case by `guard` (the `maybeBilled` path `send` raises), the same as Muse Image.
+ */
+export async function museWonderJson<T>(
+  system: string,
+  user: string,
+  images: WonderImage[],
+  name: string,
+  schema: object,
+  opts: { maxTokens?: number; effort?: "minimal" | "low" | "medium" | "high" } = {},
+): Promise<WonderResult<T>> {
+  const maxTokens = opts.maxTokens ?? 12000;
+  const content: any[] = [];
+  for (const img of images) {
+    content.push({ type: "text", text: img.label });
+    content.push({ type: "image_url", image_url: { url: `data:${img.mime ?? "image/jpeg"};base64,${img.data.toString("base64")}` } });
+  }
+  content.push({ type: "text", text: user });
+  const worst = wonderWorst(system.length + user.length + JSON.stringify(schema).length, images.length, maxTokens);
+  let usd = worst;
+  const r = await guard(
+    "wonder",
+    worst,
+    () =>
+      post("/chat/completions", {
+        model: MODELS.wonder,
+        max_tokens: maxTokens,
+        reasoning_effort: opts.effort ?? "low",
+        messages: [
+          { role: "system", content: system },
+          { role: "user", content },
+        ],
+        response_format: { type: "json_schema", json_schema: { name, schema, strict: true } },
+      }),
+    (r: any) => (usd = wonderCost(r.usage)),
+    name,
+  );
+  const text = r.choices?.[0]?.message?.content;
+  if (!text) throw new Error(`Muse Wonder returned no content (finish_reason ${r.choices?.[0]?.finish_reason ?? "?"})`);
+  return { value: JSON.parse(text) as T, usd };
 }

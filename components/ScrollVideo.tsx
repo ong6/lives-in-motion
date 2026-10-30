@@ -2,28 +2,45 @@
 
 import { useEffect, useRef, useState } from "react";
 
-/** How far the shown frame closes on the scroll target per 1/60 s (higher is snappier). */
+/** How far the shown frame closes on the target per 1/60 s (higher is snappier). */
 const FOLLOW = 0.16;
 /** Seek only when the target is at least this far from the current frame, in seconds. */
 const MIN_SEEK = 1 / 60;
 
 /**
- * A short film scrubbed by scroll. `progress` (0..1) picks the time; a rAF loop eases the shown
+ * A short film scrubbed by a clock: `progress` (0..1) picks the time (the book drives it from
+ * each spread's entrance timeline); a rAF loop eases the shown
  * time toward it and seeks only when the difference is worth a frame and the previous seek has
  * landed, so fast flicks never queue seeks. The poster stays underneath until the first frame
  * paints, and is all reduced-motion readers get. `className` positions and sizes the film.
  */
-export function ScrollVideo({ src, poster, progress, label, className }: { src: string; poster?: string; progress: number; label?: string; className?: string }) {
+export function ScrollVideo({
+  src,
+  poster,
+  still,
+  progress,
+  label,
+  className,
+}: {
+  src: string;
+  /** The film's first frame, shown while it loads. */
+  poster?: string;
+  /** What reduced-motion readers see instead of the film; defaults to the poster. */
+  still?: string;
+  progress: number;
+  label?: string;
+  className?: string;
+}) {
   const video = useRef<HTMLVideoElement>(null);
   const target = useRef(progress);
   const shown = useRef(-1);
   const raf = useRef(0);
   const [ready, setReady] = useState(false);
-  const [still, setStill] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
     const mq = matchMedia("(prefers-reduced-motion: reduce)");
-    const on = () => setStill(mq.matches);
+    const on = () => setReducedMotion(mq.matches);
     on();
     mq.addEventListener("change", on);
     return () => mq.removeEventListener("change", on);
@@ -39,7 +56,8 @@ export function ScrollVideo({ src, poster, progress, label, className }: { src: 
       const goal = Math.min(1, Math.max(0, target.current)) * Math.max(0, v.duration - 0.05);
       const dt = last ? Math.min(0.1, (now - last) / 1000) : 1 / 60;
       last = now;
-      if (shown.current < 0) shown.current = goal;
+      // A jump of more than half the film (a spread replaying its entrance) cuts rather than rewinds.
+      if (shown.current < 0 || Math.abs(goal - shown.current) > v.duration / 2) shown.current = goal;
       else shown.current += (goal - shown.current) * (1 - (1 - FOLLOW) ** (dt * 60));
       if (Math.abs(goal - shown.current) < 0.002) shown.current = goal;
       if (!v.seeking && Math.abs(v.currentTime - shown.current) >= MIN_SEEK) v.currentTime = shown.current;
@@ -58,14 +76,14 @@ export function ScrollVideo({ src, poster, progress, label, className }: { src: 
       raf.current = 0;
       kick.current = () => {};
     };
-  }, [still]);
+  }, [reducedMotion]);
 
   useEffect(() => {
     target.current = progress;
     kick.current();
   }, [progress]);
 
-  if (still) return poster ? <img className={className} src={poster} alt={label ?? ""} /> : null;
+  if (reducedMotion) return still || poster ? <img className={className} src={still ?? poster} alt={label ?? ""} /> : null;
 
   return (
     <div className={className} role={label ? "img" : undefined} aria-label={label} style={{ overflow: "hidden" }}>

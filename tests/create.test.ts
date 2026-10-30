@@ -159,3 +159,35 @@ describe("frontispiece framing", () => {
     expect(out.mask[225 * 900 + 450]).toBe(1);
   });
 });
+
+describe("rehearsals and per-visitor limits", () => {
+  it("run without the on switch or the passcode, but wait for a busy server", async () => {
+    const { preflight } = await import("../pipeline/create/guard");
+    const prodMock = { NODE_ENV: "production", CREATE_MOCK: "1", CREATE_TOKEN: "secret" };
+    expect(preflight({ entries: [], left: 0, env: prodMock, mock: true })).toBeNull();
+    expect(preflight({ entries: [], left: 0, env: prodMock, mock: true, busy: "x" })?.status).toBe(409);
+    expect(preflight({ entries: [], left: 100, env: { ...prodMock, ALLOW_CREATE: "1" }, token: "nope" })?.status).toBe(401);
+  });
+  it("allow two real lives per visitor per day", async () => {
+    const { IpLimit, clientIp } = await import("../pipeline/create/guard");
+    const lim = new IpLimit(() => 2);
+    const day = new Date(2026, 9, 30, 10), next = new Date(2026, 9, 31, 9);
+    expect(lim.check("1.2.3.4", day)).toBeNull();
+    lim.hit("1.2.3.4", day);
+    lim.hit("1.2.3.4", day);
+    expect(lim.check("1.2.3.4", day)?.status).toBe(429);
+    expect(lim.check("5.6.7.8", day)).toBeNull();
+    expect(lim.check("1.2.3.4", next)).toBeNull();
+    expect(clientIp(new Headers({ "x-forwarded-for": "9.9.9.9, 10.0.0.1" }))).toBe("9.9.9.9");
+    expect(clientIp(new Headers())).toBe("local");
+  });
+});
+
+describe("verify verdicts", () => {
+  it("read the last OK or WRONG, past any narration", async () => {
+    const { parseVerdict } = await import("../pipeline/stages");
+    expect(parseVerdict("OK | matches NLB")).toEqual({ verdict: "ok", note: "matches NLB" });
+    expect(parseVerdict("Checking dates now.Timing confirms it.WRONG | Tokyo came first")).toEqual({ verdict: "disputed", note: "Tokyo came first" });
+    expect(parseVerdict("no verdict at all").verdict).toBe("disputed");
+  });
+});

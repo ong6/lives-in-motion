@@ -1,9 +1,18 @@
-/* A life as a book on a desk: the desk takes the colour of the scene's era. */
+/*
+ * A life as a book on a desk: the desk takes the colour of the scene's era. The book is laid
+ * out once on a 1600 × 1000 stage and scaled to fit the window; the desk fills the rest.
+ */
+:global(html):has(.story) { overflow: hidden; overscroll-behavior: none; }
+
+/* Opening at #p=N: keep the closed cover off screen until the book is at that spread. */
+.anchor { position: fixed; top: 0; left: 0; width: 1px; height: 1px; pointer-events: none; }
+.story:not([data-ready]):has(.anchor:target) .viewport { visibility: hidden; }
+
 .story {
-  min-height: 100svh;
+  height: 100svh;
+  overflow: hidden;
   color: var(--desk-text);
 }
-:global(html):has(.story) { scroll-snap-type: y proximity; }
 
 .home {
   position: fixed;
@@ -18,31 +27,46 @@
 }
 .home:hover { color: #fbf4e4; }
 
-.track { position: relative; z-index: 1; }
-.snap { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; }
+.viewport {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
 .stage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
+  --rail-room: 41px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1600px;
+  height: 1000px;
+  margin: -500px 0 0 -800px;
+  /* min(100vw / 1600px, 100svh / 1000px), as a number: tan(atan2(a, b)) is a / b. */
+  scale: min(tan(atan2(100vw, 1600px)), tan(atan2(100svh, 1000px)));
+}
+.slot {
+  position: absolute;
+  inset: 0;
   display: grid;
   place-items: center;
-  overflow: clip;
+  transform-origin: 50% 60%;
 }
 .face { position: absolute; inset: 0; }
 
 .cue {
   position: absolute;
-  bottom: 14px;
+  bottom: 18px;
   left: 50%;
   translate: -50% 0;
   margin: 0;
-  font: italic 400 16px/1 var(--font-book);
+  font: italic 400 17px/1 var(--font-book);
   color: var(--desk-text);
   pointer-events: none;
   white-space: nowrap;
+  transition: opacity 0.5s ease;
 }
-/* The way on, under the book once its last spread is open. */
-.onward { opacity: 0; transition: opacity 0.5s ease; }
+/* The way on, under the book once its notes are open. */
+.onward { opacity: 0; }
 .onward[data-show] { opacity: 1; pointer-events: auto; }
 .onward button, .onward a {
   all: unset;
@@ -63,13 +87,19 @@
   border-radius: 0 4px 4px 0;
   box-shadow: 0 34px 60px -24px rgb(0 0 0 / 0.75), 0 2px 3px rgb(0 0 0 / 0.35);
 }
+/*
+ * Closed, the board's shadow travels with the cover itself, so when the cover flies in from
+ * the shelf its shadow lands with it rather than waiting on the desk.
+ */
+.boardLeaf[data-landed] { box-shadow: none; }
+.coverLanded { box-shadow: 0 34px 60px -24px rgb(0 0 0 / 0.75), 0 2px 3px rgb(0 0 0 / 0.35); }
+
 /* Inside a board: cloth turned over its edges, the endpaper pasted down on it. */
 .pastedown {
   position: absolute;
   inset: 0;
   background: var(--cloth);
   border-radius: 4px 0 0 4px;
-  transition: background-color 0.9s ease;
 }
 .pastedownPaper { position: absolute; top: 9px; bottom: 9px; left: 20px; right: 0; overflow: hidden; }
 .pastedownPaper::after {
@@ -111,10 +141,10 @@
 }
 .backLink:hover { border-bottom-color: var(--gilt); color: #f1d79c; }
 
-/* ---------- Frontispiece and title page ---------- */
+/* ---------- Frontispiece and title page (page 660 × 880) ---------- */
 .frontis {
   position: absolute;
-  inset: 72px 60px 64px;
+  inset: 76px 62px 66px;
   margin: 0;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -127,10 +157,10 @@
   display: grid;
   place-items: center;
   height: 100%;
-  font: italic 400 calc(var(--pw) * 0.3)/1 var(--font-serif);
+  font: italic 400 200px/1 var(--font-serif);
   color: color-mix(in oklab, var(--accent) 70%, var(--paper));
 }
-.frontis figcaption { font: 400 13.5px/1.5 var(--font-book); color: var(--muted); text-align: center; text-wrap: balance; }
+.frontis figcaption { font: 400 14px/1.5 var(--font-book); color: var(--muted); text-align: center; text-wrap: balance; }
 
 .titlePage {
   position: absolute;
@@ -139,14 +169,14 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 18% 60px 64px;
+  padding: 160px 62px 66px;
 }
 .titlePage p { margin: 0; }
-.titlePart { font: 400 15px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--muted); }
-.titleName { font: 400 clamp(64px, calc(var(--pw) * 0.17), 108px)/0.92 var(--font-serif); letter-spacing: -0.015em; margin: 0.4em 0 0.3em !important; text-wrap: balance; }
-.titleDates { font: italic 400 20px/1 var(--font-book); color: var(--muted); }
-.titleRule { width: 44px; height: 1px; background: currentColor; opacity: 0.45; margin: 34px 0; }
-.titleTag { font: italic 400 23px/1.4 var(--font-book); max-width: 20ch; text-wrap: balance; }
+.titlePart { font: 400 16px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--muted); }
+.titleName { font: 400 104px/0.92 var(--font-serif); letter-spacing: -0.015em; margin: 0.4em 0 0.3em !important; text-wrap: balance; }
+.titleDates { font: italic 400 21px/1 var(--font-book); color: var(--muted); }
+.titleRule { width: 44px; height: 1px; background: currentColor; opacity: 0.45; margin: 36px 0; }
+.titleTag { font: italic 400 24px/1.4 var(--font-book); max-width: 20ch; text-wrap: balance; }
 .titleImprint {
   margin-top: auto !important;
   display: grid;
@@ -158,29 +188,32 @@
 
 /* ---------- Chapter opener (verso) ---------- */
 .chapter {
+  --fit: 1;
   position: absolute;
-  inset: 84px 64px 88px;
+  inset: 84px 64px 92px;
   display: flex;
   flex-direction: column;
 }
 .chapter p, .chapter h2 { margin: 0; }
-.chapterNo { font: 400 15px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--accent); }
+.chapterNo { font: 400 17px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--accent); }
 .year {
-  font: 400 clamp(110px, calc(var(--pw) * 0.31), 180px)/0.8 var(--font-serif);
+  font: 400 calc(224px * var(--fit))/0.8 var(--font-serif);
   letter-spacing: -0.02em;
   color: var(--accent);
   margin: 0.14em 0 0.08em -0.05em !important;
+  transform-origin: 10% 80%;
 }
-.eraName { font: italic 400 17px/1.2 var(--font-book); color: var(--muted); }
+.eraName { font: italic 400 20px/1.2 var(--font-book); color: var(--muted); }
 .title {
   margin-top: auto !important;
-  font: 400 clamp(32px, calc(var(--pw) * 0.072), 44px)/1.05 var(--font-serif);
+  padding-top: 16px;
+  font: 400 calc(52px * var(--fit))/1.04 var(--font-serif);
   text-wrap: balance;
-  max-width: 16ch;
+  max-width: 15ch;
 }
 .caption {
   margin-top: 20px !important;
-  font: 400 20px/1.58 var(--font-book);
+  font: 400 calc(22.5px * var(--fit))/1.55 var(--font-book);
   font-variation-settings: "opsz" 16;
   hyphens: auto;
   text-wrap: pretty;
@@ -191,31 +224,84 @@
   color: var(--accent);
   margin-right: 0.12em;
 }
-.ref { font-size: 0.62em; line-height: 0; margin-left: 0.15em; font-variant-numeric: lining-nums; }
+.ref { display: inline-block; font-size: 0.62em; line-height: 0; margin-left: 0.15em; font-variant-numeric: lining-nums; }
 .ref button { all: unset; cursor: pointer; color: var(--accent); }
 .ref button:hover { text-decoration: underline; }
 .ref button:focus-visible { outline: 1px solid var(--accent); outline-offset: 1px; }
 
-/* ---------- Plate page (recto) ---------- */
+/* ---------- Plate page (recto): the print tipped in inside a pressed plate mark ---------- */
 .plateFig {
   position: absolute;
-  inset: 78px 54px 70px;
+  inset: 82px 58px 74px;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
-.plate {
+.plateMark {
   position: relative;
   flex: 1;
-  overflow: hidden;
-  background: color-mix(in oklab, var(--ink) 5%, var(--paper));
-  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 16%, transparent);
+  min-height: 0;
+  padding: 11px;
+  /* The plate mark: a bevel pressed into the paper around the print. */
+  box-shadow:
+    inset 1px 1px 0 rgb(255 255 255 / 0.5),
+    inset -1px -1px 0 rgb(255 255 255 / 0.35),
+    inset 2px 2px 3px rgb(60 40 20 / 0.14),
+    inset -1px -1px 2px rgb(60 40 20 / 0.08);
+  background: color-mix(in oklab, var(--ink) 3%, var(--paper));
 }
-/* SceneArt's own plate label is replaced by the page's caption. */
-.plate :global(figcaption) { display: none; }
-.plateFig figcaption { font: 400 14px/1.45 var(--font-book); color: var(--muted); text-wrap: balance; }
-.plateFig figcaption i { color: var(--ink); }
+.plate {
+  position: absolute;
+  inset: 11px;
+  background: color-mix(in oklab, var(--ink) 6%, var(--paper));
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 18%, transparent), 0 1px 2px rgb(40 25 10 / 0.18);
+}
+/* Paper tooth over the print, so it reads as printed on the page rather than pasted on screen. */
+.plate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+  box-shadow: inset 0 0 22px rgb(60 40 20 / 0.14);
+  background: radial-gradient(120% 90% at 50% 40%, transparent 60%, rgb(60 40 20 / 0.08));
+  transition: opacity 0.4s ease;
+}
+.plate[data-layers]::after { opacity: 0; }
+/* Taken apart, the print's well empties to bare paper, so the stack stands on the page. */
+.plate { transition: background-color 0.6s ease, box-shadow 0.6s ease; }
+.plate[data-layers] { background-color: transparent; box-shadow: 0 0 0 1px transparent; }
+.plateMark:has(.plate[data-layers]) { box-shadow: none; background: transparent; }
+.plateMark { transition: box-shadow 0.6s ease, background-color 0.6s ease; }
+.plateFig figcaption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  font: 400 15px/1.45 var(--font-book);
+  color: var(--muted);
+  text-wrap: balance;
+  padding: 0 11px;
+}
+/* Take the plate apart: a quiet text button under the plate. */
+.layersBtn {
+  all: unset;
+  flex: none;
+  cursor: pointer;
+  font: italic 400 16px/1 var(--font-book);
+  color: var(--accent);
+  border-bottom: 1px solid color-mix(in oklab, var(--accent) 40%, transparent);
+  padding: 4px 0 2px;
+}
+.layersBtn:hover { border-bottom-color: var(--accent); }
+.layersBtn:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+.plateNo {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-right: 0.6em;
+}
 
 /* ---------- The ribbon: a bookmark out of the fore-edge marks the chapter you are in ---------- */
 .rail {
@@ -226,8 +312,11 @@
   z-index: -1;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
   transition: opacity 0.4s ease, visibility 0.4s;
 }
+.rail[data-show] { opacity: 1; visibility: visible; }
 .rail button {
   all: unset;
   position: relative;
@@ -257,27 +346,84 @@
     color-mix(in oklab, var(--accent) 72%, #000) 100%
   );
   clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%);
-  transition: transform 0.55s cubic-bezier(0.3, 0.7, 0.2, 1), background-color 0.6s ease;
+  /* It overshoots a touch and settles, like silk pulled through the pages. */
+  transition: transform 0.7s cubic-bezier(0.34, 1.32, 0.5, 1), background-color 0.6s ease;
 }
 
 /* ---------- Notes and credits, the last spread of the life ---------- */
 .notesPage, .creditsPage {
+  --fit: 1;
   position: absolute;
-  inset: 84px 64px 76px;
+  inset: 84px 64px 80px;
   display: flex;
   flex-direction: column;
 }
-.notesPage h2, .creditsPage h2 { font: 400 46px/1 var(--font-serif); margin: 0 0 0.6em; }
-.notesPage ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.notesPage h2, .creditsPage h2 { font: 400 48px/1 var(--font-serif); margin: 0 0 0.6em; }
+.notesPage ol { list-style: none; margin: 0; padding: 0; display: grid; gap: calc(12px * var(--fit)); }
 .notesPage li { display: grid; grid-template-columns: 26px 1fr; }
 .noteNo { font: 400 15px/1.5 var(--font-book); color: var(--accent); }
-.notesPage p { margin: 0; font: 400 15px/1.5 var(--font-book); text-wrap: pretty; }
+.notesPage p { margin: 0; font: 400 calc(15.5px * var(--fit))/1.5 var(--font-book); text-wrap: pretty; overflow-wrap: anywhere; }
 .notesPage a { color: inherit; text-decoration-color: color-mix(in oklab, var(--ink) 35%, transparent); text-underline-offset: 2px; }
 .notesPage a:hover { color: var(--accent); }
-.creditsPage p { margin: 0 0 0.9em; font: 400 17px/1.6 var(--font-book); max-width: 36ch; text-wrap: pretty; }
+.creditsPage p { margin: 0 0 0.9em; font: 400 18px/1.6 var(--font-book); max-width: 36ch; text-wrap: pretty; }
 .finis { margin: 0.6em 0 0 !important; font: 400 30px/1 var(--font-serif) !important; color: var(--accent); text-align: center; max-width: none !important; }
 .overleaf { margin-top: auto !important; font-style: italic !important; color: var(--muted); }
 
+/*
+ * ---------- A spread's entrance ----------
+ * When a page has turned, its spread sets itself: the year is stamped, the title and the text
+ * are inked in line by line, the note marker lands last. --delay is when the turning leaf
+ * passes upright. Text moves no more than a fade and a 14 px rise.
+ */
+@property --reveal {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+.play .chapterNo, .play .eraName { animation: fadeIn 0.5s var(--delay) both ease-out; }
+.play .eraName { animation-delay: calc(var(--delay) + 260ms); }
+.play .year { animation: stamp 0.62s var(--delay) both cubic-bezier(0.2, 0.8, 0.25, 1); }
+.play .title { animation: rise 0.7s calc(var(--delay) + 200ms) both cubic-bezier(0.2, 0.7, 0.2, 1); }
+.play .caption {
+  mask-image: linear-gradient(to bottom, #000 calc(var(--reveal) - 12%), transparent var(--reveal));
+  animation: inkDown 1.4s calc(var(--delay) + 380ms) both cubic-bezier(0.35, 0.1, 0.3, 1);
+}
+.play .ref { animation: pop 0.5s calc(var(--delay) + 1650ms) both cubic-bezier(0.3, 1.6, 0.5, 1); }
+
+.play .titlePart { animation: fadeIn 0.6s var(--delay) both ease-out; }
+.play .titleName { animation: rise 0.9s calc(var(--delay) + 120ms) both cubic-bezier(0.2, 0.7, 0.2, 1); }
+.play .titleDates { animation: fadeIn 0.6s calc(var(--delay) + 480ms) both ease-out; }
+.play .titleRule { animation: draw 0.7s calc(var(--delay) + 640ms) both cubic-bezier(0.6, 0, 0.2, 1); }
+.play .titleTag { animation: rise 0.8s calc(var(--delay) + 820ms) both cubic-bezier(0.2, 0.7, 0.2, 1); }
+
+.play .notesPage li { animation: rise 0.5s both cubic-bezier(0.2, 0.7, 0.2, 1); }
+.play .notesPage li:nth-child(1) { animation-delay: calc(var(--delay) + 60ms); }
+.play .notesPage li:nth-child(2) { animation-delay: calc(var(--delay) + 120ms); }
+.play .notesPage li:nth-child(3) { animation-delay: calc(var(--delay) + 180ms); }
+.play .notesPage li:nth-child(4) { animation-delay: calc(var(--delay) + 240ms); }
+.play .notesPage li:nth-child(5) { animation-delay: calc(var(--delay) + 300ms); }
+.play .notesPage li:nth-child(6) { animation-delay: calc(var(--delay) + 360ms); }
+.play .notesPage li:nth-child(n + 7) { animation-delay: calc(var(--delay) + 420ms); }
+.play .finis { animation: stamp 0.6s calc(var(--delay) + 500ms) both cubic-bezier(0.2, 0.8, 0.25, 1); }
+
+@keyframes fadeIn { from { opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+@keyframes stamp {
+  0% { opacity: 0; transform: scale(1.07); }
+  55% { opacity: 1; }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes inkDown {
+  from { --reveal: 0%; }
+  to { --reveal: 112%; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.2); }
+}
+@keyframes draw { from { transform: scaleX(0); } }
+
 @media (prefers-reduced-motion: reduce) {
-  .ribbon, .onward, .rail { transition: none; }
+  .ribbon, .onward, .rail, .cue { transition: none; }
+  .play *, .play .caption { animation: none !important; }
+  .play .caption { mask-image: none; }
 }

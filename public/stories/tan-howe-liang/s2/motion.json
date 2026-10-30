@@ -1,0 +1,115 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:16:36.961Z",
+  "usd": 0.0606,
+  "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete — the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll.",
+  "plan": {
+    "focusX": 0.51,
+    "focusY": 0.66,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.11,
+        "panX": 0,
+        "panY": 0.012,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.6,
+        "driftX": 0,
+        "driftY": -0.006,
+        "scale": 1.02,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.8,
+        "driftX": 0,
+        "driftY": -0.018,
+        "scale": 1.03,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete — the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll."
+  },
+  "critic": {
+    "score": 7,
+    "ok": true,
+    "verdict": "The film is publishable. The slow push-in toward the lifter's grip, combined with the barbell's slight independent rise against the lifter's smaller drift, clearly suggests the start of a deadlift while remaining reversible for scroll. The lifter and barbell stay coherent across all six frames, with no visible tearing, doubled edges, halos, ghosting, or awkward frame clipping; the grip remains convincing throughout. The t=0 poster presents the full gym scene legibly, the dust is subtle and period-appropriate, and the flat offset-lithograph texture is preserved. The plate itself contains no stray text, no visible face contrary to the silhouette-from-behind direction, no anachronisms, and no obvious anatomical or object defects.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 7,
+      "ok": true,
+      "verdict": "The film is publishable. The slow push-in toward the lifter's grip, combined with the barbell's slight independent rise against the lifter's smaller drift, clearly suggests the start of a deadlift while remaining reversible for scroll. The lifter and barbell stay coherent across all six frames, with no visible tearing, doubled edges, halos, ghosting, or awkward frame clipping; the grip remains convincing throughout. The t=0 poster presents the full gym scene legibly, the dust is subtle and period-appropriate, and the flat offset-lithograph texture is preserved. The plate itself contains no stray text, no visible face contrary to the silhouette-from-behind direction, no anachronisms, and no obvious anatomical or object defects.",
+      "filmIssues": [],
+      "fixes": [
+        "camera[1].t 1.750 → 1.000",
+        "camera[2].t 3.500 → 1.000",
+        "camera key at t=1.00 merged",
+        "cut-1.enterFor 0.000 → 0.100",
+        "cut-2.enterFor 0.000 → 0.100"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.66,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.11,
+            "panX": 0,
+            "panY": 0.012,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0,
+            "driftY": -0.006,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": -0.018,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete — the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll."
+      }
+    }
+  ]
+}

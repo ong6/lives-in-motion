@@ -2,9 +2,10 @@
  * The shape of a /create job as the page sees it (job.json on disk, SSE snapshots on the wire).
  * Type-only: safe to import from client components.
  */
-export type StepId = "research" | "storyboard" | "plates" | "cutouts" | "frontispiece" | "films";
-export type StepStatus = "waiting" | "running" | "done" | "skipped" | "failed";
-export type JobStatus = "running" | "done" | "failed" | "interrupted";
+export type StepId = "screen" | "research" | "storyboard" | "plates" | "cutouts" | "frontispiece" | "films";
+export type StepStatus = "waiting" | "running" | "done" | "skipped" | "failed" | "declined";
+/** declined: the subject screen turned the name away before any research. */
+export type JobStatus = "running" | "done" | "failed" | "interrupted" | "declined";
 
 export interface JobFact {
   n: number;
@@ -22,7 +23,7 @@ export interface JobCut {
 }
 
 /** Spend by Meta model family, in USD. */
-export type Spend = Partial<Record<"spark" | "search" | "image" | "sam" | "manual", number>>;
+export type Spend = Partial<Record<"spark" | "search" | "image" | "sam" | "wonder" | "manual", number>>;
 
 export interface JobScene {
   id: string;
@@ -65,13 +66,25 @@ export interface Job {
   updatedAt: string;
   finishedAt?: string;
   error?: string;
+  /** The subject screen's answer; `message` is shown when the life was declined. */
+  screen?: { category: string; known_for: string; ok: boolean; message?: string };
+  /** Made as a draft: off the shelf until `pnpm approve <slug>`. */
+  draft?: boolean;
   steps: Record<StepId, { status: StepStatus; startedAt?: string; endedAt?: string; usd: number; note?: string }>;
   facts: JobFact[];
   tagline?: string;
   born?: string;
   died?: string | null;
   scenes: JobScene[];
-  frontispiece?: { kind: "photo" | "emblem"; image?: string; lines?: string; strokes?: number; note?: string };
+  frontispiece?: {
+    kind: "photo" | "emblem";
+    image?: string;
+    lines?: string;
+    strokes?: number;
+    note?: string;
+    /** Whose photo it is, when it isn't the reader's (a rehearsal shows the replayed life's credited portrait). */
+    credit?: string;
+  };
   /** USD this life has cost so far, and the most it may cost. */
   usd: number;
   ceiling: number;
@@ -101,6 +114,19 @@ export interface CreateInfo {
   /** Typical wall time of a run, seconds, by step. */
   estimate: Record<StepId, number>;
   job: Job | null;
+  /** Added by the page and GET /api/create (components/create/shelf.ts): the books on the shelf, a sample life and the last real run. */
+  shelf?: ShelfBook[];
+  sample?: { slug: string; name: string; plates: { year: string; title: string; src: string }[] };
+  last?: { slug: string; name: string; seconds: number; usd: number };
 }
 
-export const STEP_ORDER: StepId[] = ["research", "storyboard", "plates", "cutouts", "frontispiece", "films"];
+/** A life on the shelf, as its cover is drawn. */
+export interface ShelfBook {
+  slug: string;
+  name: string;
+  lifespan: string;
+  part: string;
+  cloth: string;
+}
+
+export const STEP_ORDER: StepId[] = ["screen", "research", "storyboard", "plates", "cutouts", "frontispiece", "films"];

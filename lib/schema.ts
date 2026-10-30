@@ -28,6 +28,21 @@ export const Layer = z
   })
   .refine((l) => Boolean(l.src) !== Boolean(l.overlay), { message: "layer needs exactly one of src or overlay" });
 
+/**
+ * ok: Muse Spark found the caption supported. disputed: it found a problem not yet fixed.
+ * corrected: it disputed the caption and the caption was rewritten to match the sources.
+ */
+export const VERDICTS = ["ok", "disputed", "corrected"] as const;
+export const Checked = z.object({
+  model: z.string().min(1),
+  verdict: z.enum(VERDICTS),
+  at: z.string().min(1),
+  /** Muse Spark's one-line reason, as returned. */
+  note: z.string().optional(),
+  /** URLs it cited for the verdict. */
+  sources: z.array(z.string()).default([]),
+});
+
 /** How a scene's art is presented; the page around it stays the same. */
 export const TREATMENTS = ["theatre", "archive", "line"] as const;
 
@@ -54,6 +69,8 @@ export const Scene = z.object({
   video: z.string().optional(),
   poster: z.string().optional(),
   layers: z.array(Layer).default([]),
+  /** The caption's fact-check by Muse Spark with web search (`pnpm make <slug> --stages verify`). */
+  checked: Checked.optional(),
 });
 
 export const Story = z.object({
@@ -62,10 +79,16 @@ export const Story = z.object({
   born: z.string().regex(/^\d{4}$/),
   died: z.string().nullable(),
   tagline: z.string().min(1),
+  /**
+   * On the shelf and in the Part chain. Absent means listed; false keeps a life off the shelf
+   * (a /create draft awaiting `pnpm approve`, or a life withdrawn) while its URL still opens.
+   */
+  listed: z.boolean().optional(),
   scenes: z.array(Scene).min(3).max(10),
 });
 
 export type Source = z.infer<typeof Source>;
+export type Checked = z.infer<typeof Checked>;
 export type Layer = z.infer<typeof Layer>;
 export type Scene = z.infer<typeof Scene>;
 export type Story = z.infer<typeof Story>;

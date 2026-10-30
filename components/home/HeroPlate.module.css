@@ -1,0 +1,150 @@
+/*
+ * The hero plate, taken apart. Sits on the dark desk of the home page's hero, so its text is
+ * paper-coloured. Everything that moves is transform or opacity.
+ */
+.figure {
+  --size: min(100%, 64svh, 640px);
+  --paper-on-desk: #f2e9d6;
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  gap: 34px;
+  color: var(--paper-on-desk);
+}
+
+.viewport {
+  width: var(--size);
+  aspect-ratio: 1;
+  margin-top: 6svh;
+  perspective: 1500px;
+  perspective-origin: 50% 35%;
+  cursor: default;
+}
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(calc(var(--py, 0) * -5deg)) rotateY(calc(var(--px, 0) * 7deg));
+  transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.plate {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  opacity: 0;
+  transform: rotateX(4deg) rotateY(-4deg) scale(0.94);
+  transition:
+    opacity 0.8s ease,
+    transform 1.5s cubic-bezier(0.65, 0, 0.25, 1);
+}
+.plate[data-active] { opacity: 1; }
+.plate[data-apart] { transform: translateY(-2%) rotateX(52deg) rotateZ(-28deg) scale(0.88); }
+
+.back, .whole {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.back { box-shadow: 0 40px 70px -30px rgb(0 0 0 / 0.75), 0 2px 4px rgb(0 0 0 / 0.3); }
+/* The whole plate covers the parts while the picture is together, and gives way as it opens. */
+.whole {
+  transform: translateZ(1px);
+  transition: opacity 0.35s ease 1.15s;
+}
+.plate[data-apart] .whole { opacity: 0; transition-delay: 0s; }
+
+.cut {
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: transform 1.5s cubic-bezier(0.65, 0, 0.25, 1) calc(var(--k, 0) * 110ms);
+}
+.cut img { display: block; width: 100%; height: auto; filter: drop-shadow(0 18px 14px rgb(0 0 0 / 0.38)); }
+.plate[data-apart] .cut { transform: translateZ(var(--z)); }
+
+/* Labels, like the slips a printer pins to a proof. */
+.tag {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  translate: -50% -10px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 5px 9px 6px;
+  background: var(--paper-on-desk);
+  color: #1b1915;
+  font: italic 400 15px/1 var(--font-book);
+  white-space: nowrap;
+  box-shadow: 0 6px 14px -6px rgb(0 0 0 / 0.5);
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transition: opacity 0.3s ease, transform 1.5s cubic-bezier(0.65, 0, 0.25, 1);
+}
+.tag i {
+  font: 600 11.5px/1 var(--font-sans);
+  font-style: normal;
+  font-stretch: 92%;
+  color: #2f5d50;
+}
+.tagBack { left: 0; bottom: 100%; translate: 0 -12px; }
+.plate[data-apart] .tag { opacity: 1; transition-delay: 1.2s, 0s; }
+/* Each slip turns back to face the reader while its layer lies tilted. */
+.plate[data-apart] .tag { transform: rotateZ(28deg) rotateX(-52deg); }
+.tagBack { transform-origin: 0 100%; }
+
+/* ---------- Caption and the lives it cycles through ---------- */
+.caption { width: var(--size); display: grid; gap: 14px; }
+.now { font: 400 17px/1.45 var(--font-book); color: rgb(242 233 214 / 0.82); min-height: 1.45em; }
+.now a { color: var(--paper-on-desk); text-decoration-color: rgb(242 233 214 / 0.4); }
+.now a:hover { text-decoration-color: currentColor; }
+.now i { color: var(--paper-on-desk); }
+
+.controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid rgb(242 233 214 / 0.18); }
+.lives { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 22px; }
+.lives button,
+.pause {
+  position: relative;
+  padding: 12px 0 10px;
+  border: 0;
+  background: none;
+  color: rgb(242 233 214 / 0.6);
+  font: 400 15px/1 var(--font-book);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.lives button:hover,
+.lives button[aria-pressed="true"],
+.pause:hover { color: var(--paper-on-desk); }
+.lives button:focus-visible,
+.pause:focus-visible { outline: 2px solid #d8b46e; outline-offset: 2px; }
+/* How long until the next life: a gilt rule along the top edge of the caption. */
+.lives button[aria-pressed="true"]::before,
+.progress {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 1px;
+  background: rgb(216 180 110 / 0.35);
+}
+.progress { background: #d8b46e; transform-origin: 0 50%; transform: scaleX(0); }
+.progress[data-running] { animation: progress var(--t) linear forwards; }
+@keyframes progress {
+  to { transform: scaleX(1); }
+}
+.pause { font-style: italic; }
+
+.figure[data-still] .plate,
+.figure[data-still] .cut,
+.figure[data-still] .whole,
+.figure[data-still] .tag,
+.figure[data-still] .stage { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .plate, .cut, .whole, .tag, .stage { transition: none; }
+}

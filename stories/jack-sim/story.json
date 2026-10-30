@@ -31,8 +31,8 @@
       ],
       "plate": "/stories/jack-sim/s1/plate.webp",
       "background": "/stories/jack-sim/s1/background.webp",
-      "video": "/stories/jack-sim/s1/scene.mp4?v=273a696a",
-      "poster": "/stories/jack-sim/s1/scene.jpg?v=273a696a",
+      "video": "/stories/jack-sim/s1/scene.mp4?v=392379d7",
+      "poster": "/stories/jack-sim/s1/scene.jpg?v=392379d7",
       "layers": [
         {
           "id": "cut-1",
@@ -43,14 +43,23 @@
           "w": 13.81,
           "src": "/stories/jack-sim/s1/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:47.950Z",
+        "note": "Born second of three in 1957 to a beautician, family in impoverished Upper Serangoon village without plumbing",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jack_Sim"
+        ]
+      }
     },
     {
       "id": "s2",
       "treatment": "theatre",
       "year": "1982",
       "title": "Building a business",
-      "caption": "After working as a site supervisor and salesman, he starts his own firm. In 1982 he founds Besco Building Supplies; by his early 40s he runs 15 companies.",
+      "caption": "After working as a site supervisor and salesman, he starts his own firm in his mid-twenties, Besco Building Supplies; by his early 40s he runs 15 companies.",
       "visual": "A young businessman in a short-sleeved shirt, seen from behind, leans over a drafting table of rolled blueprints on a construction site. Stacked crates and cement bags beside him; shophouse rooftops and a tower crane behind.",
       "cut": [
         "man"
@@ -67,8 +76,8 @@
       ],
       "plate": "/stories/jack-sim/s2/plate.webp",
       "background": "/stories/jack-sim/s2/background.webp",
-      "video": "/stories/jack-sim/s2/scene.mp4?v=e8c3af6d",
-      "poster": "/stories/jack-sim/s2/scene.jpg?v=e8c3af6d",
+      "video": "/stories/jack-sim/s2/scene.mp4?v=104650f8",
+      "poster": "/stories/jack-sim/s2/scene.jpg?v=104650f8",
       "layers": [
         {
           "id": "cut-1",
@@ -79,7 +88,17 @@
           "w": 31.5,
           "src": "/stories/jack-sim/s2/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T13:04:01.709Z",
+        "note": "Besco was founded in 1984, not 1982, while supervisor/salesman and 15 companies parts match. → Muse Spark found Besco's founding year given as 1984 as well as 1982; the caption no longer states a year.",
+        "sources": [
+          "https://localnewsingapore.com/from-o-level-failure-to-millionaire-at-29-on-a-policy-of-honesty-first/",
+          "https://en.wikipedia.org/wiki/Jack_Sim"
+        ]
+      }
     },
     {
       "id": "s3",
@@ -104,6 +123,8 @@
       "plate": "/stories/jack-sim/s3/plate.webp",
       "background": "/stories/jack-sim/s3/background.webp",
       "line": "/stories/jack-sim/s3/line.json",
+      "video": "/stories/jack-sim/s3/scene.mp4?v=68b08017",
+      "poster": "/stories/jack-sim/s3/scene.jpg?v=68b08017",
       "layers": [
         {
           "id": "cut-1",
@@ -114,7 +135,14 @@
           "w": 11.81,
           "src": "/stories/jack-sim/s3/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:53.420Z",
+        "note": "Born 1957 (~41 in 1998), sold portion of businesses to volunteer after 1997 crisis and dedicated age 40 to founding RAS, RAS set up 8 Dec 1998.",
+        "sources": []
+      }
     },
     {
       "id": "s4",
@@ -142,8 +170,8 @@
       ],
       "plate": "/stories/jack-sim/s4/plate.webp",
       "background": "/stories/jack-sim/s4/background.webp",
-      "video": "/stories/jack-sim/s4/scene.mp4?v=67dc4955",
-      "poster": "/stories/jack-sim/s4/scene.jpg?v=67dc4955",
+      "video": "/stories/jack-sim/s4/scene.mp4?v=7da5741a",
+      "poster": "/stories/jack-sim/s4/scene.jpg?v=7da5741a",
       "layers": [
         {
           "id": "cut-1",
@@ -154,7 +182,14 @@
           "w": 41,
           "src": "/stories/jack-sim/s4/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:57.015Z",
+        "note": "Founded 19 Nov 2001 in Singapore; uses humor and sometimes shock to get attention to break toilet taboo.",
+        "sources": []
+      }
     },
     {
       "id": "s5",
@@ -179,6 +214,8 @@
       "plate": "/stories/jack-sim/s5/plate.webp",
       "background": "/stories/jack-sim/s5/background.webp",
       "line": "/stories/jack-sim/s5/line.json",
+      "video": "/stories/jack-sim/s5/scene.mp4?v=f449abf5",
+      "poster": "/stories/jack-sim/s5/scene.jpg?v=f449abf5",
       "layers": [
         {
           "id": "cut-1",
@@ -189,7 +226,14 @@
           "w": 27.06,
           "src": "/stories/jack-sim/s5/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:58.391Z",
+        "note": "TIME Hero of the Environment in 2008 and BOP Hub founded in 2011 for poorest bottom-of-pyramid both confirmed.",
+        "sources": []
+      }
     },
     {
       "id": "s6",
@@ -229,13 +273,20 @@
           "id": "date",
           "concept": "calendar",
           "depth": 0.9,
-          "x": 82,
-          "y": 94,
-          "w": 20,
+          "x": 80,
+          "y": 91,
+          "w": 18,
           "overlay": "calendar",
           "text": "19 NOV"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:04:02.792Z",
+        "note": "Adopted 24 July 2013 as 67/291 “Sanitation for All” designating 19 Nov World Toilet Day, Singapore's first UN resolution",
+        "sources": []
+      }
     },
     {
       "id": "s7",
@@ -259,8 +310,8 @@
       ],
       "plate": "/stories/jack-sim/s7/plate.webp",
       "background": "/stories/jack-sim/s7/background.webp",
-      "video": "/stories/jack-sim/s7/scene.mp4?v=33490d01",
-      "poster": "/stories/jack-sim/s7/scene.jpg?v=33490d01",
+      "video": "/stories/jack-sim/s7/scene.mp4?v=14d5c367",
+      "poster": "/stories/jack-sim/s7/scene.jpg?v=14d5c367",
       "layers": [
         {
           "id": "cut-1",
@@ -271,7 +322,14 @@
           "w": 16.69,
           "src": "/stories/jack-sim/s7/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:04:04.550Z",
+        "note": "World premiere at Hot Docs on 27 April 2019 about Jack Sim's humour-driven sanitation campaign confirmed",
+        "sources": []
+      }
     }
   ]
 }

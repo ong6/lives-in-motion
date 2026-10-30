@@ -4,6 +4,7 @@
   "born": "1923",
   "died": "2015-03-23",
   "tagline": "The founding prime minister who led Singapore from 1959 to 1990.",
+  "listed": false,
   "scenes": [
     {
       "id": "s1",
@@ -124,7 +125,9 @@
           "w": 17.75,
           "src": "/stories/lee-kuan-yew/s3/cut-1.webp"
         }
-      ]
+      ],
+      "video": "/stories/lee-kuan-yew/s3/scene.mp4?v=8a8bb577",
+      "poster": "/stories/lee-kuan-yew/s3/scene.jpg?v=8a8bb577"
     },
     {
       "id": "s4",
@@ -288,7 +291,9 @@
           "w": 31.75,
           "src": "/stories/lee-kuan-yew/s7/cut-1.webp"
         }
-      ]
+      ],
+      "video": "/stories/lee-kuan-yew/s7/scene.mp4?v=59ae448f",
+      "poster": "/stories/lee-kuan-yew/s7/scene.jpg?v=59ae448f"
     }
   ]
 }

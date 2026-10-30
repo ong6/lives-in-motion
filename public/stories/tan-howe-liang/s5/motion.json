@@ -1,0 +1,129 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:32:25.826Z",
+  "usd": 0.0651,
+  "rationale": "A held Olympic lift: the camera rises and pushes gently toward the bar while the lifter firms and the barbell lifts a little further overhead, the crowd and pines falling behind in parallax. A warm light-sweep keeps the sunlit Rome lithograph feeling without adding weather.",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.4,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.12,
+        "panX": 0,
+        "panY": -0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.24,
+        "panX": 0,
+        "panY": -0.035,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.75,
+        "driftX": 0,
+        "driftY": -0.014,
+        "scale": 1.03,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": -0.03,
+        "scale": 1.02,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A held Olympic lift: the camera rises and pushes gently toward the bar while the lifter firms and the barbell lifts a little further overhead, the crowd and pines falling behind in parallax. A warm light-sweep keeps the sunlit Rome lithograph feeling without adding weather."
+  },
+  "critic": {
+    "score": 7,
+    "ok": true,
+    "verdict": "A clear, publishable treatment. It improves modestly on a plain centred push-in through its upward focus, layered parallax and small additional rise of the barbell, though the motion remains intentionally restrained.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 7,
+      "ok": true,
+      "verdict": "A clear, publishable treatment. It improves modestly on a plain centred push-in through its upward focus, layered parallax and small additional rise of the barbell, though the motion remains intentionally restrained.",
+      "filmIssues": [
+        "Motion is a restrained, coherent push-in toward the raised bar, with mild parallax between the lifter/barbell and the crowd and pines behind.",
+        "The barbell drifts slightly higher than the lifter, reinforcing the held lift, and remains connected to the hands through the final frame; no tearing, doubled edges, ghosting or haloing is visible.",
+        "The poster frame at t=0 is a strong opening picture: the full silhouette, barbell, platform and Rome stadium setting read immediately.",
+        "No layer clips the frame edge awkwardly, and the final zoom remains comfortable and reversible for scroll-driven playback.",
+        "The light-sweep is subtle and appropriate to the sunlit 1950s offset-lithograph treatment."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.4,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.12,
+            "panX": 0,
+            "panY": -0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.24,
+            "panX": 0,
+            "panY": -0.035,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": -0.014,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.03,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A held Olympic lift: the camera rises and pushes gently toward the bar while the lifter firms and the barbell lifts a little further overhead, the crowd and pines falling behind in parallax. A warm light-sweep keeps the sunlit Rome lithograph feeling without adding weather."
+      }
+    }
+  ]
+}

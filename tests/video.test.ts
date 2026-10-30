@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { FILM, aimAt, bboxOf, cameraAt, covers, distance, easeInOutSine, lensFor, matteFromDiff, planScene, project, settled } from "@/pipeline/video";
+import { FILM, LINE, aimAt, bboxOf, cameraAt, covers, distance, drawnStrokes, easeInOutSine, lensFor, lineAt, matteFromDiff, planScene, project, settled, strokeLengths } from "@/pipeline/video";
 import { Scene } from "@/lib/schema";
 
 const centre = { x: 0.5, y: 0.5 };
@@ -137,5 +137,44 @@ describe("subject matte", () => {
     expect(a.focal.x).toBeLessThan(0.75);
     expect(a.dir).toBe(1);
     expect(aimAt({ left: 0.1, top: 0.3, width: 0.2, height: 0.6 }).dir).toBe(-1);
+  });
+});
+
+describe("line scenes", () => {
+  // Two strokes: 0.4 of pen travel, then 0.6 (the jump between them doesn't count).
+  const strokes = [
+    [0, 0, 0.4, 0],
+    [0, 0.5, 0, 0.8, 0.3, 0.8],
+  ];
+
+  it("measures pen travel per stroke, cumulatively", () => {
+    const cum = strokeLengths(strokes);
+    expect(cum[0]).toBeCloseTo(0.4);
+    expect(cum[1]).toBeCloseTo(1);
+  });
+
+  it("draws nothing at the start, everything at the end, and cuts the stroke in progress", () => {
+    expect(drawnStrokes(strokes, 0)).toEqual([]);
+    expect(drawnStrokes(strokes, 1)).toEqual(strokes);
+    expect(drawnStrokes(strokes, 0.2)[0]).toEqual([0, 0, 0.2, 0]);
+    const mid = drawnStrokes(strokes, 0.8);
+    expect(mid).toHaveLength(2);
+    expect(mid[1].slice(0, 4)).toEqual([0, 0.5, 0, 0.8]);
+    expect(mid[1][4]).toBeCloseTo(0.1);
+  });
+
+  it("opens on a faint print with full ink and ends on the plate with softened lines", () => {
+    const a = lineAt(0), b = lineAt(1);
+    expect(a.pen).toBe(0);
+    expect(a.plate).toBeCloseTo(LINE.ghost);
+    expect(a.ink).toBe(1);
+    expect(lineAt(LINE.drawEnd).pen).toBeCloseTo(1);
+    expect(b.plate).toBeCloseTo(1);
+    expect(b.ink).toBeCloseTo(LINE.lineRest);
+    for (let i = 0; i < 50; i++) {
+      const p = lineAt(i / 50), q = lineAt((i + 1) / 50);
+      expect(q.pen).toBeGreaterThanOrEqual(p.pen);
+      expect(q.plate).toBeGreaterThanOrEqual(p.plate);
+    }
   });
 });

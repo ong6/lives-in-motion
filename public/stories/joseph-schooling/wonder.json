@@ -1,0 +1,63 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-30T13:32:07.029Z",
+  "usd": 0.4397,
+  "scenes": {
+    "s1": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "Publishable. The slow downward push-in with slight parallax on the boy clearly centres him against the HDB blocks, palms and pool without stalling and reads equally well in reverse. The boy stays coherent throughout, with no tearing, doubled edges, halo or visible ghost from the painted-over background, and nothing clips the frame edge awkwardly. The t=0 wide composition is a good poster frame. The warm light-sweep suits the sunny morning and remains subtle while preserving the teal-and-orange risograph grain. Only slightly beyond a plain centred push-in, but the focus shift and settling movement express the swimmer's starting moment well.",
+      "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge \u2014 HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather.",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.054,
+      "seconds": 30,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s3": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "A clean, reversible gentle push-in centred between the boy and the jet. The suitcase layer stays coherent and grounded with no tearing, halo, ghosting or awkward frame-edge clipping, the t=0 poster is the complete plate, and the subtle light-sweep suits the sunrise without breaking the fluorescent orange-and-teal risograph grain. It is a modest but clear improvement on a plain centred push-in, expressing a quiet lean toward departure while preserving the airport-window composition throughout the scroll.",
+      "rationale": "A gentler push focused between the boy and the jet still reads as leaning toward departure, but the reduced zoom, lower suitcase depth and slight upward drift keep the suitcase fully grounded inside the frame at t=1 instead of clipping the bottom edge. No entrance preserves the complete plate as the poster, and the subtle dawn light-sweep remains fitting for the sunrise risograph print.",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1317,
+      "seconds": 66,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s5": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "approve",
+      "rationale": "Keep the swimmer fully present in the poster frame. A steady push-in toward the raised arms, combined with a modest upward drift and slight growth on the near swimmer layer, expresses the surge out of the water and separates him from the splash, lane ropes and scoreboard without an entrance that removes the subject. The subtle light-sweep retains the Rio stadium glare, and the single in-out move r",
+      "ambient": "light-sweep",
+      "rounds": 2,
+      "usd": 0.081,
+      "seconds": 41,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s6": {
+      "status": "kept-fixed-move",
+      "score": 6,
+      "ok": false,
+      "verdict": "Not publishable as-is: a smooth celebratory push-in, but the opening composition is off-centre and the bus moves independently of the swimmer standing on it, so it adds little over a plain centred push-in.",
+      "rationale": "A gentle parade advance: the camera lifts and pushes toward the raised medal while the bus grows and settles slightly forward, separating from the shophouse street with restrained cut-paper parallax and a warm celebratory light pass.",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.173,
+      "seconds": 200,
+      "filmIssues": [
+        "Poster frame (t=0) is a weak opening: the bus is pushed to the left of frame with a large empty shophouse area on the right, less balanced than the centred plate itself.",
+        "Only the bus is a cut-out layer; the swimmer and medal remain on the background. The bus's downward drift (driftY 0.018), 1.07 end scale and depth 0.65 therefore slide/scale the deck away from the figure standing on it \u2014 his feet and the railing relationship shift subtly across the frames, weakening coherence.",
+        "The 1.24 push-in is smooth and reversible and the warm light-sweep suits the celebration, but the move is essentially a generic push-in; the off-centre start and bus/figure separation mean it does not clearly beat a plain centred push-in."
+      ],
+      "plateDefects": []
+    }
+  }
+}

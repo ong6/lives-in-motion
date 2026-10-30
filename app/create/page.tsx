@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { info } from "@/pipeline/create";
 import { Workbench } from "@/components/create/Workbench";
+import { withShelf } from "@/components/create/shelf";
 
 export const dynamic = "force-dynamic";
 
@@ -10,5 +11,5 @@ export const metadata: Metadata = {
 };
 
 export default function CreatePage() {
-  return <Workbench initial={info()} />;
+  return <Workbench initial={withShelf(info())} />;
 }

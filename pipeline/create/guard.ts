@@ -63,10 +63,12 @@ export interface Refusal {
  */
 export function preflight(o: { env?: Env; entries: Entry[]; left: number; busy?: string | null; token?: string | null; mock?: boolean; now?: Date }): Refusal | null {
   const env = o.env ?? process.env;
+  const busy: Refusal | null = o.busy ? { status: 409, error: `Another life (${o.busy}) is being made right now. One at a time: try again when it finishes.` } : null;
+  // Rehearsals spend nothing, so they need neither the on switch nor the passcode.
+  if (o.mock) return mockAllowed(env) ? busy : { status: 403, error: "Rehearsals are off on this server." };
   if (!createEnabled(env)) return { status: 403, error: "Making new lives is switched off on this server." };
   if (!tokenOk(o.token, env)) return { status: 401, error: "That passcode isn't right." };
-  if (o.busy) return { status: 409, error: `Another life (${o.busy}) is being made right now. One at a time: try again when it finishes.` };
-  if (o.mock) return mockAllowed(env) ? null : { status: 403, error: "Rehearsals are off on this server." };
+  if (busy) return busy;
   if (o.left < MIN_HEADROOM)
     return { status: 402, error: `The event budget has $${o.left.toFixed(2)} left before its stop line; new lives need at least $${MIN_HEADROOM}.` };
   const cap = dailyCap(env), today = spentToday(o.entries, o.now);
@@ -130,4 +132,40 @@ export function validatePhoto(p: { type: string; size: number; bytes: Uint8Array
   const real = sniffImage(p.bytes);
   if (!real) return { ok: false, error: "That file isn't a readable JPEG, PNG or WebP image." };
   return { ok: true, type: real };
+}
+
+/** Real lives one visitor may start per day (rehearsals are free and not counted). */
+export const perIpDaily = (env: Env = process.env) => {
+  const v = Number(env.CREATE_PER_IP_DAILY ?? 2);
+  return Number.isFinite(v) && v >= 0 ? v : 2;
+};
+
+/** The visitor's address as the proxy reports it (first X-Forwarded-For hop), else "local". */
+export function clientIp(headers: Headers): string {
+  const fwd = headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+  return (fwd || headers.get("x-real-ip")?.trim() || "local").slice(0, 64);
+}
+
+/**
+ * Starts per visitor per local day, kept in memory (a restart forgets; the daily dollar cap
+ * still holds). `check` before starting, `hit` once a real life has started.
+ */
+export class IpLimit {
+  private seen = new Map<string, number[]>();
+  constructor(private max: () => number) {}
+  private today(ip: string, now: Date) {
+    const from = startOfDay(now).getTime();
+    const kept = (this.seen.get(ip) ?? []).filter((t) => t >= from);
+    this.seen.set(ip, kept);
+    return kept;
+  }
+  check(ip: string, now = new Date()): Refusal | null {
+    const max = this.max();
+    return this.today(ip, now).length >= max
+      ? { status: 429, error: `One visitor can make ${max} ${max === 1 ? "life" : "lives"} a day, and you’ve made yours. Rehearsals are still free; try again tomorrow.` }
+      : null;
+  }
+  hit(ip: string, now = new Date()) {
+    this.today(ip, now).push(now.getTime());
+  }
 }

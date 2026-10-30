@@ -154,3 +154,105 @@
 {"at":"2026-10-30T12:31:33.551Z","kind":"sam","usd":0.0025,"note":"barbell","job":"create:tan-howe-liang"}
 {"at":"2026-10-30T12:32:31.046Z","kind":"image","usd":0.01,"note":"edit: Remove the lifter and the barbell from this illustrati","job":"create:tan-howe-liang"}
 {"at":"2026-10-30T12:36:10.080Z","kind":"sam","usd":0.0025,"note":"person"}
+{"at":"2026-10-30T12:46:14.493Z","kind":"sam","usd":0.0025,"note":"person"}
+{"at":"2026-10-30T12:50:19.948Z","kind":"search","usd":0.561836,"note":"Fact-check each caption below about Tan Howe Liang, the Sing"}
+{"at":"2026-10-30T13:03:47.557Z","kind":"search","usd":0.009022,"note":"Fact-check this caption about Tan Howe Liang (1937) using we"}
+{"at":"2026-10-30T13:03:47.948Z","kind":"search","usd":0.027003,"note":"Fact-check this caption about Jack Sim (1957) using web sear"}
+{"at":"2026-10-30T13:03:48.237Z","kind":"search","usd":0.008349,"note":"Fact-check this caption about Joseph Schooling (1995) using "}
+{"at":"2026-10-30T13:03:48.476Z","kind":"search","usd":0.013089,"note":"Fact-check this caption about Joseph Schooling (2009) using "}
+{"at":"2026-10-30T13:03:48.926Z","kind":"search","usd":0.026974,"note":"Fact-check this caption about Tan Howe Liang (1953) using we"}
+{"at":"2026-10-30T13:03:52.901Z","kind":"search","usd":0.018124,"note":"Fact-check this caption about Joseph Schooling (2008) using "}
+{"at":"2026-10-30T13:03:53.420Z","kind":"search","usd":0.032924,"note":"Fact-check this caption about Jack Sim (1998) using web sear"}
+{"at":"2026-10-30T13:03:55.077Z","kind":"search","usd":0.010442,"note":"Fact-check this caption about Joseph Schooling (2016) using "}
+{"at":"2026-10-30T13:03:55.383Z","kind":"search","usd":0.009907,"note":"Fact-check this caption about Joseph Schooling (2014) using "}
+{"at":"2026-10-30T13:03:55.790Z","kind":"search","usd":0.04652,"note":"Fact-check this caption about Tan Howe Liang (1956) using we"}
+{"at":"2026-10-30T13:03:57.015Z","kind":"search","usd":0.027348,"note":"Fact-check this caption about Jack Sim (2001) using web sear"}
+{"at":"2026-10-30T13:03:58.391Z","kind":"search","usd":0.01168,"note":"Fact-check this caption about Jack Sim (2008) using web sear"}
+{"at":"2026-10-30T13:04:01.279Z","kind":"search","usd":0.048822,"note":"Fact-check this caption about Tan Howe Liang (1960) using we"}
+{"at":"2026-10-30T13:04:01.709Z","kind":"search","usd":0.091804,"note":"Fact-check this caption about Jack Sim (1982) using web sear"}
+{"at":"2026-10-30T13:04:02.013Z","kind":"search","usd":0.026977,"note":"Fact-check this caption about Joseph Schooling (2016) using "}
+{"at":"2026-10-30T13:04:02.588Z","kind":"search","usd":0.018675,"note":"Fact-check this caption about Tan Howe Liang (1962) using we"}
+{"at":"2026-10-30T13:04:02.791Z","kind":"search","usd":0.014215,"note":"Fact-check this caption about Jack Sim (2013) using web sear"}
+{"at":"2026-10-30T13:04:03.182Z","kind":"search","usd":0.025927,"note":"Fact-check this caption about Joseph Schooling (2024) using "}
+{"at":"2026-10-30T13:04:04.550Z","kind":"search","usd":0.009377,"note":"Fact-check this caption about Jack Sim (2019) using web sear"}
+{"at":"2026-10-30T13:04:07.704Z","kind":"search","usd":0.018554,"note":"Fact-check this caption about Tan Howe Liang (2024) using we"}
+{"at":"2026-10-30T13:04:09.408Z","kind":"search","usd":0.113471,"note":"Fact-check this caption about Tan Howe Liang (1958) using we"}
+{"at":"2026-10-30T13:10:11.770Z","kind":"spark","usd":0.003326,"note":"subject_screen","job":"create:lee-hsien-loong"}
+{"at":"2026-10-30T13:11:51.910Z","kind":"wonder","usd":0.028824,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T13:12:08.958Z","kind":"wonder","usd":0.025292,"note":"critic-jack-sim-s4-r0","job":"wonder"}
+{"at":"2026-10-30T13:12:55.076Z","kind":"wonder","usd":0.032512,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T13:13:18.697Z","kind":"wonder","usd":0.040896,"note":"critic-jack-sim-s4-r0","job":"wonder"}
+{"at":"2026-10-30T13:13:44.536Z","kind":"wonder","usd":0.04932,"note":"critic-jack-sim-s4-r1","job":"wonder"}
+{"at":"2026-10-30T13:14:08.020Z","kind":"wonder","usd":0.044652,"note":"critic-jack-sim-s4-r2","job":"wonder"}
+{"at":"2026-10-30T13:15:29.876Z","kind":"wonder","usd":0.02858,"note":"direct-tan-howe-liang-s1","job":"wonder"}
+{"at":"2026-10-30T13:15:30.063Z","kind":"wonder","usd":0.028904,"note":"direct-jack-sim-s1","job":"wonder"}
+{"at":"2026-10-30T13:15:30.743Z","kind":"wonder","usd":0.025548,"note":"direct-joseph-schooling-s1","job":"wonder"}
+{"at":"2026-10-30T13:15:50.006Z","kind":"wonder","usd":0.028434,"note":"critic-joseph-schooling-s1-r0","job":"wonder"}
+{"at":"2026-10-30T13:15:50.403Z","kind":"wonder","usd":0.038024,"note":"critic-tan-howe-liang-s1-r0","job":"wonder"}
+{"at":"2026-10-30T13:15:59.594Z","kind":"wonder","usd":0.031952,"note":"direct-joseph-schooling-s3","job":"wonder"}
+{"at":"2026-10-30T13:16:07.059Z","kind":"wonder","usd":0.02793,"note":"critic-tan-howe-liang-s1-r1","job":"wonder"}
+{"at":"2026-10-30T13:16:07.519Z","kind":"wonder","usd":0.041426,"note":"critic-jack-sim-s1-r0","job":"wonder"}
+{"at":"2026-10-30T13:16:17.154Z","kind":"wonder","usd":0.031236,"note":"direct-tan-howe-liang-s2","job":"wonder"}
+{"at":"2026-10-30T13:16:19.134Z","kind":"wonder","usd":0.03637,"note":"critic-joseph-schooling-s3-r0","job":"wonder"}
+{"at":"2026-10-30T13:16:28.635Z","kind":"wonder","usd":0.039574,"note":"critic-jack-sim-s1-r1","job":"wonder"}
+{"at":"2026-10-30T13:16:36.955Z","kind":"wonder","usd":0.029342,"note":"critic-tan-howe-liang-s2-r0","job":"wonder"}
+{"at":"2026-10-30T13:16:39.938Z","kind":"wonder","usd":0.03737,"note":"critic-joseph-schooling-s3-r1","job":"wonder"}
+{"at":"2026-10-30T13:16:46.052Z","kind":"wonder","usd":0.025707,"note":"critic-jack-sim-s1-r2","job":"wonder"}
+{"at":"2026-10-30T13:16:48.852Z","kind":"wonder","usd":0.02754,"note":"direct-tan-howe-liang-s3","job":"wonder"}
+{"at":"2026-10-30T13:16:54.338Z","kind":"wonder","usd":0.025332,"note":"direct-jack-sim-s2","job":"wonder"}
+{"at":"2026-10-30T13:16:55.947Z","kind":"wonder","usd":0.025996,"note":"critic-joseph-schooling-s3-r2","job":"wonder"}
+{"at":"2026-10-30T13:17:05.021Z","kind":"wonder","usd":0.026884,"note":"direct-joseph-schooling-s5","job":"wonder"}
+{"at":"2026-10-30T13:17:05.473Z","kind":"wonder","usd":0.02683,"note":"critic-tan-howe-liang-s3-r0","job":"wonder"}
+{"at":"2026-10-30T13:17:16.063Z","kind":"wonder","usd":0.02762,"note":"direct-tan-howe-liang-s4","job":"wonder"}
+{"at":"2026-10-30T13:17:16.322Z","kind":"wonder","usd":0.03902,"note":"critic-jack-sim-s2-r0","job":"wonder"}
+{"at":"2026-10-30T13:17:21.549Z","kind":"wonder","usd":0.031926,"note":"critic-joseph-schooling-s5-r0","job":"wonder"}
+{"at":"2026-10-30T13:17:36.577Z","kind":"wonder","usd":0.022166,"note":"critic-joseph-schooling-s5-r1","job":"wonder"}
+{"at":"2026-10-30T13:17:48.256Z","kind":"wonder","usd":0.034996,"note":"direct-joseph-schooling-s6","job":"wonder"}
+{"at":"2026-10-30T13:17:55.037Z","kind":"wonder","usd":0.044402,"note":"critic-tan-howe-liang-s4-r0","job":"wonder"}
+{"at":"2026-10-30T13:17:55.101Z","kind":"wonder","usd":0.041938,"note":"critic-jack-sim-s2-r1","job":"wonder"}
+{"at":"2026-10-30T13:18:09.786Z","kind":"wonder","usd":0.043766,"note":"critic-joseph-schooling-s6-r0","job":"wonder"}
+{"at":"2026-10-30T13:18:18.052Z","kind":"wonder","usd":0.044986,"note":"critic-tan-howe-liang-s4-r1","job":"wonder"}
+{"at":"2026-10-30T13:18:30.490Z","kind":"wonder","usd":0.03287,"note":"critic-jack-sim-s2-r2","job":"wonder"}
+{"at":"2026-10-30T13:18:35.152Z","kind":"wonder","usd":0.046154,"note":"critic-joseph-schooling-s6-r1","job":"wonder"}
+{"at":"2026-10-30T13:18:39.138Z","kind":"wonder","usd":0.026712,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T13:18:39.986Z","kind":"wonder","usd":0.041426,"note":"critic-tan-howe-liang-s4-r2","job":"wonder"}
+{"at":"2026-10-30T13:18:49.171Z","kind":"wonder","usd":0.028816,"note":"direct-tan-howe-liang-s5","job":"wonder"}
+{"at":"2026-10-30T13:19:00.040Z","kind":"wonder","usd":0.042706,"note":"critic-joseph-schooling-s6-r2","job":"wonder"}
+{"at":"2026-10-30T13:19:01.433Z","kind":"wonder","usd":0.035091,"note":"critic-jack-sim-s4-r0","job":"wonder"}
+{"at":"2026-10-30T13:19:25.762Z","kind":"wonder","usd":0.03911,"note":"critic-jack-sim-s4-r1","job":"wonder"}
+{"at":"2026-10-30T13:20:08.461Z","kind":"wonder","usd":0.045698,"note":"critic-jack-sim-s4-r2","job":"wonder"}
+{"at":"2026-10-30T13:20:19.266Z","kind":"wonder","usd":0.027804,"note":"direct-jack-sim-s6","job":"wonder"}
+{"at":"2026-10-30T13:21:43.584Z","kind":"wonder","usd":0.045574,"note":"critic-jack-sim-s6-r0","job":"wonder"}
+{"at":"2026-10-30T13:22:30.743Z","kind":"wonder","usd":0.035384,"note":"direct-tan-howe-liang-s6","job":"wonder"}
+{"at":"2026-10-30T13:22:35.347Z","kind":"wonder","usd":0.037054,"note":"critic-jack-sim-s6-r1","job":"wonder"}
+{"at":"2026-10-30T13:22:52.121Z","kind":"wonder","usd":0.03729,"note":"critic-tan-howe-liang-s6-r0","job":"wonder"}
+{"at":"2026-10-30T13:22:56.665Z","kind":"wonder","usd":0.038362,"note":"critic-jack-sim-s6-r2","job":"wonder"}
+{"at":"2026-10-30T13:23:08.444Z","kind":"wonder","usd":0.02706,"note":"direct-jack-sim-s7","job":"wonder"}
+{"at":"2026-10-30T13:23:34.028Z","kind":"wonder","usd":0.045058,"note":"critic-jack-sim-s7-r0","job":"wonder"}
+{"at":"2026-10-30T13:23:44.780Z","kind":"wonder","usd":0.034538,"note":"critic-tan-howe-liang-s6-r1","job":"wonder"}
+{"at":"2026-10-30T13:24:06.236Z","kind":"wonder","usd":0.04001,"note":"critic-tan-howe-liang-s6-r2","job":"wonder"}
+{"at":"2026-10-30T13:24:32.167Z","kind":"wonder","usd":0.03959,"note":"critic-jack-sim-s7-r1","job":"wonder"}
+{"at":"2026-10-30T13:25:05.823Z","kind":"wonder","usd":0.039114,"note":"critic-jack-sim-s7-r2","job":"wonder"}
+{"at":"2026-10-30T13:30:37.773Z","kind":"wonder","usd":0.024648,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T13:30:39.394Z","kind":"wonder","usd":0.030396,"note":"direct-tan-howe-liang-s4","job":"wonder"}
+{"at":"2026-10-30T13:30:39.949Z","kind":"wonder","usd":0.030632,"note":"direct-joseph-schooling-s6","job":"wonder"}
+{"at":"2026-10-30T13:31:17.458Z","kind":"wonder","usd":0.044794,"note":"critic-tan-howe-liang-s4-r0","job":"wonder"}
+{"at":"2026-10-30T13:31:18.544Z","kind":"wonder","usd":0.045166,"note":"critic-joseph-schooling-s6-r0","job":"wonder"}
+{"at":"2026-10-30T13:31:37.754Z","kind":"wonder","usd":0.038842,"note":"critic-tan-howe-liang-s4-r1","job":"wonder"}
+{"at":"2026-10-30T13:31:37.929Z","kind":"wonder","usd":0.044626,"note":"critic-jack-sim-s4-r0","job":"wonder"}
+{"at":"2026-10-30T13:31:43.496Z","kind":"wonder","usd":0.05041,"note":"critic-joseph-schooling-s6-r1","job":"wonder"}
+{"at":"2026-10-30T13:31:57.459Z","kind":"wonder","usd":0.034221,"note":"critic-tan-howe-liang-s4-r2","job":"wonder"}
+{"at":"2026-10-30T13:32:02.479Z","kind":"wonder","usd":0.037014,"note":"critic-jack-sim-s4-r1","job":"wonder"}
+{"at":"2026-10-30T13:32:06.211Z","kind":"wonder","usd":0.034612,"note":"direct-tan-howe-liang-s5","job":"wonder"}
+{"at":"2026-10-30T13:32:07.018Z","kind":"wonder","usd":0.0468,"note":"critic-joseph-schooling-s6-r2","job":"wonder"}
+{"at":"2026-10-30T13:32:09.502Z","kind":"wonder","usd":0.02426,"note":"direct-jack-sim-s6","job":"wonder"}
+{"at":"2026-10-30T13:32:25.816Z","kind":"wonder","usd":0.030472,"note":"critic-tan-howe-liang-s5-r0","job":"wonder"}
+{"at":"2026-10-30T13:32:32.301Z","kind":"wonder","usd":0.037702,"note":"critic-jack-sim-s6-r0","job":"wonder"}
+{"at":"2026-10-30T13:32:36.019Z","kind":"wonder","usd":0.02664,"note":"direct-tan-howe-liang-s6","job":"wonder"}
+{"at":"2026-10-30T13:32:54.572Z","kind":"wonder","usd":0.03635,"note":"critic-tan-howe-liang-s6-r0","job":"wonder"}
+{"at":"2026-10-30T13:33:06.671Z","kind":"wonder","usd":0.037158,"note":"critic-jack-sim-s6-r1","job":"wonder"}
+{"at":"2026-10-30T13:33:16.570Z","kind":"wonder","usd":0.041762,"note":"critic-tan-howe-liang-s6-r1","job":"wonder"}
+{"at":"2026-10-30T13:33:28.151Z","kind":"wonder","usd":0.040134,"note":"critic-jack-sim-s6-r2","job":"wonder"}
+{"at":"2026-10-30T13:33:38.072Z","kind":"wonder","usd":0.028196,"note":"direct-jack-sim-s7","job":"wonder"}
+{"at":"2026-10-30T13:33:40.508Z","kind":"wonder","usd":0.042333,"note":"critic-tan-howe-liang-s6-r2","job":"wonder"}
+{"at":"2026-10-30T13:33:52.336Z","kind":"wonder","usd":0.026482,"note":"critic-jack-sim-s7-r0","job":"wonder"}

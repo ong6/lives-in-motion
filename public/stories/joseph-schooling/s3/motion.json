@@ -1,0 +1,206 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:16:55.951Z",
+  "usd": 0.1317,
+  "rationale": "A gentler push focused between the boy and the jet still reads as leaning toward departure, but the reduced zoom, lower suitcase depth and slight upward drift keep the suitcase fully grounded inside the frame at t=1 instead of clipping the bottom edge. No entrance preserves the complete plate as the poster, and the subtle dawn light-sweep remains fitting for the sunrise risograph print.",
+  "plan": {
+    "focusX": 0.49,
+    "focusY": 0.48,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.04,
+        "panX": 0.004,
+        "panY": -0.003,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.09,
+        "panX": 0.008,
+        "panY": -0.006,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.55,
+        "driftX": -0.006,
+        "driftY": -0.012,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.5
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A gentler push focused between the boy and the jet still reads as leaning toward departure, but the reduced zoom, lower suitcase depth and slight upward drift keep the suitcase fully grounded inside the frame at t=1 instead of clipping the bottom edge. No entrance preserves the complete plate as the poster, and the subtle dawn light-sweep remains fitting for the sunrise risograph print."
+  },
+  "critic": {
+    "score": 7,
+    "ok": true,
+    "verdict": "A clean, reversible gentle push-in centred between the boy and the jet. The suitcase layer stays coherent and grounded with no tearing, halo, ghosting or awkward frame-edge clipping, the t=0 poster is the complete plate, and the subtle light-sweep suits the sunrise without breaking the fluorescent orange-and-teal risograph grain. It is a modest but clear improvement on a plain centred push-in, expressing a quiet lean toward departure while preserving the airport-window composition throughout the scroll.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent, clean render with a good poster and fitting ambient, but the motion is too close to a plain 1.09x push-in and lets the suitcase sink to the bottom edge to publish as an expressive film.",
+      "filmIssues": [
+        "The move is effectively the baseline plain push-in: zoom 1.0 to 1.09 with a single foreground layer, so the foreground/background parallax is barely readable and does little beyond a centred push-in.",
+        "The suitcase drifts down as well as left, so by t=1 it is pressed against and awkwardly clipped by the bottom edge, weakening the final framing.",
+        "The light-sweep is fitting for the sunrise, but at this small zoom it does not compensate for the lack of a clearly staged foreground-to-window-to-jet progression."
+      ],
+      "fixes": [
+        "camera[1].t 1.750 → 1.000",
+        "camera[2].t 3.500 → 1.000",
+        "camera key at t=1.00 merged"
+      ],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.55,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.09,
+            "panX": 0.015,
+            "panY": -0.01,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.008,
+            "driftY": 0.006,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A slow, off-centre push from the orange suitcase toward the boy silhouetted against the sunrise window and the waiting jet: the grounded foreground case parallaxes gently against the glass while a warm light-sweep plays the dawn across the risograph grain — departure held in anticipation, not spectacle."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "film",
+      "filmIssues": [
+        "The continuous push-in is legible and reversible, and the t=0 poster is a complete, well-composed opening picture, but it is essentially only a plain push-in: the boy, window and jet are all in the background, so only the suitcase produces parallax.",
+        "By t=0.8-1.0 the magnified foreground suitcase is driven into and clipped by the bottom edge of the frame, losing its grounded base and making the end of the scroll feel awkward rather than like a held departure moment.",
+        "No obvious tearing, doubled edge or painted-over ghost is visible around the suitcase, and the light-sweep is fitting for sunrise, but the single-layer separation does not clearly express the scene beyond a centred push-in."
+      ],
+      "fixes": [
+        "move damped to 75% (cut-1 10% off-frame at t=0.93)"
+      ],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.52,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0750000000000002,
+            "panX": 0.0075,
+            "panY": -0.006,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.165,
+            "panX": 0.015,
+            "panY": -0.013499999999999998,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": -0.013499999999999998,
+            "driftY": -0.003,
+            "scale": 1.0225,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A stronger, continuous push focused between the boy and the jet makes the departure read clearly: the near suitcase parallaxes gently left and slightly up against the window instead of sliding out of the bottom of frame, separating grounded foreground, waiting figure and tarmac while the subtle dawn light-sweep plays across the risograph grain. No entrance, so the t=0 poster remains the complete p"
+      }
+    },
+    {
+      "score": 7,
+      "ok": true,
+      "verdict": "A clean, reversible gentle push-in centred between the boy and the jet. The suitcase layer stays coherent and grounded with no tearing, halo, ghosting or awkward frame-edge clipping, the t=0 poster is the complete plate, and the subtle light-sweep suits the sunrise without breaking the fluorescent orange-and-teal risograph grain. It is a modest but clear improvement on a plain centred push-in, expressing a quiet lean toward departure while preserving the airport-window composition throughout the scroll.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.48,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.04,
+            "panX": 0.004,
+            "panY": -0.003,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.09,
+            "panX": 0.008,
+            "panY": -0.006,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.55,
+            "driftX": -0.006,
+            "driftY": -0.012,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A gentler push focused between the boy and the jet still reads as leaning toward departure, but the reduced zoom, lower suitcase depth and slight upward drift keep the suitcase fully grounded inside the frame at t=1 instead of clipping the bottom edge. No entrance preserves the complete plate as the poster, and the subtle dawn light-sweep remains fitting for the sunrise risograph print."
+      }
+    }
+  ]
+}

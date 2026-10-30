@@ -1,15 +1,22 @@
 /**
  * GET  /api/create → CreateInfo: whether making is on, the budget, the estimate, the live job.
  * POST /api/create (multipart: name, hint?, photo?, rights?, token?, mock?, resume?) → 202 { slug }
- *      or { error } with 400 bad input, 401 passcode, 402 budget headroom, 403 off, 409 busy, 429 daily cap.
+ *      or { error } with 400 bad input, 401 passcode, 402 budget headroom, 403 off, 409 busy,
+ *      429 daily cap or this visitor's 2 lives a day (CREATE_PER_IP_DAILY; rehearsals don't count).
  */
 import { info, start } from "@/pipeline/create";
+import { IpLimit, clientIp, mockForced, perIpDaily } from "@/pipeline/create/guard";
+import { withShelf } from "@/components/create/shelf";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// One limiter per server process; it lives on globalThis so hot reloads keep the counts.
+const G = globalThis as unknown as { __limIpLimit?: IpLimit };
+const perIp = (G.__limIpLimit ??= new IpLimit(() => perIpDaily()));
+
 export function GET() {
-  return Response.json(info(), { headers: { "Cache-Control": "no-store" } });
+  return Response.json(withShelf(info()), { headers: { "Cache-Control": "no-store" } });
 }
 
 export async function POST(req: Request) {
@@ -18,6 +25,14 @@ export async function POST(req: Request) {
     form = await req.formData();
   } catch {
     return Response.json({ error: "Send the form as multipart/form-data." }, { status: 400 });
+  }
+  const mock = form.get("mock") === "1" || mockForced();
+  const ip = clientIp(req.headers);
+  // Picking up a stopped life isn't a new one.
+  const counted = !mock && !form.get("resume");
+  if (counted) {
+    const limited = perIp.check(ip);
+    if (limited) return Response.json({ error: limited.error }, { status: limited.status });
   }
   const file = form.get("photo");
   const photo = file instanceof File && file.size > 0 ? file : null;
@@ -29,9 +44,11 @@ export async function POST(req: Request) {
     hint: form.get("hint") ?? "",
     photo: photo ? { type: photo.type, size: photo.size, bytes: new Uint8Array(await photo.arrayBuffer()) } : null,
     token: (form.get("token") as string | null) ?? req.headers.get("x-create-token"),
-    mock: form.get("mock") === "1",
+    mock,
     resume: (form.get("resume") as string | null) || null,
   });
   if (!r.ok) return Response.json({ error: r.error }, { status: r.status });
+  // Counted once a real life has started (a declined name counts too: its check was a paid call).
+  if (counted) perIp.hit(ip);
   return Response.json({ slug: r.slug }, { status: 202 });
 }

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "s1",
+    "year": "1995",
+    "caption": "Joseph Schooling is born on 16 June 1995 in Singapore and grows up in the pool.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:48.239Z",
+    "verdict": "ok",
+    "reason": "Born 16 June 1995 in Singapore, born and raised in Singapore",
+    "raw": "I'll verify Schooling's birth date and birthplace with a quick web search.OK | Born 16 June 1995 in Singapore, born and raised in Singapore",
+    "sources": []
+  },
+  {
+    "id": "s2",
+    "year": "2008",
+    "caption": "At 13, he meets Michael Phelps on a visit to Singapore before the Beijing Olympics. It pushes him to train in the US.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:52.902Z",
+    "verdict": "ok",
+    "reason": "13 in 2008 when Phelps trained in Singapore pre-Beijing, goals changed after meet then moved to Florida to train",
+    "raw": "Checking that Schooling–Phelps caption — verifying the 2008 details.OK | 13 in 2008 when Phelps trained in Singapore pre-Beijing, goals changed after meet then moved to Florida to train",
+    "sources": []
+  },
+  {
+    "id": "s3",
+    "year": "2009",
+    "caption": "In 2009 he enrols at the Bolles School in Jacksonville, Florida, a year after meeting Phelps.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:48.476Z",
+    "verdict": "ok",
+    "reason": "Enrolled at Bolles in 2009, a year after meeting Phelps in 2008",
+    "raw": "Checking Schooling's 2009 Bolles enrollment claim — searching to verify.OK | Enrolled at Bolles in 2009, a year after meeting Phelps in 2008",
+    "sources": []
+  },
+  {
+    "id": "s4",
+    "year": "2014",
+    "caption": "He enrols at the University of Texas at Austin in 2014, training and racing for the Longhorns.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:55.384Z",
+    "verdict": "ok",
+    "reason": "Enrolled in 2014 at UT Austin where he swam as a Texas Longhorn",
+    "raw": "Fact-checking that 2014 caption — searching for verification.OK | Enrolled in 2014 at UT Austin where he swam as a Texas Longhorn",
+    "sources": []
+  },
+  {
+    "id": "s5",
+    "year": "2016",
+    "caption": "On 12 August 2016 he wins the 100 m butterfly in 50.39 seconds, an Olympic record, ahead of Phelps. It is Singapore's first Olympic gold.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:55.078Z",
+    "verdict": "ok",
+    "reason": "Date, 50.39s OR, win over Phelps and Singapore's first gold all confirmed.",
+    "raw": "I'll fact-check this caption against web sources.OK | Date, 50.39s OR, win over Phelps and Singapore's first gold all confirmed.",
+    "sources": []
+  },
+  {
+    "id": "s6",
+    "year": "2016",
+    "caption": "Singapore erupts in celebration. He receives S$1 million under the national reward scheme, and his National Service is deferred until after Tokyo 2020.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:02.014Z",
+    "verdict": "ok",
+    "reason": "Received SGD1 million under SNOC MAP, NS deferment extended until after Tokyo 2020.",
+    "raw": "I'll fact-check the Schooling caption with web searches on the reward and NS deferment claims.Both parts look correct so far; I'll open the source articles to gather citations.OK | Received SGD1 million under SNOC MAP, NS deferment extended until after Tokyo 2020.",
+    "sources": [
+      "https://www.insidethegames.biz/index.php/articles/1044129/schooling-benefits-from-snocs-multi-million-dollar-awards-programme",
+      "https://swimswam.com/?p=162352"
+    ]
+  },
+  {
+    "id": "s7",
+    "year": "2024",
+    "caption": "After a 2017 world bronze, an early exit at Tokyo 2020 and a 2022 admission of cannabis use abroad, he retires from competitive swimming on 2 April 2024.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:03.183Z",
+    "verdict": "ok",
+    "reason": "2017 joint-bronze, Tokyo heats exit, 2022 Vietnam cannabis admission, retired 2 Apr 2024",
+    "raw": "Fact-checking that Schooling caption — verifying each claim against web sources.OK | 2017 joint-bronze, Tokyo heats exit, 2022 Vietnam cannabis admission, retired 2 Apr 2024",
+    "sources": []
+  }
+]

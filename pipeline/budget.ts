@@ -21,6 +21,10 @@ export const PRICES = {
   webSearch: 2.5 / 1000,
   image: 0.01,
   samImage: 2.5 / 1000,
+  /** Muse Wonder (muse-wonder-1.0, Standard mode only). */
+  wonderInput: 4 / 1e6,
+  wonderCachedInput: 0.2 / 1e6,
+  wonderOutput: 20 / 1e6,
 };
 
 /** The event allowance, and the reserve kept back for estimate error and spend we can't see. */
@@ -32,7 +36,7 @@ const LEDGER = join(ROOT, "spend.jsonl");
 
 export interface Entry {
   at: string;
-  kind: "spark" | "search" | "image" | "sam" | "manual";
+  kind: "spark" | "search" | "image" | "sam" | "wonder" | "manual";
   usd: number;
   note?: string;
   /** The job a call was made for ("create:<slug>" for lives made on /create). */
@@ -139,6 +143,22 @@ export function sparkCost(usage: any, searches = 0): number {
   const cached = usage?.prompt_tokens_details?.cached_tokens ?? usage?.input_tokens_details?.cached_tokens ?? 0;
   return (input - cached) * PRICES.sparkInput + cached * PRICES.sparkCachedInput + output * PRICES.sparkOutput + searches * PRICES.webSearch;
 }
+
+/** Cost of a Muse Wonder response from its usage (Chat Completions or Responses shapes). */
+export function wonderCost(usage: any): number {
+  const input = usage?.prompt_tokens ?? usage?.input_tokens;
+  const output = usage?.completion_tokens ?? usage?.output_tokens;
+  if (input == null || output == null) throw new Error("no usage");
+  const cached = usage?.prompt_tokens_details?.cached_tokens ?? usage?.input_tokens_details?.cached_tokens ?? 0;
+  return (input - cached) * PRICES.wonderInput + cached * PRICES.wonderCachedInput + output * PRICES.wonderOutput;
+}
+
+/**
+ * Worst case for a Wonder call: the text (about 3 chars a token), each image at a generous
+ * token count (the docs give no per-image figure), and the whole output cap (reasoning included).
+ */
+export const wonderWorst = (promptChars: number, images: number, maxOutput: number, tokensPerImage = 6000) =>
+  (promptChars / 3 + images * tokensPerImage + 2000) * PRICES.wonderInput + maxOutput * PRICES.wonderOutput;
 
 /** Worst case for a Spark call: the prompt (about 3 chars a token, plus images) and the output cap. */
 export const sparkWorst = (promptChars: number, maxOutput: number, maxSearches = 0) =>

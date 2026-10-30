@@ -5,7 +5,8 @@ import b from "./book.module.css";
  * The front board of one life: cloth, a blind-stamped double frame and the title in gilt.
  * It sizes its type from its own box, so the same cover sits on the shelf and opens on the
  * story page; both carry the view-transition name `cover-<slug>`, so following a shelf link
- * lifts this cover into the closed book on the next page.
+ * lifts this cover into the closed book on the next page. The `data-cover` hooks let the shelf
+ * lay the same cover out on its own grid.
  */
 export function Cover({
   slug,
@@ -28,15 +29,24 @@ export function Cover({
   lift?: boolean;
   children?: ReactNode;
 }) {
+  const [first, ...more] = name.trim().split(/\s+/);
+  const rest = more.join(" ");
   const cover = (
     <div className={`${b.cover} ${className}`} style={style}>
-      <div className={b.coverInner}>
-        <p className={b.coverSeries}>Lives in Motion</p>
-        <div className={b.coverTitle}>
-          <h2>{name}</h2>
-          <p>{lifespan}</p>
+      <div className={b.coverInner} data-cover="inner">
+        <p className={b.coverSeries} data-cover="series">
+          Lives in Motion
+        </p>
+        <div className={b.coverTitle} data-cover="title">
+          <h2 data-cover="name">
+            {/* First word, then the rest: a shelf can set every name on the same two lines. */}
+            <span>{first}</span> {rest && <span>{rest}</span>}
+          </h2>
+          <p data-cover="dates">{lifespan}</p>
         </div>
-        <p className={b.coverSeries}>{part}</p>
+        <p className={b.coverSeries} data-cover="part">
+          {part}
+        </p>
       </div>
       {children}
     </div>

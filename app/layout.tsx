@@ -9,9 +9,9 @@ const book = Newsreader({ subsets: ["latin"], style: ["normal", "italic"], axes:
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Lives in Motion — Singapore lives, drawn and told decade by decade",
+  title: "Lives in Motion: Singaporean lives as illustrated books that move",
   description:
-    "Scroll through the lives of Jack Sim, Lee Kuan Yew and Joseph Schooling. Every scene is sourced, illustrated with Meta's Muse Image and animated with SAM 3.1 cut-outs and single-line Fourier drawings.",
+    "Singaporean lives as illustrated books that move as you scroll. Every fact is researched and cited by Muse Spark, every plate painted by Muse Image and cut into moving layers by SAM 3.1. Read one, or make a new life.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

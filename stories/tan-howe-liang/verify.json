@@ -1,0 +1,89 @@
+[
+  {
+    "id": "s1",
+    "year": "1937",
+    "caption": "At around age four, he moved with his family from Swatow to Singapore and settled in Chinatown.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:47.558Z",
+    "verdict": "ok",
+    "reason": "Born in Swatow 1933, emigrated at age four to settle in Chinatown, Singapore.",
+    "raw": "Fact-checking that move — now verifying the details.OK | Born in Swatow 1933, emigrated at age four to settle in Chinatown, Singapore.",
+    "sources": []
+  },
+  {
+    "id": "s2",
+    "year": "1953",
+    "caption": "He joined the Evergreen Weightlifting Party in 1952, training with a single set of barbells, and after a year won national junior and senior lightweight titles.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:48.927Z",
+    "verdict": "ok",
+    "reason": "Joined Evergreen in 1952 with only a single set of barbells, winning National Junior and Senior lightweight titles after one year",
+    "raw": "Fact-checking that 1953 caption — searching the record.Early hits back the caption — opening sources to confirm the details.OK | Joined Evergreen in 1952 with only a single set of barbells, winning National Junior and Senior lightweight titles after one year",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    ]
+  },
+  {
+    "id": "s3",
+    "year": "1956",
+    "caption": "He placed fourth at the 1954 Asian Games in Manila, then finished ninth at the 1956 Melbourne Olympics after losing consciousness.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:03:55.790Z",
+    "verdict": "ok",
+    "reason": "Placed fourth in Manila and ninth in Melbourne after losing consciousness as stated, Manila Games were in 1954.",
+    "raw": "I'll verify this caption with web searches on Tan Howe Liang's 1954 and 1956 results.The initial results support the caption, so I'll open the source page to confirm the specific details before answering.That confirms most of the caption, but I need to verify the 1954 year explicitly before giving the final verdict.OK | Placed fourth in Manila and ninth in Melbourne after losing consciousness as stated, Manila Games were in 1954.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    ]
+  },
+  {
+    "id": "s4",
+    "year": "1958",
+    "caption": "In 1958 he won lightweight gold at Cardiff with a 358 kg total and 157 kg clean-and-jerk, then lightweight gold at Tokyo with a 375 kg total.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:09.409Z",
+    "verdict": "corrected",
+    "reason": "Order is reversed — Tokyo (24 May–1 June 1958) came before Cardiff (18–26 July 1958), not after.",
+    "raw": "Fact-checking Tan Howe Liang’s 1958 record — pulling sources to verify those lifts.First results look correct on the totals — now checking the event order and dates.Timing confirms Tokyo came before Cardiff — now verifying the exact lift figures.WRONG | Order is reversed — Tokyo (24 May–1 June 1958) came before Cardiff (18–26 July 1958), not after.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/1958_Asian_Games"
+    ],
+    "fix": "Muse Spark found the order reversed: the Tokyo Asian Games (May–June 1958) came before Cardiff (July 1958). Reordered.",
+    "corrected": "In 1958 he won lightweight gold at the Asian Games in Tokyo with a 375 kg total, then at Cardiff’s Commonwealth Games with 358 kg and a 157 kg clean-and-jerk."
+  },
+  {
+    "id": "s5",
+    "year": "1960",
+    "caption": "After winning lightweight gold at the 1959 Bangkok SEAP Games with 369 kg, he took second among 33 in Rome in 1960 with 380 kg. His clean-and-jerk reached 155 kg.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:01.281Z",
+    "verdict": "ok",
+    "reason": "Verified: 1959 SEAP Bangkok lightweight 369kg gold, finished second out of 33 in Rome with 155kg clean-and-jerk for 380kg total silver.",
+    "raw": "Caption check in progress — I'm pulling sources to verify the lifts.The early facts check out so far — now I'm digging into the exact competitor count.Official results show 33 competitors — I'll open the biography pages to lock in citable sources.OK | Verified: 1959 SEAP Bangkok lightweight 369kg gold, finished second out of 33 in Rome with 155kg clean-and-jerk for 380kg total silver.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    ]
+  },
+  {
+    "id": "s6",
+    "year": "1962",
+    "caption": "Moving to middleweight, he won silver at Rangoon in 1961, then gold at Perth in 1962 with 390 kg, and received the Pingat Jasa Gemilang.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:02.588Z",
+    "verdict": "ok",
+    "reason": "Rangoon 1961 middleweight silver, Perth 1962 middleweight gold 390kg, Pingat Jasa Gemilang 1962.",
+    "raw": "I'll verify each claim in this caption with a quick web search.OK | Rangoon 1961 middleweight silver, Perth 1962 middleweight gold 390kg, Pingat Jasa Gemilang 1962.",
+    "sources": []
+  },
+  {
+    "id": "s7",
+    "year": "2024",
+    "caption": "Coach in 1968 and National Stadium gym supervisor in 1982, he earned a 1984 federation gold award, remained Singapore's lone Olympic medallist until 2008, and died in 2024 at 91.",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-30T13:04:07.705Z",
+    "verdict": "ok",
+    "reason": "Coach 1968, gym supervisor 1982 at National Stadium, 1984 IWF Gold Award, lone medallist until 2008, died 3 Dec 2024 aged 91",
+    "raw": "I'll fact-check this caption against web sources.OK | Coach 1968, gym supervisor 1982 at National Stadium, 1984 IWF Gold Award, lone medallist until 2008, died 3 Dec 2024 aged 91",
+    "sources": []
+  }
+]

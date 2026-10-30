@@ -10,7 +10,8 @@
  * in one fixed layer and stay put while the colour fades underneath.
  */
 .desk {
-  --ph: min(calc(100svh - 72px), calc((100vw - 270px) / 1.44));
+  /* The page, in the story stage's design pixels (the stage scales to the window). */
+  --ph: 880px;
   --desk: color-mix(in oklab, var(--ink) 42%, #6a4e36);
   --desk-text: rgb(252 245 230 / 0.74);
   position: relative;
@@ -29,7 +30,7 @@
 }
 
 .book {
-  --pw: calc(var(--ph) * 0.72);
+  --pw: calc(var(--ph) * 0.75);
   --edge: #ebe3d0;
   position: relative;
   width: calc(var(--pw) * 2);
@@ -194,7 +195,10 @@
   inset: 0;
   z-index: 9;
   pointer-events: none;
-  background: linear-gradient(to right, rgb(20 12 4 / 0.5), rgb(20 12 4 / 0.18) 55%, rgb(255 248 230 / 0.12));
+  /* Turning, the leaf darkens toward the spine and a band of lamplight runs across its bow. */
+  background:
+    linear-gradient(to right, transparent calc(var(--glint, 50%) - 16%), rgb(255 246 222 / 0.2) var(--glint, 50%), transparent calc(var(--glint, 50%) + 22%)),
+    linear-gradient(to right, rgb(20 12 4 / 0.5), rgb(20 12 4 / 0.18) 55%, rgb(255 248 230 / 0.12));
 }
 .cast {
   position: absolute;

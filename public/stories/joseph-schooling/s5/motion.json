@@ -1,0 +1,140 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T13:17:36.588Z",
+  "usd": 0.081,
+  "rationale": "Keep the swimmer fully present in the poster frame. A steady push-in toward the raised arms, combined with a modest upward drift and slight growth on the near swimmer layer, expresses the surge out of the water and separates him from the splash, lane ropes and scoreboard without an entrance that removes the subject. The subtle light-sweep retains the Rio stadium glare, and the single in-out move r",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.63,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.22,
+        "panX": 0.005,
+        "panY": 0.02,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.85,
+        "driftX": 0,
+        "driftY": -0.016,
+        "scale": 1.05,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "Keep the swimmer fully present in the poster frame. A steady push-in toward the raised arms, combined with a modest upward drift and slight growth on the near swimmer layer, expresses the surge out of the water and separates him from the splash, lane ropes and scoreboard without an entrance that removes the subject. The subtle light-sweep retains the Rio stadium glare, and the single in-out move r"
+  },
+  "critic": {
+    "score": 7,
+    "ok": true,
+    "verdict": "approve",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do NOT publish.",
+      "filmIssues": [
+        "The poster frame at t=0 is unusable: the rise entrance hides the swimmer for the opening half of the clip, leaving only the splash, water, lane ropes and blank scoreboard. The central subject is absent at t=0 and only partially established at t=0.2.",
+        "Because the swimmer's entrance dominates the first half, the intended upward surge reads as a layer sliding into place rather than as a continuous surge through the water, and it will feel awkward when scrubbed backwards to the blank opening.",
+        "From t=0.4 onward the swimmer remains coherent, with no obvious tearing, doubled edges, halo, ghosting or awkward frame clipping. The push-in and parallax separation from the splash and scoreboard are clear.",
+        "The light-sweep is fitting and subtle for stadium glare, and the cut-paper print style is preserved. The underlying idea is expressive, but the missing-subject poster prevents publication."
+      ],
+      "fixes": [
+        "camera[1].t 3.500 → 1.000",
+        "cut-1.enterFor 1.100 → 0.500"
+      ],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.63,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.24,
+            "panX": 0.005,
+            "panY": 0.025,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.024,
+            "scale": 1.06,
+            "enter": "rise",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "The win is a surge upward out of the water: the swimmer rises and grows slightly on the nearest layer while the camera pushes in toward his raised arms, separating him from the splash, lane ropes and blank scoreboard painted behind. A single soft light-sweep evokes the stadium glare of the Rio final without adding any new element, and the steady in-out move reads clearly forwards and backwards on "
+      }
+    },
+    {
+      "score": 7,
+      "ok": true,
+      "verdict": "approve",
+      "filmIssues": [],
+      "fixes": [
+        "cut-1.enterFor 0.000 → 0.100"
+      ],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.63,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.22,
+            "panX": 0.005,
+            "panY": 0.02,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": -0.016,
+            "scale": 1.05,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Keep the swimmer fully present in the poster frame. A steady push-in toward the raised arms, combined with a modest upward drift and slight growth on the near swimmer layer, expresses the surge out of the water and separates him from the splash, lane ropes and scoreboard without an entrance that removes the subject. The subtle light-sweep retains the Rio stadium glare, and the single in-out move r"
+      }
+    }
+  ]
+}

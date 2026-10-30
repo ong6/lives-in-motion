@@ -20,6 +20,7 @@ Rules:
 - cut: 1-2 short noun phrases for the foreground objects an image segmenter should cut out ("toilet", "boy").
 - treatment: "archive" for early or documentary moments, "theatre" for scenes with a strong foreground subject, "line" for quiet, symbolic moments. Mix them.
 - Scenes run in chronological order.
+- Tell the life through its work, craft and achievements. Keep scenes away from politics, elections, war, occupation, the military, violence and crime: if a fact is about these, leave it out or mention it only in passing in a caption, never as a scene's picture.
 - born: the birth year from the facts. died: the death year, or "" if the facts don't record a death.
 - emblem: a frontispiece that stands for the whole life without showing the person: one object or setting (visual, same rules as above, no people at all) and the single noun an image segmenter should cut out of it (concept).`;
 

@@ -1,0 +1,102 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-30T13:33:40.526Z",
+  "usd": 0.57,
+  "scenes": {
+    "s1": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "Film: a low-focused forward push down the lane keeps the boy silhouette coherent with no visible ghost, tearing or awkward layer clipping; the poster frame reads cleanly and the light-sweep is subtle and fitting for the lantern-lit dusk, keeping the hand-coloured engraving feel. It is meaningfully better than a plain centred push-in, expressing arrival into the street, though restrained. Plate: no stray text, no unwanted faces (boy is a rear silhouette as directed), no anachronisms, and no mangled anatomy or objects visible.",
+      "rationale": "Strengthen the same arrival idea so it is clearly more than a centred push-in: a steadier, deeper forward move down the lane focused low on the boy, with a mid keyframe to keep scroll motion even in both directions. Keeping the boy at maximum depth lets his silhouette grow and separate slightly from the shophouses and rickshaws through parallax while he stays still and small, and the subtle lanter",
+      "ambient": "light-sweep",
+      "rounds": 2,
+      "usd": 0.0945,
+      "seconds": 47,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s2": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "The film is publishable. The slow push-in toward the lifter's grip, combined with the barbell's slight independent rise against the lifter's smaller drift, clearly suggests the start of a deadlift while remaining reversible for scroll. The lifter and barbell stay coherent across all six frames, with no visible tearing, doubled edges, halos, ghosting, or awkward frame clipping; the grip remains convincing throughout. The t=0 poster presents the full gym scene legibly, the dust is subtle and period-appropriate, and the flat offset-lithograph texture is preserved. The plate itself contains no stray text, no visible face contrary to the silhouette-from-behind direction, no anachronisms, and no obvious anatomical or object defects.",
+      "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete \u2014 the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll.",
+      "ambient": "dust",
+      "rounds": 1,
+      "usd": 0.0606,
+      "seconds": 30,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s3": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "verdict": "Publishable. The slow pull-back clearly expresses the setback: the poster opens closer on the slumped lifter, then he diminishes as the untouched barbell, platform and vast empty stadium are revealed. The lifter stays coherent against the bench with no visible tearing, doubling, halo or painted-over ghost, no layer clips the frame awkwardly, and the move should read smoothly in both scroll directions. The light-sweep is subtle and fitting for floodlights, and the 1950s flat-ink print character is preserved. The plate itself shows the lifter correctly from behind with no stray text, face, anachronism or mangled anatomy.",
+      "rationale": "A slow pull-back is the setback itself: opening close on the slumped lifter, the camera retreats to reveal the barbell untouched on its platform and the vast empty stadium around him, so he diminishes into the arena as the 1956 result sinks in. Set nearest in depth, he parallaxes most against the stands during the retreat, while his own tiny downward drift and slight shrink extend the slump withou",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.0544,
+      "seconds": 29,
+      "filmIssues": [],
+      "plateDefects": []
+    },
+    "s4": {
+      "status": "kept-fixed-move",
+      "score": 6,
+      "ok": false,
+      "verdict": "Clean and coherent but essentially a plain push-in; needs a more legible joint rise of lifter and barbell to earn publication.",
+      "rationale": "A slow, steady push toward the raised barbell as lifter and bar rise together in one held triumph, preserving their joined silhouette; the nearer barbell gains slightly more parallax against the blurred hall and crowd, with faint dust in the competition light keeping the 1950s lithograph still and restrained.",
+      "ambient": "dust",
+      "rounds": 3,
+      "usd": 0.1483,
+      "seconds": 190,
+      "filmIssues": [
+        "The move reads as a plain centred push-in across all six frames: the zoom to 1.24 is steady but the lifter and barbell barely rise relative to the hall, so it does not clearly express the held overhead triumph beyond what a simple push-in would do.",
+        "No tearing, doubled edges or ghosting is visible at the hands/bar junction, and the joined lifter-barbell silhouette stays coherent \u2014 but this is achieved by locking both layers to identical drift, which flattens the intended parallax between barbell and body.",
+        "Poster frame at t=0 is strong and complete, with full platform and barbell in frame; by t=1 the crop is tighter on the crowd edges and platform ends, acceptable but adding little dramatic payoff for that loss of context.",
+        "Ambient dust is subtle and era-appropriate for the 1950s lithograph, and print texture is preserved throughout."
+      ],
+      "plateDefects": []
+    },
+    "s5": {
+      "status": "directed",
+      "score": 7,
+      "ok": true,
+      "verdict": "A clear, publishable treatment. It improves modestly on a plain centred push-in through its upward focus, layered parallax and small additional rise of the barbell, though the motion remains intentionally restrained.",
+      "rationale": "A held Olympic lift: the camera rises and pushes gently toward the bar while the lifter firms and the barbell lifts a little further overhead, the crowd and pines falling behind in parallax. A warm light-sweep keeps the sunlit Rome lithograph feeling without adding weather.",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.0651,
+      "seconds": 28,
+      "filmIssues": [
+        "Motion is a restrained, coherent push-in toward the raised bar, with mild parallax between the lifter/barbell and the crowd and pines behind.",
+        "The barbell drifts slightly higher than the lifter, reinforcing the held lift, and remains connected to the hands through the final frame; no tearing, doubled edges, ghosting or haloing is visible.",
+        "The poster frame at t=0 is a strong opening picture: the full silhouette, barbell, platform and Rome stadium setting read immediately.",
+        "No layer clips the frame edge awkwardly, and the final zoom remains comfortable and reversible for scroll-driven playback.",
+        "The light-sweep is subtle and appropriate to the sunlit 1950s offset-lithograph treatment."
+      ],
+      "plateDefects": []
+    },
+    "s6": {
+      "status": "kept-fixed-move",
+      "score": 6,
+      "ok": false,
+      "verdict": "Coherent and publishable in technique, but the motion is only a generic push-in with weak foreground separation and does not yet clearly express the champion-on-podium moment beyond a plain zoom.",
+      "rationale": "Keep lifter and podium locked at identical depth, drift and scale so the feet never slide on the podium, but raise both to depth 0.9 and strengthen the push-in to 1.28 focused on the lifter's shoulders and medal case. The foreground pair now separates clearly in parallax from the tiled hall and barbell left in the background, turning a uniform zoom into a deliberate advance toward the champion on ",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1471,
+      "seconds": 75,
+      "filmIssues": [
+        "The move is coherent but is essentially a plain centred push-in: lifter and podium are locked together correctly, yet the 1.0 to 1.21 zoom produces only weak parallax separation from the tiled hall across the six frames.",
+        "The barbell sits on the same floor plane as the podium but remains in the background plate, so the foreground advance makes the podium/lifter group separate noticeably from a prop that should share its space, weakening the scene's spatial read.",
+        "No tearing, doubled edges or obvious ghost is visible around the lifter, and the feet stay planted on the podium because both layers share depth, drift and scale; the white keyline is present in the original plate.",
+        "The poster frame at t=0 is a good, complete opening picture and nothing clips awkwardly at t=1, but the light-sweep is barely legible in the stills and the motion does not specifically draw attention to the medal case or champion's stance.",
+        "The ease is smooth and reversible for scroll, with no mid-scene stall, and the flat offset-lithograph style is preserved."
+      ],
+      "plateDefects": []
+    }
+  }
+}

@@ -19,12 +19,20 @@
         {
           "label": "Tan Howe Liang, Singapore’s first Olympic medallist, dies at",
           "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Tan Howe Liang (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
+        },
+        {
+          "label": "7 facts about Tan Howe Liang (MustShareNews)",
+          "url": "https://mustsharenews.com/tan-howe-liang-facts/"
         }
       ],
       "plate": "/stories/tan-howe-liang/s1/plate.webp",
       "background": "/stories/tan-howe-liang/s1/background.webp",
-      "video": "/stories/tan-howe-liang/s1/scene.mp4?v=6eb2b1c4",
-      "poster": "/stories/tan-howe-liang/s1/scene.jpg?v=6eb2b1c4",
+      "video": "/stories/tan-howe-liang/s1/scene.mp4?v=ddd6ba6f",
+      "poster": "/stories/tan-howe-liang/s1/scene.jpg?v=ddd6ba6f",
       "layers": [
         {
           "id": "cut-1",
@@ -35,7 +43,14 @@
           "w": 8.81,
           "src": "/stories/tan-howe-liang/s1/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:47.558Z",
+        "note": "Born in Swatow 1933, emigrated at age four to settle in Chinatown, Singapore.",
+        "sources": []
+      }
     },
     {
       "id": "s2",
@@ -52,12 +67,28 @@
         {
           "label": "Tan Howe Liang",
           "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "7 facts about Tan Howe Liang (MustShareNews)",
+          "url": "https://mustsharenews.com/tan-howe-liang-facts/"
+        },
+        {
+          "label": "Tribute to Sports Pioneers (MCCY)",
+          "url": "https://www.mccy.gov.sg/about-us/news-and-resources/tribute-to-sports-pioneers/"
+        },
+        {
+          "label": "Tiger Tan (Olympedia)",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Tan Howe Liang (SG101)",
+          "url": "https://www.sg101.gov.sg/resources/archives/tan-howe-liang/"
         }
       ],
       "plate": "/stories/tan-howe-liang/s2/plate.webp",
       "background": "/stories/tan-howe-liang/s2/background.webp",
-      "video": "/stories/tan-howe-liang/s2/scene.mp4?v=3dfd7e2f",
-      "poster": "/stories/tan-howe-liang/s2/scene.jpg?v=3dfd7e2f",
+      "video": "/stories/tan-howe-liang/s2/scene.mp4?v=071e9a44",
+      "poster": "/stories/tan-howe-liang/s2/scene.jpg?v=071e9a44",
       "layers": [
         {
           "id": "cut-1",
@@ -77,7 +108,16 @@
           "w": 60,
           "src": "/stories/tan-howe-liang/s2/cut-2.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:48.927Z",
+        "note": "Joined Evergreen in 1952 with only a single set of barbells, winning National Junior and Senior lightweight titles after one year",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        ]
+      }
     },
     {
       "id": "s3",
@@ -93,12 +133,20 @@
         {
           "label": "Tan Howe Liang",
           "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Tiger Tan (Olympedia)",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Tan Howe Liang (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
         }
       ],
       "plate": "/stories/tan-howe-liang/s3/plate.webp",
       "background": "/stories/tan-howe-liang/s3/background.webp",
-      "video": "/stories/tan-howe-liang/s3/scene.mp4?v=c07ed987",
-      "poster": "/stories/tan-howe-liang/s3/scene.jpg?v=c07ed987",
+      "video": "/stories/tan-howe-liang/s3/scene.mp4?v=cc73370d",
+      "poster": "/stories/tan-howe-liang/s3/scene.jpg?v=cc73370d",
       "layers": [
         {
           "id": "cut-1",
@@ -109,14 +157,23 @@
           "w": 16.19,
           "src": "/stories/tan-howe-liang/s3/cut-1.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:03:55.790Z",
+        "note": "Placed fourth in Manila and ninth in Melbourne after losing consciousness as stated, Manila Games were in 1954.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        ]
+      }
     },
     {
       "id": "s4",
       "treatment": "theatre",
       "year": "1958",
-      "title": "Gold in Cardiff and Tokyo",
-      "caption": "In 1958 he won lightweight gold at Cardiff with a 358 kg total and 157 kg clean-and-jerk, then lightweight gold at Tokyo with a 375 kg total.",
+      "title": "Gold in Tokyo and Cardiff",
+      "caption": "In 1958 he won lightweight gold at the Asian Games in Tokyo with a 375 kg total, then at Cardiff’s Commonwealth Games with 358 kg and a 157 kg clean-and-jerk.",
       "visual": "A lifter silhouette seen from behind holding an iron barbell overhead on a 1950s competition platform, wood-paneled hall with blurred crowd behind",
       "cut": [
         "lifter",
@@ -126,6 +183,22 @@
         {
           "label": "Tan Howe Liang",
           "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore at the 1958 British Empire and Commonwealth Games (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Singapore_at_the_1958_British_Empire_and_Commonwealth_Games"
+        },
+        {
+          "label": "Weightlifting at the 1958 Asian Games (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Weightlifting_at_the_1958_Asian_Games"
+        },
+        {
+          "label": "Tiger Tan (Olympedia)",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Tan Howe Liang (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
         }
       ],
       "plate": "/stories/tan-howe-liang/s4/plate.webp",
@@ -151,14 +224,23 @@
           "w": 55.13,
           "src": "/stories/tan-howe-liang/s4/cut-2.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T13:04:09.409Z",
+        "note": "Order is reversed — Tokyo (24 May–1 June 1958) came before Cardiff (18–26 July 1958), not after. → Muse Spark found the order reversed: the Tokyo Asian Games (May–June 1958) came before Cardiff (July 1958). Reordered.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/1958_Asian_Games"
+        ]
+      }
     },
     {
       "id": "s5",
       "treatment": "theatre",
       "year": "1960",
       "title": "Silver in Rome",
-      "caption": "After winning lightweight gold at the 1959 Bangkok SEAP Games with 369 kg, he took second among 35 in Rome in 1960 with 380 kg. His clean-and-jerk reached 155 kg.",
+      "caption": "After winning lightweight gold at the 1959 Bangkok SEAP Games with 369 kg, he took second among 33 in Rome in 1960 with 380 kg. His clean-and-jerk reached 155 kg.",
       "visual": "A lifter silhouette seen from behind hoisting a loaded iron barbell on a sunlit outdoor stone stadium platform in 1960 Rome, pine trees and blurred crowd behind",
       "cut": [
         "lifter",
@@ -172,12 +254,28 @@
         {
           "label": "Tan Howe Liang wins Singapore’s first Olympic medal",
           "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        },
+        {
+          "label": "Tan Howe Liang (SG101)",
+          "url": "https://www.sg101.gov.sg/resources/archives/tan-howe-liang/"
+        },
+        {
+          "label": "Weightlifting at the 1960 Summer Olympics, men's 67.5 kg (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Weightlifting_at_the_1960_Summer_Olympics_%E2%80%93_Men%27s_67.5_kg"
+        },
+        {
+          "label": "Tan Howe Liang (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
+        },
+        {
+          "label": "Tiger Tan (Olympedia)",
+          "url": "https://www.olympedia.org/athletes/56344"
         }
       ],
       "plate": "/stories/tan-howe-liang/s5/plate.webp",
       "background": "/stories/tan-howe-liang/s5/background.webp",
-      "video": "/stories/tan-howe-liang/s5/scene.mp4?v=f8e1c825",
-      "poster": "/stories/tan-howe-liang/s5/scene.jpg?v=f8e1c825",
+      "video": "/stories/tan-howe-liang/s5/scene.mp4?v=7791f50a",
+      "poster": "/stories/tan-howe-liang/s5/scene.jpg?v=7791f50a",
       "layers": [
         {
           "id": "cut-1",
@@ -197,7 +295,16 @@
           "w": 50.38,
           "src": "/stories/tan-howe-liang/s5/cut-2.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:04:01.281Z",
+        "note": "Verified: 1959 SEAP Bangkok lightweight 369kg gold, finished second out of 33 in Rome with 155kg clean-and-jerk for 380kg total silver.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        ]
+      }
     },
     {
       "id": "s6",
@@ -214,6 +321,18 @@
         {
           "label": "Tan Howe Liang",
           "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore at the 1962 British Empire and Commonwealth Games (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Singapore_at_the_1962_British_Empire_and_Commonwealth_Games"
+        },
+        {
+          "label": "Tiger Tan (Olympedia)",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Tan Howe Liang (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
         }
       ],
       "plate": "/stories/tan-howe-liang/s6/plate.webp",
@@ -239,7 +358,14 @@
           "w": 30.56,
           "src": "/stories/tan-howe-liang/s6/cut-2.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:04:02.588Z",
+        "note": "Rangoon 1961 middleweight silver, Perth 1962 middleweight gold 390kg, Pingat Jasa Gemilang 1962.",
+        "sources": []
+      }
     },
     {
       "id": "s7",
@@ -260,11 +386,25 @@
         {
           "label": "Tan Howe Liang, Singapore’s first Olympic medallist, dies at",
           "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Singapore pays tribute to Olympic legend Tan Howe Liang, 91 (Olympic Council of Asia)",
+          "url": "https://oca.asia/news/5724-singapore-pays-tribute-to-olympic-legend-tan-howe-liang-91.html"
+        },
+        {
+          "label": "Tan Howe Liang (SG101)",
+          "url": "https://www.sg101.gov.sg/resources/archives/tan-howe-liang/"
+        },
+        {
+          "label": "Tan Howe Liang becomes the first Olympic medallist for S'pore (MustShareNews)",
+          "url": "https://mustsharenews.com/tan-howe-liang-olympic-medallist/"
         }
       ],
       "plate": "/stories/tan-howe-liang/s7/plate.webp",
       "background": "/stories/tan-howe-liang/s7/background.webp",
       "line": "/stories/tan-howe-liang/s7/line.json",
+      "video": "/stories/tan-howe-liang/s7/scene.mp4?v=b8306f29",
+      "poster": "/stories/tan-howe-liang/s7/scene.jpg?v=b8306f29",
       "layers": [
         {
           "id": "cut-1",
@@ -284,7 +424,14 @@
           "w": 13.81,
           "src": "/stories/tan-howe-liang/s7/cut-2.webp"
         }
-      ]
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-30T13:04:07.705Z",
+        "note": "Coach 1968, gym supervisor 1982 at National Stadium, 1984 IWF Gold Award, lone medallist until 2008, died 3 Dec 2024 aged 91",
+        "sources": []
+      }
     }
   ]
 }

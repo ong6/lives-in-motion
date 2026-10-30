@@ -121,7 +121,10 @@ export interface Emblem {
   concept: string;
 }
 
-export async function storyboard(slug: string, on: OnEvent = print): Promise<StoryT> {
+/** `listed: false` writes the life as a draft, off the shelf (lives made on /create). A rerun keeps the life's current setting. */
+export async function storyboard(slug: string, on: OnEvent = print, opts: { listed?: boolean } = {}): Promise<StoryT> {
+  const before = existsSync(storyFile(slug)) ? await loadStory(slug) : undefined;
+  const listed = before ? before.listed : opts.listed;
   const r = JSON.parse(await readFile(join(storyDir(slug), "research.json"), "utf8"));
   const facts: Fact[] = r.facts;
   on({ stage: "storyboard", kind: "info", model: MODELS.spark, message: `writing 7 scenes from ${facts.length} facts` });
@@ -153,6 +156,7 @@ export async function storyboard(slug: string, on: OnEvent = print): Promise<Sto
     born: year4(board.born) ?? String(Math.min(...years)),
     died: year4(board.died) ?? null,
     tagline: board.tagline,
+    ...(listed === false ? { listed: false } : {}),
     scenes,
   });
   if (board.emblem) await writeFile(join(storyDir(slug), "emblem.json"), JSON.stringify(board.emblem satisfies Emblem, null, 2));
@@ -161,17 +165,38 @@ export async function storyboard(slug: string, on: OnEvent = print): Promise<Sto
   return story;
 }
 
-/** Muse Spark re-checks every caption against the web; returns the scenes it disputes. */
-export async function verify(slug: string, on: OnEvent = print) {
+/** "OK | reason" / "WRONG | reason" → the stored verdict; anything else counts as disputed. */
+export function parseVerdict(text: string): { verdict: "ok" | "disputed"; note: string } {
+  // Muse Spark sometimes narrates its search before the verdict, on the same line: take the last "OK |" / "WRONG |".
+  const all = [...text.matchAll(/(?:^|[^A-Za-z])(OK|WRONG)\**\s*[|:]\s*([^\n]*)/gi)];
+  const m = all.at(-1);
+  return { verdict: m?.[1].toUpperCase() === "OK" ? "ok" : "disputed", note: (m ? m[2] : text).trim().slice(0, 400) };
+}
+
+/**
+ * Muse Spark re-checks every caption against the web (three scenes at a time); the report goes to
+ * stories/<slug>/verify.json and each scene's `checked`. Returns the scenes it disputes.
+ */
+export async function verify(slug: string, on: OnEvent = print, { only, parallel = 3 }: StageOptions = {}) {
   const story = await loadStory(slug);
-  const report: { id: string; year: string; verdict: string; sources: string[] }[] = [];
-  for (const scene of story.scenes) {
+  const todo = story.scenes.filter((s) => !only || only.includes(s.id));
+  const report: { id: string; year: string; caption: string; model: string; at: string; verdict: string; reason: string; raw: string; sources: string[] }[] = [];
+  await pool(todo, parallel, async (scene) => {
     const r = await sparkSearch(verifyPrompt(story.name, scene));
-    report.push({ id: scene.id, year: scene.year, verdict: r.text.trim().split("\n")[0], sources: [...new Set(r.citations.map((c) => c.url))] });
-    on({ stage: "verify", scene: scene.id, kind: "info", model: MODELS.spark, message: report.at(-1)!.verdict });
-  }
-  await writeFile(join(storyDir(slug), "verify.json"), JSON.stringify(report, null, 2));
-  return report.filter((r) => !r.verdict.startsWith("OK"));
+    const raw = r.text.trim();
+    const v = parseVerdict(raw);
+    const row = { id: scene.id, year: scene.year, caption: scene.caption, model: MODELS.spark, at: new Date().toISOString(), verdict: v.verdict, reason: v.note, raw, sources: [...new Set(r.citations.map((c) => c.url))] };
+    report.push(row);
+    await edit(slug, (s) => void (sceneOf(s, scene.id).checked = { model: row.model, verdict: v.verdict, at: row.at, note: v.note, sources: row.sources }));
+    on({ stage: "verify", scene: scene.id, kind: "info", model: MODELS.spark, message: `${v.verdict.toUpperCase()} | ${v.note}` });
+  });
+  report.sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  const file = join(storyDir(slug), "verify.json");
+  // A partial rerun (--scenes) keeps the other scenes' rows.
+  const old: typeof report = only && existsSync(file) ? JSON.parse(await readFile(file, "utf8")).filter((r: { id: string }) => !only.includes(r.id)) : [];
+  const all = [...old, ...report].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  await writeFile(file, JSON.stringify(all, null, 2) + "\n");
+  return report.filter((r) => r.verdict !== "ok");
 }
 
 const sceneOf = (story: StoryT, id: string) => {

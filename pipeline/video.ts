@@ -4,8 +4,13 @@
  * Renders each illustrated scene as a short 2.5D film the site scrubs with scroll: a virtual
  * camera pushes in and trucks sideways, every layer moves by its own depth (the clean background
  * far, the SAM 3.1 cut-outs near), the subject settles into place, and a soft light passes over
- * a vignette. Scenes without cut-outs get a slow push-in on the plate alone. Everything is local
+ * a vignette. Scenes without cut-outs get a slow push-in on the plate alone. Line-treatment scenes
+ * film their line drawing drawing itself while the plate develops underneath it. Everything is local
  * (node + sharp to decode, a small compositor here, ffmpeg to encode): no paid calls.
+ *
+ * A scene with a motion.json (written by `pnpm wonder`, Muse Wonder's motion plan) is filmed from
+ * that plan instead: its camera path, a move per SAM layer and one ambient effect (see
+ * "Directed films" below).
  *
  * Output per scene: public/stories/<slug>/<sN>/scene.mp4 (H.264, every frame a keyframe so any
  * scroll position seeks instantly) and scene.jpg (first frame, the poster). The scene's `video`
@@ -19,6 +24,7 @@ import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
 import { Story, type Scene } from "../lib/schema";
+import { eraFor } from "../lib/eras";
 import { ROOT } from "./root";
 
 const FFMPEG = process.env.FFMPEG ?? (existsSync("/opt/homebrew/bin/ffmpeg") ? "/opt/homebrew/bin/ffmpeg" : "ffmpeg");
@@ -61,6 +67,8 @@ export interface Camera {
   x: number;
   /** Subject settle, 1 at the start falling to 0. */
   settle: number;
+  /** Vertical travel (screen fraction at distance 1); only directed films use it. */
+  y?: number;
 }
 
 /**
@@ -97,9 +105,10 @@ export function project(r: Rect, depth: number, cam: Camera, focal: { x: number;
   const Z = distance(depth);
   const s = Z / (Z - cam.z);
   const shift = -cam.x / Z;
+  const shiftY = -(cam.y ?? 0) / Z;
   const map = (v: number, f: number, sh: number) => 0.5 + lens * (f + (v - f + sh) * s - 0.5);
   const left = map(r.left, focal.x, shift);
-  const top = map(r.top, focal.y, 0);
+  const top = map(r.top, focal.y, shiftY);
   return { left, top, width: r.width * s * lens, height: r.height * s * lens };
 }
 
@@ -107,10 +116,15 @@ export const covers = (r: Rect, eps = 1e-9) => r.left <= eps && r.top <= eps && 
 
 /** The smallest lens zoom (≥ 1) that keeps a full-frame layer at `depth` covering the frame for the whole clip. */
 export function lensFor(depth: number, dir: 1 | -1, focal: { x: number; y: number }, f = FILM, steps = 60): number {
+  return lensForPath(depth, Array.from({ length: steps + 1 }, (_, i) => cameraAt(i / steps, dir, f)), focal);
+}
+
+/** The same for any camera path, given as samples. */
+export function lensForPath(depth: number, cams: Camera[], focal: { x: number; y: number }): number {
   const full = { left: 0, top: 0, width: 1, height: 1 };
   let need = 1;
-  for (let i = 0; i <= steps; i++) {
-    const r = project(full, depth, cameraAt(i / steps, dir, f), focal, 1);
+  for (const cam of cams) {
+    const r = project(full, depth, cam, focal, 1);
     // Zooming by L about the centre maps an edge e to 0.5 + L (e - 0.5); solve for each edge.
     const right = r.left + r.width, bottom = r.top + r.height;
     if (r.left > 0) need = Math.max(need, 0.5 / (0.5 - r.left));
@@ -249,7 +263,7 @@ interface Img {
   px: Float32Array;
 }
 
-async function load(file: string, maxSide?: number, blur?: number): Promise<Img> {
+async function load(file: string | Buffer, maxSide?: number, blur?: number): Promise<Img> {
   const sharp = (await import("sharp")).default;
   let img = sharp(file).ensureAlpha();
   if (maxSide) img = img.resize(maxSide, maxSide, { fit: "inside", kernel: "lanczos3" });
@@ -329,15 +343,46 @@ function finish(frame: Float32Array, N: number, vig: Float32Array, t: number, ou
 
 const fileOf = (url: string) => join(ROOT, "public", url.split("?")[0]);
 
-/** The subject as its own premultiplied image: plate colours with the difference matte as alpha. */
-async function separate(plateFile: string, cleanFile: string, side: number) {
+/** Matte resolution: the plate/background difference is measured on a W×W grid. */
+const MATTE = 700;
+
+/** Soft matte of everything the clean background removed, on the MATTE grid. */
+async function diffMatte(plateFile: string, cleanFile: string) {
   const sharp = (await import("sharp")).default;
-  const W = 700;
+  const W = MATTE;
   const rgb = (file: string) => sharp(file).removeAlpha().resize(W, W, { fit: "fill" }).blur(1.5).raw().toBuffer();
   const [a, b] = await Promise.all([rgb(plateFile), rgb(cleanFile)]);
   const diff = new Float32Array(W * W);
   for (let i = 0; i < diff.length; i++) diff[i] = Math.hypot(a[i * 3] - b[i * 3], a[i * 3 + 1] - b[i * 3 + 1], a[i * 3 + 2] - b[i * 3 + 2]);
-  const m = matteFromDiff(diff, W, W);
+  return matteFromDiff(diff, W, W);
+}
+
+/** Plate colours with a MATTE-grid alpha, as a side×side premultiplied image. */
+async function cutOut(plateFile: string, m: Float32Array, side: number): Promise<Img> {
+  const sharp = (await import("sharp")).default;
+  const W = MATTE;
+  const alpha = await sharp(Buffer.from(m.map((v) => Math.round(Math.min(1, v) * 255))), { raw: { width: W, height: W, channels: 1 } })
+    .resize(side, side, { kernel: "cubic" })
+    .extractChannel(0)
+    .raw()
+    .toBuffer();
+  const plate = await sharp(plateFile).removeAlpha().resize(side, side, { fit: "fill", kernel: "lanczos3" }).raw().toBuffer();
+  const px = new Float32Array(side * side * 4);
+  for (let i = 0; i < side * side; i++) {
+    const al = alpha[i] / 255;
+    px[i * 4] = (plate[i * 3] / 255) * al;
+    px[i * 4 + 1] = (plate[i * 3 + 1] / 255) * al;
+    px[i * 4 + 2] = (plate[i * 3 + 2] / 255) * al;
+    px[i * 4 + 3] = al;
+  }
+  return { w: side, h: side, px };
+}
+
+/** The subject as its own premultiplied image: plate colours with the difference matte as alpha. */
+async function separate(plateFile: string, cleanFile: string, side: number) {
+  const sharp = (await import("sharp")).default;
+  const W = MATTE;
+  const m = await diffMatte(plateFile, cleanFile);
   const box = bboxOf(m, W, W);
   if (!box) return null;
   const alpha = await sharp(Buffer.from(m.map((v) => Math.round(Math.min(1, v) * 255))), { raw: { width: W, height: W, channels: 1 } })
@@ -374,14 +419,7 @@ export async function renderScene(slug: string, scene: Scene, plan: Plan, f = FI
   const out = Buffer.alloc(N * N * 3);
 
   const mp4 = join(dir, "scene.mp4");
-  const ff = spawn(FFMPEG, [
-    "-y", "-loglevel", "error",
-    "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", `${N}x${N}`, "-r", String(f.fps), "-i", "-",
-    "-an", "-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-crf", String(f.crf),
-    "-g", "1", "-keyint_min", "1", "-sc_threshold", "0", "-bf", "0",
-    "-pix_fmt", "yuv420p", "-movflags", "+faststart", mp4,
-  ], { stdio: ["pipe", "inherit", "inherit"] });
-  const done = new Promise<void>((res, rej) => ff.on("close", (code) => (code ? rej(new Error(`ffmpeg exited ${code}`)) : res())));
+  const enc = encoder(mp4, N, f);
 
   const sharp = (await import("sharp")).default;
   const full = { left: 0, top: 0, width: 1, height: 1 };
@@ -399,17 +437,639 @@ export async function renderScene(slug: string, scene: Scene, plan: Plan, f = FI
     }
     finish(frame, N, vig, t, out, f);
     if (i === 0) await sharp(out, { raw: { width: N, height: N, channels: 3 } }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(dir, "scene.jpg"));
-    if (!ff.stdin.write(out)) await new Promise((r) => ff.stdin.once("drain", r));
+    await enc.write(out);
   }
-  ff.stdin.end();
-  await done;
-  const bytes = await readFile(mp4);
-  return { layered: Boolean(subject), bytes: bytes.length, hash: createHash("sha1").update(bytes).digest("hex").slice(0, 8) };
+  return { layered: Boolean(subject), ...(await enc.close()) };
+}
+
+/** An ffmpeg H.264 encoder fed raw RGB frames: every frame a keyframe, so any scroll position seeks instantly. */
+function encoder(mp4: string, N: number, f = FILM) {
+  const ff = spawn(FFMPEG, [
+    "-y", "-loglevel", "error",
+    "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", `${N}x${N}`, "-r", String(f.fps), "-i", "-",
+    "-an", "-c:v", "libx264", "-preset", "slow", "-tune", "animation", "-crf", String(f.crf),
+    "-g", "1", "-keyint_min", "1", "-sc_threshold", "0", "-bf", "0",
+    "-pix_fmt", "yuv420p", "-movflags", "+faststart", mp4,
+  ], { stdio: ["pipe", "inherit", "inherit"] });
+  const done = new Promise<void>((res, rej) => ff.on("close", (code) => (code ? rej(new Error(`ffmpeg exited ${code}`)) : res())));
+  return {
+    async write(frame: Buffer) {
+      if (!ff.stdin.write(frame)) await new Promise((r) => ff.stdin.once("drain", r));
+    },
+    async close() {
+      ff.stdin.end();
+      await done;
+      const bytes = await readFile(mp4);
+      return { bytes: bytes.length, hash: createHash("sha1").update(bytes).digest("hex").slice(0, 8) };
+    },
+  };
+}
+
+// ---------- Directed films ----------
+// Muse Wonder (pipeline/wonder.ts) looks at a scene's plate and its SAM 3.1 layers and writes a
+// motion plan: a keyframed camera, a move per layer and one ambient effect. The plan is stored at
+// public/stories/<slug>/<sN>/motion.json and, when present, the film is rendered from it instead
+// of the fixed move above. Everything a model writes passes through sanitizePlan (types, ranges,
+// known layer ids) and fitPlan (no layer pushed off-frame, background always covers the frame).
+
+export const AMBIENTS = ["none", "light-sweep", "dust", "halftone-shimmer", "rain", "haze"] as const;
+export const EASES = ["linear", "in-out", "in", "out"] as const;
+export const ENTRANCES = ["none", "fade", "rise", "settle", "scale-in"] as const;
+export type Ambient = (typeof AMBIENTS)[number];
+export type Ease = (typeof EASES)[number];
+export type Entrance = (typeof ENTRANCES)[number];
+
+/** The ranges the renderer accepts; anything outside is clamped. */
+export const LIMITS = {
+  keys: { min: 2, max: 6 },
+  /** Camera magnification of the nearest layer (distance 1); far layers grow less. */
+  zoom: { min: 1, max: 1.35 },
+  /** Camera travel each way, as a fraction of the frame at distance 1. */
+  pan: 0.08,
+  /** Point the camera zooms about. */
+  focus: { min: 0.2, max: 0.8 },
+  depth: { min: 0.3, max: 1 },
+  /** A layer's own travel over the clip, frame fractions. */
+  drift: 0.04,
+  /** A layer's scale at the end of the clip, about its foot. */
+  scale: { min: 0.92, max: 1.1 },
+  enterAt: { min: 0, max: 0.6 },
+  enterFor: { min: 0.1, max: 0.5 },
+  /** Every entrance has finished by this clip time. */
+  enterEnd: 0.8,
+  /** Keyframes closer than this are merged. */
+  keyGap: 0.05,
+  /** A layer may lose at most this much more of its area off-frame than it shows at rest. */
+  offFrame: 0.1,
+  /** Most overscan the background may need; past it the plate softens visibly. */
+  lens: 1.15,
+};
+
+export interface CameraKey {
+  t: number;
+  zoom: number;
+  panX: number;
+  panY: number;
+  /** Easing of the segment arriving at this key (ignored on the first key). */
+  ease: Ease;
+}
+
+export interface LayerMove {
+  id: string;
+  depth: number;
+  driftX: number;
+  driftY: number;
+  scale: number;
+  enter: Entrance;
+  enterAt: number;
+  enterFor: number;
+}
+
+export interface MotionPlan {
+  focusX: number;
+  focusY: number;
+  camera: CameraKey[];
+  layers: LayerMove[];
+  ambient: Ambient;
+  rationale: string;
+}
+
+const num = (v: unknown, lo: number, hi: number, dflt: number) => {
+  const n = typeof v === "number" && Number.isFinite(v) ? v : dflt;
+  return Math.min(hi, Math.max(lo, n));
+};
+const pick = <T extends string>(v: unknown, all: readonly T[], dflt: T): T => (all.includes(v as T) ? (v as T) : dflt);
+
+/** The fixed-move equivalent, used for anything a plan leaves out. */
+export const defaultCamera = (): CameraKey[] => [
+  { t: 0, zoom: 1, panX: -0.04, panY: 0, ease: "linear" },
+  { t: 1, zoom: 1.2, panX: 0.04, panY: 0, ease: "in-out" },
+];
+
+/**
+ * Coerce whatever a model returned into a plan the renderer can draw: numbers clamped to LIMITS,
+ * unknown enums replaced, keyframes sorted with the first at t=0 and the last at t=1, layer moves
+ * only for layers that exist (each exactly once, missing ones filled with a still default).
+ * Returns the plan and a list of what was changed.
+ */
+export function sanitizePlan(raw: unknown, layers: { id: string; depth: number }[]): { plan: MotionPlan; fixes: string[] } {
+  const fixes: string[] = [];
+  const r = (raw && typeof raw === "object" ? raw : {}) as Record<string, any>;
+  const L = LIMITS;
+  const clampNote = (name: string, v: unknown, out: number) => {
+    if (typeof v !== "number" || Math.abs(v - out) > 1e-9) fixes.push(`${name} ${typeof v === "number" ? v.toFixed(3) : String(v)} → ${out.toFixed(3)}`);
+    return out;
+  };
+
+  const rawKeys = (Array.isArray(r.camera) ? r.camera : []).filter((k: unknown) => k && typeof k === "object");
+  // Models sometimes give key times in seconds (0, 1.75, 3.5) despite the schema: rescale those to 0..1.
+  const tMax = Math.max(0, ...rawKeys.map((k: any) => (typeof k.t === "number" && Number.isFinite(k.t) ? k.t : 0)));
+  const tScale = tMax > 1 && tMax <= 60 ? 1 / tMax : 1;
+  if (tScale !== 1) fixes.push(`camera times rescaled from 0..${tMax} to 0..1`);
+  let keys: CameraKey[] = rawKeys
+    .map((k: any) => (typeof k.t === "number" ? { ...k, t: k.t * tScale } : k))
+    .map((k: any, i: number) => ({
+      t: clampNote(`camera[${i}].t`, k.t, num(k.t, 0, 1, 0)),
+      zoom: clampNote(`camera[${i}].zoom`, k.zoom, num(k.zoom, L.zoom.min, L.zoom.max, 1)),
+      panX: clampNote(`camera[${i}].panX`, k.panX, num(k.panX, -L.pan, L.pan, 0)),
+      panY: clampNote(`camera[${i}].panY`, k.panY, num(k.panY, -L.pan, L.pan, 0)),
+      ease: pick(k.ease, EASES, "in-out"),
+    }))
+    .sort((a: CameraKey, b: CameraKey) => a.t - b.t);
+  const merged: CameraKey[] = [];
+  for (const k of keys) {
+    const last = merged[merged.length - 1];
+    if (last && k.t - last.t < L.keyGap) {
+      fixes.push(`camera key at t=${k.t.toFixed(2)} merged`);
+      continue;
+    }
+    merged.push(k);
+  }
+  keys = merged;
+  if (keys.length > L.keys.max) {
+    fixes.push(`camera keys ${keys.length} → ${L.keys.max}`);
+    keys = [...keys.slice(0, L.keys.max - 1), keys[keys.length - 1]];
+  }
+  if (keys.length < L.keys.min) {
+    fixes.push("camera path missing: default move");
+    keys = defaultCamera();
+  }
+  if (keys[0].t !== 0) (fixes.push("first camera key moved to t=0"), (keys[0] = { ...keys[0], t: 0 }));
+  if (keys[keys.length - 1].t !== 1) (fixes.push("last camera key moved to t=1"), (keys[keys.length - 1] = { ...keys[keys.length - 1], t: 1 }));
+
+  const given = new Map<string, any>();
+  for (const m of Array.isArray(r.layers) ? r.layers : []) {
+    if (!m || typeof m !== "object") continue;
+    if (!layers.some((l) => l.id === m.id)) fixes.push(`unknown layer ${String(m.id)} dropped`);
+    else if (given.has(m.id)) fixes.push(`duplicate layer ${m.id} dropped`);
+    else given.set(m.id, m);
+  }
+  const moves: LayerMove[] = layers.map((l) => {
+    const m = given.get(l.id);
+    if (!m) {
+      fixes.push(`layer ${l.id} missing: held still`);
+      return { id: l.id, depth: num(l.depth, L.depth.min, L.depth.max, 0.6), driftX: 0, driftY: 0, scale: 1, enter: "none", enterAt: 0, enterFor: 0.3 };
+    }
+    const enter = pick(m.enter, ENTRANCES, "none");
+    // Entrance timing only matters when there is an entrance; clamp it quietly otherwise.
+    const note = enter === "none" ? (_: string, __: unknown, out: number) => out : clampNote;
+    const enterAt = note(`${l.id}.enterAt`, m.enterAt, num(m.enterAt, L.enterAt.min, L.enterAt.max, 0));
+    let enterFor = note(`${l.id}.enterFor`, m.enterFor, num(m.enterFor, L.enterFor.min, L.enterFor.max, 0.3));
+    if (enterAt + enterFor > L.enterEnd) enterFor = note(`${l.id}.enterFor`, enterFor, Math.max(0.05, L.enterEnd - enterAt));
+    return {
+      id: l.id,
+      depth: clampNote(`${l.id}.depth`, m.depth, num(m.depth, L.depth.min, L.depth.max, l.depth)),
+      driftX: clampNote(`${l.id}.driftX`, m.driftX, num(m.driftX, -L.drift, L.drift, 0)),
+      driftY: clampNote(`${l.id}.driftY`, m.driftY, num(m.driftY, -L.drift, L.drift, 0)),
+      scale: clampNote(`${l.id}.scale`, m.scale, num(m.scale, L.scale.min, L.scale.max, 1)),
+      enter,
+      enterAt,
+      enterFor,
+    };
+  });
+
+  return {
+    plan: {
+      focusX: clampNote("focusX", r.focusX, num(r.focusX, L.focus.min, L.focus.max, 0.5)),
+      focusY: clampNote("focusY", r.focusY, num(r.focusY, L.focus.min, L.focus.max, 0.5)),
+      camera: keys,
+      layers: moves,
+      ambient: pick(r.ambient, AMBIENTS, "light-sweep"),
+      rationale: typeof r.rationale === "string" ? r.rationale.slice(0, 400) : "",
+    },
+    fixes,
+  };
+}
+
+const EASE_FN: Record<Ease, (t: number) => number> = {
+  linear: clamp01,
+  "in-out": easeInOutSine,
+  in: (t) => clamp01(t) ** 2,
+  out: easeOutCubic,
+};
+
+/** The camera of a plan at clip time t (0..1): keyframes interpolated with each segment's easing. */
+export function planCamera(plan: MotionPlan, t: number): Camera {
+  const keys = plan.camera;
+  let k = 1;
+  while (k < keys.length - 1 && keys[k].t < t) k++;
+  const a = keys[k - 1], b = keys[k];
+  const e = EASE_FN[b.ease]((t - a.t) / (b.t - a.t || 1));
+  const zoom = lerp(a.zoom, b.zoom, e);
+  return { z: 1 - 1 / zoom, x: lerp(a.panX, b.panX, e), y: lerp(a.panY, b.panY, e), settle: 0 };
+}
+
+/** A layer's own move at clip time t: opacity, offset and scale about its foot. */
+export function layerAt(m: LayerMove, t: number, f = FILM) {
+  const e = easeInOutSine(t);
+  const u = easeOutCubic((t - m.enterAt) / m.enterFor);
+  let scale = lerp(1, m.scale, e), dx = m.driftX * e, dy = m.driftY * e, opacity = 1;
+  if (m.enter === "fade") opacity = u;
+  else if (m.enter === "rise") (opacity = u), (dy += 0.03 * (1 - u));
+  else if (m.enter === "settle") (dy += f.settleDrop * (1 - u)), (scale *= 1 - f.settleShrink * (1 - u));
+  else if (m.enter === "scale-in") (opacity = u), (scale *= lerp(0.9, 1, u));
+  return { opacity, dx, dy, scale };
+}
+
+/** Apply a layer move to a projected rectangle, scaling about `anchor`. */
+export const moved = (r: Rect, anchor: { x: number; y: number }, la: { dx: number; dy: number; scale: number }): Rect => ({
+  left: anchor.x + (r.left - anchor.x) * la.scale + la.dx,
+  top: anchor.y + (r.top - anchor.y) * la.scale + la.dy,
+  width: r.width * la.scale,
+  height: r.height * la.scale,
+});
+
+/** Share (0..1) of a rectangle's area inside the frame. */
+export function visibleShare(r: Rect): number {
+  const w = Math.max(0, Math.min(1, r.left + r.width) - Math.max(0, r.left));
+  const h = Math.max(0, Math.min(1, r.top + r.height) - Math.max(0, r.top));
+  return r.width > 0 && r.height > 0 ? (w * h) / (r.width * r.height) : 0;
+}
+
+export const focusOf = (plan: MotionPlan) => ({ x: plan.focusX, y: plan.focusY });
+const pathOf = (plan: MotionPlan, steps = 40) => Array.from({ length: steps + 1 }, (_, i) => planCamera(plan, i / steps));
+
+/** Where a layer's box lands on screen at clip time t. */
+export function layerBox(plan: MotionPlan, m: LayerMove, box: Rect, t: number, lens: number, f = FILM): Rect {
+  const p = project(box, m.depth, planCamera(plan, t), focusOf(plan), lens);
+  return moved(p, { x: p.left + p.width / 2, y: p.top + p.height }, layerAt(m, t, f));
+}
+
+/** What breaks a plan: layers pushed off-frame, or a background needing too much overscan. */
+export function planProblems(plan: MotionPlan, boxes: Record<string, Rect>, backDepth = 0, steps = 40): string[] {
+  const out: string[] = [];
+  const lens = lensForPath(backDepth, pathOf(plan, steps), focusOf(plan));
+  if (lens > LIMITS.lens) out.push(`background needs ${lens.toFixed(3)} overscan`);
+  for (const m of plan.layers) {
+    const box = boxes[m.id];
+    if (!box) continue;
+    const rest = visibleShare(box);
+    for (let i = 0; i <= steps; i++) {
+      const v = visibleShare(layerBox(plan, m, box, i / steps, lens));
+      if (v < rest - LIMITS.offFrame) {
+        out.push(`${m.id} ${Math.round((1 - v) * 100)}% off-frame at t=${(i / steps).toFixed(2)}`);
+        break;
+      }
+    }
+  }
+  return out;
+}
+
+/** Scale every excursion of a plan (zoom, pan, drift, end scale) toward rest by k. */
+export function damp(plan: MotionPlan, k: number): MotionPlan {
+  return {
+    ...plan,
+    camera: plan.camera.map((c) => ({ ...c, zoom: 1 + (c.zoom - 1) * k, panX: c.panX * k, panY: c.panY * k })),
+    layers: plan.layers.map((m) => ({ ...m, driftX: m.driftX * k, driftY: m.driftY * k, scale: 1 + (m.scale - 1) * k })),
+  };
+}
+
+/**
+ * Make a sanitized plan safe to film: while any layer would leave the frame (or the background
+ * would need too much overscan), damp the whole move; as a last resort hold everything still and
+ * turn rises into fades, which never leave the frame.
+ */
+export function fitPlan(plan: MotionPlan, boxes: Record<string, Rect>, backDepth = 0): { plan: MotionPlan; fixes: string[] } {
+  let p = plan;
+  for (let i = 0; i < 8; i++) {
+    const problems = planProblems(p, boxes, backDepth);
+    if (!problems.length) return { plan: p, fixes: i ? [`move damped to ${Math.round(0.75 ** i * 100)}% (${planProblems(plan, boxes, backDepth).join("; ")})`] : [] };
+    p = damp(plan, 0.75 ** (i + 1));
+  }
+  const still = damp(plan, 0);
+  const safe = { ...still, focusX: 0.5, focusY: 0.5, layers: still.layers.map((m) => ({ ...m, enter: (m.enter === "rise" ? "fade" : m.enter) as Entrance })) };
+  return { plan: safe, fixes: [`move could not be fitted (${planProblems(plan, boxes, backDepth).join("; ")}): held still`] };
+}
+
+/** A small deterministic PRNG, so a plan always renders the same film. */
+export function rng(seed: number) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/**
+ * Soft dot over the RGB frame. The colour reads against what is under it: a light speck on dark
+ * paper, an ink speck on light paper (most plates are printed on pale stock).
+ */
+function mote(frame: Float32Array, N: number, cx: number, cy: number, radius: number, light: number[], dark: number[], alpha: number) {
+  const ix = Math.min(N - 1, Math.max(0, Math.round(cx))), iy = Math.min(N - 1, Math.max(0, Math.round(cy)));
+  const o0 = (iy * N + ix) * 3;
+  const rgb = 0.3 * frame[o0] + 0.59 * frame[o0 + 1] + 0.11 * frame[o0 + 2] > 0.6 ? dark : light;
+  const r = Math.ceil(radius * 2);
+  const x0 = Math.max(0, Math.floor(cx - r)), x1 = Math.min(N - 1, Math.ceil(cx + r));
+  const y0 = Math.max(0, Math.floor(cy - r)), y1 = Math.min(N - 1, Math.ceil(cy + r));
+  const inv = 1 / (2 * radius * radius);
+  for (let y = y0; y <= y1; y++)
+    for (let x = x0; x <= x1; x++) {
+      const g = alpha * Math.exp(-((x - cx) ** 2 + (y - cy) ** 2) * inv);
+      if (g < 0.003) continue;
+      const o = (y * N + x) * 3;
+      for (let c = 0; c < 3; c++) frame[o + c] = frame[o + c] * (1 - g) + rgb[c] * g;
+    }
+}
+
+interface Particle {
+  x: number;
+  y: number;
+  r: number;
+  a: number;
+  ph: number;
+}
+
+/** Draw the plan's ambient particles (dust, rain) onto the frame before it is finished. */
+function particles(frame: Float32Array, N: number, ambient: Ambient, set: Particle[], t: number) {
+  if (ambient === "dust")
+    for (const p of set) {
+      const x = ((p.x + 0.015 * Math.sin(2 * Math.PI * (t + p.ph))) % 1) * N;
+      const y = (((p.y - 0.1 * t) % 1) + 1) % 1;
+      const twinkle = 0.6 + 0.4 * Math.sin(2 * Math.PI * (2 * t + p.ph));
+      mote(frame, N, x, y * N, p.r * 1.4, [1, 0.96, 0.86], [0.32, 0.27, 0.22], p.a * twinkle * 1.6);
+    }
+  else if (ambient === "rain")
+    for (const p of set) {
+      // Streaks fall the full frame height about 1.5 times over the clip, slanting slightly.
+      const y0 = (((p.y + 1.5 * t) % 1.2) - 0.1) * N, x0 = (p.x + 0.12 * t) * N;
+      const len = 0.035 * N * (0.6 + p.r / 3);
+      for (let s = 0; s < len; s += 1.2) mote(frame, N, (x0 + s * 0.2) % N, y0 + s, 0.8, [0.86, 0.9, 0.95], [0.36, 0.42, 0.5], p.a * 1.1);
+    }
+}
+
+/** Finish a directed frame: light, ambient grading, vignette, to 8-bit RGB. */
+function finishPlanned(frame: Float32Array, N: number, vig: Float32Array, t: number, out: Buffer, ambient: Ambient, f = FILM) {
+  const sweep = ambient === "light-sweep";
+  const lx = sweep ? lerp(-0.1, 1.1, easeInOutSine(t)) : lerp(0.15, 0.85, easeInOutSine(t)), ly = sweep ? 0.35 : 0.28;
+  const radius = sweep ? 0.22 : 0.32;
+  const inv = 1 / (2 * radius * radius);
+  const strength = sweep ? 0.16 : f.light;
+  const warm = [1, 0.9, 0.72];
+  const phase = 2 * Math.PI * t, period = 9;
+  for (let y = 0; y < N; y++) {
+    const dy = (y + 0.5) / N - ly;
+    const hazeY = ambient === "haze" ? 0.1 * Math.exp(-(((y + 0.5) / N - lerp(0.75, 0.55, t)) ** 2) / 0.02) : 0;
+    for (let x = 0; x < N; x++) {
+      const dx = (x + 0.5) / N - lx;
+      const g = strength * Math.exp(-(sweep ? dx * dx * 0.5 + dy * dy * 2 : dx * dx + dy * dy) * inv) + hazeY;
+      const i = y * N + x, o = i * 3;
+      const ht = ambient === "halftone-shimmer" ? 1 + 0.035 * Math.cos((2 * Math.PI * x) / period + phase) * Math.cos((2 * Math.PI * y) / period - phase) : 1;
+      for (let c = 0; c < 3; c++) {
+        const v = (1 - (1 - frame[o + c]) * (1 - g * warm[c])) * ht;
+        out[o + c] = Math.max(0, Math.min(255, Math.round(v * vig[i] * 255)));
+      }
+    }
+  }
+}
+
+/** The square box (frame units) a schema layer occupies: x centre and y bottom in percent, height from the cut's aspect. */
+export const layerRect = (l: { x: number; y: number; w: number }, aspect: number): Rect => {
+  const w = l.w / 100, h = w * aspect;
+  return { left: l.x / 100 - w / 2, top: l.y / 100 - h, width: w, height: h };
+};
+
+/**
+ * Split the difference matte between the SAM cut-outs, so each layer can move on its own: every
+ * matte pixel goes to the cut whose (dilated) mask is strongest there; pixels no cut claims go
+ * to the largest layer, so the hole in the clean background is always covered by something.
+ */
+async function separateLayers(plateFile: string, cleanFile: string, side: number, layers: { id: string; rect: Rect; cut: string }[]) {
+  const sharp = (await import("sharp")).default;
+  const W = MATTE;
+  const m = await diffMatte(plateFile, cleanFile);
+  const regions: Float32Array[] = [];
+  for (const l of layers) {
+    const reg = new Float32Array(W * W);
+    const rw = Math.max(1, Math.round(l.rect.width * W)), rh = Math.max(1, Math.round(l.rect.height * W));
+    const a = await sharp(l.cut).ensureAlpha().extractChannel(3).resize(rw, rh, { fit: "fill" }).raw().toBuffer();
+    const ox = Math.round(l.rect.left * W), oy = Math.round(l.rect.top * W);
+    for (let y = 0; y < rh; y++)
+      for (let x = 0; x < rw; x++) {
+        const X = ox + x, Y = oy + y;
+        if (X >= 0 && X < W && Y >= 0 && Y < W) reg[Y * W + X] = a[y * rw + x] / 255;
+      }
+    regions.push(blur(reg, W, W, Math.round(W / 60)));
+  }
+  const owner = new Int8Array(W * W).fill(-1);
+  const count = layers.map(() => 0);
+  for (let i = 0; i < W * W; i++) {
+    if (m[i] <= 0.01) continue;
+    let best = -1, bv = 0.02;
+    for (let k = 0; k < layers.length; k++) if (regions[k][i] > bv) (bv = regions[k][i]), (best = k);
+    owner[i] = best;
+    if (best >= 0) count[best]++;
+  }
+  const main = count.indexOf(Math.max(...count));
+  const out: { id: string; img: Img; box: Rect }[] = [];
+  for (let k = 0; k < layers.length; k++) {
+    const a = Float32Array.from(m, (v, i) => (owner[i] === k || (owner[i] === -1 && k === main) ? v : 0));
+    const box = bboxOf(a, W, W, 0.5, 0.0005);
+    if (!box) continue;
+    out.push({ id: layers[k].id, img: await cutOut(plateFile, a, side), box });
+  }
+  return out;
+}
+
+/** Encode frames, raising CRF if the film comes out over the size budget (the site loads the whole clip). */
+async function encodeSized(mp4: string, frames: Buffer[], N: number, f = FILM, maxBytes = 3.3e6) {
+  let r = { bytes: 0, hash: "" }, crf = f.crf;
+  for (; crf <= f.crf + 6; crf += 2) {
+    const enc = encoder(mp4, N, { ...f, crf });
+    for (const fr of frames) await enc.write(fr);
+    r = await enc.close();
+    if (r.bytes <= maxBytes) break;
+  }
+  return { ...r, crf: Math.min(crf, f.crf + 6) };
+}
+
+/**
+ * Render a scene from a motion plan. `outDir` defaults to the scene folder (scene.mp4 and
+ * scene.jpg); wonder.ts renders candidate rounds elsewhere first. The plan is fitted again here,
+ * so even a hand-edited motion.json can't push a layer off-frame.
+ */
+export async function renderDirected(slug: string, scene: Scene, base: Plan, motion: MotionPlan, outDir?: string, f = FILM) {
+  const sharp = (await import("sharp")).default;
+  const N = f.size, count = Math.round(f.fps * f.seconds);
+  const dir = outDir ?? join(ROOT, "public/stories", slug, scene.id);
+  const side = Math.round(N * 1.25);
+  const cuts = base.clean ? scene.layers.filter((l) => l.src && existsSync(fileOf(l.src))) : [];
+  const specs = [];
+  for (const l of cuts) {
+    const meta = await sharp(fileOf(l.src!)).metadata();
+    specs.push({ id: l.id, rect: layerRect(l, (meta.height ?? 1) / (meta.width ?? 1)), cut: fileOf(l.src!) });
+  }
+  const parts = base.clean && specs.length ? await separateLayers(fileOf(base.plate), fileOf(base.clean), side, specs) : [];
+  const layered = parts.length > 0;
+  const backDepth = layered ? 0 : base.depth;
+  const ids = layered ? parts.map((p) => ({ id: p.id, depth: motion.layers.find((m) => m.id === p.id)?.depth ?? 0.6 })) : [];
+  const sane = sanitizePlan(motion, ids);
+  const boxes = Object.fromEntries(parts.map((p) => [p.id, p.box]));
+  const fitted = fitPlan(sane.plan, boxes, backDepth);
+  const plan = fitted.plan, fixes = [...sane.fixes, ...fitted.fixes];
+  const focal = focusOf(plan);
+  const lens = lensForPath(backDepth, pathOf(plan, 60), focal);
+  const back = await load(fileOf(layered ? base.clean! : base.plate), side);
+  const vig = vignette(N, f.vignette);
+  const frame = new Float32Array(N * N * 3);
+  const full = { left: 0, top: 0, width: 1, height: 1 };
+  const rand = rng(createHash("sha1").update(`${slug}/${scene.id}`).digest().readUInt32LE(0));
+  const set: Particle[] = Array.from({ length: plan.ambient === "rain" ? 140 : 70 }, () => ({ x: rand(), y: rand(), r: 1 + rand() * 1.8, a: 0.12 + rand() * 0.22, ph: rand() }));
+  // Draw far to near so nearer layers overlap farther ones.
+  const order = parts.map((p) => ({ p, m: plan.layers.find((m) => m.id === p.id)! })).sort((a, b) => a.m.depth - b.m.depth);
+  const frames: Buffer[] = [];
+  for (let i = 0; i < count; i++) {
+    const t = i / (count - 1);
+    const cam = planCamera(plan, t);
+    frame.fill(0);
+    draw(frame, N, back, project(full, backDepth, cam, focal, lens));
+    for (const { p, m } of order) {
+      const la = layerAt(m, t, f);
+      if (la.opacity <= 0) continue;
+      const b = project(p.box, m.depth, cam, focal, lens);
+      draw(frame, N, p.img, moved(project(full, m.depth, cam, focal, lens), { x: b.left + b.width / 2, y: b.top + b.height }, la), la.opacity);
+    }
+    particles(frame, N, plan.ambient, set, t);
+    const out = Buffer.alloc(N * N * 3);
+    finishPlanned(frame, N, vig, t, out, plan.ambient, f);
+    frames.push(out);
+  }
+  await sharp(frames[0], { raw: { width: N, height: N, channels: 3 } }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(dir, "scene.jpg"));
+  const enc = await encodeSized(join(dir, "scene.mp4"), frames, N, f);
+  return { layered, layers: parts.length, plan, fixes, ...enc };
+}
+
+// ---------- Line scenes ----------
+// A line-treatment scene films its own making: the pen-plotter line traced from the plate draws
+// itself stroke by stroke over the era's paper, the plate develops underneath it (from a faint
+// print to full colour), the lines soften as the picture takes over, and the camera pushes in slowly.
+
+export const LINE = {
+  /** Clip time by which every stroke has landed. */
+  drawEnd: 0.72,
+  /** Plate opacity: a faint print at the start, full by `developEnd`. */
+  ghost: 0.18,
+  developStart: 0.18,
+  developEnd: 0.86,
+  /** Line opacity once the plate has developed. */
+  lineRest: 0.4,
+  /** Stroke width in drawing units (the drawing is 1000 wide). */
+  stroke: 2.2,
+  /** Gentler sideways travel than the layered films: the move is mostly a push-in. */
+  truck: 0.025,
+};
+
+export interface LineData {
+  aspect: number;
+  strokes: number[][];
+}
+
+/** Cumulative pen travel after each stroke (the pen lifts between strokes, so jumps don't count). */
+export function strokeLengths(strokes: number[][]): number[] {
+  let total = 0;
+  return strokes.map((s) => {
+    for (let i = 2; i < s.length; i += 2) total += Math.hypot(s[i] - s[i - 2], s[i + 1] - s[i - 1]);
+    return total;
+  });
+}
+
+/** The strokes drawn once the pen has covered `frac` (0..1) of its travel; the last one cut mid-segment. */
+export function drawnStrokes(strokes: number[][], frac: number, cum = strokeLengths(strokes)): number[][] {
+  const total = cum[cum.length - 1] ?? 0;
+  if (frac >= 1 || !total) return frac >= 1 ? strokes : [];
+  const target = clamp01(frac) * total;
+  if (target <= 0) return [];
+  const out: number[][] = [];
+  for (let k = 0; k < strokes.length; k++) {
+    if (cum[k] <= target) {
+      out.push(strokes[k]);
+      continue;
+    }
+    const s = strokes[k];
+    let run = k ? cum[k - 1] : 0;
+    const part = [s[0], s[1]];
+    for (let i = 2; i < s.length; i += 2) {
+      const seg = Math.hypot(s[i] - s[i - 2], s[i + 1] - s[i - 1]);
+      if (run + seg >= target) {
+        const u = seg ? (target - run) / seg : 0;
+        part.push(lerp(s[i - 2], s[i], u), lerp(s[i - 1], s[i + 1], u));
+        break;
+      }
+      part.push(s[i], s[i + 1]);
+      run += seg;
+    }
+    if (part.length >= 4) out.push(part);
+    break;
+  }
+  return out;
+}
+
+/** Pen progress, plate opacity and line opacity at clip time t (0..1). */
+export function lineAt(t: number, l = LINE) {
+  const develop = easeInOutSine((t - l.developStart) / (l.developEnd - l.developStart));
+  return {
+    pen: easeOutCubic(t / l.drawEnd) * 0.35 + clamp01(t / l.drawEnd) * 0.65,
+    plate: lerp(l.ghost, 1, develop),
+    ink: lerp(1, l.lineRest, develop),
+  };
+}
+
+const hexRgb = (hex: string) => [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255);
+
+/** Render and encode a line scene. */
+export async function renderLineScene(slug: string, scene: Scene, plate: string, line: LineData, f = FILM, l = LINE) {
+  const sharp = (await import("sharp")).default;
+  const N = f.size, frames = Math.round(f.fps * f.seconds);
+  const dir = join(ROOT, "public/stories", slug, scene.id);
+  const era = eraFor(scene.year);
+  const paper = hexRgb(era.paper), ink = era.ink;
+  const cam = { ...f, truck: l.truck };
+  const n = Number(scene.id.slice(1)) || 1;
+  const turn: 1 | -1 = n % 2 ? 1 : -1;
+  const focal = { x: 0.5, y: 0.5 };
+  const lens = lensFor(f.plateDepth, turn, focal, cam);
+  const side = Math.round(N * 1.25);
+  const img = await load(fileOf(plate), side);
+  const vig = vignette(N, f.vignette);
+  const frame = new Float32Array(N * N * 3);
+  const out = Buffer.alloc(N * N * 3);
+  const cum = strokeLengths(line.strokes);
+  const U = 1000, H = Math.round(line.aspect * U);
+  const path = (s: number[]) => {
+    let d = "";
+    for (let i = 0; i < s.length; i += 2) d += `${i ? "L" : "M"}${(s[i] * U).toFixed(1)} ${(s[i + 1] * U).toFixed(1)}`;
+    return d;
+  };
+  const full = { left: 0, top: 0, width: 1, height: 1 };
+  const enc = encoder(join(dir, "scene.mp4"), N, f);
+
+  for (let i = 0; i < frames; i++) {
+    const t = i / (frames - 1);
+    const at = lineAt(t, l);
+    const r = project(full, f.plateDepth, cameraAt(t, turn, cam), focal, lens);
+    for (let o = 0; o < frame.length; o += 3) (frame[o] = paper[0]), (frame[o + 1] = paper[1]), (frame[o + 2] = paper[2]);
+    draw(frame, N, img, r, at.plate);
+    const drawn = drawnStrokes(line.strokes, at.pen, cum);
+    if (drawn.length) {
+      // The drawing sits exactly on the plate it was traced from, so it moves with it.
+      const k = (r.width * N) / U;
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${N}" height="${N}"><g transform="translate(${(r.left * N).toFixed(2)} ${(r.top * N).toFixed(2)}) scale(${k.toFixed(5)} ${((r.height * N) / H).toFixed(5)})" fill="none" stroke="${ink}" stroke-width="${l.stroke}" stroke-linecap="round" stroke-linejoin="round" opacity="${at.ink.toFixed(3)}"><path d="${drawn.map(path).join("")}"/></g></svg>`;
+      draw(frame, N, await load(Buffer.from(svg)), full);
+    }
+    finish(frame, N, vig, t, out, f);
+    if (i === 0) await sharp(out, { raw: { width: N, height: N, channels: 3 } }).jpeg({ quality: 82, mozjpeg: true }).toFile(join(dir, "scene.jpg"));
+    await enc.write(out);
+  }
+  return enc.close();
 }
 
 // ---------- CLI ----------
 
 const storyFile = (slug: string) => join(ROOT, "stories", slug, "story.json");
+/** A Muse Wonder motion plan for the scene (pnpm wonder); when present the film follows it. */
+export const motionFile = (slug: string, id: string) => join(ROOT, "public/stories", slug, id, "motion.json");
 
 async function main() {
   const { values, positionals } = parseArgs({ allowPositionals: true, options: { scenes: { type: "string" }, dry: { type: "boolean" } } });
@@ -423,20 +1083,32 @@ async function main() {
   const made: Record<string, { video: string; poster: string }> = {};
   for (const scene of story.scenes) {
     if (only && !only.includes(scene.id)) continue;
-    if (scene.treatment === "line" && !only) {
-      console.log(`  ${scene.id}: line treatment draws itself, skipped`);
-      continue;
-    }
     const plan = planScene(scene, (url) => existsSync(fileOf(url)));
     if (!plan) {
       console.log(`  ${scene.id}: no plate yet, skipped`);
       continue;
     }
     const t = Date.now();
-    const { layered, bytes, hash } = await renderScene(slug, scene, plan);
+    let bytes: number, hash: string, kind: string;
+    if (scene.treatment === "line") {
+      if (!scene.line || !existsSync(fileOf(scene.line))) {
+        console.log(`  ${scene.id}: line treatment without a line drawing yet, skipped`);
+        continue;
+      }
+      ({ bytes, hash } = await renderLineScene(slug, scene, plan.plate, JSON.parse(await readFile(fileOf(scene.line), "utf8"))));
+      kind = "line drawing over the developing plate";
+    } else if (existsSync(motionFile(slug, scene.id))) {
+      const motion = JSON.parse(await readFile(motionFile(slug, scene.id), "utf8"));
+      const r = await renderDirected(slug, scene, plan, motion.plan);
+      ({ bytes, hash } = r);
+      kind = `directed by ${motion.model ?? "Muse Wonder"} (${r.layers} layer${r.layers === 1 ? "" : "s"}, ${r.plan.ambient}${r.fixes.length ? `; ${r.fixes.join("; ")}` : ""})`;
+    } else {
+      const r = await renderScene(slug, scene, plan);
+      ({ bytes, hash } = r);
+      kind = r.layered ? "subject on clean background" : plan.clean ? "no subject in the difference matte, plate push-in" : "plate push-in";
+    }
     const base = `/stories/${slug}/${scene.id}`;
     made[scene.id] = { video: `${base}/scene.mp4?v=${hash}`, poster: `${base}/scene.jpg?v=${hash}` };
-    const kind = layered ? "subject on clean background" : plan.clean ? "no subject in the difference matte, plate push-in" : "plate push-in"
     console.log(`  ${scene.id}: ${kind}, ${(bytes / 1e6).toFixed(2)} MB in ${((Date.now() - t) / 1000).toFixed(1)}s`);
   }
   if (!Object.keys(made).length || values.dry) return;
