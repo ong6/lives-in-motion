@@ -1,0 +1,104 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T14:31:14.362Z",
+  "usd": 0.0691,
+  "rationale": "A hero's triumph: the camera rises and closes in from the full street parade toward Schooling's raised medal, while the bus lifts and grows slightly with him so the celebration ends held aloft.",
+  "plan": {
+    "focusX": 0.47,
+    "focusY": 0.32,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.16,
+        "panX": 0.015,
+        "panY": -0.025,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.36,
+        "panX": 0.03,
+        "panY": -0.07,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.35,
+        "driftX": 0.01,
+        "driftY": -0.025,
+        "scale": 1.07,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A hero's triumph: the camera rises and closes in from the full street parade toward Schooling's raised medal, while the bus lifts and grows slightly with him so the celebration ends held aloft."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "The film is a clear, purposeful triumph move: from a wide street view it rises and pushes in toward Schooling on the open top deck, ending on a strong held frame with the raised medal prominent. The bus and figure stay coherent together with no tearing, ghosting, doubled edges or awkward frame clipping, the first frame reads as a complete celebration scene, and the final frame is a good dwell image. The light-sweep suits the sunny contemporary cut-paper style without overwhelming it.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "The film is a clear, purposeful triumph move: from a wide street view it rises and pushes in toward Schooling on the open top deck, ending on a strong held frame with the raised medal prominent. The bus and figure stay coherent together with no tearing, ghosting, doubled edges or awkward frame clipping, the first frame reads as a complete celebration scene, and the final frame is a good dwell image. The light-sweep suits the sunny contemporary cut-paper style without overwhelming it.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.32,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.16,
+            "panX": 0.015,
+            "panY": -0.025,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.36,
+            "panX": 0.03,
+            "panY": -0.07,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.35,
+            "driftX": 0.01,
+            "driftY": -0.025,
+            "scale": 1.07,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A hero's triumph: the camera rises and closes in from the full street parade toward Schooling's raised medal, while the bus lifts and grows slightly with him so the celebration ends held aloft."
+      }
+    }
+  ]
+}

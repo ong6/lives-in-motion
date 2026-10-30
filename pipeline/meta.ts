@@ -60,13 +60,18 @@ const SEARCH_OUTPUT_CAP = 16000;
 /** Searches one research call may run; only used to price the worst case. */
 const SEARCH_WORST = 40;
 
-export async function sparkSearch(prompt: string): Promise<Cited> {
+/**
+ * Muse Spark with web search. `opts` (all optional) trims a small lookup: a lower search context,
+ * a smaller output cap and search count for the worst case, and the ledger note.
+ */
+export async function sparkSearch(prompt: string, opts: { context?: "low" | "medium" | "high"; maxOutput?: number; maxSearches?: number; note?: string } = {}): Promise<Cited> {
+  const cap = opts.maxOutput ?? SEARCH_OUTPUT_CAP;
   const r = await guard(
     "search",
-    sparkWorst(prompt.length, SEARCH_OUTPUT_CAP, SEARCH_WORST),
-    () => post("/responses", { model: MODELS.spark, input: prompt, max_output_tokens: SEARCH_OUTPUT_CAP, tools: [{ type: "web_search", search_context_size: "high" }] }),
+    sparkWorst(prompt.length, cap, opts.maxSearches ?? SEARCH_WORST),
+    () => post("/responses", { model: MODELS.spark, input: prompt, max_output_tokens: cap, tools: [{ type: "web_search", search_context_size: opts.context ?? "high" }] }),
     (r: any) => sparkCost(r.usage, (r.output ?? []).filter((o: any) => o.type === "web_search_call").length),
-    prompt.slice(0, 60),
+    opts.note ?? prompt.slice(0, 60),
   );
   const out: Cited = { text: "", citations: [] };
   for (const item of r.output ?? []) {

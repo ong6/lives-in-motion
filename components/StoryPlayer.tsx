@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import type { Story } from "@/lib/schema";
+import type { Checked, Story } from "@/lib/schema";
 import { eraFor, eraVars, type Era } from "@/lib/eras";
 import { Endpaper, Page, bookStyles as b } from "./book/Page";
 import { Cover, clothFor } from "./book/Cover";
-import { PART, roman } from "./book/pagination";
+import { pagesFor, roman } from "./book/pagination";
 import { LineDrawing } from "./LineDrawing";
 import { LayerStack, SceneArt, sceneDuration } from "./SceneArt";
+import { DirectionCard, type Direction } from "./Direction";
 import { easeInOut, useTimeline } from "./useTimeline";
 import s from "./StoryPlayer.module.css";
 
@@ -48,8 +49,8 @@ const clamp = (x: number, lo = 0, hi = 1) => Math.min(hi, Math.max(lo, x));
 const seg = (t: number, a: number, b: number) => clamp((t - a) / (b - a));
 
 /** "1950s offset lithograph poster, flat inks…" → "1950s offset lithograph poster". */
+const CHAPTERS = ["no", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
 const technique = (year: string) => eraFor(year).print.split(",")[0];
-const part = (i: number) => `Part ${PART[i] ?? i + 1}`;
 
 /** Everything a book needs about one life; the next life's comes along so its book can open here. */
 export interface Life {
@@ -57,10 +58,10 @@ export interface Life {
   lifespan: string;
   portrait?: string;
   credit: string;
-  /** 0-based position in the anthology. */
+  /** 0-based position on the shelf (neighbouring books alternate their cloth). */
   part: number;
-  /** Page number of the frontispiece; folios count on from it. */
-  firstPage: number;
+  /** What Muse Wonder did for each scene's film, by scene id. */
+  directions?: Record<string, Direction>;
 }
 
 function plan(n: number) {
@@ -86,6 +87,13 @@ const playAt = (start: number) => ({ start, delay: Math.round(start - performanc
  * there, and carries on here from the same moment.
  */
 let handoff: { slug: string; start: number } | null = null;
+
+/**
+ * The wheel gesture in progress, kept across the route change of a book change: a flick that
+ * skips the change to its end must not reach the next life's page as a fresh gesture and turn
+ * it past its title spread. `quietUntil` swallows all wheel input until then (performance.now()).
+ */
+const wheel = { last: 0, lastMag: 0, spent: false, quietUntil: 0, landed: 0 };
 
 // ---------- The book ----------
 
@@ -122,11 +130,11 @@ function Frontispiece({ name, portrait, credit, plate, start }: { name: string; 
   );
 }
 
-function TitlePage({ partNo, name, lifespan, tagline, main }: { partNo: number; name: string; lifespan: string; tagline: string; main: boolean }) {
+function TitlePage({ chapters, name, lifespan, tagline, main }: { chapters: number; name: string; lifespan: string; tagline: string; main: boolean }) {
   const Name = main ? "h1" : "p";
   return (
     <div className={s.titlePage}>
-      <p className={s.titlePart}>{part(partNo)}</p>
+      <p className={s.titlePart}>A life in {CHAPTERS[chapters] ?? chapters} chapters</p>
       <Name className={s.titleName}>{name}</Name>
       <p className={s.titleDates}>{lifespan}</p>
       <span className={s.titleRule} aria-hidden />
@@ -145,7 +153,6 @@ function Plate({ scene, start, shown, layers }: { scene: Story["scenes"][number]
   return (
     <>
       <SceneArt scene={scene} active={shown && !layers} progress={t} />
-      <LayerStack scene={scene} open={layers} />
     </>
   );
 }
@@ -170,6 +177,44 @@ function useFit<T extends HTMLElement>() {
   return ref;
 }
 
+const dateOf = (iso: string) =>
+  new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "Asia/Singapore" });
+const hostOf = (url: string) => {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+};
+const VERDICT: Record<Checked["verdict"], string> = {
+  ok: "Supported by its sources",
+  corrected: "Corrected to match its sources",
+  disputed: "Disputed, and not yet resolved",
+};
+
+/** A quiet mark under the caption: Muse Spark's fact-check; hover or focus shows when and what it found. */
+function CheckMark({ checked, id }: { checked: Checked; id: string }) {
+  const ok = checked.verdict !== "disputed";
+  const n = checked.sources.length;
+  return (
+    <p className={s.check} data-verdict={checked.verdict}>
+      <span className={s.checkMark} tabIndex={0} aria-describedby={id}>
+        <span aria-hidden>{ok ? "✓" : "?"}</span> {ok ? "Checked" : "Queried"} by Muse Spark
+      </span>
+      <span role="tooltip" id={id} className={s.checkTip}>
+        <b>
+          {VERDICT[checked.verdict]}, {dateOf(checked.at)}.
+        </b>
+        {checked.note && <span>{checked.note.replace(/\s*→\s*/, " Then: ")}</span>}
+        <span className={s.checkSrc}>
+          {n ? `Cited: ${checked.sources.map(hostOf).join(", ")} · ` : ""}
+          {checked.model}
+        </span>
+      </span>
+    </p>
+  );
+}
+
 function ChapterText({ scene, j, era, onNote }: { scene: Story["scenes"][number]; j: number; era: Era; onNote: () => void }) {
   const ref = useFit<HTMLDivElement>();
   return (
@@ -186,6 +231,7 @@ function ChapterText({ scene, j, era, onNote }: { scene: Story["scenes"][number]
           </button>
         </sup>
       </p>
+      {scene.checked && <CheckMark checked={scene.checked} id={`check-${scene.id}`} />}
     </div>
   );
 }
@@ -213,6 +259,23 @@ function Notes({ story, folio }: { story: Story; folio: (o: number) => number })
                 </span>
               ))}
               .
+              {sc.checked && (
+                <span className={s.noteCheck}>
+                  {" "}
+                  {sc.checked.verdict === "corrected" ? "Corrected" : sc.checked.verdict === "disputed" ? "Queried" : "Checked"} by Muse Spark,{" "}
+                  {dateOf(sc.checked.at).replace(/ \d{4}$/, "")}
+                  {sc.checked.sources.length > 0 && ", against "}
+                  {sc.checked.sources.map((u, k) => (
+                    <span key={u}>
+                      {k > 0 && (k === sc.checked!.sources.length - 1 ? " and " : ", ")}
+                      <a href={u} target="_blank" rel="noopener noreferrer">
+                        {hostOf(u)}
+                      </a>
+                    </span>
+                  ))}
+                  .
+                </span>
+              )}
             </p>
           </li>
         ))}
@@ -223,7 +286,6 @@ function Notes({ story, folio }: { story: Story; folio: (o: number) => number })
 
 function Book({
   life,
-  totalPages,
   last,
   pos,
   closing,
@@ -235,7 +297,6 @@ function Book({
   onGo,
 }: {
   life: Life;
-  totalPages: number;
   /** The last life: its back cover carries the way back to the shelf. */
   last: boolean;
   /** Where the reader is, in spreads; between two whole numbers a leaf is turning. */
@@ -252,7 +313,7 @@ function Book({
   onLayers?: () => void;
   onGo: (spread: number) => void;
 }) {
-  const { story, firstPage, part: partNo } = life;
+  const { story, part: partNo } = life;
   const scenes = story.scenes;
   const n = scenes.length;
   const { kinds, NOTES, CLOSED } = plan(n);
@@ -265,12 +326,14 @@ function Book({
   const shut = turns[backLeaf];
   const closed = open === 0;
 
+  // This book's own folios: the title page is page 1, so the frontispiece and title spread is at offset 0.
+  const firstPage = 0;
   const folio = (offset: number) => firstPage + offset;
-  const lastPage = Math.min(totalPages, firstPage + 2 * n + 4);
+  const lastPage = pagesFor(n);
   const folioOf = (i: number) =>
     ({
-      cover: firstPage - 2,
-      endpapers: firstPage - 1,
+      cover: 0,
+      endpapers: 0,
       title: firstPage,
       chapter: firstPage + 2 + 2 * (i - FIRST_CHAPTER),
       notes: firstPage + 2 * n + 2,
@@ -278,7 +341,7 @@ function Book({
       closed: lastPage,
     })[kinds[i]];
   const at = Math.floor(clamp(pos, 0, CLOSED));
-  const read = clamp((folioOf(at) + (folioOf(Math.min(CLOSED, at + 1)) - folioOf(at)) * (pos - at)) / totalPages);
+  const read = clamp((folioOf(at) + (folioOf(Math.min(CLOSED, at + 1)) - folioOf(at)) * (pos - at)) / lastPage);
 
   const years = scenes.map((sc) => sc.year);
   const first = eraFor(scenes[0].year);
@@ -336,14 +399,19 @@ function Book({
       <div className={s.creditsPage}>
         <h2>On the pictures</h2>
         <p>
-          The research and every caption’s sources come from Meta Muse Spark with web search. The plates are painted with Meta Muse Image in
-          the print style of each scene’s decade, and cut into layers with SAM 3.1. People appear as silhouettes or from behind, by design.
+          The research and every caption’s sources come from Meta Muse Spark with web search, and Muse Spark checked each caption against
+          them again. The plates are painted with Meta Muse Image in the print style of each scene’s decade, and cut into layers with SAM 3.1.
+          People appear as silhouettes or from behind, by design.
+        </p>
+        <p>
+          Muse Wonder directed the films: it read each plate and its layers, planned the camera and every layer’s move, then watched six frames
+          of the render, critiqued them and revised. The films were rendered on our own machine. Press L on any plate to see it taken apart.
         </p>
         {life.credit && <p>The frontispiece is traced from a photograph. {life.credit}</p>}
         <p className={s.finis} aria-hidden>
           ⁂
         </p>
-        <p className={s.overleaf}>{last ? "Turn the page to close the book." : `Turn the page for ${part(partNo + 1)}.`}</p>
+        <p className={s.overleaf}>{last ? "Turn the page to close the book." : "Turn the page to put this book down and take the next one from the shelf."}</p>
       </div>
     </Page>
   );
@@ -357,7 +425,6 @@ function Book({
           slug={story.slug}
           name={story.name}
           lifespan={life.lifespan}
-          part={part(partNo)}
           lift={main && closed}
           className={closed ? s.coverLanded : ""}
         />,
@@ -379,7 +446,7 @@ function Book({
     if (k === TITLE)
       return [
         <Page key="f" side="recto" {...faceProps(TITLE)}>
-          <TitlePage partNo={partNo} name={story.name} lifespan={life.lifespan} tagline={story.tagline} main={main} />
+          <TitlePage chapters={n} name={story.name} lifespan={life.lifespan} tagline={story.tagline} main={main} />
         </Page>,
         chapterFace(0),
       ];
@@ -424,6 +491,13 @@ function Book({
       </div>,
     ];
   };
+
+  // The plate last taken apart: its stack stays mounted while it lays itself back down, but goes at once if the page turns.
+  const stackAt = useRef<number | null>(null);
+  if (layersAt != null) stackAt.current = layersAt;
+  const stackScene = stackAt.current != null ? scenes[stackAt.current - FIRST_CHAPTER] : undefined;
+  const stackStill = stackAt.current != null && Math.abs(pos - stackAt.current) < 0.001 && closing == null;
+  const stackDir = stackScene && life.directions?.[stackScene.id];
 
   // Only the pages that can be seen are painted: the top two of each pile.
   const topLeft = turns.findLastIndex((t) => t >= 0.5);
@@ -497,6 +571,15 @@ function Book({
         );
       })}
 
+      {main && stackScene?.plate && stackStill && (
+        <LayerStack
+          key={stackScene.id}
+          scene={stackScene}
+          open={layersAt === stackAt.current}
+          aside={stackDir && <DirectionCard dir={stackDir} plate={stackScene.plate} />}
+        />
+      )}
+
       {main && (
         <nav className={s.rail} aria-label="Chapters" data-show={rail != null || undefined}>
           <span className={s.ribbon} style={{ transform: `translateY(${(rail ?? 0) * 44}px)` }} aria-hidden />
@@ -521,7 +604,7 @@ function Book({
 
 // ---------- The reader ----------
 
-export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: Life; totalPages: number; next?: Life; arrive?: boolean }) {
+export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?: Life; arrive?: boolean }) {
   const router = useRouter();
   const { story } = life;
   const n = story.scenes.length;
@@ -557,7 +640,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
     handoff = null;
     if (arrive) {
       if (h?.slug === story.slug && !reduced.current) setPlays({ [TITLE]: playAt(h.start) });
-      history.replaceState(history.state, "", `${location.pathname}#p=${TITLE}`);
+      history.replaceState(null, "", `${location.pathname}#p=${TITLE}`);
     } else {
       // Back, forward and refresh reopen the book at the spread it was left at.
       const m = /p=(\d+)/.exec(location.hash);
@@ -577,7 +660,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
   useEffect(() => {
     if (seqT != null) return;
     const hash = settled > 0 ? `#p=${settled}` : "";
-    if (location.hash !== hash) history.replaceState(history.state, "", `${location.pathname}${location.search}${hash}`);
+    if (location.hash !== hash) history.replaceState(null, "", `${location.pathname}${location.search}${hash}`);
   }, [settled, seqT]);
 
   /** Animate `pos` to `to` over `ms`; `ease` shapes the whole run. */
@@ -618,6 +701,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
       setPlays(reduced.current ? {} : { [from]: playAt(performance.now() - 1e5), [to]: playAt(start) });
       run(to, ms, leaves > 1 ? easeInOut : turnEase, () => {
         busy.current = false;
+        wheel.landed = performance.now();
         setSettled(to);
         setPlays((p) => (p[to] != null ? { [to]: p[to] } : {}));
       });
@@ -633,6 +717,9 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
     cancelAnimationFrame(seq.current.raf);
     setSeqT(SEQ.end);
     handoff = { slug: next.story.slug, start: seq.current.t0 + SEQ.openStart + 650 };
+    // The rest of a flick that skipped here, and the route change itself, must not turn the new page.
+    wheel.spent = true;
+    wheel.quietUntil = performance.now() + 450;
     router.push(`/${next.story.slug}?from=turn`, { scroll: false });
   }, [next, router]);
 
@@ -659,8 +746,9 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
   }, [next, navigate, router]);
   useEffect(() => () => cancelAnimationFrame(seq.current?.raf ?? 0), []);
 
+  // Input during the book change is dropped: the change always plays through, so nothing is skipped.
   const forward = useCallback(() => {
-    if (seq.current) return navigate();
+    if (seq.current) return;
     if (busy.current) return;
     if (settledRef.current >= lastSpread) {
       if (next) changeBooks();
@@ -668,7 +756,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
     } else goTo(settledRef.current + 1);
   }, [goTo, lastSpread, next, changeBooks, navigate]);
   const backward = useCallback(() => {
-    if (seq.current) return navigate();
+    if (seq.current) return;
     if (busy.current) return;
     goTo(settledRef.current - 1);
   }, [goTo, navigate]);
@@ -681,10 +769,6 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
 
   useEffect(() => {
     let acc = 0;
-    let last = 0;
-    let lastMag = 0;
-    /** Swallowing the tail of a gesture that already turned a page (trackpad inertia). */
-    let spent = false;
     let release = 0;
 
     const peek = (v: number) => {
@@ -701,31 +785,38 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
       const scale = e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? 800 : 1;
       const d = (Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX) * scale;
       const now = performance.now();
-      const gap = now - last;
+      const gap = now - wheel.last;
       const mag = Math.abs(d);
-      last = now;
+      wheel.last = now;
       // A gesture is over after a pause, or when the deltas jump up again (a new flick inside the inertia).
-      const fresh = gap > GESTURE_GAP || (spent && mag > lastMag * 2.2 && mag > 24);
-      lastMag = mag;
+      // Or, once the page has landed, by a strong push that is not dying away: a mouse wheel's next
+      // notches, not a trackpad's inertia (which by then is a few px and still falling).
+      const restart = wheel.spent && !busy.current && !seq.current && now - wheel.landed > 200 && mag >= 24 && mag >= wheel.lastMag * 0.95;
+      const fresh = gap > GESTURE_GAP || (wheel.spent && mag > wheel.lastMag * 2.2 && mag > 24) || restart;
+      wheel.lastMag = mag;
       if (fresh) {
-        spent = false;
+        wheel.spent = false;
         acc = 0;
       }
-      if (spent || busy.current) {
-        spent = true;
-        if (seq.current && fresh) navigate();
+      // Just arrived from a book change: the title spread holds until the input has been quiet a moment.
+      if (now < wheel.quietUntil) {
+        wheel.spent = true;
         return;
       }
       if (seq.current) {
-        if (fresh) navigate();
-        spent = true;
+        // During the change all input is dropped; the change plays through to the next book's title spread.
+        wheel.spent = true;
+        return;
+      }
+      if (wheel.spent || busy.current) {
+        wheel.spent = true;
         return;
       }
       if (acc !== 0 && Math.sign(d) !== Math.sign(acc)) acc = 0;
       acc += d;
       clearTimeout(release);
       if (Math.abs(acc) >= COMMIT_PX) {
-        spent = true;
+        wheel.spent = true;
         acc = 0;
         if (d > 0) forward();
         else backward();
@@ -743,6 +834,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
       const el = e.target as HTMLElement | null;
       if (el?.closest("input, textarea, select, [contenteditable]")) return;
       const onControl = el?.closest("button, a");
+      if (e.key === "Escape") return setLayersOpen(false);
       if ((e.key === "l" || e.key === "L") && !seq.current && !busy.current) {
         const j = settledRef.current - FIRST_CHAPTER;
         if (j >= 0 && j < n && story.scenes[j].plate) setLayersOpen((o) => !o);
@@ -752,8 +844,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
       const back = ["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key) || (e.key === " " && e.shiftKey && !onControl);
       if (fwd || back || e.key === "Home" || e.key === "End") e.preventDefault();
       else return;
-      if (e.repeat && seq.current) return;
-      if (seq.current) return navigate();
+      if (seq.current) return;
       if (busy.current) return;
       if (fwd) forward();
       else if (back) backward();
@@ -859,7 +950,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
                 : undefined
             }
           >
-            <Book life={life} totalPages={totalPages} last={!next} pos={pos} closing={closing} plays={inSeq ? {} : plays}
+            <Book life={life} last={!next} pos={pos} closing={closing} plays={inSeq ? {} : plays}
               rail={rail}
               layersAt={layersOpen ? settled : null}
               onLayers={() => setLayersOpen((o) => !o)}
@@ -871,7 +962,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
               className={s.slot}
               style={{ transform: `translate(${(1250 * (1 - inn)).toFixed(1)}px, ${(-40 * (1 - inn)).toFixed(1)}px) rotate(${(6 * (1 - inn)).toFixed(2)}deg)` }}
             >
-              <Book life={next} totalPages={totalPages} last={false} pos={nextPos} plays={nextPlays} rail={null} main={false} onGo={() => {}} />
+              <Book life={next} last={false} pos={nextPos} plays={nextPlays} rail={null} main={false} onGo={() => {}} />
             </div>
           )}
 
@@ -882,7 +973,7 @@ export function StoryPlayer({ life, totalPages, next, arrive = false }: { life: 
             <p className={`${s.cue} ${s.onward}`} data-show={(settled === NOTES && !inSeq) || undefined}>
               Turn the page, or{" "}
               <button type="button" onClick={changeBooks}>
-                go on to {part(next.part)}: {next.story.name}
+                next on the shelf: {next.story.name}
               </button>
             </p>
           )}

@@ -1,63 +1,82 @@
 {
   "model": "muse-wonder-1.0",
-  "updated": "2026-10-30T13:32:07.029Z",
-  "usd": 0.4397,
+  "updated": "2026-10-30T14:31:14.364Z",
+  "usd": 0.4463,
+  "passMark": 8,
   "scenes": {
     "s1": {
       "status": "directed",
-      "score": 7,
+      "score": 8,
       "ok": true,
-      "verdict": "Publishable. The slow downward push-in with slight parallax on the boy clearly centres him against the HDB blocks, palms and pool without stalling and reads equally well in reverse. The boy stays coherent throughout, with no tearing, doubled edges, halo or visible ghost from the painted-over background, and nothing clips the frame edge awkwardly. The t=0 wide composition is a good poster frame. The warm light-sweep suits the sunny morning and remains subtle while preserving the teal-and-orange risograph grain. Only slightly beyond a plain centred push-in, but the focus shift and settling movement express the swimmer's starting moment well.",
-      "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge \u2014 HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather.",
+      "passed": true,
+      "verdict": "A purposeful pull-back: it opens tight on the small boy from behind, then reveals the pool edge, palms and HDB neighbourhood as the lasting wide picture. The boy and kickboard stay coherent with no tearing, ghosting or awkward edge clipping, the reversed move reads naturally, and the warm light-sweep suits the sunny 1990s risograph print without overpowering it.",
+      "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins.",
       "ambient": "light-sweep",
       "rounds": 1,
-      "usd": 0.054,
-      "seconds": 30,
+      "usd": 0.0616,
+      "seconds": 46,
       "filmIssues": [],
-      "plateDefects": []
+      "plateDefects": [],
+      "video": "/stories/joseph-schooling/s1/scene.mp4?v=2c33c08c",
+      "poster": "/stories/joseph-schooling/s1/scene.jpg?v=2c33c08c"
     },
     "s3": {
       "status": "directed",
-      "score": 7,
-      "ok": true,
-      "verdict": "A clean, reversible gentle push-in centred between the boy and the jet. The suitcase layer stays coherent and grounded with no tearing, halo, ghosting or awkward frame-edge clipping, the t=0 poster is the complete plate, and the subtle light-sweep suits the sunrise without breaking the fluorescent orange-and-teal risograph grain. It is a modest but clear improvement on a plain centred push-in, expressing a quiet lean toward departure while preserving the airport-window composition throughout the scroll.",
-      "rationale": "A gentler push focused between the boy and the jet still reads as leaning toward departure, but the reduced zoom, lower suitcase depth and slight upward drift keep the suitcase fully grounded inside the frame at t=1 instead of clipping the bottom edge. No entrance preserves the complete plate as the poster, and the subtle dawn light-sweep remains fitting for the sunrise risograph print.",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "Do not publish: the pull-back reveal tells the departure story, but the foreground suitcase visibly slides away from the boy and crowds the bottom-left edge, breaking subject coherence in the final held frame.",
+      "rationale": "A quiet turning-point departure: the camera opens tight on the packed orange suitcase and pulls back to reveal the boy, sunrise window and waiting jet, the suitcase settling slightly smaller as his Singapore life recedes.",
       "ambient": "light-sweep",
       "rounds": 3,
-      "usd": 0.1317,
-      "seconds": 66,
-      "filmIssues": [],
-      "plateDefects": []
+      "usd": 0.1678,
+      "seconds": 113,
+      "filmIssues": [
+        "The pull-back concept is right — tight on the suitcase at t=0 opening, then revealing the boy, window, sunrise and jet by t=1 — and both end frames are readable compositions.",
+        "The suitcase layer breaks coherence: at depth 0.9 with drift -0.015/0.012 and end scale 0.93 it slides down-left away from the boy across the frames, increasingly detached from the legs it should stand beside, as if rolling unattended across the floor.",
+        "By t=0.8-1 the drifting suitcase is pushed to the bottom-left corner and sits awkwardly against / slightly clipped by the frame edge, spoiling the final dwell picture compared with the plate where it rests firmly next to the boy.",
+        "Apart from the suitcase slide there is no obvious tearing, doubled edge or painted-over ghost, the light-sweep is fitting for sunrise and subtle, and the risograph grain is preserved — the fault is the layer separation, not the camera idea."
+      ],
+      "plateDefects": [],
+      "video": "/stories/joseph-schooling/s3/scene.mp4?v=2336cea8",
+      "poster": "/stories/joseph-schooling/s3/scene.jpg?v=2336cea8"
     },
     "s5": {
       "status": "directed",
-      "score": 7,
-      "ok": true,
-      "verdict": "approve",
-      "rationale": "Keep the swimmer fully present in the poster frame. A steady push-in toward the raised arms, combined with a modest upward drift and slight growth on the near swimmer layer, expresses the surge out of the water and separates him from the splash, lane ropes and scoreboard without an entrance that removes the subject. The subtle light-sweep retains the Rio stadium glare, and the single in-out move r",
-      "ambient": "light-sweep",
-      "rounds": 2,
-      "usd": 0.081,
-      "seconds": 41,
-      "filmIssues": [],
-      "plateDefects": []
-    },
-    "s6": {
-      "status": "kept-fixed-move",
       "score": 6,
       "ok": false,
-      "verdict": "Not publishable as-is: a smooth celebratory push-in, but the opening composition is off-centre and the bus moves independently of the swimmer standing on it, so it adds little over a plain centred push-in.",
-      "rationale": "A gentle parade advance: the camera lifts and pushes toward the raised medal while the bus grows and settles slightly forward, separating from the shophouse street with restrained cut-paper parallax and a warm celebratory light pass.",
+      "passed": false,
+      "verdict": "A clear triumphant push-in in intent, but the swimmer lifts out of his splash and reveals dark ghost fragments in the water, and the end frame is over-enlarged — not publishable as is.",
+      "rationale": "A triumph — Singapore's first Olympic gold — told as a rise: the swimmer lifts and grows while the camera tilts up and closes in, lifting his raised arms toward the scoreboard above the pool.",
       "ambient": "light-sweep",
       "rounds": 3,
-      "usd": 0.173,
-      "seconds": 200,
+      "usd": 0.1478,
+      "seconds": 92,
       "filmIssues": [
-        "Poster frame (t=0) is a weak opening: the bus is pushed to the left of frame with a large empty shophouse area on the right, less balanced than the centred plate itself.",
-        "Only the bus is a cut-out layer; the swimmer and medal remain on the background. The bus's downward drift (driftY 0.018), 1.07 end scale and depth 0.65 therefore slide/scale the deck away from the figure standing on it \u2014 his feet and the railing relationship shift subtly across the frames, weakening coherence.",
-        "The 1.24 push-in is smooth and reversible and the warm light-sweep suits the celebration, but the move is essentially a generic push-in; the off-centre start and bus/figure separation mean it does not clearly beat a plain centred push-in."
+        "The rise separates the swimmer from the white splash that belongs with him: the splash stays on the clean background while the cut-out lifts and grows, so by t=0.6-1 the burst reads detached around his waist.",
+        "A visible ghost is revealed in the blue water below the swimmer as he moves up and scales to 1.12 — dark black shards/fragments appear in the waves at the spot he vacated, clearest in the bottom row of frames.",
+        "The final frame is over-tight rather than triumphant: the swimmer balloons toward the scoreboard, his hands crowd the black board and the composition loses the pool, lane ropes and stadium context that make the win read. The opening at zoom 1.05 is also already cropped in, so the move is mostly a plain push-in plus layer growth.",
+        "The light-sweep is not objectionable and suits a gold-medal moment, but it does not compensate for the splash/ghost separation; overall the film is only a little above a centred push-in in storytelling clarity."
       ],
-      "plateDefects": []
+      "plateDefects": [],
+      "video": "/stories/joseph-schooling/s5/scene.mp4?v=113a665e",
+      "poster": "/stories/joseph-schooling/s5/scene.jpg?v=113a665e"
+    },
+    "s6": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "The film is a clear, purposeful triumph move: from a wide street view it rises and pushes in toward Schooling on the open top deck, ending on a strong held frame with the raised medal prominent. The bus and figure stay coherent together with no tearing, ghosting, doubled edges or awkward frame clipping, the first frame reads as a complete celebration scene, and the final frame is a good dwell image. The light-sweep suits the sunny contemporary cut-paper style without overwhelming it.",
+      "rationale": "A hero's triumph: the camera rises and closes in from the full street parade toward Schooling's raised medal, while the bus lifts and grows slightly with him so the celebration ends held aloft.",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.0691,
+      "seconds": 42,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/joseph-schooling/s6/scene.mp4?v=5feb012c",
+      "poster": "/stories/joseph-schooling/s6/scene.jpg?v=5feb012c"
     }
   }
 }

@@ -1,19 +1,8 @@
 /**
- * The gallery is paginated as one anthology. Each life takes a frontispiece and title page,
- * one spread per scene (text on the verso, plate on the recto) and a spread of notes, so
- * the folios on a story page agree with the page numbers in the home page's contents.
+ * Each life is its own book with its own folios: the title page is page 1, each chapter is a
+ * spread (text on the even verso, plate on the odd recto), then a spread of notes.
  */
-export const pagesFor = (scenes: number) => 2 * scenes + 4;
-
-/** Page number of each life's frontispiece (always a verso, so even). */
-export function firstPages(sceneCounts: number[]): number[] {
-  let at = 2;
-  return sceneCounts.map((n) => {
-    const p = at;
-    at += pagesFor(n);
-    return p;
-  });
-}
+export const pagesFor = (scenes: number) => 2 * scenes + 3;
 
 const NUMERALS: [number, string][] = [
   [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"],
@@ -26,4 +15,5 @@ export function roman(n: number): string {
   return out;
 }
 
+/** @deprecated The lives are separate books, not Parts of one anthology; kept only for older callers. */
 export const PART = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];

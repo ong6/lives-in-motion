@@ -1,0 +1,1232 @@
+{
+ "slug": "ah-ma-sample",
+ "name": "Ah Ma",
+ "hint": "a Singaporean grandmother, a seamstress and hawker, telling her own story to a grandchild",
+ "photos": 0,
+ "sample": true,
+ "bookSlug": "ah-ma-sample",
+ "status": "done",
+ "startedAt": "2026-10-30T14:09:33.376Z",
+ "updatedAt": "2026-10-30T14:29:28.565Z",
+ "steps": {
+  "transcribe": {
+   "status": "done",
+   "usd": 0.0083,
+   "startedAt": "2026-10-30T14:09:33.378Z",
+   "endedAt": "2026-10-30T14:10:33.303Z"
+  },
+  "facts": {
+   "status": "done",
+   "usd": 0.036563,
+   "startedAt": "2026-10-30T14:10:33.303Z",
+   "endedAt": "2026-10-30T14:11:09.455Z"
+  },
+  "storyboard": {
+   "status": "done",
+   "usd": 0.057767,
+   "startedAt": "2026-10-30T14:11:09.455Z",
+   "endedAt": "2026-10-30T14:11:47.620Z"
+  },
+  "plates": {
+   "status": "done",
+   "usd": 0.07,
+   "startedAt": "2026-10-30T14:11:47.620Z",
+   "endedAt": "2026-10-30T14:26:48.712Z"
+  },
+  "cutouts": {
+   "status": "done",
+   "usd": 0.095,
+   "startedAt": "2026-10-30T14:16:56.894Z",
+   "endedAt": "2026-10-30T14:28:43.180Z"
+  },
+  "frontispiece": {
+   "status": "done",
+   "usd": 0.0125,
+   "startedAt": "2026-10-30T14:11:47.621Z",
+   "endedAt": "2026-10-30T14:19:53.594Z"
+  },
+  "films": {
+   "status": "done",
+   "usd": 0,
+   "startedAt": "2026-10-30T14:28:43.181Z",
+   "endedAt": "2026-10-30T14:29:36.376000Z"
+  }
+ },
+ "turns": [
+  {
+   "n": 1,
+   "startMs": 380,
+   "endMs": 5180,
+   "text": "Ah Ma, the recorder is on already. Can you tell me where you were born? born?",
+   "speaker": "A"
+  },
+  {
+   "n": 2,
+   "startMs": 5580,
+   "endMs": 22460,
+   "text": "Aiyoh, so formal one. Okay lah, I was born in Teluk Ayer near the sea in a shop house on a small lane. My mother say I am a tiger year baby so maybe 1938. Last time nobody keep the birth paper properly.",
+   "speaker": "B"
+  },
+  {
+   "n": 3,
+   "startMs": 23500,
+   "endMs": 26140,
+   "text": "What was your house like when you were small?",
+   "speaker": "A"
+  },
+  {
+   "n": 4,
+   "startMs": 26300,
+   "endMs": 42940,
+   "text": "After the war, around 1947, we moved to a kampong in Potong Pasir. attap roof, wooden house on stilts. Got chickens, got one big rambutan tree. Every morning morning I carry water from the well with two buckets.",
+   "speaker": "B"
+  },
+  {
+   "n": 5,
+   "startMs": 43500,
+   "endMs": 45660,
+   "text": "Very Very heavy, you know.",
+   "speaker": "B"
+  },
+  {
+   "n": 6,
+   "startMs": 45900,
+   "endMs": 47740,
+   "text": "When did you start sewing?",
+   "speaker": "A"
+  },
+  {
+   "n": 7,
+   "startMs": 48220,
+   "endMs": 63100,
+   "text": "In 1952, when I was 14, my auntie teach me to sew. She had a black Singer sewing machine with a foot pedal. Wah, I love that machine. I learned to make samfoo, then cheongsam for the neighbours.",
+   "speaker": "B"
+  },
+  {
+   "n": 8,
+   "startMs": 64220,
+   "endMs": 66460,
+   "text": "And you met Ah Gong after that?",
+   "speaker": "A"
+  },
+  {
+   "n": 9,
+   "startMs": 66540,
+   "endMs": 78940,
+   "text": "Yes lah, in 1959 I married married your Ah Gong. He was a bus conductor, always got coins in his pocket. We had no money, money, but very happy.",
+   "speaker": "B"
+  },
+  {
+   "n": 10,
+   "startMs": 79100,
+   "endMs": 81340,
+   "text": "When did you get your first flat?",
+   "speaker": "A"
+  },
+  {
+   "n": 11,
+   "startMs": 81580,
+   "endMs": 95420,
+   "text": "1966. We moved into a three room HDBDB flat in Queenstown. Wah, so modern. Got tap water inside the house, got electric light, no more carrying buckets.",
+   "speaker": "B"
+  },
+  {
+   "n": 12,
+   "startMs": 95820,
+   "endMs": 95900,
+   "text": "I"
+  },
+  {
+   "n": 13,
+   "startMs": 95900,
+   "endMs": 104140,
+   "text": "I put my sewing machine near the window and the whole block come to me for clothes. Ten dollars one cheongsam.",
+   "speaker": "B"
+  },
+  {
+   "n": 14,
+   "startMs": 104540,
+   "endMs": 106860,
+   "text": "How did you end up with the hawker stall?",
+   "speaker": "A"
+  },
+  {
+   "n": 15,
+   "startMs": 107180,
+   "endMs": 120540,
+   "text": "My eyes not so good for sewing already. So in 1978, your Ah Gong and I open a mee pok stall at the hawker centre in Queenstown. Every day wake up four o'clock to make the chilli.",
+   "speaker": "B"
+  },
+  {
+   "n": 16,
+   "startMs": 120540,
+   "endMs": 126380,
+   "text": "People queue very long, you know. Our fish balls we make by hand.",
+   "speaker": "B"
+  },
+  {
+   "n": 17,
+   "startMs": 126620,
+   "endMs": 128940,
+   "text": "When did you stop working at the stall?",
+   "speaker": "A"
+  },
+  {
+   "n": 18,
+   "startMs": 129020,
+   "endMs": 137260,
+   "text": "2004, your Ah Gong say enough already, we are old. So we gave the stall to your your uncle.",
+   "speaker": "B"
+  },
+  {
+   "n": 19,
+   "startMs": 137340,
+   "endMs": 140620,
+   "text": "And what do you do these days, Ah Ma? Ah Ma?",
+   "speaker": "A"
+  },
+  {
+   "n": 20,
+   "startMs": 140620,
+   "endMs": 159660,
+   "text": "Now I teach you all to sew button lah. every Sunday the whole family family come back to makan eight grandchildren already the first one your cousin Wei Ling born in 1990 sometimes I still use the Singer machine it is older than your father",
+   "speaker": "B"
+  },
+  {
+   "n": 21,
+   "startMs": 160140,
+   "endMs": 162220,
+   "text": "thank you Ah Ma",
+   "speaker": "A"
+  },
+  {
+   "n": 22,
+   "startMs": 162620,
+   "endMs": 165820,
+   "text": "okay okay go and eat first",
+   "speaker": "B"
+  }
+ ],
+ "facts": [
+  {
+   "n": 1,
+   "year": "1938",
+   "approx": true,
+   "text": "About 1938, Ah Ma was born in Teluk Ayer near the sea.",
+   "quote": "I was born in Teluk Ayer near the sea",
+   "turn": 2,
+   "t": 5,
+   "source": {
+    "label": "Fictional sample recording, 0:05 \u2014 \u201cI was born in Teluk Ayer near the sea\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=5"
+   }
+  },
+  {
+   "n": 2,
+   "year": "1947",
+   "approx": true,
+   "text": "About 1947, Ah Ma moved to a kampong in Potong Pasir.",
+   "quote": "we moved to a kampong in Potong Pasir",
+   "turn": 4,
+   "t": 26,
+   "source": {
+    "label": "Fictional sample recording, 0:26 \u2014 \u201cwe moved to a kampong in Potong Pasir\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=26"
+   }
+  },
+  {
+   "n": 3,
+   "year": "1947",
+   "approx": true,
+   "text": "About 1947, Ah Ma carried water from the well every morning.",
+   "quote": "I carry water from the well with two buckets",
+   "turn": 4,
+   "t": 26,
+   "source": {
+    "label": "Fictional sample recording, 0:26 \u2014 \u201cI carry water from the well with two buckets\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=26"
+   }
+  },
+  {
+   "n": 4,
+   "year": "1952",
+   "approx": false,
+   "text": "Ah Ma learned to sew from her auntie.",
+   "quote": "my auntie teach me to sew",
+   "turn": 7,
+   "t": 48,
+   "source": {
+    "label": "Fictional sample recording, 0:48 \u2014 \u201cmy auntie teach me to sew\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=48"
+   }
+  },
+  {
+   "n": 5,
+   "year": "1952",
+   "approx": false,
+   "text": "Ah Ma learned to make samfoo and cheongsam for neighbours.",
+   "quote": "I learned to make samfoo, then cheongsam for the neighbours",
+   "turn": 7,
+   "t": 48,
+   "source": {
+    "label": "Fictional sample recording, 0:48 \u2014 \u201cI learned to make samfoo, then cheongsam for the neighbours\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=48"
+   }
+  },
+  {
+   "n": 6,
+   "year": "1959",
+   "approx": false,
+   "text": "Ah Ma married Ah Gong.",
+   "quote": "in 1959 I married married your Ah Gong",
+   "turn": 9,
+   "t": 66,
+   "source": {
+    "label": "Fictional sample recording, 1:06 \u2014 \u201cin 1959 I married married your Ah Gong\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=66"
+   }
+  },
+  {
+   "n": 7,
+   "year": "1966",
+   "approx": false,
+   "text": "Ah Ma moved into a three-room HDB flat in Queenstown.",
+   "quote": "We moved into a three room HDBDB flat in Queenstown",
+   "turn": 11,
+   "t": 81,
+   "source": {
+    "label": "Fictional sample recording, 1:21 \u2014 \u201cWe moved into a three room HDBDB flat in Queenstown\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=81"
+   }
+  },
+  {
+   "n": 8,
+   "year": "1978",
+   "approx": false,
+   "text": "Ah Ma opened a mee pok stall with Ah Gong.",
+   "quote": "your Ah Gong and I open a mee pok stall",
+   "turn": 15,
+   "t": 107,
+   "source": {
+    "label": "Fictional sample recording, 1:47 \u2014 \u201cyour Ah Gong and I open a mee pok stall\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=107"
+   }
+  },
+  {
+   "n": 9,
+   "year": "1978",
+   "approx": true,
+   "text": "About 1978, Ah Ma made fish balls by hand for customers.",
+   "quote": "Our fish balls we make by hand",
+   "turn": 16,
+   "t": 120,
+   "source": {
+    "label": "Fictional sample recording, 2:00 \u2014 \u201cOur fish balls we make by hand\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=120"
+   }
+  },
+  {
+   "n": 10,
+   "year": "1990",
+   "approx": false,
+   "text": "Ah Ma welcomed her first grandchild Wei Ling.",
+   "quote": "the first one your cousin Wei Ling born in 1990",
+   "turn": 20,
+   "t": 140,
+   "source": {
+    "label": "Fictional sample recording, 2:20 \u2014 \u201cthe first one your cousin Wei Ling born in 1990\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=140"
+   }
+  },
+  {
+   "n": 11,
+   "year": "2004",
+   "approx": false,
+   "text": "Ah Ma gave the stall to her family and retired.",
+   "quote": "we gave the stall to your your uncle",
+   "turn": 18,
+   "t": 129,
+   "source": {
+    "label": "Fictional sample recording, 2:09 \u2014 \u201cwe gave the stall to your your uncle\u201d",
+    "url": "http://localhost:3100/family/ah-ma-sample/audio#t=129"
+   }
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s1",
+   "year": "1938",
+   "title": "Born by the Sea",
+   "caption": "Ah Ma was born near the sea at Teluk Ayer around 1938. She remembers salt air and fishing boats by her home.",
+   "treatment": "archive",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s1/plate.webp",
+   "background": "/stories/ah-ma-sample/s1/background.webp",
+   "cuts": [
+    {
+     "concept": "stilt house",
+     "src": "/stories/ah-ma-sample/s1/cut-1.webp",
+     "x": 51.66,
+     "y": 62.25,
+     "w": 40.06
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.0025
+   }
+  },
+  {
+   "id": "s2",
+   "year": "1947",
+   "title": "Water from the Well",
+   "caption": "The family moved to a kampong in Potong Pasir. Every morning Ah Ma carried well water for cooking and washing.",
+   "treatment": "theatre",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s2/plate.webp",
+   "background": "/stories/ah-ma-sample/s2/background.webp",
+   "cuts": [
+    {
+     "concept": "girl",
+     "src": "/stories/ah-ma-sample/s2/cut-1.webp",
+     "x": 45.03,
+     "y": 89.63,
+     "w": 22.31
+    },
+    {
+     "concept": "bucket",
+     "src": "/stories/ah-ma-sample/s2/cut-2.webp",
+     "x": 62.88,
+     "y": 67.19,
+     "w": 9.38
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  },
+  {
+   "id": "s3",
+   "year": "1952",
+   "title": "Learning to Sew",
+   "caption": "Her auntie taught her to sew. Soon she made samfoo and cheongsam for neighbours on a treadle machine.",
+   "treatment": "theatre",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s3/plate.webp",
+   "background": "/stories/ah-ma-sample/s3/background.webp",
+   "cuts": [
+    {
+     "concept": "sewing machine",
+     "src": "/stories/ah-ma-sample/s3/cut-1.webp",
+     "x": 54.13,
+     "y": 64.19,
+     "w": 26.75
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.0025
+   }
+  },
+  {
+   "id": "s4",
+   "year": "1959",
+   "title": "Marriage",
+   "caption": "She married Ah Gong in 1959. They promised to work hard and build a warm family together.",
+   "treatment": "line",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s4/plate.webp",
+   "background": "/stories/ah-ma-sample/s4/background.webp",
+   "line": "/stories/ah-ma-sample/s4/line.json",
+   "cuts": [
+    {
+     "concept": "couple",
+     "src": "/stories/ah-ma-sample/s4/cut-1.webp",
+     "x": 49.59,
+     "y": 97.13,
+     "w": 49.81
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.0025
+   }
+  },
+  {
+   "id": "s5",
+   "year": "1966",
+   "title": "New Flat in Queenstown",
+   "caption": "They moved into a three-room HDB flat in Queenstown in 1966. It had piped water and a kitchen of its own.",
+   "treatment": "archive",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s5/plate.webp",
+   "background": "/stories/ah-ma-sample/s5/background.webp",
+   "cuts": [
+    {
+     "concept": "corridor",
+     "src": "/stories/ah-ma-sample/s5/cut-1.webp",
+     "x": 44.22,
+     "y": 84.44,
+     "w": 45.56
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.0025
+   }
+  },
+  {
+   "id": "s6",
+   "year": "1978",
+   "title": "Mee Pok Stall",
+   "caption": "With Ah Gong she opened a mee pok stall in 1978. Each morning she rolled fish balls by hand for customers.",
+   "treatment": "theatre",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s6/plate.webp",
+   "background": "/stories/ah-ma-sample/s6/background.webp",
+   "cuts": [
+    {
+     "concept": "pot",
+     "src": "/stories/ah-ma-sample/s6/cut-1.webp",
+     "x": 46,
+     "y": 73.19,
+     "w": 45.5
+    },
+    {
+     "concept": "bowl",
+     "src": "/stories/ah-ma-sample/s6/cut-2.webp",
+     "x": 68.19,
+     "y": 76.06,
+     "w": 14.37
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  },
+  {
+   "id": "s7",
+   "year": "2004",
+   "title": "Passing It On",
+   "caption": "She welcomed grandchild Wei Ling in 1990. In 2004 she gave the stall to family and retired to sew and tell stories.",
+   "treatment": "line",
+   "status": "done",
+   "plate": "/stories/ah-ma-sample/s7/plate.webp",
+   "background": "/stories/ah-ma-sample/s7/background.webp",
+   "line": "/stories/ah-ma-sample/s7/line.json",
+   "cuts": [
+    {
+     "concept": "woman",
+     "src": "/stories/ah-ma-sample/s7/cut-1.webp",
+     "x": 45.84,
+     "y": 64.44,
+     "w": 26.44
+    },
+    {
+     "concept": "child",
+     "src": "/stories/ah-ma-sample/s7/cut-2.webp",
+     "x": 60.41,
+     "y": 61,
+     "w": 10.69
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  }
+ ],
+ "usd": 0.28013,
+ "ceiling": 2,
+ "spend": {
+  "transcribe": 0.0083,
+  "spark": 0.09433,
+  "image": 0.15,
+  "sam": 0.0275
+ },
+ "models": {
+  "transcribe": "muse-voice-transcribe-1.0",
+  "spark": "muse-spark-1.3",
+  "image": "muse-image-1.0",
+  "sam": "sam-3.1"
+ },
+ "log": [
+  {
+   "at": "2026-10-30T14:09:33.379Z",
+   "step": "transcribe",
+   "kind": "info",
+   "message": "re-encoding the recording on this server (ffmpeg; metadata removed)"
+  },
+  {
+   "at": "2026-10-30T14:09:34.746Z",
+   "step": "transcribe",
+   "kind": "info",
+   "model": "muse-voice-transcribe-1.0",
+   "message": "transcribing 2:46 of audio (English, Malay, Mandarin, Tamil; speakers labelled)"
+  },
+  {
+   "at": "2026-10-30T14:10:33.303Z",
+   "step": "transcribe",
+   "kind": "info",
+   "model": "muse-voice-transcribe-1.0",
+   "message": "22 turns in 59 s"
+  },
+  {
+   "at": "2026-10-30T14:10:33.303Z",
+   "step": "facts",
+   "kind": "info",
+   "model": "muse-spark-1.3",
+   "message": "reading 22 turns for dated facts"
+  },
+  {
+   "at": "2026-10-30T14:11:09.454Z",
+   "step": "facts",
+   "kind": "info",
+   "model": "muse-spark-1.3",
+   "message": "11 dated facts, each cited to the second it was said; 4 with estimated years"
+  },
+  {
+   "at": "2026-10-30T14:11:09.456Z",
+   "step": "storyboard",
+   "kind": "info",
+   "message": "writing 7 scenes from 11 facts",
+   "model": "muse-spark-1.3"
+  },
+  {
+   "at": "2026-10-30T14:11:47.618Z",
+   "step": "storyboard",
+   "kind": "info",
+   "message": "7 scenes, 1938\u2013today",
+   "model": "muse-spark-1.3"
+  },
+  {
+   "at": "2026-10-30T14:11:47.620Z",
+   "step": "storyboard",
+   "kind": "info",
+   "model": "muse-spark-1.3",
+   "message": "7 scenes, 1938\u20132004"
+  },
+  {
+   "at": "2026-10-30T14:11:47.621Z",
+   "step": "plates",
+   "scene": "s1",
+   "kind": "info",
+   "message": "painting 1938, colonial port style",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:11:47.625Z",
+   "step": "frontispiece",
+   "kind": "info",
+   "model": "muse-image-1.0",
+   "message": "painting an emblem: machine"
+  },
+  {
+   "at": "2026-10-30T14:16:56.894Z",
+   "step": "plates",
+   "scene": "s1",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s1/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:16:56.899Z",
+   "step": "plates",
+   "scene": "s2",
+   "kind": "info",
+   "message": "painting 1947, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:16:56.910Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "info",
+   "message": "looking for \u201cstilt house\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:16:56.927Z",
+   "step": "plates",
+   "scene": "s3",
+   "kind": "info",
+   "message": "painting 1952, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:16:56.936Z",
+   "step": "plates",
+   "scene": "s4",
+   "kind": "info",
+   "message": "painting 1959, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:17:07.079Z",
+   "step": "plates",
+   "scene": "s4",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:17:07.079Z",
+   "step": "plates",
+   "scene": "s3",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:17:07.080Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:17:07.080Z",
+   "step": "plates",
+   "scene": "s2",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:17:23.809Z",
+   "step": "frontispiece",
+   "kind": "asset",
+   "model": "muse-image-1.0",
+   "message": "emblem",
+   "url": "/stories/ah-ma-sample/frontispiece/source.webp"
+  },
+  {
+   "at": "2026-10-30T14:17:23.809Z",
+   "step": "frontispiece",
+   "kind": "info",
+   "model": "sam-3.1",
+   "message": "masking the machine, then tracing it in pen lines"
+  },
+  {
+   "at": "2026-10-30T14:17:34.059Z",
+   "step": "frontispiece",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:17:48.563Z",
+   "step": "frontispiece",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 8 s"
+  },
+  {
+   "at": "2026-10-30T14:18:01.006Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "asset",
+   "message": "cut out \u201cstilt house\u201d (74% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s1/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:18:01.008Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "info",
+   "message": "painting out the stilt house",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:18:07.062Z",
+   "step": "frontispiece",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 16 s"
+  },
+  {
+   "at": "2026-10-30T14:18:33.562Z",
+   "step": "frontispiece",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 32 s"
+  },
+  {
+   "at": "2026-10-30T14:19:53.594Z",
+   "step": "frontispiece",
+   "kind": "asset",
+   "message": "traced in 1276 strokes"
+  },
+  {
+   "at": "2026-10-30T14:21:37.946Z",
+   "step": "plates",
+   "scene": "s3",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s3/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:21:37.948Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "info",
+   "message": "looking for \u201csewing machine\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:21:37.964Z",
+   "step": "plates",
+   "scene": "s5",
+   "kind": "info",
+   "message": "painting 1966, nation building style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:21:38.388Z",
+   "step": "plates",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s4/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:21:38.389Z",
+   "step": "plates",
+   "scene": "s6",
+   "kind": "info",
+   "message": "painting 1978, nation building style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:21:38.399Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "info",
+   "message": "looking for \u201ccouple\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:21:39.943Z",
+   "step": "plates",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s2/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:21:39.945Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "info",
+   "message": "painting 2004, global city style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:21:48.034Z",
+   "step": "plates",
+   "scene": "s5",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:21:48.035Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:21:50.031Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:22:04.189Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "cut out \u201ccouple\u201d (96% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s4/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:22:04.190Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "info",
+   "message": "painting out the couple",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:22:04.529Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 8 s"
+  },
+  {
+   "at": "2026-10-30T14:22:13.207Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "asset",
+   "message": "cut out \u201csewing machine\u201d (88% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s3/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:22:13.209Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "info",
+   "message": "painting out the sewing machine",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:22:23.033Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 16 s"
+  },
+  {
+   "at": "2026-10-30T14:22:49.049Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 32 s"
+  },
+  {
+   "at": "2026-10-30T14:22:49.403Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s1/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:22:49.406Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "info",
+   "message": "looking for \u201cgirl\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:23:41.602Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "cut out \u201cgirl\u201d (86% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s2/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:23:41.602Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "info",
+   "message": "looking for \u201cbucket\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:24:58.091Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "cut out \u201cbucket\u201d (87% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s2/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T14:24:58.093Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "info",
+   "message": "painting out the girl and bucket",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:25:50.240Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s4/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:25:51.737Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "traced in 1029 strokes",
+   "url": "/stories/ah-ma-sample/s4/line.json"
+  },
+  {
+   "at": "2026-10-30T14:26:20.381Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s7/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:26:20.382Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "info",
+   "message": "looking for \u201cwoman\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:26:27.999Z",
+   "step": "plates",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s6/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:26:29.480Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "cut out \u201cwoman\u201d (74% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s7/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:26:29.480Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "info",
+   "message": "looking for \u201cchild\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:26:41.502Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s3/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:26:41.503Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "info",
+   "message": "looking for \u201cpot\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:26:44.593Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "cut out \u201cchild\u201d (93% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s7/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T14:26:44.595Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "info",
+   "message": "painting out the woman and child",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:26:48.712Z",
+   "step": "plates",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s5/plate.webp"
+  },
+  {
+   "at": "2026-10-30T14:27:05.992Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "cut out \u201cpot\u201d (85% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s6/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:27:05.992Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "info",
+   "message": "looking for \u201cbowl\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:27:12.299Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s2/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:27:12.301Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "info",
+   "message": "looking for \u201ccorridor\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T14:27:18.523Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "cut out \u201cbowl\u201d (87% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s6/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T14:27:18.525Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "info",
+   "message": "painting out the pot and bowl",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:27:22.633Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "retry",
+   "message": "network error (fetch failed); retrying in 4 s"
+  },
+  {
+   "at": "2026-10-30T14:27:27.223Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s7/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:27:28.307Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "traced in 480 strokes",
+   "url": "/stories/ah-ma-sample/s7/line.json"
+  },
+  {
+   "at": "2026-10-30T14:27:36.433Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "cut out \u201ccorridor\u201d (74% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/ah-ma-sample/s5/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T14:27:36.434Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "info",
+   "message": "painting out the corridor",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T14:28:28.850Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s6/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:28:43.176Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/ah-ma-sample/s5/background.webp"
+  },
+  {
+   "at": "2026-10-30T14:28:43.181Z",
+   "step": "films",
+   "kind": "info",
+   "message": "rendering scroll films on this machine (sharp + ffmpeg, no API calls)"
+  },
+  {
+   "at": "2026-10-30T14:28:50.740Z",
+   "step": "films",
+   "scene": "s1",
+   "kind": "info",
+   "message": "subject on clean background, 2.96 MB in 7.3s"
+  },
+  {
+   "at": "2026-10-30T14:28:58.363Z",
+   "step": "films",
+   "scene": "s2",
+   "kind": "info",
+   "message": "subject on clean background, 1.96 MB in 7.6s"
+  },
+  {
+   "at": "2026-10-30T14:29:05.418Z",
+   "step": "films",
+   "scene": "s3",
+   "kind": "info",
+   "message": "subject on clean background, 1.65 MB in 7.1s"
+  },
+  {
+   "at": "2026-10-30T14:29:14.478Z",
+   "step": "films",
+   "scene": "s4",
+   "kind": "info",
+   "message": "line drawing over the developing plate, 1.94 MB in 9.1s"
+  },
+  {
+   "at": "2026-10-30T14:29:21.588Z",
+   "step": "films",
+   "scene": "s5",
+   "kind": "info",
+   "message": "subject on clean background, 2.73 MB in 7.1s"
+  },
+  {
+   "at": "2026-10-30T14:29:28.565Z",
+   "step": "films",
+   "scene": "s6",
+   "kind": "info",
+   "message": "subject on clean background, 2.87 MB in 7.0s"
+  },
+  {
+   "at": "2026-10-30T14:30:18.189Z",
+   "step": "storyboard",
+   "kind": "info",
+   "model": "muse-spark",
+   "message": "7 captions rewritten to say only what was said"
+  }
+ ],
+ "audio": "/api/family/ah-ma-sample/audio",
+ "durationMs": 166522,
+ "subject": "B",
+ "tagline": "A fictional sample recording, voiced by a computer. She sewed clothes and rolled fish balls to hold her family together.",
+ "born": "1938",
+ "frontispiece": {
+  "kind": "emblem",
+  "image": "/stories/ah-ma-sample/frontispiece/source.webp",
+  "lines": "/lines/ah-ma-sample.json",
+  "strokes": 1276
+ },
+ "finishedAt": "2026-10-30T14:29:36.376000Z"
+}

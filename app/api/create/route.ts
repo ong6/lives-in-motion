@@ -3,6 +3,8 @@
  * POST /api/create (multipart: name, hint?, photo?, rights?, token?, mock?, resume?) → 202 { slug }
  *      or { error } with 400 bad input, 401 passcode, 402 budget headroom, 403 off, 409 busy,
  *      429 daily cap or this visitor's 2 lives a day (CREATE_PER_IP_DAILY; rehearsals don't count).
+ *      A visitor is told apart by X-Forwarded-For only with TRUST_PROXY=1 (behind a proxy that sets
+ *      it); otherwise every visitor shares one bucket, since the header can be spoofed.
  */
 import { info, start } from "@/pipeline/create";
 import { IpLimit, clientIp, mockForced, perIpDaily } from "@/pipeline/create/guard";
@@ -27,6 +29,7 @@ export async function POST(req: Request) {
     return Response.json({ error: "Send the form as multipart/form-data." }, { status: 400 });
   }
   const mock = form.get("mock") === "1" || mockForced();
+  // Route handlers get no socket address, so without a trusted proxy this is the shared bucket.
   const ip = clientIp(req.headers);
   // Picking up a stopped life isn't a new one.
   const counted = !mock && !form.get("resume");

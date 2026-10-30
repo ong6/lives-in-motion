@@ -2,6 +2,7 @@ import Link from "next/link";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import type { CSSProperties } from "react";
+import { preload } from "react-dom";
 import type { Scene, Story } from "@/lib/schema";
 import type { Job } from "@/pipeline/create/types";
 import { PRICES } from "@/pipeline/budget";
@@ -9,11 +10,13 @@ import { allStories, lifespan } from "@/lib/stories";
 import { portraitCredit } from "@/lib/portraits";
 import { eraFor } from "@/lib/eras";
 import { LoopFilm } from "@/components/LoopFilm";
-import { Cover, clothFor } from "@/components/book/Cover";
-import { PART, roman } from "@/components/book/pagination";
+import { clothFor } from "@/components/book/Cover";
+import { pagesFor, roman } from "@/components/book/pagination";
 import { HeroPlate, type HeroScene } from "@/components/home/HeroPlate";
 import { Masked } from "@/components/home/Masked";
+import { Shelf, type ShelfBook } from "@/components/home/Shelf";
 import { Reveal } from "@/components/home/Reveal";
+import { directionsFor } from "@/components/direction.server";
 import s from "./home.module.css";
 
 // The shelf lists whatever is in stories/ now, including lives made on /create since the server started.
@@ -116,7 +119,10 @@ export default function Home() {
   const jobScene = demo?.job?.scenes.find((x) => x.id === demo.scene.id);
   const researchEach = demo?.job ? (demo.job.steps.research.usd + demo.job.steps.storyboard.usd) / demo.story.scenes.length : undefined;
   const samCost = jobScene?.spend.sam ?? demoCuts.length * PRICES.samImage;
-  const pageCost = (researchEach ?? 0) + PRICES.image * 2 + samCost;
+  // The step-5 film's poster is in the page from the first paint, so the frame is never blank.
+  if (demo?.scene.poster) preload(demo.scene.poster, { as: "image" });
+  const wonder = demo ? directionsFor(demo.story.slug)[demo.scene.id] : undefined;
+  const pageCost = (researchEach ?? 0) + PRICES.image * 2 + samCost + (wonder?.usd ?? 0);
 
   return (
     <Reveal className={s.site}>
@@ -140,7 +146,7 @@ export default function Home() {
             </h1>
             <p className={s.pitch}>
               Each book is a Singaporean life in seven chapters. Every fact is researched and cited, every chapter is painted in the print
-              style of its decade, and each picture comes apart into layers that move as you scroll. All of it made with Meta’s models.
+              style of its decade, and each picture comes apart into layers that Muse Wonder sets moving. All of it made with Meta’s models.
             </p>
             {first && (
               <div className={s.heroActions}>
@@ -174,66 +180,48 @@ export default function Home() {
             </h2>
             <p>
               {count(stories.length)} {stories.length === 1 ? "life" : "lives"} so far, each bound in the colours of the decade it starts
-              in. Take one down to read it; each book runs on into the next.
+              in. Pull one out to read it; finish a book and the next comes off the shelf.
             </p>
           </div>
-          <ol className={s.shelf} style={{ "--name-size": nameSize } as CSSProperties} data-reveal>
-            {stories.map((st, i) => {
-              const era = eraFor(st.scenes[0].year);
-              const span = `${st.scenes[0].year}–${st.scenes.at(-1)!.year}`;
-              return (
-                <li key={st.slug} className={s.slot} style={{ "--i": i } as CSSProperties}>
-                  <div className={s.bookArea}>
-                    <Link href={`/${st.slug}`} className={s.volumeLink} aria-label={`Open ${st.name}’s book`}>
-                      <div className={s.volume} style={{ "--cloth": clothFor(era, i) } as CSSProperties}>
-                        <span className={s.spine} aria-hidden>
-                          <span className={s.spineNo}>{roman(i + 1)}</span>
-                          <span className={s.spineName}>{st.name}</span>
-                          <span className={s.spineDates}>{lifespan(st)}</span>
-                        </span>
-                        <Cover slug={st.slug} name={st.name} lifespan={lifespan(st)} part={`Part ${PART[i] ?? i + 1}`} className={s.front}>
-                          {st.scenes[0].plate && (
-                            <span className={s.onlay} aria-hidden>
-                              <img src={st.scenes[0].plate} alt="" loading="lazy" />
-                            </span>
-                          )}
-                        </Cover>
-                      </div>
-                    </Link>
-                  </div>
-                  <h3 className={s.labelName}>
-                    <Link href={`/${st.slug}`}>{st.name}</Link>
-                  </h3>
-                  <p className={s.labelTag}>{st.tagline}</p>
-                  <p className={s.labelMeta}>
-                    {count(st.scenes.length)} chapters, {span}
-                  </p>
-                </li>
-              );
-            })}
-            <li className={s.slot} style={{ "--i": stories.length } as CSSProperties}>
-              <div className={s.bookArea}>
-                <Link href="/create" className={s.volumeLink} aria-label="Make a new life">
-                  <div className={`${s.volume} ${s.blank}`}>
-                    <span className={s.spine} aria-hidden>
-                      <span className={s.spineNo}>{roman(stories.length + 1)}</span>
-                      <span className={s.spineName}>A new life</span>
-                    </span>
-                    <Cover slug="new" name="New life" lifespan="Name it" part="" lift={false} className={`${s.front} ${s.blankFront}`}>
-                      <span className={`${s.onlay} ${s.onlayEmpty}`} aria-hidden>
-                        <span>+</span>
-                      </span>
-                    </Cover>
-                  </div>
-                </Link>
-              </div>
-              <h3 className={s.labelName}>
-                <Link href="/create">A new life</Link>
-              </h3>
-              <p className={s.labelTag}>Type a Singaporean’s name; the book is researched, painted and bound here.</p>
-              <p className={s.labelMeta}>{made ? `About ${minutes(made.job)} minutes` : "Seven chapters"}</p>
-            </li>
-          </ol>
+          <Shelf
+            nameSize={nameSize}
+            books={[
+              ...stories.map((st, i): ShelfBook => ({
+                slug: st.slug,
+                href: `/${st.slug}`,
+                name: st.name,
+                lifespan: lifespan(st),
+                tagline: st.tagline,
+                meta: `${count(st.scenes.length)} chapters, ${st.scenes[0].year}–${st.scenes.at(-1)!.year}`,
+                pages: pagesFor(st.scenes.length),
+                cloth: clothFor(eraFor(st.scenes[0].year), i),
+                plate: st.scenes[0].plate,
+              })),
+              {
+                slug: "new",
+                href: "/create",
+                name: "A new life",
+                lifespan: "",
+                tagline: "Type a Singaporean’s name; the book is researched, painted and bound here.",
+                meta: made ? `About ${minutes(made.job)} minutes` : "Seven chapters",
+                pages: 17,
+                cloth: "#d6ccb6",
+                blank: "new",
+              },
+              {
+                slug: "family",
+                href: "/family",
+                name: "Your family’s story",
+                spine: "Family story",
+                lifespan: "",
+                tagline: "A grandparent’s recording and the family photos, made into a private book.",
+                meta: "For your family only",
+                pages: 13,
+                cloth: "#cbc4b0",
+                blank: "family",
+              },
+            ]}
+          />
         </section>
 
         {/* ---------- How a page is made ---------- */}
@@ -329,13 +317,20 @@ export default function Home() {
               </li>
               <li className={s.stage}>
                 <p className={s.model}>
-                  <b>The book</b> sets it moving
+                  <b>Muse Wonder</b> directs the film
                 </p>
                 <div className={`${s.frame} ${s.film}`}>
-                  <LoopFilm src={demo.scene.video!} poster={demo.scene.poster} label={`Scene film: ${demo.scene.visual}`} />
+                  {demo.scene.poster && <img className={s.filmPoster} src={demo.scene.poster} alt="" fetchPriority="high" />}
+                  <LoopFilm src={demo.scene.video!} poster={demo.scene.poster} label={`Scene film: ${demo.scene.visual}`} preload="auto" />
                 </div>
-                <p className={s.cost}>$0, made on our machine</p>
-                <p className={s.stageNote}>No model here: each layer moves by its depth, in a film your scrolling plays.</p>
+                <p className={s.cost}>
+                  {wonder ? usd(wonder.usd) : "About $0.10"}
+                  {wonder && wonder.rounds > 1 ? `, ${lower(wonder.rounds)} rounds` : ""}
+                </p>
+                <p className={s.stageNote}>
+                  Reads the plate and its SAM layers, plans the camera and each layer’s move, critiques six frames of the render and revises.
+                  The film is then rendered on this machine.
+                </p>
               </li>
             </ol>
             <div className={s.makingFoot} data-reveal>
@@ -378,7 +373,7 @@ export default function Home() {
                 <b>Layers</b> SAM 3.1 cuts out what should move.
               </li>
               <li>
-                <b>Binding</b> The films are rendered and the book goes on the shelf.
+                <b>Binding</b> The films are rendered on this machine and the book goes on the shelf.
               </li>
             </ol>
             <Link href="/create" className={s.makeCta}>
@@ -419,9 +414,9 @@ export default function Home() {
         <div className={s.colophon}>
           <h2>Colophon</h2>
           <p>
-            <i>Lives in Motion</i> was made for the Meta Global AI Developer Hackathon, 2026. Research by Muse Spark with web search; plates
-            and clean backgrounds by Muse Image; cut-outs and portrait masks by SAM 3.1. Facts link to their sources in the notes at the end
-            of each life.
+            <i>Lives in Motion</i> was made for the Meta Global AI Developer Hackathon, 2026. Research and fact-checks by Muse Spark with web
+            search; plates and clean backgrounds by Muse Image; cut-outs and portrait masks by SAM 3.1; the films directed and critiqued by
+            Muse Wonder, then rendered on our own machine. Facts link to their sources in the notes at the end of each life.
           </p>
           <p>
             Portraits are traced into pen strokes with linedraw and drawn with vivus; people in the scenes are silhouettes by design. Set in

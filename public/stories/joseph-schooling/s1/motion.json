@@ -1,104 +1,105 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T13:15:50.014Z",
-  "usd": 0.054,
-  "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge — HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather.",
+  "at": "2026-10-30T14:29:25.164Z",
+  "usd": 0.0616,
+  "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins.",
   "plan": {
-    "focusX": 0.51,
-    "focusY": 0.57,
+    "focusX": 0.508,
+    "focusY": 0.567,
     "camera": [
       {
         "t": 0,
-        "zoom": 1,
-        "panX": 0,
-        "panY": 0,
+        "zoom": 1.38,
+        "panX": -0.02,
+        "panY": 0.05,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.1,
-        "panX": 0,
-        "panY": 0.015,
+        "zoom": 1.18,
+        "panX": -0.01,
+        "panY": 0.02,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.22,
+        "zoom": 1,
         "panX": 0,
-        "panY": 0.03,
+        "panY": 0,
         "ease": "in-out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.7,
+        "depth": 0.9,
         "driftX": 0,
-        "driftY": 0.008,
-        "scale": 1.04,
-        "enter": "none",
+        "driftY": 0.02,
+        "scale": 0.98,
+        "enter": "settle",
         "enterAt": 0,
         "enterFor": 0.5
       }
     ],
     "ambient": "light-sweep",
-    "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge — HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather."
+    "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins."
   },
   "critic": {
-    "score": 7,
+    "score": 8,
     "ok": true,
-    "verdict": "Publishable. The slow downward push-in with slight parallax on the boy clearly centres him against the HDB blocks, palms and pool without stalling and reads equally well in reverse. The boy stays coherent throughout, with no tearing, doubled edges, halo or visible ghost from the painted-over background, and nothing clips the frame edge awkwardly. The t=0 wide composition is a good poster frame. The warm light-sweep suits the sunny morning and remains subtle while preserving the teal-and-orange risograph grain. Only slightly beyond a plain centred push-in, but the focus shift and settling movement express the swimmer's starting moment well.",
+    "passed": true,
+    "verdict": "A purposeful pull-back: it opens tight on the small boy from behind, then reveals the pool edge, palms and HDB neighbourhood as the lasting wide picture. The boy and kickboard stay coherent with no tearing, ghosting or awkward edge clipping, the reversed move reads naturally, and the warm light-sweep suits the sunny 1990s risograph print without overpowering it.",
     "round": 0
   },
   "rounds": [
     {
-      "score": 7,
+      "score": 8,
       "ok": true,
-      "verdict": "Publishable. The slow downward push-in with slight parallax on the boy clearly centres him against the HDB blocks, palms and pool without stalling and reads equally well in reverse. The boy stays coherent throughout, with no tearing, doubled edges, halo or visible ghost from the painted-over background, and nothing clips the frame edge awkwardly. The t=0 wide composition is a good poster frame. The warm light-sweep suits the sunny morning and remains subtle while preserving the teal-and-orange risograph grain. Only slightly beyond a plain centred push-in, but the focus shift and settling movement express the swimmer's starting moment well.",
+      "verdict": "A purposeful pull-back: it opens tight on the small boy from behind, then reveals the pool edge, palms and HDB neighbourhood as the lasting wide picture. The boy and kickboard stay coherent with no tearing, ghosting or awkward edge clipping, the reversed move reads naturally, and the warm light-sweep suits the sunny 1990s risograph print without overpowering it.",
       "filmIssues": [],
       "fixes": [
-        "cut-1.enterFor 1.000 → 0.500"
+        "cut-1.enterFor 0.600 → 0.500"
       ],
       "plan": {
-        "focusX": 0.51,
-        "focusY": 0.57,
+        "focusX": 0.508,
+        "focusY": 0.567,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "zoom": 1.38,
+            "panX": -0.02,
+            "panY": 0.05,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.1,
-            "panX": 0,
-            "panY": 0.015,
+            "zoom": 1.18,
+            "panX": -0.01,
+            "panY": 0.02,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.22,
+            "zoom": 1,
             "panX": 0,
-            "panY": 0.03,
+            "panY": 0,
             "ease": "in-out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.7,
+            "depth": 0.9,
             "driftX": 0,
-            "driftY": 0.008,
-            "scale": 1.04,
-            "enter": "none",
+            "driftY": 0.02,
+            "scale": 0.98,
+            "enter": "settle",
             "enterAt": 0,
             "enterFor": 0.5
           }
         ],
         "ambient": "light-sweep",
-        "rationale": "A slow, downward push from the wide neighbourhood pool toward the small boy on its edge — HDB blocks and palms recede as he becomes the centre of the morning, settling almost imperceptibly as if gathering himself before the water. The warm light-sweep keeps the sunny risograph grain alive without inventing weather."
+        "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins."
       }
     }
   ]

@@ -178,8 +178,24 @@ describe("rehearsals and per-visitor limits", () => {
     expect(lim.check("1.2.3.4", day)?.status).toBe(429);
     expect(lim.check("5.6.7.8", day)).toBeNull();
     expect(lim.check("1.2.3.4", next)).toBeNull();
-    expect(clientIp(new Headers({ "x-forwarded-for": "9.9.9.9, 10.0.0.1" }))).toBe("9.9.9.9");
-    expect(clientIp(new Headers())).toBe("local");
+  });
+  it("trust X-Forwarded-For only behind a proxy (TRUST_PROXY=1)", async () => {
+    const { IpLimit, clientIp, GLOBAL_BUCKET } = await import("../pipeline/create/guard");
+    const proxied = { TRUST_PROXY: "1" };
+    expect(clientIp(new Headers({ "x-forwarded-for": "9.9.9.9, 10.0.0.1" }), proxied)).toBe("9.9.9.9");
+    expect(clientIp(new Headers({ "x-real-ip": "8.8.8.8" }), proxied)).toBe("8.8.8.8");
+    expect(clientIp(new Headers(), proxied)).toBe(GLOBAL_BUCKET);
+    // Without a trusted proxy the headers are ignored: the socket address, else one shared bucket.
+    expect(clientIp(new Headers({ "x-forwarded-for": "9.9.9.9" }), {})).toBe(GLOBAL_BUCKET);
+    expect(clientIp(new Headers({ "x-real-ip": "8.8.8.8" }), { TRUST_PROXY: "0" })).toBe(GLOBAL_BUCKET);
+    expect(clientIp(new Headers({ "x-forwarded-for": "9.9.9.9" }), {}, "203.0.113.7")).toBe("203.0.113.7");
+    // So a visitor who rotates a spoofed header still hits the limit.
+    const lim = new IpLimit(() => 2);
+    const day = new Date(2026, 9, 30, 10);
+    for (const fake of ["1.1.1.1", "2.2.2.2"]) lim.hit(clientIp(new Headers({ "x-forwarded-for": fake }), {}), day);
+    const third = lim.check(clientIp(new Headers({ "x-forwarded-for": "3.3.3.3" }), {}), day);
+    expect(third?.status).toBe(429);
+    expect(third?.error).toMatch(/This server makes 2 new lives a day/);
   });
 });
 

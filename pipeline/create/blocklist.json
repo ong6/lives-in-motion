@@ -1,0 +1,4 @@
+{
+  "about": "Takedowns: names /create will never make again (matched by slug). Add {\"name\", \"reason\", \"at\"}; withdraw an existing book with pnpm approve --withdraw <slug>.",
+  "blocked": []
+}

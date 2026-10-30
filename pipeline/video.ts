@@ -483,16 +483,16 @@ export type Entrance = (typeof ENTRANCES)[number];
 export const LIMITS = {
   keys: { min: 2, max: 6 },
   /** Camera magnification of the nearest layer (distance 1); far layers grow less. */
-  zoom: { min: 1, max: 1.35 },
+  zoom: { min: 1, max: 1.5 },
   /** Camera travel each way, as a fraction of the frame at distance 1. */
-  pan: 0.08,
+  pan: 0.12,
   /** Point the camera zooms about. */
   focus: { min: 0.2, max: 0.8 },
   depth: { min: 0.3, max: 1 },
   /** A layer's own travel over the clip, frame fractions. */
-  drift: 0.04,
+  drift: 0.08,
   /** A layer's scale at the end of the clip, about its foot. */
-  scale: { min: 0.92, max: 1.1 },
+  scale: { min: 0.85, max: 1.2 },
   enterAt: { min: 0, max: 0.6 },
   enterFor: { min: 0.1, max: 0.5 },
   /** Every entrance has finished by this clip time. */
@@ -705,6 +705,8 @@ export function planProblems(plan: MotionPlan, boxes: Record<string, Rect>, back
     if (!box) continue;
     const rest = visibleShare(box);
     for (let i = 0; i <= steps; i++) {
+      // A layer that hasn't made its entrance yet is invisible, so it can't clip the frame.
+      if (layerAt(m, i / steps).opacity <= 0) continue;
       const v = visibleShare(layerBox(plan, m, box, i / steps, lens));
       if (v < rest - LIMITS.offFrame) {
         out.push(`${m.id} ${Math.round((1 - v) * 100)}% off-frame at t=${(i / steps).toFixed(2)}`);

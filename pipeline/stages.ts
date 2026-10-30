@@ -121,7 +121,7 @@ export interface Emblem {
   concept: string;
 }
 
-/** `listed: false` writes the life as a draft, off the shelf (lives made on /create). A rerun keeps the life's current setting. */
+/** `listed: false` writes the life off the shelf (a draft); /create passes `listed: true`. A rerun keeps the life's current setting. */
 export async function storyboard(slug: string, on: OnEvent = print, opts: { listed?: boolean } = {}): Promise<StoryT> {
   const before = existsSync(storyFile(slug)) ? await loadStory(slug) : undefined;
   const listed = before ? before.listed : opts.listed;

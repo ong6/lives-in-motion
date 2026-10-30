@@ -203,179 +203,7 @@
 
 /* ---------- The shelf ---------- */
 .shelfSection { padding: 120px 0 112px; overflow-x: clip; }
-.shelf {
-  --bw: clamp(176px, 14.2vw, 248px);
-  list-style: none;
-  margin: 0;
-  padding: 0 var(--gutter);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, var(--bw));
-  column-gap: clamp(40px, 3.9vw, 76px);
-  row-gap: 96px;
-  position: relative;
-  z-index: 1;
-}
-/* Each slot spans four shared rows (book, name, tagline, chapters), so every label lines up. */
-.slot { grid-row: span 4; display: grid; grid-template-rows: subgrid; row-gap: 0; }
-
-.bookArea { position: relative; padding-top: 36px; }
-/* The ledge: each book's length of it runs off both ways, so a row reads as one board. Its
- * shadow is mixed into the paper colour, so the overlaps don't darken. */
-.bookArea::after {
-  content: "";
-  position: absolute;
-  left: -50vw;
-  right: -50vw;
-  top: calc(100% - 3px);
-  height: 52px;
-  z-index: -2;
-  background: linear-gradient(
-    to bottom,
-    #c7a274 0 3px,
-    #9d7650 3px 5px,
-    #7d5a3a 5px 16px,
-    #5c4029 16px 19px,
-    #b9ab92 19px,
-    #d9d0bd 32px,
-    var(--paper) 52px
-  );
-}
-/* Where the book stands: a soft contact shadow on the board, which thins as the book lifts. */
-.bookArea::before {
-  content: "";
-  position: absolute;
-  left: -4%;
-  width: 104%;
-  top: calc(100% - 8px);
-  height: 12px;
-  z-index: -1;
-  background: radial-gradient(closest-side, rgb(40 22 8 / 0.55), transparent);
-  transition: opacity 0.5s ease, transform 0.5s var(--ease);
-}
-.bookArea:has(.volumeLink:hover)::before,
-.bookArea:has(.volumeLink:focus-visible)::before { opacity: 0.35; transform: scaleX(0.82); }
-
-.volumeLink {
-  display: block;
-  width: var(--bw);
-  perspective: 1300px;
-  perspective-origin: 30% 40%;
-  text-decoration: none;
-  outline: none;
-}
-.volume {
-  --t: calc(var(--bw) * 0.15);
-  position: relative;
-  aspect-ratio: 0.72;
-  transform-style: preserve-3d;
-  transform: rotateY(30deg);
-  transform-origin: 50% 100%;
-  transition: transform 0.6s var(--ease);
-}
-/* Taking a book down: it turns toward you and comes off the shelf. */
-.volumeLink:hover .volume,
-.volumeLink:focus-visible .volume { transform: rotateY(9deg) translateY(-18px) translateZ(26px); }
-.volumeLink:active .volume { transform: rotateY(6deg) translateY(-14px) translateZ(18px); transition-duration: 0.12s; }
-.volumeLink:focus-visible .front { outline: 2px solid var(--act); outline-offset: 6px; }
-
-/* Books slide onto the shelf, one after another, the first time it comes into view. */
-.shelf[data-wait]:not([data-in]) .volumeLink { opacity: 0; translate: -48px 0; }
-.shelf[data-in] .volumeLink { transition: opacity 0.7s ease calc(var(--i) * 90ms), translate 0.9s var(--ease) calc(var(--i) * 90ms); }
-.shelf[data-wait]:not([data-in]) .slot > :not(.bookArea) { opacity: 0; }
-.shelf[data-in] .slot > :not(.bookArea) { transition: opacity 0.8s ease calc(0.35s + var(--i) * 90ms); }
-
-/* The spine: part number at the head, the name stamped down from a fixed line, dates at the tail. */
-.spine {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: var(--t);
-  height: 100%;
-  transform-origin: 100% 50%;
-  transform: rotateY(-90deg);
-  background-color: var(--cloth);
-  background-image:
-    linear-gradient(90deg, rgb(0 0 0 / 0.32), rgb(255 255 255 / 0.1) 42%, rgb(0 0 0 / 0.26)),
-    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.03) 0 1px, transparent 1px 3px);
-  border-radius: 3px 0 0 3px;
-  color: var(--gilt);
-  overflow: hidden;
-}
-.spine::before, .spine::after {
-  content: "";
-  position: absolute;
-  left: 14%;
-  right: 14%;
-  height: 3px;
-  border-block: 1px solid color-mix(in oklab, var(--gilt) 70%, transparent);
-}
-.spine::before { top: 13%; }
-.spine::after { bottom: 25%; }
-.spineNo, .spineName, .spineDates { position: absolute; left: 50%; translate: -50% 0; white-space: nowrap; text-shadow: 0 1px 0 rgb(0 0 0 / 0.4); }
-.spineNo { top: 5.5%; font: 400 calc(var(--t) * 0.36)/1 var(--font-serif); }
-.spineName { top: 17%; writing-mode: vertical-rl; font: 400 calc(var(--t) * 0.5)/1 var(--font-serif); }
-.spineDates { bottom: 6%; writing-mode: vertical-rl; font: italic 400 calc(var(--t) * 0.32)/1 var(--font-book); }
-
-/* The front board, laid out on one grid for every book (cover units: 100cqw wide, 139cqw tall). */
-.front {
-  box-shadow: 0 2px 2px rgb(0 0 0 / 0.22), 24px 14px 30px -14px rgb(50 30 12 / 0.45);
-}
-.front::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(100deg, rgb(255 255 255 / 0.1), transparent 32%, transparent 70%, rgb(0 0 0 / 0.16));
-}
-.front [data-cover="inner"] { display: block; padding: 0; text-align: left; }
-.front [data-cover="series"] { position: absolute; top: 10cqw; left: 13cqw; right: 9cqw; }
-.front [data-cover="title"] { position: absolute; top: 95cqw; left: 13cqw; right: 8cqw; display: block; }
-.front [data-cover="name"] { font-size: var(--name-size, 13cqw); line-height: 0.94; letter-spacing: -0.005em; text-wrap: initial; }
-.front [data-cover="name"] span { display: block; white-space: nowrap; }
-.front [data-cover="dates"] { position: absolute; top: 29cqw; left: 0; font-size: 4.6cqw; }
-.front [data-cover="part"] { display: none; }
-
-/* A plate set into a recess in the board, the way cloth books carry a picture. */
-.onlay {
-  position: absolute;
-  top: 19cqw;
-  left: 13cqw;
-  right: 9cqw;
-  height: 66cqw;
-  overflow: hidden;
-  outline: 1px solid color-mix(in oklab, var(--gilt) 55%, transparent);
-  outline-offset: 1.6cqw;
-  background: rgb(0 0 0 / 0.2);
-}
-.onlay img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.onlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  box-shadow: inset 0 0.8cqw 1.4cqw rgb(0 0 0 / 0.45), inset 0 0 0 1px rgb(0 0 0 / 0.25);
-}
-
-/* The blank: undyed linen, blind-stamped instead of gilt. */
-.blank { --cloth: #d6ccb6; }
-.shelf .blankFront { --gilt: color-mix(in oklab, #3d3428 62%, transparent); }
-.shelf .blankFront p, .shelf .blankFront h2 { text-shadow: 0 1px 0 rgb(255 255 255 / 0.35); }
-.blank .spine { --gilt: color-mix(in oklab, #3d3428 55%, transparent); }
-.blank .spine span { text-shadow: none; }
-.onlayEmpty {
-  display: grid;
-  place-items: center;
-  background: color-mix(in oklab, var(--cloth) 85%, #000);
-  outline-style: dashed;
-}
-.onlayEmpty span { font: 400 24cqw/1 var(--font-serif); color: color-mix(in oklab, #3d3428 55%, transparent); transition: transform 0.5s var(--ease), color 0.3s ease; }
-.volumeLink:hover .onlayEmpty span { transform: rotate(90deg); color: var(--act); }
-
-.labelName { margin-top: 52px !important; font: 400 30px/1.05 var(--font-serif); }
-.labelName a { text-decoration: none; transition: color 0.2s ease; }
-.labelName a:hover { color: var(--act); }
-.labelTag { margin-top: 10px !important; font: 400 16px/1.5 var(--font-book); text-wrap: pretty; }
-.labelMeta { margin-top: 12px !important; font: 400 14.5px/1.4 var(--font-book); color: var(--muted); font-variant-numeric: oldstyle-nums; }
+/* The books themselves: components/home/Shelf.module.css. */
 
 /* ---------- How a page is made ---------- */
 @property --sweep {
@@ -464,9 +292,14 @@
 .stages[data-in] .cutPlate { transition: opacity 0.8s ease 2.6s; }
 .stages[data-in] .cutPiece { transition: transform 0.9s var(--ease) calc(2.8s + var(--k) * 0.15s); }
 
-/* 5. The film fades up last and plays (components/LoopFilm.tsx plays it while on screen). */
-.stages[data-wait]:not([data-in]) .film video, .stages[data-wait]:not([data-in]) .film img { opacity: 0; }
-.stages[data-in] .film video, .stages[data-in] .film img { transition: opacity 1s ease 4.2s; }
+/*
+ * 5. Muse Wonder's film: its poster (the first frame) is there from the start, so the frame is
+ * never blank; the film itself fades up over it last and plays (LoopFilm plays it while on screen).
+ */
+.filmPoster { position: absolute; inset: 0; }
+.film video { position: relative; }
+.stages[data-wait]:not([data-in]) .film video, .stages[data-wait]:not([data-in]) .film img:not(.filmPoster) { opacity: 0; }
+.stages[data-in] .film video, .stages[data-in] .film img:not(.filmPoster) { transition: opacity 1s ease 4.2s; }
 
 .makingFoot {
   margin: 80px var(--gutter) 0;
@@ -560,5 +393,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .volume, .volumeLink, .heroTitle [data-word], .pitch, .heroActions, .heroFacts, .heroArt { transition: none; animation: none; }
+  .heroTitle [data-word], .pitch, .heroActions, .heroFacts, .heroArt { transition: none; animation: none; }
 }

@@ -1,8 +1,9 @@
 /**
- * pnpm approve <slug>            put a /create draft on the shelf (it joins the Part chain)
- * pnpm approve <slug> --withdraw take a life off the shelf again; its URL still opens
+ * pnpm approve <slug>            put a life that is off the shelf back on it
+ * pnpm approve <slug> --withdraw take a life off the shelf (a takedown); its URL still opens
  * pnpm approve                   list the lives that are off the shelf
- * Lives made on /create are written with `"listed": false` and wait here for the owner.
+ * Lives made on /create go straight onto the shelf; this is the takedown tool. To stop a name
+ * from being made again, add it to pipeline/create/blocklist.json.
  */
 import { parseArgs } from "node:util";
 import { existsSync, readdirSync } from "node:fs";

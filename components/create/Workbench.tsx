@@ -9,13 +9,14 @@ import { explain } from "./explain";
 import s from "./create.module.css";
 
 const STEPS: { id: StepId; name: string; model: string; does: string }[] = [
-  { id: "screen", name: "Subject check", model: "Muse Spark", does: "declines politicians and lives defined by war or crime" },
+  { id: "screen", name: "Subject check", model: "Muse Spark + web search", does: "confirms a real, documented Singaporean in 2+ sources; declines the rest" },
   { id: "research", name: "Research", model: "Muse Spark + web search", does: "finds dated facts, each with its sources" },
   { id: "storyboard", name: "Storyboard", model: "Muse Spark", does: "turns the facts into seven scenes" },
   { id: "plates", name: "Plates", model: "Muse Image", does: "paints each scene in its decade’s print style" },
   { id: "cutouts", name: "Cut-outs", model: "SAM 3.1 + Muse Image", does: "lifts the subject off each plate and repaints what was behind it" },
   { id: "frontispiece", name: "Frontispiece", model: "Muse Image + SAM 3.1", does: "an emblem of the life, traced in pen lines" },
-  { id: "films", name: "Films", model: "this server, no API calls", does: "renders the scroll films" },
+  { id: "films", name: "Films", model: "this server, no API calls", does: "renders a film for each scene with a fixed camera move" },
+  { id: "direct", name: "Direct", model: "Muse Wonder", does: "plans each film’s move, watches the result and asks for one revision" },
 ];
 
 /**
@@ -50,7 +51,7 @@ const clock = (from: string, at: string) => {
 };
 const duration = (sec: number) => (sec < 60 ? `${sec} s` : `${Math.floor(sec / 60)} min ${sec % 60} s`);
 
-/** Wall time left, from the typical step times: research, storyboard, then plates+cut-outs beside the frontispiece, then films. */
+/** Wall time left, from the typical step times: research, storyboard, then plates+cut-outs beside the frontispiece, then films, then Muse Wonder. */
 function remaining(job: Job, est: CreateInfo["estimate"], now: number): number {
   const left = (id: StepId) => {
     const st = stepOf(job, id);
@@ -60,9 +61,9 @@ function remaining(job: Job, est: CreateInfo["estimate"], now: number): number {
   };
   // Cut-outs run beside the plates; about 60% of their time is left once the last plate lands.
   const art = job.steps.plates.status === "done" || job.steps.plates.status === "failed" ? left("cutouts") : left("plates") + est.cutouts * 0.6;
-  return left("screen") + left("research") + left("storyboard") + Math.max(art, left("frontispiece")) + left("films");
+  return left("screen") + left("research") + left("storyboard") + Math.max(art, left("frontispiece")) + left("films") + left("direct");
 }
-const total = (est: CreateInfo["estimate"]) => (est.screen ?? 0) + est.research + est.storyboard + Math.max(est.plates + est.cutouts * 0.6, est.frontispiece) + est.films;
+const total = (est: CreateInfo["estimate"]) => (est.screen ?? 0) + est.research + est.storyboard + Math.max(est.plates + est.cutouts * 0.6, est.frontispiece) + est.films + (est.direct ?? 0);
 
 /** Honest range: the estimate at the low end, the last real run (or 10 min) at the high end. */
 function timeRange(info: CreateInfo) {
@@ -291,7 +292,7 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
               <div>
                 <dt>Cost</dt>
                 <dd>
-                  About $0.40 of Meta API time, stopped at {usd(info.ceiling)} whatever happens.
+                  About {info.typical?.label ?? "$1"} of Meta API time{info.typical ? ` (Muse Wonder directing the films is ${usd(info.typical.direct)} of it)` : ""}, stopped at {usd(info.ceiling)} whatever happens.
                   {info.last && (
                     <>
                       {" "}
@@ -308,7 +309,7 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
               </div>
             </dl>
             {info.mockAllowed && <p className={s.hint}>Rehearse replays Jack Sim’s finished life, under his own name, with typical timings and costs. No name needed, no Meta calls, nothing charged.</p>}
-            <p className={s.hint}>A new life is a draft: you can read it at once, and it joins the shelf once approved. Politicians, heads of state and lives defined by war or crime are declined.</p>
+            <p className={s.hint}>A new life goes straight onto the shelf. Only real, documented Singaporeans are made: Muse Spark checks the name against the web first, and declines unverifiable or private people, minors, politicians, heads of state and lives defined by war or crime.</p>
           </form>
 
           <WhatYouGet info={info} />
@@ -328,7 +329,7 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
         <aside className={s.ticket} aria-label="Order and progress">
           <div className={s.order}>
             <p className={s.orderLabel} data-live={running || undefined}>
-              {job.mock ? (running ? "Rehearsing" : "Rehearsal") : running ? "Now making" : job.status === "done" ? "Made, as a draft" : job.status === "declined" ? "Declined" : "Stopped"}
+              {job.mock ? (running ? "Rehearsing" : "Rehearsal") : running ? "Now making" : job.status === "done" ? (job.draft ? "Made, as a draft" : "Made") : job.status === "declined" ? "Declined" : "Stopped"}
             </p>
             <h1 className={s.orderName}>{job.name}</h1>
             {job.hint && <p className={s.orderHint}>{job.hint}</p>}
@@ -513,11 +514,12 @@ function Proof({
       {job.status === "declined" ? (
         <header className={s.declineCard}>
           <div>
-            <p className={s.boundLabel}>Subject check · Muse Spark</p>
+            <p className={s.boundLabel}>Subject check · Muse Spark with web search</p>
             <h2 className={s.boundName}>{job.name}</h2>
             <p className={s.declineMsg} role="status">
               {job.screen?.message ?? "This life is outside what Lives in Motion makes."}
             </p>
+            {job.screen?.check && <CheckFound check={job.screen.check} ok={false} />}
             <p className={s.boundFacts}>The check cost {usd(job.usd, 4)}; nothing else was called.</p>
             <div className={s.boundActions}>
               <button className={s.readBtn} onClick={onAnother}>
@@ -560,6 +562,15 @@ function Proof({
       )}
 
       {job.status !== "declined" && job.mock && <p className={s.mockNote}>Rehearsal: this replays Jack Sim’s finished life with typical timings and costs. No Meta calls are made and nothing is charged.</p>}
+
+      {job.status !== "declined" && job.screen?.check && (
+        <section className={s.checkSec} aria-labelledby="check">
+          <h3 id="check" className={s.sectionTitle}>
+            Subject check <span>Muse Spark with web search: a real, documented Singaporean, in at least 2 independent sources</span>
+          </h3>
+          <CheckFound check={job.screen.check} ok />
+        </section>
+      )}
 
       {job.status !== "declined" && (
       <>
@@ -605,6 +616,8 @@ function Proof({
           {(job.scenes.length ? job.scenes : Array.from({ length: 7 }, () => null)).map((sc, i) => (sc ? <Plate key={sc.id} scene={sc} n={i + 1} /> : <div key={i} className={s.slot} data-status="pending" />))}
         </div>
       </section>
+
+      {job.scenes.some((x) => x.wonder) && <Directed job={job} />}
 
       {job.frontispiece && (
         <section className={s.frontSec} aria-labelledby="front">
@@ -653,11 +666,11 @@ function Bound({ job, book, sources, onAnother }: { job: Job; book?: NonNullable
     <header className={s.bound}>
       <Link href={`/${job.bookSlug}`} className={s.boundBook} aria-label={`Read ${name}’s book`}>
         <div className={s.boundVolume} style={{ ["--cloth" as string]: book?.cloth ?? "#3b4a3f" } as CSSProperties}>
-          <Cover slug={job.bookSlug} name={name} lifespan={book?.lifespan ?? ""} part={book?.part ?? "Lives in Motion"} className={s.boundCover} />
+          <Cover slug={job.bookSlug} name={name} lifespan={book?.lifespan ?? ""} className={s.boundCover} />
         </div>
       </Link>
       <div className={s.boundText}>
-        <p className={s.boundLabel}>{job.mock ? `Rehearsal finished: ${name}’s book, replayed` : job.draft ? "Draft. Read it here; it joins the shelf once approved." : `Bound and on the shelf${book ? ` as ${book.part}` : ""}`}</p>
+        <p className={s.boundLabel}>{job.mock ? `Rehearsal finished: ${name}’s book, replayed` : job.draft ? "Draft. Read it here; it joins the shelf once approved." : "Bound and on the shelf"}</p>
         <h2 className={s.boundName}>{job.name}</h2>
         {job.tagline && <p className={s.tagline}>{job.tagline}</p>}
         <p className={s.boundFacts}>
@@ -680,7 +693,82 @@ const spendLine = (sc: JobScene) =>
   [
     sc.spend.image ? `Muse Image ${usd(sc.spend.image, 3)}` : null,
     sc.spend.sam ? `SAM 3.1 ${usd(sc.spend.sam, 4)}${sc.cuts.length ? `: ${sc.cuts.map((c) => c.concept).join(", ")}` : ""}` : null,
+    sc.spend.wonder ? `Muse Wonder ${usd(sc.spend.wonder, 3)}` : null,
   ].filter(Boolean) as string[];
+
+/** What the subject check found: its decision, the reason, and every source it cited. */
+function CheckFound({ check, ok }: { check: NonNullable<NonNullable<Job["screen"]>["check"]>; ok: boolean }) {
+  return (
+    <div className={s.check}>
+      <p className={s.checkWhy}>
+        <strong>{ok ? "Confirmed" : "Declined"}</strong>
+        {check.reason ? `: ${check.reason}` : ""} <span>({check.independent} independent {check.independent === 1 ? "source" : "sources"})</span>
+      </p>
+      {check.sources.length > 0 && (
+        <ul className={s.checkSources}>
+          {check.sources.map((x) => (
+            <li key={x.url}>
+              <a href={x.url} target="_blank" rel="noopener noreferrer">
+                {x.label}
+              </a>{" "}
+              <span>{host(x.url)}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+/** The Direct step, scene by scene: Muse Wonder's reason for each move and its own score for the film. */
+function Directed({ job }: { job: Job }) {
+  const rows = job.scenes.filter((x) => x.wonder);
+  const st = stepOf(job, "direct");
+  return (
+    <section className={s.wonderSec} aria-labelledby="wonder">
+      <h3 id="wonder" className={s.sectionTitle}>
+        Directed by Muse Wonder{" "}
+        <span>
+          it plans each film’s camera and layer moves, then watches six frames and scores them; 8 of 10 passes
+          {st.usd > 0 ? ` · ${usd(st.usd, 3)}` : ""}
+        </span>
+      </h3>
+      <ol className={s.wonderList}>
+        {rows.map((sc) => {
+          const w = sc.wonder!;
+          return (
+            <li key={sc.id} className={s.wonderRow} data-status={w.status}>
+              <span className={s.wonderYear}>{sc.year}</span>
+              <span className={s.wonderBody}>
+                <span className={s.wonderTitle}>{sc.title}</span>
+                {w.status === "directing" ? (
+                  <span className={s.wonderWhy}>Muse Wonder is directing…</span>
+                ) : (
+                  <>
+                    {w.rationale && <span className={s.wonderWhy}>“{w.rationale}”</span>}
+                    {w.status !== "directed" && <span className={s.wonderNote}>{w.status === "failed" ? "Not directed; the fixed move stays." : `Fixed move kept${w.note ? `: ${w.note}` : ""}.`}</span>}
+                  </>
+                )}
+              </span>
+              <span className={s.wonderScore}>
+                {w.score != null ? (
+                  <>
+                    <strong>{w.score}</strong>/10
+                    <em>{w.passed ? "passed" : w.status === "directed" ? "below 8, kept" : ""}</em>
+                  </>
+                ) : null}
+              </span>
+              <span className={s.wonderCost}>
+                {w.usd ? usd(w.usd, 3) : ""}
+                {w.rounds ? ` · ${w.rounds} round${w.rounds === 1 ? "" : "s"}` : ""}
+              </span>
+            </li>
+          );
+        })}
+      </ol>
+    </section>
+  );
+}
 
 function Plate({ scene, n }: { scene: JobScene; n: number }) {
   const [hover, setHover] = useState(false);
@@ -735,7 +823,7 @@ function Plate({ scene, n }: { scene: JobScene; n: number }) {
   );
 }
 
-const prettyModel = (id: string) => (id.startsWith("muse-spark") ? "Muse Spark" : id.startsWith("muse-image") ? "Muse Image" : id.startsWith("sam") ? "SAM 3.1" : id);
+const prettyModel = (id: string) => (id.startsWith("muse-spark") ? "Muse Spark" : id.startsWith("muse-image") ? "Muse Image" : id.startsWith("muse-wonder") ? "Muse Wonder" : id.startsWith("sam") ? "SAM 3.1" : id);
 
 function Log({ job }: { job: Job }) {
   const box = useRef<HTMLOListElement>(null);

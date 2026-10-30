@@ -1,212 +1,208 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T13:18:30.503Z",
-  "usd": 0.1392,
-  "rationale": "Keep the intact t=0 poster and the same focus on the man and drafting table, but reduce the total zoom to 1.17 and return the man to his SAM depth of 0.6. A very small downward drift of 0.006 and scale of 1.02 suggests settling over the blueprints without separating him from the table, revealing doubled rolls, or pushing his legs and the foreground props out of frame. Halftone-shimmer replaces the",
+  "at": "2026-10-30T14:33:17.713Z",
+  "usd": 0.1368,
+  "rationale": "Make the pull-back unmistakable while keeping the man's box in frame: open genuinely tight on his back and the drafting table at zoom 1.45 focused at his centre, then pull steadily back through a mid wide to the full plate at zoom 1.0, revealing crane, shophouses, crates and cement bags as the scale of the business he is building. Higher depth gives the man clear parallax against the painted backg",
   "plan": {
-    "focusX": 0.48,
-    "focusY": 0.64,
+    "focusX": 0.47,
+    "focusY": 0.62,
     "camera": [
       {
         "t": 0,
-        "zoom": 1,
-        "panX": 0,
-        "panY": 0,
+        "zoom": 1.45,
+        "panX": 0.02,
+        "panY": 0.07,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.08,
-        "panX": 0.005,
-        "panY": 0.012,
+        "zoom": 1.2,
+        "panX": 0.01,
+        "panY": 0.03,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.17,
-        "panX": 0.008,
-        "panY": 0.022,
-        "ease": "in-out"
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.6,
-        "driftX": 0,
-        "driftY": 0.006,
+        "depth": 0.85,
+        "driftX": 0.01,
+        "driftY": -0.01,
         "scale": 1.02,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
-    "ambient": "halftone-shimmer",
-    "rationale": "Keep the intact t=0 poster and the same focus on the man and drafting table, but reduce the total zoom to 1.17 and return the man to his SAM depth of 0.6. A very small downward drift of 0.006 and scale of 1.02 suggests settling over the blueprints without separating him from the table, revealing doubled rolls, or pushing his legs and the foreground props out of frame. Halftone-shimmer replaces the"
+    "ambient": "dust",
+    "rationale": "Make the pull-back unmistakable while keeping the man's box in frame: open genuinely tight on his back and the drafting table at zoom 1.45 focused at his centre, then pull steadily back through a mid wide to the full plate at zoom 1.0, revealing crane, shophouses, crates and cement bags as the scale of the business he is building. Higher depth gives the man clear parallax against the painted backg"
   },
   "critic": {
-    "score": 7,
+    "score": 8,
     "ok": true,
-    "verdict": "Publish. The gentle push-in toward the man and drafting table reads clearly forwards and backwards, with a subtle settling motion suggesting he is leaning into his work. The man remains coherent against the table, with no visible tearing, doubled edges, halo or ghosting, and no layer is pushed awkwardly out of frame. The t=0 poster preserves the plate's balanced composition of man, construction site, crates and cement bags. The modest zoom, limited drift and halftone-shimmer suit the 1970s silkscreen campaign-poster treatment without overwhelming it. The plate itself shows no stray text, no visible face where a rear view is required, no anachronism, and no obvious anatomy or object defects.",
+    "passed": true,
+    "verdict": "A purposeful pull-back: it opens tight on the man at the drafting table and steadily reveals the crane, shophouses, crates and cement bags, expressing the scale of the business he is building. The man stays coherent against the table, no tearing, ghosting or awkward edge clipping is visible, the dusty ambient is subtle, and both the tight opening and the full-plate final frame read well in the period silkscreen style.",
     "round": 2
   },
   "rounds": [
     {
-      "score": 6,
+      "score": 5,
       "ok": false,
-      "verdict": "Coherent and publishable as a generic push-in, but not yet distinctive enough: the founder's lean and the shift of attention to his plans need to be made unmistakable.",
+      "verdict": "Do not publish: the pull-back idea suits the story, but the opening frame lacks the subject and the entrance creates a transparent ghost through the man.",
       "filmIssues": [
-        "The move is competent and coherent, but it is essentially a plain centred push-in: a single 1.0 to 1.2 zoom with only a 0.012 downward drift and 1.05 scale on the man.",
-        "No tearing, doubled edges, halo or visible ghost is apparent around the man in the six frames, and neither the man nor the foreground crates and sacks clip awkwardly during the move.",
-        "The t=0 poster frame is a good opening picture, with the man, drafting table, crane and building materials all readable.",
-        "The dust ambient is subtle and appropriate to a construction site, and the motion preserves the flat silkscreen print style.",
-        "Because the supposed lean is barely perceptible and the camera never re-centres attention from the whole site toward the blueprints, the motion does not clearly express the founder leaning into his new venture beyond what a simple push-in would do."
+        "First frame (t=0) is a poor opening picture: the man is absent because his entrance has not started, leaving an empty drafting table as the hero image.",
+        "At t=0.2 the man's rise/fade entrance is a visible transparent ghost — the rooftops and blueprint show through his body, breaking subject coherence and the flat silkscreen print style.",
+        "The pull-back reveal itself is apt for nation-building, but the entrance undermines it; the remaining movement is only a modest centred pull-back, no better than a plain camera move once the ghost is removed."
       ],
-      "fixes": [
-        "cut-1.enterFor 0.000 → 0.100"
-      ],
+      "fixes": [],
       "plan": {
         "focusX": 0.48,
-        "focusY": 0.62,
+        "focusY": 0.6,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "zoom": 1.4,
+            "panX": 0.05,
+            "panY": 0.06,
             "ease": "in-out"
           },
           {
-            "t": 0.55,
-            "zoom": 1.1,
-            "panX": 0.005,
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.01,
             "panY": 0.02,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.2,
-            "panX": 0.01,
-            "panY": 0.035,
-            "ease": "in-out"
+            "zoom": 1,
+            "panX": -0.02,
+            "panY": 0,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.8,
+            "depth": 0.7,
             "driftX": 0,
-            "driftY": 0.012,
-            "scale": 1.05,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
+            "driftY": 0.008,
+            "scale": 0.98,
+            "enter": "rise",
+            "enterAt": 0.1,
+            "enterFor": 0.3
           }
         ],
         "ambient": "dust",
-        "rationale": "One clear idea: the young founder leans in over his blueprint as he starts his own firm. The camera makes a slow, purposeful push down toward the drafting table, centred on the man and his plans, while the man himself settles slightly downward and grows a touch (1.05) to feel like a lean over the work. His nearer depth separates him with gentle parallax from the crane, shophouses, crates and cemen"
+        "rationale": "A quiet turning point becomes a triumph of nation-building: the camera opens tight on the man leaning over his blueprints, he rises in early to take his place at the table, and the reveal travels out to the crane, shophouses, crates and cement bags of the business he is building."
       }
     },
     {
       "score": 6,
       "ok": false,
-      "verdict": "Not publishable as rendered: the idea is appropriate, but the excessive parallax and final framing damage subject coherence.",
+      "verdict": "A coherent, clean pull-back in intention, but on screen the move is too timid to register as a reveal — it is barely better than a plain static wide and does not yet earn publication.",
       "filmIssues": [
-        "The final push is too strong for the single cut-out: zoom 1.3 at depth 0.9, plus driftY 0.028 and scale 1.08, makes the man sink and overgrow rather than simply settle over the table.",
-        "By t=0.6-1.0 the man separates visibly from the drafting table, with doubled/slanted blueprint-roll shapes appearing at both sides of his arms and the table edge no longer reading as one coherent object.",
-        "At t=1.0 his legs run into the bottom of frame and the foreground crates and cement bags are awkwardly cropped by the magnification, weakening the composition.",
-        "The dust is not subtle in the pale sky: in the later frames it reads as small dark floating marks above the rooftops and crane, distracting from the silkscreen poster style.",
-        "The poster frame at t=0 is intact and good, but the later motion is essentially an exaggerated centred push-in; the man's downward drift does not clearly express leaning over the blueprints."
+        "The intended tight-to-wide pull-back barely reads on the contact sheet: all six frames are essentially the same wide composition, with the man, crates, bags, crane and rooftops already fully visible at t=0. The reveal of the business/nation being built is therefore not visible or purposeful.",
+        "The opening frame is a good wide picture but not the promised tight opening on the man leaning over the blueprints; the final frame is almost indistinguishable from it, so the dwell image gains little from the move.",
+        "No tearing, doubled edges, halo or ghost is visible around the man, and the layers that belong together stay coherent. No layer clips the frame awkwardly.",
+        "Dust is fitting for a construction site and remains subtle, and the 1970s silkscreen/halftone print style is preserved."
       ],
       "fixes": [],
       "plan": {
         "focusX": 0.48,
-        "focusY": 0.66,
+        "focusY": 0.6,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "zoom": 1.32,
+            "panX": 0.04,
+            "panY": 0.05,
             "ease": "in-out"
           },
           {
-            "t": 0.45,
-            "zoom": 1.12,
+            "t": 0.5,
+            "zoom": 1.15,
             "panX": 0.01,
-            "panY": 0.025,
+            "panY": 0.02,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.3,
-            "panX": 0.015,
-            "panY": 0.055,
-            "ease": "in-out"
+            "zoom": 1,
+            "panX": -0.01,
+            "panY": 0,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.9,
+            "depth": 0.7,
             "driftX": 0,
-            "driftY": 0.028,
-            "scale": 1.08,
+            "driftY": 0,
+            "scale": 1,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
         "ambient": "dust",
-        "rationale": "Keep the intact opening poster, then make the lean legible in two stages: first establish the site with a modest push, then continue down toward the drafting table at 0.48,0.66. The man, at nearer depth 0.9, drifts down 0.028 and grows to 1.08 across the full clip so his silhouette separates with parallax and reads as settling over the blueprints rather than merely enlarging with the camera. No en"
+        "rationale": "Remove the ghosting entrance so the man is solid and present in the opening frame, tight on him leaning over the blueprints. A clear, purposeful pull-back then reveals the crane, shophouses, crates and cement bags — the business and nation he is building — ending on the full wide plate as the dwell image. Dust stays as a subtle site atmosphere."
       }
     },
     {
-      "score": 7,
+      "score": 8,
       "ok": true,
-      "verdict": "Publish. The gentle push-in toward the man and drafting table reads clearly forwards and backwards, with a subtle settling motion suggesting he is leaning into his work. The man remains coherent against the table, with no visible tearing, doubled edges, halo or ghosting, and no layer is pushed awkwardly out of frame. The t=0 poster preserves the plate's balanced composition of man, construction site, crates and cement bags. The modest zoom, limited drift and halftone-shimmer suit the 1970s silkscreen campaign-poster treatment without overwhelming it. The plate itself shows no stray text, no visible face where a rear view is required, no anachronism, and no obvious anatomy or object defects.",
+      "verdict": "A purposeful pull-back: it opens tight on the man at the drafting table and steadily reveals the crane, shophouses, crates and cement bags, expressing the scale of the business he is building. The man stays coherent against the table, no tearing, ghosting or awkward edge clipping is visible, the dusty ambient is subtle, and both the tight opening and the full-plate final frame read well in the period silkscreen style.",
       "filmIssues": [],
       "fixes": [],
       "plan": {
-        "focusX": 0.48,
-        "focusY": 0.64,
+        "focusX": 0.47,
+        "focusY": 0.62,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "zoom": 1.45,
+            "panX": 0.02,
+            "panY": 0.07,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.08,
-            "panX": 0.005,
-            "panY": 0.012,
+            "zoom": 1.2,
+            "panX": 0.01,
+            "panY": 0.03,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.17,
-            "panX": 0.008,
-            "panY": 0.022,
-            "ease": "in-out"
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.6,
-            "driftX": 0,
-            "driftY": 0.006,
+            "depth": 0.85,
+            "driftX": 0.01,
+            "driftY": -0.01,
             "scale": 1.02,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
-        "ambient": "halftone-shimmer",
-        "rationale": "Keep the intact t=0 poster and the same focus on the man and drafting table, but reduce the total zoom to 1.17 and return the man to his SAM depth of 0.6. A very small downward drift of 0.006 and scale of 1.02 suggests settling over the blueprints without separating him from the table, revealing doubled rolls, or pushing his legs and the foreground props out of frame. Halftone-shimmer replaces the"
+        "ambient": "dust",
+        "rationale": "Make the pull-back unmistakable while keeping the man's box in frame: open genuinely tight on his back and the drafting table at zoom 1.45 focused at his centre, then pull steadily back through a mid wide to the full plate at zoom 1.0, revealing crane, shophouses, crates and cement bags as the scale of the business he is building. Higher depth gives the man clear parallax against the painted backg"
       }
     }
   ]

@@ -1,0 +1,21 @@
+# A fictional sample oral history for Lives in Motion's family mode.
+# Nobody in it is real. It is voiced by macOS text-to-speech (`pnpm family voice`).
+# Each line is "SPEAKER: text"; G is the grandchild asking, A is Ah Ma.
+G: Ah Ma, the recorder is on already. Can you tell me where you were born?
+A: Aiyoh, so formal one. Okay lah. I was born in Teluk Ayer, near the sea, in a shophouse on a small lane. My mother say I am a tiger year baby, so maybe 1938. Last time nobody keep the birth paper properly.
+G: What was your house like when you were small?
+A: After the war, around 1947, we move to a kampong in Potong Pasir. Attap roof, wooden house on stilts. Got chickens, got one big rambutan tree. Every morning I carry water from the well with two buckets. Very heavy, you know!
+G: When did you start sewing?
+A: In 1952, when I was fourteen, my auntie teach me to sew. She had a black Singer sewing machine with a foot pedal. Wah, I love that machine. I learn to make samfoo, then cheongsam for the neighbours.
+G: And you met Ah Gong after that?
+A: Yes lah. In 1959 I married your Ah Gong. He was a bus conductor, always got coins in his pocket. We had no money, but very happy.
+G: When did you get your first flat?
+A: 1966. We moved into a three-room HDB flat in Queenstown. Wah, so modern! Got tap water inside the house, got electric light, no more carrying buckets. I put my sewing machine near the window, and the whole block come to me for clothes. Ten dollars one cheongsam.
+G: How did you end up with the hawker stall?
+A: My eyes not so good for sewing already. So in 1978 your Ah Gong and I open a mee pok stall at the hawker centre in Queenstown. Every day wake up four o'clock to make the chilli. People queue very long, you know. Our fish balls we make by hand.
+G: When did you stop working at the stall?
+A: 2004. Your Ah Gong say enough already, we are old. So we give the stall to your uncle.
+G: And what do you do these days, Ah Ma?
+A: Now I teach you all to sew button lah! Every Sunday the whole family come back to makan. Eight grandchildren already. The first one, your cousin Wei Ling, born in 1990. Sometimes I still use the Singer machine. It is older than your father!
+G: Thank you, Ah Ma.
+A: Okay, okay. Go and eat first.

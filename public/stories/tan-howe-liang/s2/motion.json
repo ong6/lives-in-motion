@@ -1,34 +1,41 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T13:16:36.961Z",
-  "usd": 0.0606,
-  "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete — the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll.",
+  "at": "2026-10-30T14:26:33.434Z",
+  "usd": 0.1651,
+  "rationale": "A first national triumph after a year with one shared barbell: lifter and barbell rise together, growing as the camera tilts up and closes in on them.",
   "plan": {
     "focusX": 0.51,
-    "focusY": 0.66,
+    "focusY": 0.6,
     "camera": [
       {
         "t": 0,
-        "zoom": 1,
+        "zoom": 1.0375,
         "panX": 0,
-        "panY": 0,
+        "panY": 0.0225,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.15,
+        "panX": 0,
+        "panY": -0.0075,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.11,
+        "zoom": 1.285,
         "panX": 0,
-        "panY": 0.012,
-        "ease": "in-out"
+        "panY": -0.045,
+        "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.6,
+        "depth": 0.8,
         "driftX": 0,
-        "driftY": -0.006,
-        "scale": 1.02,
+        "driftY": -0.037500000000000006,
+        "scale": 1.09,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
@@ -37,61 +44,70 @@
         "id": "cut-2",
         "depth": 0.8,
         "driftX": 0,
-        "driftY": -0.018,
-        "scale": 1.03,
+        "driftY": -0.037500000000000006,
+        "scale": 1.09,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
     "ambient": "dust",
-    "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete — the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll."
+    "rationale": "A first national triumph after a year with one shared barbell: lifter and barbell rise together, growing as the camera tilts up and closes in on them."
   },
   "critic": {
-    "score": 7,
-    "ok": true,
-    "verdict": "The film is publishable. The slow push-in toward the lifter's grip, combined with the barbell's slight independent rise against the lifter's smaller drift, clearly suggests the start of a deadlift while remaining reversible for scroll. The lifter and barbell stay coherent across all six frames, with no visible tearing, doubled edges, halos, ghosting, or awkward frame clipping; the grip remains convincing throughout. The t=0 poster presents the full gym scene legibly, the dust is subtle and period-appropriate, and the flat offset-lithograph texture is preserved. The plate itself contains no stray text, no visible face contrary to the silhouette-from-behind direction, no anachronisms, and no obvious anatomical or object defects.",
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Coherent and clean, but essentially a timid centred push-in; the rise is not yet a visible, purposeful triumph and the final frame is over-cropped.",
     "round": 0
   },
   "rounds": [
     {
-      "score": 7,
-      "ok": true,
-      "verdict": "The film is publishable. The slow push-in toward the lifter's grip, combined with the barbell's slight independent rise against the lifter's smaller drift, clearly suggests the start of a deadlift while remaining reversible for scroll. The lifter and barbell stay coherent across all six frames, with no visible tearing, doubled edges, halos, ghosting, or awkward frame clipping; the grip remains convincing throughout. The t=0 poster presents the full gym scene legibly, the dust is subtle and period-appropriate, and the flat offset-lithograph texture is preserved. The plate itself contains no stray text, no visible face contrary to the silhouette-from-behind direction, no anachronisms, and no obvious anatomical or object defects.",
-      "filmIssues": [],
+      "score": 6,
+      "ok": false,
+      "verdict": "Coherent and clean, but essentially a timid centred push-in; the rise is not yet a visible, purposeful triumph and the final frame is over-cropped.",
+      "filmIssues": [
+        "The move reads as a plain centred push-in: camera zoom from about 1.04 to 1.29 with only a small shared upward drift, so the 'rise for triumph' idea is barely legible and no better in story terms than a standard push-in.",
+        "Lifter and barbell correctly stay locked together (same depth, drift and scale) with no visible tearing, doubled edges or ghosting, and the dust is subtle and era-appropriate — but there is no distinct foreground/background parallax moment or reveal to lift it above the baseline.",
+        "At t=1 the push-in crops the side benches and the foreground plate stacks hard against the left/right/bottom edges and the barbell discs nearly touch the frame, making the dwell frame feel cramped rather than triumphant.",
+        "Because the whole lifter+barbell layer drifts up, the feet lift with the bar instead of the bar rising in the hands, so it does not read as a lift."
+      ],
       "fixes": [
-        "camera[1].t 1.750 → 1.000",
-        "camera[2].t 3.500 → 1.000",
-        "camera key at t=1.00 merged",
-        "cut-1.enterFor 0.000 → 0.100",
-        "cut-2.enterFor 0.000 → 0.100"
+        "move damped to 75% (cut-1 10% off-frame at t=0.63)"
       ],
       "plan": {
         "focusX": 0.51,
-        "focusY": 0.66,
+        "focusY": 0.6,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
+            "zoom": 1.0375,
             "panX": 0,
-            "panY": 0,
+            "panY": 0.0225,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.15,
+            "panX": 0,
+            "panY": -0.0075,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.11,
+            "zoom": 1.285,
             "panX": 0,
-            "panY": 0.012,
-            "ease": "in-out"
+            "panY": -0.045,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.6,
+            "depth": 0.8,
             "driftX": 0,
-            "driftY": -0.006,
-            "scale": 1.02,
+            "driftY": -0.037500000000000006,
+            "scale": 1.09,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
@@ -100,15 +116,143 @@
             "id": "cut-2",
             "depth": 0.8,
             "driftX": 0,
-            "driftY": -0.018,
-            "scale": 1.03,
+            "driftY": -0.037500000000000006,
+            "scale": 1.09,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
         "ambient": "dust",
-        "rationale": "A slow push toward the lifter's grip as the barbell alone strains a fraction upward off the concrete — the beginning of the deadlift, held in the flat inks and drifting gym dust, fully reversible for scroll."
+        "rationale": "A first national triumph after a year with one shared barbell: lifter and barbell rise together, growing as the camera tilts up and closes in on them."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Coherent and publishable as a simple move, but too close to a plain push-in to meet the expressive-motion threshold. The revised plan gives the lifter and barbell a stronger shared lift while retaining the fitting subtle dust and lithograph character.",
+      "filmIssues": [
+        "The lifter and barbell stay convincingly together, with no visible tearing, doubled edges, halo or painted-over ghost, and both the opening wide gym view and closer final frame are usable compositions.",
+        "The movement is nevertheless only a modest centred push-in with a very slight upward drift. It does not visibly enact the lift or the triumph in the caption, so it is barely more expressive than a plain push-in.",
+        "The barbell grows with the lifter as intended, but the rise is too small to read as purposeful action before the final hold."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-1 10% off-frame at t=0.60)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.095625,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.1912500000000001,
+            "panX": 0,
+            "panY": -0.0225,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.0309375,
+            "scale": 1.0562500000000001,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.0309375,
+            "scale": 1.0562500000000001,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Bolder triumph move, still reversible: open wide and low on the whole sparse gym (one shared barbell, benches, scattered plates), then a clear rising push-in that travels up the lifter's back so lifter and barbell grow together against the slower background, ending closer and higher but framed to keep the barbell discs and plate stacks inside the frame for the dwell."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Coherent and publishable in technique, but too close to a generic push-in: the lift does not read clearly enough to score as purposeful story motion.",
+      "filmIssues": [
+        "The lifter and barbell do stay locked together and coherent, with no visible tearing, ghosting or grip separation, and the dust is subtle and period-appropriate.",
+        "However the claimed deadlift barely reads: across the six frames this is essentially a plain centred push-in. The barbell remains at much the same height against the foreground plates and benches, so there is no clear lift, effort or triumph distinct from camera zoom.",
+        "The final frame is a usable dwell picture, but the modest 1.16 zoom and slight rise make the opener-to-final change timid rather than a purposeful story beat."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-1 11% off-frame at t=0.57)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.56,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0787499999999999,
+            "panX": 0,
+            "panY": -0.005625,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.1575,
+            "panX": 0,
+            "panY": -0.025312499999999998,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 1,
+            "driftX": 0,
+            "driftY": -0.042187499999999996,
+            "scale": 1.0562500000000001,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 1,
+            "driftX": 0,
+            "driftY": -0.042187499999999996,
+            "scale": 1.0562500000000001,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Make the movement read as the beginning of a triumphant deadlift: open wide and low on the sparse gym, then push in while the locked-together lifter and barbell rise distinctly against the background. Their shared depth, drift and scale preserve the grip, while the stronger combined rise and closer, higher final framing create a clearer sense of effort and achievement without pushing either cut-ou"
       }
     }
   ]

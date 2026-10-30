@@ -14,7 +14,8 @@
     "shoot": "tsx scripts/shoot.ts",
     "spend": "tsx pipeline/budget.ts",
     "wonder": "tsx pipeline/wonder.ts",
-    "approve": "tsx pipeline/approve.ts"
+    "approve": "tsx pipeline/approve.ts",
+    "family": "tsx pipeline/family/cli.ts"
   },
   "author": "ong6",
   "license": "MIT",

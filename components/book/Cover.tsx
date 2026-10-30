@@ -21,8 +21,8 @@ export function Cover({
   slug: string;
   name: string;
   lifespan: string;
-  /** "Part One" */
-  part: string;
+  /** An optional line at the foot of the board (the story books leave it off). */
+  part?: string;
   className?: string;
   style?: CSSProperties;
   /** Take part in the shelf-to-book transition; off while the book is open, so leaving mid-book just cross-fades. */
@@ -44,9 +44,11 @@ export function Cover({
           </h2>
           <p data-cover="dates">{lifespan}</p>
         </div>
-        <p className={b.coverSeries} data-cover="part">
-          {part}
-        </p>
+        {part && (
+          <p className={b.coverSeries} data-cover="part">
+            {part}
+          </p>
+        )}
       </div>
       {children}
     </div>

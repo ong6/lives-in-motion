@@ -502,3 +502,38 @@
 .declineCard { display: block; padding-bottom: 1.5rem; border-bottom: 1px solid var(--ink); }
 .declineCard .boundActions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem; }
 .declineCard .quiet { white-space: nowrap; }
+
+/* The Direct step: Muse Wonder's rationale and score per film. */
+.wonderSec { margin-top: 8px; }
+.wonderList { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.wonderRow {
+  display: grid;
+  grid-template-columns: 56px 1fr 92px 120px;
+  gap: 14px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.wonderYear { font: 400 15px var(--font-sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+.wonderBody { display: grid; gap: 4px; }
+.wonderTitle { font-size: 17px; }
+.wonderWhy { font-style: italic; color: var(--ink); font-size: 15.5px; line-height: 1.4; }
+.wonderNote { color: var(--muted); font-size: 14px; }
+.wonderScore { font: 400 14px var(--font-sans); color: var(--muted); display: grid; }
+.wonderScore strong { font: 400 26px/1 var(--font-serif); color: var(--ink); }
+.wonderScore em { font-style: normal; font-size: 12.5px; }
+.wonderCost { font: 400 13px var(--font-sans); color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.wonderRow[data-status="directing"] .wonderWhy { color: var(--muted); }
+@media (max-width: 720px) {
+  .wonderRow { grid-template-columns: 48px 1fr; }
+  .wonderScore, .wonderCost { grid-column: 2; text-align: left; }
+}
+
+/* The subject check: decision, reason and sources. */
+.checkSec { margin-top: 8px; }
+.check { display: grid; gap: 8px; margin: 12px 0 0; }
+.checkWhy { margin: 0; font-size: 16px; line-height: 1.45; }
+.checkWhy span { color: var(--muted); font: 400 13px var(--font-sans); }
+.checkSources { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font: 400 13.5px var(--font-sans); }
+.checkSources a { color: var(--ink); }
+.checkSources span { color: var(--muted); }

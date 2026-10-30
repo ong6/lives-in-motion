@@ -6,7 +6,19 @@ import { useEffect, useRef, useState } from "react";
  * A short scene film that plays on a loop while it is on screen. Readers who prefer reduced
  * motion get the poster frame.
  */
-export function LoopFilm({ src, poster, label, className }: { src: string; poster?: string; label: string; className?: string }) {
+export function LoopFilm({
+  src,
+  poster,
+  label,
+  className,
+  preload = "metadata",
+}: {
+  src: string;
+  poster?: string;
+  label: string;
+  className?: string;
+  preload?: "auto" | "metadata" | "none";
+}) {
   const video = useRef<HTMLVideoElement>(null);
   const [still, setStill] = useState(false);
 
@@ -21,5 +33,5 @@ export function LoopFilm({ src, poster, label, className }: { src: string; poste
   }, [still]);
 
   if (still) return poster ? <img className={className} src={poster} alt={label} /> : null;
-  return <video ref={video} className={className} src={src} poster={poster} muted loop playsInline preload="metadata" aria-label={label} />;
+  return <video ref={video} className={className} src={src} poster={poster} muted loop playsInline preload={preload} aria-label={label} />;
 }

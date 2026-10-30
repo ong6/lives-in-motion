@@ -256,3 +256,153 @@
 {"at":"2026-10-30T13:33:38.072Z","kind":"wonder","usd":0.028196,"note":"direct-jack-sim-s7","job":"wonder"}
 {"at":"2026-10-30T13:33:40.508Z","kind":"wonder","usd":0.042333,"note":"critic-tan-howe-liang-s6-r2","job":"wonder"}
 {"at":"2026-10-30T13:33:52.336Z","kind":"wonder","usd":0.026482,"note":"critic-jack-sim-s7-r0","job":"wonder"}
+{"at":"2026-10-30T14:04:53.302Z","kind":"transcribe","usd":0.0083,"note":"family: sample test"}
+{"at":"2026-10-30T14:05:31.520Z","kind":"wonder","usd":0.029624,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T14:07:36.056Z","kind":"manual","usd":0.003,"note":"r3 pipeline: two tiny Wonder connectivity probes outside the guard"}
+{"at":"2026-10-30T14:08:02.633Z","kind":"wonder","usd":0.027972,"note":"plate-judge-jack-sim-s4-before","job":"wonder"}
+{"at":"2026-10-30T14:10:33.301Z","kind":"transcribe","usd":0.0083,"note":"family: ah-ma-sample","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:11:08.899Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2001.\nStyle: 1990s","job":"wonder"}
+{"at":"2026-10-30T14:11:09.433Z","kind":"spark","usd":0.036563,"note":"family_facts","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:11:27.331Z","kind":"wonder","usd":0.030332,"note":"plate-judge-jack-sim-s4-a1","job":"wonder"}
+{"at":"2026-10-30T14:11:47.601Z","kind":"spark","usd":0.028359,"note":"storyboard","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:16:04.554Z","kind":"wonder","usd":0.041712,"note":"direct-tan-howe-liang-s4","job":"wonder"}
+{"at":"2026-10-30T14:16:08.467Z","kind":"wonder","usd":0.040808,"note":"direct-joseph-schooling-s6","job":"wonder"}
+{"at":"2026-10-30T14:16:34.015Z","kind":"wonder","usd":0.039944,"note":"critic-tan-howe-liang-s4-r0","job":"wonder"}
+{"at":"2026-10-30T14:16:38.621Z","kind":"wonder","usd":0.0422,"note":"critic-joseph-schooling-s6-r0","job":"wonder"}
+{"at":"2026-10-30T14:16:56.685Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1938.\nStyle: hand-","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:16:58.314Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2001.\nStyle: 1990s","job":"wonder"}
+{"at":"2026-10-30T14:17:08.238Z","kind":"wonder","usd":0.040459,"note":"critic-tan-howe-liang-s4-r1","job":"wonder"}
+{"at":"2026-10-30T14:17:19.755Z","kind":"wonder","usd":0.027632,"note":"plate-judge-jack-sim-s4-a2","job":"wonder"}
+{"at":"2026-10-30T14:17:23.708Z","kind":"image","usd":0.01,"note":"Frontispiece illustration for a biography.\nStyle: fine pen-a","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:18:00.882Z","kind":"sam","usd":0.0025,"note":"stilt house","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:19:25.810Z","kind":"wonder","usd":0.032198,"note":"critic-tan-howe-liang-s4-r2","job":"wonder"}
+{"at":"2026-10-30T14:19:41.580Z","kind":"sam","usd":0.0025,"note":"machine","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:20:14.703Z","kind":"wonder","usd":0.041615,"note":"critic-joseph-schooling-s6-r1","job":"wonder"}
+{"at":"2026-10-30T14:20:45.602Z","kind":"wonder","usd":0.039984,"note":"critic-joseph-schooling-s6-r2","job":"wonder"}
+{"at":"2026-10-30T14:21:37.777Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1952.\nStyle: 1950s","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:21:38.243Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1959.\nStyle: 1950s","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:21:39.787Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1947.\nStyle: 1950s","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:22:03.841Z","kind":"sam","usd":0.0025,"note":"couple","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:22:13.126Z","kind":"sam","usd":0.0025,"note":"sewing machine","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:22:22.045Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2001.\nStyle: 1990s","job":"wonder"}
+{"at":"2026-10-30T14:22:49.221Z","kind":"image","usd":0.01,"note":"edit: Remove the stilt house from this illustration and fill","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:23:22.262Z","kind":"wonder","usd":0.022552,"note":"plate-judge-jack-sim-s4-a3","job":"wonder"}
+{"at":"2026-10-30T14:23:41.459Z","kind":"sam","usd":0.0025,"note":"girl","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:23:49.590Z","kind":"search","usd":0.32794,"note":"You are a biographical researcher. Subject: Tan Howe Liang (","job":"deep-research"}
+{"at":"2026-10-30T14:24:06.089Z","kind":"search","usd":0.483982,"note":"You are a biographical researcher. Subject: Jack Sim (born 1","job":"deep-research"}
+{"at":"2026-10-30T14:24:06.238Z","kind":"search","usd":0.334399,"note":"You are a biographical researcher. Subject: Tan Howe Liang (","job":"deep-research"}
+{"at":"2026-10-30T14:24:06.430Z","kind":"wonder","usd":0.033088,"note":"direct-tan-howe-liang-s1","job":"wonder"}
+{"at":"2026-10-30T14:24:10.652Z","kind":"sam","usd":0.0025,"note":"globe","job":"wonder"}
+{"at":"2026-10-30T14:24:11.666Z","kind":"search","usd":0.357424,"note":"You are a biographical researcher. Subject: Tan Howe Liang (","job":"deep-research"}
+{"at":"2026-10-30T14:24:13.011Z","kind":"wonder","usd":0.034084,"note":"direct-tan-howe-liang-s2","job":"wonder"}
+{"at":"2026-10-30T14:24:19.681Z","kind":"search","usd":0.508452,"note":"You are a biographical researcher. Subject: Joseph Schooling","job":"deep-research"}
+{"at":"2026-10-30T14:24:20.661Z","kind":"search","usd":0.498482,"note":"You are a biographical researcher. Subject: Joseph Schooling","job":"deep-research"}
+{"at":"2026-10-30T14:24:40.000Z","kind":"search","usd":0.505458,"note":"You are a biographical researcher. Subject: Jack Sim (born 1","job":"deep-research"}
+{"at":"2026-10-30T14:24:50.554Z","kind":"search","usd":0.732354,"note":"You are a biographical researcher. Subject: Joseph Schooling","job":"deep-research"}
+{"at":"2026-10-30T14:24:58.040Z","kind":"sam","usd":0.0025,"note":"bucket","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:24:58.041Z","kind":"search","usd":0.565067,"note":"You are a biographical researcher. Subject: Jack Sim (born 1","job":"deep-research"}
+{"at":"2026-10-30T14:25:19.934Z","kind":"wonder","usd":0.028316,"note":"critic-tan-howe-liang-s1-r0","job":"wonder"}
+{"at":"2026-10-30T14:25:25.759Z","kind":"wonder","usd":0.047308,"note":"critic-tan-howe-liang-s2-r0","job":"wonder"}
+{"at":"2026-10-30T14:25:50.071Z","kind":"image","usd":0.01,"note":"edit: Remove the couple from this illustration and fill the ","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:25:50.589Z","kind":"wonder","usd":0.032048,"note":"direct-tan-howe-liang-s3","job":"wonder"}
+{"at":"2026-10-30T14:26:03.133Z","kind":"wonder","usd":0.040804,"note":"critic-tan-howe-liang-s2-r1","job":"wonder"}
+{"at":"2026-10-30T14:26:20.233Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2004.\nStyle: 1990s","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:26:25.473Z","kind":"wonder","usd":0.0422,"note":"critic-tan-howe-liang-s3-r0","job":"wonder"}
+{"at":"2026-10-30T14:26:27.831Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1978.\nStyle: 1970s","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:26:29.391Z","kind":"sam","usd":0.0025,"note":"woman","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:26:33.424Z","kind":"wonder","usd":0.042867,"note":"critic-tan-howe-liang-s2-r2","job":"wonder"}
+{"at":"2026-10-30T14:26:41.356Z","kind":"image","usd":0.01,"note":"edit: Remove the sewing machine from this illustration and f","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:26:44.554Z","kind":"sam","usd":0.0025,"note":"child","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:26:48.557Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1966.\nStyle: 1970s","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:27:05.837Z","kind":"sam","usd":0.0025,"note":"pot","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:27:11.310Z","kind":"image","usd":0.01,"note":"edit: Remove the globe from this illustration and fill the s","job":"wonder"}
+{"at":"2026-10-30T14:27:12.138Z","kind":"image","usd":0.01,"note":"edit: Remove the girl and the bucket from this illustration ","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:27:18.458Z","kind":"sam","usd":0.0025,"note":"bowl","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:27:27.082Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the child from this illustration ","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:27:36.278Z","kind":"sam","usd":0.0025,"note":"corridor","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:27:42.939Z","kind":"search","usd":0.033432,"note":"subject_check","job":"screen-test"}
+{"at":"2026-10-30T14:28:00.014Z","kind":"search","usd":0.060674,"note":"subject_check","job":"screen-test"}
+{"at":"2026-10-30T14:28:02.006Z","kind":"wonder","usd":0.034588,"note":"direct-tan-howe-liang-s4","job":"wonder"}
+{"at":"2026-10-30T14:28:28.679Z","kind":"wonder","usd":0.038875,"note":"critic-tan-howe-liang-s4-r0","job":"wonder"}
+{"at":"2026-10-30T14:28:28.681Z","kind":"image","usd":0.01,"note":"edit: Remove the pot and the bowl from this illustration and","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:28:36.786Z","kind":"wonder","usd":0.025118,"note":"direct-tan-howe-liang-s5","job":"wonder"}
+{"at":"2026-10-30T14:28:42.968Z","kind":"image","usd":0.01,"note":"edit: Remove the corridor from this illustration and fill th","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:28:51.084Z","kind":"wonder","usd":0.037527,"note":"critic-tan-howe-liang-s4-r1","job":"wonder"}
+{"at":"2026-10-30T14:28:53.937Z","kind":"wonder","usd":0.033154,"note":"direct-joseph-schooling-s3","job":"wonder"}
+{"at":"2026-10-30T14:29:00.778Z","kind":"wonder","usd":0.03307,"note":"direct-joseph-schooling-s1","job":"wonder"}
+{"at":"2026-10-30T14:29:01.884Z","kind":"wonder","usd":0.038239,"note":"critic-tan-howe-liang-s5-r0","job":"wonder"}
+{"at":"2026-10-30T14:29:10.051Z","kind":"wonder","usd":0.035344,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T14:29:14.562Z","kind":"wonder","usd":0.039015,"note":"critic-tan-howe-liang-s4-r2","job":"wonder"}
+{"at":"2026-10-30T14:29:25.159Z","kind":"wonder","usd":0.028527,"note":"critic-joseph-schooling-s1-r0","job":"wonder"}
+{"at":"2026-10-30T14:29:26.015Z","kind":"wonder","usd":0.039683,"note":"critic-joseph-schooling-s3-r0","job":"wonder"}
+{"at":"2026-10-30T14:29:26.380Z","kind":"wonder","usd":0.029766,"note":"direct-tan-howe-liang-s6","job":"wonder"}
+{"at":"2026-10-30T14:29:33.371Z","kind":"wonder","usd":0.043923,"note":"critic-tan-howe-liang-s5-r1","job":"wonder"}
+{"at":"2026-10-30T14:29:35.714Z","kind":"wonder","usd":0.028086,"note":"direct-joseph-schooling-s5","job":"wonder"}
+{"at":"2026-10-30T14:29:38.140Z","kind":"wonder","usd":0.041016,"note":"critic-jack-sim-s4-r0","job":"wonder"}
+{"at":"2026-10-30T14:29:58.966Z","kind":"wonder","usd":0.050043,"note":"critic-joseph-schooling-s3-r1","job":"wonder"}
+{"at":"2026-10-30T14:30:01.297Z","kind":"wonder","usd":0.046671,"note":"critic-tan-howe-liang-s6-r0","job":"wonder"}
+{"at":"2026-10-30T14:30:01.309Z","kind":"wonder","usd":0.033648,"note":"critic-jack-sim-s4-r1","job":"wonder"}
+{"at":"2026-10-30T14:30:05.313Z","kind":"wonder","usd":0.039987,"note":"critic-joseph-schooling-s5-r0","job":"wonder"}
+{"at":"2026-10-30T14:30:07.588Z","kind":"wonder","usd":0.040122,"note":"critic-tan-howe-liang-s5-r2","job":"wonder"}
+{"at":"2026-10-30T14:30:18.178Z","kind":"spark","usd":0.029408,"note":"family_caption_check","job":"create:ah-ma-sample"}
+{"at":"2026-10-30T14:30:26.245Z","kind":"wonder","usd":0.038104,"note":"critic-joseph-schooling-s5-r1","job":"wonder"}
+{"at":"2026-10-30T14:30:32.581Z","kind":"wonder","usd":0.04488,"note":"critic-joseph-schooling-s3-r2","job":"wonder"}
+{"at":"2026-10-30T14:30:35.865Z","kind":"wonder","usd":0.044099,"note":"critic-tan-howe-liang-s6-r1","job":"wonder"}
+{"at":"2026-10-30T14:30:50.819Z","kind":"wonder","usd":0.038658,"note":"direct-joseph-schooling-s6","job":"wonder"}
+{"at":"2026-10-30T14:30:57.546Z","kind":"wonder","usd":0.041663,"note":"critic-joseph-schooling-s5-r2","job":"wonder"}
+{"at":"2026-10-30T14:31:01.425Z","kind":"wonder","usd":0.040403,"note":"critic-tan-howe-liang-s6-r2","job":"wonder"}
+{"at":"2026-10-30T14:31:14.357Z","kind":"wonder","usd":0.030487,"note":"critic-joseph-schooling-s6-r0","job":"wonder"}
+{"at":"2026-10-30T14:31:54.309Z","kind":"wonder","usd":0.031546,"note":"direct-jack-sim-s1","job":"wonder"}
+{"at":"2026-10-30T14:32:01.097Z","kind":"wonder","usd":0.034174,"note":"direct-jack-sim-s2","job":"wonder"}
+{"at":"2026-10-30T14:32:19.799Z","kind":"wonder","usd":0.031011,"note":"critic-jack-sim-s2-r0","job":"wonder"}
+{"at":"2026-10-30T14:32:21.119Z","kind":"transcribe","usd":0.0083,"note":"family: ah-ma-umtpzm","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:32:26.502Z","kind":"wonder","usd":0.031915,"note":"critic-jack-sim-s1-r0","job":"wonder"}
+{"at":"2026-10-30T14:32:39.668Z","kind":"wonder","usd":0.028566,"note":"direct-jack-sim-s6","job":"wonder"}
+{"at":"2026-10-30T14:32:46.250Z","kind":"wonder","usd":0.040783,"note":"critic-jack-sim-s2-r1","job":"wonder"}
+{"at":"2026-10-30T14:33:04.227Z","kind":"spark","usd":0.047082,"note":"family_facts","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:33:11.551Z","kind":"wonder","usd":0.037615,"note":"critic-jack-sim-s6-r0","job":"wonder"}
+{"at":"2026-10-30T14:33:17.706Z","kind":"wonder","usd":0.030839,"note":"critic-jack-sim-s2-r2","job":"wonder"}
+{"at":"2026-10-30T14:33:29.148Z","kind":"spark","usd":0.023928,"note":"storyboard","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:33:31.728Z","kind":"wonder","usd":0.034562,"note":"direct-jack-sim-s7","job":"wonder"}
+{"at":"2026-10-30T14:33:38.150Z","kind":"wonder","usd":0.039763,"note":"critic-jack-sim-s6-r1","job":"wonder"}
+{"at":"2026-10-30T14:33:42.588Z","kind":"spark","usd":0.016044,"note":"family_caption_check","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:34:02.394Z","kind":"wonder","usd":0.036307,"note":"critic-jack-sim-s6-r2","job":"wonder"}
+{"at":"2026-10-30T14:34:13.441Z","kind":"wonder","usd":0.051719,"note":"critic-jack-sim-s7-r0","job":"wonder"}
+{"at":"2026-10-30T14:34:20.787Z","kind":"image","usd":0.01,"note":"Frontispiece illustration for a biography.\nStyle: fine pen-a","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:34:27.729Z","kind":"sam","usd":0.0025,"note":"machine","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:34:55.856Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1938.\nStyle: hand-","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:35:07.190Z","kind":"wonder","usd":0.028299,"note":"critic-jack-sim-s7-r1","job":"wonder"}
+{"at":"2026-10-30T14:35:13.597Z","kind":"sam","usd":0.0025,"note":"shophouse","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:35:19.895Z","kind":"sam","usd":0.0025,"note":"person","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:35:36.696Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1959.\nStyle: 1950s","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:35:43.515Z","kind":"sam","usd":0.0025,"note":"couple","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:35:55.788Z","kind":"sam","usd":0.0025,"note":"bus","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:35:57.633Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1947.\nStyle: 1950s","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:36:07.649Z","kind":"sam","usd":0.0025,"note":"house","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:36:14.260Z","kind":"image","usd":0.01,"note":"edit: Remove the shophouse from this illustration and fill t","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:36:25.056Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1952.\nStyle: 1950s","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:36:37.803Z","kind":"sam","usd":0.0025,"note":"person","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:36:58.261Z","kind":"wonder","usd":0.02073,"note":"direct-jack-sim-s6","job":"wonder"}
+{"at":"2026-10-30T14:37:02.487Z","kind":"sam","usd":0.0025,"note":"sewing machine","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:37:19.952Z","kind":"sam","usd":0.0025,"note":"girl","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:37:29.469Z","kind":"sam","usd":0.0025,"note":"person","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:37:29.674Z","kind":"wonder","usd":0.034579,"note":"critic-jack-sim-s6-r0","job":"wonder"}
+{"at":"2026-10-30T14:37:35.991Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1978.\nStyle: 1970s","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:37:50.579Z","kind":"image","usd":0.01,"note":"edit: Remove the couple and the bus from this illustration a","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:37:53.633Z","kind":"image","usd":0.01,"note":"edit: Remove the house from this illustration and fill the s","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:37:54.608Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2004.\nStyle: 1990s","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:38:02.598Z","kind":"image","usd":0.01,"note":"edit: Remove the sewing machine and the girl from this illus","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:38:07.654Z","kind":"wonder","usd":0.034634,"note":"critic-jack-sim-s6-r1","job":"wonder"}
+{"at":"2026-10-30T14:38:12.963Z","kind":"sam","usd":0.0025,"note":"cook","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:38:19.780Z","kind":"sam","usd":0.0025,"note":"bowl","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:38:49.694Z","kind":"sam","usd":0.0025,"note":"chair","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:38:59.998Z","kind":"sam","usd":0.0025,"note":"shoes","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:39:05.888Z","kind":"wonder","usd":0.041816,"note":"critic-jack-sim-s6-r2","job":"wonder"}
+{"at":"2026-10-30T14:39:20.260Z","kind":"image","usd":0.01,"note":"edit: Remove the cook and the bowl from this illustration an","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:39:49.395Z","kind":"image","usd":0.01,"note":"edit: Remove the chair and the shoes from this illustration ","job":"create:ah-ma-umtpzm"}
+{"at":"2026-10-30T14:42:37.094Z","kind":"sam","usd":0.0025,"note":"globe"}
+{"at":"2026-10-30T14:42:52.915Z","kind":"sam","usd":0.0025,"note":"toilet seat"}
+{"at":"2026-10-30T14:43:51.038Z","kind":"image","usd":0.01,"note":"edit: Remove the globe and the toilet seat from this illustr"}
+{"at":"2026-10-30T14:44:30.019Z","kind":"wonder","usd":0.034222,"note":"direct-jack-sim-s4","job":"wonder"}
+{"at":"2026-10-30T14:44:58.620Z","kind":"wonder","usd":0.04742,"note":"critic-jack-sim-s4-r0","job":"wonder"}
+{"at":"2026-10-30T14:45:21.420Z","kind":"wonder","usd":0.032188,"note":"critic-jack-sim-s4-r1","job":"wonder"}

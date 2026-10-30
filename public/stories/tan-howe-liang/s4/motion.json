@@ -1,0 +1,255 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-30T14:29:14.567Z",
+  "usd": 0.15,
+  "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.42,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.02,
+        "panX": 0,
+        "panY": 0.03,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.18,
+        "panX": 0,
+        "panY": -0.02,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 1,
+        "driftX": 0,
+        "driftY": -0.05,
+        "scale": 1.06,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 1,
+        "driftX": 0,
+        "driftY": -0.05,
+        "scale": 1.06,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate"
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "A coherent and attractive push-in, but not yet bold or purposeful enough to publish: the rise is too close to a standard magnification and the final frame crowds the platform and feet at the bottom edge.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Not publishable: the push-in breaks the lift, separating barbell from hands by the final frames.",
+      "filmIssues": [
+        "The barbell and lifter do not stay together: in the top row the hands grip the bar, but by t=0.6-1 the bar has slipped down to head/shoulder height while the empty hands rise above it — a broken hold caused by scaling each cut-out about its own centre.",
+        "Otherwise this is only a plain centred push-in; the intended 'rise for triumph' is not legible beyond generic enlargement.",
+        "The final frame is a poor dwell picture: the platform is clipped by the bottom edge, the lifter's feet sit hard on the crop, and the detached barbell reads as falling rather than held.",
+        "No obvious tearing, halo or painted-over ghost, and the warm light-sweep is subtle and era-fitting, but that cannot rescue the separated grip."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.42,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.02,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.16,
+            "panX": 0,
+            "panY": -0.02,
+            "ease": "out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.3,
+            "panX": 0,
+            "panY": -0.055,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": -0.045,
+            "scale": 1.12,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": -0.045,
+            "scale": 1.12,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A triumph in Tokyo and Cardiff: the lifter and the barbell he holds rise together and grow as the camera tilts up and closes in, lifting the held weight toward the top of the plate."
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "A competent but plain centred push-in: lifter and barbell stay coherently locked with no ghosting or tearing and the light-sweep suits the lithograph, yet the motion does not distinctly express the triumph and the last frame uncomfortably clips the platform.",
+      "filmIssues": [
+        "The move is a plain centred push-in (zoom 1 to 1.26) with both layers sharing identical depth and drift, so it is no better than the baseline push-in it is scored against; the triumph is not expressed as a distinct rise or reveal.",
+        "The final frame crops the competition platform awkwardly at the bottom and sides and pushes the lifter's feet to the very bottom edge, making t=1 a poor picture to dwell on.",
+        "The barbell grows toward the left and right frame edges by the last frames, tightening the composition rather than lifting and opening it."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.48,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.14,
+            "panX": 0,
+            "panY": -0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.26,
+            "panX": 0,
+            "panY": -0.03,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.03,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.03,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Lock lifter and barbell as one held unit: identical depth, identical upward drift and no per-layer scale (which was pulling the bar off the hands about separate centres), so all growth comes from the camera. A fuller start-to-finish push-in with a gentle upward pan makes the triumph rise purposeful while keeping feet, platform and both plates inside the frame for a clean final dwell."
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "A coherent and attractive push-in, but not yet bold or purposeful enough to publish: the rise is too close to a standard magnification and the final frame crowds the platform and feet at the bottom edge.",
+      "filmIssues": [
+        "The lifter and barbell stay locked together with no visible tearing, doubled edges, halo or ghosting, and the bar remains convincingly in the hands throughout.",
+        "The movement is legible but remains close to a plain centred push-in: the upward drift is modest and does not quite sell a distinct 'rise for triumph' rather than ordinary magnification.",
+        "By t=1 the push-in crops the competition platform awkwardly at the bottom and brings the lifter's feet very close to the lower frame edge, making the final dwell frame less composed than the opening frame.",
+        "The first frame is a strong, complete opening picture, but the last frame feels incidentally tight rather than deliberately heroic.",
+        "The light-sweep is subtle and period-appropriate, and the 1950s offset-lithograph texture remains intact."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.42,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.02,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": -0.02,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 1,
+            "driftX": 0,
+            "driftY": -0.05,
+            "scale": 1.06,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 1,
+            "driftX": 0,
+            "driftY": -0.05,
+            "scale": 1.06,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate"
+      }
+    }
+  ]
+}

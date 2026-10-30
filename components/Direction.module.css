@@ -1,0 +1,69 @@
+/*
+ * The director's card: a production slip tipped in over the dimmed verso while a plate is taken
+ * apart. Book type throughout, the era's accent for the kicker and the score.
+ */
+.card {
+  width: 384px;
+  padding: 24px 24px 20px;
+  background: color-mix(in oklab, #fffdf6 70%, var(--paper));
+  color: var(--ink);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 14%, transparent), 0 18px 40px -18px rgb(40 26 12 / 0.45), 0 2px 4px rgb(40 26 12 / 0.08);
+  font: 400 15px/1.5 var(--font-book);
+}
+.card p { margin: 0; }
+.kicker {
+  font: 400 17px/1 var(--font-book);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  padding-bottom: 14px;
+  margin-bottom: 18px !important;
+  border-bottom: 1px solid color-mix(in oklab, var(--ink) 16%, transparent);
+}
+.top { display: grid; grid-template-columns: 164px 1fr; gap: 18px; align-items: start; margin-bottom: 18px; }
+
+/* The plate with the camera move drawn over it. */
+.thumb { position: relative; width: 164px; aspect-ratio: 1; box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 20%, transparent); overflow: hidden; }
+.thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.thumb svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.outside { fill: rgb(20 14 8 / 0.42); }
+.trail, .path { fill: none; stroke: #fffaf0; stroke-width: 1.1; stroke-linecap: round; stroke-dasharray: 0 2.6; vector-effect: none; }
+.path { stroke-width: 1.5; stroke-dasharray: 0 3; }
+.firstFrame { fill: none; stroke: #fffaf0; stroke-width: 0.6; stroke-dasharray: 2 1.6; opacity: 0.85; }
+.midFrame { fill: none; stroke: #fffaf0; stroke-width: 0.4; stroke-dasharray: 0.6 1.2; opacity: 0.8; }
+.lastFrame { fill: none; stroke: #fffaf0; stroke-width: 1.3; stroke-linecap: square; }
+.key { fill: var(--accent); stroke: #fffaf0; stroke-width: 0.6; }
+.finder { fill: none; stroke: var(--accent); stroke-width: 0.9; opacity: 0.95; }
+
+.score { display: grid; gap: 4px; align-content: start; }
+.big { font: 400 68px/0.85 var(--font-serif); color: var(--accent); letter-spacing: -0.02em; }
+.big span { font-size: 0.36em; color: var(--muted); letter-spacing: 0; margin-left: 2px; }
+.scoreLabel { font: italic 400 15px/1.2 var(--font-book); color: var(--muted); }
+/* One mark per round: the kept one filled. */
+.rounds { list-style: none; display: flex; gap: 6px; margin: 12px 0 6px; padding: 0; }
+.rounds li { width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px color-mix(in oklab, var(--ink) 45%, transparent); }
+.rounds li[data-best] { background: var(--accent); box-shadow: none; }
+.outcome { font: 400 15px/1.4 var(--font-book); text-wrap: pretty; }
+
+.label {
+  font: 400 14px/1 var(--font-book);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 0 0 6px !important;
+}
+.rationale { font: italic 400 16.5px/1.45 var(--font-book); text-wrap: pretty; margin-bottom: 16px !important; }
+.verdict { font: 400 15px/1.5 var(--font-book); text-wrap: pretty; }
+.defect { margin-top: 10px !important; font: italic 400 15px/1.4 var(--font-book); color: var(--accent); }
+.meta {
+  margin-top: 16px !important;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in oklab, var(--ink) 12%, transparent);
+  font: 400 14px/1 var(--font-book);
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .finder { display: none; }
+}

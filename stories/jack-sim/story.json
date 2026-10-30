@@ -31,8 +31,8 @@
       ],
       "plate": "/stories/jack-sim/s1/plate.webp",
       "background": "/stories/jack-sim/s1/background.webp",
-      "video": "/stories/jack-sim/s1/scene.mp4?v=392379d7",
-      "poster": "/stories/jack-sim/s1/scene.jpg?v=392379d7",
+      "video": "/stories/jack-sim/s1/scene.mp4?v=4e387009",
+      "poster": "/stories/jack-sim/s1/scene.jpg?v=4e387009",
       "layers": [
         {
           "id": "cut-1",
@@ -76,8 +76,8 @@
       ],
       "plate": "/stories/jack-sim/s2/plate.webp",
       "background": "/stories/jack-sim/s2/background.webp",
-      "video": "/stories/jack-sim/s2/scene.mp4?v=104650f8",
-      "poster": "/stories/jack-sim/s2/scene.jpg?v=104650f8",
+      "video": "/stories/jack-sim/s2/scene.mp4?v=bf753283",
+      "poster": "/stories/jack-sim/s2/scene.jpg?v=bf753283",
       "layers": [
         {
           "id": "cut-1",
@@ -123,8 +123,8 @@
       "plate": "/stories/jack-sim/s3/plate.webp",
       "background": "/stories/jack-sim/s3/background.webp",
       "line": "/stories/jack-sim/s3/line.json",
-      "video": "/stories/jack-sim/s3/scene.mp4?v=68b08017",
-      "poster": "/stories/jack-sim/s3/scene.jpg?v=68b08017",
+      "video": "/stories/jack-sim/s3/scene.mp4?v=ef422377",
+      "poster": "/stories/jack-sim/s3/scene.jpg?v=ef422377",
       "layers": [
         {
           "id": "cut-1",
@@ -152,7 +152,8 @@
       "caption": "On 19 November 2001 he founds the World Toilet Organization. He uses humour and shock to get people talking about a taboo subject.",
       "visual": "A giant globe on a theatre stage, ringed by a white toilet seat like the rings of Saturn, under two spotlights. A crowd of silhouettes in the front rows raise their hands and laugh.",
       "cut": [
-        "globe"
+        "globe",
+        "toilet seat"
       ],
       "sources": [
         {
@@ -170,17 +171,26 @@
       ],
       "plate": "/stories/jack-sim/s4/plate.webp",
       "background": "/stories/jack-sim/s4/background.webp",
-      "video": "/stories/jack-sim/s4/scene.mp4?v=7da5741a",
-      "poster": "/stories/jack-sim/s4/scene.jpg?v=7da5741a",
+      "video": "/stories/jack-sim/s4/scene.mp4?v=51e3c68f",
+      "poster": "/stories/jack-sim/s4/scene.jpg?v=51e3c68f",
       "layers": [
         {
           "id": "cut-1",
           "concept": "globe",
           "depth": 0.6,
-          "x": 50.13,
-          "y": 69.13,
-          "w": 41,
+          "x": 50.91,
+          "y": 76.56,
+          "w": 48.56,
           "src": "/stories/jack-sim/s4/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "toilet seat",
+          "depth": 0.8,
+          "x": 48.91,
+          "y": 71.19,
+          "w": 64.56,
+          "src": "/stories/jack-sim/s4/cut-2.webp"
         }
       ],
       "checked": {
@@ -310,8 +320,8 @@
       ],
       "plate": "/stories/jack-sim/s7/plate.webp",
       "background": "/stories/jack-sim/s7/background.webp",
-      "video": "/stories/jack-sim/s7/scene.mp4?v=14d5c367",
-      "poster": "/stories/jack-sim/s7/scene.jpg?v=14d5c367",
+      "video": "/stories/jack-sim/s7/scene.mp4?v=c93ffc15",
+      "poster": "/stories/jack-sim/s7/scene.jpg?v=c93ffc15",
       "layers": [
         {
           "id": "cut-1",

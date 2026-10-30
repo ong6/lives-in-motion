@@ -1,0 +1,132 @@
+{
+  "note": "A fictional sample recording, voiced by a computer. True start and end of each scripted line.",
+  "seconds": 166.52,
+  "lines": [
+    {
+      "n": 1,
+      "speaker": "G",
+      "startMs": 500,
+      "endMs": 4721,
+      "text": "Ah Ma, the recorder is on already. Can you tell me where you were born?"
+    },
+    {
+      "n": 2,
+      "speaker": "A",
+      "startMs": 5421,
+      "endMs": 22923,
+      "text": "Aiyoh, so formal one. Okay lah. I was born in Teluk Ayer, near the sea, in a shophouse on a small lane. My mother say I am a tiger year baby, so maybe 1938. Last time nobody keep the birth paper properly."
+    },
+    {
+      "n": 3,
+      "speaker": "G",
+      "startMs": 23623,
+      "endMs": 25553,
+      "text": "What was your house like when you were small?"
+    },
+    {
+      "n": 4,
+      "speaker": "A",
+      "startMs": 26253,
+      "endMs": 45083,
+      "text": "After the war, around 1947, we move to a kampong in Potong Pasir. Attap roof, wooden house on stilts. Got chickens, got one big rambutan tree. Every morning I carry water from the well with two buckets. Very heavy, you know!"
+    },
+    {
+      "n": 5,
+      "speaker": "G",
+      "startMs": 45783,
+      "endMs": 47144,
+      "text": "When did you start sewing?"
+    },
+    {
+      "n": 6,
+      "speaker": "A",
+      "startMs": 47844,
+      "endMs": 63602,
+      "text": "In 1952, when I was fourteen, my auntie teach me to sew. She had a black Singer sewing machine with a foot pedal. Wah, I love that machine. I learn to make samfoo, then cheongsam for the neighbours."
+    },
+    {
+      "n": 7,
+      "speaker": "G",
+      "startMs": 64302,
+      "endMs": 65959,
+      "text": "And you met Ah Gong after that?"
+    },
+    {
+      "n": 8,
+      "speaker": "A",
+      "startMs": 66659,
+      "endMs": 78225,
+      "text": "Yes lah. In 1959 I married your Ah Gong. He was a bus conductor, always got coins in his pocket. We had no money, but very happy."
+    },
+    {
+      "n": 9,
+      "speaker": "G",
+      "startMs": 78925,
+      "endMs": 80622,
+      "text": "When did you get your first flat?"
+    },
+    {
+      "n": 10,
+      "speaker": "A",
+      "startMs": 81322,
+      "endMs": 103577,
+      "text": "1966. We moved into a three-room HDB flat in Queenstown. Wah, so modern! Got tap water inside the house, got electric light, no more carrying buckets. I put my sewing machine near the window, and the whole block come to me for clothes. Ten dollars one cheongsam."
+    },
+    {
+      "n": 11,
+      "speaker": "G",
+      "startMs": 104277,
+      "endMs": 106282,
+      "text": "How did you end up with the hawker stall?"
+    },
+    {
+      "n": 12,
+      "speaker": "A",
+      "startMs": 106982,
+      "endMs": 125780,
+      "text": "My eyes not so good for sewing already. So in 1978 your Ah Gong and I open a mee pok stall at the hawker centre in Queenstown. Every day wake up four o'clock to make the chilli. People queue very long, you know. Our fish balls we make by hand."
+    },
+    {
+      "n": 13,
+      "speaker": "G",
+      "startMs": 126480,
+      "endMs": 128386,
+      "text": "When did you stop working at the stall?"
+    },
+    {
+      "n": 14,
+      "speaker": "A",
+      "startMs": 129086,
+      "endMs": 136679,
+      "text": "2004. Your Ah Gong say enough already, we are old. So we give the stall to your uncle."
+    },
+    {
+      "n": 15,
+      "speaker": "G",
+      "startMs": 137379,
+      "endMs": 139731,
+      "text": "And what do you do these days, Ah Ma?"
+    },
+    {
+      "n": 16,
+      "speaker": "A",
+      "startMs": 140431,
+      "endMs": 159581,
+      "text": "Now I teach you all to sew button lah! Every Sunday the whole family come back to makan. Eight grandchildren already. The first one, your cousin Wei Ling, born in 1990. Sometimes I still use the Singer machine. It is older than your father!"
+    },
+    {
+      "n": 17,
+      "speaker": "G",
+      "startMs": 160281,
+      "endMs": 161699,
+      "text": "Thank you, Ah Ma."
+    },
+    {
+      "n": 18,
+      "speaker": "A",
+      "startMs": 162399,
+      "endMs": 165822,
+      "text": "Okay, okay. Go and eat first."
+    }
+  ]
+}

@@ -4,7 +4,6 @@ import { join } from "node:path";
 import { allStories, lifespan } from "@/lib/stories";
 import { eraFor } from "@/lib/eras";
 import { clothFor } from "@/components/book/Cover";
-import { PART } from "@/components/book/pagination";
 import type { CreateInfo, Job } from "@/pipeline/create/types";
 
 /**
@@ -18,7 +17,6 @@ export function withShelf<T extends CreateInfo>(info: T): T {
     slug: st.slug,
     name: st.name,
     lifespan: lifespan(st),
-    part: `Part ${PART[i] ?? i + 1}`,
     cloth: clothFor(eraFor(st.scenes[0].year), i),
   }));
   const sampleStory = stories.find((s) => s.slug === "jack-sim") ?? stories[0];

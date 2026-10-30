@@ -1,43 +1,62 @@
-/** Screenshots of a running server with the installed Chrome: pnpm shoot [baseUrl] [outDir] */
-import { chromium } from "playwright-core";
+/**
+ * Screenshots of a running server with the installed Chrome: pnpm shoot [baseUrl] [outDir]
+ *
+ * The book is read a page at a time, so a book shot opens its spread by URL (#p=N: 0 the cover,
+ * 2 the frontispiece, 3 Chapter I, one spread per chapter, then the notes) and waits for the turn
+ * and the film to settle. A shot can then press keys (L opens the Layers view, → turns a page)
+ * or click a button, and wait before the picture is taken.
+ */
+import { chromium, type Page } from "playwright-core";
 import { mkdir } from "node:fs/promises";
 
 const base = process.argv[2] ?? "http://localhost:3000";
-const out = process.argv[3] ?? "docs/shots/raw";
+const out = process.argv[3] ?? "docs/shots";
 
-/**
- * [name, path, scroll position, viewport height]. Home positions are fractions of the page;
- * story positions are in spreads' screen heights along the book (cover 0, title ≈ 2, Chapter I
- * ≈ 3.75, then 1.5 per chapter), read from the track's data-total.
- */
-const SHOTS: [string, string, number, number?][] = [
-  ["home", "/", 0],
-  ["home-shelf", "/#shelf", -1],
-  ["home-making", "/#making", -1],
-  ["jack-sim-cover", "/jack-sim", 0],
-  ["jack-sim-title", "/jack-sim", 2],
-  ["jack-sim-s4", "/jack-sim", 3.75 + 1.5 * 3],
-  ["jack-sim-notes", "/jack-sim", 3 + 1.5 * 7 + 0.8],
-  ["lee-kuan-yew-arrive", "/lee-kuan-yew?from=turn", -1],
-  ["lee-kuan-yew-s5", "/lee-kuan-yew", 3.75 + 1.5 * 4],
-  ["joseph-schooling-s5", "/joseph-schooling", 3.75 + 1.5 * 4],
+interface Shot {
+  name: string;
+  path: string;
+  /** Run after the page settles, before the picture. */
+  act?: (page: Page) => Promise<void>;
+  /** Milliseconds to wait after load (or after `act`). */
+  wait?: number;
+  fullPage?: boolean;
+}
+
+const SHOTS: Shot[] = [
+  { name: "home", path: "/" },
+  { name: "home-making", path: "/#making" },
+  { name: "book-jack-sim-2001", path: "/jack-sim#p=6", wait: 4500 },
+  { name: "layers-jack-sim-2001", path: "/jack-sim#p=6", wait: 4500, act: async (p) => (await p.keyboard.press("l"), await p.waitForTimeout(2500)) },
+  { name: "book-joseph-schooling-2016", path: "/joseph-schooling#p=8", wait: 4500 },
+  // The book change: from Jack Sim's notes, one turn closes his book and opens the next.
+  { name: "book-change", path: "/jack-sim#p=10", wait: 3000, act: async (p) => (await p.keyboard.press("ArrowRight"), await p.waitForTimeout(1300)) },
+  {
+    name: "create-rehearsal",
+    path: "/create",
+    wait: 1500,
+    act: async (p) => {
+      await p.getByRole("button", { name: /rehearse/i }).first().click();
+      // A rehearsal replays a whole life, Muse Wonder's Direct step included, in about a minute and a half.
+      await p.getByText(/Rehearsal finished/i).waitFor({ timeout: 180_000 });
+      await p.waitForTimeout(1500);
+    },
+    fullPage: true,
+  },
 ];
 
 await mkdir(out, { recursive: true });
 const browser = await chromium.launch({ channel: "chrome" });
-for (const [name, path, at, h] of SHOTS) {
-  const page = await browser.newPage({ viewport: { width: 1440, height: h ?? 900 } });
-  await page.goto(base + path, { waitUntil: "networkidle" });
-  // -1: leave the page where it opened (an anchor, or a story opened at its title spread).
-  if (at >= 0)
-    await page.evaluate((at) => {
-      const track = document.querySelector<HTMLElement>("[data-total]");
-      const max = document.documentElement.scrollHeight - innerHeight;
-      scrollTo(0, track ? track.offsetTop + (at / Number(track.dataset.total)) * (track.offsetHeight - innerHeight) : max * at);
-    }, at);
-  await page.waitForTimeout(1600);
-  await page.screenshot({ path: `${out}/${name}.png` });
+const only = process.argv[4]?.split(",");
+for (const shot of SHOTS) {
+  if (only && !only.includes(shot.name)) continue;
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  await page.goto(base + shot.path, { waitUntil: "networkidle" });
+  // The dev server's "N" badge isn't part of the site.
+  await page.addStyleTag({ content: "nextjs-portal { display: none !important; }" });
+  await page.waitForTimeout(shot.wait ?? 1600);
+  if (shot.act) await shot.act(page);
+  await page.screenshot({ path: `${out}/${shot.name}.png`, fullPage: shot.fullPage });
   await page.close();
-  console.log(name);
+  console.log(shot.name);
 }
 await browser.close();

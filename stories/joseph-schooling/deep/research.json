@@ -1,0 +1,883 @@
+{
+  "slug": "joseph-schooling",
+  "name": "Joseph Schooling",
+  "generated": "2026-10-30",
+  "method": "Muse Spark web search (3 calls) for leads; every fact re-read from the cited page by the agent. corroborated = two or more independent sources.",
+  "facts": [
+    {
+      "n": 1,
+      "year": "1960s",
+      "text": "His parents met at a Pesta Sukan softball tournament in Penang: May Yim played for Perak, Colin Schooling for Singapore's Pirates team.",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": false,
+      "theme": "family"
+    },
+    {
+      "n": 2,
+      "year": "1983",
+      "text": "Colin and May married in 1983.",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        },
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 3,
+      "year": "1983-1995",
+      "text": "After several miscarriages (Tatler says three), Joseph was born 12 years after the wedding, when May was 40.",
+      "quote": "He was a miracle - and an amazingly easy baby!",
+      "speaker": "May Schooling",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 4,
+      "year": "1995",
+      "date": "1995-06-16",
+      "text": "Born 16 June 1995 in Singapore, the couple's only child.",
+      "sources": [
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        },
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 5,
+      "year": "1960s-2016",
+      "text": "May grew up poor in Ipoh, Perak, getting new clothes only at Chinese New Year, and worked as a chartered accountant; Colin was a businessman.",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 6,
+      "year": "1960s",
+      "text": "Colin was a sportsman first: hurdles and water polo at Raffles Institution, then national softball.",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": false,
+      "theme": "family"
+    },
+    {
+      "n": 7,
+      "year": "late 1990s",
+      "text": "May could not swim beyond a doggy paddle; Joseph was a fearless 'water baby', so she made sure he learnt to be water-safe.",
+      "quote": "I didn't start swimming to win the Olympics. It was just to be safe in the water.",
+      "speaker": "Joseph Schooling (SwimSwam, 2025)",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "SwimSwam Magazine, 2025, 'Joseph Schooling: Singapore's hero'",
+          "url": "https://swimswam.com/joseph-schooling-singapores-hero/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 8,
+      "year": "1997",
+      "text": "Filipina helper Yolanda 'Auntie Yolly' Pascual joined the household in 1997; he has called her a 'second mum' and, back home, still asked her for massages.",
+      "quote": "He'll always say 'I want to be No. 1'.",
+      "speaker": "Yolanda Pascual",
+      "sources": [
+        {
+          "label": "The Sunday Times (Jean Iau), 14 Aug 2016, on domestic helper Yolanda Pascual (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "relationship"
+    },
+    {
+      "n": 9,
+      "year": "c. 1998",
+      "text": "At three he was taught by his first coach, Vincent Poon, at Tanah Merah Country Club; over four years Poon pitted him against older, bigger boys.",
+      "quote": "He worked really hard and listened.",
+      "speaker": "Vincent Poon",
+      "sources": [
+        {
+          "label": "The Sunday Times (Jean Iau), 14 Aug 2016, 'Schooling learnt to be fearless from first coach Vincent Poon' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 10,
+      "year": "c. 1999-2002",
+      "text": "Once he refused to race a much taller boy in a 50 m butterfly; Poon told him size mattered less than being fearless, and he won.",
+      "quote": "Vincent inculcated that hunger in him to win.",
+      "speaker": "Colin Schooling",
+      "sources": [
+        {
+          "label": "The Sunday Times (Jean Iau), 14 Aug 2016, 'Schooling learnt to be fearless from first coach Vincent Poon' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 11,
+      "year": "c. 2001",
+      "text": "His Olympic obsession began after meeting his grand-uncle Lloyd Valberg, Singapore's first Olympian (London 1948).",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        },
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 12,
+      "year": "2000s",
+      "text": "He played golf with his father, went on bowling trips to Kuala Lumpur, and ate with him at the Lagoon hawker centre at East Coast Park.",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": false,
+      "theme": "relationship"
+    },
+    {
+      "n": 13,
+      "year": "2000s",
+      "text": "On holidays with his mother's family in Ipoh he still swam, sometimes from 5am, at the city council pool and the family's pool.",
+      "quote": "Even when he was here on holiday, he would go swimming as early as 5am.",
+      "speaker": "Yim Kam Ling, his aunt",
+      "sources": [
+        {
+          "label": "The Straits Times, 15 Aug 2016, 'Aunt in Ipoh says her heart is bursting with joy' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 14,
+      "year": "2000s",
+      "text": "His mother says she simply played every sport with him; friends describe a boy who could not stand losing.",
+      "quote": "He hates to lose more than he loves to win.",
+      "speaker": "May Schooling",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "The Sunday Times (Jean Iau), 14 Aug 2016, 'Friends tell of swimmer's competitive streak' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "character"
+    },
+    {
+      "n": 15,
+      "year": "2008",
+      "text": "Aged 13 and bespectacled, he asked Michael Phelps for a photo when the US team trained in Singapore before Beijing; the two later recalled chasing monkeys that stole energy bars from the pool deck at the Singapore Island Country Club.",
+      "sources": [
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        },
+        {
+          "label": "The Sunday Times (May Chen, Rio), 14 Aug 2016, 'His first steps as Olympic victor' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 16,
+      "year": "2009",
+      "text": "At 14 he pleaded to go to the Bolles School in Florida; his mother first said no.",
+      "quote": "Mum, if I want to go to the Olympics, you have to let me go",
+      "speaker": "Joseph Schooling, as his mother recalls",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 17,
+      "year": "2009-2010",
+      "text": "The first year apart was the hardest: he was homesick and not used to independence.",
+      "quote": "I cried all the time. He did too.",
+      "speaker": "May Schooling",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 18,
+      "year": "2009",
+      "text": "He later admitted he was hard to coach at first.",
+      "quote": "I wasn't the easiest guy to train. I didn't want to be there.",
+      "speaker": "Joseph Schooling (2016)",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 19,
+      "year": "2009",
+      "text": "Colin's one request to coach Sergio Lopez when Joseph arrived in Florida was about character, not times.",
+      "quote": "Sergio, I want my son to be a gentleman, to be a good person",
+      "speaker": "Colin Schooling, as Lopez recalls",
+      "sources": [
+        {
+          "label": "ESPN, 30 Mar 2020, 'Is Joseph Schooling ready for more gold?'",
+          "url": "https://www.espn.ph/olympics/story/_/id/28922185/is-joseph-schooling-last-man-beat-michael-phelps-ready-more-gold"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 20,
+      "year": "2009-2016",
+      "text": "His parents took turns living with him in the US for months at a time; the three of them averaged about three weeks a year together.",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        },
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 21,
+      "year": "2009-2016",
+      "text": "The family spent about US$1 million (S$1.35 million) on his training and education; they mortgaged their home, sold a house in Perth and cashed out an endowment plan.",
+      "quote": "using up all our reserves and having to budget like crazy",
+      "speaker": "May Schooling",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        },
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 22,
+      "year": "2016",
+      "text": "May still wore Marks & Spencer trousers she had bought in her working days in 1990.",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        }
+      ],
+      "corroborated": false,
+      "theme": "object"
+    },
+    {
+      "n": 23,
+      "year": "2009-2021",
+      "text": "Colin, a handyman, built swimming contraptions for his son and kept thick folders of statistics and research.",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ],
+      "corroborated": false,
+      "theme": "relationship"
+    },
+    {
+      "n": 24,
+      "year": "2012",
+      "date": "2012-07-30",
+      "text": "At London 2012, aged 17, officials rejected his cap and goggles minutes before his 200 m butterfly heat; he swam 1:59.18 and finished 26th of 37.",
+      "quote": "I'm only 17 and I have a long way to go.",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "RED SPORTS, 2 Aug 2012, London 2012 200 m butterfly heat",
+          "url": "https://www.redsports.sg/2012/08/02/olympic-swimming-joseph-schooling-200m-butterfly/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 25,
+      "year": "2012",
+      "text": "An online comment, 'Singapore will never have an Olympic champion', stayed with him.",
+      "quote": "At least put yourself out there.",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "SwimSwam Magazine, 2025, 'Joseph Schooling: Singapore's hero'",
+          "url": "https://swimswam.com/joseph-schooling-singapores-hero/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 26,
+      "year": "2014",
+      "text": "He took up a place at the University of Texas, training under Eddie Reese, after Singapore deferred his National Service.",
+      "sources": [
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        },
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 27,
+      "year": "2015",
+      "date": "2015-08-08",
+      "text": "He won bronze in the 100 m butterfly at the World Championships in Kazan.",
+      "sources": [
+        {
+          "label": "Wikimedia Commons: Kazan 2015 victory ceremony, 100 m butterfly",
+          "url": "https://commons.wikimedia.org/wiki/File:Kazan_2015_-_Victory_Ceremony_100m_butterfly_M.jpg"
+        },
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 28,
+      "year": "2016",
+      "date": "2016-08-12",
+      "text": "On 12 Aug 2016 in Rio he won the 100 m butterfly in an Olympic record 50.39; Phelps, Chad le Clos and Laszlo Cseh tied for silver.",
+      "sources": [
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        },
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 29,
+      "year": "2016",
+      "text": "Colin, unwell, stayed in Singapore and watched at the home of Joseph's friend Teo Zhen Ren.",
+      "quote": "I love you. Son, you have done the nation very proud.",
+      "speaker": "Colin Schooling, his first words to his son",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "relationship"
+    },
+    {
+      "n": 30,
+      "year": "2016",
+      "text": "In the stands, May did not even notice the three-way tie for second.",
+      "quote": "He's done it! He's done it!",
+      "speaker": "May Schooling, remembering the moment",
+      "sources": [
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        }
+      ],
+      "corroborated": false,
+      "theme": "relationship"
+    },
+    {
+      "n": 31,
+      "year": "2016",
+      "text": "On the victory lap he told Phelps 'Dude, this is crazy'; Phelps patted his back and said 'I know.'",
+      "quote": "I'm so proud of Joe",
+      "speaker": "Michael Phelps",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen, Rio), 14 Aug 2016, 'His first steps as Olympic victor' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 32,
+      "year": "2016",
+      "text": "He described his career so far as breaking through a wall.",
+      "quote": "For the first guy through the wall, it's always bloody and I had to take that blow",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        },
+        {
+          "label": "The Sunday Times (May Chen, Rio), 14 Aug 2016, 'His first steps as Olympic victor' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "voice"
+    },
+    {
+      "n": 33,
+      "year": "2016",
+      "text": "At dawn the next morning he had breakfast alone with headphones on, watching the sunrise from the dining hall.",
+      "quote": "My life will never be the same again.",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "SwimSwam Magazine, 2025, 'Joseph Schooling: Singapore's hero'",
+          "url": "https://swimswam.com/joseph-schooling-singapores-hero/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 34,
+      "year": "2016",
+      "text": "He flew home for an open-top bus parade through crowds (18 Aug 2016) and received S$1 million under the Multi-Million Dollar Award Programme, 20% of it returned to the swimming association.",
+      "sources": [
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        },
+        {
+          "label": "Prestige Singapore, 2 Apr 2024, retirement press conference",
+          "url": "https://www.prestigeonline.com/sg/people/joseph-schooling-retirement-olympic-swimmer/"
+        },
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 35,
+      "year": "2016",
+      "text": "From August to December 2016 he says fame overwhelmed him; he did not get back in the pool until December, which made Eddie Reese nervous.",
+      "quote": "I kind of lost myself",
+      "speaker": "Joseph Schooling (The New Paper, 2017)",
+      "sources": [
+        {
+          "label": "SwimSwam, Jun 2017, citing The New Paper interview",
+          "url": "https://swimswam.com/?p=185772"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 36,
+      "year": "2016",
+      "text": "That autumn he tore his bicep twice; he later said he should have sat out the season.",
+      "sources": [
+        {
+          "label": "SwimSwam, 2020, on Sergio Lopez podcast",
+          "url": "https://swimswam.com/?p=461607"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 37,
+      "year": "2017",
+      "date": "2017-08-07",
+      "text": "An orchid hybrid, Dendrobium Joseph Schooling, was named after him on 7 Aug 2017.",
+      "sources": [
+        {
+          "label": "Wikipedia: Joseph Schooling",
+          "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
+        },
+        {
+          "label": "ESPN, 30 Mar 2020, 'Is Joseph Schooling ready for more gold?'",
+          "url": "https://www.espn.ph/olympics/story/_/id/28922185/is-joseph-schooling-last-man-beat-michael-phelps-ready-more-gold"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 38,
+      "year": "2017-2019",
+      "text": "After the 2017 worlds he put on about 7 kg and faced public abuse about his weight; he graduated in economics in December 2018 and finished 24th in the 100 m butterfly at the 2019 worlds.",
+      "quote": "Look, everything crashed in 2019.",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "ESPN, 30 Mar 2020, 'Is Joseph Schooling ready for more gold?'",
+          "url": "https://www.espn.ph/olympics/story/_/id/28922185/is-joseph-schooling-last-man-beat-michael-phelps-ready-more-gold"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 39,
+      "year": "2020",
+      "text": "Phelps asked him a question he could not answer at first: did he swim for the people in the stands, or for himself?",
+      "quote": "Why do you swim?",
+      "speaker": "Michael Phelps, as Schooling recalls",
+      "sources": [
+        {
+          "label": "ESPN, 30 Mar 2020, 'Is Joseph Schooling ready for more gold?'",
+          "url": "https://www.espn.ph/olympics/story/_/id/28922185/is-joseph-schooling-last-man-beat-michael-phelps-ready-more-gold"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 40,
+      "year": "2020",
+      "text": "In February 2020 he moved to Christiansburg, Virginia, to train with Sergio Lopez again; he was recognised there only once, at a Chipotle.",
+      "sources": [
+        {
+          "label": "ESPN, 30 Mar 2020, 'Is Joseph Schooling ready for more gold?'",
+          "url": "https://www.espn.ph/olympics/story/_/id/28922185/is-joseph-schooling-last-man-beat-michael-phelps-ready-more-gold"
+        },
+        {
+          "label": "SwimSwam, 2020, on Sergio Lopez podcast",
+          "url": "https://swimswam.com/?p=461607"
+        }
+      ],
+      "corroborated": true,
+      "theme": "habit"
+    },
+    {
+      "n": 41,
+      "year": "2021",
+      "text": "At the Tokyo Olympics (held in 2021) he went out in the heats of the 100 m butterfly.",
+      "sources": [
+        {
+          "label": "AP via ESPN, 31 Aug 2022",
+          "url": "https://www.espn.ph/olympics/swimming/story/_/id/34492719/olympic-swimmer-joseph-schooling-apologizes-cannabis-use"
+        },
+        {
+          "label": "Reuters via ESPN, 2 Apr 2024",
+          "url": "http://espn.ph/olympics/story/_/id/39856861/joseph-schooling-singapore-olympic-champion-retires-swimming"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 42,
+      "year": "2021",
+      "date": "2021-11-18",
+      "text": "Colin died of cancer on 18 Nov 2021, aged 73; Joseph posted a childhood photo of the two of them with only a heart.",
+      "quote": "It is hard to say goodbye, so let's begin with 'see you again'.",
+      "speaker": "May Schooling",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        },
+        {
+          "label": "Prestige Singapore, 2 Apr 2024, retirement press conference",
+          "url": "https://www.prestigeonline.com/sg/people/joseph-schooling-retirement-olympic-swimmer/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 43,
+      "year": "2022",
+      "text": "In August 2022 the defence ministry said he had admitted using cannabis overseas in May while on leave for the SEA Games; he apologised.",
+      "quote": "I gave in to a moment of weakness after going through a very tough period of my life.",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "AP via ESPN, 31 Aug 2022",
+          "url": "https://www.espn.ph/olympics/swimming/story/_/id/34492719/olympic-swimmer-joseph-schooling-apologizes-cannabis-use"
+        },
+        {
+          "label": "Prestige Singapore, 2 Apr 2024, retirement press conference",
+          "url": "https://www.prestigeonline.com/sg/people/joseph-schooling-retirement-olympic-swimmer/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 44,
+      "year": "2024",
+      "date": "2024-04-02",
+      "text": "He announced his retirement at 28 on 2 April 2024 and spoke to reporters at the Chinese Swimming Club.",
+      "quote": "I woke up not feeling the same excitement to go to practice.",
+      "speaker": "Joseph Schooling",
+      "sources": [
+        {
+          "label": "Prestige Singapore, 2 Apr 2024, retirement press conference",
+          "url": "https://www.prestigeonline.com/sg/people/joseph-schooling-retirement-olympic-swimmer/"
+        },
+        {
+          "label": "Reuters via ESPN, 2 Apr 2024",
+          "url": "http://espn.ph/olympics/story/_/id/39856861/joseph-schooling-singapore-olympic-champion-retires-swimming"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 45,
+      "year": "2024",
+      "text": "He remembered being four, 'hopping into the unreasonably freezing pool'.",
+      "sources": [
+        {
+          "label": "Prestige Singapore, 2 Apr 2024, retirement press conference",
+          "url": "https://www.prestigeonline.com/sg/people/joseph-schooling-retirement-olympic-swimmer/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 46,
+      "year": "2024",
+      "text": "His mother's open letter noted that he had moved into his late father's office.",
+      "quote": "You never lose! You either WIN or LEARN!",
+      "speaker": "May Schooling",
+      "sources": [
+        {
+          "label": "May Schooling's letter, first published in The Straits Times, via Women's Weekly (Apr 2024)",
+          "url": "https://www.womensweekly.com.sg/parenting/joseph-schooling-mother-pens-letter-following-his-retirement"
+        }
+      ],
+      "corroborated": false,
+      "theme": "relationship"
+    },
+    {
+      "n": 47,
+      "year": "2024-2025",
+      "text": "He now works in venture capital, plays golf and runs a swim school that teaches water safety.",
+      "quote": "I want to teach water safety",
+      "speaker": "Joseph Schooling (SwimSwam, 2025)",
+      "sources": [
+        {
+          "label": "Prestige Singapore, 2 Apr 2024, retirement press conference",
+          "url": "https://www.prestigeonline.com/sg/people/joseph-schooling-retirement-olympic-swimmer/"
+        },
+        {
+          "label": "SwimSwam Magazine, 2025, 'Joseph Schooling: Singapore's hero'",
+          "url": "https://swimswam.com/joseph-schooling-singapores-hero/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "now"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Age when he left for Bolles",
+      "detail": "The Sunday Times and his mother say 14 (2009); ESPN (2020) says 13.",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        },
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "ESPN, 30 Mar 2020, 'Is Joseph Schooling ready for more gold?'",
+          "url": "https://www.espn.ph/olympics/story/_/id/28922185/is-joseph-schooling-last-man-beat-michael-phelps-ready-more-gold"
+        }
+      ]
+    },
+    {
+      "topic": "Cost to the family",
+      "detail": "The Sunday Times: nearly US$1 million (S$1.35m); Women's Weekly: 'over $1 million' and a mortgaged home; Tatler: 'over a million dollars', a Perth house sold and an endowment cashed. The currency and what is counted differ.",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        },
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        },
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        }
+      ]
+    },
+    {
+      "topic": "Number of miscarriages",
+      "detail": "Tatler: three. Women's Weekly: 'several'.",
+      "sources": [
+        {
+          "label": "Tatler Asia, 'Joseph Schooling's father Colin dies aged 73' (Nov 2021)",
+          "url": "https://www.tatlerasia.com/lifestyle/sports/joseph-schooling-father-colin-dies-aged-73"
+        },
+        {
+          "label": "Singapore Women's Weekly, interview with May Schooling",
+          "url": "https://www.womensweekly.com.sg/parenting/broke-heart-let-joseph-go-may-schooling-raising-olympic-champion"
+        }
+      ]
+    },
+    {
+      "topic": "Where he met Phelps",
+      "detail": "ESPN says Phelps trained at 'the same pool Schooling trained'; The Sunday Times places the 2008 meeting at the Singapore Island Country Club. His first lessons were at Tanah Merah Country Club, so the two need not conflict.",
+      "sources": [
+        {
+          "label": "ESPN (Julian Linden), 14 Aug 2016, 'How Joseph Schooling and tiny Singapore rocked Rio'",
+          "url": "https://www.espn.ph/olympics/story/_/id/17296597/how-joseph-schooling-tiny-singapore-rocked-rio-shocked-michael-phelps"
+        },
+        {
+          "label": "The Sunday Times (May Chen, Rio), 14 Aug 2016, 'His first steps as Olympic victor' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        },
+        {
+          "label": "The Sunday Times (Jean Iau), 14 Aug 2016, 'Schooling learnt to be fearless from first coach Vincent Poon' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ]
+    },
+    {
+      "topic": "Mother's age in Aug 2016",
+      "detail": "The same Straits Times coverage gives 60 and 61.",
+      "sources": [
+        {
+          "label": "The Sunday Times (May Chen), 14 Aug 2016, 'A seven-year struggle to Olympic glory' (reprint)",
+          "url": "https://localnewsingapore.com/a-seven-year-struggle-to-olympic-glory/"
+        },
+        {
+          "label": "The Straits Times, 15 Aug 2016, 'Aunt in Ipoh says her heart is bursting with joy' (reprint)",
+          "url": "https://ifonlysingaporeans.blogspot.com/2016/08/joseph-schooling-wins-singapores-first.html"
+        }
+      ]
+    },
+    {
+      "topic": "Where the cannabis was used",
+      "detail": "AP says Vietnam; the ministry statement quoted says 'overseas'.",
+      "sources": [
+        {
+          "label": "AP via ESPN, 31 Aug 2022",
+          "url": "https://www.espn.ph/olympics/swimming/story/_/id/34492719/olympic-swimmer-joseph-schooling-apologizes-cannabis-use"
+        }
+      ]
+    },
+    {
+      "topic": "Source caveat",
+      "detail": "Several Straits Times pieces were read via a blog reprint (ifonlysingaporeans.blogspot.com) and localnewsingapore.com because straitstimes.com is paywalled; bylines and dates are kept in the labels.",
+      "sources": []
+    }
+  ]
+}

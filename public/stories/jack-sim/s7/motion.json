@@ -1,65 +1,66 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T13:33:52.344Z",
-  "usd": 0.0547,
-  "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient",
+  "at": "2026-10-30T14:35:07.197Z",
+  "usd": 0.1146,
+  "rationale": "Bolder, cleaner premiere reveal: open closer on the duck and screen with the duck locked to the toilet (minimum depth, no drift, no settle, slight end scale only), then pull back steadily and tilt down to reveal the projector beam, full screen and laughing audience rows for the final dwell frame. Keeping the duck near background depth prevents parallax from pulling it off the seat, while the 1.30 ",
   "plan": {
-    "focusX": 0.495,
-    "focusY": 0.36,
+    "focusX": 0.49,
+    "focusY": 0.37,
     "camera": [
       {
         "t": 0,
-        "zoom": 1,
-        "panX": 0,
-        "panY": 0,
+        "zoom": 1.3,
+        "panX": 0.015,
+        "panY": -0.035,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.12,
-        "panX": -0.005,
-        "panY": 0.01,
+        "zoom": 1.15,
+        "panX": 0.005,
+        "panY": -0.005,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.25,
-        "panX": -0.01,
-        "panY": 0.02,
-        "ease": "in-out"
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0.045,
+        "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.65,
+        "depth": 0.3,
         "driftX": 0,
-        "driftY": -0.008,
-        "scale": 1.07,
+        "driftY": 0,
+        "scale": 1.02,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
     "ambient": "light-sweep",
-    "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient"
+    "rationale": "Bolder, cleaner premiere reveal: open closer on the duck and screen with the duck locked to the toilet (minimum depth, no drift, no settle, slight end scale only), then pull back steadily and tilt down to reveal the projector beam, full screen and laughing audience rows for the final dwell frame. Keeping the duck near background depth prevents parallax from pulling it off the seat, while the 1.30 "
   },
   "critic": {
-    "score": 7,
+    "score": 8,
     "ok": true,
-    "verdict": "Publishable: a coherent, deliberate push toward the duck on screen that serves the premiere scene, though it remains close to a simple push-in.",
-    "round": 0
+    "passed": true,
+    "verdict": "A clear premiere reveal: starting on the film-within-the-film and pulling back to the laughing audience gives the motion a story purpose beyond a plain push-in, with a clean final hold.",
+    "round": 1
   },
   "rounds": [
     {
-      "score": 7,
-      "ok": true,
-      "verdict": "Publishable: a coherent, deliberate push toward the duck on screen that serves the premiere scene, though it remains close to a simple push-in.",
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish as-is: a sound pull-back idea, but the duck/toilet misregistration and clipped opening frame undermine it.",
       "filmIssues": [
-        "The push-in is clear and scroll-friendly, with the duck growing slightly forward of the toilet and screen without tearing, doubled edges, or a visible ghost at its original position.",
-        "The poster frame at t=0 reads well as a complete cinema tableau, and the later frames crop the audience and frame edges naturally as the camera moves toward the screen without awkward layer clipping.",
-        "The light-sweep is subtle and fitting for a projector/cinema scene, and the cut-paper print style is preserved throughout.",
-        "The motion is only modestly more expressive than a plain centred push-in, as the duck is the sole parallax layer, but its lift and growth do focus attention on the film-within-the-film."
+        "The pull-back reveal is legible — framing widens from the screen toward the full cinema and audience — but the duck does not stay registered on the toilet that belongs with it. Because the toilet is in the background and the duck is a depth-0.6 layer, the high opening zoom and pan slide the duck to the left rim of the bowl in the t=0 to t=0.4 frames, only settling into its painted, centred position by t=1. The opening picture therefore reads as misaligned rather than as a tight hero shot.",
+        "The 'settle' entrance compounds that separation, making the duck appear to drift across the seat instead of sitting solidly on it.",
+        "At the opening zoom the audience silhouettes are awkwardly clipped at the left, right and bottom frame edges, so t=0 is a cropped, off-register picture rather than a good page-opening image. The final full-frame picture is good to dwell on.",
+        "The light-sweep is fitting for a projector beam and is not distracting in the stills, and the cut-paper print style is preserved with no tearing or ghost duck visible."
       ],
       "fixes": [],
       "plan": {
@@ -68,40 +69,93 @@
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "zoom": 1.4,
+            "panX": 0.03,
+            "panY": -0.06,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.12,
-            "panX": -0.005,
-            "panY": 0.01,
+            "zoom": 1.2,
+            "panX": 0.01,
+            "panY": 0,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.25,
-            "panX": -0.01,
-            "panY": 0.02,
-            "ease": "in-out"
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.06,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.65,
+            "depth": 0.6,
             "driftX": 0,
-            "driftY": -0.008,
-            "scale": 1.07,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "settle",
+            "enterAt": 0.08,
+            "enterFor": 0.28
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A premiere triumph told as a Reveal: the film opens tight on the duck as it settles onto the toilet seat under the projector beam, then pulls back and tilts down to discover the screen, projector and audience."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "A clear premiere reveal: starting on the film-within-the-film and pulling back to the laughing audience gives the motion a story purpose beyond a plain push-in, with a clean final hold.",
+      "filmIssues": [
+        "The pull-back is clear and purposeful: it opens tight on the duck on the toilet inside the screen, then steadily widens and pans down to reveal the projector beam, full screen and audience rows, ending on the complete premiere picture.",
+        "The duck stays coherent and locked to the toilet seat throughout, with no tearing, doubled edges, halo or ghost from its painted-over spot. Its low depth and lack of drift keep cut-outs that belong together together.",
+        "The first frame is a strong close opening on the screen/duck and the last frame is the best dwell image — the full cinema composition with screen, beam and audience visible and in frame.",
+        "The light-sweep ambient is fitting for a projector/cinema scene and remains subtle in the stills; the cut-paper print style is preserved."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.37,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.3,
+            "panX": 0.015,
+            "panY": -0.035,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.15,
+            "panX": 0.005,
+            "panY": -0.005,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.045,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1.02,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
         "ambient": "light-sweep",
-        "rationale": "A slow, deliberate push from the back of the cinema toward the screen, centred on the duck, turns the premiere screening into the scene's single event. The duck sits forward of the plate so it grows and lifts very slightly against the toilet and blue projector beam, becoming the unavoidable star of the film-within-the-film while the audience silhouettes stay anchored below. The light-sweep ambient"
+        "rationale": "Bolder, cleaner premiere reveal: open closer on the duck and screen with the duck locked to the toilet (minimum depth, no drift, no settle, slight end scale only), then pull back steadily and tilt down to reveal the projector beam, full screen and laughing audience rows for the final dwell frame. Keeping the duck near background depth prevents parallax from pulling it off the seat, while the 1.30 "
       }
     }
   ]

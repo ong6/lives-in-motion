@@ -2,7 +2,7 @@
  * The shape of a /create job as the page sees it (job.json on disk, SSE snapshots on the wire).
  * Type-only: safe to import from client components.
  */
-export type StepId = "screen" | "research" | "storyboard" | "plates" | "cutouts" | "frontispiece" | "films";
+export type StepId = "screen" | "research" | "storyboard" | "plates" | "cutouts" | "frontispiece" | "films" | "direct";
 export type StepStatus = "waiting" | "running" | "done" | "skipped" | "failed" | "declined";
 /** declined: the subject screen turned the name away before any research. */
 export type JobStatus = "running" | "done" | "failed" | "interrupted" | "declined";
@@ -40,6 +40,21 @@ export interface JobScene {
   video?: string;
   note?: string;
   spend: Spend;
+  /** Muse Wonder's direction of this scene's film (the "Direct" step). */
+  wonder?: JobWonder;
+}
+
+/** What Muse Wonder made of one scene: its plan's rationale and its own critique of the film. */
+export interface JobWonder {
+  status: "directing" | "directed" | "kept-fixed-move" | "failed";
+  score?: number;
+  /** Reached the critic's pass mark. */
+  passed?: boolean;
+  rationale?: string;
+  verdict?: string;
+  rounds?: number;
+  usd?: number;
+  note?: string;
 }
 
 export interface JobLog {
@@ -67,7 +82,16 @@ export interface Job {
   finishedAt?: string;
   error?: string;
   /** The subject screen's answer; `message` is shown when the life was declined. */
-  screen?: { category: string; known_for: string; ok: boolean; message?: string };
+  screen?: {
+    category: string;
+    known_for: string;
+    ok: boolean;
+    message?: string;
+    /** Why it was declined: blocked, unverifiable, fictional, private, minor, ambiguous, not_singaporean, category. */
+    refused?: string;
+    /** What the web-search check found: the reason in one sentence and every source it cited. */
+    check?: { status: string; singapore: boolean; minor: boolean; reason: string; sources: { label: string; url: string }[]; independent: number };
+  };
   /** Made as a draft: off the shelf until `pnpm approve <slug>`. */
   draft?: boolean;
   steps: Record<StepId, { status: StepStatus; startedAt?: string; endedAt?: string; usd: number; note?: string }>;
@@ -89,7 +113,7 @@ export interface Job {
   usd: number;
   ceiling: number;
   spend: Spend;
-  models: { spark: string; image: string; sam: string };
+  models: { spark: string; image: string; sam: string; wonder?: string };
   log: JobLog[];
 }
 
@@ -118,6 +142,8 @@ export interface CreateInfo {
   shelf?: ShelfBook[];
   sample?: { slug: string; name: string; plates: { year: string; title: string; src: string }[] };
   last?: { slug: string; name: string; seconds: number; usd: number };
+  /** The typical cost of one life, all steps, from lib/cost.ts (the figure quoted everywhere). */
+  typical?: { usd: number; label: string; basis: string; wonderPerScene: number; direct: number };
 }
 
 /** A life on the shelf, as its cover is drawn. */
@@ -125,8 +151,9 @@ export interface ShelfBook {
   slug: string;
   name: string;
   lifespan: string;
-  part: string;
+  /** No longer shown: each life is its own book. */
+  part?: string;
   cloth: string;
 }
 
-export const STEP_ORDER: StepId[] = ["screen", "research", "storyboard", "plates", "cutouts", "frontispiece", "films"];
+export const STEP_ORDER: StepId[] = ["screen", "research", "storyboard", "plates", "cutouts", "frontispiece", "films", "direct"];

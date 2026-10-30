@@ -1,0 +1,213 @@
+/*
+ * The family pages: /create's daylight workbench (its module supplies the page, masthead, form,
+ * ticket and press log), plus what a recording needs: a player, the transcript with its turn
+ * times, and facts that light up with the moment they were said. Vermilion stays the colour of
+ * what is live; the cited moment is marked with it.
+ */
+
+/* ---------- Intake ---------- */
+.modes { display: flex; gap: 0; border: 1px solid color-mix(in oklab, var(--ink) 40%, transparent); border-radius: 2px; width: max-content; }
+.modes button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  background: transparent;
+  font: 400 16px/1 var(--font-book);
+  color: var(--ink);
+  cursor: pointer;
+}
+.modes button + button { border-left: 1px solid color-mix(in oklab, var(--ink) 25%, transparent); }
+.modes button[aria-pressed="true"] { background: var(--ink); color: var(--sheet); }
+
+.recorder {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px 16px;
+  align-items: center;
+  padding: 16px;
+  background: var(--well);
+  border-radius: 2px;
+}
+.recBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid var(--ink);
+  border-radius: 23px;
+  background: var(--sheet);
+  font: 400 17px/1 var(--font-book);
+  color: var(--ink);
+  cursor: pointer;
+}
+.recBtn::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--live); }
+.recBtn[data-on]::before { border-radius: 2px; animation: beat 1.4s ease-in-out infinite; }
+.recBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.recClock { font: 500 22px var(--font-mono); font-variant-numeric: tabular-nums; }
+.recClock small { font-size: 13px; color: var(--muted); font-weight: 400; }
+.recorder audio, .chosen audio { grid-column: 1 / -1; width: 100%; height: 36px; }
+.chosen { display: grid; gap: 8px; font: 400 14px/1.4 var(--font-sans); color: var(--muted); }
+
+.sampleCard {
+  display: grid;
+  gap: 10px;
+  padding: 18px 18px 16px;
+  border: 1px dashed color-mix(in oklab, var(--ink) 40%, transparent);
+  border-radius: 2px;
+}
+.sampleHead { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.sampleName { font: 400 30px/1 var(--font-serif); white-space: nowrap; }
+.sampleLabel { font: 600 13px/1.3 var(--font-sans); color: var(--live); text-transform: uppercase; letter-spacing: 0.04em; }
+.sampleCard audio { width: 100%; height: 36px; }
+.sampleActions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.sampleActions a { font-size: 15.5px; color: var(--muted); }
+
+.privacy {
+  display: grid;
+  gap: 8px;
+  padding: 16px 18px;
+  border-left: 3px solid var(--act);
+  background: color-mix(in oklab, var(--act) 6%, transparent);
+  font-size: 15.5px;
+  line-height: 1.5;
+}
+.privacy h3 { font: 600 14px/1.2 var(--font-sans); }
+.privacy ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+
+/* ---------- Recording: player, facts, transcript ---------- */
+.recording { display: grid; gap: 18px; }
+.player { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.player audio { flex: 1 1 320px; height: 40px; }
+.playAt {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--live);
+  color: #fff;
+  font: 400 16px var(--font-book);
+  cursor: pointer;
+}
+.reading { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 30px; align-items: start; }
+.colTitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--ink);
+  font: 400 28px/1 var(--font-serif);
+}
+.colTitle span { font: 400 13.5px var(--font-sans); color: var(--muted); text-align: right; }
+.wait { padding: 18px 0; font-style: italic; color: var(--muted); font-size: 16px; line-height: 1.5; }
+
+.factList { list-style: none; margin: 0; padding: 0; }
+.fact {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 12px;
+  padding: 11px 6px;
+  border-bottom: 1px solid var(--rule);
+  transition: background-color 0.3s ease;
+}
+.factList[data-live] .fact { animation: light 1.6s ease-out both; }
+.fact[data-on] { background: color-mix(in oklab, var(--live) 9%, transparent); }
+.factYear { font: 400 24px/1 var(--font-serif); }
+.factYear i { display: block; font: italic 400 13px/1.2 var(--font-book); color: var(--muted); }
+.factBody { display: grid; gap: 6px; min-width: 0; }
+.factText { font-size: 16.5px; line-height: 1.4; }
+.factCite { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.stamp {
+  flex-shrink: 0;
+  padding: 3px 9px;
+  border: 1px solid color-mix(in oklab, var(--live) 55%, transparent);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--live);
+  font: 500 12.5px/1.3 var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.stamp:hover:not(:disabled), .stamp:focus-visible { background: var(--live); color: #fff; }
+.stamp:disabled { cursor: default; color: var(--muted); border-color: var(--rule); }
+.quote { font: italic 400 14.5px/1.4 var(--font-book); color: var(--muted); }
+
+.recording[data-compact] .turns, .recording[data-compact] .factList { max-height: 300px; overflow: auto; scrollbar-width: thin; }
+.turns { list-style: none; margin: 0; padding: 0 6px 0 0; max-height: 560px; overflow: auto; scrollbar-width: thin; position: relative; }
+.turn { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 10px; padding: 8px 4px; border-bottom: 1px solid var(--rule); transition: background-color 0.3s ease; }
+.turns[data-live] .turn { animation: type 0.6s ease-out both; }
+.turn p { font-size: 15.5px; line-height: 1.45; color: var(--muted); }
+.turn[data-subject] p { color: var(--ink); }
+.turn[data-cited] { box-shadow: inset 2px 0 0 color-mix(in oklab, var(--live) 60%, transparent); }
+.turn[data-on] { background: color-mix(in oklab, var(--live) 9%, transparent); }
+.turnAt {
+  align-self: start;
+  padding: 2px 0;
+  border: 0;
+  background: transparent;
+  font: 12.5px/1.6 var(--font-mono);
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+  text-align: left;
+  cursor: pointer;
+}
+.turnAt:hover:not(:disabled) { color: var(--live); text-decoration: underline; }
+.who { display: block; font: 600 12.5px/1.5 var(--font-sans); color: var(--muted); }
+
+/* ---------- Book record page ---------- */
+.record { display: grid; gap: 30px; padding: 30px var(--gutter) 70px; }
+.recordHead { display: flex; justify-content: space-between; gap: 30px; align-items: flex-end; padding-bottom: 22px; border-bottom: 1px solid var(--ink); }
+.recordKicker { font: 600 14px var(--font-sans); color: var(--act); }
+.recordName { font: 400 72px/0.92 var(--font-serif); letter-spacing: -0.015em; margin-top: 6px; }
+.recordActions { display: grid; justify-items: end; gap: 10px; flex-shrink: 0; }
+.recordSheet { background: var(--sheet); padding: 30px 34px 36px; box-shadow: 0 1px 1px rgb(60 40 20 / 0.08), 0 26px 50px -30px rgb(60 40 20 / 0.5); }
+.recordFoot { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 30px; align-items: start; }
+.cited { padding: 12px 16px; background: color-mix(in oklab, var(--live) 8%, transparent); border-left: 3px solid var(--live); font-size: 16px; line-height: 1.45; }
+
+.danger { display: grid; gap: 10px; justify-items: start; padding: 16px 18px; border: 1px solid color-mix(in oklab, var(--err) 35%, transparent); border-radius: 2px; }
+.danger h3 { font: 600 14px/1.2 var(--font-sans); color: var(--err); }
+.danger p { font-size: 15.5px; line-height: 1.5; color: var(--muted); }
+.deleteBtn {
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid var(--err);
+  border-radius: 2px;
+  background: transparent;
+  color: var(--err);
+  font: 400 16px var(--font-book);
+  cursor: pointer;
+}
+.deleteBtn:hover:not(:disabled), .deleteBtn[data-armed] { background: var(--err); color: #fff; }
+.deleteBtn:disabled { opacity: 0.5; cursor: not-allowed; }
+.keyLink { display: flex; gap: 8px; align-items: center; width: 100%; }
+.keyLink input { flex: 1; min-width: 0; padding: 8px 10px; border: 1px solid var(--rule); background: var(--sheet); font: 12.5px var(--font-mono); color: var(--ink); }
+.copy { padding: 8px 12px; border: 1px solid var(--ink); background: transparent; font: 400 14px var(--font-book); cursor: pointer; border-radius: 2px; }
+
+.boundPrivate { font: 600 14px var(--font-sans); color: var(--act); }
+.boundLinks { display: grid; gap: 10px; width: 100%; max-width: 560px; margin-top: 6px; }
+.boundLinks p { font-size: 15px; color: var(--muted); line-height: 1.45; }
+
+@keyframes light {
+  0% { opacity: 0; transform: translateX(-6px); background: color-mix(in oklab, var(--live) 22%, transparent); }
+  35% { opacity: 1; transform: none; background: color-mix(in oklab, var(--live) 18%, transparent); }
+  100% { opacity: 1; transform: none; }
+}
+@keyframes type {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes beat {
+  50% { opacity: 0.35; }
+}
+
+@media (max-width: 960px) {
+  .reading, .recordFoot { grid-template-columns: 1fr; }
+  .recordHead { flex-direction: column; align-items: flex-start; }
+  .recordActions { justify-items: start; }
+  .recordName { font-size: 52px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fact, .turn, .recBtn::before { animation: none !important; }
+}

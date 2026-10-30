@@ -229,6 +229,51 @@
 .ref button:hover { text-decoration: underline; }
 .ref button:focus-visible { outline: 1px solid var(--accent); outline-offset: 1px; }
 
+/* Muse Spark's fact-check: a quiet mark under the caption; hover or focus opens the verdict. */
+.check {
+  position: relative;
+  margin-top: 14px !important;
+  font: 400 15px/1 var(--font-book);
+  color: var(--muted);
+}
+.checkMark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35em;
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+  cursor: help;
+  border-bottom: 1px dotted color-mix(in oklab, var(--muted) 60%, transparent);
+  padding-bottom: 2px;
+}
+.checkMark > span { color: var(--accent); font-variant-caps: normal; }
+.checkMark:hover, .checkMark:focus-visible { color: var(--ink); outline: none; }
+.checkMark:focus-visible { border-bottom-style: solid; }
+.checkTip {
+  position: absolute;
+  left: -14px;
+  bottom: calc(100% + 12px);
+  z-index: 5;
+  display: grid;
+  gap: 6px;
+  width: 400px;
+  padding: 14px 16px;
+  background: color-mix(in oklab, #fffdf6 75%, var(--paper));
+  color: var(--ink);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 14%, transparent), 0 14px 30px -12px rgb(40 26 12 / 0.4);
+  font: 400 15px/1.45 var(--font-book);
+  text-wrap: pretty;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 6px;
+  transition: opacity 0.2s ease, translate 0.2s ease, visibility 0s linear 0.2s;
+}
+.checkTip b { font-weight: 500; }
+.checkSrc { font-size: 14px; color: var(--muted); }
+.checkMark:hover + .checkTip, .checkMark:focus + .checkTip { opacity: 1; visibility: visible; translate: 0 0; transition: opacity 0.2s ease, translate 0.2s ease; }
+.play .check { animation: fadeIn 0.6s calc(var(--delay) + 1900ms) both ease-out; }
+.noteCheck { color: var(--muted); }
+
 /* ---------- Plate page (recto): the print tipped in inside a pressed plate mark ---------- */
 .plateFig {
   position: absolute;
@@ -274,6 +319,9 @@
 .plate[data-layers] { background-color: transparent; box-shadow: 0 0 0 1px transparent; }
 .plateMark:has(.plate[data-layers]) { box-shadow: none; background: transparent; }
 .plateMark { transition: box-shadow 0.6s ease, background-color 0.6s ease; }
+/* Taken apart, the stack stands where the caption was; only the way back stays. */
+.plateFig figcaption > span { transition: opacity 0.5s ease; }
+.plateFig:has(.plate[data-layers]) figcaption > span { opacity: 0; }
 .plateFig figcaption {
   display: flex;
   align-items: baseline;

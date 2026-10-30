@@ -1,158 +1,185 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T13:32:02.494Z",
-  "usd": 0.1063,
-  "rationale": "Keep the theatrical push-in and light-sweep, but greatly reduce globe drift and scale so it stays seated in its ring and on the platform, and cap the zoom so the ring tips remain inside the frame. Parallax from depth still separates globe from crowd and curtains without tearing the combined globe-and-ring subject.",
+  "at": "2026-10-30T14:45:21.435Z",
+  "usd": 0.1138,
+  "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject.",
   "plan": {
-    "focusX": 0.5,
-    "focusY": 0.48,
+    "focusX": 0.47,
+    "focusY": 0.46,
     "camera": [
       {
         "t": 0,
         "zoom": 1,
         "panX": 0,
-        "panY": 0,
+        "panY": 0.03,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.06,
-        "panX": 0,
-        "panY": -0.006,
-        "ease": "in-out"
+        "zoom": 1.09,
+        "panX": -0.01,
+        "panY": -0.01,
+        "ease": "out"
       },
       {
         "t": 1,
-        "zoom": 1.13,
-        "panX": 0,
-        "panY": -0.012,
-        "ease": "in-out"
+        "zoom": 1.18,
+        "panX": -0.01,
+        "panY": -0.03,
+        "ease": "linear"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.6,
+        "depth": 0.7,
         "driftX": 0,
-        "driftY": -0.006,
-        "scale": 1.02,
-        "enter": "none",
-        "enterAt": 0,
-        "enterFor": 0.1
+        "driftY": -0.02,
+        "scale": 1.04,
+        "enter": "rise",
+        "enterAt": 0.02,
+        "enterFor": 0.48
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.7,
+        "driftX": 0,
+        "driftY": -0.02,
+        "scale": 1.04,
+        "enter": "rise",
+        "enterAt": 0.02,
+        "enterFor": 0.48
       }
     ],
     "ambient": "light-sweep",
-    "rationale": "Keep the theatrical push-in and light-sweep, but greatly reduce globe drift and scale so it stays seated in its ring and on the platform, and cap the zoom so the ring tips remain inside the frame. Parallax from depth still separates globe from crowd and curtains without tearing the combined globe-and-ring subject."
+    "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject."
   },
   "critic": {
-    "score": 7,
+    "score": 8,
     "ok": true,
-    "verdict": "Publishable. The poster frame at t=0 is a strong, complete opening picture — full globe-and-toilet-seat ring centred under both spotlights, curtains framing the stage and the laughing crowd silhouetted below. The slow push-in (zoom 1 to 1.13) reads clearly forwards and backwards with no stall, and the globe's restrained depth, drift and scale keep the combined globe-and-ring subject intact while giving gentle parallax against crowd and curtains. The light-sweep suits the theatre spotlights and stays subtle, and the fluorescent orange/teal risograph grain and overprint character are preserved. It rises above a plain push-in only modestly through that parallax and sweep, hence 7 rather than higher.",
+    "passed": true,
+    "verdict": "Publishable. The film improves clearly on a plain centred push-in: it opens on the empty, lit stage, then the globe and toilet seat rise together as one locked Saturn-like unit into the spotlights, followed by a moderate push-in to a balanced final tableau. The two cut-outs share depth, drift, scale and entrance timing, so they stay together with no visible tearing, doubling, halo or ghosting against the painted-over background. The first frame reads as a deliberate theatrical opening, and the final frame at zoom 1.18 retains the full seat ring, globe, stage and audience silhouettes as a good held image. The light-sweep suits the stage spotlights and the risograph print treatment is preserved.",
     "round": 1
   },
   "rounds": [
     {
       "score": 6,
       "ok": false,
-      "verdict": "Globe layer tears away from its static ring/platform and the ring clips the edges at full zoom, so the theatrical lift reads as incoherent layer motion rather than a clear reveal.",
+      "verdict": "A clear theatrical-entrance idea with coherent locked layers, undermined by a front-loaded rise and an over-zoomed final frame that crops the very composition it should celebrate.",
       "filmIssues": [
-        "The globe-only cut-out drifts up and scales against the toilet-seat ring and platform, which stay on the clean background. Across the sheet the globe visibly slides through / separates from the ring that is meant to encircle it, weakening the Saturn-ring illusion and making the subject read as a pasted layer rather than one stage prop.",
-        "The final push to zoom 1.22 drives the ring tips to, and effectively off, both frame edges in the last frames, an awkward clip for the hero object; the lift also leaves the globe floating slightly above its platform.",
-        "With that separation, the move is not clearly better than a plain centred push-in: the theatrical reveal is undercut by the ring/platform mismatch, though the poster frame at t=0 is strong and the warm light-sweep is fitting and subtle for the stage spotlights."
+        "The globe/toilet-seat entrance is legible and the two cut-outs correctly stay locked together with no visible tearing, ghosting or halo, but the move is front-loaded: by t=0.2 the subject is already essentially in place and the remaining 80% is a plain push-in.",
+        "The final zoom of 1.32 is too tight for the reader to dwell on — the toilet seat is driven to both side edges, the stage and audience are squeezed/cropped at the bottom and the whole Saturn-ring composition that makes the joke read is lost.",
+        "The t=0 empty stage is a defensible curtain-up opening, but combined with the over-tight ending the arc goes from too empty to too full rather than arriving at a balanced heroic tableau."
       ],
       "fixes": [],
       "plan": {
-        "focusX": 0.5,
-        "focusY": 0.48,
+        "focusX": 0.47,
+        "focusY": 0.46,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
+            "zoom": 1.06,
             "panX": 0,
-            "panY": 0,
+            "panY": 0.05,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.1,
-            "panX": 0,
-            "panY": -0.012,
-            "ease": "in-out"
+            "zoom": 1.18,
+            "panX": -0.01,
+            "panY": 0,
+            "ease": "out"
           },
           {
             "t": 1,
-            "zoom": 1.22,
-            "panX": 0,
-            "panY": -0.025,
-            "ease": "in-out"
+            "zoom": 1.32,
+            "panX": -0.02,
+            "panY": -0.06,
+            "ease": "linear"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.6,
+            "depth": 0.75,
             "driftX": 0,
-            "driftY": -0.024,
-            "scale": 1.06,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
+            "driftY": -0.035,
+            "scale": 1.08,
+            "enter": "rise",
+            "enterAt": 0.08,
+            "enterFor": 0.38
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": -0.035,
+            "scale": 1.08,
+            "enter": "rise",
+            "enterAt": 0.08,
+            "enterFor": 0.38
           }
         ],
         "ambient": "light-sweep",
-        "rationale": "The globe takes the stage: it lifts gently and grows a touch against the empty platform while the camera pushes in toward the crossing spotlights, making the founding moment feel like a theatrical reveal. A warm light-sweep echoes the orange and teal beams without adding new elements."
+        "rationale": "The founding is a theatrical triumph, so the empty lit stage holds briefly before the globe-and-toilet-seat rises together into the spotlights as the camera tilts up and closes in."
       }
     },
     {
-      "score": 7,
+      "score": 8,
       "ok": true,
-      "verdict": "Publishable. The poster frame at t=0 is a strong, complete opening picture — full globe-and-toilet-seat ring centred under both spotlights, curtains framing the stage and the laughing crowd silhouetted below. The slow push-in (zoom 1 to 1.13) reads clearly forwards and backwards with no stall, and the globe's restrained depth, drift and scale keep the combined globe-and-ring subject intact while giving gentle parallax against crowd and curtains. The light-sweep suits the theatre spotlights and stays subtle, and the fluorescent orange/teal risograph grain and overprint character are preserved. It rises above a plain push-in only modestly through that parallax and sweep, hence 7 rather than higher.",
-      "filmIssues": [
-        "Motion is coherent and theatrical but modest: a centred push-in with only slight globe parallax and a barely discernible light-sweep in the stills.",
-        "At t=1 the ring tips come close to the side edges, but they remain inside the frame and do not clip awkwardly.",
-        "No tearing, doubled edges, halo, or ghost of the painted-over background is visible where the globe layer moves; the globe stays seated in its ring and on the platform throughout."
-      ],
+      "verdict": "Publishable. The film improves clearly on a plain centred push-in: it opens on the empty, lit stage, then the globe and toilet seat rise together as one locked Saturn-like unit into the spotlights, followed by a moderate push-in to a balanced final tableau. The two cut-outs share depth, drift, scale and entrance timing, so they stay together with no visible tearing, doubling, halo or ghosting against the painted-over background. The first frame reads as a deliberate theatrical opening, and the final frame at zoom 1.18 retains the full seat ring, globe, stage and audience silhouettes as a good held image. The light-sweep suits the stage spotlights and the risograph print treatment is preserved.",
+      "filmIssues": [],
       "fixes": [],
       "plan": {
-        "focusX": 0.5,
-        "focusY": 0.48,
+        "focusX": 0.47,
+        "focusY": 0.46,
         "camera": [
           {
             "t": 0,
             "zoom": 1,
             "panX": 0,
-            "panY": 0,
+            "panY": 0.03,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.06,
-            "panX": 0,
-            "panY": -0.006,
-            "ease": "in-out"
+            "zoom": 1.09,
+            "panX": -0.01,
+            "panY": -0.01,
+            "ease": "out"
           },
           {
             "t": 1,
-            "zoom": 1.13,
-            "panX": 0,
-            "panY": -0.012,
-            "ease": "in-out"
+            "zoom": 1.18,
+            "panX": -0.01,
+            "panY": -0.03,
+            "ease": "linear"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.6,
+            "depth": 0.7,
             "driftX": 0,
-            "driftY": -0.006,
-            "scale": 1.02,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
+            "driftY": -0.02,
+            "scale": 1.04,
+            "enter": "rise",
+            "enterAt": 0.02,
+            "enterFor": 0.48
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.7,
+            "driftX": 0,
+            "driftY": -0.02,
+            "scale": 1.04,
+            "enter": "rise",
+            "enterAt": 0.02,
+            "enterFor": 0.48
           }
         ],
         "ambient": "light-sweep",
-        "rationale": "Keep the theatrical push-in and light-sweep, but greatly reduce globe drift and scale so it stays seated in its ring and on the platform, and cap the zoom so the ring tips remain inside the frame. Parallax from depth still separates globe from crowd and curtains without tearing the combined globe-and-ring subject."
+        "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject."
       }
     }
   ]

@@ -1,0 +1,127 @@
+{
+  "name": "Ah Ma",
+  "hint": "a Singaporean grandmother, a seamstress and hawker, telling her own story to a grandchild; a private family history told in their own words in a family recording, not a public figure",
+  "facts": [
+    {
+      "n": 1,
+      "year": "1938",
+      "text": "About 1938, Ah Ma was born in Teluk Ayer near the sea.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:05 — “I was born in Teluk Ayer near the sea”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=5"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "year": "1947",
+      "text": "About 1947, Ah Ma moved to a kampong in Potong Pasir.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:26 — “we moved to a kampong in Potong Pasir”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=26"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "year": "1947",
+      "text": "About 1947, Ah Ma carried water from the well every morning.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:26 — “I carry water from the well with two buckets”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=26"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "year": "1952",
+      "text": "Ah Ma learned to sew from her auntie.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:48 — “my auntie teach me to sew”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=48"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "year": "1952",
+      "text": "Ah Ma learned to make samfoo and cheongsam for neighbours.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:48 — “I learned to make samfoo, then cheongsam for the neighbours”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=48"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "year": "1959",
+      "text": "Ah Ma married Ah Gong.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 1:06 — “in 1959 I married married your Ah Gong”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=66"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "year": "1966",
+      "text": "Ah Ma moved into a three-room HDB flat in Queenstown.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 1:21 — “We moved into a three room HDBDB flat in Queenstown”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=81"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "year": "1978",
+      "text": "Ah Ma opened a mee pok stall with Ah Gong.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 1:47 — “your Ah Gong and I open a mee pok stall”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=107"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "year": "1978",
+      "text": "About 1978, Ah Ma made fish balls by hand for customers.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 2:00 — “Our fish balls we make by hand”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=120"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "year": "1990",
+      "text": "Ah Ma welcomed her first grandchild Wei Ling.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 2:20 — “the first one your cousin Wei Ling born in 1990”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=140"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "year": "2004",
+      "text": "Ah Ma gave the stall to her family and retired.",
+      "sources": [
+        {
+          "label": "Fictional sample recording, 2:09 — “we gave the stall to your your uncle”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=129"
+        }
+      ]
+    }
+  ]
+}

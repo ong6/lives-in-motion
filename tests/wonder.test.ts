@@ -12,7 +12,7 @@ import {
   visibleShare,
   type MotionPlan,
 } from "@/pipeline/video";
-import { MIN_SCORE, bestRound, criticSchema, planSchema, type Round } from "@/pipeline/wonder";
+import { KEEP_SCORE, MIN_SCORE, bestRound, plateJudgeSchema, criticSchema, planSchema, type Round } from "@/pipeline/wonder";
 import { PRICES, wonderCost, wonderWorst } from "@/pipeline/budget";
 
 const layers = [
@@ -208,6 +208,7 @@ describe("Wonder calls", () => {
     };
     check(planSchema());
     check(criticSchema());
+    check(plateJudgeSchema());
   });
 
   it("publishes an ok round first, else the best score, earlier on a tie", () => {
@@ -215,6 +216,27 @@ describe("Wonder calls", () => {
     expect(bestRound([r(6), r(6), r(5)])).toBe(0);
     expect(bestRound([r(5), r(7), r(7)])).toBe(1);
     expect(bestRound([r(8), r(7, true)])).toBe(1);
-    expect(MIN_SCORE).toBe(7);
+    expect(MIN_SCORE).toBe(8);
+    expect(KEEP_SCORE).toBeLessThan(MIN_SCORE);
+  });
+});
+
+describe("fitting entrances", () => {
+  it("doesn't count a layer against the frame before it has entered", () => {
+    const box = { left: 0.02, top: 0.3, width: 0.3, height: 0.5 };
+    const plan = (enter: "none" | "fade"): MotionPlan => ({
+      focusX: 0.8,
+      focusY: 0.5,
+      rationale: "open tight on the right, pull back, then the figure fades in",
+      ambient: "none",
+      camera: [
+        { t: 0, zoom: 1.5, panX: 0, panY: 0, ease: "linear" },
+        { t: 0.5, zoom: 1, panX: 0, panY: 0, ease: "out" },
+        { t: 1, zoom: 1, panX: 0, panY: 0, ease: "linear" },
+      ],
+      layers: [{ id: "cut-1", depth: 1, driftX: 0, driftY: 0, scale: 1, enter, enterAt: 0.55, enterFor: 0.2 }],
+    });
+    expect(planProblems(plan("none"), { "cut-1": box }).some((p) => p.startsWith("cut-1"))).toBe(true);
+    expect(planProblems(plan("fade"), { "cut-1": box }).some((p) => p.startsWith("cut-1"))).toBe(false);
   });
 });

@@ -1,0 +1,981 @@
+{
+  "slug": "tan-howe-liang",
+  "name": "Tan Howe Liang",
+  "generated": "2026-10-30",
+  "method": "Muse Spark web search (3 calls) for leads; every fact re-read from the cited page by the agent. corroborated = two or more independent sources (NLB Infopedia and HistorySG are both NLB, so that pair alone is not counted).",
+  "facts": [
+    {
+      "n": 1,
+      "year": "1933",
+      "date": "1933-05-05",
+      "text": "Born 5 May 1933 in Swatow (Shantou), Guangdong, China.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "International Weightlifting Federation, IWF120y #114 (4 Jun 2025)",
+          "url": "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 2,
+      "year": "1933",
+      "text": "One of seven children (SNOC: the third of seven).",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 3,
+      "year": "c. 1937",
+      "text": "When he was about four, his father brought the family to Singapore 'in search of a livelihood'; they settled in cramped quarters in Chinatown.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "International Weightlifting Federation, IWF120y #114 (4 Jun 2025)",
+          "url": "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 4,
+      "year": "late 1930s-40s",
+      "text": "He was sent back to China for his early schooling, returned to Tuan Mong Secondary School and left after a year to help support his family.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "International Weightlifting Federation, IWF120y #114 (4 Jun 2025)",
+          "url": "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 5,
+      "year": "school years",
+      "text": "He played every sport his school offered but could not pursue any, because he had to earn.",
+      "sources": [
+        {
+          "label": "MCCY, 'Tribute to sports pioneers' speech (2014)",
+          "url": "https://www.mccy.gov.sg/about-us/news-and-resources/tribute-to-sports-pioneers/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 6,
+      "year": "c. 1947",
+      "text": "At 14 his ailing father died in a death house; his mother returned to China and left him with a granduncle and grandaunt.",
+      "quote": "At 14, he was left fatherless and alone",
+      "speaker": "SNOC obituary",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "International Weightlifting Federation, IWF120y #114 (4 Jun 2025)",
+          "url": "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 7,
+      "year": "c. 1947",
+      "text": "Just before his father died, he vowed to become one of the strongest men in the world.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "turning point"
+    },
+    {
+      "n": 8,
+      "year": "Chinatown years",
+      "text": "His first love was cooking, not lifting.",
+      "quote": "No one knows that cooking is my first love.",
+      "speaker": "Tan Howe Liang",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 9,
+      "year": "early 1950s",
+      "text": "He chanced on a strongman competition at the Gay World Amusement Park (originally Happy World) and was hooked.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "International Weightlifting Federation, IWF120y #114 (4 Jun 2025)",
+          "url": "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 10,
+      "year": "1952",
+      "text": "He joined the Evergreen Weightlifting Party for 50 cents a month and trained in a dingy back alley near Boat Quay, with one set of barbells and no coach.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "MCCY, 'Tribute to sports pioneers' speech (2014)",
+          "url": "https://www.mccy.gov.sg/about-us/news-and-resources/tribute-to-sports-pioneers/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "object"
+    },
+    {
+      "n": 11,
+      "year": "1950s",
+      "text": "With no funding he paid his own way, including overseas meets, working as a dockworker, store clerk and electrician (other sources add a clerk at Cathay and a mechanic).",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Wikipedia: Tan Howe Liang",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 12,
+      "year": "1953",
+      "text": "After one year of training, at 20, he won the national junior and senior lightweight titles.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 13,
+      "year": "1954",
+      "text": "He placed fourth at the Asian Games in Manila.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "work"
+    },
+    {
+      "n": 14,
+      "year": "1956",
+      "text": "Tipped for a medal at the Melbourne Olympics, he lost consciousness during the competition, returned, and finished ninth.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 15,
+      "year": "1950s",
+      "text": "A teammate described how he lifted.",
+      "quote": "He will just hypnotise himself and he will just go there and lift",
+      "speaker": "Harold de Castro, teammate (oral history)",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 16,
+      "year": "1958",
+      "text": "He won lightweight gold at the Asian Games in Tokyo with a 375 kg total.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Wikimedia Commons: 1958 Asian Games podium photo",
+          "url": "https://commons.wikimedia.org/wiki/File:Kenji_Onuma,_Tan_Howe_Liang,_Henrik_Tamraz_1958.jpg"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 17,
+      "year": "1958",
+      "text": "At the Commonwealth Games in Cardiff he won gold (358 kg) and set his first world record, 157 kg in the clean and jerk.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 18,
+      "year": "1959",
+      "text": "He won the lightweight title at the first SEAP Games in Bangkok (369 kg).",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 19,
+      "year": "1960",
+      "text": "In February the British Empire Weightlifting Federation's secretary, Oscar State, singled him out.",
+      "quote": "the man who will cause a big disturbance in this year's Rome Games",
+      "speaker": "Oscar State",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 20,
+      "year": "1960",
+      "text": "In May his manager, Chua Tian Teck, said he was lifting 395 kg in training, above the 390 kg world record, and promised head of state Yusof Ishak a medal.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 21,
+      "year": "1960",
+      "text": "Not everyone was sure. Sports council president C.C. Tan worried about the weight of expectation.",
+      "quote": "I fear he may leave with too heavy a sense of responsibility.",
+      "speaker": "C.C. Tan",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 22,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "On 8 Sep 1960 at the Palazzetto dello Sport he stepped up in a white leotard looking nervous; judges faulted his 115 kg press (Chua won a 2,000-lira protest) and then his 120 kg press.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 23,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "The contest ran about 10.5 hours.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 24,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "About 90 minutes before the clean and jerk, cramps seized both thighs and he could barely stand.",
+      "quote": "Uncle, my legs hurt",
+      "speaker": "Tan Howe Liang to Chua Tian Teck",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 25,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "Chua and Malayan lifter Chung Kum Weng carried him to the rest room; doctors and the American lifter Johnny Terpak advised an ambulance and complete rest.",
+      "quote": "Howe Liang wept and told me not to take him away",
+      "speaker": "Chua Tian Teck",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 26,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "He went into a trance-like prayer; about half an hour before his turn the cramps eased, which the press called a miracle.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 27,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "He blacked out on his first clean and jerk and dropped 150 kg, then asked what he needed for silver: 155 kg.",
+      "quote": "He approached the weights like a tiger towards his prey",
+      "speaker": "Chua Tian Teck",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 28,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "He lifted 155 kg, an Olympic record, for silver with a 380 kg total behind the Soviet Viktor Bushuev; Iraq's Abdul Wahid Aziz also totalled 380 kg but was heavier.",
+      "sources": [
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "Olympedia: Weightlifting, Lightweight, Rome 1960",
+          "url": "https://www.olympedia.org/results/29214"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 29,
+      "year": "1960",
+      "date": "1960-09-08",
+      "text": "At the medal ceremony organisers raised Japan's flag by mistake, assuming an Asian medallist must be Japanese; the ceremony was repeated with Singapore's flag.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "object"
+    },
+    {
+      "n": 30,
+      "year": "1960",
+      "text": "There was no parade at home: a tea party at the Istana and a dinner from his bosses at Cathay.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 31,
+      "year": "1960",
+      "text": "A fellow 1956 Olympian described what athletes then got for it.",
+      "quote": "There was no incentive, except the personal commitment and pride to represent the country.",
+      "speaker": "Dr Tan Eng Liang",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 32,
+      "year": "1961",
+      "text": "He moved up to middleweight and took silver at the SEAP Games in Rangoon.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "work"
+    },
+    {
+      "n": 33,
+      "year": "1962",
+      "text": "He won middleweight gold (390 kg) at the Commonwealth Games in Perth, and received the Pingat Jasa Gemilang (Meritorious Service Medal).",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 34,
+      "year": "1964",
+      "text": "At the Tokyo Olympics he placed 11th; Olympedia notes he competed for Malaysia, of which Singapore was then part.",
+      "sources": [
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 35,
+      "year": "1968",
+      "text": "He was appointed national weightlifting coach (NLB; Wikipedia says 1974) and coached Chua Koon Siong, Tung Chye Hong and Teo Yong Joo to regional medals.",
+      "quote": "If you wanted to succeed as a weightlifter back in the day, you had to go find him.",
+      "speaker": "Chua Koon Siong",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "mentor"
+    },
+    {
+      "n": 36,
+      "year": "1970",
+      "text": "His last big overseas meet was the 1970 Commonwealth Games in Edinburgh, where he was 10th.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "work"
+    },
+    {
+      "n": 37,
+      "year": "1977",
+      "text": "He opened a Peking-cuisine restaurant, which closed; he also drove a taxi for a short time.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "Wikipedia: Tan Howe Liang",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 38,
+      "year": "1982",
+      "text": "He became a gymnasium supervisor for the Singapore Sports Council at the National Stadium, later in Bedok, where he spotted a 16-year-old, Jamie Wee, who went on to the 2010 Youth Olympics.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Wikipedia: Tan Howe Liang",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 39,
+      "year": "1984",
+      "text": "Given the IWF's Gold Award, he was asked if he was tired of weightlifting.",
+      "quote": "Weightlifting is in my blood. How can I give it up?",
+      "speaker": "Tan Howe Liang",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": true,
+      "theme": "voice"
+    },
+    {
+      "n": 40,
+      "year": "1984",
+      "text": "Asked how much longer he would go on, he answered in four words; SNOC adds, 'He did.'",
+      "quote": "Until the last day.",
+      "speaker": "Tan Howe Liang",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 41,
+      "year": "1990s",
+      "text": "Weightlifting faded in Singapore by the 1990s and so did his fame; he appeared only occasionally at events.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 42,
+      "year": "1999",
+      "text": "The Sunday Times ranked him the second-greatest Singaporean athlete.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "recognition"
+    },
+    {
+      "n": 43,
+      "year": "2008",
+      "date": "2008-08",
+      "text": "The women's table-tennis silver in Beijing ended his 48 years as Singapore's only Olympic medallist; the Project 0812 programme behind it was inspired by his medal.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 44,
+      "year": "2010",
+      "text": "His wife was being treated for cancer; an anonymous donor helped the family with the costs. The couple have three children.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "family"
+    },
+    {
+      "n": 45,
+      "year": "2010-2014",
+      "text": "His 1960 leotard, belt and silver medal were shown at the SSC Museum and moved to the Sports Hub in 2014.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "object"
+    },
+    {
+      "n": 46,
+      "year": "2011",
+      "text": "He became NTUC FairPrice's Ambassador for Active Ageing.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "corroborated": false,
+      "theme": "now"
+    },
+    {
+      "n": 47,
+      "year": "2016",
+      "text": "The IOC gave him its Diploma of Merit.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "recognition"
+    },
+    {
+      "n": 48,
+      "year": "2024",
+      "date": "2024-12-03",
+      "text": "He died on 3 Dec 2024, aged 91.",
+      "quote": "When you get to know the man himself, you get to admire him for his character. He's very upright.",
+      "speaker": "Ng Ser Miang, IOC member",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Olympic Council of Asia, 5 Dec 2024",
+          "url": "http://oca.asia/news/5724-singapore-pays-tribute-to-olympic-legend-tan-howe-liang-91.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "now"
+    },
+    {
+      "n": 49,
+      "year": "1960-2024",
+      "text": "He is remembered through one photograph from Rome: teeth clenched, arms straining, the bar overhead.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "object"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Number of siblings",
+      "detail": "NLB and SNOC: one of seven (third of seven). IWF: third of eight.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "International Weightlifting Federation, IWF120y #114 (4 Jun 2025)",
+          "url": "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
+        }
+      ]
+    },
+    {
+      "topic": "Field size in Rome",
+      "detail": "NLB Infopedia: 33 competitors. NLB HistorySG: 35.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        }
+      ]
+    },
+    {
+      "topic": "Bushuev's winning total",
+      "detail": "HistorySG: 397.85 kg. SNOC: 397.5 kg. Olympedia: a 17.5 kg lead over Tan's 380 kg (i.e. 397.5). Names spelled Bushuev, Bushuyev.",
+      "sources": [
+        {
+          "label": "NLB HistorySG: Tan Howe Liang wins Singapore's first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        },
+        {
+          "label": "Olympedia: Weightlifting, Lightweight, Rome 1960",
+          "url": "https://www.olympedia.org/results/29214"
+        }
+      ]
+    },
+    {
+      "topic": "1958 world record",
+      "detail": "NLB: 157 kg. Chua Tian Teck (via SNOC): 347.5 lb (157.6 kg).",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), 'The tiger who became a gladiator in Rome'",
+          "url": "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+        }
+      ]
+    },
+    {
+      "topic": "Age he began lifting",
+      "detail": "He said 21; NLB and SNOC date it to 1952 (age 19), with national titles at 20.",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ]
+    },
+    {
+      "topic": "Year he became national coach",
+      "detail": "NLB: 1968. Wikipedia: 1974.",
+      "sources": [
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Wikipedia: Tan Howe Liang",
+          "url": "https://en.wikipedia.org/wiki/Tan_Howe_Liang"
+        }
+      ]
+    },
+    {
+      "topic": "Date of birth",
+      "detail": "Olympedia says the DOB is uncertain; Commonwealth Games data gives 23 May 1933, while NLB gives 5 May 1933.",
+      "sources": [
+        {
+          "label": "Olympedia: Tiger Tan",
+          "url": "https://www.olympedia.org/athletes/56344"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ]
+    },
+    {
+      "topic": "When he retired",
+      "detail": "SNOC says he called time after Tokyo 1964; NLB lists later meets (Edinburgh 1970, Ipoh 1977).",
+      "sources": [
+        {
+          "label": "Singapore National Olympic Council (Justin Kor), obituary, Dec 2024",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        },
+        {
+          "label": "NLB Infopedia: Tan Howe Liang (Alex Chow)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ]
+    },
+    {
+      "topic": "Excluded",
+      "detail": "Muse Spark reported 'almost S$100,000' in medical costs and a Sago Lane location for the death house; neither appears in the pages read, so both were left out.",
+      "sources": []
+    }
+  ]
+}

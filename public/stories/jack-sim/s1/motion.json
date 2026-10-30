@@ -1,180 +1,110 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T13:16:46.057Z",
-  "usd": 0.1356,
-  "rationale": "Keep the camera almost still so it no longer cancels the boy's shrink, lower his depth to 0.3 to reduce parallax growth, and retain the maximum rightward drift with a smaller upward drift matched to the plank's slope. This makes him visibly recede up the walkway toward the outhouse while keeping his feet on the planks, with the subtle light-sweep retained for the dusk kerosene mood.",
+  "at": "2026-10-30T14:32:26.512Z",
+  "usd": 0.0635,
+  "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view.",
   "plan": {
-    "focusX": 0.5,
-    "focusY": 0.6,
+    "focusX": 0.4,
+    "focusY": 0.72,
     "camera": [
       {
         "t": 0,
-        "zoom": 1,
-        "panX": 0,
-        "panY": 0,
+        "zoom": 1.38,
+        "panX": -0.05,
+        "panY": 0.09,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.18,
+        "panX": -0.02,
+        "panY": 0.04,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.02,
-        "panX": 0.01,
-        "panY": -0.01,
-        "ease": "in-out"
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.3,
-        "driftX": 0.04,
-        "driftY": -0.022,
+        "depth": 0.9,
+        "driftX": 0.045,
+        "driftY": -0.055,
         "scale": 0.92,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
-    "ambient": "light-sweep",
-    "rationale": "Keep the camera almost still so it no longer cancels the boy's shrink, lower his depth to 0.3 to reduce parallax growth, and retain the maximum rightward drift with a smaller upward drift matched to the plank's slope. This makes him visibly recede up the walkway toward the outhouse while keeping his feet on the planks, with the subtle light-sweep retained for the dusk kerosene mood."
+    "ambient": "dust",
+    "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view."
   },
   "critic": {
-    "score": 7,
+    "score": 8,
     "ok": true,
-    "verdict": "The film reads clearly: the boy's small rightward and upward drift, combined with his slight shrink, moves him along the plank walkway toward the outhouse and reads as receding into the scene rather than as a plain camera push-in. Across the six frames he stays coherent, with no tearing, doubled edges, halo or visible ghost on the plank where he started, and his feet remain plausibly on the walkway. No layer clips the frame edge awkwardly. The t=0 poster frame is a strong, balanced opening picture that matches the plate's composition. The light-sweep is subtle and fits the dusk/kerosene mood without breaking the 1950s offset-lithograph print style. The plate itself shows no stray text, no unwanted faces (the boy is correctly seen from behind), no anachronism, and no mangled anatomy or objects.",
-    "round": 2
+    "passed": true,
+    "verdict": "publish",
+    "round": 0
   },
   "rounds": [
     {
-      "score": 6,
-      "ok": false,
-      "verdict": "A clean, coherent and well-posted push-in, but the boy's walk toward the outhouse — the whole point of the scene — is not legible in the frames as rendered.",
+      "score": 8,
+      "ok": true,
+      "verdict": "publish",
       "filmIssues": [
-        "The intended walk-away does not read: across the six frames the boy barely changes position relative to the outhouse and does not get noticeably smaller, so the film is effectively a plain centred push-in.",
-        "The boy's 0.93 shrink is cancelled by the 1.16 camera zoom at depth 0.9 near the focus point — he stays the same size or grows slightly instead of receding along the plank walkway.",
-        "Motion is coherent with no visible tearing, ghosting or awkward frame-edge clipping, and the poster frame and subtle light-sweep are fitting, but that alone does not express the scene."
+        "The pull-back is clearly visible across the contact sheet: the opening frame is tight on the boy and plank walkway, while successive frames reveal the outhouse, surrounding kampung houses, palms and stream.",
+        "The movement expresses the scene's story: starting with the small boy carrying a bucket and widening to show the impoverished village and the outhouse that embody the lack of plumbing.",
+        "The boy, bucket and hand remain together with no obvious tearing, doubled edges, halo or ghost left on the walkway as he advances.",
+        "No cut-out layer clips the frame awkwardly; the boy remains fully inside the frame throughout.",
+        "The first frame works as a focused opening picture and the final frame is a balanced, complete view of the kampung that works well as the held reading image.",
+        "The dust effect is subtle and does not obscure the subject or undermine the flat-ink 1950s print appearance."
       ],
-      "fixes": [
-        "cut-1.enterFor 0.000 → 0.100"
-      ],
+      "fixes": [],
       "plan": {
-        "focusX": 0.46,
-        "focusY": 0.66,
+        "focusX": 0.4,
+        "focusY": 0.72,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "zoom": 1.38,
+            "panX": -0.05,
+            "panY": 0.09,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": -0.02,
+            "panY": 0.04,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.16,
-            "panX": 0.02,
-            "panY": -0.015,
-            "ease": "in-out"
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
             "depth": 0.9,
-            "driftX": 0.032,
-            "driftY": -0.028,
-            "scale": 0.93,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          }
-        ],
-        "ambient": "light-sweep",
-        "rationale": "Boy walks away along plank toward outhouse: small right/up drift and slight shrink with gentle following push-in; warm light-sweep evokes kerosene dusk without adding elements."
-      }
-    },
-    {
-      "score": 5,
-      "ok": false,
-      "verdict": "Do not publish: the motion does not clearly express the boy's walk to the outhouse and is no better than a plain push-in.",
-      "filmIssues": [
-        "The boy's walk toward the outhouse barely reads: across all six frames he moves only a few pixels up-right and hardly shrinks, so the film is effectively a plain centred push-in.",
-        "The 1.08 camera zoom at depth 0.55 largely cancels the boy's 0.92 end scale, removing the sense of receding along the plank walkway.",
-        "No tearing, ghosting or frame-edge clipping is visible, and the poster frame is a good full opening picture, but the intended journey from foreground to outhouse is not clearly expressed in either scroll direction."
-      ],
-      "fixes": [],
-      "plan": {
-        "focusX": 0.5,
-        "focusY": 0.6,
-        "camera": [
-          {
-            "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
-            "ease": "in-out"
-          },
-          {
-            "t": 1,
-            "zoom": 1.08,
-            "panX": 0.01,
-            "panY": -0.01,
-            "ease": "in-out"
-          }
-        ],
-        "layers": [
-          {
-            "id": "cut-1",
-            "depth": 0.55,
-            "driftX": 0.04,
-            "driftY": -0.038,
+            "driftX": 0.045,
+            "driftY": -0.055,
             "scale": 0.92,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "Weaken the push-in and lower the boy's depth so the zoom no longer cancels his shrink, and give him the maximum safe drift up-right along the plank's perspective toward the outhouse with the strongest allowed shrink, so he clearly recedes from the poster position without lifting off the walkway or clipping the frame."
-      }
-    },
-    {
-      "score": 7,
-      "ok": true,
-      "verdict": "The film reads clearly: the boy's small rightward and upward drift, combined with his slight shrink, moves him along the plank walkway toward the outhouse and reads as receding into the scene rather than as a plain camera push-in. Across the six frames he stays coherent, with no tearing, doubled edges, halo or visible ghost on the plank where he started, and his feet remain plausibly on the walkway. No layer clips the frame edge awkwardly. The t=0 poster frame is a strong, balanced opening picture that matches the plate's composition. The light-sweep is subtle and fits the dusk/kerosene mood without breaking the 1950s offset-lithograph print style. The plate itself shows no stray text, no unwanted faces (the boy is correctly seen from behind), no anachronism, and no mangled anatomy or objects.",
-      "filmIssues": [],
-      "fixes": [],
-      "plan": {
-        "focusX": 0.5,
-        "focusY": 0.6,
-        "camera": [
-          {
-            "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0,
-            "ease": "in-out"
-          },
-          {
-            "t": 1,
-            "zoom": 1.02,
-            "panX": 0.01,
-            "panY": -0.01,
-            "ease": "in-out"
-          }
-        ],
-        "layers": [
-          {
-            "id": "cut-1",
-            "depth": 0.3,
-            "driftX": 0.04,
-            "driftY": -0.022,
-            "scale": 0.92,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          }
-        ],
-        "ambient": "light-sweep",
-        "rationale": "Keep the camera almost still so it no longer cancels the boy's shrink, lower his depth to 0.3 to reduce parallax growth, and retain the maximum rightward drift with a smaller upward drift matched to the plank's slope. This makes him visibly recede up the walkway toward the outhouse while keeping his feet on the planks, with the subtle light-sweep retained for the dusk kerosene mood."
+        "ambient": "dust",
+        "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view."
       }
     }
   ]

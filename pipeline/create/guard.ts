@@ -10,11 +10,12 @@ export const JOB_PREFIX = "create:";
 export const jobTag = (slug: string) => `${JOB_PREFIX}${slug}`;
 
 /**
- * Most one life may cost. Worst case of a run: research search $0.17, storyboard $0.07, 7 plates
- * + 7 clean backgrounds + 1 emblem at $0.01 (doubled for the fallback route) $0.30, up to 43 SAM
- * calls $0.11: about $0.65. The ceiling is enforced per call by the budget guard.
+ * Most one life may cost. A typical life costs about $1 (lifeCost() in lib/cost.ts), over half of it
+ * Muse Wonder directing six films. The guard refuses a call whose worst case (a Wonder call is
+ * reserved at about $0.32, its whole token cap) could pass this, so the ceiling leaves room for two
+ * Wonder calls in flight on top of a typical run; past it the remaining films keep their fixed move.
  */
-export const LIFE_CEILING = 1.5;
+export const LIFE_CEILING = 2;
 /** Refuse to start when the event budget's headroom before the stop line is under this. */
 export const MIN_HEADROOM = 2;
 
@@ -140,10 +141,23 @@ export const perIpDaily = (env: Env = process.env) => {
   return Number.isFinite(v) && v >= 0 ? v : 2;
 };
 
-/** The visitor's address as the proxy reports it (first X-Forwarded-For hop), else "local". */
-export function clientIp(headers: Headers): string {
-  const fwd = headers.get("x-forwarded-for")?.split(",")[0]?.trim();
-  return (fwd || headers.get("x-real-ip")?.trim() || "local").slice(0, 64);
+/** The bucket every visitor shares when no trusted address is known. */
+export const GLOBAL_BUCKET = "global";
+
+/**
+ * Who a request counts against for the per-visitor limit. X-Forwarded-For and X-Real-IP are set
+ * by whoever sent the request, so they are trusted only behind a proxy that overwrites them
+ * (TRUST_PROXY=1, e.g. Vercel or nginx). Otherwise the socket's address is used when the server
+ * passes it in; Next's route handlers don't expose it, so in practice every visitor shares one
+ * bucket, which keeps the limit unspoofable at the price of being site-wide.
+ */
+export function clientIp(headers: Headers, env: Env = process.env, socket?: string | null): string {
+  if (env.TRUST_PROXY === "1") {
+    const fwd = headers.get("x-forwarded-for")?.split(",")[0]?.trim();
+    const real = headers.get("x-real-ip")?.trim();
+    if (fwd || real) return (fwd || real)!.slice(0, 64);
+  }
+  return (socket?.trim() || GLOBAL_BUCKET).slice(0, 64);
 }
 
 /**
@@ -161,9 +175,10 @@ export class IpLimit {
   }
   check(ip: string, now = new Date()): Refusal | null {
     const max = this.max();
-    return this.today(ip, now).length >= max
-      ? { status: 429, error: `One visitor can make ${max} ${max === 1 ? "life" : "lives"} a day, and you’ve made yours. Rehearsals are still free; try again tomorrow.` }
-      : null;
+    if (this.today(ip, now).length < max) return null;
+    return ip === GLOBAL_BUCKET
+      ? { status: 429, error: `This server makes ${max} new ${max === 1 ? "life" : "lives"} a day, and today’s are made. Rehearsals are still free; try again tomorrow.` }
+      : { status: 429, error: `One visitor can make ${max} ${max === 1 ? "life" : "lives"} a day, and you’ve made yours. Rehearsals are still free; try again tomorrow.` };
   }
   hit(ip: string, now = new Date()) {
     this.today(ip, now).push(now.getTime());

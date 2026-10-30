@@ -1,0 +1,323 @@
+{
+  "slug": "ah-ma-sample",
+  "name": "Ah Ma",
+  "born": "1938",
+  "died": null,
+  "tagline": "A fictional sample recording, voiced by a computer. She sewed clothes and rolled fish balls to hold her family together.",
+  "listed": false,
+  "scenes": [
+    {
+      "id": "s1",
+      "treatment": "archive",
+      "year": "1938",
+      "title": "Born by the Sea",
+      "caption": "Ah Ma was born near the sea at Teluk Ayer around 1938.",
+      "visual": "Centre: small wooden stilt house with attap roof on sandy shore, fishing sampans bobbing in calm water nearby, coconut palms and drying fishing nets, soft dawn light, 1930s coastal Teluk Ayer",
+      "cut": [
+        "stilt house"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:05 — “I was born in Teluk Ayer near the sea”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=5"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s1/plate.webp",
+      "background": "/stories/ah-ma-sample/s1/background.webp",
+      "video": "/stories/ah-ma-sample/s1/scene.mp4?v=12bef948",
+      "poster": "/stories/ah-ma-sample/s1/scene.jpg?v=12bef948",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "stilt house",
+          "depth": 0.6,
+          "x": 51.66,
+          "y": 62.25,
+          "w": 40.06,
+          "src": "/stories/ah-ma-sample/s1/cut-1.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed salt air and fishing boats not mentioned.",
+        "sources": []
+      }
+    },
+    {
+      "id": "s2",
+      "treatment": "theatre",
+      "year": "1947",
+      "title": "Water from the Well",
+      "caption": "Around 1947 the family moved to a kampong in Potong Pasir. Every morning Ah Ma carried well water with two buckets.",
+      "visual": "Centre: young girl silhouette seen from behind carrying a wooden pole with two water buckets, standing by an old stone well, attap kampong houses and banana trees behind, 1940s Potong Pasir morning",
+      "cut": [
+        "girl",
+        "bucket"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:26 — “we moved to a kampong in Potong Pasir”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=26"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s2/plate.webp",
+      "background": "/stories/ah-ma-sample/s2/background.webp",
+      "video": "/stories/ah-ma-sample/s2/scene.mp4?v=ac1d823f",
+      "poster": "/stories/ah-ma-sample/s2/scene.jpg?v=ac1d823f",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "girl",
+          "depth": 0.6,
+          "x": 45.03,
+          "y": 89.63,
+          "w": 22.31,
+          "src": "/stories/ah-ma-sample/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "bucket",
+          "depth": 0.8,
+          "x": 62.88,
+          "y": 67.19,
+          "w": 9.38,
+          "src": "/stories/ah-ma-sample/s2/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed cooking and washing purpose not stated.",
+        "sources": []
+      }
+    },
+    {
+      "id": "s3",
+      "treatment": "theatre",
+      "year": "1952",
+      "title": "Learning to Sew",
+      "caption": "In 1952 her auntie taught her to sew. She learned to make samfoo then cheongsam for neighbours.",
+      "visual": "Centre: black treadle sewing machine with pale blue cloth under needle on wooden table, two female silhouettes seen from behind leaning over it guiding fabric, wooden kampong window light, 1950s interior with baskets of cloth",
+      "cut": [
+        "sewing machine"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 0:48 — “my auntie teach me to sew”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=48"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s3/plate.webp",
+      "background": "/stories/ah-ma-sample/s3/background.webp",
+      "video": "/stories/ah-ma-sample/s3/scene.mp4?v=2a139cce",
+      "poster": "/stories/ah-ma-sample/s3/scene.jpg?v=2a139cce",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "sewing machine",
+          "depth": 0.6,
+          "x": 54.13,
+          "y": 64.19,
+          "w": 26.75,
+          "src": "/stories/ah-ma-sample/s3/cut-1.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed treadle machine not named in transcript.",
+        "sources": []
+      }
+    },
+    {
+      "id": "s4",
+      "treatment": "line",
+      "year": "1959",
+      "title": "Marriage",
+      "caption": "She married Ah Gong in 1959.",
+      "visual": "Centre: newlywed couple silhouettes seen from behind holding hands, man in white shirt and woman in red samfoo dress, standing before a wooden table with two tea cups and vase of flowers, simple 1950s home interior",
+      "cut": [
+        "couple"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 1:06 — “in 1959 I married married your Ah Gong”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=66"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s4/plate.webp",
+      "background": "/stories/ah-ma-sample/s4/background.webp",
+      "line": "/stories/ah-ma-sample/s4/line.json",
+      "video": "/stories/ah-ma-sample/s4/scene.mp4?v=5f388489",
+      "poster": "/stories/ah-ma-sample/s4/scene.jpg?v=5f388489",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "couple",
+          "depth": 0.6,
+          "x": 49.59,
+          "y": 97.13,
+          "w": 49.81,
+          "src": "/stories/ah-ma-sample/s4/cut-1.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed promise to work hard and build family.",
+        "sources": []
+      }
+    },
+    {
+      "id": "s5",
+      "treatment": "archive",
+      "year": "1966",
+      "title": "New Flat in Queenstown",
+      "caption": "They moved into a three-room HDB flat in Queenstown in 1966. It had tap water inside the house.",
+      "visual": "Centre: long concrete HDB corridor with louvred windows and potted plants, metal gate and wooden door ajar showing small kitchen inside, bright daylight, 1960s Queenstown block exterior",
+      "cut": [
+        "corridor"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 1:21 — “We moved into a three room HDBDB flat in Queenstown”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=81"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s5/plate.webp",
+      "background": "/stories/ah-ma-sample/s5/background.webp",
+      "video": "/stories/ah-ma-sample/s5/scene.mp4?v=de00fb2d",
+      "poster": "/stories/ah-ma-sample/s5/scene.jpg?v=de00fb2d",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "corridor",
+          "depth": 0.6,
+          "x": 44.22,
+          "y": 84.44,
+          "w": 45.56,
+          "src": "/stories/ah-ma-sample/s5/cut-1.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed kitchen not mentioned; kept tap water.",
+        "sources": []
+      }
+    },
+    {
+      "id": "s6",
+      "treatment": "theatre",
+      "year": "1978",
+      "title": "Mee Pok Stall",
+      "caption": "With Ah Gong she opened a mee pok stall in 1978. Their fish balls were made by hand.",
+      "visual": "Centre: large aluminium pot of steaming broth on hawker stall counter with wooden board of white handmade fish balls, stacks of ceramic bowls and metal strainer, elderly vendor silhouette seen from behind serving, 1970s coffeeshop background",
+      "cut": [
+        "pot",
+        "bowl"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 1:47 — “your Ah Gong and I open a mee pok stall”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=107"
+        },
+        {
+          "label": "Fictional sample recording, 2:00 — “Our fish balls we make by hand”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=120"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s6/plate.webp",
+      "background": "/stories/ah-ma-sample/s6/background.webp",
+      "video": "/stories/ah-ma-sample/s6/scene.mp4?v=e462e735",
+      "poster": "/stories/ah-ma-sample/s6/scene.jpg?v=e462e735",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "pot",
+          "depth": 0.6,
+          "x": 46,
+          "y": 73.19,
+          "w": 45.5,
+          "src": "/stories/ah-ma-sample/s6/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "bowl",
+          "depth": 0.8,
+          "x": 68.19,
+          "y": 76.06,
+          "w": 14.37,
+          "src": "/stories/ah-ma-sample/s6/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed each morning rolling; kept hand-made fish balls.",
+        "sources": []
+      }
+    },
+    {
+      "id": "s7",
+      "treatment": "line",
+      "year": "2004",
+      "title": "Passing It On",
+      "caption": "In 2004 she and Ah Gong gave the stall to uncle. Her first grandchild Wei Ling was born in 1990.",
+      "visual": "Centre: elderly woman silhouette seen from behind sitting on sofa holding a small child silhouette seen from behind on lap, beside them a rattan basket with folded baby samfoo clothes and sewing tools, bright HDB living room daylight",
+      "cut": [
+        "woman",
+        "child"
+      ],
+      "sources": [
+        {
+          "label": "Fictional sample recording, 2:20 — “the first one your cousin Wei Ling born in 1990”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=140"
+        },
+        {
+          "label": "Fictional sample recording, 2:09 — “we gave the stall to your your uncle”",
+          "url": "http://localhost:3100/family/ah-ma-sample/audio#t=129"
+        }
+      ],
+      "plate": "/stories/ah-ma-sample/s7/plate.webp",
+      "background": "/stories/ah-ma-sample/s7/background.webp",
+      "line": "/stories/ah-ma-sample/s7/line.json",
+      "video": "/stories/ah-ma-sample/s7/scene.mp4?v=16ca9d6d",
+      "poster": "/stories/ah-ma-sample/s7/scene.jpg?v=16ca9d6d",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 45.84,
+          "y": 64.44,
+          "w": 26.44,
+          "src": "/stories/ah-ma-sample/s7/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "child",
+          "depth": 0.8,
+          "x": 60.41,
+          "y": 61,
+          "w": 10.69,
+          "src": "/stories/ah-ma-sample/s7/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-30T14:30:18.184Z",
+        "note": "Checked against the recording: Removed retired to sew and tell stories not said.",
+        "sources": []
+      }
+    }
+  ]
+}
