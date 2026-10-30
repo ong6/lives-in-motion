@@ -1,0 +1,290 @@
+{
+  "slug": "tan-howe-liang",
+  "name": "Tan Howe Liang",
+  "born": "1933",
+  "died": "2024",
+  "tagline": "From a one-barbell gym to Olympic silver, he lifted Singapore onto the world stage.",
+  "scenes": [
+    {
+      "id": "s1",
+      "treatment": "archive",
+      "year": "1937",
+      "title": "Arrival in Chinatown",
+      "caption": "At around age four, he moved with his family from Swatow to Singapore and settled in Chinatown.",
+      "visual": "A narrow shophouse lane in 1930s Chinatown Singapore at dusk, centered on a small boy silhouette seen from behind holding a cloth bundle, rickshaws and glowing paper lanterns behind",
+      "cut": [
+        "boy"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang, Singapore’s first Olympic medallist, dies at",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s1/plate.webp",
+      "background": "/stories/tan-howe-liang/s1/background.webp",
+      "video": "/stories/tan-howe-liang/s1/scene.mp4?v=6eb2b1c4",
+      "poster": "/stories/tan-howe-liang/s1/scene.jpg?v=6eb2b1c4",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boy",
+          "depth": 0.6,
+          "x": 48.97,
+          "y": 88.81,
+          "w": 8.81,
+          "src": "/stories/tan-howe-liang/s1/cut-1.webp"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "treatment": "theatre",
+      "year": "1953",
+      "title": "One Set of Barbells",
+      "caption": "He joined the Evergreen Weightlifting Party in 1952, training with a single set of barbells, and after a year won national junior and senior lightweight titles.",
+      "visual": "A young lifter silhouette seen from behind gripping a rusted iron barbell in a dim 1950s open-air concrete gym, wooden benches and stacked iron plates around",
+      "cut": [
+        "lifter",
+        "barbell"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s2/plate.webp",
+      "background": "/stories/tan-howe-liang/s2/background.webp",
+      "video": "/stories/tan-howe-liang/s2/scene.mp4?v=3dfd7e2f",
+      "poster": "/stories/tan-howe-liang/s2/scene.jpg?v=3dfd7e2f",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "lifter",
+          "depth": 0.6,
+          "x": 51.09,
+          "y": 94.75,
+          "w": 23.19,
+          "src": "/stories/tan-howe-liang/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "barbell",
+          "depth": 0.8,
+          "x": 51.5,
+          "y": 82.81,
+          "w": 60,
+          "src": "/stories/tan-howe-liang/s2/cut-2.webp"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "treatment": "archive",
+      "year": "1956",
+      "title": "Setback in Melbourne",
+      "caption": "He placed fourth at the 1954 Asian Games in Manila, then finished ninth at the 1956 Melbourne Olympics after losing consciousness.",
+      "visual": "A lone lifter silhouette seen from behind slumped on a wooden bench in a vast 1950s stadium arena, empty iron barbell on a platform ahead under harsh floodlights",
+      "cut": [
+        "lifter"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s3/plate.webp",
+      "background": "/stories/tan-howe-liang/s3/background.webp",
+      "video": "/stories/tan-howe-liang/s3/scene.mp4?v=c07ed987",
+      "poster": "/stories/tan-howe-liang/s3/scene.jpg?v=c07ed987",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "lifter",
+          "depth": 0.6,
+          "x": 50.22,
+          "y": 95.56,
+          "w": 16.19,
+          "src": "/stories/tan-howe-liang/s3/cut-1.webp"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "treatment": "theatre",
+      "year": "1958",
+      "title": "Gold in Cardiff and Tokyo",
+      "caption": "In 1958 he won lightweight gold at Cardiff with a 358 kg total and 157 kg clean-and-jerk, then lightweight gold at Tokyo with a 375 kg total.",
+      "visual": "A lifter silhouette seen from behind holding an iron barbell overhead on a 1950s competition platform, wood-paneled hall with blurred crowd behind",
+      "cut": [
+        "lifter",
+        "barbell"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s4/plate.webp",
+      "background": "/stories/tan-howe-liang/s4/background.webp",
+      "video": "/stories/tan-howe-liang/s4/scene.mp4?v=81298424",
+      "poster": "/stories/tan-howe-liang/s4/scene.jpg?v=81298424",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "lifter",
+          "depth": 0.6,
+          "x": 49.97,
+          "y": 91.63,
+          "w": 26.44,
+          "src": "/stories/tan-howe-liang/s4/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "barbell",
+          "depth": 0.8,
+          "x": 49.94,
+          "y": 41,
+          "w": 55.13,
+          "src": "/stories/tan-howe-liang/s4/cut-2.webp"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "treatment": "theatre",
+      "year": "1960",
+      "title": "Silver in Rome",
+      "caption": "After winning lightweight gold at the 1959 Bangkok SEAP Games with 369 kg, he took second among 35 in Rome in 1960 with 380 kg. His clean-and-jerk reached 155 kg.",
+      "visual": "A lifter silhouette seen from behind hoisting a loaded iron barbell on a sunlit outdoor stone stadium platform in 1960 Rome, pine trees and blurred crowd behind",
+      "cut": [
+        "lifter",
+        "barbell"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Tan Howe Liang wins Singapore’s first Olympic medal",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s5/plate.webp",
+      "background": "/stories/tan-howe-liang/s5/background.webp",
+      "video": "/stories/tan-howe-liang/s5/scene.mp4?v=f8e1c825",
+      "poster": "/stories/tan-howe-liang/s5/scene.jpg?v=f8e1c825",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "lifter",
+          "depth": 0.6,
+          "x": 49.97,
+          "y": 79.69,
+          "w": 23.31,
+          "src": "/stories/tan-howe-liang/s5/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "barbell",
+          "depth": 0.8,
+          "x": 50.13,
+          "y": 41,
+          "w": 50.38,
+          "src": "/stories/tan-howe-liang/s5/cut-2.webp"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "treatment": "archive",
+      "year": "1962",
+      "title": "Middleweight Champion",
+      "caption": "Moving to middleweight, he won silver at Rangoon in 1961, then gold at Perth in 1962 with 390 kg, and received the Pingat Jasa Gemilang.",
+      "visual": "A lifter silhouette seen from behind standing on a 1960s indoor podium in a tiled hall, holding a small medal case, iron barbell on a rack beside",
+      "cut": [
+        "lifter",
+        "podium"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s6/plate.webp",
+      "background": "/stories/tan-howe-liang/s6/background.webp",
+      "video": "/stories/tan-howe-liang/s6/scene.mp4?v=4d8e8f49",
+      "poster": "/stories/tan-howe-liang/s6/scene.jpg?v=4d8e8f49",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "lifter",
+          "depth": 0.6,
+          "x": 47.03,
+          "y": 82.56,
+          "w": 15.44,
+          "src": "/stories/tan-howe-liang/s6/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "podium",
+          "depth": 0.8,
+          "x": 47.09,
+          "y": 91.31,
+          "w": 30.56,
+          "src": "/stories/tan-howe-liang/s6/cut-2.webp"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "treatment": "line",
+      "year": "2024",
+      "title": "The Long Solo Record",
+      "caption": "Coach in 1968 and National Stadium gym supervisor in 1982, he earned a 1984 federation gold award, remained Singapore's lone Olympic medallist until 2008, and died in 2024 at 91.",
+      "visual": "An empty 1980s concrete gymnasium interior at dawn, centered on a single wooden bench with a folded towel and iron dumbbell, soft light through high windows",
+      "cut": [
+        "bench",
+        "dumbbell"
+      ],
+      "sources": [
+        {
+          "label": "Tan Howe Liang",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+        },
+        {
+          "label": "Tan Howe Liang, Singapore’s first Olympic medallist, dies at",
+          "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+        }
+      ],
+      "plate": "/stories/tan-howe-liang/s7/plate.webp",
+      "background": "/stories/tan-howe-liang/s7/background.webp",
+      "line": "/stories/tan-howe-liang/s7/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "bench",
+          "depth": 0.6,
+          "x": 50.25,
+          "y": 90,
+          "w": 54.37,
+          "src": "/stories/tan-howe-liang/s7/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "dumbbell",
+          "depth": 0.8,
+          "x": 59.47,
+          "y": 72.5,
+          "w": 13.81,
+          "src": "/stories/tan-howe-liang/s7/cut-2.webp"
+        }
+      ]
+    }
+  ]
+}

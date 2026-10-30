@@ -1,5 +1,5 @@
 import "server-only";
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { Story } from "./schema";
 
@@ -9,6 +9,8 @@ const ORDER = ["jack-sim", "lee-kuan-yew", "joseph-schooling"];
 
 export function allStories(): Story[] {
   return readdirSync(DIR)
+    // A life being made on /create has a folder (job.json, research) before it has a story.json.
+    .filter((slug) => existsSync(join(DIR, slug, "story.json")))
     .map((slug) => Story.parse(JSON.parse(readFileSync(join(DIR, slug, "story.json"), "utf8"))))
     .sort((a, b) => rank(a.slug) - rank(b.slug) || a.slug.localeCompare(b.slug));
 }

@@ -9,8 +9,10 @@
  *
  * Prices: https://dev.meta.ai/docs/pricing-rate-limits (Standard mode, checked 2026-10-30).
  */
+import { AsyncLocalStorage } from "node:async_hooks";
 import { appendFileSync, existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { ROOT } from "./root";
 
 export const PRICES = {
   sparkInput: 1.25 / 1e6,
@@ -26,16 +28,43 @@ export const CAP = Number(process.env.BUDGET_CAP_USD ?? 150);
 export const RESERVE = Number(process.env.BUDGET_RESERVE_USD ?? 15);
 export const STOP = CAP - RESERVE;
 
-const LEDGER = join(new URL("..", import.meta.url).pathname, "spend.jsonl");
+const LEDGER = join(ROOT, "spend.jsonl");
 
 export interface Entry {
   at: string;
   kind: "spark" | "search" | "image" | "sam" | "manual";
   usd: number;
   note?: string;
+  /** The job a call was made for ("create:<slug>" for lives made on /create). */
+  job?: string;
 }
 
 export class BudgetError extends Error {}
+
+/**
+ * Who is spending, carried through async calls: the job tag written to the ledger, an optional
+ * per-job ceiling (refused like the stop line), and hooks for the live progress feed.
+ */
+export interface SpendScope {
+  job?: string;
+  /** Most this job may spend in total; a call that could pass it is refused. */
+  limit?: number;
+  onSpend?: (e: Entry) => void;
+  /** A transient failure being retried ("429, retrying in 6 s"). */
+  onRetry?: (message: string) => void;
+}
+const scopes = new AsyncLocalStorage<SpendScope>();
+
+/** Run `fn` with extra scope; inner hooks run as well as outer ones. */
+export function withScope<T>(scope: SpendScope, fn: () => Promise<T>): Promise<T> {
+  const outer = scopes.getStore() ?? {};
+  const both = <A extends unknown[]>(a?: (...x: A) => void, b?: (...x: A) => void) => (a && b ? (...x: A) => (a(...x), b(...x)) : (a ?? b));
+  return scopes.run({ job: scope.job ?? outer.job, limit: scope.limit ?? outer.limit, onSpend: both(outer.onSpend, scope.onSpend), onRetry: both(outer.onRetry, scope.onRetry) }, fn);
+}
+export const currentScope = () => scopes.getStore();
+
+/** What one job has spent so far, from the ledger. */
+export const spentBy = (job: string, file = LEDGER) => entries(file).filter((e) => e.job === job).reduce((a, e) => a + e.usd, 0);
 
 export function entries(file = LEDGER): Entry[] {
   if (!existsSync(file)) return [];
@@ -49,9 +78,13 @@ export const spent = (file = LEDGER) => entries(file).reduce((a, e) => a + e.usd
 
 /** Worst case still in flight in this process, so parallel calls can't overshoot together. */
 let pending = 0;
+const pendingBy = new Map<string, number>();
 
-export function record(e: Omit<Entry, "at">, file = LEDGER) {
-  appendFileSync(file, JSON.stringify({ at: new Date().toISOString(), ...e, usd: +e.usd.toFixed(6) }) + "\n");
+export function record(e: Omit<Entry, "at">, file = LEDGER): Entry {
+  const job = e.job ?? scopes.getStore()?.job;
+  const entry: Entry = { at: new Date().toISOString(), ...e, usd: +e.usd.toFixed(6), ...(job ? { job } : {}) };
+  appendFileSync(file, JSON.stringify(entry) + "\n");
+  return entry;
 }
 
 /**
@@ -64,7 +97,15 @@ export async function guard<T>(kind: Entry["kind"], worst: number, call: () => P
     throw new BudgetError(
       `budget: $${total.toFixed(2)} spent + $${(pending + worst).toFixed(2)} for this call would pass the $${STOP} stop line ($${CAP} cap, $${RESERVE} reserve). Nothing was sent.`,
     );
+  const scope = scopes.getStore();
+  const job = scope?.job;
+  if (job && scope?.limit != null) {
+    const mine = spentBy(job, file) + (pendingBy.get(job) ?? 0);
+    if (mine + worst > scope.limit)
+      throw new BudgetError(`budget: this life has spent $${mine.toFixed(2)}; another $${worst.toFixed(2)} could pass its $${scope.limit.toFixed(2)} ceiling. Nothing was sent.`);
+  }
   pending += worst;
+  if (job) pendingBy.set(job, (pendingBy.get(job) ?? 0) + worst);
   try {
     const r = await call();
     let usd = worst;
@@ -73,14 +114,20 @@ export async function guard<T>(kind: Entry["kind"], worst: number, call: () => P
     } catch {
       /* unpriceable response: keep the worst case */
     }
-    record({ kind, usd, note }, file);
+    // Record first, then tell the scope: an optional call would skip evaluating its argument.
+    const entry = record({ kind, usd, note }, file);
+    scope?.onSpend?.(entry);
     return r;
   } catch (e) {
     // A response lost mid-download may still have been billed: count the worst case so the ledger never undercounts.
-    if ((e as { maybeBilled?: boolean })?.maybeBilled) record({ kind, usd: worst, note: `unconfirmed: ${note ?? ""}` }, file);
+    if ((e as { maybeBilled?: boolean })?.maybeBilled) {
+      const entry = record({ kind, usd: worst, note: `unconfirmed: ${note ?? ""}` }, file);
+      scope?.onSpend?.(entry);
+    }
     throw e;
   } finally {
     pending -= worst;
+    if (job) pendingBy.set(job, (pendingBy.get(job) ?? 0) - worst);
   }
 }
 
@@ -108,7 +155,7 @@ export function summary(file = LEDGER) {
   return { by, total, cap: CAP, stop: STOP, left: STOP - total };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   const [flag, usd, ...note] = process.argv.slice(2);
   if (flag === "--add") {
     if (!(Number(usd) > 0)) throw new Error('usage: pnpm spend --add <usd> "<note>"');

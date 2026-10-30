@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { allStories } from "@/lib/stories";
 import { ERAS, eraFor } from "@/lib/eras";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 
 const stories = allStories();
 
@@ -16,8 +16,8 @@ function contrast(a: string, b: string) {
 }
 
 describe("stories", () => {
-  it("are the three lives, in gallery order", () => {
-    expect(stories.map((s) => s.slug)).toEqual(["jack-sim", "lee-kuan-yew", "joseph-schooling"]);
+  it("open with the three hand-made lives, in gallery order", () => {
+    expect(stories.slice(0, 3).map((s) => s.slug)).toEqual(["jack-sim", "lee-kuan-yew", "joseph-schooling"]);
   });
   for (const s of stories) {
     describe(s.name, () => {
@@ -35,9 +35,12 @@ describe("stories", () => {
         expect(new Set(s.scenes.map((sc) => sc.treatment)).size).toBeGreaterThan(1);
       });
       it("has a credited line portrait", () => {
+        // Lives made on /create carry their own credit: the reader's photo or a Muse Image emblem.
+        const made = existsSync(`stories/${s.slug}/credit.json`);
+        if (made && !existsSync(`public/lines/${s.slug}.json`)) return;
         const art = JSON.parse(readFileSync(`public/lines/${s.slug}.json`, "utf8"));
         expect(art.strokes.length).toBeGreaterThan(100);
-        expect(art.credit.license).toMatch(/Public domain|CC BY/);
+        expect(art.credit.license).toMatch(made ? /Supplied by the reader|Generated with Muse Image/ : /Public domain|CC BY/);
       });
     });
   }

@@ -1,7 +1,5 @@
 /* A life as a book on a desk: the desk takes the colour of the scene's era. */
 .story {
-  --desk: color-mix(in oklab, var(--ink) 72%, #060403);
-  --gilt: #d8b46e;
   min-height: 100svh;
   color: var(--desk-text);
 }
@@ -20,7 +18,7 @@
 }
 .home:hover { color: #fbf4e4; }
 
-.track { position: relative; }
+.track { position: relative; z-index: 1; }
 .snap { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; }
 .stage {
   position: sticky;
@@ -34,60 +32,45 @@
 
 .cue {
   position: absolute;
-  bottom: 22px;
+  bottom: 14px;
   left: 50%;
   translate: -50% 0;
   margin: 0;
   font: italic 400 16px/1 var(--font-book);
   color: var(--desk-text);
   pointer-events: none;
+  white-space: nowrap;
 }
+/* The way on, under the book once its last spread is open. */
+.onward { opacity: 0; transition: opacity 0.5s ease; }
+.onward[data-show] { opacity: 1; pointer-events: auto; }
+.onward button, .onward a {
+  all: unset;
+  cursor: pointer;
+  font-style: normal;
+  color: #fbf4e4;
+  border-bottom: 1px solid rgb(251 244 228 / 0.45);
+  padding: 6px 0 2px;
+}
+.onward button:hover, .onward a:hover { border-bottom-color: #fbf4e4; }
+.onward button:focus-visible, .onward a:focus-visible { outline: 1px solid #fbf4e4; outline-offset: 4px; }
 
-/* ---------- The cover: cloth over board, title in gilt ---------- */
-.coverLeaf {
+/* ---------- The boards: front and back, a little larger than the pages ---------- */
+.boardLeaf {
   top: -9px;
   height: calc(var(--ph) + 18px);
   width: calc(var(--pw) + 20px);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 34px 60px -24px rgb(0 0 0 / 0.75), 0 2px 3px rgb(0 0 0 / 0.35);
 }
-.cover {
+/* Inside a board: cloth turned over its edges, the endpaper pasted down on it. */
+.pastedown {
   position: absolute;
   inset: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  justify-items: center;
-  padding: 64px 56px 58px;
-  text-align: center;
-  color: var(--gilt);
   background: var(--cloth);
-  background-image: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.03) 0 1px, transparent 1px 3px),
-    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.06) 0 1px, transparent 1px 3px),
-    linear-gradient(100deg, rgb(255 255 255 / 0.06), transparent 40%, rgb(0 0 0 / 0.12));
-  border-radius: 0 4px 4px 0;
-  /* The hinge: a pressed groove a little in from the spine. */
-  box-shadow: inset 14px 0 0 -12px rgb(0 0 0 / 0.35), inset 18px 0 14px -14px rgb(0 0 0 / 0.5);
+  border-radius: 4px 0 0 4px;
+  transition: background-color 0.9s ease;
 }
-.cover::before {
-  content: "";
-  position: absolute;
-  inset: 26px 24px 26px 34px;
-  border: 1px solid color-mix(in oklab, var(--gilt) 45%, transparent);
-  outline: 1px solid color-mix(in oklab, var(--gilt) 25%, transparent);
-  outline-offset: 5px;
-  pointer-events: none;
-}
-.cover p, .cover h1 { margin: 0; text-shadow: 0 1px 0 rgb(0 0 0 / 0.35); }
-.coverSeries, .coverFoot {
-  font: 400 15px/1 var(--font-book);
-  font-variant-caps: all-small-caps;
-  letter-spacing: 0.16em;
-}
-.coverTitle { align-self: center; display: grid; gap: 18px; }
-.coverTitle h1 { font: 400 clamp(64px, calc(var(--pw) * 0.16), 104px)/0.92 var(--font-serif); letter-spacing: -0.01em; text-wrap: balance; }
-.coverTitle p { font: italic 400 20px/1 var(--font-book); opacity: 0.85; }
-
-/* Inside the front board: cloth turned over its edges, the endpaper pasted down on it. */
-.pastedown { padding: 0; box-shadow: none; border-radius: 4px 0 0 4px; }
-.pastedown::before { display: none; }
 .pastedownPaper { position: absolute; top: 9px; bottom: 9px; left: 20px; right: 0; overflow: hidden; }
 .pastedownPaper::after {
   content: "";
@@ -95,6 +78,38 @@
   inset: 0;
   background: linear-gradient(to left, rgb(30 20 10 / 0.3), rgb(30 20 10 / 0.08) 2.5%, transparent 9%);
 }
+/* The back board's pastedown faces up on the right: turned-in cloth on its outer (right) side. */
+.pastedownBack { border-radius: 0 4px 4px 0; }
+.pastedownBack .pastedownPaper { left: 0; right: 20px; }
+.pastedownBack .pastedownPaper::after { background: linear-gradient(to right, rgb(30 20 10 / 0.3), rgb(30 20 10 / 0.08) 2.5%, transparent 9%); }
+
+/* The back cover, seen once the book is closed: spine on the right. */
+.backCover {
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset -2.4cqw 0 0 -2cqw rgb(0 0 0 / 0.35), inset -3cqw 0 2.4cqw -2.4cqw rgb(0 0 0 / 0.5);
+}
+.backInner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4cqw;
+  padding: 0 14cqw;
+  text-align: center;
+}
+.backInner p { margin: 0; text-shadow: 0 1px 0 rgb(0 0 0 / 0.35); }
+.blurb { font: italic 400 max(15px, 4.4cqw)/1.45 var(--font-book); text-wrap: balance; }
+.backRule { width: 9cqw; height: 1px; background: currentColor; opacity: 0.5; }
+.backLink {
+  font: 400 max(22px, 7cqw)/1 var(--font-serif);
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in oklab, var(--gilt) 40%, transparent);
+  padding-bottom: 4px;
+}
+.backLink:hover { border-bottom-color: var(--gilt); color: #f1d79c; }
 
 /* ---------- Frontispiece and title page ---------- */
 .frontis {
@@ -107,6 +122,14 @@
 }
 .frontisArt { min-height: 0; }
 .frontisArt svg { color: var(--ink); }
+.frontisPlate { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.monogram {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font: italic 400 calc(var(--pw) * 0.3)/1 var(--font-serif);
+  color: color-mix(in oklab, var(--accent) 70%, var(--paper));
+}
 .frontis figcaption { font: 400 13.5px/1.5 var(--font-book); color: var(--muted); text-align: center; text-wrap: balance; }
 
 .titlePage {
@@ -169,8 +192,9 @@
   margin-right: 0.12em;
 }
 .ref { font-size: 0.62em; line-height: 0; margin-left: 0.15em; font-variant-numeric: lining-nums; }
-.ref a { color: var(--accent); text-decoration: none; }
-.ref a:hover { text-decoration: underline; }
+.ref button { all: unset; cursor: pointer; color: var(--accent); }
+.ref button:hover { text-decoration: underline; }
+.ref button:focus-visible { outline: 1px solid var(--accent); outline-offset: 1px; }
 
 /* ---------- Plate page (recto) ---------- */
 .plateFig {
@@ -202,6 +226,7 @@
   z-index: -1;
   display: flex;
   flex-direction: column;
+  transition: opacity 0.4s ease, visibility 0.4s;
 }
 .rail button {
   all: unset;
@@ -232,17 +257,10 @@
     color-mix(in oklab, var(--accent) 72%, #000) 100%
   );
   clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%);
-  transition: transform 0.55s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.4s ease, background-color 0.6s ease;
+  transition: transform 0.55s cubic-bezier(0.3, 0.7, 0.2, 1), background-color 0.6s ease;
 }
 
-/* ---------- Notes and credits, after the last chapter ---------- */
-.notes {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: 54px 0;
-  scroll-snap-align: center;
-}
+/* ---------- Notes and credits, the last spread of the life ---------- */
 .notesPage, .creditsPage {
   position: absolute;
   inset: 84px 64px 76px;
@@ -251,19 +269,15 @@
 }
 .notesPage h2, .creditsPage h2 { font: 400 46px/1 var(--font-serif); margin: 0 0 0.6em; }
 .notesPage ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.notesPage li { display: grid; grid-template-columns: 26px 1fr; scroll-margin-top: 40svh; }
-.notesPage li:target p { background: color-mix(in oklab, var(--accent) 14%, transparent); }
+.notesPage li { display: grid; grid-template-columns: 26px 1fr; }
 .noteNo { font: 400 15px/1.5 var(--font-book); color: var(--accent); }
 .notesPage p { margin: 0; font: 400 15px/1.5 var(--font-book); text-wrap: pretty; }
 .notesPage a { color: inherit; text-decoration-color: color-mix(in oklab, var(--ink) 35%, transparent); text-underline-offset: 2px; }
 .notesPage a:hover { color: var(--accent); }
-.creditsPage p { margin: 0; font: 400 17px/1.6 var(--font-book); max-width: 36ch; text-wrap: pretty; }
-.finis { margin: 1.6em 0 0 !important; font: 400 30px/1 var(--font-serif) !important; color: var(--accent); text-align: center; max-width: none !important; }
-.onward { margin-top: auto; display: grid; gap: 22px; }
-.onward a { display: grid; gap: 6px; text-decoration: none; font: 400 40px/1 var(--font-serif); color: var(--ink); }
-.onward a small { font: 400 14px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.1em; color: var(--muted); }
-.onward a:hover { color: var(--accent); }
+.creditsPage p { margin: 0 0 0.9em; font: 400 17px/1.6 var(--font-book); max-width: 36ch; text-wrap: pretty; }
+.finis { margin: 0.6em 0 0 !important; font: 400 30px/1 var(--font-serif) !important; color: var(--accent); text-align: center; max-width: none !important; }
+.overleaf { margin-top: auto !important; font-style: italic !important; color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) {
-  .ribbon { transition: none; }
+  .ribbon, .onward, .rail { transition: none; }
 }

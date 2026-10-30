@@ -1,175 +1,303 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import type { Scene, Story } from "@/lib/schema";
 import { allStories, lifespan } from "@/lib/stories";
 import { portraitCredit, portraitSrc } from "@/lib/portraits";
+import { eraFor } from "@/lib/eras";
 import { LineDrawing } from "@/components/LineDrawing";
-import { Endpaper, Page, Spread } from "@/components/book/Page";
-import { Contents, type ContentsEntry } from "@/components/book/Contents";
-import { PART, firstPages } from "@/components/book/pagination";
+import { LoopFilm } from "@/components/LoopFilm";
+import { Cover, clothFor } from "@/components/book/Cover";
+import { PART, roman } from "@/components/book/pagination";
 import s from "./home.module.css";
 
-const NICKNAME: Record<string, string> = { "jack-sim": "Mr. Toilet" };
+// The shelf lists whatever is in stories/ now, including lives made on /create since the server started.
+export const dynamic = "force-dynamic";
+
+const WORDS = ["No", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
+const count = (n: number) => WORDS[n] ?? String(n);
+
+/** The scene the making section takes apart: the first one every stage has been run on. */
+function showcase(stories: Story[]): { story: Story; scene: Scene; index: number } | undefined {
+  for (const story of stories)
+    for (const [index, scene] of story.scenes.entries())
+      if (scene.plate && scene.background && scene.video && scene.layers.some((l) => l.src)) return { story, scene, index };
+}
 
 export default function Home() {
   const stories = allStories();
   const first = stories[0];
-  const pages = firstPages(stories.map((st) => st.scenes.length));
-  const entries: ContentsEntry[] = stories.map((st, i) => ({
-    slug: st.slug,
-    part: PART[i] ?? String(i + 1),
-    name: st.name,
-    nickname: NICKNAME[st.slug],
-    lifespan: lifespan(st),
-    tagline: st.tagline,
-    // The title page, one after the frontispiece.
-    page: pages[i] + 1,
-    portrait: portraitSrc(st.slug),
-    credit: portraitCredit(st.slug),
-  }));
-  const allYears = [...new Set(stories.flatMap((st) => st.scenes.map((sc) => sc.year)))].sort();
+  const demo = showcase(stories);
 
   return (
-    <main className={s.home} data-desk>
-      <section className={s.leaf}>
-        <Spread
-          read={0.04}
-          verso={
-            <Page side="verso" placed>
-              <figure className={s.frontis}>
-                <div className={s.frontisArt}>
-                  <LineDrawing src={portraitSrc(first.slug)} loop label={`${first.name}, drawing himself in pen strokes`} />
+    <div className={s.site}>
+      <header className={s.masthead}>
+        <Link href="/" className={s.wordmark}>
+          Lives in Motion
+        </Link>
+        <nav aria-label="Site">
+          <a href="#shelf">The shelf</a>
+          <a href="#making">How a page is made</a>
+          <Link href="/create">Make a new life</Link>
+        </nav>
+      </header>
+
+      <main>
+        {/* ---------- Hero ---------- */}
+        <section className={s.hero}>
+          <div className={s.heroText}>
+            <h1 className={s.heroTitle}>Lives in Motion</h1>
+            <p className={s.pitch}>
+              Singaporean lives as illustrated books you read by scrolling. Every scene is sourced, and every picture is made with Meta’s
+              AI.
+            </p>
+            {first && (
+              <div className={s.heroActions}>
+                <Link href={`/${first.slug}`} className={s.primary}>
+                  Open {first.name}’s book
+                </Link>
+                <a href="#making" className={s.quiet}>
+                  See how a page is made
+                </a>
+              </div>
+            )}
+          </div>
+          {first && (
+            <figure className={s.heroPlate}>
+              <div className={s.heroArt}>
+                <LineDrawing
+                  src={portraitSrc(first.slug)}
+                  loop
+                  label={`${first.name}, drawing himself in pen strokes`}
+                  fallback={first.scenes[0].plate ? <img className={s.heroFallback} src={first.scenes[0].plate} alt="" /> : null}
+                />
+              </div>
+              <figcaption>
+                <i>{first.name}</i>, drawn stroke by stroke the way a pen plotter would. As the last lines land, the photograph they were
+                traced from develops underneath, cut out by SAM 3.1. {portraitCredit(first.slug)}
+              </figcaption>
+            </figure>
+          )}
+        </section>
+
+        {/* ---------- The shelf ---------- */}
+        <section id="shelf" className={s.shelfSection} aria-labelledby="shelf-title">
+          <div className={s.sectionHead}>
+            <h2 id="shelf-title">On the shelf</h2>
+            <p>
+              {count(stories.length)} {stories.length === 1 ? "life" : "lives"} so far, each bound in the colours of the decade it starts
+              in. Take one down to read it; each book runs on into the next.
+            </p>
+          </div>
+          <ol className={s.shelf}>
+            {stories.map((st, i) => {
+              const era = eraFor(st.scenes[0].year);
+              const years = `${st.scenes[0].year} to ${st.scenes.at(-1)!.year}`;
+              return (
+                <li key={st.slug} className={s.slot}>
+                  <div className={s.bookArea}>
+                    <Link href={`/${st.slug}`} className={s.volumeLink} aria-label={`Open ${st.name}’s book`}>
+                      <div className={s.volume} style={{ ["--cloth" as string]: clothFor(era, i) } as CSSProperties}>
+                        <span className={s.spine} aria-hidden>
+                          <span>{st.name}</span>
+                        </span>
+                        <Cover
+                          slug={st.slug}
+                          name={st.name}
+                          lifespan={lifespan(st)}
+                          part={`Part ${PART[i] ?? i + 1}`}
+                          className={s.front}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                  <div className={s.label}>
+                    <h3>
+                      <Link href={`/${st.slug}`}>{st.name}</Link>
+                    </h3>
+                    <p className={s.labelTag}>{st.tagline}</p>
+                    <p className={s.labelMeta}>
+                      {count(st.scenes.length)} chapters, {years}
+                    </p>
+                  </div>
+                </li>
+              );
+            })}
+            <li className={s.slot}>
+              <div className={s.bookArea}>
+                <Link href="/create" className={s.volumeLink} aria-label="Make a new life">
+                  <div className={`${s.volume} ${s.blank}`}>
+                    <span className={s.spine} aria-hidden />
+                    <div className={s.front}>
+                      <span className={s.blankMark} aria-hidden>
+                        +
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className={s.label}>
+                <h3>
+                  <Link href="/create">A new life</Link>
+                </h3>
+                <p className={s.labelTag}>Type a name; the book is written, painted and bound here.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        {/* ---------- How a page is made ---------- */}
+        {demo && (
+          <section id="making" className={s.making} aria-labelledby="making-title">
+            <div className={s.sectionHead}>
+              <h2 id="making-title">How a page is made</h2>
+              <p>
+                One plate from {demo.story.name}’s book, {demo.scene.year}: <i>{demo.scene.title}</i>. Each stage below is the real file the
+                model returned, unretouched.
+              </p>
+            </div>
+            <ol className={s.stages}>
+              <li className={s.stage}>
+                <p className={s.model}>
+                  <b>Muse Spark</b> researches
+                </p>
+                <div className={`${s.frame} ${s.research}`}>
+                  <p className={s.researchYear}>{demo.scene.year}</p>
+                  <p className={s.researchText}>{demo.scene.caption}</p>
+                  <ul className={s.sources}>
+                    {demo.scene.sources.map((src) => (
+                      <li key={src.url}>
+                        <a href={src.url} target="_blank" rel="noopener noreferrer">
+                          {src.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <figcaption>
-                  <i>{first.name}</i>, drawn stroke by stroke the way a pen plotter would. SAM 3.1 cut him out of the photograph,
-                  which develops under the lines as the drawing finishes. {portraitCredit(first.slug)}
-                </figcaption>
-              </figure>
-            </Page>
-          }
-          recto={
-            <Page side="recto" placed>
-              <div className={s.titlePage}>
-                <h1 className={s.bookTitle}>Lives in Motion</h1>
-                <p className={s.subtitle}>Three Singaporean lives, drawn stroke by stroke</p>
-                <span className={s.rule} aria-hidden />
-                <p className={s.lede}>
-                  Read a life decade by decade: what happened, when, and why it mattered. Every scene is sourced, and every picture
-                  is made with Meta’s AI.
+                <p className={s.stageNote}>Searches the web, writes the dated timeline and cites it. A line without a source is dropped.</p>
+              </li>
+              <li className={s.stage}>
+                <p className={s.model}>
+                  <b>Muse Image</b> paints the plate
                 </p>
-                <Link href={`/${first.slug}`} className={s.begin}>
-                  Begin with {NICKNAME[first.slug] ?? first.name}
-                </Link>
-                <p className={s.beginMeta}>
-                  Part One, page {pages[0] + 1}. {first.scenes.length} chapters, about three minutes.
+                <div className={s.frame}>
+                  <img src={demo.scene.plate} alt={`Plate: ${demo.scene.visual}`} />
+                </div>
+                <p className={s.stageNote}>From Muse Spark’s art direction, in the print style of the decade.</p>
+              </li>
+              <li className={s.stage}>
+                <p className={s.model}>
+                  <b>SAM 3.1</b> cuts it apart
                 </p>
-                <p className={s.imprint}>
-                  <span>Lives in Motion</span>
-                  Singapore, 2026
+                <div className={`${s.frame} ${s.cutouts}`}>
+                  {demo.scene.layers
+                    .filter((l) => l.src)
+                    .map((l) => (
+                      <img key={l.id} src={l.src} alt={`Cut-out: ${l.concept}`} />
+                    ))}
+                </div>
+                <p className={s.stageNote}>
+                  Finds “
+                  {demo.scene.layers
+                    .filter((l) => l.src)
+                    .map((l) => l.concept)
+                    .join("”, “")}
+                  ” in the plate and cuts it out, so it can move on its own.
                 </p>
-              </div>
-            </Page>
-          }
-        />
-      </section>
+              </li>
+              <li className={s.stage}>
+                <p className={s.model}>
+                  <b>Muse Image</b> clears the stage
+                </p>
+                <div className={s.frame}>
+                  <img src={demo.scene.background} alt="The plate with the cut-out removed" />
+                </div>
+                <p className={s.stageNote}>Edits the plate to paint out what SAM cut, leaving the empty set behind it.</p>
+              </li>
+              <li className={s.stage}>
+                <p className={s.model}>
+                  <b>The book</b> sets it moving
+                </p>
+                <div className={s.frame}>
+                  <LoopFilm src={demo.scene.video!} poster={demo.scene.poster} label={`Scene film: ${demo.scene.visual}`} />
+                </div>
+                <p className={s.stageNote}>No model here: each layer is moved by its depth into a film your scrolling plays.</p>
+              </li>
+            </ol>
+            <blockquote className={s.direction}>
+              <p>“{demo.scene.visual}”</p>
+              <footer>The art direction Muse Spark wrote and Muse Image painted from.</footer>
+            </blockquote>
+            <p className={s.makingMore}>
+              <Link href={`/${demo.story.slug}`}>
+                See it in Chapter {roman(demo.index + 1)} of {demo.story.name}’s book
+              </Link>
+            </p>
+          </section>
+        )}
 
-      <section id="contents" className={s.leaf}>
-        <Spread
-          read={0.12}
-          verso={null}
-          recto={
-            <Contents
-              entries={entries}
-              folios={["iv", "v"]}
-              back={[
-                { label: "How a life is made", href: "#making", page: "vii" },
-                { label: "Colophon", href: "#colophon", page: "viii" },
-              ]}
-            />
-          }
-        />
-      </section>
+        {/* ---------- Make a new life ---------- */}
+        <section id="make" className={s.make} aria-labelledby="make-title">
+          <div className={s.makeText}>
+            <h2 id="make-title">Make a new life</h2>
+            <p>
+              Type a Singaporean’s name. Muse Spark researches the life with cited sources, Muse Image paints seven plates, SAM 3.1 cuts
+              them into layers, and the book is bound and put on this shelf while you watch.
+            </p>
+            <Link href="/create" className={s.makeCta}>
+              Start a book
+            </Link>
+          </div>
+          <ol className={s.makeSteps}>
+            <li>
+              <b>Name</b> Who should the book be about?
+            </li>
+            <li>
+              <b>Research</b> Muse Spark finds and cites the life, decade by decade.
+            </li>
+            <li>
+              <b>Plates</b> Muse Image paints seven scenes.
+            </li>
+            <li>
+              <b>Layers</b> SAM 3.1 cuts out what should move.
+            </li>
+          </ol>
+        </section>
+      </main>
 
-      <section id="making" className={s.leaf}>
-        <Spread
-          read={0.2}
-          verso={
-            <Page side="verso" placed head="Lives in Motion" folio="vi">
-              <blockquote className={s.epigraph}>
-                <p>
-                  A biography is considered complete if it merely accounts for six or seven selves, whereas a person may well have
-                  as many thousand.
-                </p>
-                <footer>
-                  Virginia Woolf, <cite>Orlando</cite> (1928)
-                </footer>
-              </blockquote>
-            </Page>
-          }
-          recto={
-            <Page side="recto" placed head="A note on the making" folio="vii">
-              <div className={s.making}>
-                <h2 className={s.pageTitle}>How a life is made</h2>
-                <p className={s.makingLede}>
-                  Built for the Meta Global AI Developer Hackathon (2026). Four steps, each done by a Meta model or by maths, and
-                  checked by a person.
-                </p>
-                <ol className={s.steps}>
-                  <li>
-                    <b>Research.</b> Muse Spark searches the web and writes a dated timeline. A line without a citation is dropped.
-                    <i>Muse Spark with web search</i>
-                  </li>
-                  <li>
-                    <b>Illustrate.</b> Muse Image paints each scene in its decade’s print style, from 1920s engraving to 1990s
-                    risograph.
-                    <i>Muse Image</i>
-                  </li>
-                  <li>
-                    <b>Cut.</b> SAM 3.1 finds the objects in each painting and cuts them out, so they can move on their own as you
-                    scroll.
-                    <i>SAM 3.1</i>
-                  </li>
-                  <li>
-                    <b>Draw.</b> Each portrait is traced into pen strokes and drawn back one stroke at a time, then the photograph
-                    develops underneath.
-                    <i>linedraw and vivus</i>
-                  </li>
-                </ol>
-              </div>
-            </Page>
-          }
-        />
-      </section>
-
-      <section id="colophon" className={s.leaf}>
-        <Spread
-          read={1}
-          verso={
-            <Page side="verso" placed style={{ ["--accent2" as string]: "#4f6b5a", ["--accent" as string]: "#9a3c1c" } as CSSProperties}>
-              <Endpaper years={allYears} />
-            </Page>
-          }
-          recto={
-            <Page side="recto" placed folio="viii">
-              <div className={s.colophon}>
-                <h2>Colophon</h2>
-                <p>
-                  <i>Lives in Motion</i> was made for the Meta Global AI Developer Hackathon, October and November 2026.
-                </p>
-                <p>
-                  Research by Muse Spark with web search; plates by Muse Image; cut-outs by SAM 3.1. Portraits are traced from openly
-                  licensed photographs with linedraw and drawn with vivus; scene figures are silhouettes by design.
-                </p>
-                <p>Facts link to their sources in the notes at the end of each life.</p>
-                <p>Set in Instrument Serif and Newsreader.</p>
-                <span className={s.rule} aria-hidden />
-                <Link href={`/${first.slug}`} className={s.colophonLink}>
-                  Begin reading
-                </Link>
-              </div>
-            </Page>
-          }
-        />
-      </section>
-    </main>
+      {/* ---------- Colophon ---------- */}
+      <footer className={s.footer}>
+        <blockquote className={s.epigraph}>
+          <p>
+            A biography is considered complete if it merely accounts for six or seven selves, whereas a person may well have as many
+            thousand.
+          </p>
+          <footer>
+            Virginia Woolf, <cite>Orlando</cite> (1928)
+          </footer>
+        </blockquote>
+        <div className={s.colophon}>
+          <h2>Colophon</h2>
+          <p>
+            <i>Lives in Motion</i> was made for the Meta Global AI Developer Hackathon, 2026. Research by Muse Spark with web search; plates
+            and clean backgrounds by Muse Image; cut-outs and portrait masks by SAM 3.1. Facts link to their sources in the notes at the end
+            of each life.
+          </p>
+          <p>
+            Portraits are traced into pen strokes with linedraw and drawn with vivus; people in the scenes are silhouettes by design. Set in
+            Instrument Serif and Newsreader.
+          </p>
+          <ul className={s.credits}>
+            {stories.map((st) => {
+              const c = portraitCredit(st.slug);
+              return c ? (
+                <li key={st.slug}>
+                  <i>{st.name}.</i> {c}
+                </li>
+              ) : null;
+            })}
+          </ul>
+        </div>
+      </footer>
+    </div>
   );
 }

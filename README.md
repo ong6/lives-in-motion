@@ -58,6 +58,52 @@ pnpm make jack-sim --stages illustrate,segment --scenes s4   # redo one scene
 Until a story has been through the pipeline its scenes render as typographic panels (year,
 caption, overlays); the art arrives with `illustrate` and `segment`.
 
+## Make a new life
+
+`/create` makes a life live on the page: type a name (plus an optional one-line hint and a photo
+you have the right to use) and watch the Meta models work. Muse Spark's cited facts appear as
+they come back, the seven plate slots fill as Muse Image paints them, SAM 3.1's cut-outs light up
+over each plate, and every artifact shows the model that made it and what it cost, against the
+life's ceiling and the event budget. *Read the book* opens `/<slug>` as soon as the storyboard
+and the first plate exist; the rest fills in while you read.
+
+| Step | Model | Typical time |
+|---|---|---|
+| Research | Muse Spark + web search, every fact with its `url_citation`s | ~45 s |
+| Storyboard | Muse Spark, JSON schema; writes `stories/<slug>/story.json` | ~20 s |
+| Plates | Muse Image; plate 1 first (style reference), then three at a time | ~3 min |
+| Cut-outs | SAM 3.1 per concept, then a Muse Image clean background (30 s to 3 min an edit); line scenes traced | beside the plates, ~3 min |
+| Frontispiece | The reader's photo (SAM 3.1 person mask) or a Muse Image emblem (SAM 3.1 object mask), traced by linedraw | beside the plates |
+| Films | `pipeline/video.ts` in a child process, local sharp + ffmpeg, ~7 s a scene | ~45 s |
+
+A life takes 7 to 10 minutes and about $0.35: the first one, Tan Howe Liang, cost $0.36 (research
+$0.14, storyboard $0.03, plates $0.07, cut-outs and clean backgrounds $0.11, frontispiece $0.01).
+
+Code: `pipeline/create/` (runner, guard rails, job types), `app/api/create/` (routes),
+`app/create/` and `components/create/` (the page). The runner reuses the `pipeline/stages.ts`
+stages, which report through a progress callback. Job state is saved to
+`stories/<slug>/job.json`, so a refresh (`/create?job=<slug>`) reconnects; a server restart
+mid-run shows *interrupted* with a button to pick up where it stopped (finished plates are kept).
+
+API: `GET /api/create` (enabled, budget, estimate, live job) · `POST /api/create` (multipart
+`name`, `hint`, `photo`, `rights`, `token`, `mock`, `resume`) → `202 {slug}` ·
+`GET /api/create/<slug>` (job JSON) · `GET /api/create/<slug>/stream` (Server-Sent Events).
+
+Guard rails, because a public page that spends real money is a risk:
+
+- On only when `NODE_ENV !== "production"` or `ALLOW_CREATE=1`; `CREATE_TOKEN` adds a passcode.
+- One life at a time (409). Refused if the budget guard has under $2 of headroom (402) or if
+  today's `/create` spend plus one life's $1.50 ceiling would pass `CREATE_DAILY_USD` (default
+  $10; 429). Ledger rows carry `job: "create:<slug>"`, which is how the daily total is counted,
+  and the budget guard refuses any call that could take a life past its ceiling.
+- Name ≤ 80 characters, hint ≤ 120, no links or markup; photo ≤ 8 MB, JPEG/PNG/WebP checked by
+  its bytes, re-encoded (EXIF and GPS dropped), and only with the rights box ticked.
+- A scene Muse Image refuses is shown as declined and skipped; the rest carry on.
+
+Rehearse without spending: the *Rehearse* button (development, or `CREATE_MOCK=1`) replays
+Jack Sim's finished life through the same events with typical timings and costs, including a
+refused scene and a retried call.
+
 ## Line portraits
 
 `pnpm portrait <slug> --sam` turns the credited photo in `pipeline/portraits/` into a pen-plotter

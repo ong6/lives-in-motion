@@ -18,14 +18,25 @@ Rules:
 - Captions: plain, 1-2 sentences, at most 30 words.
 - visual: art direction for a square illustration with one clear subject in the centre. Name concrete objects, setting and period details. People only as silhouettes or seen from behind; never describe a face. No flags, text, logos or numbers in the picture.
 - cut: 1-2 short noun phrases for the foreground objects an image segmenter should cut out ("toilet", "boy").
-- treatment: "archive" for early or documentary moments, "theatre" for scenes with a strong foreground subject, "line" for quiet, symbolic moments. Mix them.`;
+- treatment: "archive" for early or documentary moments, "theatre" for scenes with a strong foreground subject, "line" for quiet, symbolic moments. Mix them.
+- Scenes run in chronological order.
+- born: the birth year from the facts. died: the death year, or "" if the facts don't record a death.
+- emblem: a frontispiece that stands for the whole life without showing the person: one object or setting (visual, same rules as above, no people at all) and the single noun an image segmenter should cut out of it (concept).`;
 
 export const storyboardSchema = {
   type: "object",
   additionalProperties: false,
-  required: ["tagline", "scenes"],
+  required: ["tagline", "born", "died", "emblem", "scenes"],
   properties: {
     tagline: { type: "string" },
+    born: { type: "string" },
+    died: { type: "string" },
+    emblem: {
+      type: "object",
+      additionalProperties: false,
+      required: ["visual", "concept"],
+      properties: { visual: { type: "string" }, concept: { type: "string" } },
+    },
     scenes: {
       type: "array",
       minItems: 7,
@@ -57,3 +68,10 @@ People only as silhouettes or seen from behind; no faces. No text, letters, numb
 
 export const cleanPlatePrompt = (scene: Scene) =>
   `Remove the ${scene.cut.join(" and the ")} from this illustration and fill the space with the surrounding background in exactly the same style. Change nothing else.`;
+
+/** A frontispiece with no face: the object or setting that stands for the life, drawn to be traced. */
+export const emblemPrompt = (visual: string, concept: string) => `Frontispiece illustration for a biography.
+Style: fine pen-and-ink engraving, black ink on plain white paper, crisp contour lines and cross-hatched shading, no colour.
+Subject: ${visual}
+Composition: the ${concept} alone in the centre, filling about two thirds of the frame, on a plain white background with nothing behind it.
+No people, no faces, no hands. No text, letters, numbers, flags or logos anywhere.`;

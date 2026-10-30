@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export interface LineData {
   /** height / width */
@@ -29,20 +29,44 @@ const toPath = (s: number[]) => {
  * As the last strokes land, the real photo the drawing was traced from develops underneath,
  * so the page ends on the actual person rather than an approximation of them.
  */
-export function LineDrawing({ src, progress, loop = false, label, className }: { src: string; progress?: number; loop?: boolean; label: string; className?: string }) {
+export function LineDrawing({
+  src,
+  progress,
+  loop = false,
+  label,
+  className,
+  fallback = null,
+}: {
+  /** A line file; a life made on /create may not have one yet. */
+  src?: string;
+  progress?: number;
+  loop?: boolean;
+  label: string;
+  className?: string;
+  /** Shown instead when there is no line file or it fails to load. */
+  fallback?: ReactNode;
+}) {
   const svg = useRef<SVGSVGElement>(null);
   const vivus = useRef<{ setFrameProgress(p: number): unknown; destroy(): void } | null>(null);
   const progressRef = useRef(progress ?? 1);
   progressRef.current = progress ?? progressRef.current;
   const [data, setData] = useState<LineData | null>(null);
+  const [missing, setMissing] = useState(!src);
   /** Photo opacity, 0–1. In scroll mode it follows the last 30% of progress; in loop mode it fades in after each draw. */
   const [reveal, setReveal] = useState(0);
 
   useEffect(() => {
     let live = true;
+    setMissing(!src);
+    if (!src) return;
     fetch(src)
-      .then((r) => r.json())
-      .then((d: LineData) => live && setData(d));
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((d: LineData) => {
+        if (!live) return;
+        if (Array.isArray(d?.strokes) && d.strokes.length) setData(d);
+        else setMissing(true);
+      })
+      .catch(() => live && setMissing(true));
     return () => {
       live = false;
     };
@@ -88,6 +112,7 @@ export function LineDrawing({ src, progress, loop = false, label, className }: {
   }, [progress, loop]);
 
   const box = { position: "absolute", inset: 0, width: "100%", height: "100%" } as const;
+  if (missing) return <>{fallback}</>;
   return (
     <div className={className} style={{ position: "relative", width: "100%", height: "100%" }}>
       {data?.photo && (

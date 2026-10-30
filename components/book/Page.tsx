@@ -5,7 +5,8 @@ export type Side = "verso" | "recto";
 
 /**
  * One page: paper, a deckled fore-edge, the gutter's shadow, and optional running head and
- * folio. `placed` puts it on its side of an open book; leaves position their own faces.
+ * folio. `placed` lays a recto on the right of the open book, under the turning leaves (which
+ * position their own faces).
  */
 export function Page({
   side,
@@ -24,7 +25,7 @@ export function Page({
   style?: CSSProperties;
   children?: ReactNode;
 }) {
-  const pos = placed ? (side === "verso" ? b.atLeft : b.atRight) : "";
+  const pos = placed ? b.atRight : "";
   return (
     <div className={`${b.page} ${b[side]} ${pos} ${className}`} style={style}>
       {head && <p className={b.head}>{head}</p>}
@@ -44,38 +45,6 @@ export function Endpaper({ years }: { years: string[] }) {
           <p key={i}>{line}</p>
         ))}
       </div>
-    </div>
-  );
-}
-
-/**
- * A still, open book: boards, page block and two pages. `read` (0–1) sets how much of the
- * page block lies on the left, so a spread near the end of the book looks it.
- */
-export function Spread({
-  verso,
-  recto,
-  read = 0.5,
-  id,
-  className = "",
-  style,
-}: {
-  verso: ReactNode;
-  recto: ReactNode;
-  read?: number;
-  id?: string;
-  className?: string;
-  style?: CSSProperties;
-}) {
-  const vars = { ["--bl" as string]: `${3 + 9 * read}px`, ["--br" as string]: `${3 + 9 * (1 - read)}px`, ...style } as CSSProperties;
-  return (
-    <div id={id} className={`${b.book} ${className}`} style={vars}>
-      <div className={`${b.board} ${b.boardL}`} />
-      <div className={`${b.board} ${b.boardR}`} />
-      <div className={`${b.block} ${b.blockL}`} />
-      <div className={`${b.block} ${b.blockR}`} />
-      {verso}
-      {recto}
     </div>
   );
 }

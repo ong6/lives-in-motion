@@ -2,9 +2,12 @@
 
 import { useEffect, useState, type RefObject } from "react";
 
-/** 0 when the element's top reaches the viewport top, 1 when its bottom reaches the viewport bottom. */
-export function useScrollProgress(ref: RefObject<HTMLElement | null>): number {
-  const [p, setP] = useState(0);
+/**
+ * 0 when the element's top reaches the viewport top, 1 when its bottom reaches the viewport bottom.
+ * `initial` is what the server renders with, for a page that opens part-way down.
+ */
+export function useScrollProgress(ref: RefObject<HTMLElement | null>, initial = 0): number {
+  const [p, setP] = useState(initial);
   useEffect(() => {
     let raf = 0;
     const update = () => {

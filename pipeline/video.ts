@@ -19,8 +19,8 @@ import { join } from "node:path";
 import { parseArgs } from "node:util";
 import { pathToFileURL } from "node:url";
 import { Story, type Scene } from "../lib/schema";
+import { ROOT } from "./root";
 
-const ROOT = new URL("..", import.meta.url).pathname;
 const FFMPEG = process.env.FFMPEG ?? (existsSync("/opt/homebrew/bin/ffmpeg") ? "/opt/homebrew/bin/ffmpeg" : "ffmpeg");
 
 /** Film settings. Scroll maps 0..1 onto the whole clip, so fps only sets how finely it scrubs. */

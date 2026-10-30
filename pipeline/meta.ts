@@ -2,7 +2,7 @@
  * Minimal Meta Model API client (https://dev.meta.ai/docs). One key covers Muse Spark,
  * Muse Image and SAM 3.1. Shapes the docs give no full example for are marked UNVERIFIED.
  */
-import { PRICES, guard, sparkCost, sparkWorst } from "./budget";
+import { PRICES, currentScope, guard, sparkCost, sparkWorst } from "./budget";
 
 const BASE = process.env.META_API_BASE ?? "https://api.meta.ai/v1";
 
@@ -26,6 +26,7 @@ async function send<T>(path: string, init: () => RequestInit, tries = 6): Promis
     } catch (e) {
       // Network failure before any response (connect timeout, reset): nothing was billed, so retry.
       if (attempt >= tries) throw e;
+      currentScope()?.onRetry?.(`network error (${String((e as Error)?.message ?? e).slice(0, 60)}); retrying in ${2 * 2 ** attempt} s`);
       await new Promise((r) => setTimeout(r, 2000 * 2 ** attempt));
       continue;
     }
@@ -39,7 +40,9 @@ async function send<T>(path: string, init: () => RequestInit, tries = 6): Promis
     }
     const text = await res.text();
     if (!(res.status === 429 || res.status >= 500) || attempt >= tries) throw new Error(`${path} ${res.status}: ${text.slice(0, 600)}`);
-    await new Promise((r) => setTimeout(r, Number(res.headers.get("retry-after")) * 1000 || 1500 * 2 ** attempt));
+    const wait = Number(res.headers.get("retry-after")) * 1000 || 1500 * 2 ** attempt;
+    currentScope()?.onRetry?.(`${res.status === 429 ? "rate limited" : `server error ${res.status}`}; retrying in ${Math.round(wait / 1000)} s`);
+    await new Promise((r) => setTimeout(r, wait));
   }
 }
 

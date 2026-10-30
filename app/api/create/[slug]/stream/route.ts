@@ -1,0 +1,48 @@
+/**
+ * GET /api/create/<slug>/stream → Server-Sent Events. Each `data:` is { job, budget }, sent on
+ * every change (at most four a second) and closed once the job has finished. Reconnecting gets
+ * the current state straight away, so a refresh picks up where the page was.
+ */
+import { budget, getJob, subscribe } from "@/pipeline/create";
+import type { Job } from "@/pipeline/create/types";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
+export async function GET(req: Request, { params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  if (!/^[a-z0-9-]{1,80}$/.test(slug) || !getJob(slug)) return Response.json({ error: "No such life." }, { status: 404 });
+  const enc = new TextEncoder();
+  let stop = () => {};
+  const stream = new ReadableStream<Uint8Array>({
+    start(ctrl) {
+      let closed = false;
+      const send = (job: Job) => {
+        if (closed) return;
+        try {
+          ctrl.enqueue(enc.encode(`data: ${JSON.stringify({ job, budget: budget() })}\n\n`));
+        } catch {
+          return stop();
+        }
+        if (job.status !== "running") stop();
+      };
+      const off = subscribe((job) => job.slug === slug && send(job));
+      const beat = setInterval(() => !closed && ctrl.enqueue(enc.encode(`: still here\n\n`)), 15000);
+      stop = () => {
+        if (closed) return;
+        closed = true;
+        off();
+        clearInterval(beat);
+        try {
+          ctrl.close();
+        } catch {}
+      };
+      req.signal.addEventListener("abort", stop);
+      send(getJob(slug)!);
+    },
+    cancel() {
+      stop();
+    },
+  });
+  return new Response(stream, { headers: { "Content-Type": "text/event-stream; charset=utf-8", "Cache-Control": "no-store, no-transform", Connection: "keep-alive", "X-Accel-Buffering": "no" } });
+}

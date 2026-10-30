@@ -1,0 +1,1134 @@
+{
+ "slug": "tan-howe-liang",
+ "name": "Tan Howe Liang",
+ "hint": "weightlifter, Singapore's first Olympic medallist (Rome 1960)",
+ "photo": false,
+ "bookSlug": "tan-howe-liang",
+ "status": "done",
+ "startedAt": "2026-10-30T12:20:51.277Z",
+ "updatedAt": "2026-10-30T12:33:12.853Z",
+ "steps": {
+  "research": {
+   "status": "done",
+   "usd": 0.14158,
+   "startedAt": "2026-10-30T12:20:51.277Z",
+   "endedAt": "2026-10-30T12:21:35.114Z"
+  },
+  "storyboard": {
+   "status": "done",
+   "usd": 0.027002,
+   "startedAt": "2026-10-30T12:21:35.114Z",
+   "endedAt": "2026-10-30T12:21:55.261Z"
+  },
+  "plates": {
+   "status": "done",
+   "usd": 0.07,
+   "startedAt": "2026-10-30T12:21:55.261Z",
+   "endedAt": "2026-10-30T12:32:31.198Z"
+  },
+  "cutouts": {
+   "status": "done",
+   "usd": 0.11,
+   "startedAt": "2026-10-30T12:22:44.860Z",
+   "endedAt": "2026-10-30T12:32:31.198Z"
+  },
+  "frontispiece": {
+   "status": "done",
+   "usd": 0.0125,
+   "startedAt": "2026-10-30T12:21:55.261Z",
+   "endedAt": "2026-10-30T12:31:34.578Z"
+  },
+  "films": {
+   "status": "done",
+   "usd": 0,
+   "startedAt": "2026-10-30T12:29:46.540Z",
+   "endedAt": "2026-10-30T12:33:12.852Z"
+  }
+ },
+ "facts": [
+  {
+   "n": 1,
+   "year": "1937",
+   "text": "He moved with his family from Swatow to Singapore at around age 4 and settled in Chinatown.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang, Singapore\u2019s first Olympic medallist, dies at",
+     "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "year": "1952",
+   "text": "He joined the Evergreen Weightlifting Party in 1952 and trained with a single set of barbells.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "year": "1953",
+   "text": "After 1 year of training he won the National Junior and Senior titles in the lightweight division at age 20.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "year": "1954",
+   "text": "He placed fourth at the Asian Games in Manila in 1954.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "year": "1956",
+   "text": "He finished ninth at the 1956 Melbourne Olympics after losing consciousness during the competition.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "year": "1958",
+   "text": "He lifted 157 kg in the clean-and-jerk and won lightweight gold with a 358 kg total at the 1958 Commonwealth and Empire Games in Cardiff.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "year": "1958",
+   "text": "He won lightweight gold with a 375 kg total at the 1958 Asian Games in Tokyo.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "year": "1959",
+   "text": "He won lightweight gold with a 369 kg total at the first SEAP Games in Bangkok in 1959.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "year": "1960",
+   "text": "On 8 September 1960 he finished second among 35 competitors in the lightweight division at Rome with a 380 kg total and a 155 kg clean-and-jerk.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang wins Singapore\u2019s first Olympic medal",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "year": "1961",
+   "text": "He competed in the middleweight category for the first time at the 1961 SEAP Games in Rangoon and won silver.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "year": "1962",
+   "text": "He won middleweight gold with a 390 kg total at the 1962 Commonwealth Games in Perth.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "year": "1962",
+   "text": "He received the Pingat Jasa Gemilang (Meritorious Service Medal) at the 1962 National Day Awards.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "year": "1968",
+   "text": "He was appointed national weightlifting coach in 1968.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "year": "1982",
+   "text": "He began work with the Singapore Sports Council as a gymnasium supervisor in 1982 at the National Stadium.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "year": "1984",
+   "text": "He received the International Weightlifting Federation Gold Award in 1984.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "year": "2008",
+   "text": "He remained Singapore's only Olympic medallist for 48 years until the women's table tennis team won silver in 2008.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang",
+     "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+    }
+   ]
+  },
+  {
+   "n": 17,
+   "year": "2024",
+   "text": "He died on 3 December 2024 at age 91.",
+   "sources": [
+    {
+     "label": "Tan Howe Liang, Singapore\u2019s first Olympic medallist, dies at",
+     "url": "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "s1",
+   "year": "1937",
+   "title": "Arrival in Chinatown",
+   "caption": "At around age four, he moved with his family from Swatow to Singapore and settled in Chinatown.",
+   "treatment": "archive",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s1/plate.webp",
+   "background": "/stories/tan-howe-liang/s1/background.webp",
+   "poster": "/stories/tan-howe-liang/s1/scene.jpg?v=6eb2b1c4",
+   "video": "/stories/tan-howe-liang/s1/scene.mp4?v=6eb2b1c4",
+   "cuts": [
+    {
+     "concept": "boy",
+     "src": "/stories/tan-howe-liang/s1/cut-1.webp",
+     "x": 48.97,
+     "y": 88.81,
+     "w": 8.81
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.0025
+   }
+  },
+  {
+   "id": "s2",
+   "year": "1953",
+   "title": "One Set of Barbells",
+   "caption": "He joined the Evergreen Weightlifting Party in 1952, training with a single set of barbells, and after a year won national junior and senior lightweight titles.",
+   "treatment": "theatre",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s2/plate.webp",
+   "background": "/stories/tan-howe-liang/s2/background.webp",
+   "poster": "/stories/tan-howe-liang/s2/scene.jpg?v=3dfd7e2f",
+   "video": "/stories/tan-howe-liang/s2/scene.mp4?v=3dfd7e2f",
+   "cuts": [
+    {
+     "concept": "lifter",
+     "src": "/stories/tan-howe-liang/s2/cut-1.webp",
+     "x": 51.09,
+     "y": 94.75,
+     "w": 23.19
+    },
+    {
+     "concept": "barbell",
+     "src": "/stories/tan-howe-liang/s2/cut-2.webp",
+     "x": 51.5,
+     "y": 82.81,
+     "w": 60
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  },
+  {
+   "id": "s3",
+   "year": "1956",
+   "title": "Setback in Melbourne",
+   "caption": "He placed fourth at the 1954 Asian Games in Manila, then finished ninth at the 1956 Melbourne Olympics after losing consciousness.",
+   "treatment": "archive",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s3/plate.webp",
+   "background": "/stories/tan-howe-liang/s3/background.webp",
+   "poster": "/stories/tan-howe-liang/s3/scene.jpg?v=c07ed987",
+   "video": "/stories/tan-howe-liang/s3/scene.mp4?v=c07ed987",
+   "cuts": [
+    {
+     "concept": "lifter",
+     "src": "/stories/tan-howe-liang/s3/cut-1.webp",
+     "x": 50.22,
+     "y": 95.56,
+     "w": 16.19
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.0025
+   }
+  },
+  {
+   "id": "s4",
+   "year": "1958",
+   "title": "Gold in Cardiff and Tokyo",
+   "caption": "In 1958 he won lightweight gold at Cardiff with a 358 kg total and 157 kg clean-and-jerk, then lightweight gold at Tokyo with a 375 kg total.",
+   "treatment": "theatre",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s4/plate.webp",
+   "background": "/stories/tan-howe-liang/s4/background.webp",
+   "poster": "/stories/tan-howe-liang/s4/scene.jpg?v=81298424",
+   "video": "/stories/tan-howe-liang/s4/scene.mp4?v=81298424",
+   "cuts": [
+    {
+     "concept": "lifter",
+     "src": "/stories/tan-howe-liang/s4/cut-1.webp",
+     "x": 49.97,
+     "y": 91.63,
+     "w": 26.44
+    },
+    {
+     "concept": "barbell",
+     "src": "/stories/tan-howe-liang/s4/cut-2.webp",
+     "x": 49.94,
+     "y": 41,
+     "w": 55.13
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  },
+  {
+   "id": "s5",
+   "year": "1960",
+   "title": "Silver in Rome",
+   "caption": "After winning lightweight gold at the 1959 Bangkok SEAP Games with 369 kg, he took second among 35 in Rome in 1960 with 380 kg. His clean-and-jerk reached 155 kg.",
+   "treatment": "theatre",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s5/plate.webp",
+   "background": "/stories/tan-howe-liang/s5/background.webp",
+   "poster": "/stories/tan-howe-liang/s5/scene.jpg?v=f8e1c825",
+   "video": "/stories/tan-howe-liang/s5/scene.mp4?v=f8e1c825",
+   "cuts": [
+    {
+     "concept": "lifter",
+     "src": "/stories/tan-howe-liang/s5/cut-1.webp",
+     "x": 49.97,
+     "y": 79.69,
+     "w": 23.31
+    },
+    {
+     "concept": "barbell",
+     "src": "/stories/tan-howe-liang/s5/cut-2.webp",
+     "x": 50.13,
+     "y": 41,
+     "w": 50.38
+    }
+   ],
+   "spend": {
+    "image": 0.03,
+    "sam": 0.005
+   }
+  },
+  {
+   "id": "s6",
+   "year": "1962",
+   "title": "Middleweight Champion",
+   "caption": "Moving to middleweight, he won silver at Rangoon in 1961, then gold at Perth in 1962 with 390 kg, and received the Pingat Jasa Gemilang.",
+   "treatment": "archive",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s6/plate.webp",
+   "background": "/stories/tan-howe-liang/s6/background.webp",
+   "poster": "/stories/tan-howe-liang/s6/scene.jpg?v=4d8e8f49",
+   "video": "/stories/tan-howe-liang/s6/scene.mp4?v=4d8e8f49",
+   "cuts": [
+    {
+     "concept": "lifter",
+     "src": "/stories/tan-howe-liang/s6/cut-1.webp",
+     "x": 47.03,
+     "y": 82.56,
+     "w": 15.44
+    },
+    {
+     "concept": "podium",
+     "src": "/stories/tan-howe-liang/s6/cut-2.webp",
+     "x": 47.09,
+     "y": 91.31,
+     "w": 30.56
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  },
+  {
+   "id": "s7",
+   "year": "2024",
+   "title": "The Long Solo Record",
+   "caption": "Coach in 1968 and National Stadium gym supervisor in 1982, he earned a 1984 federation gold award, remained Singapore's lone Olympic medallist until 2008, and died in 2024 at 91.",
+   "treatment": "line",
+   "status": "done",
+   "plate": "/stories/tan-howe-liang/s7/plate.webp",
+   "background": "/stories/tan-howe-liang/s7/background.webp",
+   "line": "/stories/tan-howe-liang/s7/line.json",
+   "cuts": [
+    {
+     "concept": "bench",
+     "src": "/stories/tan-howe-liang/s7/cut-1.webp",
+     "x": 50.25,
+     "y": 90,
+     "w": 54.37
+    },
+    {
+     "concept": "dumbbell",
+     "src": "/stories/tan-howe-liang/s7/cut-2.webp",
+     "x": 59.47,
+     "y": 72.5,
+     "w": 13.81
+    }
+   ],
+   "spend": {
+    "image": 0.02,
+    "sam": 0.005
+   }
+  }
+ ],
+ "usd": 0.361082,
+ "ceiling": 1.5,
+ "spend": {
+  "search": 0.14158,
+  "spark": 0.027002,
+  "image": 0.16,
+  "sam": 0.0325
+ },
+ "models": {
+  "spark": "muse-spark-1.3",
+  "image": "muse-image-1.0",
+  "sam": "sam-3.1"
+ },
+ "log": [
+  {
+   "at": "2026-10-30T12:20:51.277Z",
+   "step": "research",
+   "kind": "info",
+   "message": "searching the web for Tan Howe Liang",
+   "model": "muse-spark-1.3"
+  },
+  {
+   "at": "2026-10-30T12:21:35.114Z",
+   "step": "research",
+   "kind": "info",
+   "message": "17 cited facts",
+   "model": "muse-spark-1.3"
+  },
+  {
+   "at": "2026-10-30T12:21:35.116Z",
+   "step": "storyboard",
+   "kind": "info",
+   "message": "writing 7 scenes from 17 facts",
+   "model": "muse-spark-1.3"
+  },
+  {
+   "at": "2026-10-30T12:21:55.260Z",
+   "step": "storyboard",
+   "kind": "info",
+   "message": "7 scenes, 1933\u20132024",
+   "model": "muse-spark-1.3"
+  },
+  {
+   "at": "2026-10-30T12:21:55.261Z",
+   "step": "plates",
+   "scene": "s1",
+   "kind": "info",
+   "message": "painting 1937, colonial port style",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:21:55.263Z",
+   "step": "frontispiece",
+   "kind": "info",
+   "model": "muse-image-1.0",
+   "message": "painting an emblem: barbell"
+  },
+  {
+   "at": "2026-10-30T12:21:56.200Z",
+   "step": "frontispiece",
+   "kind": "error",
+   "message": "no frontispiece: /responses 400: {\"error\":{\"code\":null,\"message\":\"`tools[0]`: unknown value `768x1024`\",\"param\":\"tools[0]\",\"type\":\"invalid_request_error\"}}"
+  },
+  {
+   "at": "2026-10-30T12:22:44.860Z",
+   "step": "plates",
+   "scene": "s1",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s1/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:22:44.863Z",
+   "step": "plates",
+   "scene": "s2",
+   "kind": "info",
+   "message": "painting 1953, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:22:44.888Z",
+   "step": "plates",
+   "scene": "s3",
+   "kind": "info",
+   "message": "painting 1956, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:22:44.901Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "info",
+   "message": "looking for \u201cboy\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:22:55.710Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "asset",
+   "message": "cut out \u201cboy\u201d (89% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s1/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:22:55.712Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "info",
+   "message": "painting out the boy",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:23:19.184Z",
+   "step": "plates",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s2/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:19.185Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "info",
+   "message": "looking for \u201clifter\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:23:21.214Z",
+   "step": "cutouts",
+   "scene": "s1",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s1/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:21.218Z",
+   "step": "plates",
+   "scene": "s4",
+   "kind": "info",
+   "message": "painting 1958, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:23:25.705Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "cut out \u201clifter\u201d (79% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s2/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:25.705Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "info",
+   "message": "looking for \u201cbarbell\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:23:28.935Z",
+   "step": "plates",
+   "scene": "s3",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s3/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:28.937Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "info",
+   "message": "looking for \u201clifter\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:23:29.927Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "cut out \u201cbarbell\u201d (92% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s2/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:29.929Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "info",
+   "message": "painting out the lifter and barbell",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:23:35.503Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "asset",
+   "message": "cut out \u201clifter\u201d (57% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s3/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:35.505Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "info",
+   "message": "painting out the lifter",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:23:47.892Z",
+   "step": "cutouts",
+   "scene": "s2",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s2/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:47.895Z",
+   "step": "plates",
+   "scene": "s5",
+   "kind": "info",
+   "message": "painting 1960, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:23:52.047Z",
+   "step": "cutouts",
+   "scene": "s3",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s3/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:52.050Z",
+   "step": "plates",
+   "scene": "s6",
+   "kind": "info",
+   "message": "painting 1962, road to merdeka style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:23:59.689Z",
+   "step": "plates",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s4/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:23:59.692Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "info",
+   "message": "looking for \u201clifter\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:24:07.931Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "cut out \u201clifter\u201d (85% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s4/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:07.931Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "info",
+   "message": "looking for \u201cbarbell\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:24:26.861Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "cut out \u201cbarbell\u201d (93% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s4/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:26.862Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "info",
+   "message": "painting out the lifter and barbell",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:24:27.354Z",
+   "step": "plates",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s6/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:27.356Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "info",
+   "message": "looking for \u201clifter\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:24:37.904Z",
+   "step": "plates",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s5/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:37.905Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "info",
+   "message": "looking for \u201clifter\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:24:38.017Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "cut out \u201clifter\u201d (72% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s6/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:38.017Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "info",
+   "message": "looking for \u201cpodium\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:24:47.827Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "cut out \u201clifter\u201d (69% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s5/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:47.827Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "info",
+   "message": "looking for \u201cbarbell\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:24:55.917Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "cut out \u201cpodium\u201d (53% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s6/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T12:24:55.918Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "info",
+   "message": "painting out the lifter and podium",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:25:00.812Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "cut out \u201cbarbell\u201d (94% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s5/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T12:25:00.814Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "info",
+   "message": "painting out the lifter and barbell",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:26:56.141Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "warn",
+   "message": "no clean background (/responses: response lost mid-read (TypeError: terminated))",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:26:56.146Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "info",
+   "message": "painting 2024, now style, plate 1 as reference",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:27:11.296Z",
+   "step": "cutouts",
+   "scene": "s6",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s6/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:28:20.138Z",
+   "step": "cutouts",
+   "scene": "s4",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s4/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:28:40.164Z",
+   "step": "plates",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "plate",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s7/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:28:40.169Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "info",
+   "message": "looking for \u201cbench\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:28:49.049Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "cut out \u201cbench\u201d (88% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s7/cut-1.webp"
+  },
+  {
+   "at": "2026-10-30T12:28:49.049Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "info",
+   "message": "looking for \u201cdumbbell\u201d",
+   "model": "sam-3.1"
+  },
+  {
+   "at": "2026-10-30T12:28:59.565Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "cut out \u201cdumbbell\u201d (96% sure)",
+   "model": "sam-3.1",
+   "url": "/stories/tan-howe-liang/s7/cut-2.webp"
+  },
+  {
+   "at": "2026-10-30T12:28:59.567Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "info",
+   "message": "painting out the bench and dumbbell",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:29:38.091Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s7/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:29:46.540Z",
+   "step": "cutouts",
+   "scene": "s7",
+   "kind": "asset",
+   "message": "traced in 561 strokes",
+   "url": "/stories/tan-howe-liang/s7/line.json"
+  },
+  {
+   "at": "2026-10-30T12:29:46.540Z",
+   "step": "films",
+   "kind": "info",
+   "message": "rendering scroll films on this machine (sharp + ffmpeg, no API calls)"
+  },
+  {
+   "at": "2026-10-30T12:29:54.274Z",
+   "step": "films",
+   "scene": "s1",
+   "kind": "info",
+   "message": "subject on clean background, 2.59 MB in 7.4s"
+  },
+  {
+   "at": "2026-10-30T12:30:01.016Z",
+   "step": "films",
+   "scene": "s2",
+   "kind": "info",
+   "message": "subject on clean background, 1.64 MB in 6.7s"
+  },
+  {
+   "at": "2026-10-30T12:30:08.111Z",
+   "step": "films",
+   "scene": "s3",
+   "kind": "info",
+   "message": "subject on clean background, 2.08 MB in 7.1s"
+  },
+  {
+   "at": "2026-10-30T12:30:14.663Z",
+   "step": "films",
+   "scene": "s4",
+   "kind": "info",
+   "message": "subject on clean background, 1.26 MB in 6.6s"
+  },
+  {
+   "at": "2026-10-30T12:30:20.047Z",
+   "step": "films",
+   "scene": "s5",
+   "kind": "info",
+   "message": "plate push-in, 1.77 MB in 5.4s"
+  },
+  {
+   "at": "2026-10-30T12:30:26.522Z",
+   "step": "films",
+   "scene": "s6",
+   "kind": "info",
+   "message": "subject on clean background, 1.40 MB in 6.5s"
+  },
+  {
+   "at": "2026-10-30T12:30:26.522Z",
+   "step": "films",
+   "scene": "s7",
+   "kind": "info",
+   "message": "line treatment draws itself, skipped"
+  },
+  {
+   "at": "2026-10-30T12:31:07.700Z",
+   "step": "research",
+   "kind": "info",
+   "message": "picked up where the last run stopped; finished work is kept"
+  },
+  {
+   "at": "2026-10-30T12:31:07.703Z",
+   "step": "frontispiece",
+   "kind": "info",
+   "model": "muse-image-1.0",
+   "message": "painting an emblem: barbell"
+  },
+  {
+   "at": "2026-10-30T12:31:07.707Z",
+   "step": "plates",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "plate already drawn",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s5/plate.webp"
+  },
+  {
+   "at": "2026-10-30T12:31:07.709Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "info",
+   "message": "painting out the lifter and barbell",
+   "model": "muse-image-1.0"
+  },
+  {
+   "at": "2026-10-30T12:31:27.506Z",
+   "step": "frontispiece",
+   "kind": "asset",
+   "model": "muse-image-1.0",
+   "message": "emblem",
+   "url": "/stories/tan-howe-liang/frontispiece/source.webp"
+  },
+  {
+   "at": "2026-10-30T12:31:27.506Z",
+   "step": "frontispiece",
+   "kind": "info",
+   "model": "sam-3.1",
+   "message": "masking the barbell, then tracing it in pen lines"
+  },
+  {
+   "at": "2026-10-30T12:31:34.578Z",
+   "step": "frontispiece",
+   "kind": "asset",
+   "message": "traced in 255 strokes",
+   "url": "/portraits/tan-howe-liang.webp"
+  },
+  {
+   "at": "2026-10-30T12:32:31.198Z",
+   "step": "cutouts",
+   "scene": "s5",
+   "kind": "asset",
+   "message": "clean background",
+   "model": "muse-image-1.0",
+   "url": "/stories/tan-howe-liang/s5/background.webp"
+  },
+  {
+   "at": "2026-10-30T12:32:31.199Z",
+   "step": "films",
+   "kind": "info",
+   "message": "rendering scroll films on this machine (sharp + ffmpeg, no API calls)"
+  },
+  {
+   "at": "2026-10-30T12:32:38.499Z",
+   "step": "films",
+   "scene": "s1",
+   "kind": "info",
+   "message": "subject on clean background, 2.59 MB in 7.1s"
+  },
+  {
+   "at": "2026-10-30T12:32:45.252Z",
+   "step": "films",
+   "scene": "s2",
+   "kind": "info",
+   "message": "subject on clean background, 1.64 MB in 6.8s"
+  },
+  {
+   "at": "2026-10-30T12:32:52.308Z",
+   "step": "films",
+   "scene": "s3",
+   "kind": "info",
+   "message": "subject on clean background, 2.08 MB in 7.1s"
+  },
+  {
+   "at": "2026-10-30T12:32:59.269Z",
+   "step": "films",
+   "scene": "s4",
+   "kind": "info",
+   "message": "subject on clean background, 1.26 MB in 7.0s"
+  },
+  {
+   "at": "2026-10-30T12:33:06.019Z",
+   "step": "films",
+   "scene": "s5",
+   "kind": "info",
+   "message": "subject on clean background, 1.61 MB in 6.8s"
+  },
+  {
+   "at": "2026-10-30T12:33:12.837Z",
+   "step": "films",
+   "scene": "s6",
+   "kind": "info",
+   "message": "subject on clean background, 1.40 MB in 6.8s"
+  },
+  {
+   "at": "2026-10-30T12:33:12.837Z",
+   "step": "films",
+   "scene": "s7",
+   "kind": "info",
+   "message": "line treatment draws itself, skipped"
+  }
+ ],
+ "tagline": "From a one-barbell gym to Olympic silver, he lifted Singapore onto the world stage.",
+ "born": "1933",
+ "died": "2024",
+ "frontispiece": {
+  "kind": "emblem",
+  "image": "/stories/tan-howe-liang/frontispiece/source.webp",
+  "lines": "/lines/tan-howe-liang.json",
+  "strokes": 493
+ },
+ "finishedAt": "2026-10-30T12:33:12.853Z"
+}

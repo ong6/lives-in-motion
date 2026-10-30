@@ -37,9 +37,9 @@ for (const stage of values.stages!.split(",")) {
   else if (stage === "verify") {
     const disputed = await verify(slug);
     if (disputed.length) console.log(`  ${disputed.length} disputed: see stories/${slug}/verify.json`);
-  } else if (stage === "illustrate") await illustrate(slug, only);
-  else if (stage === "segment") await segment(slug, only);
-  else if (stage === "line") await line(slug, only);
+  } else if (stage === "illustrate") await illustrate(slug, { only });
+  else if (stage === "segment") await segment(slug, { only });
+  else if (stage === "line") await line(slug, { only });
   else throw new Error(`unknown stage ${stage}`);
   console.log(`  done in ${((Date.now() - t) / 1000).toFixed(1)}s`);
 }

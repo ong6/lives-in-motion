@@ -1,14 +1,31 @@
 /*
- * Book primitives shared by the home page and the story pages: the desk the book lies on,
- * the boards, the page block, paper pages with a deckled fore-edge and a gutter shadow,
- * running heads, folios and turning leaves. Page size comes from --ph (page height).
+ * Book primitives for the story pages: the desk the book lies on, the boards, the page block,
+ * paper pages with a deckled fore-edge and a gutter shadow, running heads, folios, turning
+ * leaves and the cloth cover (also used on the home page's shelf). Page size comes from --ph.
  */
 
+/*
+ * The desk: a wooden tabletop under a reading lamp. Its colour is the era's ink warmed toward
+ * walnut, so it changes decade with the book; the lamp, the grain and the vignette sit over it
+ * in one fixed layer and stay put while the colour fades underneath.
+ */
 .desk {
-  --ph: min(calc(100svh - 108px), calc((100vw - 340px) / 1.44));
-  --desk-text: rgb(250 244 230 / 0.62);
-  background: var(--desk);
+  --ph: min(calc(100svh - 72px), calc((100vw - 270px) / 1.44));
+  --desk: color-mix(in oklab, var(--ink) 42%, #6a4e36);
+  --desk-text: rgb(252 245 230 / 0.74);
+  position: relative;
+  background-color: var(--desk);
   transition: background-color 0.9s ease;
+}
+.desk::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(70% 62% at 50% 46%, rgb(255 236 200 / 0.3), rgb(255 230 190 / 0.1) 55%, transparent 80%),
+    radial-gradient(140% 120% at 50% 45%, transparent 50%, rgb(10 6 2 / 0.5) 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='600'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.0035 .09' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 .1  0 0 0 0 .06  0 0 0 0 .02  0 0 0 1.1 -.42'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>") 0 0 / 900px 600px;
 }
 
 .book {
@@ -24,13 +41,15 @@
   position: absolute;
   top: -9px;
   bottom: -9px;
-  background: var(--cloth);
+  right: -20px;
+  left: calc(50% - 1px);
+  border-radius: 0 4px 4px 0;
+  background-color: var(--cloth);
   background-image: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.025) 0 1px, transparent 1px 3px),
     repeating-linear-gradient(90deg, rgb(0 0 0 / 0.05) 0 1px, transparent 1px 3px);
   box-shadow: 0 34px 60px -24px rgb(0 0 0 / 0.75), 0 2px 3px rgb(0 0 0 / 0.35);
+  transition: background-color 0.9s ease;
 }
-.boardL { left: -20px; right: calc(50% - 1px); border-radius: 4px 0 0 4px; }
-.boardR { right: -20px; left: calc(50% - 1px); border-radius: 0 4px 4px 0; }
 
 /* Fore-edges of the page block: thicker on the side you have read. */
 .block {
@@ -41,6 +60,51 @@
 }
 .blockL { right: 100%; width: var(--bl, 6px); border-radius: 2px 0 0 2px; }
 .blockR { left: 100%; width: var(--br, 6px); border-radius: 0 2px 2px 0; }
+
+/* ---------- The cover: cloth over board, title in gilt ---------- */
+.cover {
+  --gilt: #d8b46e;
+  position: absolute;
+  inset: 0;
+  container-type: size;
+  color: var(--gilt);
+  background-color: var(--cloth);
+  background-image: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.03) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.06) 0 1px, transparent 1px 3px),
+    linear-gradient(100deg, rgb(255 255 255 / 0.07), transparent 40%, rgb(0 0 0 / 0.14));
+  border-radius: 0 4px 4px 0;
+  /* The hinge: a pressed groove a little in from the spine. */
+  box-shadow: inset 2.4cqw 0 0 -2cqw rgb(0 0 0 / 0.35), inset 3cqw 0 2.4cqw -2.4cqw rgb(0 0 0 / 0.5);
+  transition: background-color 0.9s ease;
+}
+.coverInner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  padding: 11cqw 9cqw 10cqw 11cqw;
+  text-align: center;
+}
+/* The blind-stamped frame. */
+.coverInner::before {
+  content: "";
+  position: absolute;
+  inset: 4.4cqw 4cqw 4.4cqw 5.8cqw;
+  border: 1px solid color-mix(in oklab, var(--gilt) 45%, transparent);
+  outline: 1px solid color-mix(in oklab, var(--gilt) 25%, transparent);
+  outline-offset: 0.9cqw;
+  pointer-events: none;
+}
+.coverInner p, .coverInner h2 { margin: 0; text-shadow: 0 1px 0 rgb(0 0 0 / 0.35); }
+.coverSeries {
+  font: 400 max(11px, 2.6cqw)/1 var(--font-book);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.16em;
+}
+.coverTitle { align-self: center; display: grid; gap: 3cqw; }
+.coverTitle h2 { font: 400 17cqw/0.92 var(--font-serif); letter-spacing: -0.01em; text-wrap: balance; }
+.coverTitle p { font: italic 400 max(12px, 3.4cqw)/1 var(--font-book); opacity: 0.85; }
 
 /* ---------- Pages ---------- */
 .page {
@@ -55,7 +119,6 @@
   mask-repeat: no-repeat;
   transition: background-color 0.6s ease;
 }
-.atLeft { left: 0; }
 .atRight { left: var(--pw); }
 
 /* Deckled fore-edge: a torn strip on the outer side, the rest of the page solid. */

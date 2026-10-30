@@ -23,7 +23,7 @@ h1, h2, h3, p { margin: 0; }
 a { color: inherit; }
 img { max-width: 100%; }
 /* Pages that lay the book on a desk carry the desk colour to the overscroll area too. */
-body:has([data-desk]) { background: #1c1915; }
+body:has([data-desk]) { background: #3b2e22; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* Paper grain across the whole site: one texture, so every era sits on the same stock. */
@@ -36,6 +36,25 @@ body::after {
   opacity: 0.32;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/*
+ * View transitions. A cover followed from the shelf lifts into the closed book on the story page
+ * (components/book/Cover.tsx); the rest of the page cross-fades under it.
+ */
+::view-transition-group(.lift) {
+  animation-duration: 640ms;
+  animation-timing-function: cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+::view-transition-image-pair(.lift) { isolation: auto; }
+::view-transition-old(.lift) { animation: none; opacity: 0; }
+::view-transition-new(.lift) { animation: none; }
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 420ms; }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
 }
 
 /* Exact overlays (components/Overlay.tsx). */
