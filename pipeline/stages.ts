@@ -138,11 +138,14 @@ export async function segment(slug: string, only?: string[]) {
     const plate = await readFile(platePng);
     const cuts: Layer[] = [];
     for (const [k, concept] of scene.cut.entries()) {
-      const masks = await parseSam(await samRaw(plate, concept));
-      if (!masks.length) {
-        console.log(`  ${scene.id}: SAM found no "${concept}"`);
-        continue;
+      // Storyboard nouns can be too specific for SAM ("tall swimmer"); fall back to the head noun, then "person".
+      let masks: Awaited<ReturnType<typeof parseSam>> = [];
+      for (const c of [...new Set([concept, concept.split(" ").at(-1)!, "person"])]) {
+        masks = await parseSam(await samRaw(plate, c));
+        if (masks.length) break;
+        console.log(`  ${scene.id}: SAM found no "${c}"`);
       }
+      if (!masks.length) continue;
       const best = masks.sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0))[0];
       const cut = await cutout(plate, best);
       const out = asset(slug, scene.id, `cut-${k + 1}.webp`);
@@ -150,7 +153,8 @@ export async function segment(slug: string, only?: string[]) {
       cuts.push({ id: `cut-${k + 1}`, concept, depth: 0.6 + k * 0.2, src: out.url, x: cut.x, y: cut.y, w: cut.w });
     }
     scene.layers = [...cuts, ...scene.layers.filter((l) => l.overlay)];
-    if (cuts.length) {
+    // The clean plate is a paid edit and doesn't depend on the cut-outs: keep one that exists.
+    if (cuts.length && !existsSync(asset(slug, scene.id, "background.webp").file)) {
       try {
         const clean = await museEdit(plate, cleanPlatePrompt(scene));
         const bg = asset(slug, scene.id, "background.webp");

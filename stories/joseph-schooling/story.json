@@ -12,15 +12,29 @@
       "title": "A swimmer's start",
       "caption": "Joseph Schooling is born on 16 June 1995 in Singapore and grows up in the pool.",
       "visual": "A neighbourhood public swimming pool on a sunny morning, public-housing blocks and palms behind. A small boy in goggles, seen from behind, sits on the pool edge holding a kickboard.",
+      "cut": [
+        "boy"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Joseph Schooling",
           "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
         }
       ],
-      "layers": [],
-      "cut": [
-        "boy"
+      "plate": "/stories/joseph-schooling/s1/plate.webp",
+      "background": "/stories/joseph-schooling/s1/background.webp",
+      "video": "/stories/joseph-schooling/s1/scene.mp4?v=105fddde",
+      "poster": "/stories/joseph-schooling/s1/scene.jpg?v=105fddde",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boy",
+          "depth": 0.6,
+          "x": 50.84,
+          "y": 70.69,
+          "w": 22.06,
+          "src": "/stories/joseph-schooling/s1/cut-1.webp"
+        }
       ]
     },
     {
@@ -30,6 +44,10 @@
       "title": "Meeting his idol",
       "caption": "At 13, he meets Michael Phelps on a visit to Singapore before the Beijing Olympics. It pushes him to train in the US.",
       "visual": "Poolside at a training session: a tall swimmer in a parka and a 13-year-old boy, both seen from behind, stand side by side looking at the pool. Photographers' flashes pop at the side.",
+      "cut": [
+        "boy",
+        "tall swimmer"
+      ],
       "sources": [
         {
           "label": "Intl Swimming Hall of Fame",
@@ -40,10 +58,28 @@
           "url": "https://www.theweek.in/news/sports/joseph-schooling-man-who-schooled-great-phelps.html"
         }
       ],
-      "layers": [],
-      "cut": [
-        "boy",
-        "tall swimmer"
+      "plate": "/stories/joseph-schooling/s2/plate.webp",
+      "background": "/stories/joseph-schooling/s2/background.webp",
+      "line": "/stories/joseph-schooling/s2/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boy",
+          "depth": 0.6,
+          "x": 40.5,
+          "y": 97.25,
+          "w": 15.5,
+          "src": "/stories/joseph-schooling/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "tall swimmer",
+          "depth": 0.8,
+          "x": 58.59,
+          "y": 97.25,
+          "w": 21.31,
+          "src": "/stories/joseph-schooling/s2/cut-2.webp"
+        }
       ]
     },
     {
@@ -53,6 +89,9 @@
       "title": "Off to Bolles",
       "caption": "In 2009 he enrols at the Bolles School in Jacksonville, Florida, a year after meeting Phelps.",
       "visual": "A teenager seen from behind stands with a large suitcase at an airport window at sunrise, a jet on the tarmac outside and palm trees reflected in the glass.",
+      "cut": [
+        "suitcase"
+      ],
       "sources": [
         {
           "label": "CNN",
@@ -63,9 +102,20 @@
           "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
         }
       ],
-      "layers": [],
-      "cut": [
-        "suitcase"
+      "plate": "/stories/joseph-schooling/s3/plate.webp",
+      "background": "/stories/joseph-schooling/s3/background.webp",
+      "video": "/stories/joseph-schooling/s3/scene.mp4?v=041530f8",
+      "poster": "/stories/joseph-schooling/s3/scene.jpg?v=041530f8",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "suitcase",
+          "depth": 0.6,
+          "x": 30.28,
+          "y": 94.56,
+          "w": 22.31,
+          "src": "/stories/joseph-schooling/s3/cut-1.webp"
+        }
       ]
     },
     {
@@ -75,6 +125,9 @@
       "title": "A Longhorn in Texas",
       "caption": "He enrols at the University of Texas at Austin in 2014, training and racing for the Longhorns.",
       "visual": "A college indoor natatorium: a deep blue competition pool, a swimmer mid-butterfly stroke as a dark silhouette, timing boards on the wall, a crowd in orange in the bleachers.",
+      "cut": [
+        "swimmer"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Joseph Schooling",
@@ -85,9 +138,19 @@
           "url": "https://www.usatoday.com/story/sports/olympics/rio-2016/2016/08/02/rio-olympics-joseph-schooling-university-of-texas/87970932/"
         }
       ],
-      "layers": [],
-      "cut": [
-        "swimmer"
+      "plate": "/stories/joseph-schooling/s4/plate.webp",
+      "background": "/stories/joseph-schooling/s4/background.webp",
+      "line": "/stories/joseph-schooling/s4/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "swimmer",
+          "depth": 0.6,
+          "x": 49.69,
+          "y": 75.94,
+          "w": 59.5,
+          "src": "/stories/joseph-schooling/s4/cut-1.webp"
+        }
       ]
     },
     {
@@ -97,6 +160,9 @@
       "title": "Gold in Rio",
       "caption": "On 12 August 2016 he wins the 100 m butterfly in 50.39 seconds, an Olympic record, ahead of Phelps. It is Singapore's first Olympic gold.",
       "visual": "An Olympic final: a swimmer surging through the water in a butterfly stroke, arms raised, splashes frozen in mid-air, lane ropes and stadium lights. A large blank dark scoreboard hangs above the pool.",
+      "cut": [
+        "swimmer"
+      ],
       "sources": [
         {
           "label": "Rio 2016 (archived)",
@@ -111,20 +177,30 @@
           "url": "https://amp.cnn.com/cnn/2016/08/12/sport/michael-phelps-swimming-rio"
         }
       ],
+      "plate": "/stories/joseph-schooling/s5/plate.webp",
+      "background": "/stories/joseph-schooling/s5/background.webp",
+      "video": "/stories/joseph-schooling/s5/scene.mp4?v=30417328",
+      "poster": "/stories/joseph-schooling/s5/scene.jpg?v=30417328",
       "layers": [
+        {
+          "id": "cut-1",
+          "concept": "swimmer",
+          "depth": 0.6,
+          "x": 50.06,
+          "y": 88.06,
+          "w": 34.63,
+          "src": "/stories/joseph-schooling/s5/cut-1.webp"
+        },
         {
           "id": "score",
           "concept": "scoreboard",
-          "overlay": "scoreboard",
-          "text": "50.39",
           "depth": 0.3,
           "x": 50,
           "y": 30,
-          "w": 48
+          "w": 48,
+          "overlay": "scoreboard",
+          "text": "50.39"
         }
-      ],
-      "cut": [
-        "swimmer"
       ]
     },
     {
@@ -134,6 +210,9 @@
       "title": "A hero's return",
       "caption": "Singapore erupts in celebration. He receives S$1 million under the national reward scheme, and his National Service is deferred until after Tokyo 2020.",
       "visual": "An open-top double-decker bus on a sunny city street lined with shophouses, paper streamers and confetti drifting in the air. On the top deck a lone swimmer in a red team jacket, seen from behind, holds up a gold medal.",
+      "cut": [
+        "bus"
+      ],
       "sources": [
         {
           "label": "AsiaOne (archived)",
@@ -148,19 +227,29 @@
           "url": "https://www.thedailystar.net/sports/rio2016olympics/singapore-erupts-joy-1269370"
         }
       ],
+      "plate": "/stories/joseph-schooling/s6/plate.webp",
+      "background": "/stories/joseph-schooling/s6/background.webp",
+      "video": "/stories/joseph-schooling/s6/scene.mp4?v=f2b6059d",
+      "poster": "/stories/joseph-schooling/s6/scene.jpg?v=f2b6059d",
       "layers": [
+        {
+          "id": "cut-1",
+          "concept": "bus",
+          "depth": 0.6,
+          "x": 50.69,
+          "y": 84.19,
+          "w": 46.25,
+          "src": "/stories/joseph-schooling/s6/cut-1.webp"
+        },
         {
           "id": "flag",
           "concept": "flag",
-          "overlay": "sg-flag",
           "depth": 0.85,
           "x": 22,
           "y": 36,
-          "w": 24
+          "w": 24,
+          "overlay": "sg-flag"
         }
-      ],
-      "cut": [
-        "bus"
       ]
     },
     {
@@ -170,6 +259,9 @@
       "title": "The final lap",
       "caption": "After a 2017 world bronze, an early exit at Tokyo 2020 and a 2022 admission of cannabis use abroad, he retires from competitive swimming on 2 April 2024.",
       "visual": "Dusk at an empty Olympic pool, still water reflecting the lights. Goggles and a swim cap rest on a starting block, with a gold medal hanging from it.",
+      "cut": [
+        "starting block"
+      ],
       "sources": [
         {
           "label": "NBC Sports",
@@ -184,9 +276,19 @@
           "url": "https://www.channelnewsasia.com/singapore/joseph-schooling-drugs-test-failed-mindef-swimming-2901816"
         }
       ],
-      "layers": [],
-      "cut": [
-        "starting block"
+      "plate": "/stories/joseph-schooling/s7/plate.webp",
+      "background": "/stories/joseph-schooling/s7/background.webp",
+      "line": "/stories/joseph-schooling/s7/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "starting block",
+          "depth": 0.6,
+          "x": 46.94,
+          "y": 95.19,
+          "w": 5.63,
+          "src": "/stories/joseph-schooling/s7/cut-1.webp"
+        }
       ]
     }
   ]

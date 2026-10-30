@@ -1,146 +1,175 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { allStories, lifespan } from "@/lib/stories";
-import { eraFor, ERAS } from "@/lib/eras";
 import { portraitCredit, portraitSrc } from "@/lib/portraits";
 import { LineDrawing } from "@/components/LineDrawing";
+import { Endpaper, Page, Spread } from "@/components/book/Page";
+import { Contents, type ContentsEntry } from "@/components/book/Contents";
+import { PART, firstPages } from "@/components/book/pagination";
 import s from "./home.module.css";
 
 const NICKNAME: Record<string, string> = { "jack-sim": "Mr. Toilet" };
 
-/** The eras a life passes through: a thin proportional rule, then the eras named in order. */
-function EraBand({ from, to }: { from: number; to: number }) {
-  const span = to - from || 1;
-  const bands = ERAS.filter((e) => e.to >= from && e.from <= to).map((e) => ({
-    e,
-    w: ((Math.min(e.to, to) - Math.max(e.from, from) + 1) / span) * 100,
-  }));
-  return (
-    <div className={s.band}>
-      <div className={s.rule} aria-hidden>
-        {bands.map(({ e, w }) => (
-          <span key={e.id} style={{ flexGrow: w, background: e.accent }} />
-        ))}
-      </div>
-      <ul className={s.eras} aria-label="Eras this life spans">
-        {bands.map(({ e }) => (
-          <li key={e.id} style={{ ["--dot" as string]: e.accent }}>
-            {e.label}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
 export default function Home() {
   const stories = allStories();
   const first = stories[0];
+  const pages = firstPages(stories.map((st) => st.scenes.length));
+  const entries: ContentsEntry[] = stories.map((st, i) => ({
+    slug: st.slug,
+    part: PART[i] ?? String(i + 1),
+    name: st.name,
+    nickname: NICKNAME[st.slug],
+    lifespan: lifespan(st),
+    tagline: st.tagline,
+    // The title page, one after the frontispiece.
+    page: pages[i] + 1,
+    portrait: portraitSrc(st.slug),
+    credit: portraitCredit(st.slug),
+  }));
+  const allYears = [...new Set(stories.flatMap((st) => st.scenes.map((sc) => sc.year)))].sort();
+
   return (
-    <main className={s.home}>
-      <header className={s.bar}>
-        <span className={s.mark}>Lives in Motion</span>
-        <nav>
-          <a href="#lives">The lives</a>
-          <a href="#how">How it’s made</a>
-        </nav>
-      </header>
-
-      <section className={s.hero}>
-        <div className={s.heroText}>
-          <p className={s.kicker}>Singapore · 1923 to today</p>
-          <h1 className={s.h1}>
-            Three Singaporean lives, <em>drawn stroke by stroke.</em>
-          </h1>
-          <p className={s.lede}>
-            Scroll through a life decade by decade: what happened, when, and why it mattered. Every scene is sourced, and every
-            picture is made with Meta’s AI.
-          </p>
-          <div className={s.cta}>
-            <Link href={`/${first.slug}`} className={s.primary}>
-              Begin with {NICKNAME[first.slug] ?? first.name} <span aria-hidden>→</span>
-            </Link>
-            <span className={s.ctaMeta}>
-              {first.scenes.length} scenes · about 3 minutes
-            </span>
-          </div>
-        </div>
-        <figure className={s.heroArt}>
-          <LineDrawing src={portraitSrc(first.slug)} loop label={`${first.name}, drawing himself in pen strokes`} />
-          <figcaption>
-            <b>{first.name}</b>, drawn stroke by stroke the way a pen plotter would; SAM 3.1 cut him out of the photo, which develops under the lines as the drawing finishes. {portraitCredit(first.slug)}
-          </figcaption>
-        </figure>
-      </section>
-
-      <section id="lives" className={s.lives}>
-        <h2 className={s.h2}>The lives</h2>
-        <ol className={s.list}>
-          {stories.map((story, i) => {
-            const start = eraFor(story.scenes[0].year);
-            const lastYear = Number(story.scenes[story.scenes.length - 1].year);
-            return (
-              <li key={story.slug} style={{ ["--hover" as string]: start.paper, ["--accent" as string]: start.accent }}>
-                <Link href={`/${story.slug}`} className={s.row}>
-                  <span className={s.no}>{String(i + 1).padStart(2, "0")}</span>
-                  <div className={s.rowArt}>
-                    <LineDrawing src={portraitSrc(story.slug)} progress={1} label={`${story.name}, line portrait`} />
-                  </div>
-                  <div className={s.rowText}>
-                    <h3>
-                      {story.name}
-                      {NICKNAME[story.slug] && <em> “{NICKNAME[story.slug]}”</em>}
-                    </h3>
-                    <p className={s.rowDates}>{lifespan(story)}</p>
-                    <p className={s.rowTag}>{story.tagline}</p>
-                    <EraBand from={Number(story.scenes[0].year)} to={lastYear} />
-                  </div>
-                  <span className={s.go}>
-                    Watch his life <span aria-hidden>→</span>
-                    <small>{story.scenes.length} scenes</small>
-                  </span>
+    <main className={s.home} data-desk>
+      <section className={s.leaf}>
+        <Spread
+          read={0.04}
+          verso={
+            <Page side="verso" placed>
+              <figure className={s.frontis}>
+                <div className={s.frontisArt}>
+                  <LineDrawing src={portraitSrc(first.slug)} loop label={`${first.name}, drawing himself in pen strokes`} />
+                </div>
+                <figcaption>
+                  <i>{first.name}</i>, drawn stroke by stroke the way a pen plotter would. SAM 3.1 cut him out of the photograph,
+                  which develops under the lines as the drawing finishes. {portraitCredit(first.slug)}
+                </figcaption>
+              </figure>
+            </Page>
+          }
+          recto={
+            <Page side="recto" placed>
+              <div className={s.titlePage}>
+                <h1 className={s.bookTitle}>Lives in Motion</h1>
+                <p className={s.subtitle}>Three Singaporean lives, drawn stroke by stroke</p>
+                <span className={s.rule} aria-hidden />
+                <p className={s.lede}>
+                  Read a life decade by decade: what happened, when, and why it mattered. Every scene is sourced, and every picture
+                  is made with Meta’s AI.
+                </p>
+                <Link href={`/${first.slug}`} className={s.begin}>
+                  Begin with {NICKNAME[first.slug] ?? first.name}
                 </Link>
-              </li>
-            );
-          })}
-        </ol>
+                <p className={s.beginMeta}>
+                  Part One, page {pages[0] + 1}. {first.scenes.length} chapters, about three minutes.
+                </p>
+                <p className={s.imprint}>
+                  <span>Lives in Motion</span>
+                  Singapore, 2026
+                </p>
+              </div>
+            </Page>
+          }
+        />
       </section>
 
-      <section id="how" className={s.how}>
-        <h2 className={s.h2}>How a life is made</h2>
-        <p className={s.howLede}>
-          Built for the Meta Global AI Developer Hackathon (2026). Four steps, each done by a Meta model or by maths, and checked
-          by a person.
-        </p>
-        <ol className={s.steps}>
-          <li>
-            <b>Research</b>
-            <span>Muse Spark searches the web and writes a dated timeline. A line without a citation is dropped.</span>
-            <i>Muse Spark · web search</i>
-          </li>
-          <li>
-            <b>Illustrate</b>
-            <span>Muse Image paints each scene in its decade’s print style, from 1920s engraving to 1990s risograph.</span>
-            <i>Muse Image</i>
-          </li>
-          <li>
-            <b>Cut</b>
-            <span>SAM 3.1 finds the objects in each painting and cuts them out, so they can move on their own as you scroll.</span>
-            <i>SAM 3.1</i>
-          </li>
-          <li>
-            <b>Draw</b>
-            <span>Contours become one continuous line, rebuilt from 1,500 turning circles, so the picture draws itself.</span>
-            <i>Fourier series</i>
-          </li>
-        </ol>
+      <section id="contents" className={s.leaf}>
+        <Spread
+          read={0.12}
+          verso={null}
+          recto={
+            <Contents
+              entries={entries}
+              folios={["iv", "v"]}
+              back={[
+                { label: "How a life is made", href: "#making", page: "vii" },
+                { label: "Colophon", href: "#colophon", page: "viii" },
+              ]}
+            />
+          }
+        />
       </section>
 
-      <footer className={s.foot}>
-        <p>
-          Lives in Motion. Facts link to their sources on every story page. Portraits are traced from openly licensed photographs;
-          scene figures are silhouettes by design.
-        </p>
-      </footer>
+      <section id="making" className={s.leaf}>
+        <Spread
+          read={0.2}
+          verso={
+            <Page side="verso" placed head="Lives in Motion" folio="vi">
+              <blockquote className={s.epigraph}>
+                <p>
+                  A biography is considered complete if it merely accounts for six or seven selves, whereas a person may well have
+                  as many thousand.
+                </p>
+                <footer>
+                  Virginia Woolf, <cite>Orlando</cite> (1928)
+                </footer>
+              </blockquote>
+            </Page>
+          }
+          recto={
+            <Page side="recto" placed head="A note on the making" folio="vii">
+              <div className={s.making}>
+                <h2 className={s.pageTitle}>How a life is made</h2>
+                <p className={s.makingLede}>
+                  Built for the Meta Global AI Developer Hackathon (2026). Four steps, each done by a Meta model or by maths, and
+                  checked by a person.
+                </p>
+                <ol className={s.steps}>
+                  <li>
+                    <b>Research.</b> Muse Spark searches the web and writes a dated timeline. A line without a citation is dropped.
+                    <i>Muse Spark with web search</i>
+                  </li>
+                  <li>
+                    <b>Illustrate.</b> Muse Image paints each scene in its decade’s print style, from 1920s engraving to 1990s
+                    risograph.
+                    <i>Muse Image</i>
+                  </li>
+                  <li>
+                    <b>Cut.</b> SAM 3.1 finds the objects in each painting and cuts them out, so they can move on their own as you
+                    scroll.
+                    <i>SAM 3.1</i>
+                  </li>
+                  <li>
+                    <b>Draw.</b> Each portrait is traced into pen strokes and drawn back one stroke at a time, then the photograph
+                    develops underneath.
+                    <i>linedraw and vivus</i>
+                  </li>
+                </ol>
+              </div>
+            </Page>
+          }
+        />
+      </section>
+
+      <section id="colophon" className={s.leaf}>
+        <Spread
+          read={1}
+          verso={
+            <Page side="verso" placed style={{ ["--accent2" as string]: "#4f6b5a", ["--accent" as string]: "#9a3c1c" } as CSSProperties}>
+              <Endpaper years={allYears} />
+            </Page>
+          }
+          recto={
+            <Page side="recto" placed folio="viii">
+              <div className={s.colophon}>
+                <h2>Colophon</h2>
+                <p>
+                  <i>Lives in Motion</i> was made for the Meta Global AI Developer Hackathon, October and November 2026.
+                </p>
+                <p>
+                  Research by Muse Spark with web search; plates by Muse Image; cut-outs by SAM 3.1. Portraits are traced from openly
+                  licensed photographs with linedraw and drawn with vivus; scene figures are silhouettes by design.
+                </p>
+                <p>Facts link to their sources in the notes at the end of each life.</p>
+                <p>Set in Instrument Serif and Newsreader.</p>
+                <span className={s.rule} aria-hidden />
+                <Link href={`/${first.slug}`} className={s.colophonLink}>
+                  Begin reading
+                </Link>
+              </div>
+            </Page>
+          }
+        />
+      </section>
     </main>
   );
 }

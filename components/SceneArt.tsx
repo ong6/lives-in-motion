@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import type { Layer, Scene } from "@/lib/schema";
 import { Overlay } from "./Overlay";
 import { LineDrawing } from "./LineDrawing";
+import { ScrollVideo } from "./ScrollVideo";
 import s from "./SceneArt.module.css";
 
 const place = (l: Layer): CSSProperties => ({
@@ -44,7 +45,7 @@ export function SceneArt({ scene, progress, active }: { scene: Scene; progress: 
     return (
       <div className={cls} style={style}>
         <img className={s.lineUnder} src={scene.background ?? scene.plate} alt="" />
-        <LineDrawing className={s.lineCanvas} src={scene.line} progress={Math.min(1, progress / 0.7)} label={scene.visual} />
+        <LineDrawing className={s.lineCanvas} src={scene.line} progress={Math.min(1, progress / 0.4)} label={scene.visual} />
       </div>
     );
   }
@@ -54,13 +55,29 @@ export function SceneArt({ scene, progress, active }: { scene: Scene; progress: 
       <div className={cls} style={style}>
         <figure className={s.plateFrame}>
           <div className={s.box}>
-            <img className={s.plate} src={scene.plate} alt={scene.visual} />
+            {scene.video ? (
+              <ScrollVideo className={`${s.plate} ${s.film}`} src={scene.video} poster={scene.poster} progress={progress} label={scene.visual} />
+            ) : (
+              <img className={s.plate} src={scene.plate} alt={scene.visual} />
+            )}
             <Layers layers={scene.layers.filter((l) => l.overlay)} />
           </div>
           <figcaption>
             Pl. {scene.id.slice(1)} · {scene.year}
           </figcaption>
         </figure>
+      </div>
+    );
+  }
+
+  if (scene.video) {
+    // A rendered film of the plate and its cut-outs (pnpm video); only the exact overlays stay live.
+    return (
+      <div className={cls} style={style}>
+        <div className={s.box}>
+          <ScrollVideo className={s.film} src={scene.video} poster={scene.poster} progress={progress} label={scene.visual} />
+          <Layers layers={scene.layers.filter((l) => l.overlay)} />
+        </div>
       </div>
     );
   }

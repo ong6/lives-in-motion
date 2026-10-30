@@ -27,7 +27,29 @@
         }
       ],
       "plate": "/stories/lee-kuan-yew/s1/plate.webp",
-      "layers": []
+      "background": "/stories/lee-kuan-yew/s1/background.webp",
+      "video": "/stories/lee-kuan-yew/s1/scene.mp4?v=e72c226c",
+      "poster": "/stories/lee-kuan-yew/s1/scene.jpg?v=e72c226c",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "schoolboy",
+          "depth": 0.6,
+          "x": 58.63,
+          "y": 91.75,
+          "w": 8,
+          "src": "/stories/lee-kuan-yew/s1/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "rickshaw",
+          "depth": 0.8,
+          "x": 35.13,
+          "y": 95.94,
+          "w": 30,
+          "src": "/stories/lee-kuan-yew/s1/cut-2.webp"
+        }
+      ]
     },
     {
       "id": "s2",
@@ -50,7 +72,20 @@
         }
       ],
       "plate": "/stories/lee-kuan-yew/s2/plate.webp",
-      "layers": []
+      "background": "/stories/lee-kuan-yew/s2/background.webp",
+      "video": "/stories/lee-kuan-yew/s2/scene.mp4?v=54cf87b6",
+      "poster": "/stories/lee-kuan-yew/s2/scene.jpg?v=54cf87b6",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "bicycle",
+          "depth": 0.6,
+          "x": 20.16,
+          "y": 94.06,
+          "w": 27.69,
+          "src": "/stories/lee-kuan-yew/s2/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s3",
@@ -77,7 +112,19 @@
         }
       ],
       "plate": "/stories/lee-kuan-yew/s3/plate.webp",
-      "layers": []
+      "background": "/stories/lee-kuan-yew/s3/background.webp",
+      "line": "/stories/lee-kuan-yew/s3/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "student",
+          "depth": 0.6,
+          "x": 50.31,
+          "y": 95.5,
+          "w": 17.75,
+          "src": "/stories/lee-kuan-yew/s3/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s4",
@@ -100,7 +147,20 @@
         }
       ],
       "plate": "/stories/lee-kuan-yew/s4/plate.webp",
-      "layers": []
+      "background": "/stories/lee-kuan-yew/s4/background.webp",
+      "video": "/stories/lee-kuan-yew/s4/scene.mp4?v=89aee30f",
+      "poster": "/stories/lee-kuan-yew/s4/scene.jpg?v=89aee30f",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "round table",
+          "depth": 0.6,
+          "x": 50.53,
+          "y": 95.56,
+          "w": 54.19,
+          "src": "/stories/lee-kuan-yew/s4/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s5",
@@ -127,7 +187,19 @@
         }
       ],
       "plate": "/stories/lee-kuan-yew/s5/plate.webp",
+      "background": "/stories/lee-kuan-yew/s5/background.webp",
+      "video": "/stories/lee-kuan-yew/s5/scene.mp4?v=8931912c",
+      "poster": "/stories/lee-kuan-yew/s5/scene.jpg?v=8931912c",
       "layers": [
+        {
+          "id": "cut-1",
+          "concept": "television camera",
+          "depth": 0.6,
+          "x": 81.47,
+          "y": 80.44,
+          "w": 24.81,
+          "src": "/stories/lee-kuan-yew/s5/cut-1.webp"
+        },
         {
           "id": "flag",
           "concept": "flag",
@@ -163,7 +235,21 @@
           "url": "https://nparks.gov.sg/sbg/about/our-history/1963-the-greening-of-singapore"
         }
       ],
-      "layers": []
+      "plate": "/stories/lee-kuan-yew/s6/plate.webp",
+      "background": "/stories/lee-kuan-yew/s6/background.webp",
+      "video": "/stories/lee-kuan-yew/s6/scene.mp4?v=63d8d779",
+      "poster": "/stories/lee-kuan-yew/s6/scene.jpg?v=63d8d779",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "tree",
+          "depth": 0.6,
+          "x": 50.78,
+          "y": 88,
+          "w": 11.19,
+          "src": "/stories/lee-kuan-yew/s6/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s7",
@@ -189,7 +275,20 @@
           "url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Lee_Kuan_Yew"
         }
       ],
-      "layers": []
+      "plate": "/stories/lee-kuan-yew/s7/plate.webp",
+      "background": "/stories/lee-kuan-yew/s7/background.webp",
+      "line": "/stories/lee-kuan-yew/s7/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "chrysanthemums",
+          "depth": 0.6,
+          "x": 80.25,
+          "y": 87.81,
+          "w": 31.75,
+          "src": "/stories/lee-kuan-yew/s7/cut-1.webp"
+        }
+      ]
     }
   ]
 }

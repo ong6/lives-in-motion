@@ -1,0 +1,168 @@
+/*
+ * Book primitives shared by the home page and the story pages: the desk the book lies on,
+ * the boards, the page block, paper pages with a deckled fore-edge and a gutter shadow,
+ * running heads, folios and turning leaves. Page size comes from --ph (page height).
+ */
+
+.desk {
+  --ph: min(calc(100svh - 108px), calc((100vw - 340px) / 1.44));
+  --desk-text: rgb(250 244 230 / 0.62);
+  background: var(--desk);
+  transition: background-color 0.9s ease;
+}
+
+.book {
+  --pw: calc(var(--ph) * 0.72);
+  --edge: #ebe3d0;
+  position: relative;
+  width: calc(var(--pw) * 2);
+  height: var(--ph);
+}
+
+/* ---------- Boards and the page block ---------- */
+.board {
+  position: absolute;
+  top: -9px;
+  bottom: -9px;
+  background: var(--cloth);
+  background-image: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.025) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.05) 0 1px, transparent 1px 3px);
+  box-shadow: 0 34px 60px -24px rgb(0 0 0 / 0.75), 0 2px 3px rgb(0 0 0 / 0.35);
+}
+.boardL { left: -20px; right: calc(50% - 1px); border-radius: 4px 0 0 4px; }
+.boardR { right: -20px; left: calc(50% - 1px); border-radius: 0 4px 4px 0; }
+
+/* Fore-edges of the page block: thicker on the side you have read. */
+.block {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  background: repeating-linear-gradient(90deg, rgb(70 50 30 / 0.16) 0 1px, transparent 1px 2px), var(--edge);
+}
+.blockL { right: 100%; width: var(--bl, 6px); border-radius: 2px 0 0 2px; }
+.blockR { left: 100%; width: var(--br, 6px); border-radius: 0 2px 2px 0; }
+
+/* ---------- Pages ---------- */
+.page {
+  position: absolute;
+  top: 0;
+  width: var(--pw);
+  height: var(--ph);
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--paper);
+  color: var(--ink);
+  mask-repeat: no-repeat;
+  transition: background-color 0.6s ease;
+}
+.atLeft { left: 0; }
+.atRight { left: var(--pw); }
+
+/* Deckled fore-edge: a torn strip on the outer side, the rest of the page solid. */
+.verso {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 10 1000%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M10 0 L0.7 0 L0.4 6 L0.7 12 L0.5 18 L0.9 24 L1.2 30 L1.7 36 L1.5 42 L2.3 48 L2.3 54 L2.8 60 L2.8 66 L3.1 72 L3.2 78 L3.9 84 L3.6 90 L3.3 96 L3 102 L2.7 108 L2.8 114 L2.7 120 L2.8 126 L2.7 132 L2.9 138 L2.7 144 L3.4 150 L2.8 156 L2.5 162 L2.4 168 L2.4 174 L2 180 L1.9 186 L2.1 192 L2.2 198 L2.5 204 L2.3 210 L1.9 216 L1.7 222 L1.5 228 L2.1 234 L2.3 240 L3.3 246 L2.8 252 L2.2 258 L2.4 264 L3.1 270 L3.7 276 L4.3 282 L3.2 288 L2.9 294 L2.5 300 L2.4 306 L2 312 L1.6 318 L2.2 324 L3.5 330 L3.7 336 L2.9 342 L2.4 348 L2.5 354 L2.1 360 L1.7 366 L1 372 L1.3 378 L0.2 384 L0.9 390 L1.2 396 L0.4 402 L1 408 L1.7 414 L1.6 420 L2 426 L1.8 432 L1.7 438 L1.8 444 L1.9 450 L1.7 456 L1.6 462 L1.3 468 L2 474 L2.6 480 L2.2 486 L1.6 492 L1.7 498 L2.4 504 L1.9 510 L1.3 516 L1.4 522 L1.4 528 L1.2 534 L0.4 540 L0.5 546 L0.8 552 L0.4 558 L1.1 564 L1.6 570 L2.3 576 L3.8 582 L4 588 L3.5 594 L2.8 600 L2.5 606 L3.2 612 L2.6 618 L2.9 624 L2.8 630 L2.7 636 L3.2 642 L2.2 648 L2.7 654 L2.1 660 L2.2 666 L1.7 672 L0.5 678 L0.7 684 L0.7 690 L0.2 696 L0.2 702 L0.2 708 L0.2 714 L0.6 720 L0.5 726 L1.3 732 L1.5 738 L1.3 744 L1.3 750 L1.4 756 L1.7 762 L2 768 L2.6 774 L2.5 780 L3.2 786 L2.5 792 L3.1 798 L3.5 804 L4 810 L3.6 816 L2.9 822 L3.4 828 L3.7 834 L3.6 840 L3.7 846 L3.4 852 L3.3 858 L2.8 864 L2.3 870 L2.9 876 L3.2 882 L2.5 888 L2.1 894 L2.5 900 L3.2 906 L2.7 912 L3 918 L2.4 924 L1.6 930 L1.8 936 L1.2 942 L1.5 948 L1.6 954 L2 960 L2.4 966 L2.1 972 L1.7 978 L1.3 984 L1.5 990 L2 996 L10 1000Z%27/%3E%3C/svg%3E"), linear-gradient(#000 0 0);
+  mask-size: 10px 100%, calc(100% - 10px) 100%;
+  mask-position: left top, right top;
+}
+.recto {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 10 1000%27 preserveAspectRatio=%27none%27%3E%3Cpath d=%27M0 0 L9.3 0 L9.6 6 L9.3 12 L9.5 18 L9.1 24 L8.8 30 L8.3 36 L8.5 42 L7.7 48 L7.7 54 L7.2 60 L7.2 66 L6.9 72 L6.8 78 L6.1 84 L6.4 90 L6.7 96 L7.0 102 L7.3 108 L7.2 114 L7.3 120 L7.2 126 L7.3 132 L7.1 138 L7.3 144 L6.6 150 L7.2 156 L7.5 162 L7.6 168 L7.6 174 L8.0 180 L8.1 186 L7.9 192 L7.8 198 L7.5 204 L7.7 210 L8.1 216 L8.3 222 L8.5 228 L7.9 234 L7.7 240 L6.7 246 L7.2 252 L7.8 258 L7.6 264 L6.9 270 L6.3 276 L5.7 282 L6.8 288 L7.1 294 L7.5 300 L7.6 306 L8.0 312 L8.4 318 L7.8 324 L6.5 330 L6.3 336 L7.1 342 L7.6 348 L7.5 354 L7.9 360 L8.3 366 L9.0 372 L8.7 378 L9.8 384 L9.1 390 L8.8 396 L9.6 402 L9.0 408 L8.3 414 L8.4 420 L8.0 426 L8.2 432 L8.3 438 L8.2 444 L8.1 450 L8.3 456 L8.4 462 L8.7 468 L8.0 474 L7.4 480 L7.8 486 L8.4 492 L8.3 498 L7.6 504 L8.1 510 L8.7 516 L8.6 522 L8.6 528 L8.8 534 L9.6 540 L9.5 546 L9.2 552 L9.6 558 L8.9 564 L8.4 570 L7.7 576 L6.2 582 L6.0 588 L6.5 594 L7.2 600 L7.5 606 L6.8 612 L7.4 618 L7.1 624 L7.2 630 L7.3 636 L6.8 642 L7.8 648 L7.3 654 L7.9 660 L7.8 666 L8.3 672 L9.5 678 L9.3 684 L9.3 690 L9.8 696 L9.8 702 L9.8 708 L9.8 714 L9.4 720 L9.5 726 L8.7 732 L8.5 738 L8.7 744 L8.7 750 L8.6 756 L8.3 762 L8.0 768 L7.4 774 L7.5 780 L6.8 786 L7.5 792 L6.9 798 L6.5 804 L6.0 810 L6.4 816 L7.1 822 L6.6 828 L6.3 834 L6.4 840 L6.3 846 L6.6 852 L6.7 858 L7.2 864 L7.7 870 L7.1 876 L6.8 882 L7.5 888 L7.9 894 L7.5 900 L6.8 906 L7.3 912 L7.0 918 L7.6 924 L8.4 930 L8.2 936 L8.8 942 L8.5 948 L8.4 954 L8.0 960 L7.6 966 L7.9 972 L8.3 978 L8.7 984 L8.5 990 L8.0 996 L0 1000Z%27/%3E%3C/svg%3E"), linear-gradient(#000 0 0);
+  mask-size: 10px 100%, calc(100% - 10px) 100%;
+  mask-position: right top, left top;
+}
+
+/* Paper: a faint uneven tone, then the gutter's shadow and the fore-edge's. */
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(130% 90% at 50% 35%, transparent 55%, rgb(90 60 20 / 0.07));
+}
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+}
+.verso::after {
+  background: linear-gradient(to left, rgb(30 20 10 / 0.26), rgb(30 20 10 / 0.08) 2.2%, transparent 8%),
+    linear-gradient(to right, rgb(30 20 10 / 0.07), transparent 2.5%);
+}
+.recto::after {
+  background: linear-gradient(to right, rgb(30 20 10 / 0.26), rgb(30 20 10 / 0.08) 2.2%, transparent 8%),
+    linear-gradient(to left, rgb(30 20 10 / 0.07), transparent 2.5%);
+}
+
+/* Running heads and folios sit in the margins, in small capitals and old-style figures. */
+.head,
+.folio {
+  position: absolute;
+  margin: 0;
+  font: 400 13px/1 var(--font-book);
+  letter-spacing: 0.07em;
+  font-variant-caps: all-small-caps;
+  font-variant-numeric: oldstyle-nums;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.head { top: 34px; max-width: calc(100% - 128px); overflow: hidden; text-overflow: ellipsis; }
+.verso .head { left: 64px; }
+.recto .head { right: 64px; }
+.folio { bottom: 32px; font-size: 15px; letter-spacing: 0.02em; font-variant-caps: normal; }
+.verso .folio { left: 64px; }
+.recto .folio { right: 64px; }
+
+/* ---------- Turning leaves ---------- */
+.leaf {
+  position: absolute;
+  top: 0;
+  left: var(--pw);
+  width: var(--pw);
+  height: var(--ph);
+  transform-origin: 0 50%;
+}
+.leaf .page { left: 0; }
+/* The back of a leaf is drawn mirrored; turning the leaf mirrors it back. */
+.back { transform: scaleX(-1); }
+.shade {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  pointer-events: none;
+  background: linear-gradient(to right, rgb(20 12 4 / 0.5), rgb(20 12 4 / 0.18) 55%, rgb(255 248 230 / 0.12));
+}
+.cast {
+  position: absolute;
+  top: 0;
+  height: var(--ph);
+  width: var(--pw);
+  pointer-events: none;
+}
+.castR { left: var(--pw); background: linear-gradient(to right, rgb(20 12 4 / 0.55), transparent var(--reach)); }
+.castL { left: 0; background: linear-gradient(to left, rgb(20 12 4 / 0.55), transparent var(--reach)); }
+
+/* ---------- Endpapers: the life's years, printed small and repeated ---------- */
+.endpaper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--accent2) 26%, var(--paper));
+}
+.endpaperPattern {
+  position: absolute;
+  inset: -30%;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  transform: rotate(-9deg);
+  white-space: nowrap;
+  font: italic 400 19px/1 var(--font-serif);
+  color: color-mix(in oklab, var(--accent2) 70%, var(--ink));
+  opacity: 0.3;
+  user-select: none;
+}
+.endpaperPattern p { margin: 0; }
+/* Alternate rows step half a year across and take the second ink, like a two-colour print. */
+.endpaperPattern p:nth-child(even) { margin-left: -2.2em; color: var(--accent); }

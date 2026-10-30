@@ -1,148 +1,269 @@
+/* A life as a book on a desk: the desk takes the colour of the scene's era. */
 .story {
-  background: var(--paper);
-  color: var(--ink);
-  transition: background-color 0.8s ease, color 0.8s ease;
+  --desk: color-mix(in oklab, var(--ink) 72%, #060403);
+  --gilt: #d8b46e;
+  min-height: 100svh;
+  color: var(--desk-text);
 }
+:global(html):has(.story) { scroll-snap-type: y proximity; }
 
-.bar {
+.home {
   position: fixed;
-  inset: 0 0 auto;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  padding: 18px clamp(20px, 4vw, 56px);
-  font: 500 12px/1 var(--font-mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  background: var(--paper);
-  border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-  transition: background-color 0.8s ease;
+  top: 20px;
+  left: 28px;
+  z-index: 30;
+  font: 400 15px/1 var(--font-book);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.08em;
+  color: var(--desk-text);
+  text-decoration: none;
 }
-.bar a { text-decoration: none; }
+.home:hover { color: #fbf4e4; }
 
-/* ---------- Intro: the portrait draws as you scroll ---------- */
-.intro { height: 220svh; }
-.introStage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  display: grid;
-  grid-template-columns: minmax(320px, 5fr) 6fr;
-  align-items: center;
-  gap: clamp(24px, 4vw, 64px);
-  padding: 72px clamp(20px, 5vw, 80px) 40px;
-}
-.kicker { font: 500 12px/1 var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-.name {
-  font: 400 clamp(56px, 8.4vw, 132px)/0.92 var(--font-serif);
-  letter-spacing: -0.02em;
-  margin: 0.25em 0 0.15em;
-}
-.dates { font: 500 14px/1 var(--font-mono); color: var(--muted); }
-.tagline { font: 400 clamp(18px, 1.6vw, 22px)/1.45 var(--font-sans); max-width: 30ch; margin-top: 1.4em; }
-.cue { font: 500 12px/1 var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; margin-top: 3em; color: var(--accent); }
-.portrait { margin: 0; height: min(78svh, 46vw); display: grid; grid-template-rows: 1fr auto; }
-.portrait svg { width: 100%; height: 100%; color: var(--ink); --accent: inherit; }
-.portrait figcaption { font: 400 11px/1.4 var(--font-mono); color: var(--muted); text-align: right; }
-
-/* ---------- Scenes: text column | art | timeline ---------- */
+.track { position: relative; }
+.snap { position: absolute; left: 0; width: 1px; height: 1px; scroll-snap-align: start; }
 .stage {
   position: sticky;
   top: 0;
   height: 100svh;
   display: grid;
-  grid-template-columns: minmax(320px, 30vw) 1fr 150px;
+  place-items: center;
+  overflow: clip;
 }
+.face { position: absolute; inset: 0; }
 
-.text {
-  position: relative;
-  padding: 88px clamp(24px, 3vw, 48px) 48px clamp(20px, 5vw, 80px);
-  display: grid;
-  grid-template-rows: auto auto 1fr;
-  container-type: inline-size;
-  border-right: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
-}
-.meta {
-  display: flex;
-  justify-content: space-between;
-  font: 500 12px/1 var(--font-mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
+.cue {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  translate: -50% 0;
   margin: 0;
-}
-/* Four digits always fit the column: sized from its width, never overlapping the title. */
-.year {
-  font: 800 31cqi/1 var(--font-sans);
-  font-stretch: 90%;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.035em;
-  color: var(--accent);
-  margin: 0.12em 0 0.18em -0.04em;
-  transition: color 0.8s ease;
-}
-.caption {
-  grid-area: 3 / 1;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  font: italic 400 16px/1 var(--font-book);
+  color: var(--desk-text);
   pointer-events: none;
 }
-.caption.on { opacity: 1; transform: none; pointer-events: auto; transition-delay: 0.12s; }
-.title { font: 400 clamp(30px, 2.6vw, 42px)/1.08 var(--font-serif); margin: 0 0 0.5em; text-wrap: balance; }
-.body { font: 400 17px/1.55 var(--font-sans); max-width: 38ch; margin: 0; text-wrap: pretty; }
 
-.art { position: relative; overflow: hidden; }
+/* ---------- The cover: cloth over board, title in gilt ---------- */
+.coverLeaf {
+  top: -9px;
+  height: calc(var(--ph) + 18px);
+  width: calc(var(--pw) + 20px);
+}
+.cover {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  padding: 64px 56px 58px;
+  text-align: center;
+  color: var(--gilt);
+  background: var(--cloth);
+  background-image: repeating-linear-gradient(0deg, rgb(255 255 255 / 0.03) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.06) 0 1px, transparent 1px 3px),
+    linear-gradient(100deg, rgb(255 255 255 / 0.06), transparent 40%, rgb(0 0 0 / 0.12));
+  border-radius: 0 4px 4px 0;
+  /* The hinge: a pressed groove a little in from the spine. */
+  box-shadow: inset 14px 0 0 -12px rgb(0 0 0 / 0.35), inset 18px 0 14px -14px rgb(0 0 0 / 0.5);
+}
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 26px 24px 26px 34px;
+  border: 1px solid color-mix(in oklab, var(--gilt) 45%, transparent);
+  outline: 1px solid color-mix(in oklab, var(--gilt) 25%, transparent);
+  outline-offset: 5px;
+  pointer-events: none;
+}
+.cover p, .cover h1 { margin: 0; text-shadow: 0 1px 0 rgb(0 0 0 / 0.35); }
+.coverSeries, .coverFoot {
+  font: 400 15px/1 var(--font-book);
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.16em;
+}
+.coverTitle { align-self: center; display: grid; gap: 18px; }
+.coverTitle h1 { font: 400 clamp(64px, calc(var(--pw) * 0.16), 104px)/0.92 var(--font-serif); letter-spacing: -0.01em; text-wrap: balance; }
+.coverTitle p { font: italic 400 20px/1 var(--font-book); opacity: 0.85; }
 
-.rail {
+/* Inside the front board: cloth turned over its edges, the endpaper pasted down on it. */
+.pastedown { padding: 0; box-shadow: none; border-radius: 4px 0 0 4px; }
+.pastedown::before { display: none; }
+.pastedownPaper { position: absolute; top: 9px; bottom: 9px; left: 20px; right: 0; overflow: hidden; }
+.pastedownPaper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgb(30 20 10 / 0.3), rgb(30 20 10 / 0.08) 2.5%, transparent 9%);
+}
+
+/* ---------- Frontispiece and title page ---------- */
+.frontis {
+  position: absolute;
+  inset: 72px 60px 64px;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 18px;
+}
+.frontisArt { min-height: 0; }
+.frontisArt svg { color: var(--ink); }
+.frontis figcaption { font: 400 13.5px/1.5 var(--font-book); color: var(--muted); text-align: center; text-wrap: balance; }
+
+.titlePage {
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-  padding: 0 20px 0 16px;
-  border-left: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+  align-items: center;
+  text-align: center;
+  padding: 18% 60px 64px;
+}
+.titlePage p { margin: 0; }
+.titlePart { font: 400 15px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--muted); }
+.titleName { font: 400 clamp(64px, calc(var(--pw) * 0.17), 108px)/0.92 var(--font-serif); letter-spacing: -0.015em; margin: 0.4em 0 0.3em !important; text-wrap: balance; }
+.titleDates { font: italic 400 20px/1 var(--font-book); color: var(--muted); }
+.titleRule { width: 44px; height: 1px; background: currentColor; opacity: 0.45; margin: 34px 0; }
+.titleTag { font: italic 400 23px/1.4 var(--font-book); max-width: 20ch; text-wrap: balance; }
+.titleImprint {
+  margin-top: auto !important;
+  display: grid;
+  gap: 6px;
+  font: 400 14px/1.2 var(--font-book);
+  color: var(--muted);
+}
+.titleImprint span { font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--ink); }
+
+/* ---------- Chapter opener (verso) ---------- */
+.chapter {
+  position: absolute;
+  inset: 84px 64px 88px;
+  display: flex;
+  flex-direction: column;
+}
+.chapter p, .chapter h2 { margin: 0; }
+.chapterNo { font: 400 15px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.14em; color: var(--accent); }
+.year {
+  font: 400 clamp(110px, calc(var(--pw) * 0.31), 180px)/0.8 var(--font-serif);
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  margin: 0.14em 0 0.08em -0.05em !important;
+}
+.eraName { font: italic 400 17px/1.2 var(--font-book); color: var(--muted); }
+.title {
+  margin-top: auto !important;
+  font: 400 clamp(32px, calc(var(--pw) * 0.072), 44px)/1.05 var(--font-serif);
+  text-wrap: balance;
+  max-width: 16ch;
+}
+.caption {
+  margin-top: 20px !important;
+  font: 400 20px/1.58 var(--font-book);
+  font-variation-settings: "opsz" 16;
+  hyphens: auto;
+  text-wrap: pretty;
+}
+.caption::first-letter {
+  initial-letter: 3;
+  font-family: var(--font-serif);
+  color: var(--accent);
+  margin-right: 0.12em;
+}
+.ref { font-size: 0.62em; line-height: 0; margin-left: 0.15em; font-variant-numeric: lining-nums; }
+.ref a { color: var(--accent); text-decoration: none; }
+.ref a:hover { text-decoration: underline; }
+
+/* ---------- Plate page (recto) ---------- */
+.plateFig {
+  position: absolute;
+  inset: 78px 54px 70px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.plate {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--ink) 5%, var(--paper));
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 16%, transparent);
+}
+/* SceneArt's own plate label is replaced by the page's caption. */
+.plate :global(figcaption) { display: none; }
+.plateFig figcaption { font: 400 14px/1.45 var(--font-book); color: var(--muted); text-wrap: balance; }
+.plateFig figcaption i { color: var(--ink); }
+
+/* ---------- The ribbon: a bookmark out of the fore-edge marks the chapter you are in ---------- */
+.rail {
+  position: absolute;
+  left: calc(100% + 46px);
+  top: 50%;
+  translate: 0 -50%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
 }
 .rail button {
   all: unset;
+  position: relative;
+  z-index: 1;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding-left: 4px;
+  font: 400 22px/1 var(--font-serif);
+  color: var(--desk-text);
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+.rail button:hover { color: #fbf4e4; }
+.rail button:focus-visible { outline: 1px solid #fbf4e4; outline-offset: 2px; }
+.rail button.on { color: #fff8ea; }
+.ribbon {
+  position: absolute;
+  top: 7px;
+  left: -60px;
+  width: 128px;
+  height: 30px;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--accent) 70%, #fff) 0,
+    var(--accent) 30%,
+    color-mix(in oklab, var(--accent) 72%, #000) 100%
+  );
+  clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%);
+  transition: transform 0.55s cubic-bezier(0.3, 0.7, 0.2, 1), opacity 0.4s ease, background-color 0.6s ease;
+}
+
+/* ---------- Notes and credits, after the last chapter ---------- */
+.notes {
+  min-height: 100svh;
   display: grid;
-  gap: 2px;
-  padding: 10px 0 10px 14px;
-  border-left: 2px solid color-mix(in srgb, var(--ink) 18%, transparent);
-  color: var(--muted);
-  transition: color 0.3s ease, border-color 0.3s ease;
+  place-items: center;
+  padding: 54px 0;
+  scroll-snap-align: center;
 }
-.rail button:hover { color: var(--ink); }
-.rail button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.rail button.on { color: var(--ink); border-color: var(--accent); }
-.railYear { font: 600 15px/1 var(--font-sans); font-variant-numeric: tabular-nums; }
-.railTitle { font: 400 11px/1.3 var(--font-mono); opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.3s ease; }
-.rail button.on .railTitle, .rail button:hover .railTitle { opacity: 1; max-height: 3em; }
-
-/* ---------- Footer ---------- */
-.foot { padding: 14svh clamp(20px, 5vw, 80px) 10svh; max-width: 980px; }
-.foot h2 { font: 400 44px/1 var(--font-serif); margin: 0 0 0.8em; }
-.foot ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; font: 400 14px/1.5 var(--font-sans); }
-.foot li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; }
-.footYear { font: 500 13px/1.6 var(--font-mono); color: var(--accent); }
-.note { font: 400 13px/1.6 var(--font-sans); color: var(--muted); margin-top: 3em; max-width: 70ch; }
-.back { display: inline-block; margin-top: 2em; font: 500 13px/1 var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase; }
-
-.srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-
-/* ---------- Small screens: art on top, text below ---------- */
-@media (max-width: 860px) {
-  .introStage { grid-template-columns: 1fr; grid-template-rows: auto 1fr; padding-top: 64px; }
-  .portrait { height: 48svh; }
-  .stage { grid-template-columns: 1fr; grid-template-rows: 52svh 1fr; }
-  .art { grid-row: 1; }
-  .text { grid-row: 2; border-right: 0; padding: 20px 20px 24px; grid-template-rows: auto auto 1fr; }
-  .year { font-size: 22cqi; }
-  .title { font-size: 26px; }
-  .body { font-size: 15px; }
-  .rail { display: none; }
+.notesPage, .creditsPage {
+  position: absolute;
+  inset: 84px 64px 76px;
+  display: flex;
+  flex-direction: column;
 }
+.notesPage h2, .creditsPage h2 { font: 400 46px/1 var(--font-serif); margin: 0 0 0.6em; }
+.notesPage ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.notesPage li { display: grid; grid-template-columns: 26px 1fr; scroll-margin-top: 40svh; }
+.notesPage li:target p { background: color-mix(in oklab, var(--accent) 14%, transparent); }
+.noteNo { font: 400 15px/1.5 var(--font-book); color: var(--accent); }
+.notesPage p { margin: 0; font: 400 15px/1.5 var(--font-book); text-wrap: pretty; }
+.notesPage a { color: inherit; text-decoration-color: color-mix(in oklab, var(--ink) 35%, transparent); text-underline-offset: 2px; }
+.notesPage a:hover { color: var(--accent); }
+.creditsPage p { margin: 0; font: 400 17px/1.6 var(--font-book); max-width: 36ch; text-wrap: pretty; }
+.finis { margin: 1.6em 0 0 !important; font: 400 30px/1 var(--font-serif) !important; color: var(--accent); text-align: center; max-width: none !important; }
+.onward { margin-top: auto; display: grid; gap: 22px; }
+.onward a { display: grid; gap: 6px; text-decoration: none; font: 400 40px/1 var(--font-serif); color: var(--ink); }
+.onward a small { font: 400 14px/1 var(--font-book); font-variant-caps: all-small-caps; letter-spacing: 0.1em; color: var(--muted); }
+.onward a:hover { color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) {
-  .story, .caption, .year { transition: none; }
+  .ribbon { transition: none; }
 }

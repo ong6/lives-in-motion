@@ -47,23 +47,34 @@
   transform: scale(calc(1.08 - var(--p) * 0.06)) translateX(calc((var(--p) - 0.5) * 2%));
 }
 
+/* A scene film (ScrollVideo): fills the square box; its frames already carry the camera move. */
+.film {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.film img,
+.film video {
+  object-fit: cover;
+}
+
 /* Archive: a numbered print on the page, inked in from the bottom as it arrives. */
 .archive {
   display: grid;
-  place-items: center;
-  padding: 6cqh 6cqw;
+  place-items: stretch;
+  padding: 0;
 }
 .plateFrame {
   margin: 0;
   position: relative;
-  width: min(100%, 82cqh);
-  aspect-ratio: 1;
-  background: var(--paper);
-  padding: 3.2%;
-  box-shadow: 0 1px 0 rgb(0 0 0 / 0.06), 0 24px 50px -24px rgb(0 0 0 / 0.35);
+  /* The book page already frames the plate: fill it, like the other treatments. */
+  width: 100%;
+  height: 100%;
 }
 .plateFrame .box {
   position: relative;
+  height: 100%;
   left: auto;
   top: auto;
   width: 100%;
@@ -96,7 +107,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: calc(min(1, max(0, (var(--p) - 0.55) * 3)) * 0.85);
+  /* The plate develops under the sketch early, so most of the scene's dwell shows the full picture. */
+  opacity: calc(min(1, max(0, (var(--p) - 0.18) * 3.2)) * 0.95);
   filter: grayscale(0.2);
 }
 .lineCanvas {

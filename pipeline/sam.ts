@@ -36,6 +36,8 @@ export async function cutout(plate: Buffer, m: Mask) {
   const alpha = await sharp(Buffer.from(raster.map((v) => (v ? 255 : 0))), { raw: { width: m.mask.width, height: m.mask.height, channels: 1 } })
     .resize(bw, bh, { kernel: "nearest" })
     .blur(0.6)
+    // sharp hands a blurred single channel back as RGB; keep one channel or the rows interleave into stripes.
+    .extractChannel(0)
     .raw()
     .toBuffer();
   const rgb = await sharp(plate).extract({ left, top, width: bw, height: bh }).removeAlpha().raw().toBuffer();

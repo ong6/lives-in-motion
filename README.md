@@ -68,6 +68,23 @@ with one added option, `--hatch_light`. SAM 3.1 cuts the person out first; the m
 beside the photo. Tune with `--hatch` (patch size, default 32), `--light` (lightest hatched tone,
 default 80), `--lift` and `--gamma`. Needs `uv`.
 
+## The book
+
+The site reads as one illustrated biography: home is the front matter (frontispiece, contents with
+dotted leaders, epigraph, colophon), and each life is a Part that opens from a cloth cover, then
+turns one page per scene as you scroll (CSS 3D page turns, ribbon bookmark on the year rail, ←/→
+to turn). Verso: chapter, year, drop-cap caption, endnote mark; recto: the scene's plate. Notes
+and picture credits close each Part. Desktop only for now. Code: `components/book/`,
+`components/StoryPlayer.tsx`.
+
+## Scene films
+
+`pnpm video <slug> [--scenes s1,s4]` renders each scene into a 3.5 s scroll-scrubbed film
+(`scene.mp4`, every frame a keyframe, plus a poster): a camera push with the subject moving on its
+own depth over the clean background, rendered locally with sharp and ffmpeg, no API calls.
+`components/ScrollVideo.tsx` scrubs it from scroll. Line scenes are skipped (they draw themselves).
+Rerun it after re-segmenting a life.
+
 ## Budget
 
 The event allowance is $150 for everything. Every Meta call goes through `pipeline/budget.ts`:

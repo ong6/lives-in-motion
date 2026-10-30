@@ -30,7 +30,20 @@
         }
       ],
       "plate": "/stories/jack-sim/s1/plate.webp",
-      "layers": []
+      "background": "/stories/jack-sim/s1/background.webp",
+      "video": "/stories/jack-sim/s1/scene.mp4?v=273a696a",
+      "poster": "/stories/jack-sim/s1/scene.jpg?v=273a696a",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boy",
+          "depth": 0.6,
+          "x": 39.66,
+          "y": 87.31,
+          "w": 13.81,
+          "src": "/stories/jack-sim/s1/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s2",
@@ -53,7 +66,20 @@
         }
       ],
       "plate": "/stories/jack-sim/s2/plate.webp",
-      "layers": []
+      "background": "/stories/jack-sim/s2/background.webp",
+      "video": "/stories/jack-sim/s2/scene.mp4?v=e8c3af6d",
+      "poster": "/stories/jack-sim/s2/scene.jpg?v=e8c3af6d",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "man",
+          "depth": 0.6,
+          "x": 48.19,
+          "y": 96.38,
+          "w": 31.5,
+          "src": "/stories/jack-sim/s2/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s3",
@@ -76,7 +102,19 @@
         }
       ],
       "plate": "/stories/jack-sim/s3/plate.webp",
-      "layers": []
+      "background": "/stories/jack-sim/s3/background.webp",
+      "line": "/stories/jack-sim/s3/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "man",
+          "depth": 0.6,
+          "x": 49.59,
+          "y": 96.63,
+          "w": 11.81,
+          "src": "/stories/jack-sim/s3/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s4",
@@ -103,7 +141,20 @@
         }
       ],
       "plate": "/stories/jack-sim/s4/plate.webp",
-      "layers": []
+      "background": "/stories/jack-sim/s4/background.webp",
+      "video": "/stories/jack-sim/s4/scene.mp4?v=67dc4955",
+      "poster": "/stories/jack-sim/s4/scene.jpg?v=67dc4955",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "globe",
+          "depth": 0.6,
+          "x": 50.13,
+          "y": 69.13,
+          "w": 41,
+          "src": "/stories/jack-sim/s4/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s5",
@@ -126,7 +177,19 @@
         }
       ],
       "plate": "/stories/jack-sim/s5/plate.webp",
-      "layers": []
+      "background": "/stories/jack-sim/s5/background.webp",
+      "line": "/stories/jack-sim/s5/line.json",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "toilet",
+          "depth": 0.6,
+          "x": 49.97,
+          "y": 92.88,
+          "w": 27.06,
+          "src": "/stories/jack-sim/s5/cut-1.webp"
+        }
+      ]
     },
     {
       "id": "s6",
@@ -149,7 +212,19 @@
         }
       ],
       "plate": "/stories/jack-sim/s6/plate.webp",
+      "background": "/stories/jack-sim/s6/background.webp",
+      "video": "/stories/jack-sim/s6/scene.mp4?v=92091eeb",
+      "poster": "/stories/jack-sim/s6/scene.jpg?v=92091eeb",
       "layers": [
+        {
+          "id": "cut-1",
+          "concept": "delegates",
+          "depth": 0.6,
+          "x": 68.38,
+          "y": 89.13,
+          "w": 10.38,
+          "src": "/stories/jack-sim/s6/cut-1.webp"
+        },
         {
           "id": "date",
           "concept": "calendar",
@@ -183,7 +258,20 @@
         }
       ],
       "plate": "/stories/jack-sim/s7/plate.webp",
-      "layers": []
+      "background": "/stories/jack-sim/s7/background.webp",
+      "video": "/stories/jack-sim/s7/scene.mp4?v=33490d01",
+      "poster": "/stories/jack-sim/s7/scene.jpg?v=33490d01",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "rubber duck",
+          "depth": 0.6,
+          "x": 49.59,
+          "y": 43.38,
+          "w": 16.69,
+          "src": "/stories/jack-sim/s7/cut-1.webp"
+        }
+      ]
     }
   ]
 }
