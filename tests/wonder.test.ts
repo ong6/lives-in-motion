@@ -5,13 +5,13 @@ import {
   layerAt,
   layerBox,
   layerRect,
-  lensForPath,
   planCamera,
   planProblems,
   sanitizePlan,
   visibleShare,
   type MotionPlan,
-} from "@/pipeline/video";
+} from "@/pipeline/film/motion";
+import { lensForPath } from "@/pipeline/film/camera";
 import { KEEP_SCORE, MIN_SCORE, bestRound, plateJudgeSchema, criticSchema, planSchema, type Round } from "@/pipeline/wonder";
 import { PRICES, wonderCost, wonderWorst } from "@/pipeline/budget";
 

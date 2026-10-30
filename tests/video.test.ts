@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { FILM, LINE, aimAt, bboxOf, cameraAt, covers, distance, drawnStrokes, easeInOutSine, lensFor, lineAt, matteFromDiff, planScene, project, settled, strokeLengths } from "@/pipeline/video";
+import { FILM, cameraAt, covers, distance, easeInOutSine, lensFor, project, settled } from "@/pipeline/film/camera";
+import { LINE, drawnStrokes, lineAt, strokeLengths } from "@/pipeline/film/line";
+import { aimAt, bboxOf, matteFromDiff } from "@/pipeline/film/matte";
+import { planScene } from "@/pipeline/film/render";
 import { Scene } from "@/lib/schema";
 
 const centre = { x: 0.5, y: 0.5 };

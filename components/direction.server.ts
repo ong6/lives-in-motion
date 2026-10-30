@@ -14,7 +14,7 @@ const read = (f: string): any => {
   }
 };
 
-/** The renderer's own move, which a scene keeps when Muse Wonder's critic never passed a plan (pipeline/video.ts). */
+/** The renderer's own move, which a scene keeps when Muse Wonder's critic never passed a plan (pipeline/film/camera.ts). */
 const FIXED = { focus: { x: 0.5, y: 0.5 }, camera: [{ t: 0, zoom: 1, panX: -0.04, panY: 0 }, { t: 1, zoom: 1.2, panX: 0.04, panY: 0 }] };
 
 /** "Approve" or "reject" says nothing; a fuller sentence from the critic says why. */

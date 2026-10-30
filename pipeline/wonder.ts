@@ -9,7 +9,7 @@
  *      its box and depth), reads the caption and art direction, and returns a motion plan that
  *      tells the scene's story (a reveal, a layer entrance, a pull-back for loss, a rise for
  *      triumph): a keyframed camera, a move per layer, one ambient effect from the renderer's
- *      list, and a one-line rationale. The plan is sanitized and fitted (pipeline/video.ts, which
+ *      list, and a one-line rationale. The plan is sanitized and fitted (pipeline/film/motion.ts, which
  *      damps any move that would take a layer out of frame) before filming.
  *   2. Critic: the film is rendered locally, six frames go back to Wonder next to the plate and the
  *      brief. It returns {ok, score, filmIssues, plateDefects, revisedPlan}; a film passes at 8
@@ -42,9 +42,11 @@ import { eraFor } from "../lib/eras";
 import { BudgetError, spentBy, withScope, wonderWorst } from "./budget";
 import { MODELS, museWonderJson, type WonderImage } from "./meta";
 import { ROOT } from "./root";
-import { AMBIENTS, EASES, ENTRANCES, LIMITS, layerRect, motionFile, planScene, renderDirected, type MotionPlan } from "./video";
+import { FILM } from "./film/camera";
+import { FFMPEG, fileOf } from "./film/frame";
+import { AMBIENTS, EASES, ENTRANCES, LIMITS, layerRect, type MotionPlan } from "./film/motion";
+import { motionFile, planScene, renderDirected } from "./film/render";
 
-const FFMPEG = process.env.FFMPEG ?? (existsSync("/opt/homebrew/bin/ffmpeg") ? "/opt/homebrew/bin/ffmpeg" : "ffmpeg");
 const JOB = "wonder";
 export const WONDER_LIMIT = Number(process.env.WONDER_LIMIT_USD ?? 8);
 const DIRECTOR_TOKENS = 10000;
@@ -223,9 +225,8 @@ export const MIN_SCORE = 8;
  */
 export const KEEP_SCORE = 6;
 
-const fileOf = (url: string) => join(ROOT, "public", url.split("?")[0]);
-const FRAMES = Math.round(24 * 3.5);
-
+/** Frames in a film, for the contact sheet. */
+const FRAMES = Math.round(FILM.fps * FILM.seconds);
 
 export interface SceneReport {
   status: "directed" | "kept-fixed-move" | "failed";
