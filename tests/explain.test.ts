@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { explain } from "../components/create/explain";
+import { explain } from "../components/shared/explain";
 
 describe("explain", () => {
   it("turns an API error body into a plain sentence and keeps the raw text as detail", () => {

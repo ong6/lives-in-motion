@@ -9,14 +9,14 @@ import { PRICES } from "@/pipeline/budget";
 import { allStories, lifespan } from "@/lib/stories";
 import { portraitCredit } from "@/lib/portraits";
 import { eraFor } from "@/lib/eras";
-import { LoopFilm } from "@/components/LoopFilm";
+import { LoopFilm } from "@/components/home/LoopFilm";
 import { clothFor } from "@/components/book/Cover";
 import { pagesFor, roman } from "@/components/book/pagination";
 import { HeroPlate, type HeroScene } from "@/components/home/HeroPlate";
 import { Masked } from "@/components/home/Masked";
 import { Shelf, type ShelfBook } from "@/components/home/Shelf";
 import { Reveal } from "@/components/home/Reveal";
-import { directionsFor } from "@/components/direction.server";
+import { directionsFor } from "@/components/book/direction.server";
 import s from "./home.module.css";
 
 // The shelf lists whatever is in stories/ now, including lives made on /create since the server started.

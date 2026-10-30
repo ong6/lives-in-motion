@@ -2,11 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import Link from "next/link";
-import { LineDrawing } from "@/components/LineDrawing";
+import { LineDrawing } from "@/components/shared/LineDrawing";
 import { Cover } from "@/components/book/Cover";
 import type { CreateInfo, Job, StepId } from "@/pipeline/create/types";
 import type { Budget, JobScene } from "@/pipeline/jobs/types";
-import { explain } from "./explain";
+import { explain } from "@/components/shared/explain";
 import s from "./create.module.css";
 
 const STEPS: { id: StepId; name: string; model: string; does: string }[] = [

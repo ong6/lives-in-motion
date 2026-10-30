@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getStory, lifespan, readingOrder } from "@/lib/stories";
 import { portraitCredit, portraitSrc } from "@/lib/portraits";
-import { StoryPlayer } from "@/components/StoryPlayer";
-import { directionsFor } from "@/components/direction.server";
+import { StoryPlayer } from "@/components/book/StoryPlayer";
+import { directionsFor } from "@/components/book/direction.server";
 
 // Lives made on /create are written to stories/ while the server runs: read them per request.
 export const dynamic = "force-dynamic";

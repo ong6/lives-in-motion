@@ -8,9 +8,9 @@
  */
 import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import Link from "next/link";
-import { LineDrawing } from "@/components/LineDrawing";
+import { LineDrawing } from "@/components/shared/LineDrawing";
 import { Cover } from "@/components/book/Cover";
-import { explain } from "@/components/create/explain";
+import { explain } from "@/components/shared/explain";
 import s from "@/components/create/create.module.css";
 import type { FamilyInfo, FamilyJob, FamilyStepId } from "@/pipeline/family/types";
 import type { JobScene as FamilyScene } from "@/pipeline/jobs/types";
