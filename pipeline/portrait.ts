@@ -26,6 +26,8 @@ export interface Portrait {
   aspect: number;
   /** Polylines in plotter order, x and y as flat pairs in a box 1 wide and `aspect` tall. */
   strokes: number[][];
+  /** The photo the drawing was traced from, cut out by SAM and toned to ink; fades in as the drawing finishes. */
+  photo?: string;
   credit: Record<string, unknown>;
 }
 
@@ -43,7 +45,7 @@ export function drawLines(png: Buffer, opts: { hatch?: number; light?: number } 
   writeFileSync(input, png);
   execFileSync(
     "uv",
-    ["run", "-q", "--no-project", "--with", "opencv-python-headless", "--with", "pillow", "--with", "numpy", "python", LINEDRAW, "-i", input, "-o", svg, "--hatch_size", String(opts.hatch ?? 32), "--hatch_light", String(opts.light ?? 80)],
+    ["run", "-q", "--no-project", "--with", "opencv-python-headless", "--with", "pillow", "--with", "numpy", "python", LINEDRAW, "-i", input, "-o", svg, "--hatch_size", String(opts.hatch ?? 12), "--hatch_light", String(opts.light ?? 70)],
     { cwd: join(ROOT, "pipeline/vendor/linedraw"), stdio: "ignore" },
   );
   const strokes = parsePolylines(readFileSync(svg, "utf8"));
@@ -52,13 +54,13 @@ export function drawLines(png: Buffer, opts: { hatch?: number; light?: number } 
 }
 
 /** SAM 3.1's person mask, kept beside the photo so re-tuning the drawing doesn't pay again. */
-async function cachedMask(slug: string, crop: Buffer, w: number, h: number): Promise<Uint8Array | null> {
+async function cachedMask(slug: string, crop: Buffer, w: number, h: number, extra: string[] = []): Promise<Uint8Array | null> {
   const file = join(ROOT, "pipeline/portraits", `${slug}.mask.png`);
   if (existsSync(file)) {
     const raw = await sharp(file).resize(w, h, { fit: "fill" }).extractChannel(0).raw().toBuffer();
     return Uint8Array.from(raw, (v) => (v > 127 ? 1 : 0));
   }
-  const mask = await personMask(crop, w, h);
+  const mask = await personMask(crop, w, h, extra);
   if (mask) await sharp(Buffer.from(mask.map((v) => v * 255)), { raw: { width: w, height: h, channels: 1 } }).png().toFile(file);
   return mask;
 }
@@ -69,9 +71,10 @@ export async function portrait(slug: string, opts: { sam?: boolean; hatch?: numb
   if (!c) throw new Error(`no credited portrait for ${slug}`);
   const [left, top, width, height] = c.crop;
   const img = sharp(join(ROOT, "pipeline/portraits", `${slug}.jpg`)).extract({ left, top, width, height }).resize({ width: 900 });
-  let crop = await img.png().toBuffer();
+  const rawCrop = await img.png().toBuffer();
+  let crop = rawCrop;
 
-  const mask = opts.sam ? await cachedMask(slug, crop, 900, Math.round((900 * height) / width)) : null;
+  const mask = opts.sam ? await cachedMask(slug, crop, 900, Math.round((900 * height) / width), c.include ?? []) : null;
   if (opts.sam && !mask) console.log(`  ${slug}: SAM found no person; drawing the whole crop`);
   if (mask) {
     // Everything outside the person goes white, blended over a soft edge so the outline stays one line.
@@ -95,6 +98,21 @@ export async function portrait(slug: string, opts: { sam?: boolean; hatch?: numb
     strokes,
     credit: { page: c.page, license: c.license, licenseUrl: c.licenseUrl, artist: c.artist, masked: mask ? "SAM 3.1" : "none" },
   };
+  if (mask) {
+    // The cut-out photo, greyscale with the person's mask as alpha, so the site can reveal the real face under the lines.
+    const W = 900;
+    const H = Math.round((W * height) / width);
+    const grey = await sharp(rawCrop).resize(W, H, { fit: "fill" }).greyscale().normalise().removeAlpha().toColourspace("b-w").raw().toBuffer();
+    const alpha = await sharp(Buffer.from(mask.map((v) => v * 255)), { raw: { width: W, height: H, channels: 1 } }).blur(3).extractChannel(0).raw().toBuffer();
+    const ga = Buffer.alloc(W * H * 2);
+    for (let i = 0; i < W * H; i++) {
+      ga[i * 2] = grey[i];
+      ga[i * 2 + 1] = alpha[i];
+    }
+    await mkdir(join(ROOT, "public/portraits"), { recursive: true });
+    await sharp(ga, { raw: { width: W, height: H, channels: 2 } }).webp({ quality: 80, alphaQuality: 80 }).toFile(join(ROOT, "public/portraits", `${slug}.webp`));
+    out.photo = `/portraits/${slug}.webp`;
+  }
   await mkdir(join(ROOT, "public/lines"), { recursive: true });
   await writeFile(join(ROOT, "public/lines", `${slug}.json`), JSON.stringify(out));
 

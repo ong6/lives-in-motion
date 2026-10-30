@@ -67,7 +67,7 @@ export default function Home() {
         <figure className={s.heroArt}>
           <LineDrawing src={portraitSrc(first.slug)} loop label={`${first.name}, drawing himself in pen strokes`} />
           <figcaption>
-            <b>{first.name}</b>, drawn stroke by stroke, the way a pen plotter would, after SAM 3.1 cut him out of the photo. {portraitCredit(first.slug)}
+            <b>{first.name}</b>, drawn stroke by stroke the way a pen plotter would; SAM 3.1 cut him out of the photo, which develops under the lines as the drawing finishes. {portraitCredit(first.slug)}
           </figcaption>
         </figure>
       </section>

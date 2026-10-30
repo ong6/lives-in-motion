@@ -48,10 +48,10 @@ export async function cutout(plate: Buffer, m: Mask) {
   };
 }
 
-/** SAM 3.1's best "person" mask for an image, scaled to w×h, or null if it finds no one. */
-export async function personMask(image: Buffer, w: number, h: number): Promise<Uint8Array | null> {
+/** SAM 3.1's best mask for `concept`, scaled to w×h as 0/1, or null if it finds none. */
+export async function conceptMask(image: Buffer, concept: string, w: number, h: number): Promise<Uint8Array | null> {
   const { samRaw } = await import("./meta");
-  const masks = await parseSam(await samRaw(image, "person"));
+  const masks = await parseSam(await samRaw(image, concept));
   if (!masks.length) return null;
   const m = masks.sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0))[0];
   const meta = await sharp(image).metadata();
@@ -63,4 +63,37 @@ export async function personMask(image: Buffer, w: number, h: number): Promise<U
     for (let x = left; x < right; x++) full[y * meta.width! + x] = raster[Math.floor((y - top) * sy) * m.mask.width + Math.floor((x - left) * sx)] ? 255 : 0;
   const scaled = await sharp(full, { raw: { width: meta.width!, height: meta.height!, channels: 1 } }).resize(w, h, { fit: "fill" }).extractChannel(0).raw().toBuffer();
   return Uint8Array.from(scaled, (v) => (v > 127 ? 1 : 0));
+}
+
+/** Set every background pixel that can't reach the image border to 1: closes holes left by objects in front of the subject. */
+export function fillHoles(m: Uint8Array, w: number, h: number): Uint8Array {
+  const outside = new Uint8Array(w * h);
+  const stack: number[] = [];
+  for (let x = 0; x < w; x++) stack.push(x, (h - 1) * w + x);
+  for (let y = 0; y < h; y++) stack.push(y * w, y * w + w - 1);
+  while (stack.length) {
+    const i = stack.pop()!;
+    if (outside[i] || m[i]) continue;
+    outside[i] = 1;
+    const x = i % w, y = (i / w) | 0;
+    if (x > 0) stack.push(i - 1);
+    if (x < w - 1) stack.push(i + 1);
+    if (y > 0) stack.push(i - w);
+    if (y < h - 1) stack.push(i + w);
+  }
+  return m.map((v, i) => (v || !outside[i] ? 1 : 0));
+}
+
+/**
+ * The person, plus anything in front of them that belongs in the picture (`extra`, e.g. a
+ * microphone), with interior holes filled. One SAM 3.1 call per concept.
+ */
+export async function personMask(image: Buffer, w: number, h: number, extra: string[] = []): Promise<Uint8Array | null> {
+  const person = await conceptMask(image, "person", w, h);
+  if (!person) return null;
+  for (const concept of extra) {
+    const m = await conceptMask(image, concept, w, h);
+    if (m) for (let i = 0; i < person.length; i++) person[i] |= m[i];
+  }
+  return fillHoles(person, w, h);
 }

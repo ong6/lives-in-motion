@@ -12,6 +12,9 @@
       "title": "A village with no plumbing",
       "caption": "Jack Sim is born, the second of three children, in an impoverished village in Upper Serangoon with no plumbing. His mother is a beautician.",
       "visual": "A 1950s kampung of zinc-roofed wooden houses on stilts among coconut palms at dusk. In the foreground a small boy, seen from behind, carries a tin bucket along a plank walkway toward a wooden outhouse on stilts over a muddy stream. Warm kerosene light in one window.",
+      "cut": [
+        "boy"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Jack Sim",
@@ -26,10 +29,8 @@
           "url": "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
         }
       ],
-      "layers": [],
-      "cut": [
-        "boy"
-      ]
+      "plate": "/stories/jack-sim/s1/plate.webp",
+      "layers": []
     },
     {
       "id": "s2",
@@ -38,6 +39,9 @@
       "title": "Building a business",
       "caption": "After working as a site supervisor and salesman, he starts his own firm. In 1982 he founds Besco Building Supplies; by his early 40s he runs 15 companies.",
       "visual": "A young businessman in a short-sleeved shirt, seen from behind, leans over a drafting table of rolled blueprints on a construction site. Stacked crates and cement bags beside him; shophouse rooftops and a tower crane behind.",
+      "cut": [
+        "man"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Jack Sim",
@@ -48,10 +52,8 @@
           "url": "https://www.asiaone.com/health/toilet-man-jack-sim-has-last-laugh"
         }
       ],
-      "layers": [],
-      "cut": [
-        "man"
-      ]
+      "plate": "/stories/jack-sim/s2/plate.webp",
+      "layers": []
     },
     {
       "id": "s3",
@@ -60,6 +62,9 @@
       "title": "A change of course",
       "caption": "Around 40, with the Asian financial crisis behind him, he sells part of his businesses and turns to social work. In December 1998 he founds the Restroom Association of Singapore.",
       "visual": "A man seen from behind, holding a clipboard, inspects a row of spotless public toilet cubicles in a 1990s hawker centre. A five-star rating card is pinned on the tiled wall; ceiling fans overhead.",
+      "cut": [
+        "man"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Jack Sim",
@@ -70,10 +75,8 @@
           "url": "https://www.weforum.org/people/jack-sim/"
         }
       ],
-      "layers": [],
-      "cut": [
-        "man"
-      ]
+      "plate": "/stories/jack-sim/s3/plate.webp",
+      "layers": []
     },
     {
       "id": "s4",
@@ -82,6 +85,9 @@
       "title": "The World Toilet Organization",
       "caption": "On 19 November 2001 he founds the World Toilet Organization. He uses humour and shock to get people talking about a taboo subject.",
       "visual": "A giant globe on a theatre stage, ringed by a white toilet seat like the rings of Saturn, under two spotlights. A crowd of silhouettes in the front rows raise their hands and laugh.",
+      "cut": [
+        "globe"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Jack Sim",
@@ -96,10 +102,8 @@
           "url": "https://www.wsj.com/articles/ads-for-bathroom-products-flush-with-potty-humor-1423529356"
         }
       ],
-      "layers": [],
-      "cut": [
-        "globe"
-      ]
+      "plate": "/stories/jack-sim/s4/plate.webp",
+      "layers": []
     },
     {
       "id": "s5",
@@ -108,6 +112,9 @@
       "title": "A hero of the environment",
       "caption": "TIME names him a Hero of the Environment in 2008. In 2011 he founds the BOP Hub to back social enterprises serving the world's poorest.",
       "visual": "A small green seedling grows out of a clean white toilet bowl in a sunlit room. A laurel-wreath award hangs on the wall above; a magazine with a blank red border lies on a stool nearby.",
+      "cut": [
+        "toilet"
+      ],
       "sources": [
         {
           "label": "TIME 2008 (archived)",
@@ -118,10 +125,8 @@
           "url": "https://en.wikipedia.org/wiki/Jack_Sim"
         }
       ],
-      "layers": [],
-      "cut": [
-        "toilet"
-      ]
+      "plate": "/stories/jack-sim/s5/plate.webp",
+      "layers": []
     },
     {
       "id": "s6",
@@ -130,6 +135,9 @@
       "title": "A day at the UN",
       "caption": "On 24 July 2013 the UN General Assembly adopts resolution A/RES/67/291, 'Sanitation for All', making 19 November World Toilet Day. It was Singapore's first UN resolution.",
       "visual": "The United Nations General Assembly hall seen from the back rows: tiered curved desks, delegates as silhouettes, a tall golden wall with a plain circular emblem shape. No text, no logos.",
+      "cut": [
+        "delegates"
+      ],
       "sources": [
         {
           "label": "Straits Times",
@@ -140,20 +148,18 @@
           "url": "https://un-project.org/votes/resolution/67-291/"
         }
       ],
+      "plate": "/stories/jack-sim/s6/plate.webp",
       "layers": [
         {
           "id": "date",
           "concept": "calendar",
-          "overlay": "calendar",
-          "text": "19 NOV",
           "depth": 0.9,
           "x": 82,
           "y": 94,
-          "w": 20
+          "w": 20,
+          "overlay": "calendar",
+          "text": "19 NOV"
         }
-      ],
-      "cut": [
-        "delegates"
       ]
     },
     {
@@ -163,6 +169,9 @@
       "title": "Mr. Toilet on film",
       "caption": "The documentary 'Mr. Toilet: The World's #2 Man' premieres at Hot Docs on 27 April 2019, following his funny, relentless campaign.",
       "visual": "Inside a cinema, seen from the back: rows of audience silhouettes laughing. On the big screen, a bright yellow rubber duck sits on a white toilet seat. A projector beam cuts through the dark.",
+      "cut": [
+        "rubber duck"
+      ],
       "sources": [
         {
           "label": "Wikipedia: Mr. Toilet",
@@ -173,10 +182,8 @@
           "url": "https://www.straitstimes.com/lifestyle/entertainment/singapore-toilet-activists-documentary-to-premiere-at-festival"
         }
       ],
-      "layers": [],
-      "cut": [
-        "rubber duck"
-      ]
+      "plate": "/stories/jack-sim/s7/plate.webp",
+      "layers": []
     }
   ]
 }

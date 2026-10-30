@@ -75,6 +75,10 @@ export async function guard<T>(kind: Entry["kind"], worst: number, call: () => P
     }
     record({ kind, usd, note }, file);
     return r;
+  } catch (e) {
+    // A response lost mid-download may still have been billed: count the worst case so the ledger never undercounts.
+    if ((e as { maybeBilled?: boolean })?.maybeBilled) record({ kind, usd: worst, note: `unconfirmed: ${note ?? ""}` }, file);
+    throw e;
   } finally {
     pending -= worst;
   }

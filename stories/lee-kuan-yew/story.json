@@ -12,6 +12,10 @@
       "title": "Born in Singapore",
       "caption": "Lee Kuan Yew is born on 16 September 1923. He studies at Raffles Institution, then at Raffles College on a scholarship.",
       "visual": "A 1920s Singapore street of two-storey shophouses with shuttered windows and five-foot ways. A rickshaw puller and a small schoolboy in white uniform, both seen from behind, walk toward a colonial school building with a clock tower.",
+      "cut": [
+        "schoolboy",
+        "rickshaw"
+      ],
       "sources": [
         {
           "label": "Infopedia: Lee Kuan Yew",
@@ -22,11 +26,8 @@
           "url": "https://www.pmo.gov.sg/Past-Prime-Ministers/Mr-LEE-Kuan-Yew"
         }
       ],
-      "layers": [],
-      "cut": [
-        "schoolboy",
-        "rickshaw"
-      ]
+      "plate": "/stories/lee-kuan-yew/s1/plate.webp",
+      "layers": []
     },
     {
       "id": "s2",
@@ -35,6 +36,9 @@
       "title": "The Japanese Occupation",
       "caption": "The Japanese Occupation (1942-1945) interrupts his studies at Raffles College and shapes his view of how fragile Singapore is.",
       "visual": "A blacked-out Singapore street at night during the Japanese occupation. A queue of civilians seen from behind hold ration tins; bicycles lean on a wall; searchlight beams cross a smoky sky.",
+      "cut": [
+        "bicycle"
+      ],
       "sources": [
         {
           "label": "Infopedia: Lee Kuan Yew",
@@ -45,10 +49,8 @@
           "url": "https://en.wikipedia.org/wiki/Lee_Kuan_Yew"
         }
       ],
-      "layers": [],
-      "cut": [
-        "bicycle"
-      ]
+      "plate": "/stories/lee-kuan-yew/s2/plate.webp",
+      "layers": []
     },
     {
       "id": "s3",
@@ -57,6 +59,9 @@
       "title": "Law at Cambridge",
       "caption": "After the war he goes to England, transferring to Cambridge in 1947. He graduates in law with a starred first in 1949 and is called to the bar in 1950.",
       "visual": "An English university courtyard with Gothic stone arches and an autumn lawn. A young man in a black academic gown, seen from behind, carries a stack of law books across the grass.",
+      "cut": [
+        "student"
+      ],
       "sources": [
         {
           "label": "Infopedia: Lee Kuan Yew",
@@ -71,10 +76,8 @@
           "url": "https://en.wikipedia.org/wiki/Lee_Kuan_Yew"
         }
       ],
-      "layers": [],
-      "cut": [
-        "student"
-      ]
+      "plate": "/stories/lee-kuan-yew/s3/plate.webp",
+      "layers": []
     },
     {
       "id": "s4",
@@ -83,6 +86,9 @@
       "title": "A party, then power",
       "caption": "Political meetings at his home lead to the founding of the People's Action Party in 1954. On 5 June 1959 he is sworn in as prime minister.",
       "visual": "A 1950s living room at night: men seen from behind sit around a round table covered with papers under a hanging lamp and a ceiling fan. Through the open window, a rally crowd and loudspeakers on poles.",
+      "cut": [
+        "round table"
+      ],
       "sources": [
         {
           "label": "Infopedia: Lee Kuan Yew",
@@ -93,10 +99,8 @@
           "url": "https://en.wikipedia.org/wiki/Lee_Kuan_Yew"
         }
       ],
-      "layers": [],
-      "cut": [
-        "round table"
-      ]
+      "plate": "/stories/lee-kuan-yew/s4/plate.webp",
+      "layers": []
     },
     {
       "id": "s5",
@@ -105,6 +109,9 @@
       "title": "Merger and separation",
       "caption": "Singapore joins Malaysia on 16 September 1963. Less than two years later, on 9 August 1965, separation is announced and a visibly emotional Lee breaks down at the press conference.",
       "visual": "A 1965 press conference: a long table crowded with radio microphones and a television camera on a tripod. One speaker sits at the table, seen from behind, facing reporters. A plain wall behind, lit by camera lights.",
+      "cut": [
+        "television camera"
+      ],
       "sources": [
         {
           "label": "Infopedia: Separation",
@@ -119,19 +126,17 @@
           "url": "https://www.remembering.gov.sg/life-and-contributions/mr-lee-and-singapore/singapore-is-out/"
         }
       ],
+      "plate": "/stories/lee-kuan-yew/s5/plate.webp",
       "layers": [
         {
           "id": "flag",
           "concept": "flag",
-          "overlay": "sg-flag",
           "depth": 0.4,
           "x": 74,
           "y": 34,
-          "w": 26
+          "w": 26,
+          "overlay": "sg-flag"
         }
-      ],
-      "cut": [
-        "television camera"
       ]
     },
     {
@@ -141,6 +146,9 @@
       "title": "Building a garden city",
       "caption": "The Housing Board starts in 1960 to clear the housing shortage. In May 1967 Lee sets out a vision of a 'garden city', after the 1963 tree-planting drive.",
       "visual": "New public-housing slab blocks rising behind bamboo scaffolding and a tower crane. In the foreground a man seen from behind plants a young rain tree beside a new road, next to a row of staked saplings.",
+      "cut": [
+        "tree"
+      ],
       "sources": [
         {
           "label": "Infopedia: HDB",
@@ -155,10 +163,7 @@
           "url": "https://nparks.gov.sg/sbg/about/our-history/1963-the-greening-of-singapore"
         }
       ],
-      "layers": [],
-      "cut": [
-        "tree"
-      ]
+      "layers": []
     },
     {
       "id": "s7",
@@ -167,6 +172,9 @@
       "title": "Stepping down, and farewell",
       "caption": "Lee hands the premiership to Goh Chok Tong on 28 November 1990. He dies on 23 March 2015, aged 91; a week of national mourning follows.",
       "visual": "Night: a long queue of mourners seen from behind, holding umbrellas, winds along a street toward a lit civic building. White chrysanthemums lie along a railing in the foreground.",
+      "cut": [
+        "chrysanthemums"
+      ],
       "sources": [
         {
           "label": "PMO: Lee Kuan Yew",
@@ -181,10 +189,7 @@
           "url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Lee_Kuan_Yew"
         }
       ],
-      "layers": [],
-      "cut": [
-        "chrysanthemums"
-      ]
+      "layers": []
     }
   ]
 }

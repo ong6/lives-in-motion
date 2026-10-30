@@ -42,3 +42,17 @@ describe("budget guard", () => {
     expect(usd).toBeCloseTo(1.25 + 4.25 + 0.01);
   });
 });
+
+describe("lost responses", () => {
+  it("records the worst case when a response may have been billed", async () => {
+    const f = ledger();
+    const lost = Object.assign(new Error("reset"), { maybeBilled: true });
+    await expect(guard("image", 0.01, async () => Promise.reject(lost), () => 0, "plate", f)).rejects.toThrow("reset");
+    expect(spent(f)).toBeCloseTo(0.01);
+  });
+  it("records nothing when the request never reached Meta", async () => {
+    const f = ledger();
+    await expect(guard("image", 0.01, async () => Promise.reject(new Error("connect timeout")), () => 0, "plate", f)).rejects.toThrow();
+    expect(spent(f)).toBe(0);
+  });
+});

@@ -18,10 +18,25 @@ const auth = () => {
   return { Authorization: `Bearer ${k}` };
 };
 
-async function send<T>(path: string, init: () => RequestInit, tries = 4): Promise<T> {
+async function send<T>(path: string, init: () => RequestInit, tries = 6): Promise<T> {
   for (let attempt = 1; ; attempt++) {
-    const res = await fetch(`${BASE}${path}`, init());
-    if (res.ok) return (await res.json()) as T;
+    let res: Response;
+    try {
+      res = await fetch(`${BASE}${path}`, init());
+    } catch (e) {
+      // Network failure before any response (connect timeout, reset): nothing was billed, so retry.
+      if (attempt >= tries) throw e;
+      await new Promise((r) => setTimeout(r, 2000 * 2 ** attempt));
+      continue;
+    }
+    if (res.ok) {
+      try {
+        return (await res.json()) as T;
+      } catch (e) {
+        // The connection dropped while the answer was downloading: Meta may have billed it, so don't retry here.
+        throw Object.assign(new Error(`${path}: response lost mid-read (${String(e).slice(0, 120)})`), { maybeBilled: true });
+      }
+    }
     const text = await res.text();
     if (!(res.status === 429 || res.status >= 500) || attempt >= tries) throw new Error(`${path} ${res.status}: ${text.slice(0, 600)}`);
     await new Promise((r) => setTimeout(r, Number(res.headers.get("retry-after")) * 1000 || 1500 * 2 ** attempt));
@@ -93,9 +108,9 @@ const imageFrom = async (d: any): Promise<Buffer> => {
 
 /**
  * Muse Image through the Responses API, which takes reference images (up to 10) so a story's
- * plates share one hand. UNVERIFIED: the image_generation tool's option names.
+ * plates share one hand. `size` is "WxH" and sets the aspect ratio only (docs: /docs/image-generation).
  */
-export async function museImage(prompt: string, refs: Buffer[] = [], size = "1:1"): Promise<Buffer> {
+export async function museImage(prompt: string, refs: Buffer[] = [], size = "1024x1024"): Promise<Buffer> {
   const content: any[] = [{ type: "input_text", text: prompt }];
   for (const ref of refs.slice(0, 10)) content.push({ type: "input_image", image_url: `data:image/png;base64,${ref.toString("base64")}` });
   // Billed per image returned, so a response with no image costs nothing.
@@ -106,7 +121,7 @@ export async function museImage(prompt: string, refs: Buffer[] = [], size = "1:1
     () =>
       post("/responses", {
         model: MODELS.image,
-        input: [{ type: "message", role: "user", content }],
+        input: [{ role: "user", content }],
         tools: [{ type: "image_generation", size, output_format: "png" }],
       }),
     images,
@@ -125,23 +140,31 @@ export async function museImage(prompt: string, refs: Buffer[] = [], size = "1:1
   return imageFrom(g.data?.[0]);
 }
 
-/** Muse Image edit ("change only this"), OpenAI-Images-compatible multipart route. UNVERIFIED field names. */
+/** Muse Image edit ("change only this"): the image plus an instruction on the Responses API. */
 export async function museEdit(image: Buffer, prompt: string): Promise<Buffer> {
   const r = await guard(
     "image",
     PRICES.image,
     () =>
-      send<any>("/images/edits", () => {
-        const form = new FormData();
-        form.append("model", MODELS.image);
-        form.append("prompt", prompt);
-        form.append("image", new Blob([new Uint8Array(image)], { type: "image/png" }), "plate.png");
-        return { method: "POST", headers: auth(), body: form };
+      post("/responses", {
+        model: MODELS.image,
+        input: [
+          {
+            role: "user",
+            content: [
+              { type: "input_image", image_url: `data:image/png;base64,${image.toString("base64")}` },
+              { type: "input_text", text: prompt },
+            ],
+          },
+        ],
+        tools: [{ type: "image_generation", output_format: "png" }],
       }),
-    (r: any) => (r.data?.length ?? 0) * PRICES.image,
+    (r: any) => (r.output ?? []).filter((o: any) => o.type === "image_generation_call" && o.result).length * PRICES.image,
     `edit: ${prompt.slice(0, 54)}`,
   );
-  return imageFrom(r.data?.[0]);
+  const call = (r.output ?? []).find((o: any) => o.type === "image_generation_call");
+  if (!call?.result) throw new Error("Muse Image edit returned no image");
+  return Buffer.from(call.result, "base64");
 }
 
 /** SAM 3.1 concept segmentation: one short noun phrase per request; returns the raw token text. */

@@ -93,15 +93,31 @@ export async function illustrate(slug: string, only?: string[]) {
   const story = await loadStory(slug);
   const first = asset(slug, story.scenes[0].id, "plate.png");
   for (const scene of scenesOf(story, only)) {
+    const done = asset(slug, scene.id, "plate.png");
+    // Resume: without an explicit --scenes list, plates already drawn are kept (each costs a call).
+    if (!only && existsSync(done.file)) {
+      scene.plate ??= asset(slug, scene.id, "plate.webp").url;
+      continue;
+    }
     // The story's first plate is the style reference for the rest, so the series reads as one hand.
     const refs = scene.id !== story.scenes[0].id && existsSync(first.file) ? [await readFile(first.file)] : [];
-    const png = await museImage(platePrompt(scene, eraFor(scene.year)), refs);
+    let png: Buffer;
+    try {
+      png = await museImage(platePrompt(scene, eraFor(scene.year)), refs);
+    } catch (e) {
+      // A refused prompt shouldn't stop the other scenes; reword the scene's `visual` and rerun it with --scenes.
+      if (!String(e).includes("content_policy")) throw e;
+      console.log(`  ${scene.id}: refused by Muse Image's content policy; reword its visual and rerun`);
+      continue;
+    }
     const plate = asset(slug, scene.id, "plate.png");
     await mkdir(join(plate.file, ".."), { recursive: true });
     await writeFile(plate.file, png);
     const web = asset(slug, scene.id, "plate.webp");
     await sharp(png).resize(1400, 1400, { fit: "inside" }).webp({ quality: 82 }).toFile(web.file);
     scene.plate = web.url;
+    // Save after every plate so a dropped connection doesn't lose the ones already paid for.
+    await writeStory(story);
     console.log(`  ${scene.id} plate`);
   }
   await writeStory(story);
@@ -112,6 +128,12 @@ export async function segment(slug: string, only?: string[]) {
   const story = await loadStory(slug);
   for (const scene of scenesOf(story, only)) {
     const platePng = asset(slug, scene.id, "plate.png").file;
+    // Resume: scenes already cut are kept unless named with --scenes.
+    if (!only && scene.layers.some((l) => l.src)) continue;
+    if (!only && !existsSync(platePng)) {
+      console.log(`  ${scene.id}: no plate yet, skipped`);
+      continue;
+    }
     if (!existsSync(platePng)) throw new Error(`no plate for ${scene.id}: run illustrate first`);
     const plate = await readFile(platePng);
     const cuts: Layer[] = [];
@@ -139,6 +161,7 @@ export async function segment(slug: string, only?: string[]) {
         console.log(`  ${scene.id}: no clean plate (${String(e).slice(0, 120)})`);
       }
     }
+    await writeStory(story);
     console.log(`  ${scene.id}: ${cuts.length} cut-outs`);
   }
   await writeStory(story);
