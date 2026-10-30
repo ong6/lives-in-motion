@@ -56,7 +56,7 @@
 .ctaMeta { font: 400 13px/1 var(--font-mono); color: var(--muted); }
 
 .heroArt { margin: 0; height: min(76svh, 44vw); display: grid; grid-template-rows: 1fr auto; gap: 10px; }
-.heroArt canvas { width: 100%; height: 100%; color: var(--ink); }
+.heroArt svg { width: 100%; height: 100%; color: var(--ink); }
 .heroArt figcaption { font: 400 12px/1.5 var(--font-sans); color: var(--muted); max-width: 46ch; justify-self: end; text-align: right; }
 .heroArt b { font-weight: 600; color: var(--ink); }
 
@@ -64,8 +64,8 @@
 .lives, .how { padding: 12svh var(--pad); border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent); }
 .h2 { font: 400 clamp(40px, 5vw, 72px)/1 var(--font-serif); letter-spacing: -0.01em; margin-bottom: 0.6em; }
 .list { list-style: none; margin: 0; padding: 0; }
-.list li { border-top: 1px solid color-mix(in srgb, var(--ink) 16%, transparent); }
-.list li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--ink) 16%, transparent); }
+.list > li { border-top: 1px solid color-mix(in srgb, var(--ink) 16%, transparent); }
+.list > li:last-child { border-bottom: 1px solid color-mix(in srgb, var(--ink) 16%, transparent); }
 .row {
   display: grid;
   grid-template-columns: 48px 200px 1fr auto;
@@ -78,7 +78,7 @@
 .row:hover, .row:focus-visible { background: var(--hover); }
 .no { font: 500 13px/1 var(--font-mono); color: var(--muted); align-self: start; padding-top: 12px; }
 .rowArt { height: 200px; }
-.rowArt canvas { width: 100%; height: 100%; color: var(--ink); }
+.rowArt svg { width: 100%; height: 100%; color: var(--ink); }
 .rowText h3 { font: 400 clamp(36px, 4vw, 60px)/1 var(--font-serif); letter-spacing: -0.01em; }
 .rowText h3 em { color: var(--accent); }
 .rowDates { font: 500 13px/1 var(--font-mono); color: var(--muted); margin-top: 0.8em; }
@@ -88,9 +88,12 @@
 .row:hover .go span { transform: translateX(4px); }
 .go span { display: inline-block; transition: transform 0.2s ease; }
 
-.band { display: flex; gap: 2px; margin-top: 1.4em; max-width: 520px; height: 26px; }
-.band span { min-width: 6px; position: relative; display: flex; align-items: center; padding-left: 8px; overflow: hidden; }
-.band i { font: 500 10px/1 var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: #fff; font-style: normal; white-space: nowrap; }
+.band { margin-top: 1.4em; max-width: 520px; }
+.rule { display: flex; gap: 2px; height: 3px; }
+.rule span { min-width: 3px; border-radius: 2px; }
+.eras { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 10px 0 0; padding: 0; list-style: none; font: 500 11px/1.4 var(--font-mono); letter-spacing: 0.04em; color: var(--muted); }
+.eras li { display: flex; align-items: center; gap: 6px; }
+.eras li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--dot); }
 
 /* ---------- How it's made ---------- */
 .howLede { font: 400 18px/1.5 var(--font-sans); max-width: 56ch; color: #2d2a25; }

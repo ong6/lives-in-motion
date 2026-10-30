@@ -1,140 +1,90 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { evaluate, type Term } from "@/lib/fourier";
-import { inGap } from "@/lib/draw";
 
 export interface LineData {
-  terms: Term[];
-  gaps: [number, number][];
+  /** height / width */
   aspect: number;
+  /** Polylines in plotter order as flat x,y pairs in a box 1 wide and `aspect` tall. */
+  strokes: number[][];
 }
 
-const STEPS = 3200;
-/** Epicycles drawn on screen; the rest still move the pen but are too small to see. */
-const SHOWN = 90;
+/** Drawing units: the SVG is 1000 wide so stroke widths and dash lengths stay in whole numbers. */
+const U = 1000;
+
+const toPath = (s: number[]) => {
+  let d = "";
+  for (let i = 0; i < s.length; i += 2) d += `${i ? "L" : "M"}${(s[i] * U).toFixed(1)} ${(s[i + 1] * U).toFixed(1)}`;
+  return d;
+};
 
 /**
- * A single line drawing itself with Fourier epicycles on a canvas. `progress` (0–1) comes
- * from the scroll position; without it the drawing loops on its own. Colours follow CSS
- * `color` so the line takes on each era's ink.
+ * A pen-plotter line drawing that draws itself, stroke by stroke, with vivus
+ * (https://github.com/maxwellito/vivus, MIT). `progress` (0–1) comes from the scroll
+ * position; with `loop` it draws on its own and starts again. The ink follows CSS `color`.
  */
-export function LineDrawing({
-  src,
-  progress,
-  loop = false,
-  circles = true,
-  label,
-  className,
-}: {
-  src: string;
-  progress?: number;
-  loop?: boolean;
-  circles?: boolean;
-  label: string;
-  className?: string;
-}) {
-  const canvas = useRef<HTMLCanvasElement>(null);
-  const [data, setData] = useState<LineData | null>(null);
-  const samples = useRef<{ x: number; y: number; gap: boolean }[]>([]);
-  const progressRef = useRef(progress ?? 0);
+export function LineDrawing({ src, progress, loop = false, label, className }: { src: string; progress?: number; loop?: boolean; label: string; className?: string }) {
+  const svg = useRef<SVGSVGElement>(null);
+  const vivus = useRef<{ setFrameProgress(p: number): unknown; destroy(): void } | null>(null);
+  const progressRef = useRef(progress ?? 1);
   progressRef.current = progress ?? progressRef.current;
+  const [data, setData] = useState<LineData | null>(null);
 
   useEffect(() => {
     let live = true;
     fetch(src)
       .then((r) => r.json())
-      .then((d: LineData) => {
-        if (!live) return;
-        samples.current = Array.from({ length: STEPS + 1 }, (_, i) => {
-          const t = i / STEPS;
-          const [x, y] = evaluate(d.terms, t).pen;
-          return { x, y, gap: inGap(d.gaps, t) };
-        });
-        setData(d);
-      });
+      .then((d: LineData) => live && setData(d));
     return () => {
       live = false;
     };
   }, [src]);
 
   useEffect(() => {
-    const el = canvas.current;
-    if (!el || !data) return;
-    const ctx = el.getContext("2d")!;
+    if (!data || !svg.current) return;
+    let live = true;
+    let timer: ReturnType<typeof setTimeout>;
     const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let raf = 0;
-    let start = performance.now();
-
-    const frame = (now: number) => {
-      const dpr = Math.min(devicePixelRatio, 2);
-      const { width, height } = el.getBoundingClientRect();
-      if (el.width !== Math.round(width * dpr)) {
-        el.width = Math.round(width * dpr);
-        el.height = Math.round(height * dpr);
-      }
-      const size = Math.min(width, height) * dpr;
-      const ox = (width * dpr) / 2;
-      const oy = (height * dpr) / 2;
-      const map = (x: number, y: number) => [ox + x * size, oy + y * size] as const;
-
-      let p: number;
-      if (reduced) p = 1;
+    import("vivus").then(({ default: Vivus }) => {
+      if (!live || !svg.current) return;
+      const v = new Vivus(svg.current as unknown as HTMLElement, { type: "oneByOne", start: "manual", duration: 420, animTimingFunction: Vivus.EASE_OUT });
+      vivus.current = v;
+      if (reduced) v.finish();
       else if (loop) {
-        // Draw for 14 s, hold 3 s, start again.
-        const cycle = ((now - start) / 1000) % 17;
-        p = Math.min(1, cycle / 14);
-      } else p = progressRef.current;
-
-      const ink = getComputedStyle(el).color;
-      ctx.clearRect(0, 0, el.width, el.height);
-      ctx.lineJoin = ctx.lineCap = "round";
-      const end = Math.round(p * STEPS);
-      const pts = samples.current;
-
-      // Ink, then pen travel as a faint hairline.
-      for (const travel of [false, true]) {
-        ctx.beginPath();
-        for (let i = 1; i <= end; i++) {
-          if (pts[i].gap !== travel) continue;
-          const [ax, ay] = map(pts[i - 1].x, pts[i - 1].y);
-          const [bx, by] = map(pts[i].x, pts[i].y);
-          ctx.moveTo(ax, ay);
-          ctx.lineTo(bx, by);
-        }
-        ctx.strokeStyle = ink;
-        ctx.globalAlpha = travel ? 0.14 : 1;
-        ctx.lineWidth = (travel ? 0.6 : 1.3) * dpr;
-        ctx.stroke();
-      }
-
-      if (circles && p > 0 && p < 1) {
-        const { centres, pen } = evaluate(data.terms, p, SHOWN);
-        ctx.globalAlpha = 0.22;
-        ctx.lineWidth = 0.8 * dpr;
-        ctx.beginPath();
-        centres.forEach(([cx, cy], i) => {
-          const r = data.terms[i].amp * size;
-          if (r < 1.5) return;
-          const [x, y] = map(cx, cy);
-          ctx.moveTo(x + r, y);
-          ctx.arc(x, y, r, 0, Math.PI * 2);
-        });
-        ctx.stroke();
-        const [px, py] = map(pen[0], pen[1]);
-        ctx.globalAlpha = 1;
-        ctx.fillStyle = getComputedStyle(el).getPropertyValue("--accent") || ink;
-        ctx.beginPath();
-        ctx.arc(px, py, 3.2 * dpr, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      ctx.globalAlpha = 1;
-      raf = requestAnimationFrame(frame);
+        // Draw, hold for 3 s, start again.
+        const run = () => v.reset().play(1, () => (timer = setTimeout(run, 3000)));
+        run();
+      } else v.setFrameProgress(progressRef.current);
+    });
+    return () => {
+      live = false;
+      clearTimeout(timer);
+      vivus.current?.destroy();
+      vivus.current = null;
     };
-    start = performance.now();
-    raf = requestAnimationFrame(frame);
-    return () => cancelAnimationFrame(raf);
-  }, [data, loop, circles]);
+  }, [data, loop]);
 
-  return <canvas ref={canvas} className={className} role="img" aria-label={label} />;
+  useEffect(() => {
+    if (!loop && progress != null) vivus.current?.setFrameProgress(Math.max(0, Math.min(1, progress)));
+  }, [progress, loop]);
+
+  return (
+    <svg
+      // A fresh element per drawing: vivus writes dash styles onto the paths.
+      key={src}
+      ref={svg}
+      className={className}
+      viewBox={`0 0 ${U} ${Math.round((data?.aspect ?? 1) * U)}`}
+      preserveAspectRatio="xMidYMid meet"
+      role="img"
+      aria-label={label}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.4}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {data?.strokes.map((s, i) => <path key={i} d={toPath(s)} />)}
+    </svg>
+  );
 }

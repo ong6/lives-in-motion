@@ -2,6 +2,8 @@
  * Minimal Meta Model API client (https://dev.meta.ai/docs). One key covers Muse Spark,
  * Muse Image and SAM 3.1. Shapes the docs give no full example for are marked UNVERIFIED.
  */
+import { PRICES, guard, sparkCost, sparkWorst } from "./budget";
+
 const BASE = process.env.META_API_BASE ?? "https://api.meta.ai/v1";
 
 export const MODELS = {
@@ -35,8 +37,18 @@ export interface Cited {
 }
 
 /** Muse Spark with web search (Responses API only); citations are url_citation annotations. */
+const SEARCH_OUTPUT_CAP = 16000;
+/** Searches one research call may run; only used to price the worst case. */
+const SEARCH_WORST = 40;
+
 export async function sparkSearch(prompt: string): Promise<Cited> {
-  const r = await post("/responses", { model: MODELS.spark, input: prompt, tools: [{ type: "web_search", search_context_size: "high" }] });
+  const r = await guard(
+    "search",
+    sparkWorst(prompt.length, SEARCH_OUTPUT_CAP, SEARCH_WORST),
+    () => post("/responses", { model: MODELS.spark, input: prompt, max_output_tokens: SEARCH_OUTPUT_CAP, tools: [{ type: "web_search", search_context_size: "high" }] }),
+    (r: any) => sparkCost(r.usage, (r.output ?? []).filter((o: any) => o.type === "web_search_call").length),
+    prompt.slice(0, 60),
+  );
   const out: Cited = { text: "", citations: [] };
   for (const item of r.output ?? []) {
     if (item.type !== "message") continue;
@@ -53,14 +65,23 @@ export async function sparkSearch(prompt: string): Promise<Cited> {
 
 /** Muse Spark structured output (Chat Completions, json_schema). */
 export async function sparkJson<T>(system: string, user: string, name: string, schema: object): Promise<T> {
-  const r = await post("/chat/completions", {
-    model: MODELS.spark,
-    messages: [
-      { role: "system", content: system },
-      { role: "user", content: user },
-    ],
-    response_format: { type: "json_schema", json_schema: { name, schema } },
-  });
+  const maxTokens = 16000;
+  const r = await guard(
+    "spark",
+    sparkWorst(system.length + user.length + JSON.stringify(schema).length, maxTokens),
+    () =>
+      post("/chat/completions", {
+        model: MODELS.spark,
+        max_tokens: maxTokens,
+        messages: [
+          { role: "system", content: system },
+          { role: "user", content: user },
+        ],
+        response_format: { type: "json_schema", json_schema: { name, schema } },
+      }),
+    (r: any) => sparkCost(r.usage),
+    name,
+  );
   return JSON.parse(r.choices[0].message.content) as T;
 }
 
@@ -77,33 +98,55 @@ const imageFrom = async (d: any): Promise<Buffer> => {
 export async function museImage(prompt: string, refs: Buffer[] = [], size = "1:1"): Promise<Buffer> {
   const content: any[] = [{ type: "input_text", text: prompt }];
   for (const ref of refs.slice(0, 10)) content.push({ type: "input_image", image_url: `data:image/png;base64,${ref.toString("base64")}` });
-  const r = await post("/responses", {
-    model: MODELS.image,
-    input: [{ type: "message", role: "user", content }],
-    tools: [{ type: "image_generation", size, output_format: "png" }],
-  });
+  // Billed per image returned, so a response with no image costs nothing.
+  const images = (r: any) => (r.output ?? []).filter((o: any) => o.type === "image_generation_call" && o.result).length * PRICES.image;
+  const r = await guard(
+    "image",
+    PRICES.image,
+    () =>
+      post("/responses", {
+        model: MODELS.image,
+        input: [{ type: "message", role: "user", content }],
+        tools: [{ type: "image_generation", size, output_format: "png" }],
+      }),
+    images,
+    prompt.slice(0, 60),
+  );
   const call = (r.output ?? []).find((o: any) => o.type === "image_generation_call");
   if (call?.result) return Buffer.from(call.result, "base64");
   // Fallback: the OpenAI-Images-compatible route (no references).
-  const g = await post("/images/generations", { model: MODELS.image, prompt, size, output_format: "png" });
+  const g = await guard(
+    "image",
+    PRICES.image,
+    () => post("/images/generations", { model: MODELS.image, prompt, size, output_format: "png" }),
+    (g: any) => (g.data?.length ?? 0) * PRICES.image,
+    prompt.slice(0, 60),
+  );
   return imageFrom(g.data?.[0]);
 }
 
 /** Muse Image edit ("change only this"), OpenAI-Images-compatible multipart route. UNVERIFIED field names. */
 export async function museEdit(image: Buffer, prompt: string): Promise<Buffer> {
-  const r = await send<any>("/images/edits", () => {
-    const form = new FormData();
-    form.append("model", MODELS.image);
-    form.append("prompt", prompt);
-    form.append("image", new Blob([new Uint8Array(image)], { type: "image/png" }), "plate.png");
-    return { method: "POST", headers: auth(), body: form };
-  });
+  const r = await guard(
+    "image",
+    PRICES.image,
+    () =>
+      send<any>("/images/edits", () => {
+        const form = new FormData();
+        form.append("model", MODELS.image);
+        form.append("prompt", prompt);
+        form.append("image", new Blob([new Uint8Array(image)], { type: "image/png" }), "plate.png");
+        return { method: "POST", headers: auth(), body: form };
+      }),
+    (r: any) => (r.data?.length ?? 0) * PRICES.image,
+    `edit: ${prompt.slice(0, 54)}`,
+  );
   return imageFrom(r.data?.[0]);
 }
 
 /** SAM 3.1 concept segmentation: one short noun phrase per request; returns the raw token text. */
 export async function samRaw(image: Buffer, concept: string): Promise<string> {
-  const r = await post("/responses", {
+  const r = await guard("sam", PRICES.samImage, () => post("/responses", {
     model: MODELS.sam,
     input: [
       {
@@ -116,7 +159,7 @@ export async function samRaw(image: Buffer, concept: string): Promise<string> {
       },
     ],
     metadata: { include_confidence: "true" },
-  });
+  }), () => PRICES.samImage, concept);
   return (r.output ?? [])
     .flatMap((o: any) => (o.content ?? []).filter((c: any) => c.type === "output_text").map((c: any) => c.text))
     .join("");

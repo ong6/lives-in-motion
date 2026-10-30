@@ -71,7 +71,7 @@ export function StoryPlayer({ story, lifespan, portrait, credit }: { story: Stor
             </p>
           </div>
           <figure className={s.portrait}>
-            <LineDrawing src={portrait} progress={Math.min(1, introP * 1.15)} label={`${story.name}, drawn as one continuous line`} />
+            <LineDrawing src={portrait} progress={Math.min(1, introP * 1.15)} label={`${story.name}, drawn in pen strokes`} />
             <figcaption>{credit}</figcaption>
           </figure>
         </div>

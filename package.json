@@ -10,17 +10,18 @@
     "typecheck": "tsc --noEmit",
     "make": "tsx pipeline/cli.ts",
     "portrait": "tsx pipeline/portrait.ts",
-    "shoot": "tsx scripts/shoot.ts"
+    "shoot": "tsx scripts/shoot.ts",
+    "spend": "tsx pipeline/budget.ts"
   },
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@12.10.1",
   "type": "module",
   "devDependencies": {
-    "@types/d3-contour": "^3.0.6",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "@types/vivus": "^0.4.7",
     "playwright-core": "^1.64.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
@@ -28,12 +29,12 @@
   },
   "dependencies": {
     "@meta-sam/parser": "^0.1.0",
-    "d3-contour": "^4.0.2",
     "next": "^16.4.3",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "server-only": "^0.0.1",
     "sharp": "^0.35.5",
+    "vivus": "^0.4.6",
     "zod": "^4.6.7"
   },
   "private": true

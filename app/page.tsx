@@ -7,7 +7,7 @@ import s from "./home.module.css";
 
 const NICKNAME: Record<string, string> = { "jack-sim": "Mr. Toilet" };
 
-/** The eras a life passes through, as proportional colour bands: the page's legend. */
+/** The eras a life passes through: a thin proportional rule, then the eras named in order. */
 function EraBand({ from, to }: { from: number; to: number }) {
   const span = to - from || 1;
   const bands = ERAS.filter((e) => e.to >= from && e.from <= to).map((e) => ({
@@ -15,12 +15,19 @@ function EraBand({ from, to }: { from: number; to: number }) {
     w: ((Math.min(e.to, to) - Math.max(e.from, from) + 1) / span) * 100,
   }));
   return (
-    <div className={s.band} aria-label="Eras this life spans">
-      {bands.map(({ e, w }) => (
-        <span key={e.id} style={{ flexGrow: w, background: e.accent }} title={`${e.label}, ${e.from}–${e.to > 2050 ? "now" : e.to}`}>
-          <i>{e.label}</i>
-        </span>
-      ))}
+    <div className={s.band}>
+      <div className={s.rule} aria-hidden>
+        {bands.map(({ e, w }) => (
+          <span key={e.id} style={{ flexGrow: w, background: e.accent }} />
+        ))}
+      </div>
+      <ul className={s.eras} aria-label="Eras this life spans">
+        {bands.map(({ e }) => (
+          <li key={e.id} style={{ ["--dot" as string]: e.accent }}>
+            {e.label}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -42,7 +49,7 @@ export default function Home() {
         <div className={s.heroText}>
           <p className={s.kicker}>Singapore · 1923 to today</p>
           <h1 className={s.h1}>
-            Three Singaporean lives, <em>drawn in a single line.</em>
+            Three Singaporean lives, <em>drawn stroke by stroke.</em>
           </h1>
           <p className={s.lede}>
             Scroll through a life decade by decade: what happened, when, and why it mattered. Every scene is sourced, and every
@@ -58,9 +65,9 @@ export default function Home() {
           </div>
         </div>
         <figure className={s.heroArt}>
-          <LineDrawing src={portraitSrc(first.slug)} loop label={`${first.name}, drawing himself as one continuous line`} />
+          <LineDrawing src={portraitSrc(first.slug)} loop label={`${first.name}, drawing himself in pen strokes`} />
           <figcaption>
-            <b>{first.name}</b>, drawn by 1,500 turning circles: a Fourier series of one continuous line. {portraitCredit(first.slug)}
+            <b>{first.name}</b>, drawn stroke by stroke, the way a pen plotter would, after SAM 3.1 cut him out of the photo. {portraitCredit(first.slug)}
           </figcaption>
         </figure>
       </section>
@@ -76,7 +83,7 @@ export default function Home() {
                 <Link href={`/${story.slug}`} className={s.row}>
                   <span className={s.no}>{String(i + 1).padStart(2, "0")}</span>
                   <div className={s.rowArt}>
-                    <LineDrawing src={portraitSrc(story.slug)} progress={1} circles={false} label={`${story.name}, line portrait`} />
+                    <LineDrawing src={portraitSrc(story.slug)} progress={1} label={`${story.name}, line portrait`} />
                   </div>
                   <div className={s.rowText}>
                     <h3>

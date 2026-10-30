@@ -48,7 +48,7 @@ export const Scene = z.object({
   /** Muse Image plate as generated, and the same plate with the cut objects removed. */
   plate: z.string().optional(),
   background: z.string().optional(),
-  /** Fourier line traced from the plate, for the line treatment. */
+  /** Pen-plotter line drawing traced from the plate, for the line treatment. */
   line: z.string().optional(),
   layers: z.array(Layer).default([]),
 });

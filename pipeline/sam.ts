@@ -61,6 +61,6 @@ export async function personMask(image: Buffer, w: number, h: number): Promise<U
   const sx = m.mask.width / (right - left), sy = m.mask.height / (bottom - top);
   for (let y = top; y < bottom; y++)
     for (let x = left; x < right; x++) full[y * meta.width! + x] = raster[Math.floor((y - top) * sy) * m.mask.width + Math.floor((x - left) * sx)] ? 255 : 0;
-  const scaled = await sharp(full, { raw: { width: meta.width!, height: meta.height!, channels: 1 } }).resize(w, h, { fit: "fill" }).raw().toBuffer();
+  const scaled = await sharp(full, { raw: { width: meta.width!, height: meta.height!, channels: 1 } }).resize(w, h, { fit: "fill" }).extractChannel(0).raw().toBuffer();
   return Uint8Array.from(scaled, (v) => (v > 127 ? 1 : 0));
 }

@@ -7,7 +7,7 @@ import { eraFor } from "../lib/eras";
 import { museEdit, museImage, samRaw, sparkJson, sparkSearch, type Cited } from "./meta";
 import { STORYBOARD_SYSTEM, cleanPlatePrompt, platePrompt, researchPrompt, storyboardSchema, verifyPrompt } from "./prompts";
 import { cutout, parseSam } from "./sam";
-import { lineArt, loadGray } from "./line";
+import { drawLines } from "./portrait";
 
 export const ROOT = new URL("..", import.meta.url).pathname;
 const storyFile = (slug: string) => join(ROOT, "stories", slug, "story.json");
@@ -144,17 +144,18 @@ export async function segment(slug: string, only?: string[]) {
   await writeStory(story);
 }
 
-/** A Fourier line traced from the plate, for scenes with the line treatment. */
+/** A pen-plotter line drawing traced from the plate, for scenes with the line treatment. */
 export async function line(slug: string, only?: string[]) {
   const story = await loadStory(slug);
   for (const scene of scenesOf(story, only).filter((s) => s.treatment === "line")) {
     const plate = asset(slug, scene.id, "plate.png").file;
     if (!existsSync(plate)) continue;
-    const art = lineArt(await loadGray(plate, 360, 2), { levels: [70, 125, 180], minPoints: 40, keep: 1200 });
+    const { width, height } = await sharp(plate).metadata();
+    const strokes = drawLines(await sharp(plate).resize({ width: 1024 }).png().toBuffer());
     const out = asset(slug, scene.id, "line.json");
-    await writeFile(out.file, JSON.stringify(art));
+    await writeFile(out.file, JSON.stringify({ aspect: +(height! / width!).toFixed(4), strokes }));
     scene.line = out.url;
-    console.log(`  ${scene.id}: line with ${art.terms.length} terms`);
+    console.log(`  ${scene.id}: line with ${strokes.length} strokes`);
   }
   await writeStory(story);
 }

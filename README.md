@@ -21,10 +21,10 @@ seed of *theabgallery* (The Awesome Biography Gallery).
 
 ```sh
 pnpm install
-pnpm dev          # gallery at /, a story at /story.html?p=jack-sim, directions at /styles.html
-pnpm test         # schema, sources, eras, motifs, SAM decoding and cut-outs
+pnpm dev          # gallery at /, a story at /jack-sim
+pnpm test         # schema, sources, eras, SAM decoding, cut-outs, budget guard
 pnpm build
-pnpm shoot http://localhost:5173   # screenshots into docs/shots with the installed Chrome
+pnpm shoot http://localhost:3000   # screenshots into docs/shots with the installed Chrome
 ```
 
 Story URLs take `p` (slug), `d` (`paper-theatre` | `living-archive` | `era-shift`), `s` (jump
@@ -55,8 +55,32 @@ pnpm make jack-sim --stages illustrate,segment --scenes s4   # redo one scene
 - **Segment:** SAM 3.1 finds each layer's concept ("toilet", "globe") on the plate; the mask
   becomes the alpha of a cropped PNG, placed where SAM found it. A concept SAM misses keeps its motif.
 
-Until a story has been through the pipeline it renders with the built-in cut-paper motifs in
-`src/motifs.ts`, so the whole site works offline and without a key.
+Until a story has been through the pipeline its scenes render as typographic panels (year,
+caption, overlays); the art arrives with `illustrate` and `segment`.
+
+## Line portraits
+
+`pnpm portrait <slug> --sam` turns the credited photo in `pipeline/portraits/` into a pen-plotter
+drawing (`public/lines/<slug>.json`) that the site draws stroke by stroke with
+[vivus](https://github.com/maxwellito/vivus). The tracing is LingDong-'s
+[linedraw](https://github.com/LingDong-/linedraw) (MIT), vendored in `pipeline/vendor/linedraw`
+with one added option, `--hatch_light`. SAM 3.1 cuts the person out first; the mask is cached
+beside the photo. Tune with `--hatch` (patch size, default 32), `--light` (lightest hatched tone,
+default 80), `--lift` and `--gamma`. Needs `uv`.
+
+## Budget
+
+The event allowance is $150 for everything. Every Meta call goes through `pipeline/budget.ts`:
+it prices the call's worst case, refuses it if the ledger would pass **$135** ($15 kept in
+reserve), and records the real cost from the response's usage in `spend.jsonl` (committed).
+
+```sh
+pnpm spend                                   # spent, by model, and what's left
+pnpm spend --add 2.40 "console playground"   # log spend made outside the pipeline
+```
+
+Prices (Standard mode): Spark $1.25 / $4.25 per M tokens in / out, web search $2.50 per 1,000,
+Muse Image $0.01 per image, SAM 3.1 $2.50 per 1,000 images.
 
 ## Rules the content follows
 
@@ -69,11 +93,10 @@ Until a story has been through the pipeline it renders with the built-in cut-pap
 | Path | What |
 |---|---|
 | `stories/<slug>/story.json` | The life: scenes, captions, sources, layers |
-| `src/schema.ts` | Story schema (zod), the contract between pipeline and site |
-| `src/eras.ts` | Era presets: palette, type, grain, easing, print technique |
-| `src/motifs.ts` | Built-in cut-paper SVG motifs |
-| `src/render/` | Still frames and the scroll player |
-| `src/styles/lim.css` | Stage plus the three design directions |
-| `pipeline/` | Meta Model API client, prompts, stages, SAM cut-outs, CLI |
-| `design-system/` | Builds the Claude Design design-system bundle (`pnpm design-system`) |
+| `app/` | Next.js pages: the gallery and one page per life |
+| `components/` | Scroll player, scene art, line drawing |
+| `lib/schema.ts` | Story schema (zod), the contract between pipeline and site |
+| `lib/eras.ts` | Era presets: palette, type, grain, easing, print technique |
+| `pipeline/` | Meta Model API client, budget guard, prompts, stages, SAM cut-outs, portraits, CLI |
+| `spend.jsonl` | Ledger of every paid Meta call |
 | `DESIGN.md` | Design directions, motion rules, hackathon plan |

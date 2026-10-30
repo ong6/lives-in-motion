@@ -34,9 +34,9 @@ describe("stories", () => {
       it("mixes art treatments", () => {
         expect(new Set(s.scenes.map((sc) => sc.treatment)).size).toBeGreaterThan(1);
       });
-      it("has a credited single-line portrait", () => {
+      it("has a credited line portrait", () => {
         const art = JSON.parse(readFileSync(`public/lines/${s.slug}.json`, "utf8"));
-        expect(art.terms.length).toBeGreaterThan(500);
+        expect(art.strokes.length).toBeGreaterThan(100);
         expect(art.credit.license).toMatch(/Public domain|CC BY/);
       });
     });

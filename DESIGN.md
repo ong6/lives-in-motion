@@ -10,7 +10,7 @@ All three share one stage, one story file and one set of era presets; a reader c
 | **Living Archive** | A museum catalogue: each scene is a numbered plate with a double rule, multiply-blended and desaturated; caption as a museum label. | Ink-bleed reveal (clip-path), slow parallax. | The calm, credible reading mode. |
 | **Era Shift** | Full bleed. The interface itself (page colour, display face, controls) takes on the decade of the scene. | Colours cross-fade between eras; giant year numerals. | The most distinctive; best on long lives that cross eras (Lee Kuan Yew). |
 
-## Era presets (`src/eras.ts`)
+## Era presets (`lib/eras.ts`)
 
 | Era | Years | Print technique | Easing |
 |---|---|---|---|
