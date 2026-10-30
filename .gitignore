@@ -10,3 +10,4 @@ docs/shots/raw/
 .vercel
 next-env.d.ts
 tsconfig.tsbuildinfo
+__pycache__/
