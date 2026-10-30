@@ -7,7 +7,8 @@
  * the same total. Spend made outside this pipeline (console playground, curl tests) is added
  * with `pnpm spend --add <usd> "<note>"`.
  *
- * Prices: https://dev.meta.ai/docs/pricing-rate-limits (Standard mode, checked 2026-10-30).
+ * Prices: https://dev.meta.ai/docs/pricing-rate-limits (Standard mode, checked 2026-10-30). This is
+ * the one price table; pipeline/meta.ts prices every call from it.
  */
 import { AsyncLocalStorage } from "node:async_hooks";
 import { appendFileSync, existsSync, readFileSync } from "node:fs";
@@ -25,6 +26,8 @@ export const PRICES = {
   wonderInput: 4 / 1e6,
   wonderCachedInput: 0.2 / 1e6,
   wonderOutput: 20 / 1e6,
+  /** Muse Voice Transcribe: $0.18 an hour of audio, billed per whole second; failed and 429 requests are free. */
+  transcribe: 0.18 / 3600,
 };
 
 /** The event allowance, and the reserve kept back for estimate error and spend we can't see. */
@@ -36,7 +39,7 @@ const LEDGER = join(ROOT, "spend.jsonl");
 
 export interface Entry {
   at: string;
-  kind: "spark" | "search" | "image" | "sam" | "wonder" | "manual";
+  kind: "spark" | "search" | "image" | "sam" | "wonder" | "transcribe" | "manual";
   usd: number;
   note?: string;
   /** The job a call was made for ("create:<slug>" for lives made on /create). */
@@ -152,6 +155,9 @@ export function wonderCost(usage: any): number {
   const cached = usage?.prompt_tokens_details?.cached_tokens ?? usage?.input_tokens_details?.cached_tokens ?? 0;
   return (input - cached) * PRICES.wonderInput + cached * PRICES.wonderCachedInput + output * PRICES.wonderOutput;
 }
+
+/** Cost of transcribing `durationMs` of audio: whole seconds, rounded down. */
+export const transcribeCost = (durationMs: number) => Math.floor(durationMs / 1000) * PRICES.transcribe;
 
 /**
  * Worst case for a Wonder call: the text (about 3 chars a token), each image at a generous

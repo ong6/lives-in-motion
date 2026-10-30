@@ -23,7 +23,7 @@ export interface JobCut {
 }
 
 /** Spend by Meta model family, in USD. */
-export type Spend = Partial<Record<"spark" | "search" | "image" | "sam" | "wonder" | "manual", number>>;
+export type Spend = Partial<Record<"spark" | "search" | "image" | "sam" | "wonder" | "transcribe" | "manual", number>>;
 
 export interface JobScene {
   id: string;

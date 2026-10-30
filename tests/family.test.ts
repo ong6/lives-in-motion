@@ -1,7 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { Source, Story } from "@/lib/schema";
 import { clock, sniffAudio, wavSeconds } from "@/pipeline/family/audio";
-import { TRANSCRIBE_PER_SECOND, parseTranscribe, transcribeCost } from "@/pipeline/family/transcribe";
+import { parseTranscribe } from "@/pipeline/family/transcribe";
+import { PRICES, transcribeCost } from "@/pipeline/budget";
 import { asResearch, checkFacts, citationLabel, citationUrl, findQuote, norm, shortQuote, type RawFacts } from "@/pipeline/family/facts";
 import { applyChecks } from "@/pipeline/family/check";
 import { parseScript } from "@/pipeline/family/sample";
@@ -45,7 +46,7 @@ describe("family audio", () => {
 
 describe("Muse Voice Transcribe", () => {
   it("prices whole seconds at $0.18 an hour", () => {
-    expect(transcribeCost(30_400)).toBeCloseTo(30 * TRANSCRIBE_PER_SECOND, 10);
+    expect(transcribeCost(30_400)).toBeCloseTo(30 * PRICES.transcribe, 10);
     expect(transcribeCost(3_600_000)).toBeCloseTo(0.18, 10);
   });
   it("turns the response's turns into numbered, ordered turns", () => {
@@ -66,7 +67,7 @@ describe("Muse Voice Transcribe", () => {
       [1, 1520, "A"],
       [2, 5900, "B"],
     ]);
-    expect(t.usd).toBeCloseTo(8 * TRANSCRIBE_PER_SECOND, 10);
+    expect(t.usd).toBeCloseTo(8 * PRICES.transcribe, 10);
     expect(t.untimed).toBeUndefined();
   });
   it("falls back to numbered lines, without timestamps, when no turns come back", () => {

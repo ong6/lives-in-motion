@@ -31,7 +31,7 @@ import { AUDIO_LIMITS, clock, encodeRecording, encodeUpload, sniffAudio } from "
 import { asResearch, extractFacts } from "./facts";
 import { applyChecks, checkCaptions } from "./check";
 import { SAMPLE } from "./sample";
-import { TRANSCRIBE_MODEL, transcribe, type Transcript } from "./transcribe";
+import { transcribe, type Transcript } from "./transcribe";
 import { FAMILY_STEPS, type FamilyFact, type FamilyInfo, type FamilyJob, type FamilyLog, type FamilyScene, type FamilyStepId } from "./types";
 
 /** Typical seconds per step for a 3-minute recording (from the sample's real run). */
@@ -257,7 +257,7 @@ export function newJob(o: { slug: string; name: string; hint: string; photos: nu
     usd: 0,
     ceiling: LIFE_CEILING,
     spend: {},
-    models: { transcribe: TRANSCRIBE_MODEL, spark: MODELS.spark, image: MODELS.image, sam: MODELS.sam },
+    models: { transcribe: MODELS.transcribe, spark: MODELS.spark, image: MODELS.image, sam: MODELS.sam },
     log: [],
   };
 }
@@ -423,12 +423,12 @@ export async function runReal(input: RealInput) {
     // 2. Muse Voice Transcribe: turns with start times and speaker labels.
     let t = record.transcript;
     if (!t) {
-      log({ step: "transcribe", kind: "info", model: TRANSCRIBE_MODEL, message: `transcribing ${clock((record.durationMs ?? 0) / 1000)} of audio (English, Malay, Mandarin, Tamil; speakers labelled)` });
+      log({ step: "transcribe", kind: "info", model: MODELS.transcribe, message: `transcribing ${clock((record.durationMs ?? 0) / 1000)} of audio (English, Malay, Mandarin, Tamil; speakers labelled)` });
       const started = Date.now();
       t = await scoped("transcribe", undefined, () => transcribe(recordingFile(slug, "wav"), { keywords: input.keywords, note: `family: ${slug}` }));
       record = { ...record, transcript: t, durationMs: t.durationMs || record.durationMs };
       await writeRecord(record);
-      log({ step: "transcribe", kind: "info", model: TRANSCRIBE_MODEL, message: `${t.turns.length} turns${t.untimed ? " (no timestamps came back; citing transcript lines)" : ""} in ${Math.round((Date.now() - started) / 1000)} s` });
+      log({ step: "transcribe", kind: "info", model: MODELS.transcribe, message: `${t.turns.length} turns${t.untimed ? " (no timestamps came back; citing transcript lines)" : ""} in ${Math.round((Date.now() - started) / 1000)} s` });
     }
     update((j) => void (j.turns = t!.turns));
     step("transcribe", "done", t.untimed ? "no timestamps returned; facts cite transcript lines" : undefined);
@@ -706,14 +706,14 @@ async function runMock(rec: FamilyJob) {
 
   step("transcribe", "running");
   update((j) => Object.assign(j, { audio: rec.audio, durationMs: rec.durationMs }));
-  log({ step: "transcribe", kind: "info", model: TRANSCRIBE_MODEL, message: `transcribing ${clock((rec.durationMs ?? 0) / 1000)} of audio (English, Malay, Mandarin, Tamil; speakers labelled)` });
+  log({ step: "transcribe", kind: "info", model: MODELS.transcribe, message: `transcribing ${clock((rec.durationMs ?? 0) / 1000)} of audio (English, Malay, Mandarin, Tamil; speakers labelled)` });
   await sleep(2500);
   for (let i = 1; i <= rec.turns.length; i++) {
     update((j) => Object.assign(j, { turns: rec.turns.slice(0, i), subject: rec.subject }));
     await sleep(Math.min(900, 9000 / rec.turns.length));
   }
   fake("transcribe", undefined, "transcribe", rec.steps.transcribe.usd);
-  log({ step: "transcribe", kind: "info", model: TRANSCRIBE_MODEL, message: `${rec.turns.length} turns` });
+  log({ step: "transcribe", kind: "info", model: MODELS.transcribe, message: `${rec.turns.length} turns` });
   step("transcribe", "done");
 
   step("facts", "running");
