@@ -28,6 +28,15 @@ const SHOTS: Shot[] = [
   { name: "book-jack-sim-2001", path: "/jack-sim#p=6", wait: 4500 },
   { name: "layers-jack-sim-2001", path: "/jack-sim#p=6", wait: 4500, act: async (p) => (await p.keyboard.press("l"), await p.waitForTimeout(2500)) },
   { name: "book-joseph-schooling-2016", path: "/joseph-schooling#p=8", wait: 4500 },
+  // The notes spread: the notes and the "On the pictures" page, whose copy follows the book's provenance.
+  { name: "notes-jack-sim", path: "/jack-sim#p=10", wait: 3000 },
+  { name: "notes-tan-howe-liang", path: "/tan-howe-liang#p=10", wait: 3000 },
+  { name: "book-ah-ma-sample-title", path: "/ah-ma-sample#p=2", wait: 4000 },
+  { name: "notes-ah-ma-sample", path: "/ah-ma-sample#p=10", wait: 3000 },
+  { name: "home-full", path: "/", wait: 2500, fullPage: true },
+  { name: "family", path: "/family", wait: 1500, fullPage: true },
+  { name: "family-record", path: "/family/ah-ma-sample", wait: 1500, fullPage: true },
+  { name: "create", path: "/create", wait: 1500, fullPage: true },
   // The book change: from Jack Sim's notes, one turn closes his book and opens the next.
   { name: "book-change", path: "/jack-sim#p=10", wait: 3000, act: async (p) => (await p.keyboard.press("ArrowRight"), await p.waitForTimeout(1300)) },
   {
@@ -38,6 +47,18 @@ const SHOTS: Shot[] = [
       await p.getByRole("button", { name: /rehearse/i }).first().click();
       // A rehearsal replays a whole life, Muse Wonder's Direct step included, in about a minute and a half.
       await p.getByText(/Rehearsal finished/i).waitFor({ timeout: 180_000 });
+      await p.waitForTimeout(1500);
+    },
+    fullPage: true,
+  },
+  {
+    name: "family-replay",
+    path: "/family",
+    wait: 1500,
+    act: async (p) => {
+      await p.getByRole("button", { name: /try the sample/i }).click();
+      // The replay compresses the sample book's real run to about a minute.
+      await p.getByText(/Sample replayed/i).waitFor({ timeout: 180_000 });
       await p.waitForTimeout(1500);
     },
     fullPage: true,
