@@ -1,0 +1,59 @@
+{
+  "lee-kuan-yew": {
+    "title": "File:Lee Kuan Yew at the 1969 Five Power Defence Conference (5).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lee_Kuan_Yew_at_the_1969_Five_Power_Defence_Conference_(5).jpg",
+    "license": "Public domain",
+    "licenseUrl": null,
+    "artist": "Australian News and Information Bureau, Canberra",
+    "crop": [
+      430,
+      110,
+      195,
+      260
+    ],
+    "oval": [
+      0.5,
+      0.48,
+      0.42,
+      0.52
+    ]
+  },
+  "jack-sim": {
+    "title": "File:Jack Sim (WTO, 2010) - 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Jack_Sim_(WTO,_2010)_-_2.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "Clorox Toilet Products",
+    "crop": [
+      250,
+      120,
+      290,
+      360
+    ],
+    "oval": [
+      0.5,
+      0.5,
+      0.42,
+      0.5
+    ]
+  },
+  "joseph-schooling": {
+    "title": "File:Joseph Schooling (SIN) 2015.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Joseph_Schooling_(SIN)_2015.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Oleg Bkhambri (Voltmetro)",
+    "crop": [
+      130,
+      30,
+      430,
+      560
+    ],
+    "oval": [
+      0.5,
+      0.5,
+      0.45,
+      0.52
+    ]
+  }
+}

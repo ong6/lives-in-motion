@@ -47,3 +47,20 @@ export async function cutout(plate: Buffer, m: Mask) {
     w: +((bw / W) * 100).toFixed(2),
   };
 }
+
+/** SAM 3.1's best "person" mask for an image, scaled to w×h, or null if it finds no one. */
+export async function personMask(image: Buffer, w: number, h: number): Promise<Uint8Array | null> {
+  const { samRaw } = await import("./meta");
+  const masks = await parseSam(await samRaw(image, "person"));
+  if (!masks.length) return null;
+  const m = masks.sort((a, b) => (b.confidence ?? 0) - (a.confidence ?? 0))[0];
+  const meta = await sharp(image).metadata();
+  const full = Buffer.alloc(meta.width! * meta.height!);
+  const raster = decodeMaskToRaster(m.mask);
+  const { left, top, right, bottom } = m.bounds;
+  const sx = m.mask.width / (right - left), sy = m.mask.height / (bottom - top);
+  for (let y = top; y < bottom; y++)
+    for (let x = left; x < right; x++) full[y * meta.width! + x] = raster[Math.floor((y - top) * sy) * m.mask.width + Math.floor((x - left) * sx)] ? 255 : 0;
+  const scaled = await sharp(full, { raw: { width: meta.width!, height: meta.height!, channels: 1 } }).resize(w, h, { fit: "fill" }).raw().toBuffer();
+  return Uint8Array.from(scaled, (v) => (v > 127 ? 1 : 0));
+}

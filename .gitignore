@@ -1,9 +1,12 @@
 node_modules/
-dist/
+.next/
+out/
 .env
 .env.*
 !.env.example
 *.log
 .DS_Store
-design-system/dist/
 docs/shots/raw/
+.vercel
+next-env.d.ts
+tsconfig.tsbuildinfo

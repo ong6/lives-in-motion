@@ -4,70 +4,32 @@
   "born": "1995",
   "died": null,
   "tagline": "Singapore's first Olympic champion.",
-  "direction": "paper-theatre",
-  "generated": false,
   "scenes": [
     {
       "id": "s1",
+      "treatment": "theatre",
       "year": "1995",
       "title": "A swimmer's start",
       "caption": "Joseph Schooling is born on 16 June 1995 in Singapore and grows up in the pool.",
-      "visual": "Neighbourhood swimming pool with lane ropes, kickboard, child swimmer seen from behind, HDB blocks in the distance.",
+      "visual": "A neighbourhood public swimming pool on a sunny morning, public-housing blocks and palms behind. A small boy in goggles, seen from behind, sits on the pool edge holding a kickboard.",
       "sources": [
         {
           "label": "Wikipedia: Joseph Schooling",
           "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
         }
       ],
-      "layers": [
-        {
-          "id": "blocks",
-          "concept": "housing blocks",
-          "motif": "hdb-blocks",
-          "depth": 0.15,
-          "x": 70,
-          "y": 62,
-          "w": 34,
-          "enter": "fade"
-        },
-        {
-          "id": "pool",
-          "concept": "pool with lane ropes",
-          "motif": "pool-lanes",
-          "depth": 0.45,
-          "x": 50,
-          "y": 100,
-          "w": 90,
-          "enter": "fade"
-        },
-        {
-          "id": "figure",
-          "concept": "person seen from behind",
-          "motif": "figure-child",
-          "depth": 0.85,
-          "x": 30,
-          "y": 92,
-          "w": 7,
-          "enter": "rise"
-        },
-        {
-          "id": "goggles",
-          "concept": "goggles",
-          "motif": "goggles",
-          "depth": 0.95,
-          "x": 84,
-          "y": 98,
-          "w": 12,
-          "enter": "drop"
-        }
+      "layers": [],
+      "cut": [
+        "boy"
       ]
     },
     {
       "id": "s2",
+      "treatment": "line",
       "year": "2008",
       "title": "Meeting his idol",
       "caption": "At 13, he meets Michael Phelps on a visit to Singapore before the Beijing Olympics. It pushes him to train in the US.",
-      "visual": "Two silhouettes, one tall, one small, side by side beside a pool; a camera flash; Olympic rings banner.",
+      "visual": "Poolside at a training session: a tall swimmer in a parka and a 13-year-old boy, both seen from behind, stand side by side looking at the pool. Photographers' flashes pop at the side.",
       "sources": [
         {
           "label": "Intl Swimming Hall of Fame",
@@ -78,55 +40,19 @@
           "url": "https://www.theweek.in/news/sports/joseph-schooling-man-who-schooled-great-phelps.html"
         }
       ],
-      "layers": [
-        {
-          "id": "flash",
-          "concept": "camera flash",
-          "motif": "camera-flash",
-          "depth": 0.25,
-          "x": 60,
-          "y": 54,
-          "w": 20,
-          "enter": "unfold"
-        },
-        {
-          "id": "pool",
-          "concept": "pool",
-          "motif": "pool-lanes",
-          "depth": 0.35,
-          "x": 50,
-          "y": 104,
-          "w": 96,
-          "enter": "fade"
-        },
-        {
-          "id": "tall",
-          "concept": "tall swimmer from behind",
-          "motif": "figure-tall",
-          "depth": 0.75,
-          "x": 58,
-          "y": 92,
-          "w": 10,
-          "enter": "rise"
-        },
-        {
-          "id": "figure",
-          "concept": "person seen from behind",
-          "motif": "figure-child",
-          "depth": 0.85,
-          "x": 44,
-          "y": 92,
-          "w": 8,
-          "enter": "rise"
-        }
+      "layers": [],
+      "cut": [
+        "boy",
+        "tall swimmer"
       ]
     },
     {
       "id": "s3",
+      "treatment": "theatre",
       "year": "2009",
       "title": "Off to Bolles",
       "caption": "In 2009 he enrols at the Bolles School in Jacksonville, Florida, a year after meeting Phelps.",
-      "visual": "Suitcase and boarding pass, Florida palm trees, school swim-team banner, a pool deck at sunrise.",
+      "visual": "A teenager seen from behind stands with a large suitcase at an airport window at sunrise, a jet on the tarmac outside and palm trees reflected in the glass.",
       "sources": [
         {
           "label": "CNN",
@@ -137,55 +63,18 @@
           "url": "https://en.wikipedia.org/wiki/Joseph_Schooling"
         }
       ],
-      "layers": [
-        {
-          "id": "palm",
-          "concept": "palm tree",
-          "motif": "palm",
-          "depth": 0.3,
-          "x": 22,
-          "y": 90,
-          "w": 16,
-          "enter": "rise"
-        },
-        {
-          "id": "palm2",
-          "concept": "palm tree",
-          "motif": "palm",
-          "depth": 0.4,
-          "x": 80,
-          "y": 88,
-          "w": 14,
-          "enter": "rise"
-        },
-        {
-          "id": "suitcase",
-          "concept": "suitcase",
-          "motif": "suitcase",
-          "depth": 0.75,
-          "x": 44,
-          "y": 96,
-          "w": 17,
-          "enter": "slide-right"
-        },
-        {
-          "id": "figure",
-          "concept": "teenager seen from behind",
-          "motif": "figure-adult",
-          "depth": 0.85,
-          "x": 62,
-          "y": 92,
-          "w": 8,
-          "enter": "rise"
-        }
+      "layers": [],
+      "cut": [
+        "suitcase"
       ]
     },
     {
       "id": "s4",
+      "treatment": "line",
       "year": "2014",
       "title": "A Longhorn in Texas",
       "caption": "He enrols at the University of Texas at Austin in 2014, training and racing for the Longhorns.",
-      "visual": "Burnt-orange longhorn emblem, collegiate natatorium, stopwatch, lane-timing boards.",
+      "visual": "A college indoor natatorium: a deep blue competition pool, a swimmer mid-butterfly stroke as a dark silhouette, timing boards on the wall, a crowd in orange in the bleachers.",
       "sources": [
         {
           "label": "Wikipedia: Joseph Schooling",
@@ -196,45 +85,18 @@
           "url": "https://www.usatoday.com/story/sports/olympics/rio-2016/2016/08/02/rio-olympics-joseph-schooling-university-of-texas/87970932/"
         }
       ],
-      "layers": [
-        {
-          "id": "pool",
-          "concept": "pool",
-          "motif": "pool-lanes",
-          "depth": 0.2,
-          "x": 50,
-          "y": 100,
-          "w": 90,
-          "enter": "fade"
-        },
-        {
-          "id": "watch",
-          "concept": "stopwatch",
-          "motif": "stopwatch",
-          "depth": 0.6,
-          "x": 26,
-          "y": 80,
-          "w": 14,
-          "enter": "drop"
-        },
-        {
-          "id": "swimmer",
-          "concept": "swimmer",
-          "motif": "swimmer",
-          "depth": 0.85,
-          "x": 58,
-          "y": 86,
-          "w": 30,
-          "enter": "slide-left"
-        }
+      "layers": [],
+      "cut": [
+        "swimmer"
       ]
     },
     {
       "id": "s5",
+      "treatment": "theatre",
       "year": "2016",
       "title": "Gold in Rio",
       "caption": "On 12 August 2016 he wins the 100 m butterfly in 50.39 seconds, an Olympic record, ahead of Phelps. It is Singapore's first Olympic gold.",
-      "visual": "Rio Olympic pool, scoreboard reading 50.39, flag-draped silhouettes in the stands, podium.",
+      "visual": "An Olympic final: a swimmer surging through the water in a butterfly stroke, arms raised, splashes frozen in mid-air, lane ropes and stadium lights. A large blank dark scoreboard hangs above the pool.",
       "sources": [
         {
           "label": "Rio 2016 (archived)",
@@ -251,54 +113,27 @@
       ],
       "layers": [
         {
-          "id": "board",
+          "id": "score",
           "concept": "scoreboard",
-          "motif": "scoreboard",
-          "depth": 0.2,
+          "overlay": "scoreboard",
+          "text": "50.39",
+          "depth": 0.3,
           "x": 50,
-          "y": 52,
-          "w": 40,
-          "enter": "unfold",
-          "text": "50.39"
-        },
-        {
-          "id": "pool",
-          "concept": "pool",
-          "motif": "pool-lanes",
-          "depth": 0.5,
-          "x": 50,
-          "y": 104,
-          "w": 96,
-          "enter": "fade"
-        },
-        {
-          "id": "swimmer",
-          "concept": "swimmer",
-          "motif": "swimmer",
-          "depth": 0.85,
-          "x": 44,
-          "y": 90,
-          "w": 28,
-          "enter": "slide-left"
-        },
-        {
-          "id": "flag",
-          "concept": "flag",
-          "motif": "flag-sg",
-          "depth": 0.95,
-          "x": 86,
-          "y": 84,
-          "w": 14,
-          "enter": "rise"
+          "y": 30,
+          "w": 48
         }
+      ],
+      "cut": [
+        "swimmer"
       ]
     },
     {
       "id": "s6",
+      "treatment": "theatre",
       "year": "2016",
       "title": "A hero's return",
       "caption": "Singapore erupts in celebration. He receives S$1 million under the national reward scheme, and his National Service is deferred until after Tokyo 2020.",
-      "visual": "Airport arrival hall with crowds waving flags, open-top bus, confetti, giant cheque prop.",
+      "visual": "Homecoming parade: an open-top bus moves through a dense crowd of cheering silhouettes with raised arms, confetti in the air. A swimmer stands on the bus, seen from behind, waving.",
       "sources": [
         {
           "label": "AsiaOne (archived)",
@@ -315,53 +150,26 @@
       ],
       "layers": [
         {
-          "id": "confetti",
-          "concept": "confetti",
-          "motif": "confetti",
-          "depth": 0.1,
-          "x": 50,
-          "y": 70,
-          "w": 90,
-          "enter": "drop"
-        },
-        {
-          "id": "crowd",
-          "concept": "crowd",
-          "motif": "crowd",
-          "depth": 0.6,
-          "x": 50,
-          "y": 100,
-          "w": 90,
-          "enter": "rise"
-        },
-        {
           "id": "flag",
           "concept": "flag",
-          "motif": "flag-sg",
-          "depth": 0.8,
+          "overlay": "sg-flag",
+          "depth": 0.85,
           "x": 22,
-          "y": 80,
-          "w": 14,
-          "enter": "rise"
-        },
-        {
-          "id": "medal",
-          "concept": "medal",
-          "motif": "medal",
-          "depth": 0.95,
-          "x": 74,
-          "y": 70,
-          "w": 9,
-          "enter": "drop"
+          "y": 36,
+          "w": 24
         }
+      ],
+      "cut": [
+        "bus"
       ]
     },
     {
       "id": "s7",
+      "treatment": "line",
       "year": "2024",
       "title": "The final lap",
       "caption": "After a 2017 world bronze, an early exit at Tokyo 2020 and a 2022 admission of cannabis use abroad, he retires from competitive swimming on 2 April 2024.",
-      "visual": "Empty pool at dusk, a gold medal hung on a lane rope, swim cap and goggles on a starting block.",
+      "visual": "Dusk at an empty Olympic pool, still water reflecting the lights. Goggles and a swim cap rest on a starting block, with a gold medal hanging from it.",
       "sources": [
         {
           "label": "NBC Sports",
@@ -376,47 +184,9 @@
           "url": "https://www.channelnewsasia.com/singapore/joseph-schooling-drugs-test-failed-mindef-swimming-2901816"
         }
       ],
-      "layers": [
-        {
-          "id": "pool",
-          "concept": "empty pool",
-          "motif": "pool-lanes",
-          "depth": 0.2,
-          "x": 50,
-          "y": 100,
-          "w": 90,
-          "enter": "fade"
-        },
-        {
-          "id": "block",
-          "concept": "starting block",
-          "motif": "starting-block",
-          "depth": 0.6,
-          "x": 40,
-          "y": 90,
-          "w": 14,
-          "enter": "rise"
-        },
-        {
-          "id": "medal",
-          "concept": "medal",
-          "motif": "medal",
-          "depth": 0.75,
-          "x": 40,
-          "y": 66,
-          "w": 7,
-          "enter": "drop"
-        },
-        {
-          "id": "goggles",
-          "concept": "goggles",
-          "motif": "goggles",
-          "depth": 0.95,
-          "x": 70,
-          "y": 98,
-          "w": 12,
-          "enter": "slide-right"
-        }
+      "layers": [],
+      "cut": [
+        "starting block"
       ]
     }
   ]
