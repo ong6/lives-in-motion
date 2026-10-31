@@ -1,0 +1,348 @@
+{
+  "slug": "tan-howe-liang",
+  "name": "Tan Howe Liang",
+  "generated": "2026-10-30",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run: the session's \\$4 Meta cap was already spent on web research. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "unusedPhotos": [
+    "tan-howe-liang-at-the-opening-of-the-yog-learning-centre-sin.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1937",
+      "title": "Cramped rooms in Chinatown",
+      "treatment": "plate",
+      "body": "Tan Howe Liang was born on 5 May 1933 in Swatow, in southern China, one of seven children. When he was about four, his father brought the family to Singapore to make a living, and they squeezed into rooms in Chinatown. A few years later he was sent back to China for school, then returned to study at Tuan Mong Secondary School and left after a year, because the family needed him to earn. He tried every sport the school offered but could not keep any of them. What he loved most as a boy in Chinatown was not sport at all. \"No one knows that cooking is my first love.\"",
+      "words": 111,
+      "quote": {
+        "text": "No one knows that cooking is my first love.",
+        "speaker": "Tan Howe Liang",
+        "fact": 8
+      },
+      "voice": "\"No one knows that cooking is my first love.\"",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "art": {
+        "direction": "Layered paper cut-out of a 1930s Chinatown shophouse street at evening: five-foot way, hanging laundry poles, a hawker's charcoal stove glowing; a small boy seen from behind watching a wok over the fire.",
+        "cut": [
+          "boy",
+          "wok",
+          "laundry poles",
+          "stove"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "year": "1947",
+      "title": "A promise to a dying father",
+      "treatment": "archive",
+      "body": "When he was 14, his father, who had been ill, died in a death house.  Soon afterwards his mother went back to China. He stayed behind in Singapore with a granduncle and grandaunt, the third of seven children, now with neither parent beside him. The Singapore National Olympic Council's obituary puts it in one line: at 14 he was left fatherless and alone. Before his father died, the boy made him a promise. He would become one of the strongest men in the world. The SNOC's writer suggests the vow came from a burning desire to break out of hardship.",
+      "words": 100,
+      "quote": null,
+      "voice": "At 14 he promised his dying father he would be one of the strongest men in the world.",
+      "facts": [
+        6,
+        7
+      ],
+      "art": {
+        "direction": "Archive-print plate, warm sepia, deckled edge, caption strip in typewriter font: a narrow Chinatown lane with a dim doorway and paper lanterns; a teenage boy seen from behind standing in the lane, his shadow long on the wall.",
+        "cut": [
+          "boy",
+          "lantern",
+          "doorway"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1952",
+      "title": "Fifty cents a month",
+      "treatment": "line",
+      "body": "At the Gay World amusement park he stopped to watch a strongman competition and was impressed by what he saw. In 1952 he joined the Evergreen Weightlifting Party, paying 50 cents a month, and trained in a dingy back alley near Boat Quay with one set of barbells and no coach. There was no money for any of it, so he paid his own way, working as a dockworker, a store clerk and an electrician. After a single year, at 20, he won the national junior and senior lightweight titles. He had started late, by lifting standards, and it did not seem to matter.",
+      "words": 104,
+      "quote": null,
+      "voice": "One set of barbells, a back alley near Boat Quay, 50 cents a month.",
+      "facts": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "art": {
+        "direction": "Pen-and-ink drawing: a narrow alley behind Boat Quay godowns, a single barbell on a worn mat, a bare bulb on a wire, gunny sacks stacked against the wall; a young man seen from behind chalking his hands.",
+        "cut": [
+          "young man",
+          "barbell",
+          "bulb"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "1956",
+      "title": "The first blackout",
+      "treatment": "plate",
+      "body": "In 1954 he came fourth at the Asian Games in Manila. He was still paying his own way, between shifts as a dockworker, store clerk and electrician. Two years later, at the Melbourne Olympics, he was spoken of as a medal contender. During the competition he lost consciousness. He came round, went back out and finished ninth. Four years later, in Rome, the same thing would nearly happen again. His teammate Harold de Castro later described how he lifted, as if nothing existed but the bar. \"He will just hypnotise himself and he will just go there and lift.\"",
+      "words": 99,
+      "quote": {
+        "text": "He will just hypnotise himself and he will just go there and lift.",
+        "speaker": "Harold de Castro, teammate (oral history)",
+        "fact": 15
+      },
+      "voice": "\"He will just hypnotise himself and he will just go there and lift.\" (Harold de Castro)",
+      "facts": [
+        11,
+        13,
+        14,
+        15,
+        27
+      ],
+      "art": {
+        "direction": "Paper-cut competition hall in 1956 Melbourne, cool blue and grey: a lifting platform under hard lights, a dropped barbell, an official's silhouette bending over a fallen figure seen from behind; rows of paper spectators.",
+        "cut": [
+          "barbell",
+          "official",
+          "lifter",
+          "spectators"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "1958",
+      "title": "Asia's strongest lightweight",
+      "treatment": "photo",
+      "body": "Then everything he had built came together. At the 1958 Asian Games in Tokyo he won lightweight gold with a 375 kg total, standing on the top step in a vest with SINGAPORE across the chest, between Japan's Kenji Onuma and Iran's Henrik Tamraz. That July in Cardiff he won Commonwealth gold and set his first world record, 157 kg in the clean and jerk. In 1959 he won again at the first SEAP Games in Bangkok. He was still paying his own way. He was also, by any measure, one of the strongest men his size in the world, as he had promised.",
+      "words": 104,
+      "quote": null,
+      "voice": "A vest with SINGAPORE across the chest, top step, Tokyo.",
+      "facts": [
+        16,
+        17,
+        18
+      ],
+      "photo": {
+        "file": "kenji-onuma-tan-howe-liang-henrik-tamraz-1958.jpg",
+        "path": "pipeline/photos/tan-howe-liang/kenji-onuma-tan-howe-liang-henrik-tamraz-1958.jpg",
+        "year": "1958",
+        "license": "Public domain",
+        "artist": "Unknown authorUnknown author",
+        "page": "https://commons.wikimedia.org/wiki/File:Kenji_Onuma,_Tan_Howe_Liang,_Henrik_Tamraz_1958.jpg",
+        "note": "Tiny (300x267) and public domain only via {{PD-Iran}}. Recommend a pen-line trace over the photo at small size, or a framed small print, not a full-bleed photo."
+      }
+    },
+    {
+      "n": 6,
+      "year": "1960",
+      "title": "Too heavy a sense of responsibility",
+      "treatment": "archive",
+      "body": "By 1960 people expected a medal. In February a British weightlifting official named him the man to cause a disturbance in Rome. In May his manager and mentor, Chua Tian Teck, then 65, said only two Soviet lifters stood in the way of gold, because Tan was lifting 395 kg in training, more than the world record. Chua promised Singapore's head of state, Yusof Ishak, a medal. Not everyone liked the pressure. The president of the Olympic council, C.C. Tan, said so in public. \"I fear he may leave with too heavy a sense of responsibility.\"",
+      "words": 96,
+      "quote": {
+        "text": "I fear he may leave with too heavy a sense of responsibility.",
+        "speaker": "C.C. Tan",
+        "fact": 21
+      },
+      "voice": "\"I fear he may leave with too heavy a sense of responsibility.\" (C.C. Tan, 1960)",
+      "facts": [
+        19,
+        20,
+        21
+      ],
+      "art": {
+        "direction": "Archive-print plate styled like a 1960 newspaper page: a farewell party at a long table, paper bunting, a young man seen from behind shaking hands with a row of suited silhouettes; headline-shaped bars as texture, no readable text.",
+        "cut": [
+          "young man",
+          "bunting",
+          "table"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "1960",
+      "title": "Eight September, morning",
+      "treatment": "photo",
+      "body": "On 8 September 1960 he walked into the Palazzetto dello Sport in Rome in a white leotard. He did not look like a champion in waiting; he looked nervous. The contest would last about ten and a half hours. On his first press, 115 kg, the judges called a fault. Chua paid 2,000 lire to protest and won. On the second, 120 kg, they called another fault; this time the protest failed and the money was lost. Discouraged, Tan failed the third. In the snatch his second lift was faulted by every judge. Somehow he was still third going into his best lift, the clean and jerk.",
+      "words": 107,
+      "quote": null,
+      "voice": "Chua paid 2,000 lire to protest a judge's call.",
+      "facts": [
+        22,
+        23
+      ],
+      "photo": {
+        "file": "palazzetto-dello-sport-sportcsarnok-fortepan-58007.jpg",
+        "path": "pipeline/photos/tan-howe-liang/palazzetto-dello-sport-sportcsarnok-fortepan-58007.jpg",
+        "year": "1963",
+        "license": "CC BY-SA 3.0",
+        "artist": "FOTO:Fortepan — ID 58007: Adományozó/Donor: Varga, Pierre.",
+        "page": "https://commons.wikimedia.org/wiki/File:Palazzetto_dello_Sport_sportcsarnok._Fortepan_58007.jpg",
+        "note": "Place photo: the Palazzetto exterior photographed in 1963. Caption: 'The Palazzetto dello Sport, Rome, where he lifted on 8 September 1960 (photo 1963).'"
+      }
+    },
+    {
+      "n": 8,
+      "year": "1960",
+      "title": "Uncle, my legs hurt",
+      "treatment": "plate",
+      "body": "With 90 minutes to wait, cramps seized both thighs. He could barely stand. Chua and a Malayan lifter, Chung Kum Weng, carried him to a rest room, where doctors and the American lifter Johnny Terpak said he should go by ambulance to the village and rest. He wept and refused. He prayed, and Chua prayed with him. Half an hour before his turn the cramps eased. On his first clean and jerk he blacked out and dropped 150 kg. When he came round he asked what he needed for silver. Chua told him 155 kg, more than he had just dropped. He walked out and lifted it, an Olympic record. \"Uncle, my legs hurt.\"",
+      "words": 114,
+      "quote": {
+        "text": "Uncle, my legs hurt.",
+        "speaker": "Tan Howe Liang to Chua Tian Teck",
+        "fact": 24
+      },
+      "voice": "\"Uncle, my legs hurt.\" (to his manager, 8 Sep 1960)",
+      "facts": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "art": {
+        "direction": "Paper-cut stage at night, deep red and black: a loaded barbell on the platform under a single spotlight, a lifter seen from behind walking toward it, an older man's silhouette watching from the wings with clasped hands.",
+        "cut": [
+          "lifter",
+          "barbell",
+          "older man",
+          "spotlight"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "1960",
+      "title": "The wrong flag",
+      "treatment": "line",
+      "body": "At the medal ceremony the organisers raised the wrong flag. They assumed an Asian medallist had to be Japanese and hoisted Japan's. The mistake was noticed and the ceremony was done again, with Singapore's flag. It was the country's first Olympic medal. There was no parade when he came home. There was a tea party at the Istana and a dinner given by his bosses at the Cathay Organisation. A fellow Olympian of that era described what the athletes of the time got for their trouble. \"There was no incentive, except the personal commitment and pride to represent the country.\"",
+      "words": 100,
+      "quote": {
+        "text": "There was no incentive, except the personal commitment and pride to represent the country.",
+        "speaker": "Dr Tan Eng Liang",
+        "fact": 31
+      },
+      "voice": "They raised Japan's flag first, then did the ceremony again.",
+      "facts": [
+        29,
+        30,
+        31
+      ],
+      "art": {
+        "direction": "Spare pen drawing: three flagpoles, the centre flag being lowered by an official while another is clipped on, a podium below with three figures seen from behind; lots of white paper.",
+        "cut": [
+          "flag",
+          "podium",
+          "official"
+        ]
+      }
+    },
+    {
+      "n": 10,
+      "year": "1982",
+      "title": "A gym at Kallang",
+      "treatment": "photo",
+      "body": "He moved up a weight class, took silver at the 1961 SEAP Games and gold at the 1962 Commonwealth Games in Perth. At the 1964 Tokyo Olympics he finished 11th, and his last big meet abroad was the 1970 Commonwealth Games in Edinburgh, where he was 10th. He became the national coach and trained the next generation of lifters. In 1977 he opened a restaurant serving Peking cuisine; it closed. He drove a taxi for a while. In 1982 he became a gymnasium supervisor at the National Stadium. \"If you wanted to succeed as a weightlifter back in the day, you had to go find him.\"",
+      "words": 106,
+      "quote": {
+        "text": "If you wanted to succeed as a weightlifter back in the day, you had to go find him.",
+        "speaker": "Chua Koon Siong",
+        "fact": 35
+      },
+      "voice": "He opened a Peking-cuisine restaurant in 1977; it closed.",
+      "facts": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "photo": {
+        "file": "kallang-stadium-zz.jpg",
+        "path": "pipeline/photos/tan-howe-liang/kallang-stadium-zz.jpg",
+        "year": "2007",
+        "license": "CC BY-SA 3.0",
+        "artist": "Chensiyuan (Wikimedia Commons user)",
+        "page": "https://commons.wikimedia.org/wiki/File:Kallang_stadium_zz.JPG",
+        "note": "Place photo: the old National Stadium in June 2007, not the gym itself. Caption it as the stadium where he worked from 1982."
+      }
+    },
+    {
+      "n": 11,
+      "year": "1984",
+      "title": "Weightlifting is in my blood",
+      "treatment": "line",
+      "body": "In 1984, 24 years after Rome, the International Weightlifting Federation gave him a gold award. A reporter asked whether he was tired of weightlifting yet. He said he could not give it up. How much longer, then? He answered in four words: until the last day. By the 1990s the sport had faded in Singapore, and so had his name; he turned up now and then at sporting events. In 1999 The Sunday Times ranked him the second-greatest Singaporean athlete. He was still in a public gym, now at Bedok, where he spotted a 16-year-old who would lift at the 2010 Youth Olympics. \"Weightlifting is in my blood. How can I give it up?\"",
+      "words": 114,
+      "quote": {
+        "text": "Weightlifting is in my blood. How can I give it up?",
+        "speaker": "Tan Howe Liang",
+        "fact": 39
+      },
+      "voice": "\"Until the last day.\"",
+      "facts": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "art": {
+        "direction": "Pen drawing of a 1980s public gym: racks of plates, a chalk bowl, a wall clock, a notebook on a desk by the door; an older man seen from behind adjusting a young lifter's grip on the bar.",
+        "cut": [
+          "older man",
+          "young lifter",
+          "clock"
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "year": "2008",
+      "title": "Forty-eight years",
+      "treatment": "photo",
+      "body": "For 48 years he was Singapore's only Olympic medallist. In August 2008 the women's table-tennis team won silver in Beijing, and at their homecoming he stood at the edge of the photograph, in a white polo shirt, among the team in red. The programme behind their medal had been inspired by his. In 2010 his wife was being treated for cancer, and an anonymous donor helped the family with the bills. His leotard, belt and medal went into a museum. The IOC honoured him in 2016. He died on 3 December 2024, aged 91. He is remembered by one photograph from Rome: teeth clenched, arms straining, the bar overhead. IOC member Ng Ser Miang put it simply: \"He's very upright.\"",
+      "words": 120,
+      "quote": {
+        "text": "He's very upright.",
+        "speaker": "Ng Ser Miang, IOC member",
+        "fact": 48
+      },
+      "voice": "He stood at the edge of the 2008 homecoming photo, in white among the team in red.",
+      "facts": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "photo": {
+        "file": "tanhoweliang-teamsingapore-2008summerolympics-20080825.jpg",
+        "path": "pipeline/photos/tan-howe-liang/tanhoweliang-teamsingapore-2008summerolympics-20080825.jpg",
+        "year": "2008",
+        "license": "CC BY 2.0",
+        "artist": "whyohgee singapore 2010.",
+        "page": "https://commons.wikimedia.org/wiki/File:TanHoweLiang-TeamSingapore-2008SummerOlympics-20080825.jpg",
+        "note": "25 Aug 2008 homecoming; crop to him at far left. The YOG Learning Centre photo (30 Oct 2008) is a cleaner single-person alternative."
+      }
+    }
+  ]
+}

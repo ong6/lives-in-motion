@@ -1,0 +1,359 @@
+{
+  "slug": "joseph-schooling",
+  "name": "Joseph Schooling",
+  "generated": "2026-10-30",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run: the session's \\$4 Meta cap was already spent on web research. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "unusedPhotos": [
+    "kazan-2015-victory-ceremony-100m-butterfly-m.jpg",
+    "joseph-schooling-kazan-2015.jpg",
+    "est-dio-aqu-tico-ol-mpico-interno-1.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1995",
+      "title": "Twelve years of waiting",
+      "treatment": "plate",
+      "body": "His parents met at a softball tournament in Penang in the 1960s. May Yim played for Perak; Colin Schooling played for a Singapore team called the Pirates. Colin had run hurdles and played water polo at Raffles Institution. May had grown up poor in Ipoh, where new clothes came once a year, at Chinese New Year. They married in 1983 and wanted a child, but there were miscarriages, one after another. Joseph was born on 16 June 1995, twelve years after the wedding, when May was 40. He was their only child. \"He was a miracle - and an amazingly easy baby!\"",
+      "words": 102,
+      "quote": {
+        "text": "He was a miracle - and an amazingly easy baby!",
+        "speaker": "May Schooling",
+        "fact": 3
+      },
+      "voice": "\"He was a miracle - and an amazingly easy baby!\" (May Schooling)",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "art": {
+        "direction": "Paper-cut softball diamond at dusk in 1960s Penang, palms and floodlights; two young players seen from behind on the bench, a mitt and bat between them. A faint paper moon.",
+        "cut": [
+          "players",
+          "mitt",
+          "bat"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "year": "1998",
+      "title": "A mother who could not swim",
+      "treatment": "line",
+      "body": "May could not swim; at most she could manage a doggy paddle. Her son had no fear of water at all. He jumped into the sea, pools and rivers, and she worried about who would save him. So she made sure he learned. At three he started with Vincent Poon at Tanah Merah Country Club. For four years Poon put him in races against older, bigger boys. Once, facing a much taller boy in a 50 m butterfly, Joseph did not want to swim. Poon told him size mattered less than being fearless. He swam, and he won. \"I didn't start swimming to win the Olympics. It was just to be safe in the water.\"",
+      "words": 115,
+      "quote": {
+        "text": "I didn't start swimming to win the Olympics. It was just to be safe in the water.",
+        "speaker": "Joseph Schooling (SwimSwam, 2025)",
+        "fact": 7
+      },
+      "voice": "His mother never learned to swim beyond a doggy paddle.",
+      "facts": [
+        7,
+        9,
+        10
+      ],
+      "art": {
+        "direction": "Pen drawing: a country-club pool edge with a lifebuoy on a post; a small boy in goggles, seen from behind, stands on the block beside a much taller boy; a coach's silhouette crouching at the lane end.",
+        "cut": [
+          "small boy",
+          "tall boy",
+          "coach"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "2001",
+      "title": "Auntie Yolly and the 5am pool",
+      "treatment": "archive",
+      "body": "The household had a third adult. Yolanda Pascual, 'Auntie Yolly', came from the Philippines to work for the family in 1997 and stayed. He called her a second mum; she called him her waterboy and gave him massages when he was tired. His father took him golfing, bowling in Kuala Lumpur and to the Lagoon hawker centre at East Coast. After meeting his grand-uncle Lloyd Valberg, Singapore's first Olympian in 1948, he decided he wanted the Olympics too. On holidays in Ipoh he still swam, sometimes from 5am. His aunt there said a day without swimming seemed strange to him. \"He'll always say 'I want to be No. 1'.\"",
+      "words": 109,
+      "quote": {
+        "text": "He'll always say 'I want to be No. 1'.",
+        "speaker": "Yolanda Pascual",
+        "fact": 8
+      },
+      "voice": "\"He'll always say 'I want to be No. 1'.\" (Yolanda Pascual)",
+      "facts": [
+        8,
+        11,
+        12,
+        13,
+        14
+      ],
+      "art": {
+        "direction": "Archive-print plate in faded colour with a scalloped photo border: an outdoor pool in early-morning blue light in Ipoh, steam on the water, one small swimmer seen from behind at the edge, a woman's silhouette holding a towel.",
+        "cut": [
+          "swimmer",
+          "towel",
+          "pool edge"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "2008",
+      "title": "The monkeys and the photo",
+      "treatment": "plate",
+      "body": "In 2008 the American team came to Singapore to train before the Beijing Olympics, and Michael Phelps swam at the Singapore Island Country Club. Joseph was 13, shy and wearing glasses. He wanted to be Phelps. He asked for a photo, and someone took it: the boy beside the champion. Eight years later, in front of the world's press, the two of them remembered that week and chasing the monkeys that stole energy bars from the pool deck. The photo went round the world in August 2016. \"I wanted to be like him as a kid. So a lot of this is because of Michael.\"",
+      "words": 105,
+      "quote": {
+        "text": "I wanted to be like him as a kid. So a lot of this is because of Michael.",
+        "speaker": "Joseph Schooling (ESPN, Aug 2016)",
+        "fact": 15
+      },
+      "voice": "He and Phelps chased monkeys that stole energy bars from the pool deck.",
+      "facts": [
+        15
+      ],
+      "art": {
+        "direction": "Layered paper cut-out of a tropical club pool deck: a towel rack, a cooler of energy bars, two long-tailed macaques running off with wrappers; a tall swimmer and a small bespectacled boy, both seen from behind, posing for a camera held up in the foreground.",
+        "cut": [
+          "monkeys",
+          "boy",
+          "swimmer",
+          "camera"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "2009",
+      "title": "Mum, you have to let me go",
+      "treatment": "line",
+      "body": "At 14 he begged to go to the Bolles School in Florida. His mother said no, then said yes. He was homesick, and he was not easy to coach. Colin asked his new coach, Sergio Lopez, for one thing: that his son become a gentleman. For seven years his parents took turns living in America for months at a time, and the family spent about three weeks a year all together. They mortgaged their home, sold a house in Perth and cashed in an endowment; the bill came to about a million US dollars. May budgeted everything and wore the same trousers she had bought in 1990. \"I cried all the time. He did too.\"",
+      "words": 115,
+      "quote": {
+        "text": "I cried all the time. He did too.",
+        "speaker": "May Schooling",
+        "fact": 17
+      },
+      "voice": "\"Mum, if I want to go to the Olympics, you have to let me go.\"",
+      "facts": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "art": {
+        "direction": "Pen-line airport scene: departure board, a boy with a swim bag seen from behind at the gate, a woman's silhouette on the near side of the glass; a ledger and calculator on a separate inset sketch.",
+        "cut": [
+          "boy",
+          "swim bag",
+          "woman"
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "year": "2012",
+      "title": "The wrong cap",
+      "treatment": "archive",
+      "body": "He made it to London 2012, and swam the 200 m butterfly heat in the same race as Phelps. Minutes before the start, officials told him his cap and goggles broke sponsor rules. He scrambled for replacements, swam 1:59.18, more than two seconds slower than his best, and finished 26th of 37. Somewhere online a stranger wrote that Singapore would never have an Olympic champion, and he did not forget it. At home his father kept thick folders of statistics and built training contraptions. \"I'm only 17 and I have a long way to go.\"",
+      "words": 95,
+      "quote": {
+        "text": "I'm only 17 and I have a long way to go.",
+        "speaker": "Joseph Schooling",
+        "fact": 24
+      },
+      "voice": "Officials took away his cap and goggles minutes before the heat.",
+      "facts": [
+        23,
+        24,
+        25
+      ],
+      "art": {
+        "direction": "Archive-print plate framed like a 2012 wire photo: a call room bench, a swim cap and goggles lying on it with an official's hand pointing; a swimmer seen from behind, hands on head.",
+        "cut": [
+          "cap",
+          "goggles",
+          "swimmer"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "2015",
+      "title": "Bronze in Kazan",
+      "treatment": "photo",
+      "body": "In 2014 he moved on to the University of Texas, where Eddie Reese coached him and Singapore agreed to defer his National Service. American college swimming suited him: he said that to be a killer, you had to be surrounded by killers. On 8 August 2015, at the World Championships in Kazan, he bent over the block in lane 2 for the 100 m butterfly final. He came third, behind Chad le Clos and Laszlo Cseh, and stood on the podium in his red team jacket. A year later, Phelps would remember that season. \"Joe's tough. Obviously he's had a great year last year.\"",
+      "words": 104,
+      "quote": {
+        "text": "Joe's tough. Obviously he's had a great year last year.",
+        "speaker": "Michael Phelps (ESPN, Aug 2016)",
+        "fact": 27
+      },
+      "voice": "Lane 2, bent over the block, Kazan.",
+      "facts": [
+        26,
+        27
+      ],
+      "photo": {
+        "file": "kazan-2015-joseph-isaac-schooling-100m-butterfly.jpg",
+        "path": "pipeline/photos/joseph-schooling/kazan-2015-joseph-isaac-schooling-100m-butterfly.jpg",
+        "year": "2015",
+        "license": "CC BY-SA 4.0",
+        "artist": "Voltmetro",
+        "page": "https://commons.wikimedia.org/wiki/File:Kazan_2015_-_Joseph_Isaac_Schooling_100m_butterfly.JPG",
+        "note": "Trace the swimmer and starting block; keep the lane number '2' visible. The companion ceremony photo (Cseh, le Clos, Schooling) can sit as a small inset."
+      }
+    },
+    {
+      "n": 8,
+      "year": "2016",
+      "title": "Fifty point three nine",
+      "treatment": "photo",
+      "body": "On 12 August 2016 in Rio he led from the start of the 100 m butterfly and touched in 50.39 seconds, an Olympic record. Behind him, Phelps, le Clos and Cseh tied for silver, the first three-way tie in an Olympic final. In the stands his mother did not even notice. His father, too unwell to travel, watched in Singapore at the home of Joseph's friend Teo Zhen Ren. On the victory lap Joseph told Phelps it was all crazy; Phelps patted his back and said he knew. Colin's first words to his son afterwards were simple. \"I love you. Son, you have done the nation very proud.\"",
+      "words": 108,
+      "quote": {
+        "text": "I love you. Son, you have done the nation very proud.",
+        "speaker": "Colin Schooling, his first words to his son",
+        "fact": 29
+      },
+      "voice": "\"I love you. Son, you have done the nation very proud.\" (Colin Schooling)",
+      "facts": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "photo": {
+        "file": "nata-o.jpg",
+        "path": "pipeline/photos/joseph-schooling/nata-o.jpg",
+        "year": "2016",
+        "license": "CC BY-SA 4.0",
+        "artist": "Marco Antonio Cunha",
+        "page": "https://commons.wikimedia.org/wiki/File:Nata%C3%A7%C3%A3o.jpg",
+        "note": "Commons dates this photo to the finals session of 12 Aug 2016 but files it under a different final; caption it 'Olympic Aquatics Stadium, finals night, 12 August 2016', never as his race. The empty-pool photo (1 Aug 2016) is a quieter alternative."
+      }
+    },
+    {
+      "n": 9,
+      "year": "2016",
+      "title": "Breakfast at sunrise",
+      "treatment": "plate",
+      "body": "The next morning, before the world got hold of him, he had breakfast alone in the athletes' dining hall with his headphones on and watched the sun come up. Then came the flight home, an open-top bus through crowded streets, S$1 million from the national award scheme, and every invitation at once. From August to December he barely swam. Eddie Reese grew nervous. That autumn he tore his bicep twice, missed a key meet and failed to qualify for the NCAA championships. He later said he should have taken the year off. Of that dawn he remembers one thought. \"My life will never be the same again.\"",
+      "words": 107,
+      "quote": {
+        "text": "My life will never be the same again.",
+        "speaker": "Joseph Schooling",
+        "fact": 33
+      },
+      "voice": "\"My life will never be the same again.\" (SwimSwam, 2025)",
+      "facts": [
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "art": {
+        "direction": "Paper-cut athletes' dining hall at dawn: long tables, a tray with eggs and orange juice, tall windows with a pink-orange sunrise over Rio's hills; one young man seen from behind, headphones on, gold medal on the table beside the tray.",
+        "cut": [
+          "young man",
+          "medal",
+          "tray",
+          "window"
+        ]
+      }
+    },
+    {
+      "n": 10,
+      "year": "2019",
+      "title": "Why do you swim?",
+      "treatment": "line",
+      "body": "An orchid was named after him in 2017. He put on seven kilos thinking it would make him stronger, and strangers wrote cruel things about his body. He finished his economics degree in December 2018 and came home, and in 2019 he finished 24th at the world championships. Phelps asked him a plain question: did he swim for the people in the stands, or for himself and the people closest to him? He could not answer at first. In February 2020 he moved to a small town in Virginia to train with Sergio Lopez again, where only one person recognised him, at a Chipotle. \"Look, everything crashed in 2019.\"",
+      "words": 109,
+      "quote": {
+        "text": "Look, everything crashed in 2019.",
+        "speaker": "Joseph Schooling",
+        "fact": 38
+      },
+      "voice": "Phelps asked him: \"Why do you swim?\"",
+      "facts": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "art": {
+        "direction": "Pen drawing of a community pool in small-town Virginia: an aerobics class of older women at one end behind a bulkhead, a banner on the wall, one swimmer seen from behind sitting on the far lane rope, staring at the black line.",
+        "cut": [
+          "swimmer",
+          "banner",
+          "lane rope"
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "year": "2021",
+      "title": "See you again",
+      "treatment": "archive",
+      "body": "Early in 2021 Colin was diagnosed with liver cancer. At the Tokyo Olympics that summer, Joseph went out in the heats. On 18 November 2021 Colin died at 73. His son posted an old black-and-white photo of the two of them after a childhood swim meet, with only a heart for a caption. May wrote her own goodbye. The next year, on leave from National Service for the SEA Games, he used cannabis overseas, admitted it, and apologised publicly, saying he had given in to a moment of weakness after a very tough period. \"It is hard to say goodbye, so let's begin with 'see you again'.\"",
+      "words": 107,
+      "quote": {
+        "text": "It is hard to say goodbye, so let's begin with 'see you again'.",
+        "speaker": "May Schooling",
+        "fact": 42
+      },
+      "voice": "He captioned the photo of his father with a single heart.",
+      "facts": [
+        41,
+        42,
+        43
+      ],
+      "art": {
+        "direction": "Archive-print plate styled as a black-and-white family snapshot with white border and a pencilled date: a poolside after a junior meet, a tall man's silhouette with his hand on a small boy's shoulder, both seen from behind, ribbons pinned to a noticeboard.",
+        "cut": [
+          "man",
+          "boy",
+          "noticeboard"
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "year": "2024",
+      "title": "Dad's office",
+      "treatment": "plate",
+      "body": "On 2 April 2024, at 28, he announced he was retiring. He told reporters at the Chinese Swimming Club that he remembered being four, hopping into an 'unreasonably freezing' pool, and that one day he had woken up without that excitement. His mother wrote him a letter. She noted that he had moved into his father's old office and was making plans there. He now works in venture capital, plays golf and runs a swim school that teaches water safety, the reason he was taught in the first place. \"You never lose! You either WIN or LEARN!\"",
+      "words": 97,
+      "quote": {
+        "text": "You never lose! You either WIN or LEARN!",
+        "speaker": "May Schooling",
+        "fact": 46
+      },
+      "voice": "He moved into his late father's office.",
+      "facts": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "art": {
+        "direction": "Paper-layered office interior: a desk with a softball on a stand, framed race photos and a box of old statistics folders, afternoon light through blinds; a young man seen from behind at the window. Inset: a children's learn-to-swim class with kickboards.",
+        "cut": [
+          "young man",
+          "softball",
+          "folders",
+          "kickboards"
+        ]
+      }
+    }
+  ]
+}

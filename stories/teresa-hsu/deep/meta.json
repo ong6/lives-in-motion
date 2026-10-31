@@ -1,0 +1,12 @@
+{
+  "slug": "teresa-hsu",
+  "name": "Teresa Hsu",
+  "born": "1898",
+  "died": "2011",
+  "tagline": "She ate grass as a child in Swatow and spent the next century making sure no one else had to.",
+  "cloth": {
+    "hex": "#b8673a",
+    "era": "nation-building",
+    "why": "Her Singapore work (the 1965 Home for the Aged Sick, the Heart to Heart rounds) falls in the nation-building era. The colour is a warm terracotta, like the Society for the Aged Sick's tiled roofs and a cooking pot, and is softer than the red accents on the other spines. Her first chapter is 1898, so clothFor would default to the colonial palette; override it if the warmer cloth is wanted."
+  }
+}

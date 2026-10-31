@@ -1,0 +1,321 @@
+{
+  "slug": "lee-kong-chian",
+  "name": "Lee Kong Chian",
+  "generated": "2026-10-31",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "unusedPhotos": [
+    "statue-of-dr-lee-kong-chian.jpg",
+    "hci-lee-kong-chian.jpg",
+    "view-of-middle-road-in-singapore.jpg",
+    "lee-kong-chian-natural-history-museum-nus-singapore.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1893",
+      "title": "Cattle in Furong",
+      "treatment": "plate",
+      "body": "In Furong village, in the hills of southern Fujian, a small boy walked the family's cattle out between lessons. Lee Kong Chian was born there on 18 October 1893. He studied at the village's traditional Chinese school, and the cattle he reared brought in a little more money for a household that had very little. His father, Lee Kuo Chuan, got by however he could: teaching, tailoring, cutting hair. The land of southern Fujian was hilly and poor, and young men left it for the Nanyang. When the boy was about eight his mother died. Soon there was nothing left to keep him in Furong, and a ship was waiting.",
+      "words": 110,
+      "quote": null,
+      "voice": "A boy, the cattle, and a village he would one day name a plantation after.",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "art": {
+        "direction": "Layered paper cut-out in misty greens and ochre: terraced hills of southern Fujian, a cluster of tiled village houses, a small boy seen from behind leading a water buffalo along a dyke at dawn, a schoolhouse roof in the distance.",
+        "cut": [
+          "boy",
+          "buffalo",
+          "schoolhouse"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "year": "1903",
+      "title": "A bed in Lim Loh's shophouse",
+      "treatment": "line",
+      "body": "At ten he stepped off the boat in Singapore to join his father. They had no money for rooms of their own, so they slept in a shophouse belonging to Lim Loh, a man from their own district. Many boys his age went straight to work as coolies. Kong Chian went to school instead, his fees paid by a family friend, and he never forgot it. His days were split in two. Mornings at the Anglo-Tamil School on Serangoon Road, where he learnt English and picked up Tamil; afternoons or weekends at a Chinese school. Later came St Joseph's Institution and Tao Nan. One stranger's kindness had opened a door, and decades later he would hold it open for thousands.",
+      "words": 120,
+      "quote": null,
+      "voice": "Two schools a day, paid for by a friend's kindness.",
+      "facts": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "art": {
+        "direction": "Pen drawing on cream paper: the upper floor of a 1900s shophouse, a camp bed under shuttered windows, a cloth bundle and slate on the floor; a boy seen from behind at the window looking down at a busy five-foot way.",
+        "cut": [
+          "boy",
+          "bed",
+          "window"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1908",
+      "title": "The false queue",
+      "treatment": "archive",
+      "body": "In 1908 a 15-year-old from Singapore won a Qing government scholarship and sailed back to China to study in Nanjing. He was very good at mathematics, physics and chemistry, and two years later he finished top of his class. In 1911 he moved north, first to Tsinghua in Beijing, then to the engineering college at Tangshan. The empire was falling apart around him. Older students made him cut off his queue as a protest against the Qing, and he is said to have worn a false one in class to hide it. In 1912 China became a republic and his scholarship simply stopped. He went home without his degree.",
+      "words": 109,
+      "quote": null,
+      "voice": "He cut off his queue, then wore a false one to class.",
+      "facts": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "art": {
+        "direction": "Archive-print plate, sepia halftone with a deckled border and typed caption strip: a 1910 college lecture hall with wooden benches, a blackboard of equations, one student seen from behind with a long braided queue down his back.",
+        "cut": [
+          "student",
+          "blackboard"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "1912",
+      "title": "Up at five",
+      "treatment": "line",
+      "body": "Every morning at five, in a Singapore still dark, he got up for the first of four jobs. From six he was an assistant at the Survey Department. In the afternoons he translated English news into Chinese for the newspaper Lat Pau. At night he taught at Tao Nan and Chong Cheng schools. Somewhere in between he studied a geodesy class and a civil-engineering course by post from America. Then he read a line in the civil service rules: top posts were only for men of \"pure European descent\". However hard he worked, the colonial service had already decided how far he could go. In 1914 a friend paid off his bond and he walked out.",
+      "words": 116,
+      "quote": null,
+      "voice": "Four jobs, two courses, and one sentence in a rulebook.",
+      "facts": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "art": {
+        "direction": "Pen drawing with grey wash: a narrow desk under a kerosene lamp, a theodolite case, a stack of Lat Pau newsprint and a correspondence-course booklet; through the window, a pre-dawn street. A young man seen from behind pulling on his jacket.",
+        "cut": [
+          "young man",
+          "theodolite",
+          "lamp"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "1916",
+      "title": "The borrowed umbrella",
+      "treatment": "plate",
+      "body": "It was raining at a streetside eatery, the story goes, when he lent his umbrella to an older man at the next table. The next day he went to the man's rubber factory to get it back. The man was Tan Kah Kee, and that day his first American buyers were in the office with a pile of English papers nobody could read. Lee translated them. Tan was so impressed that he asked Lee's employer, Cheng Hee Chuan, to release him. Lee hesitated, because he had hoped to study engineering in Hong Kong. Until then he had been sleeping in Cheng's office and at the Tao Nan teachers' quarters. In 1916 he went to work for Tan.",
+      "words": 117,
+      "quote": null,
+      "voice": "An umbrella lent in the rain, collected at the right moment.",
+      "facts": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "art": {
+        "direction": "Paper-cut night scene in indigo and wet lamplight: a streetside eatery under a canvas awning, rain lines, two figures seen from behind at a marble table; one passes a black umbrella to the other. A rubber factory chimney in the background.",
+        "cut": [
+          "umbrella",
+          "two figures",
+          "awning"
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "year": "1920",
+      "title": "The eldest daughter",
+      "treatment": "photo",
+      "body": "Tan Ee Leong, a school friend who was still a student, climbed onto a tram and paid for second class. In third class he found Lee Kong Chian, already a manager at Tan Kah Kee's company. Lee had made Khiam Aik's rubber trade with America and Europe boom, and in 1920 Tan gave him his eldest daughter, Tan Ai Leh. She was 17 and about to sit her final exams. She never sat them. Many people thought Tan was keeping a brilliant manager from becoming a rival. He also sold Lee bank shares and got him onto the board of the Chinese Commercial Bank. Lee now had a family, a big house on Chancery Lane, and cheap 1-cent spoons on the table.",
+      "words": 122,
+      "quote": {
+        "text": "I felt so embarrassed, because he was already working, (and) I was still a student",
+        "speaker": "Tan Ee Leong (oral history, via BiblioAsia)",
+        "fact": 24
+      },
+      "voice": "\"I felt so embarrassed, because he was already working, (and) I was still a student.\" (Tan Ee Leong)",
+      "facts": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "photo": {
+        "file": "tan-kah-kee-lee-kong-chian-and-tan-lark-sye-1946.png",
+        "path": "pipeline/photos/lee-kong-chian/tan-kah-kee-lee-kong-chian-and-tan-lark-sye-1946.png",
+        "year": "c. 1946",
+        "license": "Public domain",
+        "artist": "Unknown (Tan Kah Kee Memorial Museum collection)",
+        "page": "https://commons.wikimedia.org/wiki/File:Tan_Kah_Kee,_Lee_Kong_Chian,_and_Tan_Lark_Sye,_1946.png",
+        "note": "Taken about 1946, a generation after the wedding: father-in-law Tan Kah Kee (left) and Lee (centre). Caption it 'c. 1946'. Trace Tan and Lee and leave Tan Lark Sye as a soft edge. PD-SG-photo; see the licence caveat in photos.json."
+      }
+    },
+    {
+      "n": 7,
+      "year": "1927",
+      "title": "A smoke-house in Muar",
+      "treatment": "plate",
+      "body": "In Muar, up the coast in Johor, sheets of raw rubber hung in the haze of a small smoke-house. It had taken Lee seven years of marriage to get it. His father-in-law agreed only after Lee promised never to compete with him. In 1928 he bought a plantation and named it Furong Garden, after the village where he had herded cattle. His company was called Nam Aik: 'Nam' for Nan'an, his home county, and 'Aik' from Tan's Khiam Aik, as a thank-you to the man who had trained him. Soon after, he talked a bank into settling a friend's debt, and the grateful friend leased him a rubber factory in Nee Soon. Then the markets of the world crashed.",
+      "words": 119,
+      "quote": null,
+      "voice": "A company named for home, and for gratitude.",
+      "facts": [
+        29,
+        30,
+        31
+      ],
+      "art": {
+        "direction": "Layered paper cut-out in smoky amber: a timber smoke-house on stilts, rows of brown rubber sheets hanging on bamboo poles in drifting smoke, a river behind; a man seen from behind lifting one sheet to the light.",
+        "cut": [
+          "man",
+          "rubber sheets",
+          "smoke-house"
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "year": "1932",
+      "title": "Buy today, sell today",
+      "treatment": "line",
+      "body": "When the Depression came in 1929, rubber prices kept falling. Most dealers held on to their stock and waited for prices to recover, and many were ruined. Lee did the opposite: he sold every lot almost as soon as he had bought it, and never stockpiled. By 1932 his firm was one of only two or three big Chinese rubber companies still standing. Tan Kah Kee's company was wound up. Land was cheap and Lee had cash, so he bought plantations, sawmills and a pineapple business, and helped merge three struggling banks into OCBC. He paid his staff low wages but big bonuses in good years, and he chose managers for skill, not because they were family. The pupil had outlasted his teacher.",
+      "words": 123,
+      "quote": null,
+      "voice": "His father-in-law's empire fell; his own held.",
+      "facts": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "art": {
+        "direction": "Loose pen drawing like a ledger page come to life: a falling price line inked across the page, crates of canned pineapple and bales of rubber on a godown floor, an abacus; a figure from behind at a high desk.",
+        "cut": [
+          "crates",
+          "bales",
+          "abacus"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "1941",
+      "title": "Weeks before the invasion",
+      "treatment": "photo",
+      "body": "In late 1941 Lee, his wife and three of their children left for a rubber meeting in the United States. A few weeks later Japan invaded Malaya, and he could not get home. For almost four years he waited out the war in America, giving lectures at Columbia University about the region he had left behind. At the end of 1945 he came home to factories that had to be rebuilt. The Hongkong and Shanghai Bank lent him the money to rebuild. When the Korean War made rubber prices soar, his mills were ready, and Lee Rubber became the world's biggest rubber exporter. He built houses for his workers and let them pay through their wages. The man in the light suit was home.",
+      "words": 124,
+      "quote": null,
+      "voice": "He left for a meeting and could not come home for four years.",
+      "facts": [
+        36,
+        37,
+        38
+      ],
+      "photo": {
+        "file": "lee-kong-chian-1946.png",
+        "path": "pipeline/photos/lee-kong-chian/lee-kong-chian-1946.png",
+        "year": "c. 1946",
+        "license": "Public domain",
+        "artist": "Unknown (Tan Kah Kee Memorial Museum collection)",
+        "page": "https://commons.wikimedia.org/wiki/File:Lee_Kong_Chian,_1946.png",
+        "note": "Taken about 1946, soon after his return. A low-res crop of the trio photo, so use it as an inset or line trace beside a plate of a rebuilt mill. Keep the round glasses and pocket square."
+      }
+    },
+    {
+      "n": 10,
+      "year": "1952",
+      "title": "Name it after my father",
+      "treatment": "archive",
+      "body": "In 1953 the Raffles Library still charged a fee, and its shelves were mostly about the West. Lee gave $375,000 for a new National Library on Stamford Road, on one condition: anyone could use it for free. The year before, he had set up the Lee Foundation with $3.5 million. He asked one more thing: that his name be kept off the buildings. So schools, halls and a library took his father's name, Lee Kuo Chuan. He had seen Tan Kah Kee's generosity drag his business under, so he retired from business in 1954 and gave his sons the companies first. When fire swept through Bukit Ho Swee in 1961, he sent $25,000 for its victims. More would come, without his name on it.",
+      "words": 124,
+      "quote": null,
+      "voice": "He paid for the buildings and asked them to carry his father's name.",
+      "facts": [
+        39,
+        40,
+        41,
+        42,
+        43
+      ],
+      "art": {
+        "direction": "Archive-print plate framed like a 1960 newspaper photo: the red-brick National Library on Stamford Road on opening day, a queue of schoolchildren and trishaws outside; a brass plaque by the door left deliberately blank.",
+        "cut": [
+          "library",
+          "children",
+          "plaque"
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "year": "1962",
+      "title": "Plant good seeds",
+      "treatment": "plate",
+      "body": "On 12 June 1962, at the Victoria Theatre, the boy who had come home from China without a degree put on a chancellor's robes. Lee Kong Chian was installed as the first chancellor of the University of Singapore, the first Asian ever to hold the post. In his speech he quoted a Malay saying about rice and seed. He kept learning to the end. Past 70 he studied Malay with a teacher and practised with the radio, and in retirement he added French and German. Then, in 1964, came the diagnosis: liver cancer. He had surgery in Hong Kong and saw doctors in Shanghai, and in 1965 he resigned as chancellor. He had time now only for the seeds already planted.",
+      "words": 121,
+      "quote": {
+        "text": "Whoever wants to harvest good rice, must also plant good seeds.",
+        "speaker": "Lee Kong Chian, installation address (1962)",
+        "fact": 46
+      },
+      "voice": "\"Whoever wants to harvest good rice, must also plant good seeds.\" (installation address, 1962)",
+      "facts": [
+        44,
+        45,
+        46,
+        47,
+        48
+      ],
+      "art": {
+        "direction": "Paper-cut theatre interior in deep crimson and gold: the Victoria Theatre stage from the back of the hall, rows of graduates' mortarboards in silhouette, a robed figure seen from behind at the lectern under a pool of light; a sheaf of rice tied with ribbon on the lectern.",
+        "cut": [
+          "robed figure",
+          "lectern",
+          "rice sheaf"
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "year": "1967",
+      "title": "The name comes back",
+      "treatment": "photo",
+      "body": "He died quietly on 2 June 1967 at his house on Mount Rosie. At his funeral at Mount Vernon Crematorium, people from every walk of life came to pay their respects. He left half his fortune to the foundation, which had already given away $10 million. After his death, his name finally went up on the buildings: the Lee Kong Chian Reference Library, a business school, a medical school, a natural history museum. His bronze statue now stands outside his old Chinese High School. The boy who walked cattle in Furong, and slept on borrowed floors, now has his name on more than a dozen buildings. His father's name was there first.",
+      "words": 112,
+      "quote": null,
+      "voice": "His name went up only after he was gone.",
+      "facts": [
+        49,
+        50,
+        40
+      ],
+      "photo": {
+        "file": "lee-kong-chian-statue-side-view.jpg",
+        "path": "pipeline/photos/lee-kong-chian/lee-kong-chian-statue-side-view.jpg",
+        "year": "2009",
+        "license": "CC BY-SA 3.0",
+        "artist": "Mh",
+        "page": "https://commons.wikimedia.org/wiki/File:Lee_Kong_Chian_Statue_Side_View.jpg",
+        "note": "Statue at Hwa Chong (formerly The Chinese High School), photographed in 2009; caption the photo with its year, not 1967. Inset the 2015 Natural History Museum photo as the 'name on the building' beat."
+      }
+    }
+  ]
+}

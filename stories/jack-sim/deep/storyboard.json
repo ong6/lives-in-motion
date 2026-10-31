@@ -1,0 +1,340 @@
+{
+  "slug": "jack-sim",
+  "name": "Jack Sim",
+  "generated": "2026-10-30",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run: the session's \\$4 Meta cap was already spent on web research. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "unusedPhotos": [
+    "the-time-magazine-s-hero-of-environment-2008-photo-702893169.jpg",
+    "jack-sim-wto-2010-2.jpg",
+    "jack-sim-and-niecy-nash.jpg",
+    "session-4-jack-sim-wto-singapore-5961634214.jpg",
+    "world-toilet-day-celebrations-in-singapore-2016.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1957",
+      "title": "The bucket in the outhouse",
+      "treatment": "plate",
+      "body": "Jack Sim was born in 1957, the second of three children, in a village in Upper Serangoon with no plumbing. Home was an attap house. Water came from a shared standpipe, and in dry spells it was rationed. His father worked in a grocery shop for a wage that barely fed three children, their mother and a grandmother, and the children often wore clothes other people had given away. The toilet stood outside: a bucket in an outhouse. Outbreaks of cholera and typhoid were part of village life, and so were children with worms. Decades later he still describes it plainly: \"Life was in an attap house and … the toilet was outside.\"",
+      "words": 113,
+      "quote": {
+        "text": "Life was in an attap house and … the toilet was outside.",
+        "speaker": "Jack Sim (CNA, 2019)",
+        "fact": 5
+      },
+      "voice": "\"Life was in an attap house and … the toilet was outside.\" (CNA, 2019)",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "art": {
+        "direction": "Layered paper cut-out, dusk palette of indigo and kerosene orange. A kampong of attap-roofed houses on stilts among coconut palms; a shared standpipe in the foreground; a small wooden outhouse on a plank walkway. A small boy seen from behind carries a tin bucket toward it. One window glows.",
+        "cut": [
+          "boy",
+          "bucket",
+          "standpipe",
+          "outhouse"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "year": "1963",
+      "title": "Mother's Business School",
+      "treatment": "line",
+      "body": "His mother, Tan Siam Kheng, could not read or write, and she kept starting businesses. Her pancakes failed after three nights, so she gave them away to the neighbours. With her last dollar she took a cushion-sewing class at the community centre, then taught six neighbours the same lesson for a dollar each. Jack, his brother and his sister sat with 10-cent exercise books, hand-copying her patterns so she could sell them as pattern books. Later she let the make-up girls at CK Tang make her up, memorised every step, and the next morning called herself a wedding beautician. She prepared more than 3,000 brides. His brother kept the accounts. Jack called it the school he started at six.",
+      "words": 119,
+      "quote": null,
+      "voice": "\"I was glad to begin attending 'Mother's Business School' at the age of six.\" (Jack Sim, Skoll, 2015)",
+      "facts": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "art": {
+        "direction": "Single pen drawing on cream paper: a low kitchen table under a bare bulb, three children seen from behind bent over exercise books, a stack of smocked cushions and a tin of buttons; a woman's silhouette in the doorway.",
+        "cut": [
+          "children",
+          "exercise books",
+          "cushions"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1973",
+      "title": "Outside the classroom door",
+      "treatment": "archive",
+      "body": "At school he talked too much and could not sit still, so teachers sent him to stand outside the classroom, again and again. He missed the lessons happening behind the door. Free textbooks only arrived in April, so for months he read over other children's shoulders, and sometimes they pulled the books away. He failed his O-levels. Two years later, in 1975, he finished a hotel-management certificate at vocational school, then took his brother's advice and went into construction as a site supervisor. He did not know the job, and the foreman asked for him to be taken off the site. \"The teacher always asked me to stand outside the classroom, so that was why I always failed.\"",
+      "words": 118,
+      "quote": {
+        "text": "The teacher always asked me to stand outside the classroom, so that was why I always failed.",
+        "speaker": "Jack Sim (CNA, 2019)",
+        "fact": 14
+      },
+      "voice": "He read over other children's shoulders until his own free textbooks came in April.",
+      "facts": [
+        14,
+        15,
+        16
+      ],
+      "art": {
+        "direction": "Archive-print plate, sepia halftone with a deckled border and a typed caption strip: a 1960s school corridor of louvred windows, one boy seen from behind standing alone beside a closed classroom door.",
+        "cut": [
+          "boy",
+          "door"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "1984",
+      "title": "The S$1.1 million mistake",
+      "treatment": "plate",
+      "body": "He was good at selling, though. He became his department's top salesman, and in 1984 an investor backed him to start Besco Building Supplies. He could not read accounts; he found out money had run out when the bank rang about a bounced cheque. Then a rival told him, with some pleasure, that he had under-priced a Raffles City tender by S$1.1 million, and showed him the page with the error. For a week he worried about going bankrupt almost as soon as he had started. Then he went to the owners and told them the truth. They gave him the contract at the corrected price. By 29, after a brick factory and two housing projects, he was a millionaire.",
+      "words": 120,
+      "quote": null,
+      "voice": "\"Just started business and immediately going bankrupt?\" (his week of worry, CNA)",
+      "facts": [
+        17,
+        18,
+        19,
+        20
+      ],
+      "art": {
+        "direction": "Paper-cut night office, 1980s: a desk lamp over a thick tender document, a rotary phone, a cheque book; through the window the construction cranes of Raffles City. A man seen from behind, head in hands.",
+        "cut": [
+          "man",
+          "tender",
+          "phone",
+          "lamp"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "mid-1990s",
+      "title": "Reels in the rain",
+      "treatment": "line",
+      "body": "At a party at his neighbour's house he heard that Rediffusion was about to demolish its building on Hillview Road, and that its archive of dialect radio was inside. He asked whether he could buy the tapes. The answer came late, and it was simple: \"You can have everything you want for $2,000.\" There was one catch: he had a single day to take it all away before the building came down, and the weather was against him. He got the reels out. Years later he gave more than 4,700 of them to the National Archives, including Hokkien radio plays of Journey to the West.",
+      "words": 105,
+      "quote": {
+        "text": "You can have everything you want for $2,000.",
+        "speaker": "a Rediffusion contact, as Sim recalled in a 2012 oral history",
+        "fact": 28
+      },
+      "voice": "\"You can have everything you want for $2,000.\" (a Rediffusion contact, as he recalled in 2012)",
+      "facts": [
+        28
+      ],
+      "art": {
+        "direction": "Pen drawing with grey wash: stacks of open-reel tapes in cardboard boxes under a dripping awning, a lorry backed up to a loading bay, rain lines across the page; one figure from behind carrying a box.",
+        "cut": [
+          "boxes",
+          "lorry",
+          "figure"
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "year": "1998",
+      "title": "Fifteen houses at half price",
+      "treatment": "archive",
+      "body": "By the 1990s he was married to his second wife, with a clay-tile business that had changed how Singapore's new houses looked. Then the Asian financial crisis arrived. He had to let staff go, and his fifteen properties lost half their value. He held on, but he felt useless at work. Around then Prime Minister Goh Chok Tong said a society's graciousness could be measured by the cleanliness of its toilets. Sim heard a job no one else wanted. In December 1998 he founded the Restroom Association of Singapore. His staff called it crazy. He told his wife that after the recession he would leave business for good. \"When I come to the office, I don't feel useful. I feel like a failure.\"",
+      "words": 123,
+      "quote": {
+        "text": "When I come to the office, I don't feel useful. I feel like a failure.",
+        "speaker": "Jack Sim",
+        "fact": 25
+      },
+      "voice": "\"When I come to the office, I don't feel useful. I feel like a failure.\" (CNA, 2019)",
+      "facts": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "art": {
+        "direction": "Archive-print plate framed like a 1998 newspaper photo: a row of terrace houses with orange clay roofs under a grey sky, a 'For Sale' board; in the foreground, a public toilet doorway lit from inside.",
+        "cut": [
+          "houses",
+          "sign",
+          "doorway"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "2001",
+      "title": "Mr Toilet",
+      "treatment": "photo",
+      "body": "On 19 November 2001 he founded the World Toilet Organization in Singapore, and its founding day became World Toilet Day. People laughed when he said the word, so he decided to laugh first. He posed wrapped in toilet paper, holding a plunger. He told audiences that we each spend about three years of our lives on the toilet, so it is odd that we cannot talk about it. The jokes got him into rooms that polite language could not. In 2004 he stepped down as chief executive of Besco, his first company, and gave most of his time to the work. People started calling him Mr Toilet, and he kept the name.",
+      "words": 112,
+      "quote": null,
+      "voice": "\"We go to the toilet six to eight times a day and spend three full years of our lives inside the toilet\" (Tatler Asia, 2020)",
+      "facts": [
+        29,
+        30,
+        31
+      ],
+      "photo": {
+        "file": "jack-sim-founder-of-the-world-toilet-organisation-6725637193.jpg",
+        "path": "pipeline/photos/jack-sim/jack-sim-founder-of-the-world-toilet-organisation-6725637193.jpg",
+        "year": "2005",
+        "license": "CC BY 2.0",
+        "artist": "SuSanA Secretariat",
+        "page": "https://commons.wikimedia.org/wiki/File:Jack_Sim_founder_of_the_World_Toilet_Organisation_(6725637193).jpg",
+        "note": "The photo is dated 2005 (camera date) and credited to WTO; show it as '2005' in the caption."
+      }
+    },
+    {
+      "n": 8,
+      "year": "2008",
+      "title": "The bank that said no",
+      "treatment": "plate",
+      "body": "Recognition came before money did. TIME named him one of its Heroes of the Environment in 2008, and in 2011 he started the BoP Hub to build businesses for the world's poorest. But sanitation was what he called a 'brown' issue, and donors preferred green and blue causes like trees and water. One of Asia's biggest banks praised his work and turned him down, worried that its customers would not want to be linked with poo. So he worked without a salary. By 2022 he had gone 21 years unpaid. He kept going anyway, and kept making the jokes.",
+      "words": 99,
+      "quote": null,
+      "voice": "A bank told him funding him would hurt its image.",
+      "facts": [
+        32,
+        33,
+        42
+      ],
+      "art": {
+        "direction": "Paper-cut boardroom seen through a glass wall: a long table, a bowl of untouched mints, a closed folder marked with a toilet symbol; a man seen from behind walking away down a corridor.",
+        "cut": [
+          "man",
+          "folder",
+          "table"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "2013",
+      "title": "A day at the UN",
+      "treatment": "photo",
+      "body": "On 24 July 2013 the General Assembly adopted Singapore's 'Sanitation for All' resolution, and 19 November became UN World Toilet Day. Tatler counts 122 countries that co-sponsored it. That year his organisation was given consultative status with the UN's Economic and Social Council. The boy who walked to a bucket in the dark had put the toilet on the agenda of every member state. Two years later a giant inflatable toilet sat on the lawn outside UN headquarters in New York. \"There is nothing wrong with going to the toilet.\"",
+      "words": 90,
+      "quote": {
+        "text": "There is nothing wrong with going to the toilet.",
+        "speaker": "Jack Sim (Eco-Business, Jul 2013)",
+        "fact": 35
+      },
+      "voice": "\"There is nothing wrong with going to the toilet.\" (Eco-Business, July 2013)",
+      "facts": [
+        35,
+        47
+      ],
+      "photo": {
+        "file": "2015-world-toilet-day-at-united-nations-new-york.jpg",
+        "path": "pipeline/photos/jack-sim/2015-world-toilet-day-at-united-nations-new-york.jpg",
+        "year": "2015",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kutoid",
+        "page": "https://commons.wikimedia.org/wiki/File:2015_World_Toilet_Day_at_United_Nations,_New_York.jpg",
+        "note": "Place photo (no people), taken 18 Nov 2015 at UN HQ; caption it as 'World Toilet Day at the UN, 2015'."
+      }
+    },
+    {
+      "n": 10,
+      "year": "2019",
+      "title": "Mr. Toilet on film",
+      "treatment": "line",
+      "body": "For five years the filmmaker Lily Zepeda followed him through Singapore, India, China and the United States. The film shows a man who rides a scooter, combs his hair with a toilet brush and floats in a pool on a poo-emoji ring. It also shows harder days, when some members of his board grew unhappy. Goh Chok Tong, whose speech had started it all, appears on camera and gives his view. At home, CNA's cameras found a collection of toilets. 'Mr. Toilet: The World's #2 Man' premiered at Hot Docs in Toronto in April 2019 and opened in New York that November. \"I support his movement, but for me, frankly, the task for Jack is too big.\"",
+      "words": 117,
+      "quote": {
+        "text": "I support his movement, but for me, frankly, the task for Jack is too big.",
+        "speaker": "Goh Chok Tong",
+        "fact": 39
+      },
+      "voice": "He combs his hair with a toilet brush, on camera.",
+      "facts": [
+        37,
+        38,
+        39,
+        40,
+        46
+      ],
+      "art": {
+        "direction": "Loose pen drawing like a storyboard page: a scooter parked by a kerb, a toilet brush and comb crossed on a shelf, a film clapperboard; a figure from behind wheeling the scooter out.",
+        "cut": [
+          "scooter",
+          "toilet brush",
+          "clapperboard"
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "year": "2022",
+      "title": "The boy outside the door, again",
+      "treatment": "photo",
+      "body": "When he was about 65, his daughter, who was studying psychology at SMU, told him she thought he had ADHD. He looked back at the boy standing outside the classroom and read him differently: the restlessness, the endless ideas, the habit of juggling everything at once. That same year the University of Strathclyde gave him an honorary doctorate. The schoolboy who failed his O-levels was now a doctor, if only an honorary one. He says that if he could talk to his younger self, he would tell him that his quirks were his strengths. He has four children with his second wife. In a 2015 photo he sits on a toilet in the pose of Rodin's Thinker, chin on his fist.",
+      "words": 121,
+      "quote": null,
+      "voice": "He would tell his younger self that \"his quirks were actually his strengths\" (Unlocking ADHD, 2025)",
+      "facts": [
+        21,
+        43,
+        44
+      ],
+      "photo": {
+        "file": "jack-thinker.jpg",
+        "path": "pipeline/photos/jack-sim/jack-thinker.jpg",
+        "year": "2015",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kutoid",
+        "page": "https://commons.wikimedia.org/wiki/File:Jack_thinker.jpg",
+        "note": "Photo taken 17 Nov 2015; caption it with its own year. Trace the figure and the toilet; leave the yellow-toilet painting as a flat colour block."
+      }
+    },
+    {
+      "n": 12,
+      "year": "2025",
+      "title": "Eighty projects at once",
+      "treatment": "plate",
+      "body": "He still lives in Singapore and still does not take a salary for the toilet work. In Kampong Ubi he built a S$10 million, 65,000 sq ft centre, paid for mostly with a bank loan and renamed the SDG Centre, with a kitchen where single mothers learn to cook and bake for a living. At 68 he says he runs 80 to 100 projects at once and goes home to his wife and four children. He measures the work by how fast it moves, as he did in 2022: \"Life is short. Every day is one less.\"",
+      "words": 97,
+      "quote": {
+        "text": "Life is short. Every day is one less.",
+        "speaker": "Jack Sim (Splash Projects, 2022)",
+        "fact": 42
+      },
+      "voice": "He says he can run 80 to 100 projects at once.",
+      "facts": [
+        41,
+        42,
+        45
+      ],
+      "art": {
+        "direction": "Paper-layered cutaway of a big industrial-estate building, floor by floor: co-working desks, a training kitchen with ovens, an event hall. On the ground floor a man seen from behind holds a door open. Morning light.",
+        "cut": [
+          "building",
+          "kitchen",
+          "man"
+        ]
+      }
+    }
+  ]
+}

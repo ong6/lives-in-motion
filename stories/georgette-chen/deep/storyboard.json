@@ -1,0 +1,356 @@
+{
+  "slug": "georgette-chen",
+  "name": "Georgette Chen",
+  "generated": "2026-10-31",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace",
+    "copyright": "COPYRIGHT: Georgette Chen died in 1993, so her paintings and drawings are in copyright (Singapore: life + 70 years, until the end of 2063). Never reproduce, trace or imitate any of her artworks, including the 'Self Portrait' photo on Commons (File:Georgette Chen, Self Portrait.jpg). That file's CC BY-SA licence covers only the photographer's photo, not the painting, so it is excluded. Illustrated plates may show fruit, studios and places in a generic style, never a recognisable copy of one of her compositions. The National Gallery and National Archives photos of her are all-rights-reserved and are not used."
+  },
+  "unusedPhotos": [
+    "zhang-jingjiang.jpg",
+    "dinard-plage-saint-enogat-20210517.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1910s",
+      "title": "Swans in the Tuileries",
+      "treatment": "photo",
+      "body": "A small girl leans over the edge of a pond in the Tuileries garden, throwing bread to the swans. Zhang Liying was born in October 1906 in Zhejiang, the fourth of twelve children of Zhang Jingjiang, an antiques dealer with shops in Paris, New York and London, and a man who quietly paid for Sun Yat-sen's revolution. The family moved between continents. At home her mother allowed only Shanghainese; outside, Paris was hers: the merry-go-round, Parc Monceau, long summers in the Breton village of St Enogat. Decades later, in the tropics, she still smiled remembering those swans. France, she said, was in a way her home. But her father had a different home in mind for her brush.",
+      "words": 118,
+      "quote": null,
+      "voice": "Decades later she still remembered feeding her favourite swans.",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "photo": {
+        "file": "carousel-jardin-des-tuileries-paris-2012.jpg",
+        "path": "pipeline/photos/georgette-chen/carousel-jardin-des-tuileries-paris-2012.jpg",
+        "year": "2012",
+        "license": "CC BY 2.0",
+        "artist": "Guillaume Baviere",
+        "page": "https://commons.wikimedia.org/wiki/File:Carousel,_Jardin_des_Tuileries,_Paris_2012.jpg",
+        "note": "The Tuileries merry-go-round today (2012). Caption it as the garden she played in, not as her own carousel. Small inset: her father, zhang-jingjiang.jpg (before 1936)."
+      }
+    },
+    {
+      "n": 2,
+      "year": "1910s",
+      "title": "The foreign potato",
+      "treatment": "line",
+      "body": "Father and daughter sit side by side at their easels: Zhang Jingjiang has hired a private tutor, Victor Podgorsky, and he comes to the lessons too. The trouble begins with what she wants to paint. He expected Chinese brush painting. She wanted oils, which could hold everything around her, from people and flowers to salted ducks, sampans and potatoes. He reeled off the Chinese vegetables she might paint instead and asked why she insisted on the foreign potato. Her parents would pay for her training all the same, though they never quite believed an artist could earn a living. \"My father expected me to study Chinese painting, but I had a different idea.\"",
+      "words": 113,
+      "quote": {
+        "text": "My father expected me to study Chinese painting, but I had a different idea.",
+        "speaker": "Georgette Chen (Radio Malaya, 1953)",
+        "fact": 8
+      },
+      "voice": "Why, her father asked, the foreign potato?",
+      "facts": [
+        7,
+        8,
+        9,
+        13
+      ],
+      "art": {
+        "direction": "Single pen line on cream paper: two easels side by side in a high-windowed Paris room; a tall man and a girl, both seen from behind; on the table between them a bowl holding one potato beside a bok choy.",
+        "cut": [
+          "easels",
+          "potato",
+          "bok choy"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1927",
+      "title": "The freedom of painting whatever you like",
+      "treatment": "plate",
+      "body": "The schoolgirl seated at the end of the front row in a 1923 Horace Mann School photograph is gone by 1926. That year she spends at the Art Students League in New York, then crosses back to Paris to enrol at the Academie Colarossi and the Academie Biloul. These were loose, unruly schools, and she liked it that way. She walked the city hunting for subjects, delighting in what she called \"the freedom of painting whatever you like.\" In 1930 the Salon d'Automne, the most adventurous show in Paris, accepted her work for the first time. She was twenty-four, and someone in her life had been urging her on.",
+      "words": 109,
+      "quote": {
+        "text": "the freedom of painting whatever you like",
+        "speaker": "Georgette Chen (oral history, 1988)",
+        "fact": 12
+      },
+      "voice": "The Salon d'Automne said yes in 1930.",
+      "facts": [
+        10,
+        11,
+        12,
+        17
+      ],
+      "art": {
+        "direction": "Layered paper cut-out of a 1920s Paris academy studio: skylight, plaster casts, a stove, rows of easels; one young woman seen from behind at a canvas that faces away from us, a paint box open at her feet. Rooftops of Montparnasse through the glass.",
+        "cut": [
+          "woman",
+          "easel",
+          "paint box",
+          "skylight"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "1927",
+      "title": "He always posed",
+      "treatment": "photo",
+      "body": "In 1927 Soong Ching Ling, the widow of Sun Yat-sen, introduces her to a friend in Paris: Eugene Chen, 52, a widower with four children, a former foreign minister in exile. She was 21. Her father disapproved and the age gap was thirty years, yet they became \"the closest of companions\" and married in 1930 at the Chinese consulate in Paris. She took his surname and kept it for life. He loved music and French literature, and told her to leave sewing to the tailors and take up her easel. Her diary records haircuts she gave him and walks to find avocados to paint. \"Poses so badly & talks all the time.\"",
+      "words": 112,
+      "quote": {
+        "text": "Begin small canvas of E portrait. Poses so badly & talks all the time.",
+        "speaker": "Georgette Chen (diary)",
+        "fact": 20
+      },
+      "voice": "A model who talked all the time.",
+      "facts": [
+        14,
+        15,
+        16,
+        18,
+        19,
+        20
+      ],
+      "photo": {
+        "file": "eugene-chen-in-a-hat.jpg",
+        "path": "pipeline/photos/georgette-chen/eugene-chen-in-a-hat.jpg",
+        "year": "before 1944",
+        "license": "Public domain",
+        "artist": "Unknown photographer",
+        "page": "https://commons.wikimedia.org/wiki/File:%E9%99%88%E5%8F%8B%E4%BB%81.jpg",
+        "note": "Eugene Chen, photographed before 1944. Trace the hat and coat. Never show or imitate her painted portraits of him: they are her artworks and in copyright."
+      }
+    },
+    {
+      "n": 5,
+      "year": "1931",
+      "title": "Madame Chen on the cover",
+      "treatment": "photo",
+      "body": "Her face fills the cover of Liangyou, Shanghai's glossy picture magazine, in 1931: the painter Zhang Liying, newly married. Eugene had become foreign minister, and the couple had moved from Paris to Shanghai. On the long voyage out from Marseilles they met a young Malay prince, Tunku Abdul Rahman, who remembered her as \"beautiful and charming\". Neither could guess that twenty-five years later she would be painting his portrait in Kuala Lumpur while he led a new country. For now the marriage carried her into politics, and politics would keep them moving. She had not yet learned to drive.",
+      "words": 99,
+      "quote": {
+        "text": "beautiful and charming",
+        "speaker": "Tunku Abdul Rahman",
+        "fact": 21
+      },
+      "voice": "She had not yet learned to drive.",
+      "facts": [
+        21
+      ],
+      "photo": {
+        "file": "liangyou-057-cover-zhang-liying.jpg",
+        "path": "pipeline/photos/georgette-chen/liangyou-057-cover-zhang-liying.jpg",
+        "year": "1931",
+        "license": "Public domain",
+        "artist": "Liangyou magazine",
+        "page": "https://commons.wikimedia.org/wiki/File:Liangyou_057_cover_Zhang_Liying.jpg",
+        "note": "Liangyou no. 57 cover, 1931 (PD-China). The only free photograph of her. The cover date and caption come from the Commons file page, not from the research sources. Trace the face and collar; crop the masthead."
+      }
+    },
+    {
+      "n": 6,
+      "year": "1935",
+      "title": "A second-hand Fiat",
+      "treatment": "plate",
+      "body": "On 7 June 1935 she takes her first driving lesson. By 29 June she has passed. She buys a second-hand Fiat, loads it with canvases, and drives south. In July she is in Aix-en-Provence, setting up her easel beside \"Cezanne's atelier\", then at the rocks of Chateau Noir he painted, then beside his millstone, noting each spot in her diary in French. In 1937 her work hung in the Palace of Painting at the Paris World Fair and in an exhibition of Europe's women artists at the Jeu de Paume. That same year war began in China, and the road turned east.",
+      "words": 102,
+      "quote": null,
+      "voice": "Her diary marks each spot: \"Cezanne's atelier\", \"Cezanne's rocks\".",
+      "facts": [
+        22,
+        23,
+        24
+      ],
+      "art": {
+        "direction": "Paper-cut Provence landscape at noon: ochre road, umbrella pines, Mont Sainte-Victoire in the distance; a small rounded 1930s Fiat parked on the verge, door open, and a woman seen from behind at a folding easel among the rocks.",
+        "cut": [
+          "car",
+          "easel",
+          "woman",
+          "rocks"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "1941",
+      "title": "One face, one tongue",
+      "treatment": "photo",
+      "body": "Shanghai, the Bund, a city of grand facades. After Hong Kong fell in 1941, the couple were placed under house arrest and later held in Shanghai. Japanese officers came again and again to press Eugene to cooperate, calling him to what she bitterly named \"interviews\". Afraid for her, he took her everywhere he went. One officer left saying other leaders had several faces and tongues, but Mr Chen had only one. Eugene replied that this was exactly why he could not lose it, having no spares. In May 1944, still under arrest, he died. She was 38, and alone.",
+      "words": 99,
+      "quote": null,
+      "voice": "\"Having no spares.\" (Eugene Chen, as she remembered it)",
+      "facts": [
+        25,
+        26,
+        27
+      ],
+      "photo": {
+        "file": "shanghai-the-bund-circa-1935.jpg",
+        "path": "pipeline/photos/georgette-chen/shanghai-the-bund-circa-1935.jpg",
+        "year": "c. 1935",
+        "license": "Public domain",
+        "artist": "Anonymous",
+        "page": "https://commons.wikimedia.org/wiki/File:Shanghai._The_Bund,_circa_1935.jpg",
+        "note": "Period postcard of the Bund, c. 1935 (posted 1939). Keep this chapter quiet: no soldiers or uniforms in any added art. Caption: 'Shanghai, where they were held'."
+      }
+    },
+    {
+      "n": 8,
+      "year": "1951",
+      "title": "My Tahiti",
+      "treatment": "plate",
+      "body": "Water the colour of green and violet laps under rows of straw huts on stilts, and she shouts with excitement every time she passes them. It is 1951, Penang. In 1947 she married Ho Yung Chi, Eugene's former aide; after New York and Paris they took teaching posts at Han Chiang High School. She called the island her Tahiti. She met strange fruit and wrote home that the durian had enriched her life. The marriage did not survive. They fought over money and over the surname she would not give up, and the divorce, in 1953, was long and draining. She packed for Singapore.",
+      "words": 104,
+      "quote": {
+        "text": "I have been introduced to the Durian fruit and consider that my life has been enriched by it!",
+        "speaker": "Georgette Chen (letter, 4 July 1951)",
+        "fact": 30
+      },
+      "voice": "She packed for Singapore.",
+      "facts": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "art": {
+        "direction": "Layered paper cut-out of a 1950s Penang waterfront: straw-roofed huts on stilts over green-violet water, a plank walk, fishing boats; in the foreground a single split durian on a wooden board. A woman seen from behind, sketchbook under her arm. Fruit drawn generically, never as a copy of one of her still lifes.",
+        "cut": [
+          "huts",
+          "durian",
+          "woman",
+          "boat"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "1953",
+      "title": "Bread without butter",
+      "treatment": "photo",
+      "body": "Carbon paper, a ribbon, the clack of a little Hermes Baby: she typed her letters on it and kept a copy of every one. In September 1953 she showed her paintings at the Chinese Chamber of Commerce in Singapore and stayed. Early in 1954, from a rented house in Sennett Estate, she wrote of her regained liberty and a \"simple, useful, and creative existence\". She took a part-time job at the Nanyang Academy of Fine Arts, one of only two women teachers there, and would stay until 1980. Money was tight. She called it bread without butter. \"I don't like butter much anyway, too fattening!\"",
+      "words": 105,
+      "quote": {
+        "text": "I don't like butter much anyway, too fattening!",
+        "speaker": "Georgette Chen (letter, 1961)",
+        "fact": 38
+      },
+      "voice": "Some 1,000 carbon copies would survive her.",
+      "facts": [
+        32,
+        33,
+        34,
+        38,
+        50
+      ],
+      "photo": {
+        "file": "hermes-baby-1948.jpg",
+        "path": "pipeline/photos/georgette-chen/hermes-baby-1948.jpg",
+        "year": "2021",
+        "license": "CC BY-SA 4.0",
+        "artist": "Draemmli (Roland Rytz)",
+        "page": "https://commons.wikimedia.org/wiki/File:Hermes_Baby_1948.jpg",
+        "note": "A 1948 Hermes Baby, the same model as hers (hers is in the National Gallery archive, not openly licensed). Caption it 'The same model she typed on'. Trace the keys and carriage."
+      }
+    },
+    {
+      "n": 10,
+      "year": "1955",
+      "title": "Chendana",
+      "treatment": "plate",
+      "body": "At six in the morning, three days before the exam, she is at her desk drilling Malay verbs. It is 1962 and she feels as nervous as the teenagers beside her. She passed and got the diploma, then started Hokkien, always the oldest in class. Malay friends had found her a name with \"Chen\" in it: Chendana, fragrant sandalwood. By 1955 she had built a house with a tidy studio on Siglap Plain. Friends came for oyster soup and Crepes Georgette, and a Penang family she loved posed there over several holidays, tantrums and all, for a big family portrait. Then her knees began to fail.",
+      "words": 106,
+      "quote": {
+        "text": "I felt as nervous as the young candidates who took part.",
+        "speaker": "Georgette Chen (letter, 1962)",
+        "fact": 41
+      },
+      "voice": "Then her knees began to fail.",
+      "facts": [
+        35,
+        36,
+        37,
+        40,
+        41
+      ],
+      "art": {
+        "direction": "Paper-cut cutaway of a 1950s single-storey house on Siglap Plain: a neat studio with easels turned to the wall, a dining table with a soup tureen, a desk lit by a lamp with a Malay dictionary open. A woman seen from behind at the desk before dawn, a blue sky just starting at the window.",
+        "cut": [
+          "woman",
+          "desk",
+          "dictionary",
+          "tureen"
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "year": "1960s",
+      "title": "Patraque",
+      "treatment": "photo",
+      "body": "Sampans crowd the Singapore River, and she paints them, along with the Sikh guards and monks whose colours she loved. But the rheumatoid arthritis that had troubled her father now troubled her. One attack left her \"hobbling on a stick for months and months\". She joked to a former student that she felt quite patraque, a French word for an old, badly made machine. At NAFA she stayed strict and elegant; Liu Kang said she taught the ethics of art, not just technique. In 1967 she promised her pictures to Singapore and Malaysia. \"I have continued to be myself seeking neither fame nor riches.\"",
+      "words": 104,
+      "quote": {
+        "text": "I have continued to be myself seeking neither fame nor riches.",
+        "speaker": "Georgette Chen (letter to Dorothy Lee, 1967)",
+        "fact": 43
+      },
+      "voice": "She promised her pictures to this island.",
+      "facts": [
+        39,
+        42,
+        43,
+        44
+      ],
+      "photo": {
+        "file": "singaporeriver-bumboats-196009.jpg",
+        "path": "pipeline/photos/georgette-chen/singaporeriver-bumboats-196009.jpg",
+        "year": "1960",
+        "license": "CC BY-SA 2.0",
+        "artist": "Peter Forster",
+        "page": "https://commons.wikimedia.org/wiki/File:SingaporeRiver-bumboats-196009.jpg",
+        "note": "The Singapore River, September 1960: the river as she painted it. Trace the boats and the godowns. No reproduction of her river paintings."
+      }
+    },
+    {
+      "n": 12,
+      "year": "1982",
+      "title": "Two rooms of canvases",
+      "treatment": "line",
+      "body": "In 1982 a former student, the sculptor Ng Eng Teng, walks up to collect the Cultural Medallion for her, the first woman visual artist to receive it; she was in hospital after a serious fall. She had told an interviewer an artist must be ready to starve, and loves the work too much to stop. She died at Mount Alvernia Hospital on 15 March 1993. Afterwards her executor found 53 paintings stowed in two rooms of the Siglap house. They went to the nation, and the house paid for a scholarship for young artists. \"An artist, I tell you, has to be prepared to starve.\"",
+      "words": 105,
+      "quote": {
+        "text": "An artist, I tell you, has to be prepared to starve.",
+        "speaker": "Georgette Chen (interview with Constance Sheares, 1988-89)",
+        "fact": 47
+      },
+      "voice": "Fifty-three canvases, facing the wall.",
+      "facts": [
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "art": {
+        "direction": "Single pen drawing: a quiet room in a tropical house, shutters half open, rows of canvases stacked with their backs to us, a dust sheet, an empty easel. A man seen from behind in the doorway with a ring of keys. No painting surfaces visible.",
+        "cut": [
+          "canvases",
+          "easel",
+          "man",
+          "keys"
+        ]
+      }
+    }
+  ]
+}

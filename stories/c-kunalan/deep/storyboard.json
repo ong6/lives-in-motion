@@ -1,0 +1,353 @@
+{
+  "slug": "c-kunalan",
+  "name": "C. Kunalan",
+  "generated": "2026-10-31",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run; no Meta calls were made for drafting. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "photoNote": "Only openly licensed photos of Kunalan himself are from one 2008 session (age 66); no CC/PD photos of his racing years (1963-1979) were found. Period photos at NAS/Roots.sg, The Olympians and Singapore Sports Hub are not openly licensed and must not be used.",
+  "unusedPhotos": [
+    "ckunalan-singapore-olympic-academy-youth-session-20081103-02.jpg",
+    "c-kunalan-2008-cropped.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1950s",
+      "title": "Football before the bell",
+      "treatment": "plate",
+      "body": "The bell for afternoon school has not rung yet, and a pack of boys is already chasing a ball across the field at Pasir Panjang English School. One of them is small and quick and not especially good. Canagasabai Kunalan was born on 23 October 1942 and grew up in a big house in Johor, where his father was a medical officer. After the Occupation the family came to Singapore: Alexandra Road, three sisters, and a father who ran a clinic inside a brewery compound. Kunalan played every day, though never for the school team. \"I was not good enough to play for the school so I just played for fun.\" Nobody watching would have picked him out. Nobody did, for years.",
+      "words": 122,
+      "quote": {
+        "text": "I was not good enough to play for the school so I just played for fun.",
+        "speaker": "C. Kunalan (Vintage Radio SG, via SilverStreak)",
+        "fact": 4
+      },
+      "voice": "\"I was not good enough to play for the school so I just played for fun.\"",
+      "facts": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "art": {
+        "direction": "Layered paper cut-out, 1950s afternoon light in ochre and green: a school field edged with angsana trees and a low colonial school block with louvred windows; a pack of small boys seen from behind chasing a football, one slighter figure at the front. A brewery chimney on the horizon.",
+        "cut": [
+          "boys",
+          "football",
+          "school block"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "year": "1959",
+      "title": "The One Mile Open",
+      "treatment": "line",
+      "body": "Sports Day trials, secondary school. A thin boy wanders down to the field because he feels like running for his house, and the house master writes him into the opening event, the One Mile Open. He has done no training at all. He comes third. The next year he comes first. Then life went quiet. His O-level results were not good enough to carry on studying, so his father sent him to night school, and afterwards he taught Malay and Indian soldiers at Gillman Barracks. By day there was little to do, so he played football, sometimes three times a day, with an Indian Youth Football Team he and his friends set up themselves. The running seemed forgotten. It had not forgotten him.",
+      "words": 123,
+      "quote": null,
+      "voice": "With no training, third. A year later, first.",
+      "facts": [
+        5,
+        6,
+        7
+      ],
+      "art": {
+        "direction": "Single pen line on cream paper: a hand-chalked oval track on a school field, a starting line of boys seen from behind, a house master's clipboard and whistle in the foreground; a small hand-lettered flag reading only a house colour, no words.",
+        "cut": [
+          "boys",
+          "clipboard",
+          "track"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1962",
+      "title": "Nine visits to Tiong Bahru",
+      "treatment": "plate",
+      "body": "A young teacher is kicking a ball around with his pupils at Tiong Bahru Primary School when a colleague stops to watch him run. Kunalan had become a teacher, he said, by chance. The colleague asked him to run a relay at the Teachers' Training College and mentioned him to its coach, Tan Eng Yoon, an Olympic sprinter, who invited him to train at Farrer Park. Kunalan did not go. He could not believe he was a sprinter, and he stayed away for six months, until he bumped into Tan, who began turning up at the school. \"I can recognise potential when I see it,\" Tan told him. Kunalan did not know what potential meant. On the ninth visit he said yes. He later called it the turning point of his life.",
+      "words": 132,
+      "quote": {
+        "text": "I can recognise potential when I see it.",
+        "speaker": "Tan Eng Yoon, as recalled by Kunalan (SilverStreak)",
+        "fact": 10
+      },
+      "voice": "\"I can recognise potential when I see it.\" (Tan Eng Yoon, as Kunalan recalls it)",
+      "facts": [
+        8,
+        9,
+        10
+      ],
+      "art": {
+        "direction": "Paper-cut school courtyard at Tiong Bahru, streamline Art Deco blocks behind: children seen from behind kicking a ball, a young man in shirt sleeves among them, and at the gate a second man's silhouette waiting with his hands behind his back. Nine small chalk ticks on a wall.",
+        "cut": [
+          "teacher",
+          "children",
+          "coach",
+          "gate"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "1963",
+      "title": "Weights in the ladies' toilet",
+      "treatment": "line",
+      "body": "Under a tree beside the Farrer Park track, a few men are lifting weights they have just carried out of the ladies' toilet, because that is where the weights are kept. Kunalan began running in 1963, aged 20. Training had to fit around teaching: endurance runs round MacRitchie Reservoir, strength work at a friend's house, and evenings at Farrer Park. He still insists, \"We had all the basic equipment and facilities.\" After only five months he ran 10.9 seconds for 100 metres, and Tan, now national coach, said nobody had improved more. That year in Kuala Lumpur he ran in a relay team that set a Singapore record of 42.0 seconds. A year earlier he had not believed he could sprint. Now Tokyo was talking.",
+      "words": 125,
+      "quote": {
+        "text": "We had all the basic equipment and facilities.",
+        "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+        "fact": 14
+      },
+      "voice": "Five months of training: 10.9 seconds.",
+      "facts": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "art": {
+        "direction": "Pen drawing with grey wash: a spreading rain tree beside a running track at dusk, a barbell and iron plates on the grass, a small brick toilet block with its door ajar; two runners seen from behind stretching. Floodlight poles faint in the background.",
+        "cut": [
+          "tree",
+          "barbell",
+          "toilet block",
+          "runners"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "1964",
+      "title": "A place he never asked for",
+      "treatment": "archive",
+      "body": "A newspaper lies open on a table in 1964, and in it another sprinter, Wong Fey Wan, is calling Kunalan out by name. Kunalan had been picked for Malaysia's Olympic 4x100 metre relay; Wong had beaten him twice that season and said so: \"I am willing to race against Kunalan again to prove I am the better man over 100 m.\" Kunalan never knew for sure whether he had been chosen on merit, and he wished Wong had gone instead. He called it one of the saddest moments of his running career. In Tokyo, three days before his 22nd birthday, he ran in the relay alongside Mani Jegathesan. The team finished last in its heat, and that was that. Something else from that year would last much longer.",
+      "words": 128,
+      "quote": {
+        "text": "I am willing to race against Kunalan again to prove I am the better man over 100 m.",
+        "speaker": "Wong Fey Wan (1964, quoted by The Olympians)",
+        "fact": 15
+      },
+      "voice": "He wished the other man had gone instead.",
+      "facts": [
+        15,
+        16,
+        17
+      ],
+      "art": {
+        "direction": "Archive-print plate, sepia halftone with a deckled border and a typed caption strip: a 1964 newspaper sports page (no legible text) folded on a table beside a relay baton and a Tokyo 1964 airline bag; behind, a window with a runner's silhouette from behind on an empty track.",
+        "cut": [
+          "newspaper",
+          "baton",
+          "bag"
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "year": "1964",
+      "title": "The birth certificate",
+      "treatment": "plate",
+      "body": "He is on his way out of the door to see Wilson David, Singapore's Elvis, with the girl he met on the track, when his parents stop him. She was Chong Yoong Yin, Raffles Girls' School sprint champion, 22 like him. She was Chinese, he was Indian, and neither family approved. \"If you go out with her today, you don't come back.\" Kunalan went upstairs, took his birth certificate, and left. \"My eyes were almost tearing, and my hair was standing.\" A colleague took him in; the next day he was renting a room from a pupil's mother for thirty dollars a month. Months later her father and uncle gave Yoong Yin the same choice, and she left too. They had each other, and not much else.",
+      "words": 127,
+      "quote": {
+        "text": "My eyes were almost tearing, and my hair was standing.",
+        "speaker": "C. Kunalan (Tabla, 2026)",
+        "fact": 20
+      },
+      "voice": "\"My eyes were almost tearing, and my hair was standing.\"",
+      "facts": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "art": {
+        "direction": "Paper-cut night interior, 1960s shophouse: a narrow wooden staircase, a young man seen from behind at the top holding a single folded document, two parental silhouettes in the lit doorway below; on a side table, two concert tickets left behind. Indigo and lamp-yellow palette.",
+        "cut": [
+          "young man",
+          "staircase",
+          "tickets",
+          "document"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "1966",
+      "title": "Married three times",
+      "treatment": "photo",
+      "body": "One Sunday morning in 1966 there is a knock at Kunalan's door, and it is his father. The couple had got engaged the October before and posted invitations to relatives they knew would not come. Now his father offered his blessing, on conditions: a Hindu name, a Hindu conversion, a temple wedding. Yoong Yin, a freethinker, agreed to keep the peace, and within two weeks she was Rajeshwari. The auspicious day his father chose was 17 April 1966, the very date they had already picked. So they married at Sri Mariamman Temple in the morning, held a four-dollar-a-head high tea at the Adelphi in the afternoon, and sat down to a Chinese banquet at night for her mother. \"We got married three times.\"",
+      "words": 123,
+      "quote": {
+        "text": "We got married three times. That's probably how we have stayed married for almost 60 years now.",
+        "speaker": "C. Kunalan (Tabla, 2026)",
+        "fact": 25
+      },
+      "voice": "\"We got married three times. That's probably how we have stayed married for almost 60 years now.\"",
+      "facts": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "photo": {
+        "file": "gopuram-of-sri-mariamman-temple-singapore-1.jpg",
+        "path": "pipeline/photos/c-kunalan/gopuram-of-sri-mariamman-temple-singapore-1.jpg",
+        "year": "2026",
+        "license": "CC BY-SA 4.0",
+        "artist": "Kallerna",
+        "page": "https://commons.wikimedia.org/wiki/File:Gopuram_of_Sri_Mariamman_Temple_Singapore_1.jpg",
+        "note": "Place photo taken January 2026; caption 'Sri Mariamman Temple, where they married on 17 April 1966' and show the photo's own year. Trace the gopuram tiers; leave sky flat."
+      }
+    },
+    {
+      "n": 8,
+      "year": "1966",
+      "title": "One hundredth of a second",
+      "treatment": "line",
+      "body": "In Bangkok in December 1966, three men cross the 100 metre line together and the clock gives all of them 10.5 seconds. Only the photo can separate them. Gold goes to Mani Jegathesan of Malaysia, Kunalan's old relay team-mate and, as a tribute later put it, his rival and friend. Kunalan gets silver, by a hundredth of a second. Japan's Hideo Iijima gets bronze. Kunalan added a bronze in the 4x400 metre relay too, and the Asian Games were, in the word of that same tribute, bitter-sweet. He was newly married, still teaching, and still training around his classes. A silver that close tells a runner exactly one thing: he is nearly there. Two years later he would find out how near.",
+      "words": 122,
+      "quote": null,
+      "voice": "Three men, one time: 10.5.",
+      "facts": [
+        26
+      ],
+      "art": {
+        "direction": "Loose pen drawing like a photo-finish strip: three runners' torsos in silhouette leaning at the tape, a vertical finish line splitting them, a stopwatch frozen at 10.5 drawn in the corner. Thai temple roofline faint beyond the stand.",
+        "cut": [
+          "runners",
+          "tape",
+          "stopwatch"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "1968",
+      "title": "Arms and legs big",
+      "treatment": "photo",
+      "body": "Balloons are going up over the stadium in Mexico City, and Kunalan nearly did not get there: until the last days nobody was sure there was money for his fare. He ran for Singapore at the 1968 Olympics, and in the 100 metres he got through his heat, then ran 10.38 seconds in the second round. It would stand as Singapore's record for 33 years. Strangers were kind. An American coach lent him Team USA's masseurs; a Bahamian sprinter told him he was straining in the first 20 metres. Then he watched Bob Beamon fly. He wrote to his wife: \"There are about 6 short men all doing 10 or 10.1. Why? Arms and legs big!! Mine only 1/2.\"",
+      "words": 119,
+      "quote": {
+        "text": "There are about 6 short men all doing 10 or 10.1. Why? Arms and legs big!! Mine only 1/2.",
+        "speaker": "C. Kunalan, letter to his wife (1968)",
+        "fact": 30
+      },
+      "voice": "\"Arms and legs big!! Mine only 1/2.\" (letter to his wife, 1968)",
+      "facts": [
+        27,
+        28,
+        29,
+        30
+      ],
+      "photo": {
+        "file": "estadio-olimpico-universitario-1968-opening-fortepan-73823.jpg",
+        "path": "pipeline/photos/c-kunalan/estadio-olimpico-universitario-1968-opening-fortepan-73823.jpg",
+        "year": "1968",
+        "license": "CC BY-SA 3.0",
+        "artist": "FORTEPAN / Romák Éva",
+        "page": "https://commons.wikimedia.org/wiki/File:Estadio_Ol%C3%ADmpico_Universitario,_az_olimpia_megnyit%C3%B3%C3%BCnneps%C3%A9ge._Fortepan_73823.jpg",
+        "note": "Real October 1968 photo of the opening ceremony; Kunalan is not identifiable in it. Caption 'Mexico City, October 1968'. Trace the stand and rising balloons; an inset of a handwritten-letter shape can carry the quote."
+      }
+    },
+    {
+      "n": 10,
+      "year": "1973",
+      "title": "The flame at the top",
+      "treatment": "photo",
+      "body": "On 1 September 1973 a man in an all-white track suit runs into Singapore's new National Stadium carrying a flame, and climbs to the highest point to light the cauldron of the first SEAP Games the country has hosted. Kunalan had been Sportsman of the Year in 1968 and 1969 and won three golds at the 1969 SEAP Games. Then, in 1970, another photo finish handed him an Asian Games bronze, and injury forced him to stop. He came back. Two years after the cauldron he anchored the 4x400 metre team to SEAP gold. Thirty-four years later, when the old stadium closed, he would race up its gallery steps one more time and light it for the last time.",
+      "words": 119,
+      "quote": null,
+      "voice": "The first to light it, and the last.",
+      "facts": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        44
+      ],
+      "photo": {
+        "file": "national-stadium-singapore-7-may-07.jpg",
+        "path": "pipeline/photos/c-kunalan/national-stadium-singapore-7-may-07.jpg",
+        "year": "2007",
+        "license": "CC BY-SA 3.0",
+        "artist": "Sengkang",
+        "page": "https://commons.wikimedia.org/wiki/File:National_Stadium,_Singapore_7,_May_07.JPG",
+        "note": "Place photo of the old National Stadium, May 2007, weeks before its farewell; caption with its own year (2007). Trace the stand roof; add a small flame at the cauldron position as a drawn overlay."
+      }
+    },
+    {
+      "n": 11,
+      "year": "1979",
+      "title": "Mr K",
+      "treatment": "line",
+      "body": "A lecture room at the Institute of Education, and a lecturer telling future PE teachers that their first job is not to make children hate track and field. Kunalan taught for 20 years in schools, 13 of them at Dunearn Secondary Technical, before joining the institute around 1980. A heel injury, not age, ended his racing in 1979, though at 39 he still ran 400 metres in 48.8 seconds. He studied in Perth, in West Germany on a course taught in German, and at Loughborough, sitting exams alongside students half his age. His pupils called him Mr K. As national sprint coach he watched his relay team break, in 1994, a record he had helped set twenty years before. Records, he was learning, are made to be passed on.",
+      "words": 129,
+      "quote": {
+        "text": "Don't let them hate T&F; don't let them hate you.",
+        "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+        "fact": 39
+      },
+      "voice": "\"Don't let them hate T&F; don't let them hate you.\"",
+      "facts": [
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "art": {
+        "direction": "Single pen drawing: a lecture room with a skeleton model and an anatomy chart of leg muscles, rows of students seen from behind, a lecturer's silhouette at the board drawing a sprinter's stride in chalk.",
+        "cut": [
+          "skeleton",
+          "students",
+          "lecturer",
+          "chalkboard"
+        ]
+      }
+    },
+    {
+      "n": 12,
+      "year": "2008",
+      "title": "Still running",
+      "treatment": "photo",
+      "body": "In 2001 a young sprinter Kunalan had mentored, U. K. Shyam, finally ran 100 metres a hundredth of a second faster than his old record. A few months later, on 11 January 2002, Kunalan was inducted into the Sports Hall of Fame and used his speech to thank his wife. Yoong Yin had stopped competing when she was pregnant, raised their three daughters, and kept enough protein on his plate; a brain-tumour operation later left her deaf in one ear. \"Yoong Ying kept me going.\" He kept working into his seventies, unveiled casts of his own hand and foot in 2018, and in 2022 retired to spend more time with her. His rule for marriage sounds like his rule for relays: \"We are equals.\"",
+      "words": 124,
+      "quote": {
+        "text": "Yoong Ying kept me going.",
+        "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+        "fact": 48
+      },
+      "voice": "\"As a couple, we must not feel that we want to be superior. We are equals.\"",
+      "facts": [
+        42,
+        43,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "photo": {
+        "file": "ckunalan-singapore-olympic-academy-youth-session-20081103-01.jpg",
+        "path": "pipeline/photos/c-kunalan/ckunalan-singapore-olympic-academy-youth-session-20081103-01.jpg",
+        "year": "2008",
+        "license": "CC BY 2.0",
+        "artist": "whyohgee singapore 2010 (Flickr)",
+        "page": "https://commons.wikimedia.org/wiki/File:CKunalan-SingaporeOlympicAcademyYouthSession-20081103-01.jpg",
+        "note": "Taken 3 Nov 2008 at a Singapore Olympic Academy youth session (age 66); caption with its own year. Trace the figure; the -02 frame can sit as a small inset."
+      }
+    }
+  ]
+}

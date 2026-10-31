@@ -736,6 +736,33 @@
       ],
       "corroborated": false,
       "theme": "now"
+    },
+    {
+      "n": 46,
+      "year": "2019",
+      "date": "2019-04",
+      "text": "The documentary premiered at Hot Docs, North America's largest documentary festival, in April 2019.",
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        }
+      ],
+      "corroborated": false,
+      "theme": "recognition"
+    },
+    {
+      "n": 47,
+      "year": "2013",
+      "text": "In 2013 the WTO was granted consultative status with the UN Economic and Social Council.",
+      "sources": [
+        {
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        }
+      ],
+      "corroborated": false,
+      "theme": "recognition"
     }
   ],
   "conflicts": [

@@ -1,0 +1,985 @@
+{
+  "slug": "c-kunalan",
+  "name": "C. Kunalan",
+  "generated": "2026-10-31",
+  "method": "Muse Spark web search (2 calls) for leads; every fact below re-read from the cited page by the agent. corroborated = two or more independent sources.",
+  "gaps": "NLB Infopedia and HistorySG pages (JS-rendered) and the MOE 'Late But Not Last' interview could not be read, so the barefoot-on-cinders and first-spikes anecdotes Spark reported are NOT included. The 1973 burnt-hand story and the cast's artist (Baet Yeok Kuan) appear only in search snippets and are excluded.",
+  "facts": [
+    {
+      "n": 1,
+      "year": "1942",
+      "date": "1942-10-23",
+      "text": "Born Canagasabai Kunalan on 23 October 1942.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 2,
+      "year": "1940s",
+      "text": "He grew up in a big house in Johor, where his father was a medical officer. After the Japanese Occupation his father moved to Singapore and ran a clinic inside a brewery compound.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "family"
+    },
+    {
+      "n": 3,
+      "year": "1950s",
+      "text": "He has three sisters; the eldest was adopted by his father. The family lived on Alexandra Road and he went to Pasir Panjang English School.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "family"
+    },
+    {
+      "n": 4,
+      "year": "1950s",
+      "text": "On afternoon-session days he went to school early with a group of boys to play football before the bell.",
+      "quote": "I was not good enough to play for the school so I just played for fun.",
+      "speaker": "C. Kunalan (Vintage Radio SG, via SilverStreak)",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "childhood"
+    },
+    {
+      "n": 5,
+      "year": "1950s",
+      "text": "Before one secondary-school Sports Day he went to the trials on a whim; the house master put him in the 'One Mile Open'. With no training he came third, and first the following year.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "turning point"
+    },
+    {
+      "n": 6,
+      "year": "c.1960",
+      "text": "His O-level results were not good enough to continue studying, so his father sent him to night school; afterwards he taught Malay and Indian soldiers at Gillman Barracks.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 7,
+      "year": "c.1960",
+      "text": "With little to do by day he played football up to three times a day, and with other Indian boys formed the Indian Youth Football Team.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 8,
+      "year": "1961",
+      "text": "He became a teacher 'by chance' and was posted to Tiong Bahru Primary School; he taught in primary schools from 1961 to 1966.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 9,
+      "year": "1962",
+      "text": "A colleague saw him playing football with his pupils, asked him to run a relay at the Teachers' Training College, and told the coach, Olympian sprinter Tan Eng Yoon, who invited him to train at Farrer Park. Kunalan later called this the 'turning point' of his life.",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 10,
+      "year": "1962",
+      "text": "Doubting he could ever be a sprinter, he did not turn up for six months, until he bumped into Tan, who kept visiting Tiong Bahru Primary. He did not know what 'potential' meant; on the ninth visit he agreed to train.",
+      "quote": "I can recognise potential when I see it.",
+      "speaker": "Tan Eng Yoon, as recalled by Kunalan (SilverStreak)",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 11,
+      "year": "1963",
+      "text": "He first took up running in 1963, aged 20.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 12,
+      "year": "1963",
+      "text": "After only five months of training he ran 10.9 s (100 m), 22.3 s (200 m) and 50.9 s (400 m); Tan, then national coach, said he had shown the most improvement of any athlete.",
+      "sources": [
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": false,
+      "theme": "work"
+    },
+    {
+      "n": 13,
+      "year": "1963",
+      "text": "At the Malaysia Sports Festival in Kuala Lumpur he ran in a 4x100 m relay team (with Cedric Monteiro, Wong Fey Wan and Low Sin Chock) that set a Singapore record of 42.0 s.",
+      "sources": [
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": false,
+      "theme": "recognition"
+    },
+    {
+      "n": 14,
+      "year": "1960s",
+      "text": "Resources were thin: endurance runs at MacRitchie Reservoir, strength work at a friend's house, and finally training under a tree at Farrer Park, with the weights kept in the ladies' toilet.",
+      "quote": "We had all the basic equipment and facilities.",
+      "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+      "sources": [
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": false,
+      "theme": "object"
+    },
+    {
+      "n": 15,
+      "year": "1964",
+      "text": "His selection for Malaysia's Olympic 4x100 m relay angered sprinter Wong Fey Wan, who challenged him publicly in the press.",
+      "quote": "I am willing to race against Kunalan again to prove I am the better man over 100 m.",
+      "speaker": "Wong Fey Wan (1964, quoted by The Olympians)",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 16,
+      "year": "1964",
+      "text": "Kunalan called the Wong affair 'one of the saddest moments' of his career; he never knew if he was picked on merit and wished Wong had gone instead (per Steven Quek's 2010 biography).",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 17,
+      "year": "1964",
+      "text": "At the Tokyo Olympics he ran in Malaysia's 4x100 m relay with Mani Jegathesan; three days before his 22nd birthday the team finished last in its first-round heat.",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        },
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 18,
+      "year": "1964",
+      "text": "He met Chong Yoong Yin, Raffles Girls' School sprint champion and national sprinter, on the track in 1964; both were 22. Their friendship grew slowly into love.",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "relationship"
+    },
+    {
+      "n": 19,
+      "year": "1964",
+      "text": "Their parents disapproved of an Indian-Chinese couple. As he left for a Wilson David ('Singapore's Elvis') concert with her, his parents gave him an ultimatum.",
+      "quote": "You are going to go out with a Chinese girl. If you go out with her today, you don't come back.",
+      "speaker": "His parents (as recalled, Tabla 2026)",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 20,
+      "year": "1964",
+      "text": "He went upstairs, took his birth certificate and left home. A colleague put him up; next day he rented a room from a pupil's mother for S$30 a month.",
+      "quote": "My eyes were almost tearing, and my hair was standing.",
+      "speaker": "C. Kunalan (Tabla, 2026)",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 21,
+      "year": "1965",
+      "text": "Months later her father and uncle gave Chong the same ultimatum; she left and moved in with her estranged mother, who had left her father when Chong was 12.",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 22,
+      "year": "1965",
+      "text": "Shunned by both families, he decided they would build their own circle.",
+      "quote": "We'll have our own friends who will accept us.",
+      "speaker": "C. Kunalan (The Olympians, 2017)",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 23,
+      "year": "1965",
+      "date": "1965-10",
+      "text": "They got engaged in October 1965 and posted wedding invitations to family knowing they would not come.",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "relationship"
+    },
+    {
+      "n": 24,
+      "year": "1966",
+      "text": "One Sunday morning his father knocked on the door and offered his blessing if Chong converted to Hinduism and took a Hindu name. Within two weeks she became Rajeshwari; she says she was a freethinker and did it 'to pacify everyone'.",
+      "quote": "Here was another moment where my hair stood and my tears came.",
+      "speaker": "C. Kunalan (Tabla, 2026)",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 25,
+      "year": "1966",
+      "date": "1966-04-17",
+      "text": "His father's auspicious day was 17 April 1966, the very date they had picked. They held a Hindu ceremony at Sri Mariamman Temple in the morning, a S$4-a-head high tea at the Adelphi Hotel in the afternoon and, for her mother, a Chinese banquet at night.",
+      "quote": "We got married three times. That's probably how we have stayed married for almost 60 years now.",
+      "speaker": "C. Kunalan (Tabla, 2026)",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "relationship"
+    },
+    {
+      "n": 26,
+      "year": "1966",
+      "text": "At the Asian Games in Bangkok (December) the 100 m medallists Jegathesan, Kunalan and Iijima were all timed at 10.5 s; Kunalan took silver, missing gold by 0.01 s to his 'rival and friend' Jega. He also won 4x400 m relay bronze.",
+      "sources": [
+        {
+          "label": "Wikipedia: Athletics at the 1966 Asian Games",
+          "url": "https://en.wikipedia.org/wiki/Athletics_at_the_1966_Asian_Games"
+        },
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "struggle"
+    },
+    {
+      "n": 27,
+      "year": "1968",
+      "text": "Until the last days before departure it was not clear he had the funds to travel to the Mexico City Olympics.",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 1: Defying the Odds in Mexico City' (9 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/09/canagasabai-kunalan-singapores-fastest-man-part-1-defying-the-odds-in-mexico-city/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 28,
+      "year": "1968",
+      "text": "In Mexico City he ran 10.38 s for the 100 m, advancing past the first round; it stood as Singapore's national record for 33 years.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Jonathan Wong, 'Another medal for track star and teacher Kunalan', The Straits Times (10 Aug 2015)",
+          "url": "https://www.straitstimes.com/singapore/another-medal-for-track-star-and-teacher-kunalan"
+        },
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 29,
+      "year": "1968",
+      "text": "US assistant coach Stan Wright let him use Team USA's masseurs; Bahamian sprinter Tom Robinson told him he was straining too hard in the first 20 m. He then watched Beamon's leap and Fosbury's jump from the stands.",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 1: Defying the Odds in Mexico City' (9 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/09/canagasabai-kunalan-singapores-fastest-man-part-1-defying-the-odds-in-mexico-city/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 30,
+      "year": "1968",
+      "text": "In a letter to his wife he measured himself against the world's best.",
+      "quote": "There are about 6 short men all doing 10 or 10.1. Why? Arms and legs big!! Mine only 1/2.",
+      "speaker": "C. Kunalan, letter to his wife (1968)",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 1: Defying the Odds in Mexico City' (9 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/09/canagasabai-kunalan-singapores-fastest-man-part-1-defying-the-odds-in-mexico-city/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 31,
+      "year": "1968",
+      "text": "Named Singapore's Sportsman of the Year in 1968 and again in 1969.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Jonathan Wong, 'Another medal for track star and teacher Kunalan', The Straits Times (10 Aug 2015)",
+          "url": "https://www.straitstimes.com/singapore/another-medal-for-track-star-and-teacher-kunalan"
+        },
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 32,
+      "year": "1969",
+      "text": "At the 1969 SEAP Games he won three golds: 100 m, 200 m and 4x400 m relay.",
+      "sources": [
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 33,
+      "year": "1970",
+      "text": "At the 1970 Asian Games a photo finish again denied him: same time as two others, awarded bronze. Injury forced his first retirement at the end of 1970.",
+      "sources": [
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 34,
+      "year": "1973",
+      "date": "1973-09-01",
+      "text": "He came back. On 1 September 1973, in an all-white track suit, he carried the flame into the new National Stadium and lit the SEAP Games cauldron at its highest point, the first person to do so.",
+      "sources": [
+        {
+          "label": "BiblioAsia (NLB), 'The 1973 SEAP Games in Singapore', vol. 19 issue 4 (Jan-Mar 2024)",
+          "url": "https://biblioasia.nlb.gov.sg/vol-19/issue-4/jan-mar-2024/seventh-seap-games-1973/"
+        },
+        {
+          "label": "Sport Singapore media centre, 'Thanks for the Memories' (National Stadium farewell, 2007)",
+          "url": "https://www.sportsingapore.gov.sg/media-centre/thanks-for-the-memories/"
+        },
+        {
+          "label": "The Kallang, 'The Sea Games Cauldron — An Icon Of Singapore's Sporting History'",
+          "url": "https://thekallang.com.sg/explore/the-sea-games-cauldron-an-icon-of-singapores-sporting-history"
+        },
+        {
+          "label": "Jonathan Wong, 'Another medal for track star and teacher Kunalan', The Straits Times (10 Aug 2015)",
+          "url": "https://www.straitstimes.com/singapore/another-medal-for-track-star-and-teacher-kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 35,
+      "year": "1975",
+      "text": "He anchored Singapore's 4x400 m relay to gold at the 1975 SEAP Games.",
+      "sources": [
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "recognition"
+    },
+    {
+      "n": 36,
+      "year": "1967",
+      "text": "He taught for 13 years at Dunearn Secondary Technical School (1967-1980).",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 37,
+      "year": "1979",
+      "text": "A heel injury, not age, ended his competitive career in 1979.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 38,
+      "year": "1980",
+      "text": "He joined the Institute of Education as a lecturer, later assistant professor, teaching functional anatomy, exercise physiology and conditioning; scholarships took him to Perth (1980), West Germany (1983-84, a course taught in German) and Loughborough for a master's.",
+      "quote": "I had to attend all classes with the third-year students, take the second-year Exercise Physiology lectures, and sit for the exams.",
+      "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 39,
+      "year": "1980s",
+      "text": "His students called him 'Mr K'. His rule was to make track and field fun.",
+      "quote": "Don't let them hate T&F; don't let them hate you.",
+      "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+      "sources": [
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 40,
+      "year": "1981",
+      "text": "Aged 39 he ran 400 m in 48.8 s at the Swifts Club championships at the National Stadium.",
+      "sources": [
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 41,
+      "year": "1994",
+      "text": "As national sprint coach (1993-96) he saw his sprinters break the 4x100 m record in 1994, a record he had helped set in 1974.",
+      "sources": [
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "mentor"
+    },
+    {
+      "n": 42,
+      "year": "2001",
+      "text": "His 100 m record fell in 2001, lowered by 0.01 s by U. K. Shyam, a sprinter he had mentored.",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "others"
+    },
+    {
+      "n": 43,
+      "year": "2002",
+      "date": "2002-01-11",
+      "text": "Inducted into the Sports Hall of Fame on 11 January 2002 at the Fullerton Hotel; in his speech he singled out his wife.",
+      "sources": [
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 44,
+      "year": "2007",
+      "text": "At the old National Stadium's farewell he led a V of Team Singapore athletes round the track and raced up the gallery steps to light its cauldron for the last time.",
+      "sources": [
+        {
+          "label": "Sport Singapore media centre, 'Thanks for the Memories' (National Stadium farewell, 2007)",
+          "url": "https://www.sportsingapore.gov.sg/media-centre/thanks-for-the-memories/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "now"
+    },
+    {
+      "n": 45,
+      "year": "2010",
+      "text": "He left the National Institute of Education in June 2010 and in August, aged 67, joined the Singapore Sports Council looking after past Olympians.",
+      "sources": [
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        },
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 46,
+      "year": "2015",
+      "text": "Awarded the Meritorious Service Medal; he named the opening of the Sports School (2004) and lighting the 1973 cauldron among his proudest moments.",
+      "quote": "I'm almost 73 and still working.",
+      "speaker": "C. Kunalan (The Straits Times, 2015)",
+      "sources": [
+        {
+          "label": "Jonathan Wong, 'Another medal for track star and teacher Kunalan', The Straits Times (10 Aug 2015)",
+          "url": "https://www.straitstimes.com/singapore/another-medal-for-track-star-and-teacher-kunalan"
+        },
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 47,
+      "year": "2018",
+      "date": "2018-10-19",
+      "text": "On 19 October 2018 he unveiled casts of his own hand and foot at the Singapore Sports Museum.",
+      "sources": [
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ],
+      "corroborated": false,
+      "theme": "object"
+    },
+    {
+      "n": 48,
+      "year": "1960s-2020s",
+      "text": "His wife stopped competing when pregnant and raised their three daughters, making sure he ate enough protein; a brain-tumour operation later left her with a drooping eyelid and deaf in one ear. Daughter Mona ran for Singapore at four SEA Games in the 1990s.",
+      "quote": "Yoong Ying kept me going.",
+      "speaker": "C. Kunalan (ActiveSG Circle, 2024)",
+      "sources": [
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        },
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 49,
+      "year": "2017",
+      "text": "He calls himself an internationalist; his children married across nationalities and he is proud to be an inter-racial grandparent.",
+      "quote": "I am not nationalistic. I am more of an internationalist.",
+      "speaker": "C. Kunalan (to a Singapore magazine, via The Olympians)",
+      "sources": [
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 50,
+      "year": "2022",
+      "text": "He retired from Sport Singapore in 2022 to spend more time with his wife, and still runs.",
+      "quote": "As a couple, we must not feel that we want to be superior. We are equals.",
+      "speaker": "C. Kunalan (Tabla, 2026)",
+      "sources": [
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        },
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        }
+      ],
+      "corroborated": true,
+      "theme": "now"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Birth year",
+      "detail": "The brief says 1941; every source read gives 23 October 1942. Using 1942.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        }
+      ]
+    },
+    {
+      "topic": "Birthplace",
+      "detail": "Wikipedia's infobox says Singapore; SilverStreak says he grew up in a big house in Johor and the family moved to Singapore after the Occupation (Spark reports NLB Infopedia says born in Johor, moved 1944, but the Infopedia page would not render for verification).",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        }
+      ]
+    },
+    {
+      "topic": "How he was spotted",
+      "detail": "Wikipedia: a PE teacher saw his fast legs chasing a football. SilverStreak: a Tiong Bahru colleague recruited him for a college relay and Tan Eng Yoon visited nine times. The Olympians: spotted by Tan 'only a year before' Tokyo.",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "SilverStreak, 'C Kunalan: Legendary Sprinter Who Lives Life Like A Marathon' (from his Vintage Radio SG interview, c.2024)",
+          "url": "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ]
+    },
+    {
+      "topic": "The ultimatum",
+      "detail": "Tabla quotes 'If you go out with her today, you don't come back' before a concert; The Olympians places it after Tokyo as 'leave that Chinese girl or never return home again'.",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ]
+    },
+    {
+      "topic": "Wedding date",
+      "detail": "Tabla: 17 April 1966. The Olympians: 'wedding date set for October 1966'.",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 2: Out of the Frying Pan of the Race Riots and Into the Fire of the Olympics' (10 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+        }
+      ]
+    },
+    {
+      "topic": "Retirement",
+      "detail": "First retirement end-1970 then comeback in 1973 (Hall of Fame, Dunearn). Final retirement 1978 (Hall of Fame) vs 1979 (Wikipedia, Tabla, Dunearn). The Olympians says simply he retired in 1970. Using 1979.",
+      "sources": [
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 1: Defying the Odds in Mexico City' (9 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/09/canagasabai-kunalan-singapores-fastest-man-part-1-defying-the-odds-in-mexico-city/"
+        }
+      ]
+    },
+    {
+      "topic": "Start at the Institute of Education",
+      "detail": "1980 (Wikipedia, Dunearn) vs 1981 (ActiveSG Circle).",
+      "sources": [
+        {
+          "label": "Wikipedia: C. Kunalan",
+          "url": "https://en.wikipedia.org/wiki/C._Kunalan"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ]
+    },
+    {
+      "topic": "1968 time and round",
+      "detail": "Dunearn lists '10.3s ... (100m Semi-Final)' (hand time); the Hall of Fame says 10.38 s electronic; The Olympians says he advanced past round one into the top 32. Using 10.38 s, second round.",
+      "sources": [
+        {
+          "label": "Dunearn Secondary Technical School, 'A Tribute to The Fastest Man in 100m for 33 years' (archived 25 Aug 2014)",
+          "url": "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+        },
+        {
+          "label": "Singapore Sports Council Sports Museum, 'Hall of Fame: C Kunalan' (archived 28 Nov 2011)",
+          "url": "https://web.archive.org/web/20111128065236/http://www.sportsmuseum.com.sg/heroes/hall_of_fame/c_kunalan.html"
+        },
+        {
+          "label": "The Olympians, 'Canagasabai Kunalan Singapore's Fastest Man Part 1: Defying the Odds in Mexico City' (9 Sep 2017)",
+          "url": "https://theolympians.co/2017/09/09/canagasabai-kunalan-singapores-fastest-man-part-1-defying-the-odds-in-mexico-city/"
+        }
+      ]
+    },
+    {
+      "topic": "Wife's name",
+      "detail": "Chong Yoong Yin (Tabla, Wikipedia, SilverStreak) vs Chong Yoong Ying (ActiveSG Circle).",
+      "sources": [
+        {
+          "label": "Sakti Singaravelu, 'The Kunalans' Six-Decade-Long Interracial Marriage Shaped By Sports', Tabla (19 Feb 2026)",
+          "url": "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+        },
+        {
+          "label": "ActiveSG Circle, 'Beyond the Finish Line: C Kunalan' (5 Aug 2024)",
+          "url": "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+        }
+      ]
+    }
+  ]
+}

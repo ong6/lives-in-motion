@@ -1,0 +1,945 @@
+{
+  "slug": "sim-wong-hoo",
+  "name": "Sim Wong Hoo",
+  "generated": "2026-10-31",
+  "method": "Muse Spark web search (2 calls) for leads; every fact below re-read from the cited page by the agent. corroborated = two or more independent sources.",
+  "gaps": "The NLB Infopedia page only loads through Wayback (snapshot 2 Apr 2025). The 2026 family book and the ST article on it were not read directly; facts 5, 8 (giver), 13, 22, 24 and 48 come via VnExpress. The Peak republishes ST's '10 things', so the two are counted as one source.",
+  "facts": [
+    {
+      "n": 1,
+      "year": "1955",
+      "text": "Born in 1955, the 10th child in a Zhao'an Hokkien family of five boys and seven girls.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 2,
+      "year": "1955",
+      "text": "He grew up in a kampung in Bukit Panjang called End of Coconut Hill (Ye Shan Wei), where Fajar Road is today.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 3,
+      "year": "1960s",
+      "text": "His father, Sim Chye Thiam, worked as a factory labourer and later as a provision-shop attendant.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "family"
+    },
+    {
+      "n": 4,
+      "year": "1960s",
+      "text": "His mother, Tan Siok Kee, reared chickens, ducks, pigs and rabbits, grew fruit and herbs, and sold eggs door to door.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        },
+        {
+          "label": "Tatler Asia, 'Creative Technology founder and CEO Sim Wong Hoo dies' (Jan 2023)",
+          "url": "https://www.tatlerasia.com/power-purpose/others/creative-technology-founder-ceo-sim-wong-hoo-dies"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 5,
+      "year": "1960s",
+      "text": "The family was so poor that several children shared beds of wooden planks laid on bricks; Sim later slept on two benches topped with a single plank.",
+      "sources": [
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "childhood"
+    },
+    {
+      "n": 6,
+      "year": "1960s",
+      "text": "Before school he sold eggs at the market; at home he cleared weeds, cut grass for the rabbits and prepared coconuts.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 7,
+      "year": "1960s",
+      "text": "Unable to afford toys, he made his own toys and board games; in his 1999 book he called himself a 'weird' child.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "childhood"
+    },
+    {
+      "n": 8,
+      "year": "1966",
+      "text": "He took up the harmonica at about 11 and regarded it as his first love; one account says a sister gave it to him.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "object"
+    },
+    {
+      "n": 9,
+      "year": "1969",
+      "text": "His father died in 1969, leaving his mother to raise the family alone.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 10,
+      "year": "1975",
+      "text": "After Bukit Panjang Government High School he graduated from Ngee Ann Technical College (now Ngee Ann Polytechnic) in electrical and electronic engineering in 1975.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 11,
+      "year": "1970s",
+      "text": "At Ngee Ann he joined the harmonica troupe and arranged its scores; to accompany it he learned the accordion at playwright Kuo Pao Kun's Practice Theatre School.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": true,
+      "theme": "mentor"
+    },
+    {
+      "n": 12,
+      "year": "1970s",
+      "text": "He only heard how his arrangements sounded at the troupe's weekly practice, so he dreamed of a computer synthesiser that would play them exactly as written.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "turning point"
+    },
+    {
+      "n": 13,
+      "year": "1970s",
+      "text": "He later wrote that the village gave fertile ground for creativity and the harmonica club 'planted the first seed of Creative in me'.",
+      "quote": "The (Ngee Ann) Harmonica Club planted the first seed of Creative in me.",
+      "speaker": "Sim Wong Hoo, Chaotic Thoughts from the Old Millennium (1999), quoted by VnExpress",
+      "sources": [
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 14,
+      "year": "late 1970s",
+      "text": "During National Service he tried a half-marathon with friends unprepared; he walked the second half and reached the finish after everyone had gone and the street was swept.",
+      "quote": "When I got to the end, there was nobody there. There was nothing left, even the street was cleaned up.",
+      "speaker": "Sim Wong Hoo (TODAY, 2008)",
+      "sources": [
+        {
+          "label": "Ansley Ng, interview with Sim Wong Hoo, TODAY (June 2008), reposted on the nothingbutcreative blog",
+          "url": "http://nothingbutcreative.blogspot.com/2008/06/coffee-with-sim-wong-hoo-creative.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 15,
+      "year": "c. 1980",
+      "text": "He opened a computer tuition centre at Coronation Plaza with an acquaintance, who absconded with the tuition fees; Sim concluded he must be directly in control of any business.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 16,
+      "year": "1981",
+      "date": "1981-07",
+      "text": "In July 1981 he opened a computer shop at Pearl's Centre in Chinatown with childhood friend and schoolmate Ng Kai Wa; this was the start of Creative Technology.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 17,
+      "year": "1981",
+      "text": "The shop was 440 square feet and started on his savings of S$10,000; he taught computer classes to keep it going and, when business was poor, taught part-time at a private school.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 18,
+      "year": "1980s",
+      "text": "In the early days he lived on S$200 a month, he told Yahoo in 2019.",
+      "quote": "In the early days, I survived on $200 a month.",
+      "speaker": "Sim Wong Hoo (Yahoo Finance, 2019)",
+      "sources": [
+        {
+          "label": "Janet Ong, 'Don't get married: Creative's Sim Wong Hoo advises budding entrepreneurs', Yahoo Finance Singapore (16 Apr 2019)",
+          "url": "https://sg.finance.yahoo.com/news/dont-get-married-creatives-sim-wong-hoo-advises-budding-entrepreneurs-013605163.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 19,
+      "year": "1984",
+      "text": "In 1984 Creative launched the Cubic 99, the first PC designed and made in Singapore.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "work"
+    },
+    {
+      "n": 20,
+      "year": "1986",
+      "text": "The Cubic CT (1986), a multilingual multimedia PC, was not a commercial success; Sim turned to its sound technology instead. Accordion classmate Chay Kwong Soon joined as co-founder that year.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 21,
+      "year": "1987",
+      "text": "The sound work became the Creative Music System (1987), renamed Game Blaster for the US market; Creative gave game developers free support and collected their wish lists.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "work"
+    },
+    {
+      "n": 22,
+      "year": "1988",
+      "text": "He moved to the US in 1988 and vowed not to return until he had sold 20,000 units; he reached the target.",
+      "sources": [
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 23,
+      "year": "1989",
+      "date": "1989-11",
+      "text": "Sound Blaster launched at Comdex in Las Vegas in November 1989 and took 600 orders at the show.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 24,
+      "year": "1989",
+      "text": "According to the Wall Street Journal, cited by VnExpress, Michael Jackson turned up unannounced at the crowded Comdex booth and stayed nearly half an hour.",
+      "sources": [
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 25,
+      "year": "1990",
+      "text": "By the end of 1990 Sound Blaster was the world's top-selling PC add-on; revenue rose from US$5.4m (1989) to US$658m (1994).",
+      "sources": [
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        },
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 26,
+      "year": "1992",
+      "date": "1992-08",
+      "text": "In August 1992 Creative became the first Singapore company to list on Nasdaq; Sound Blaster held 72% of the world market that year.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 27,
+      "year": "1993",
+      "text": "He was named Businessman of the Year for 1992 (and again for 1997), the first person to win it twice; he wore a suit perhaps only for those two awards.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Grace Chng, 'Sim Wong Hoo: a simple, humble person who became Singapore's tech icon', Techgoondu (5 Jan 2023)",
+          "url": "https://www.techgoondu.com/2023/01/05/sim-wong-hoo-a-simple-humble-person-who-became-singapores-tech-icon/"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 28,
+      "year": "1996",
+      "text": "In 1996 an oversupply of CD-ROM drives forced massive inventory write-downs; Sim refocused the company on audio, and the turnaround won him his second Businessman of the Year award.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        }
+      ],
+      "corroborated": false,
+      "theme": "struggle"
+    },
+    {
+      "n": 29,
+      "year": "1999",
+      "text": "In February 1999 Goh Chok Tong opened the Creative Resources building at International Business Park; Sim put a childcare centre, an auditorium and a grand piano in its foyer.",
+      "sources": [
+        {
+          "label": "Grace Chng, 'Sim Wong Hoo: a simple, humble person who became Singapore's tech icon', Techgoondu (5 Jan 2023)",
+          "url": "https://www.techgoondu.com/2023/01/05/sim-wong-hoo-a-simple-humble-person-who-became-singapores-tech-icon/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 30,
+      "year": "1999",
+      "text": "The Nomad MP3 player launched in 1999, about two years before Apple's iPod.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": true,
+      "theme": "work"
+    },
+    {
+      "n": 31,
+      "year": "1999",
+      "text": "In December 1999 he published 'Chaotic Thoughts from the Old Millennium', coining 'No U-Turn Syndrome': Singapore drivers U-turn only where a sign allows it.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        },
+        {
+          "label": "Janet Ong, 'Don't get married: Creative's Sim Wong Hoo advises budding entrepreneurs', Yahoo Finance Singapore (16 Apr 2019)",
+          "url": "https://sg.finance.yahoo.com/news/dont-get-married-creatives-sim-wong-hoo-advises-budding-entrepreneurs-013605163.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "voice"
+    },
+    {
+      "n": 32,
+      "year": "2000",
+      "text": "By 2000, aged 45, he was Singapore's youngest billionaire; SGX shares peaked at $64 in March 2000.",
+      "sources": [
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "Grace Chng, 'Sim Wong Hoo: a simple, humble person who became Singapore's tech icon', Techgoondu (5 Jan 2023)",
+          "url": "https://www.techgoondu.com/2023/01/05/sim-wong-hoo-a-simple-humble-person-who-became-singapores-tech-icon/"
+        }
+      ],
+      "corroborated": true,
+      "theme": "recognition"
+    },
+    {
+      "n": 33,
+      "year": "2000s",
+      "text": "He was stubborn: he rejected a white Zen in a white box and chose blue; soon after, Apple's white iPod took the world by storm. He also threw out a US$1 million Frog Design packaging concept.",
+      "sources": [
+        {
+          "label": "Grace Chng, 'Sim Wong Hoo: a simple, humble person who became Singapore's tech icon', Techgoondu (5 Jan 2023)",
+          "url": "https://www.techgoondu.com/2023/01/05/sim-wong-hoo-a-simple-humble-person-who-became-singapores-tech-icon/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 34,
+      "year": "2006",
+      "date": "2006-08-23",
+      "text": "In August 2006 Apple paid Creative US$100 million for a licence to its Zen user-interface patent, ending five lawsuits.",
+      "quote": "We're very pleased to have reached an amicable settlement with Apple.",
+      "speaker": "Sim Wong Hoo (Apple press release, 23 Aug 2006)",
+      "sources": [
+        {
+          "label": "Apple Newsroom, 'Apple & Creative Announce Broad Settlement Ending Legal Disputes Between the Companies' (23 Aug 2006)",
+          "url": "https://www.apple.com/newsroom/2006/08/23Apple-Creative-Announce-Broad-Settlement-Ending-Legal-Disputes-Between-the-Companies/"
+        },
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 35,
+      "year": "2006",
+      "text": "Creative still lost the MP3 war; it reported a S$187m full-year loss in August 2006 and turned to cost-cutting.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Janet Ong, 'Don't get married: Creative's Sim Wong Hoo advises budding entrepreneurs', Yahoo Finance Singapore (16 Apr 2019)",
+          "url": "https://sg.finance.yahoo.com/news/dont-get-married-creatives-sim-wong-hoo-advises-budding-entrepreneurs-013605163.html"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 36,
+      "year": "2006",
+      "text": "His mother died in 2006; the foundation he started that year was renamed the Sim-Tan Siok Kee Foundation in her memory.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ],
+      "corroborated": true,
+      "theme": "family"
+    },
+    {
+      "n": 37,
+      "year": "2006",
+      "text": "He gave more than S$49 million to charity in his lifetime, including S$30 million of Creative shares for two foundations, one honouring his mentor Kuo Pao Kun.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ],
+      "corroborated": true,
+      "theme": "relationship"
+    },
+    {
+      "n": 38,
+      "year": "2007",
+      "text": "Creative voluntarily delisted from Nasdaq in 2007; its SGX shares later fell to around $1 by 2017.",
+      "sources": [
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": false,
+      "theme": "cost"
+    },
+    {
+      "n": 39,
+      "year": "2007",
+      "text": "He ran his first marathon in December 2007 in just under seven hours, then signed up for an 84 km ultramarathon.",
+      "quote": "I always do things when I am not prepared.",
+      "speaker": "Sim Wong Hoo (TODAY, 2008)",
+      "sources": [
+        {
+          "label": "Ansley Ng, interview with Sim Wong Hoo, TODAY (June 2008), reposted on the nothingbutcreative blog",
+          "url": "http://nothingbutcreative.blogspot.com/2008/06/coffee-with-sim-wong-hoo-creative.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 40,
+      "year": "2008",
+      "text": "He said he did his best thinking on the run and treated McWings as a post-run reward.",
+      "quote": "When I run, I am synchronised with the universe.",
+      "speaker": "Sim Wong Hoo (TODAY, 2008)",
+      "sources": [
+        {
+          "label": "Ansley Ng, interview with Sim Wong Hoo, TODAY (June 2008), reposted on the nothingbutcreative blog",
+          "url": "http://nothingbutcreative.blogspot.com/2008/06/coffee-with-sim-wong-hoo-creative.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 41,
+      "year": "2011",
+      "text": "By 2011 he was running from his home at Dairy Farm in Bukit Panjang to the office in Jurong; he wore a Casio watch, T-shirts and sneakers.",
+      "sources": [
+        {
+          "label": "Grace Chng, 'Sim Wong Hoo: a simple, humble person who became Singapore's tech icon', Techgoondu (5 Jan 2023)",
+          "url": "https://www.techgoondu.com/2023/01/05/sim-wong-hoo-a-simple-humble-person-who-became-singapores-tech-icon/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "habit"
+    },
+    {
+      "n": 42,
+      "year": "2019",
+      "text": "He told Yahoo entrepreneurs shouldn't marry; a lifelong bachelor, he said having no family let him take risks.",
+      "quote": "I can take risks because I have no family.",
+      "speaker": "Sim Wong Hoo (Yahoo Finance, 2019)",
+      "sources": [
+        {
+          "label": "Janet Ong, 'Don't get married: Creative's Sim Wong Hoo advises budding entrepreneurs', Yahoo Finance Singapore (16 Apr 2019)",
+          "url": "https://sg.finance.yahoo.com/news/dont-get-married-creatives-sim-wong-hoo-advises-budding-entrepreneurs-013605163.html"
+        },
+        {
+          "label": "Eileen Yu, 'Singapore tech pioneer behind Sound Blaster dies, marking end of illustrious era', ZDNET (Jan 2023)",
+          "url": "https://www.zdnet.com/article/singapore-tech-pioneer-behind-sound-blaster-dies-marking-end-of-illustrious-era/"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": true,
+      "theme": "relationship"
+    },
+    {
+      "n": 43,
+      "year": "2019",
+      "text": "Super X-Fi, 20 years and over US$100 million in the making, launched in 2019; he started it because headphones fatigued him and he threw them away after five minutes.",
+      "quote": "I hated the sound of headphones because it made me fatigued after a while.",
+      "speaker": "Sim Wong Hoo (CNBC, 2020)",
+      "sources": [
+        {
+          "label": "CNBC, transcript of Managing Asia interview with Sim Wong Hoo by Christine Tan (10 Apr 2020)",
+          "url": "https://www.cnbc.com/2020/04/10/cnbc-transcript-sim-wong-hoo-chairman-and-ceo-creative-technology.html"
+        },
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": true,
+      "theme": "turning point"
+    },
+    {
+      "n": 44,
+      "year": "2020",
+      "text": "Explaining how Creative survived: when he couldn't break through a wall, he looked for cracks and squeezed through.",
+      "quote": "So, I looked for cracks. So, there was a crack there, I squeezed through the crack and I managed it.",
+      "speaker": "Sim Wong Hoo (CNBC, 2020, quoted by ZDNET)",
+      "sources": [
+        {
+          "label": "Eileen Yu, 'Singapore tech pioneer behind Sound Blaster dies, marking end of illustrious era', ZDNET (Jan 2023)",
+          "url": "https://www.zdnet.com/article/singapore-tech-pioneer-behind-sound-blaster-dies-marking-end-of-illustrious-era/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "voice"
+    },
+    {
+      "n": 45,
+      "year": "early years",
+      "text": "Employees remember him handing round a bag of hongbao of different amounts at Chinese New Year for staff to draw, and holding durian feasts.",
+      "quote": "caring and generous leader",
+      "speaker": "Leow Siew Kiat, former employee (ST, 2023)",
+      "sources": [
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 46,
+      "year": "2023",
+      "date": "2023-01-04",
+      "text": "He died suddenly on 4 January 2023, aged 67; the night before, he had a long discussion with his engineers and was due to meet the online sales team next day.",
+      "sources": [
+        {
+          "label": "'DPM Heng, Razer CEO among others pay tribute to late Creative CEO', Vulcan Post (Jan 2023)",
+          "url": "https://vulcanpost.com/812914/dpm-heng-razer-ceo-among-others-pay-tribute-to-late-creative-ceo/"
+        },
+        {
+          "label": "Eileen Yu, 'Singapore tech pioneer behind Sound Blaster dies, marking end of illustrious era', ZDNET (Jan 2023)",
+          "url": "https://www.zdnet.com/article/singapore-tech-pioneer-behind-sound-blaster-dies-marking-end-of-illustrious-era/"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": true,
+      "theme": "cost"
+    },
+    {
+      "n": 47,
+      "year": "2023",
+      "text": "George Yeo remembered him presenting him and President Ong Teng Cheong with a Nomad holding 12 songs.",
+      "quote": "He was always bubbling with ideas. Never left a meeting with him without new inspirations.",
+      "speaker": "George Yeo (Facebook, Jan 2023)",
+      "sources": [
+        {
+          "label": "'DPM Heng, Razer CEO among others pay tribute to late Creative CEO', Vulcan Post (Jan 2023)",
+          "url": "https://vulcanpost.com/812914/dpm-heng-razer-ceo-among-others-pay-tribute-to-late-creative-ceo/"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 48,
+      "year": "2023",
+      "text": "Kwok Kian Woon, who knew him for two decades, said: what others thought impossible, he would think possible.",
+      "quote": "What others thought would be well impossible, he would think it possible.",
+      "speaker": "Kwok Kian Woon (ST, 2023)",
+      "sources": [
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ],
+      "corroborated": false,
+      "theme": "others"
+    },
+    {
+      "n": 49,
+      "year": "2026",
+      "text": "In 2026 his family published 'Sim Wong Hoo: The Light We Remember', and gave S$385,000 to The Straits Times School Pocket Money Fund at its launch.",
+      "sources": [
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ],
+      "corroborated": false,
+      "theme": "now"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "Birth order",
+      "detail": "NLB and ST's '10 things' say he was the 10th of 12 children; ST's obituary (5 Jan 2023) calls him 'the youngest of 12 children'. Using NLB (it cites his own book).",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        }
+      ]
+    },
+    {
+      "topic": "Age when father died (1969)",
+      "detail": "NLB says 13; ST '10 things' (and The Peak) say 12. No exact birth date is in reliable sources, so either can be right.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ]
+    },
+    {
+      "topic": "Mother's age at death (2006)",
+      "detail": "NLB says 97; ST '10 things' / The Peak say 94.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "The Peak, 'Remembering Creative CEO Sim Wong Hoo, Singapore's first technopreneur' (Jan 2023, republished from The Straits Times)",
+          "url": "https://www.thepeakmagazine.com.sg/lifestyle/remembering-creative-ceo-sim-wong-hoo-singapore-first-technopreneur"
+        }
+      ]
+    },
+    {
+      "topic": "Year he became Singapore's youngest billionaire",
+      "detail": "ST obituary and Techgoondu say 2000 (aged 45); ST '10 things' says 2002 at 45.",
+      "sources": [
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ]
+    },
+    {
+      "topic": "Super X-Fi CES awards",
+      "detail": "ST/The Peak: 15 awards at CES 2019; Yahoo (Apr 2019): 14; NLB and Sim himself (CNBC 2020): 23 across 2019 and 2020 (15 + 8).",
+      "sources": [
+        {
+          "label": "CNBC, transcript of Managing Asia interview with Sim Wong Hoo by Christine Tan (10 Apr 2020)",
+          "url": "https://www.cnbc.com/2020/04/10/cnbc-transcript-sim-wong-hoo-chairman-and-ceo-creative-technology.html"
+        },
+        {
+          "label": "Janet Ong, 'Don't get married: Creative's Sim Wong Hoo advises budding entrepreneurs', Yahoo Finance Singapore (16 Apr 2019)",
+          "url": "https://sg.finance.yahoo.com/news/dont-get-married-creatives-sim-wong-hoo-advises-budding-entrepreneurs-013605163.html"
+        }
+      ]
+    },
+    {
+      "topic": "Co-founder's name and founders",
+      "detail": "'Ng Kai Wa' (NLB, ST obituary, Vulcan Post) vs 'Ng Kai Wai' (ST '10 things'). NLB adds Chay Kwong Soon as a co-founder from 1986. Some secondary sites give US$6,000 starting capital; NLB and Wikipedia say S$10,000.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "'He took on Apple, Samsung: 10 things about Creative CEO Sim Wong Hoo', The Straits Times (Jan 2023)",
+          "url": "https://www.straitstimes.com/singapore/he-took-on-apple-samsung-10-things-about-creative-ceo-sim-wong-hoo-singapore-s-first-technopreneur"
+        }
+      ]
+    },
+    {
+      "topic": "Who gave him the harmonica",
+      "detail": "NLB says only that he took it up at 11; VnExpress (citing the 2026 family book) says a sister gave it to him; a Spark-surfaced profile said he took his eldest brother's. Not settled; the storyboard avoids naming the giver.",
+      "sources": [
+        {
+          "label": "Janice Loo, 'Sim Wong Hoo', Singapore Infopedia, National Library Board (read via Wayback snapshot of 2 Apr 2025)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=a4c60af5-544f-4a1d-a406-6da20effada7"
+        },
+        {
+          "label": "Phong Ngo, 'From poor village boy to billionaire: Meet Sim Wong Hoo', VnExpress International (20 Aug 2026), citing the family book 'Sim Wong Hoo: The Light We Remember' via The Straits Times",
+          "url": "https://e.vnexpress.net/news/tech/personalities/from-poor-village-boy-to-billionaire-meet-sim-wong-hoo-the-grandfather-of-singapore-tech-5110496.html"
+        }
+      ]
+    },
+    {
+      "topic": "Age at death",
+      "detail": "Most sources say 67; Wikipedia gives 67-68 because no birth date is published (an unverified secondary site says 28 April 1955).",
+      "sources": [
+        {
+          "label": "Prisca Ang, 'Creative Technology founder Sim Wong Hoo dies aged 67', The Straits Times (5 Jan 2023)",
+          "url": "https://www.straitstimes.com/business/companies-markets/creative-technology-founder-sim-wong-hoo-dies-aged-67"
+        },
+        {
+          "label": "Wikipedia: Sim Wong Hoo",
+          "url": "https://en.wikipedia.org/wiki/Sim_Wong_Hoo"
+        }
+      ]
+    }
+  ]
+}

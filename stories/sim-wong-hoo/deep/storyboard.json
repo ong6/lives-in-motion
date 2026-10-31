@@ -1,0 +1,332 @@
+{
+  "slug": "sim-wong-hoo",
+  "name": "Sim Wong Hoo",
+  "generated": "2026-10-31",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run, to save budget. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "photoNote": "No openly licensed photo of Sim Wong Hoo himself was found: Commons has no category for him, and Wikipedia's infobox image (File:Sim_Wong_Hoo.jpg) is hosted locally on en.wikipedia, not on Commons, so treat it as non-free. All three photos are objects or places. Never trace Creative/Apple press photos or Straits Times images.",
+  "unusedPhotos": [],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1960s",
+      "title": "End of Coconut Hill",
+      "treatment": "plate",
+      "body": "Before school, a small boy carried eggs to the market at Bukit Panjang. Sim Wong Hoo was born in 1955, the tenth of twelve children, in a kampung called End of Coconut Hill, where Fajar Road runs today. His father worked in a factory and then behind a provision-shop counter. His mother kept chickens, ducks, pigs and rabbits, grew fruit and herbs, and sold eggs from door to door. The children slept on wooden planks laid across bricks; Wong Hoo ended up on two benches with a single plank on top. After school he pulled weeds, cut grass for the rabbits and split coconuts. There was no money for toys, so he made his own, and board games too. Later he called himself a weird child.",
+      "words": 126,
+      "quote": null,
+      "voice": "A boy who couldn't buy toys, so he built them.",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "art": {
+        "direction": "Layered paper cut-out at dawn, mint green and egg-yolk yellow: a kampung of zinc-roofed wooden houses under coconut palms on a slope; hens and a rabbit hutch in the yard. A small boy seen from behind walks down a red-earth path with a woven basket of eggs. Mist in the valley.",
+        "cut": [
+          "boy",
+          "egg basket",
+          "hens",
+          "rabbit hutch"
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "year": "1966",
+      "title": "A harmonica for a first love",
+      "treatment": "line",
+      "body": "The harmonica was small enough to fit in a pocket, and at about eleven it became his. One account says a sister gave it to him. He taught himself to play, and for the rest of his life he called it his first love. Then, in 1969, his father died. Wong Hoo was twelve or thirteen; the sources don't agree. His mother, Tan Siok Kee, now raised the whole family alone on her animals, her vegetable plots and her eggs. He would say later that he got his grit from her. The house was crowded and loud, and money was short. But a boy with a harmonica could sit on the back step and make something that belonged to nobody else.",
+      "words": 121,
+      "quote": null,
+      "voice": "A boy on the back step, playing a harmonica nobody else owned.",
+      "facts": [
+        8,
+        9,
+        4
+      ],
+      "art": {
+        "direction": "Single pen drawing on cream paper: the back step of a wooden kampung house at dusk, a boy seen from behind with a harmonica raised to his mouth; a woman's silhouette feeding ducks in the yard beyond; a washing line.",
+        "cut": [
+          "boy",
+          "harmonica",
+          "woman"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1975",
+      "title": "The troupe and the accordion",
+      "treatment": "archive",
+      "body": "At Ngee Ann Technical College he studied electrical and electronic engineering, and he spent his spare hours in the harmonica troupe. He arranged its scores, but he only heard how they sounded at the weekly practice. To accompany the troupe he learned the accordion at the Practice Theatre School, run by the playwright Kuo Pao Kun, where students were encouraged to write their own songs. Kuo became his mentor and lifelong friend. Somewhere between the score sheets and the practice room, an idea took hold: a computer that could play his music exactly as he had written it. He graduated in 1975. \"The (Ngee Ann) Harmonica Club planted the first seed of Creative in me.\"",
+      "words": 115,
+      "quote": {
+        "text": "The (Ngee Ann) Harmonica Club planted the first seed of Creative in me.",
+        "speaker": "Sim Wong Hoo, Chaotic Thoughts from the Old Millennium (1999)",
+        "fact": 13
+      },
+      "voice": "A score sheet he could only hear once a week.",
+      "facts": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "art": {
+        "direction": "Archive-print plate, sepia halftone with a deckled border and a typed caption strip: a 1970s college rehearsal room with folding chairs, music stands and a row of harmonica players seen from behind; an accordion resting on a chair in front.",
+        "cut": [
+          "players",
+          "accordion",
+          "music stands"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "late 1970s",
+      "title": "Nobody at the finish",
+      "treatment": "line",
+      "body": "During National Service he and some friends signed up for a half-marathon, one of the first Singapore had held. Nobody trained. They ran until they couldn't, then walked. Halfway, he and a friend stopped for breakfast, and the friend went home. Wong Hoo kept walking. When he reached the finish, the crowd, the tables and the banners were gone, and the street had been swept. \"When I got to the end, there was nobody there.\" Soon afterwards he opened a computer tuition centre at Coronation Plaza with an acquaintance, wanting only to teach and to research computer music. The partner ran off with the fees. He decided he would never again leave his own business in someone else's hands.",
+      "words": 119,
+      "quote": {
+        "text": "When I got to the end, there was nobody there.",
+        "speaker": "Sim Wong Hoo (TODAY, 2008)",
+        "fact": 14
+      },
+      "voice": "\"I persisted to the end, but there was nobody there.\" (TODAY, 2008)",
+      "facts": [
+        14,
+        15
+      ],
+      "art": {
+        "direction": "Pen drawing with grey wash: an empty city street in early morning, a swept road, a fallen paper cup by the kerb, a lone figure seen from behind walking past the spot where a finish line used to be.",
+        "cut": [
+          "figure",
+          "paper cup",
+          "street"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "1981",
+      "title": "440 square feet in Chinatown",
+      "treatment": "plate",
+      "body": "In July 1981 he and his childhood friend Ng Kai Wa opened a computer shop in Pearl's Centre, Chinatown. It was 440 square feet, and it ran on his savings of S$10,000. They repaired computers, sold parts and taught computer classes to pay the rent. When business was slow, Wong Hoo taught part-time at a private computer school too. He lived on about S$200 a month. In 1984 they built the Cubic 99, the first PC designed and made in Singapore. Two years later came the Cubic CT, a computer that could speak and sing in more than one language. Nobody wanted it. But hidden inside that failure was the part he loved most: its sound.",
+      "words": 116,
+      "quote": null,
+      "voice": "\"In the early days, I survived on $200 a month.\" (Yahoo Finance, 2019)",
+      "facts": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "art": {
+        "direction": "Paper-cut interior of a tiny 1980s shop unit: shelves of beige computer cases, a soldering iron, a hand-lettered 'repairs' card, a fluorescent tube; through the glass door the corridor of a Chinatown shopping centre. Two figures seen from behind bent over an open computer.",
+        "cut": [
+          "two figures",
+          "computer",
+          "soldering iron"
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "year": "1988",
+      "title": "Twenty thousand or nothing",
+      "treatment": "plate",
+      "body": "He took the sound board out of the failed computer and turned it into the Creative Music System. In America it was renamed Game Blaster, because Americans bought games. Creative offered game makers free help putting sound into their games and wrote down everything they wished a sound card could do. In 1988 he moved to the United States himself and promised he would not come home until he had sold 20,000 units. A kampung boy with a polytechnic diploma, no scholarship and no famous university behind him, knocking on doors in a country of giants. He sold them. And the wish list the game makers had given him was about to become a new card.",
+      "words": 116,
+      "quote": null,
+      "voice": "He would not come home until he had sold 20,000.",
+      "facts": [
+        21,
+        22
+      ],
+      "art": {
+        "direction": "Paper-cut night scene: a motel room in 1980s California, boxes of circuit boards stacked by the bed, a desk lamp, a map pinned to the wall with pins; a man seen from behind at the window looking out at a freeway of headlights.",
+        "cut": [
+          "man",
+          "boxes",
+          "lamp"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "1989",
+      "title": "The card that gave the PC a voice",
+      "treatment": "photo",
+      "body": "In November 1989 the Sound Blaster went on show at Comdex in Las Vegas. Until then most PCs could only beep. This green card could play music and speak in a human voice. The booth was packed, and 600 orders were taken at the show. The Wall Street Journal reported that Michael Jackson turned up unannounced and stayed nearly half an hour. By the end of 1990 it was the best-selling PC add-on in the world. Revenue grew from US$5.4 million in 1989 to US$658 million in 1994. In August 1992 Creative became the first Singapore company on Nasdaq. For the awards dinner, he put on a suit, which he rarely did.",
+      "words": 112,
+      "quote": null,
+      "voice": "Until then, most PCs could only beep.",
+      "facts": [
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "photo": {
+        "file": "soundblaster-1-0-ct1320.jpg",
+        "path": "pipeline/photos/sim-wong-hoo/soundblaster-1-0-ct1320.jpg",
+        "year": "1989",
+        "license": "CC BY-SA 3.0",
+        "artist": "Wdwd",
+        "page": "https://commons.wikimedia.org/wiki/File:Soundblaster-1.0-ct1320.jpg",
+        "note": "An object photo: an original Sound Blaster 1.0 (CT1320B) board from 1989-90, photographed in 2008. Caption it 'Sound Blaster 1.0, 1989'. Trace the card's outline, chips and the 'SOUND BLASTER' silk-screen; SAM concept 'circuit board'."
+      }
+    },
+    {
+      "n": 8,
+      "year": "1999",
+      "title": "A blue box, not a white one",
+      "treatment": "plate",
+      "body": "In 1996 a glut of CD-ROM drives forced Creative into massive write-downs of stock nobody wanted, and he steered it back to sound. In February 1999 he opened a new headquarters at International Business Park, with a childcare centre, a concert auditorium and a grand piano in the foyer. That year Creative launched the Nomad, an MP3 player, almost two years before the iPod. By 2000, at 45, he was Singapore's youngest billionaire. He still wore a Casio watch and sneakers. And he was stubborn. When his lieutenants proposed a white player in a white box, he chose blue. He also threw out packaging designed by Frog Design for US$1 million. Then Apple launched a white iPod.",
+      "words": 117,
+      "quote": null,
+      "voice": "He chose blue. Then Apple launched a white iPod.",
+      "facts": [
+        28,
+        29,
+        30,
+        32,
+        33
+      ],
+      "art": {
+        "direction": "Paper-cut lobby of a glass-fronted 1999 office building: a black grand piano under a skylight, a reception desk, a small blue music player in a blue box on a plinth. A man in a T-shirt seen from behind stands looking at it.",
+        "cut": [
+          "man",
+          "piano",
+          "blue box"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "2006",
+      "title": "The war with the iPod",
+      "treatment": "photo",
+      "body": "In 2004 Creative declared war on the iPod with the Zen Micro, which it called an iPod killer. Two years later it took Apple to court over the way the iPod sorted music into menus, a patent Creative had filed first. In August 2006 Apple paid US$100 million for a licence, and five lawsuits ended. Sim called it an amicable settlement. But Creative had still lost. That August it reported a full-year loss of S$187 million and began cutting costs. In 2007 it quietly left Nasdaq, and its share price slid from $64 in 2000 towards a dollar. And in 2006, the year of the settlement, his mother, the woman with the eggs, died.",
+      "words": 114,
+      "quote": {
+        "text": "We're very pleased to have reached an amicable settlement with Apple.",
+        "speaker": "Sim Wong Hoo (Apple press release, 23 Aug 2006)",
+        "fact": 34
+      },
+      "voice": "\"We're very pleased to have reached an amicable settlement with Apple.\" (23 Aug 2006)",
+      "facts": [
+        34,
+        35,
+        36,
+        38
+      ],
+      "photo": {
+        "file": "creative-zen-micro-apple-ipod-mini-dan-taylor.jpg",
+        "path": "pipeline/photos/sim-wong-hoo/creative-zen-micro-apple-ipod-mini-dan-taylor.jpg",
+        "year": "2005",
+        "license": "CC BY 2.0",
+        "artist": "Dan Taylor-Watt",
+        "page": "https://commons.wikimedia.org/wiki/File:Creative_Zen_Micro_%5E_Apple_iPod_Mini_-_Flickr_-_dan_taylor.jpg",
+        "note": "Object photo, 17 Feb 2005: a Creative Zen Micro beside an Apple iPod Mini. Caption it 'Zen Micro and iPod Mini, 2005'. Trace both players; SAM concepts 'music player'. Brand marks on the devices are incidental product photography."
+      }
+    },
+    {
+      "n": 10,
+      "year": "2007",
+      "title": "Running with the universe",
+      "treatment": "line",
+      "body": "In December 2007 he ran his first marathon and finished in just under seven hours. A month later he signed up for an 84-kilometre ultramarathon. He was not ready, and that was the point. \"I always do things when I am not prepared.\" He ran at night, four times a week, and said he solved problems better running than sitting at his desk. One idea he had been stuck on for ten years came to him in twenty minutes on the road, and his lawyer filed the patent. Afterwards he rewarded himself with McWings. By 2011 he was running from his home at Dairy Farm to the office in Jurong. \"When I run, I am synchronised with the universe.\"",
+      "words": 119,
+      "quote": {
+        "text": "I always do things when I am not prepared.",
+        "speaker": "Sim Wong Hoo (TODAY, 2008)",
+        "fact": 39
+      },
+      "voice": "\"When I run, I am synchronised with the universe.\" (TODAY, 2008)",
+      "facts": [
+        39,
+        40,
+        41
+      ],
+      "art": {
+        "direction": "Loose pen drawing with a single wash of night blue: a runner seen from behind on a lit park connector at night, streetlamps receding, the dark hump of Bukit Timah hill beyond; a stopwatch and a folded patent form drawn as small vignettes in the margin.",
+        "cut": [
+          "runner",
+          "streetlamps",
+          "stopwatch"
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "year": "2019",
+      "title": "Headphones he couldn't stand",
+      "treatment": "photo",
+      "body": "Twenty years earlier he had stopped using headphones. They tired his ears, and he threw them off after five minutes. So he asked his engineers whether they could make headphones sound like real speakers in a real room. They said yes, and he kept paying for it: twenty years and more than US$100 million. In January 2019 Super X-Fi went to the Consumer Electronics Show in Las Vegas and won awards there in 2019 and 2020. He called it a hundred times more exciting than the Sound Blaster. A bachelor all his life, he told young founders not to marry. \"I can take risks because I have no family.\"",
+      "words": 109,
+      "quote": {
+        "text": "I can take risks because I have no family.",
+        "speaker": "Sim Wong Hoo (Yahoo Finance, 2019)",
+        "fact": 42
+      },
+      "voice": "\"I hated the sound of headphones because it made me fatigued after a while.\" (CNBC, 2020)",
+      "facts": [
+        42,
+        43
+      ],
+      "photo": {
+        "file": "e3-2011-creative-booth-5822668994.jpg",
+        "path": "pipeline/photos/sim-wong-hoo/e3-2011-creative-booth-5822668994.jpg",
+        "year": "2011",
+        "license": "CC BY 2.0",
+        "artist": "Doug Kline (The Conmunity - Pop Culture Geek)",
+        "page": "https://commons.wikimedia.org/wiki/File:E3_2011_-_Creative_booth_(5822668994).jpg",
+        "note": "Place photo, 7 Jun 2011: Creative's booth at the E3 trade show in Los Angeles. It stands for the trade-show life, not CES 2019; caption it 'Creative's booth at E3, Los Angeles, 2011'. Trace the booth's signage frame and display stands; any visitors stay as untraced background."
+      }
+    },
+    {
+      "n": 12,
+      "year": "2023",
+      "title": "The meeting set for tomorrow",
+      "treatment": "plate",
+      "body": "On the night of 3 January 2023 he had a long discussion with his engineering team, and he had a meeting with the online sales team planned for the next day. He died on 4 January, aged 67. More than 70 people came to his wake in Choa Chu Kang. A former employee remembered Chinese New Year in the early days, when he passed round a bag of hongbao of different amounts for everyone to draw, and the durian feasts. George Yeo remembered a Nomad holding twelve songs. Friends said he made the impossible seem possible. He had given away more than S$49 million.",
+      "words": 104,
+      "quote": {
+        "text": "He was always bubbling with ideas. Never left a meeting with him without new inspirations.",
+        "speaker": "George Yeo (Jan 2023)",
+        "fact": 46
+      },
+      "voice": "\"What others thought would be well impossible, he would think it possible.\" (Kwok Kian Woon, 2023)",
+      "facts": [
+        44,
+        45,
+        46,
+        47,
+        37
+      ],
+      "art": {
+        "direction": "Paper-cut still life at night: an empty office chair turned towards a window over Jurong's lights, a pair of headphones on the desk, a harmonica beside a red hongbao, and a pair of running shoes on the floor. No figure. One lamp left on.",
+        "cut": [
+          "headphones",
+          "harmonica",
+          "hongbao",
+          "running shoes"
+        ]
+      }
+    }
+  ]
+}

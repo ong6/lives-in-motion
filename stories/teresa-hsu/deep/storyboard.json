@@ -1,0 +1,338 @@
+{
+  "slug": "teresa-hsu",
+  "name": "Teresa Hsu",
+  "generated": "2026-10-31",
+  "author": "Written by the research agent from deep/research.json. The Muse Spark (sparkJson) drafting pass was NOT run. Rerun via sparkJson if a Spark-authored draft is required.",
+  "rules": {
+    "bodyWords": "90-150",
+    "quotesPerChapter": "at most 1, sourced, <=25 words",
+    "people": "silhouettes or seen from behind in illustrations",
+    "photoTreatment": "real photo + SAM 3.1 cut-out + linedraw pen trace"
+  },
+  "unusedPhotos": [
+    "society-for-the-aged-sick-singapore.jpg"
+  ],
+  "chapters": [
+    {
+      "n": 1,
+      "year": "1898",
+      "title": "Beggars below the window",
+      "treatment": "photo",
+      "body": "The street outside the house in Swatow was loud with beggars. Some could not walk. Some cried for help all day. Teresa Hsu, born in 1898, the second of four children, was too small to see over the window ledge, so she listened. Her family was barely better off. Before dawn the children climbed the hills with bamboo baskets to rake pine needles for the stove, then carried the same baskets of laundry down to the stream. Some days there was nothing to eat, and she pulled up grass by the roadside. She decided then that nobody should ever have to live like this. She did not yet know that she would spend more than a century trying to keep that promise.",
+      "words": 122,
+      "quote": {
+        "text": "It was at that moment I thought to myself that no one should ever go through what I went through.",
+        "speaker": "Teresa Hsu (The Star, 2010)",
+        "fact": 4
+      },
+      "voice": "\"I may have been a girl of five or six when I heard beggars telling their sad tales along the street.\"",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "photo": {
+        "file": "view-of-swatow-harbour-1869.jpg",
+        "path": "pipeline/photos/teresa-hsu/view-of-swatow-harbour-1869.jpg",
+        "year": "c.1869",
+        "license": "CC0",
+        "artist": "John Thomson (Met Museum Open Access)",
+        "page": "https://commons.wikimedia.org/wiki/File:View_of_Swatow_Harbour_MET_DP165632.jpg",
+        "note": "The treaty-port harbour about 30 years before her birth, not her village. Caption it 'Swatow harbour, c.1869'. Trace the hillside and the ships, and leave the colonnaded building as a flat block."
+      }
+    },
+    {
+      "n": 2,
+      "year": "1900s",
+      "title": "The pot of potatoes",
+      "treatment": "line",
+      "body": "One evening her mother dug up potatoes, the family's whole dinner, and set the pot down. There was a knock. A woman stood at the door with a child; neither had eaten for days. Her mother handed over the entire pot. Teresa's father had beaten them and then left for another woman, so their mother, who could not read, was raising four children alone, and this was what she taught them without a word: what is in your hand can be given away. Teresa watched the pot go out of the door, and her stomach stayed empty that night. More than a hundred years later she was still telling the story.",
+      "words": 111,
+      "quote": null,
+      "voice": "\"That was the day I learnt that to give what you have in your hand to others is a great blessing.\" (The Star, 2010)",
+      "facts": [
+        6,
+        7
+      ],
+      "art": {
+        "direction": "Single pen line drawing on cream paper: a low doorway at night, a clay cooking pot passing from one pair of hands to another; a woman's silhouette holding a small child outside; inside, four children seen from behind on a bench.",
+        "cut": [
+          "pot",
+          "doorway",
+          "children"
+        ]
+      }
+    },
+    {
+      "n": 3,
+      "year": "1925",
+      "title": "Sweeping for lessons",
+      "treatment": "archive",
+      "body": "When the last uncle who helped them left, the family sold their lace for passage on a boat to Penang. There Teresa and her mother worked as cleaners at a Catholic convent, sweeping its corridors. Through the classroom doors she could hear the children reciting their lessons. She had never been to school, and at 27 she still could not read. In 1925 she asked the nuns whether she could sit at the back of the class, and they said yes. A grown woman among children, she learned from books the nuns had begged from rich former pupils. Three and a half years later she passed the Senior Cambridge examination, and she was not going to sweep floors for the rest of her life.",
+      "words": 124,
+      "quote": null,
+      "voice": "\"The nuns got us free books from rich former pupils.\" (Her World, 1999)",
+      "facts": [
+        8,
+        9,
+        10
+      ],
+      "art": {
+        "direction": "Archive-print plate, sepia halftone with a deckled edge and a typed caption strip: a 1920s convent classroom with wooden desks and louvred shutters; small girls in rows, and at the back a grown woman seen from behind, a broom leaning against the wall beside her.",
+        "cut": [
+          "woman",
+          "broom",
+          "desks"
+        ]
+      }
+    },
+    {
+      "n": 4,
+      "year": "1933",
+      "title": "Shorthand by night",
+      "treatment": "plate",
+      "body": "Hong Kong, 1933. By day she cleaned other people's offices; at night she copied shorthand strokes into an exercise book until the room was too dark to see. English, typing and shorthand turned her into a stenographer, and by 1939 she was secretary and bookkeeper at a German news agency in Chongqing, well paid and smartly dressed. Then the war reached the city. She gave up the salary and joined the Friends' Ambulance Unit, a volunteer service run by English pacifists. She helped the injured and saw wounded people die because nobody there knew how to save them, and she did not know how either. That was the part she could not accept.",
+      "words": 113,
+      "quote": {
+        "text": "The poor can at least beg, but the others, you either go to them, or they die.",
+        "speaker": "Teresa Hsu (Her World, 1999)",
+        "fact": 14
+      },
+      "voice": "\"The poor can at least beg, but the others, you either go to them, or they die.\" (Her World, 1999)",
+      "facts": [
+        12,
+        13,
+        14
+      ],
+      "art": {
+        "direction": "Layered paper cut-out in two halves: on the left a night window over Victoria Harbour, a desk lamp, a typewriter and a shorthand pad; on the right a misty Chongqing hillside with a canvas ambulance. A woman seen from behind walks from one half to the other.",
+        "cut": [
+          "woman",
+          "typewriter",
+          "ambulance",
+          "lamp"
+        ]
+      }
+    },
+    {
+      "n": 5,
+      "year": "1940s",
+      "title": "The foxtrot",
+      "treatment": "line",
+      "body": "In the ambulance unit there was a young volunteer called Brian Sorenson: 24, fair-haired, blue-eyed and always cheerful. He was very good at the foxtrot. She called it the only time she came close to having a family of her own. When the war ended and she left for London, Brian set out to follow her, and his plane crashed. Asked about him half a century later, she did not cry. She said she remembered the good times. She never married, and afterwards she joked that a husband would have meant making only one man happy. The war had one more lesson for her, and she learned it outside a grand hotel.",
+      "words": 112,
+      "quote": {
+        "text": "I wasn't overwhelmed with grief. I missed him but I remembered the good times and how bright he was.",
+        "speaker": "Teresa Hsu (Her World, 1999)",
+        "fact": 16
+      },
+      "voice": "\"He was so cheerful—and so good at dancing the foxtrot.\" (Her World, 1999)",
+      "facts": [
+        15,
+        16
+      ],
+      "art": {
+        "direction": "Loose pen drawing with a grey wash: two silhouettes mid-foxtrot under a single hanging bulb in a canvas mess tent; in the corner, a small propeller plane drawn very faintly, as if already a memory.",
+        "cut": [
+          "dancers",
+          "bulb",
+          "plane"
+        ]
+      }
+    },
+    {
+      "n": 6,
+      "year": "1945",
+      "title": "Lipstick in the bin",
+      "treatment": "plate",
+      "body": "Shanghai, 1945. British colleagues took her to dinner at a grand hotel: cut glass, champagne, coffee. At the gate on the way out, a man was leaning against the wall, yellow-skinned, starved, barely able to stand, and he asked her for a few cents. She thought: if one Being made us all, this man is my brother, and I have just eaten a huge meal while he starves. She went home and threw away her lipstick, her rouge and her nail polish, everything. When she looked in the mirror afterwards she was smiling. From that night on, her clothes came from ragbags and a friend cut her hair. All she wanted now was the skill to help.",
+      "words": 117,
+      "quote": {
+        "text": "I'll never touch a cent that belongs to the poor person. That was the start. After that, I was free.",
+        "speaker": "Teresa Hsu (Singapore's Extraordinary People, 1995)",
+        "fact": 17
+      },
+      "voice": "\"I'll never touch a cent that belongs to the poor person. That was the start. After that, I was free.\"",
+      "facts": [
+        17
+      ],
+      "art": {
+        "direction": "Paper-cut night scene: a lit hotel entrance with a revolving door and potted palms, warm gold inside; at the gate a thin man's silhouette against the wall; a woman seen from behind stops on the steps between the light and the dark.",
+        "cut": [
+          "woman",
+          "man",
+          "gate",
+          "door"
+        ]
+      }
+    },
+    {
+      "n": 7,
+      "year": "1945",
+      "title": "Grossly overaged",
+      "treatment": "archive",
+      "body": "Nursing schools wanted girls of 17 to 25, and she was 47. She wrote to the Nursing Council in London anyway, telling the matron plainly that she was too old and why she was asking all the same. The matron wrote back that they were touched by her letter: come, and we will train you. At the Royal Free Hospital she trained for free, a woman of 47 among teenagers. She stayed eight years in England, and in the summers she travelled across Europe with the International Voluntary Service for Peace, nursing wherever she was sent. Then South America called: a community in Paraguay needed a nurse.",
+      "words": 107,
+      "quote": {
+        "text": "I'm grossly overaged, but for me, it's a dedication, not a livelihood.",
+        "speaker": "Teresa Hsu, letter to the Nursing Council (as she recalled it, 1995)",
+        "fact": 18
+      },
+      "voice": "A woman of 47 in a class of girls, at the Royal Free Hospital.",
+      "facts": [
+        18,
+        19,
+        20
+      ],
+      "art": {
+        "direction": "Archive plate styled as a 1940s letter: a sheet of blue airmail paper with a fountain pen resting on it (no legible text); behind it, sepia, the brick front of a London hospital with a woman seen from behind climbing the steps in a nurse's cape.",
+        "cut": [
+          "letter",
+          "pen",
+          "nurse"
+        ]
+      }
+    },
+    {
+      "n": 8,
+      "year": "1953",
+      "title": "Only one mother",
+      "treatment": "line",
+      "body": "In 1953 she sailed for Paraguay with the Bruderhof, a Christian community, and for eight years she was often the only trained nurse at their small hospital and its midwife. Sitting by a river one afternoon, she watched fish playing and decided she would never again eat anything that had to die for her pleasure. Then a letter came from her family in Penang. Her mother was growing old, and her message became the sentence Teresa repeated all her life: poor people are everywhere, but you have only one mother. She went home in 1961, helped her priest brother Anthony start the Assunta Hospital and forgave her father. Singapore was next.",
+      "words": 111,
+      "quote": null,
+      "voice": "\"Poor people you get everywhere, but you have only one mother.\" (her mother, as Teresa recalled it)",
+      "facts": [
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "art": {
+        "direction": "Pen drawing with a pale green wash: a slow river under tall trees, small fish drawn as quick strokes in the water; a woman seen from behind sitting on the bank, an opened envelope on her knee.",
+        "cut": [
+          "woman",
+          "envelope",
+          "fish"
+        ]
+      }
+    },
+    {
+      "n": 9,
+      "year": "1963",
+      "title": "The matron without a salary",
+      "treatment": "photo",
+      "body": "Kwong Wai Shiu Hospital on Serangoon Road was full of old, poor patients and short of staff. Teresa, now in her sixties, became its matron and refused to be paid. Her elder sister Ursula, principal of the Convent of the Holy Infant Jesus in Bukit Timah, watched her give everything away and decided to give her somewhere to give it. In 1965 Ursula bought a bungalow on 0.6 hectares at Jalan Payoh Lai, and the sisters opened the Home for the Aged Sick, one of the first homes in Singapore for old people who were both poor and ill. Its beds filled almost at once.",
+      "words": 105,
+      "quote": {
+        "text": "My sister supported me, she was the one who bought this land for me.",
+        "speaker": "Teresa Hsu (Singapore's Extraordinary People, 1995)",
+        "fact": 27
+      },
+      "voice": "\"My sister supported me, she was the one who bought this land for me.\"",
+      "facts": [
+        26,
+        27
+      ],
+      "photo": {
+        "file": "kwong-wai-shiu-hospital-2026.jpg",
+        "path": "pipeline/photos/teresa-hsu/kwong-wai-shiu-hospital-2026.jpg",
+        "year": "2026",
+        "license": "CC BY 4.0",
+        "artist": "S5A-0043",
+        "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Kwong_Wai_Shiu_Hospital_2026-03-31.jpg",
+        "note": "A modern photo: caption it 'Kwong Wai Shiu Hospital today', not the 1960s. Trace the facade; a paper-cut 1965 bungalow at Jalan Payoh Lai can follow as a small vignette."
+      }
+    },
+    {
+      "n": 10,
+      "year": "1970",
+      "title": "Ten coconut trees",
+      "treatment": "plate",
+      "body": "Behind the bungalow there were 10 coconut trees and a dozen banana plants, and Teresa sold their fruit to buy medicine. The servants' quarters became a ward, and so did the living room. Ursula paid for it all from her salary. By 1970 there were about 100 patients and the money could not stretch any further, so the sisters gave the deeds to the Society for the Aged Sick, formed by members of the Rotary Club, and Teresa stayed on as matron. Ursula died in 1973 and left her a small fortune. Teresa spent it on flats for people with nowhere to go: five in Singapore, two in Malaysia. Weeks apart, Lucy and Anthony died too, and she was left the last of the four.",
+      "words": 125,
+      "quote": null,
+      "voice": "Five flats in Singapore and two in Malaysia, bought for strangers.",
+      "facts": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "art": {
+        "direction": "Paper-layered cutaway of a 1960s bungalow on a slope: beds lined up in what was a living room, a servants' block turned ward; out back, coconut palms and banana plants, a basket of green coconuts by the steps. A woman seen from behind carries a tray.",
+        "cut": [
+          "bungalow",
+          "coconuts",
+          "woman",
+          "beds"
+        ]
+      }
+    },
+    {
+      "n": 11,
+      "year": "1983",
+      "title": "Heart to Heart",
+      "treatment": "photo",
+      "body": "Every month a volunteer's car pulled up outside the flats and Teresa climbed out with bags of rice, sugar, biscuits and envelopes holding S$20 to S$180. She had retired as matron, but the charity she had started in Hong Kong as Friends of the Poor was now called Heart to Heart Service, and she ran it with her co-worker Sharana Rao. She paid S$2,000 a month for a stranger's dialysis. She had paid the home's cook extra because the cook had many children. Her own flat had a formica table taped together, 2,000 books and an orange plant someone had thrown out, now labelled with its 'date of rebirth'. She cleaned it herself, barefoot.",
+      "words": 114,
+      "quote": {
+        "text": "Then Nurse Hse came. I'm grateful to her. She's my saviour.",
+        "speaker": "Ong Teck Khoon, dialysis patient (1995)",
+        "fact": 38
+      },
+      "voice": "\"A live thing should never be left alone to die.\" (Her World, 1999)",
+      "facts": [
+        32,
+        36,
+        37,
+        38,
+        39,
+        40,
+        43
+      ],
+      "photo": {
+        "file": "heart-to-heart-centre-singapore.jpg",
+        "path": "pipeline/photos/teresa-hsu/heart-to-heart-centre-singapore.jpg",
+        "year": "2007",
+        "license": "CC BY-SA 3.0",
+        "artist": "Aldwin Teo",
+        "page": "https://commons.wikimedia.org/wiki/File:Heart_to_Heart_Centre%E2%80%94Singapore.jpg",
+        "note": "Photographed 8 Sep 2007 at 130 Hougang Avenue 1. Trace the building. A small pen vignette of the tagged orange plant can sit in the corner."
+      }
+    },
+    {
+      "n": 12,
+      "year": "2010",
+      "title": "The sick demons forgot",
+      "treatment": "photo",
+      "body": "At 112 she stood in front of about 200 people in Penang and made them laugh until they cried. Was she ever ill? \"The sick demons forgot to visit me.\" Rice? She had no teeth. She was up at 4 am for yoga, which she had taken up at 69, and she ate a raw egg each morning, though someone had warned her it was poison. At 100 she started learning Mandarin, and she hoped to live to 250 because there were still poor people to help. On Wednesday 7 December 2011 she died at home, aged 113. That same day she was cremated, as she had asked: no rituals, no announcement, and no one to claim her ashes.",
+      "words": 119,
+      "quote": {
+        "text": "The sick demons forgot to visit me.",
+        "speaker": "Teresa Hsu (The Star, 2010)",
+        "fact": 48
+      },
+      "voice": "\"If I eat food by myself, I alone 'haha chiou'. If I share with 20 people, 21 people 'haha chiou'.\" (2010)",
+      "facts": [
+        34,
+        46,
+        48,
+        49,
+        50
+      ],
+      "photo": {
+        "file": "teresa-hsu-2010.jpg",
+        "path": "pipeline/photos/teresa-hsu/teresa-hsu-2010.jpg",
+        "year": "2010",
+        "license": "CC BY-SA 4.0",
+        "artist": "Ibtzen",
+        "page": "https://commons.wikimedia.org/wiki/File:Copy_(2)_of_Teresa_Hsu_20100926_155104.jpg",
+        "note": "Taken 26 Sep 2010, when she was 112. It is the only openly licensed photo of her. Trace the face and hair; let the floral blouse stay as flat pattern."
+      }
+    }
+  ]
+}

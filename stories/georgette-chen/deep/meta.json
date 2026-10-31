@@ -1,0 +1,12 @@
+{
+  "slug": "georgette-chen",
+  "name": "Georgette Chen",
+  "born": "1906",
+  "died": "1993",
+  "tagline": "From Paris salons to a Siglap studio: the painter who made the tropics her home.",
+  "cloth": {
+    "hex": "#3f6b5a",
+    "era": "merdeka",
+    "why": "Her Singapore years begin in 1953 (the merdeka era in lib/eras.ts). A deep rambutan-leaf green, set against the era's warm paper, nods to her tropical still lifes without copying any of them."
+  }
+}
