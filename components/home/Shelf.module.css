@@ -1,42 +1,127 @@
 /*
- * The shelf (components/home/Shelf.tsx): books spine-out on one board. Per book: --h height,
- * --t spine thickness, --cloth. A pulled book turns about its spine's front right edge, so its
- * cover swings out to the right and faces the reader; the books after it slide over by --room.
- * Transforms and opacity only.
+ * The bookcase (components/home/Shelf.tsx). Sizes follow the bay's width and the number of
+ * books: --h the book height, --cw a cover's width, --dw the bookplate's, --room what a pulled
+ * book needs to its right, --t the spine thickness that lets the row fill what is left. Per book:
+ * --k (height) and --tk (thickness) vary it a little, --cloth colours it. A pulled book turns
+ * about its spine's front right edge, so its cover swings out to the right and faces the reader;
+ * everything after it moves over by --room, taking the stand's place. Transforms and opacity only.
  */
 .case {
-  --W: 296px;
-  margin: 0 var(--gutter);
-  --room: calc(var(--W) * 0.94);
-  --room-half: calc(var(--W) * 0.64 + 22px);
-  --row-h: 470px;
   --gilt: #d8b46e;
+  --walnut: #4a3322;
+  --post: 20px;
+  --gapg: 24px;
+  margin: 0 var(--gutter);
+  container-type: inline-size;
   position: relative;
-  padding-top: 64px;
-  padding-bottom: 196px;
+}
+.bay {
+  --h: clamp(340px, 27cqw, 520px);
+  --cw: calc(var(--h) * 0.7);
+  --dw: clamp(240px, 20cqw, 350px);
+  --room: calc(var(--cw) + var(--dw) + 46px);
+  --fixed: calc(2 * var(--post) + 4px + var(--g) * var(--gapg) + 22px);
+  --t: clamp(48px, calc((100cqw - var(--room) - var(--fixed)) / (var(--n) * 1.06) - 3px), calc(var(--h) * 0.21));
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='120'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.006 .16' numOctaves='3' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .12  0 0 0 0 .07  0 0 0 0 .03  0 0 0 1.2 -.35'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
+  position: relative;
+  padding: 18px var(--post) 0;
+  /* The back panel: painted boards, shaded by the shelf above and the sides. */
+  background:
+    linear-gradient(to bottom, rgb(40 24 10 / 0.42), rgb(40 24 10 / 0.1) 26%, transparent 46%),
+    linear-gradient(90deg, rgb(40 24 10 / 0.25), transparent 6%, transparent 94%, rgb(40 24 10 / 0.25)),
+    repeating-linear-gradient(90deg, transparent 0 calc(16.66% - 2px), rgb(60 40 20 / 0.14) calc(16.66% - 2px) calc(16.66% - 1px), rgb(255 250 235 / 0.25) calc(16.66% - 1px) 16.66%),
+    #c9bb9c;
+  box-shadow: 0 30px 50px -30px rgb(40 24 10 / 0.5);
+  /* Books slid along the row pass under the right side and stop at the bay. */
+  overflow-x: clip;
+}
+/* The carcass: a walnut top and sides, over the row's ends. */
+.bay::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 86px;
+  z-index: 3;
+  border: solid transparent;
+  border-width: 18px var(--post) 0;
+  border-radius: 3px 3px 0 0;
+  background: var(--grain) 0 0 / 420px 120px border-box, linear-gradient(90deg, #3c2919, #5a3f2a 30%, var(--walnut) 70%, #2e1f13) border-box;
+  mask: linear-gradient(#000, #000) border-box, linear-gradient(#000, #000) padding-box;
+  mask-composite: exclude;
+  box-shadow: 0 0 0 1px rgb(30 18 8 / 0.5);
+  pointer-events: none;
 }
 
 /* ---------- The row ---------- */
 .row {
   list-style: none;
   margin: 0;
-  padding: 0 0 0 4px;
-  height: var(--row-h);
+  padding: 64px 0 0 4px;
   display: flex;
-  align-items: flex-end;
-  gap: 3px;
+  align-items: stretch;
+  min-height: calc(var(--h) * 1.06 + 64px);
+  position: relative;
+  z-index: 1;
 }
-.item { flex: none; transition: opacity 0.8s ease calc(var(--i) * 80ms); }
+.group {
+  position: relative;
+  flex: none;
+  display: flex;
+  padding-left: var(--gapg);
+  transition: translate 0.7s var(--ease);
+}
+.groupRow { list-style: none; margin: 0; padding: 0; display: flex; align-items: flex-end; gap: 3px; }
+.endEnd { flex: none; width: 22px; position: relative; transition: translate 0.7s var(--ease); }
+
+/* Book-ends: cast iron, one at the head of each section and one closing the row. */
+.group::before, .endEnd::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 7px;
+  width: 10px;
+  height: calc(var(--h) * 0.38);
+  border-radius: 1px 6px 0 0;
+  background: linear-gradient(90deg, #6d665c, #4a453e 35%, #34302b 80%, #57514a);
+  box-shadow: 1px 0 0 rgb(255 255 255 / 0.18) inset, 3px 2px 4px rgb(20 12 4 / 0.3);
+}
+.endEnd::before { left: 5px; }
+
+/* The section sign above each group, a printed slip tacked to the back panel. */
+.section {
+  position: absolute;
+  top: -50px;
+  left: var(--gapg);
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  pointer-events: none;
+}
+.section span {
+  flex: none;
+  padding: 5px 12px 6px;
+  font: italic 400 15px/1 var(--font-book);
+  white-space: nowrap;
+  color: #2a241c;
+  background: var(--stock, #f4efe3);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.5) inset, 0 2px 3px -1px rgb(40 24 10 / 0.45);
+  rotate: -0.6deg;
+}
+.section::after { content: ""; flex: 1; height: 1px; background: rgb(50 32 16 / 0.28); box-shadow: 0 1px 0 rgb(255 250 235 / 0.35); }
+
+/* ---------- One book ---------- */
+.item { position: relative; flex: none; transition: translate 0.7s var(--ease), opacity 0.8s ease calc(var(--i) * 70ms); }
 .pull {
   display: block;
-  width: var(--t);
-  height: var(--h);
+  position: relative;
+  width: calc(var(--t) * var(--tk));
+  height: calc(var(--h) * var(--k));
   perspective: 1700px;
   perspective-origin: 50% 35%;
-  transform-origin: 50% 100%;
+  color: inherit;
   text-decoration: none;
   outline: none;
-  transition: translate 0.7s var(--ease), rotate 0.7s var(--ease);
 }
 .book {
   position: relative;
@@ -62,6 +147,8 @@
   box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.22), 0 3px 3px -1px rgb(30 18 6 / 0.45);
   color: var(--gilt);
   overflow: hidden;
+  transform-origin: 50% 100%;
+  transition: rotate 0.6s var(--ease);
 }
 /* Raised bands over the sewing, two at the head and two at the tail, each edged with a gilt fillet. */
 .bands {
@@ -103,7 +190,7 @@
   align-items: center;
   justify-content: center;
   writing-mode: vertical-rl;
-  font: 400 min(calc(var(--t) * 0.38), 26px)/1 var(--font-serif);
+  font: 400 min(38cqw, 26px)/1 var(--font-serif);
   letter-spacing: 0.01em;
   white-space: nowrap;
   text-shadow: 0 1px 0 rgb(0 0 0 / 0.45), 0 -0.5px 0 rgb(255 240 200 / 0.25);
@@ -126,7 +213,7 @@
   position: absolute;
   left: 100%;
   top: 0;
-  width: calc(var(--h) * 0.7);
+  width: calc(var(--h) * var(--k) * 0.7);
   height: 100%;
   transform-origin: 0 50%;
   transform: rotateY(90deg);
@@ -173,103 +260,218 @@
   background: color-mix(in oklab, var(--cloth) 86%, #000);
   outline-style: dashed;
 }
-.insetEmpty span { font: 400 30px/1 var(--font-serif); }
+.insetEmpty span { font: 400 min(30px, 50cqw)/1 var(--font-serif); }
 .onlayEmpty span { font: 400 24cqw/1 var(--font-serif); color: color-mix(in oklab, #3d3428 55%, transparent); transition: transform 0.5s var(--ease), color 0.3s ease; }
 
-/* ---------- Pulling a book ---------- */
-/*
- * The first book always stands half out, its cover showing, so the row says what it holds; the
- * books after it stand clear of it. Pulling a book (hover or focus, on its spine or its label
- * card) slides it out and turns its cover to the reader; only the books after it move over, so
- * nothing moves under the pointer, and its neighbours lean a little.
- */
-.item:first-child .book { transform: translateZ(40px) rotateY(-40deg); }
-.item:first-child ~ .item > .pull { translate: var(--room-half) 0; }
-.item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) .book { transform: translateZ(90px) rotateY(-78deg); }
-.item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) ~ .item > .pull { translate: calc(var(--room-half) + var(--room)) 0; rotate: -1.2deg; }
-.item:first-child:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) ~ .item > .pull { translate: var(--room) 0; }
-.item:first-child:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) + .item > .pull { rotate: -1.6deg; }
-.item:not(:first-child):has(~ .item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover))) > .pull { rotate: 1.4deg; }
-.item:has(> .pull:focus-visible) .front { outline: 2px solid var(--act); outline-offset: 6px; }
-.item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) .onlayEmpty span { transform: rotate(90deg); color: var(--act); }
-
-/* The pencilled note by the first book, rubbed out once another is pulled. */
-.pencil {
+/* ---------- The label under each spine, pasted on the board's edge ---------- */
+.ticket {
   position: absolute;
-  top: 2px;
-  left: 150px;
-  margin: 0;
-  font: italic 400 21px/1 var(--font-book);
-  color: #6c665b;
-  rotate: -3deg;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
+  top: calc(100% + 25px);
+  left: 50%;
+  translate: -50% 0;
+  width: calc(100% + 1px);
+  height: 52px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2px;
+  padding: 5px 2px 4px;
+  background: var(--stock, #f4efe3);
+  box-shadow: 0 0 0 1px rgb(60 40 20 / 0.18) inset, 0 1px 0 rgb(255 255 255 / 0.4) inset, 0 1px 2px rgb(20 10 2 / 0.4);
+  text-align: center;
+  color: #231e17;
+  transition: background-color 0.3s ease;
 }
-.pencil svg { position: absolute; left: -46px; top: 12px; width: 46px; height: 34px; scale: -1 1; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; }
-.case:has(.item:not(:first-child) :is(.pull, .card):is(:hover, :focus-visible)) .pencil { opacity: 0; }
+.ticketName { font: 400 clamp(11.5px, calc(var(--t) * 0.2), 14.5px)/1.1 var(--font-book); letter-spacing: -0.01em; text-wrap: balance; }
 
-/* ---------- Beside the row: the pulled book, in words ---------- */
-.detail {
+/* ---------- The bookplate beside a pulled book ---------- */
+.plate {
   position: absolute;
-  top: 120px;
-  right: 0;
-  width: min(400px, 32%);
+  bottom: 9%;
+  left: calc(100% + var(--h) * var(--k) * 0.7 + 22px);
+  width: var(--dw);
+  display: grid;
+  gap: 0;
+  padding: 22px 22px 20px;
+  background: var(--stock, #f4efe3);
+  /* A printed bookplate: double rule, the inner one hand-set a hair short at the corners. */
+  box-shadow: 0 0 0 1px rgb(40 30 20 / 0.6) inset, 0 0 0 5px var(--stock, #f4efe3) inset, 0 0 0 6px rgb(40 30 20 / 0.3) inset, 0 18px 26px -16px rgb(40 24 10 / 0.6), 0 2px 3px rgb(40 24 10 / 0.2);
+  color: var(--ink);
   opacity: 0;
-  translate: 12px 0;
-  transition: opacity 0.35s ease, translate 0.5s var(--ease);
+  translate: -14px 0;
+  rotate: 0.7deg;
+  transition: opacity 0.3s ease, translate 0.5s var(--ease);
   pointer-events: none;
 }
-.detail p { margin: 0; }
-.detailName { font: 400 60px/0.98 var(--font-serif); letter-spacing: -0.01em; text-wrap: balance; }
-.detailTag { margin-top: 18px !important; font: italic 400 22px/1.45 var(--font-book); text-wrap: pretty; }
-.detailMeta { margin-top: 18px !important; padding-top: 14px; border-top: 1px solid var(--rule); font: 400 16px/1.4 var(--font-book); color: var(--muted); }
-.detailGo { margin-top: 10px !important; font: 600 16px/1 var(--font-sans); font-stretch: 92%; color: var(--act); }
-.item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) > .detail,
-.row:not(:has(:is(.pull, .card):is(:hover, :focus-visible))) > .item:first-child > .detail { opacity: 1; translate: 0 0; transition-delay: 0.12s; }
+.plateName { font: 400 clamp(32px, 2.8cqw, 46px)/0.98 var(--font-serif); letter-spacing: -0.01em; text-wrap: balance; }
+.plateTag { margin-top: 10px; font: italic 400 17px/1.4 var(--font-book); text-wrap: pretty; }
+.plateLine { display: grid; gap: 6px; margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.plateQuote { font: 400 15.5px/1.45 var(--font-book); text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.plateWhere { font: italic 400 13.5px/1.35 var(--font-book); color: var(--muted); }
+.plateMeta { margin-top: 12px; font: 400 14px/1.3 var(--font-book); color: var(--muted); font-variant-numeric: oldstyle-nums; }
+.plateGo { margin-top: 10px; font: 600 15.5px/1 var(--font-sans); font-stretch: 92%; color: var(--act); }
 
-/* ---------- The board, and the label cards in a row under it ---------- */
+/* ---------- Pulling a book ---------- */
+.item:has(> .pull:is(:hover, :focus-visible)) { z-index: 2; }
+.item:has(> .pull:is(:hover, :focus-visible)) .book { transform: translateZ(70px) rotateY(-80deg); }
+.item:has(> .pull:is(:hover, :focus-visible)) .plate { opacity: 1; translate: 0 0; transition-delay: 0.12s; }
+.item:has(> .pull:is(:hover, :focus-visible)) .ticket { background-color: #fffaf0; }
+.item:has(> .pull:is(:hover, :focus-visible)) ~ .item,
+.group:has(.pull:is(:hover, :focus-visible)) ~ :is(.group, .endEnd, .standSlot) { translate: var(--room) 0; }
+/* Its neighbours lean into the gap it leaves. */
+.item:has(+ .item > .pull:is(:hover, :focus-visible)) .spine { rotate: 1.6deg; }
+.item:has(> .pull:is(:hover, :focus-visible)) + .item .spine { rotate: -1.6deg; }
+.item:has(> .pull:focus-visible) .front { outline: 2px solid var(--act); outline-offset: 6px; }
+.item:has(> .pull:focus-visible) .ticket { outline: 2px solid var(--act); outline-offset: 2px; }
+.item:has(> .pull:is(:hover, :focus-visible)) .onlayEmpty span { transform: rotate(90deg); color: var(--act); }
+
+/* ---------- The board ---------- */
 .board {
-  position: absolute;
-  top: calc(64px + var(--row-h) - 2px);
-  left: calc(-2 * var(--gutter));
-  right: calc(-2 * var(--gutter));
-  height: 56px;
-  z-index: -1;
-  background: linear-gradient(to bottom, #c7a274 0 3px, #9d7650 3px 5px, #7d5a3a 5px 18px, #5c4029 18px 21px, #b9ab92 21px, #d9d0bd 34px, transparent 56px);
+  position: relative;
+  height: 86px;
+  margin: 0 calc(-1 * var(--post));
+  z-index: 0;
+  /* Its top, in light, then the front edge in walnut. */
+  background:
+    linear-gradient(to bottom, rgb(255 236 200 / 0.28), transparent 14px),
+    var(--grain) 0 16px / 420px 120px,
+    linear-gradient(to bottom, #a4784f 0, #8a6340 15px, #3a2617 15px, #6a4a30 17px, var(--walnut) 40%, #34241a 100%);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 0.5), 0 18px 22px -12px rgb(40 24 10 / 0.55);
 }
-.case::before {
-  /* The back of the bookcase: a soft shade the books stand in front of. */
+/* Shadow the books cast on the board's top. */
+.board::before {
   content: "";
   position: absolute;
-  top: 64px;
-  left: calc(-1 * var(--gutter));
-  right: calc(-1 * var(--gutter));
-  height: var(--row-h);
-  z-index: -2;
-  background: linear-gradient(to bottom, transparent, rgb(90 64 36 / 0.07) 60%, rgb(90 64 36 / 0.14));
+  inset: 0 0 auto;
+  height: 15px;
+  background: linear-gradient(to bottom, rgb(30 16 6 / 0.45), transparent);
 }
-.card {
+
+/* ---------- The stand at the open end ---------- */
+.standSlot {
+  flex: 1 1 0;
+  min-width: var(--room);
+  position: relative;
+  transition: translate 0.7s var(--ease), opacity 0.45s ease;
+}
+.row:has(.pull:is(:hover, :focus-visible)) .standSlot { opacity: 0; pointer-events: none; }
+.stand {
   position: absolute;
-  top: calc(64px + var(--row-h) + 58px);
-  left: calc(var(--i) * (100% + 28px) / var(--n));
-  width: calc((100% + 28px) / var(--n) - 28px);
-  display: grid;
-  gap: 6px;
-  padding-top: 12px;
-  border-top: 1px solid var(--rule);
-  text-decoration: none;
-  color: var(--ink);
-  transition: border-color 0.3s ease, translate 0.4s var(--ease);
+  inset: 0 26px 0 22px;
+  display: flex;
+  align-items: flex-end;
+  /* With few books the stand has room to spare: the display stands in the middle of it. */
+  justify-content: center;
+  gap: 26px;
 }
-.cardName { font: 400 25px/1.05 var(--font-serif); transition: color 0.25s ease; }
-.cardTag { font: 400 15px/1.45 var(--font-book); color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.cardMeta { font: 400 14px/1.3 var(--font-book); color: var(--muted); font-variant-numeric: oldstyle-nums; }
-.item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) > .card { border-top-color: var(--act); translate: 0 -3px; }
-.item:is(:has(> .pull:hover), :has(> .pull:focus-visible), :has(> .card:hover)) > .card .cardName { color: var(--act); }
+.standBook {
+  position: relative;
+  flex: none;
+  display: block;
+  width: calc(var(--h) * 0.86 * 0.7);
+  height: calc(var(--h) * 0.86);
+  margin-bottom: 8px;
+  transform-origin: 50% 100%;
+  rotate: -2.5deg;
+  animation: standIn 0.7s var(--ease) both;
+}
+/* The stand itself: a ledge the book leans on. */
+.standBook::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -14px;
+  bottom: -10px;
+  height: 14px;
+  border-radius: 2px;
+  background: linear-gradient(#7a573a, var(--walnut));
+  box-shadow: 0 3px 4px rgb(20 10 2 / 0.4);
+  rotate: 2.5deg;
+}
+.standBook .front { box-shadow: 0 2px 2px rgb(0 0 0 / 0.22), 18px 16px 28px -14px rgb(40 24 10 / 0.55); }
+@keyframes standIn {
+  from { opacity: 0; translate: 0 10px; }
+}
+
+/* The catalogue card: index-card ruling, a red head rule and blue lines. */
+.card {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 460px;
+  margin-bottom: 18px;
+  padding: 26px 24px 20px 26px;
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  background:
+    linear-gradient(rgb(200 70 60 / 0.55), rgb(200 70 60 / 0.55)) 0 18px / 100% 1px no-repeat,
+    repeating-linear-gradient(to bottom, transparent 0 25px, rgb(90 130 170 / 0.22) 25px 26px) 0 24px / 100% calc(100% - 24px) no-repeat,
+    var(--stock, #f6f1e4);
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 16px 24px -14px rgb(40 24 10 / 0.55), 0 1px 3px rgb(40 24 10 / 0.25);
+  rotate: 0.8deg;
+}
+/* The rod hole punched at the foot of a catalogue card. */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: #b5a687;
+  box-shadow: inset 0 1px 2px rgb(40 24 10 / 0.5);
+}
+.cardLine { margin: 0; display: grid; gap: 8px; animation: lineIn 0.6s ease both; }
+.cardLine blockquote { margin: 0; }
+.cardLine p { font: italic 400 clamp(19px, 1.6cqw, 24px)/1.36 var(--font-book); text-wrap: pretty; color: #1d1a16; }
+.cardLine figcaption { font: 400 14px/1.35 var(--font-book); color: var(--muted); }
+@keyframes lineIn {
+  from { opacity: 0; }
+}
+.cardGo { position: relative; font: 400 16px/1.4 var(--font-book); color: var(--act); text-wrap: pretty; padding: 4px 0; }
+.cardGo i { color: var(--ink); }
+.cardNext {
+  margin: 2px 0 10px;
+  padding: 9px 14px 10px;
+  border: 1px solid rgb(40 30 20 / 0.35);
+  border-radius: 2px;
+  background: transparent;
+  font: italic 400 15px/1 var(--font-book);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.cardNext:hover { background: rgb(40 30 20 / 0.06); border-color: rgb(40 30 20 / 0.6); }
+.cardNext:active { translate: 0 1px; }
+
+/* The pencilled note by the books: the cue to pull one. */
+.pencil {
+  position: absolute;
+  top: -40px;
+  left: 30px;
+  margin: 0;
+  font: italic 400 20px/1 var(--font-book);
+  color: #4f473b;
+  rotate: -2deg;
+  pointer-events: none;
+}
+.pencil svg { position: absolute; left: -50px; top: 10px; width: 46px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; }
 
 /* The first time the shelf comes into view, the books arrive one after another. */
 .case[data-wait]:not([data-in]) .item { opacity: 0; }
 
+/* ---------- Narrow screens: the row scrolls sideways; the stand follows under it ---------- */
+@media (max-width: 900px) {
+  .bay { --h: 340px; --t: 52px; --dw: 230px; overflow-x: auto; overscroll-behavior-x: contain; }
+  .row { width: max-content; }
+  .standSlot { min-width: var(--room); }
+  .board { width: 100%; min-width: max-content; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .item, .pull, .book, .detail, .card, .pencil { transition: none; }
+  .item, .group, .endEnd, .standSlot, .book, .spine, .plate, .ticket { transition: none; }
+  .standBook, .cardLine { animation: none; }
 }

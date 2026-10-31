@@ -5,6 +5,16 @@
  * binder's blue band. Everything that moves is transform or opacity, and runs once.
  */
 .site {
+  /*
+   * Paper stocks. Each section is a sheet of one: --stock its colour, --laid its texture
+   * (fibres from a small tile, then the laid lines and chain lines of a mould-made sheet).
+   */
+  --fibre: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='f'><feTurbulence type='turbulence' baseFrequency='.012 .11' numOctaves='2' seed='11' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .38  0 0 0 0 .29  0 0 0 0 .17  .9 0 0 0 -.66'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --laid:
+    var(--fibre) 0 0 / 220px 220px,
+    repeating-linear-gradient(90deg, transparent 0 118px, rgb(120 96 60 / 0.045) 118px 121px, transparent 121px 124px),
+    repeating-linear-gradient(0deg, rgb(120 96 60 / 0.03) 0 1px, transparent 1px 5px);
+  --stock: #ece6d7;
   --paper: #ece6d7;
   --sheet: #f6f2e8;
   --ink: #1b1915;
@@ -21,6 +31,15 @@
 }
 .site a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .site h2, .site h3, .site p { margin: 0; }
+.defs { position: absolute; width: 0; height: 0; }
+
+/* ---------- Sheets: each section laid over the one before ---------- */
+.sheet { position: relative; background: var(--laid), var(--stock); }
+/* Letterpress: section titles bite into the sheet, with a hair of ink spread. */
+.sheet h2 {
+  filter: url(#ink);
+  text-shadow: 0 1px 0 rgb(255 255 255 / 0.55), 0 -0.5px 0 rgb(60 40 20 / 0.25);
+}
 
 /* ---------- Masked words (components/home/Masked.tsx) ---------- */
 .site [data-word-mask] {
@@ -202,7 +221,7 @@
 .makeText[data-in] > :not(h2) { transition: opacity 0.8s ease 0.3s, transform 0.9s var(--ease) 0.3s; }
 
 /* ---------- The shelf ---------- */
-.shelfSection { padding: 120px 0 112px; overflow-x: clip; }
+.shelfSection { --stock: #ebe4d3; padding: 112px 0 104px; }
 /* The books themselves: components/home/Shelf.module.css. */
 
 /* ---------- How a page is made ---------- */
@@ -211,7 +230,7 @@
   inherits: false;
   initial-value: 360deg;
 }
-.making { padding: 128px 0 120px; border-top: 1px solid var(--rule); }
+.making { --stock: #efe9da; padding: 128px 0 120px; }
 .stages {
   list-style: none;
   margin: 0;
@@ -235,7 +254,8 @@
   position: relative;
   aspect-ratio: 1;
   background: var(--sheet);
-  box-shadow: 0 0 0 1px var(--rule);
+  /* A print tipped onto the sheet: a white margin, a hairline, a paper shadow. */
+  box-shadow: 0 0 0 5px #faf7ef, 0 0 0 6px rgb(60 40 20 / 0.16), 0 14px 18px -12px rgb(40 24 10 / 0.5);
   overflow: hidden;
 }
 .frame img, .frame video { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -324,6 +344,7 @@
 /* ---------- Make a new life: the one band of colour, in the binder's blue cloth ---------- */
 .make {
   --cloth: #23314d;
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
   gap: clamp(48px, 6vw, 112px);
@@ -371,12 +392,15 @@
 
 /* ---------- Footer: epigraph and colophon ---------- */
 .footer {
+  --stock: #e3d9c4;
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 56px;
   padding: 104px var(--gutter) 88px;
 }
+.epiCol { display: grid; align-content: start; gap: 36px; }
 .epigraph { margin: 0; }
+.colophonRule { margin-bottom: 8px; }
 .epigraph p { font: italic 400 24px/1.5 var(--font-book); max-width: 26ch; text-wrap: balance; }
 .epigraph footer { margin-top: 16px; font: 400 15px/1.2 var(--font-book); color: var(--muted); }
 .colophon { display: grid; gap: 14px; max-width: 60ch; }
@@ -385,9 +409,96 @@
 .credits { list-style: none; margin: 8px 0 0; padding: 14px 0 0; border-top: 1px solid var(--rule); display: grid; gap: 6px; font: 400 14px/1.5 var(--font-book); color: var(--muted); }
 .credits i { color: var(--ink); }
 
+/* ---------- Across the century ---------- */
+.century { --stock: #f3eee2; padding: 112px 0 112px; }
+.threadsWrap { position: relative; }
+/* A SAM cut-out pasted on as an ornament: cut with a white margin, as if by scissors. */
+.scrap {
+  pointer-events: none;
+  filter: drop-shadow(0 0 0 #fbf8f0) drop-shadow(1.5px 0 0 #fbf8f0) drop-shadow(-1.5px 0 0 #fbf8f0) drop-shadow(0 1.5px 0 #fbf8f0) drop-shadow(0 -1.5px 0 #fbf8f0) drop-shadow(0 6px 6px rgb(40 24 10 / 0.35));
+}
+.scrapCentury { position: absolute; top: 60px; right: calc(var(--gutter) + 1%); margin: 0; display: grid; justify-items: center; gap: 10px; width: clamp(130px, 11vw, 180px); pointer-events: none; }
+.scrapCentury img { width: 82%; rotate: 6deg; }
+.scrapCentury figcaption { font: italic 400 14px/1.3 var(--font-book); color: var(--muted); text-align: center; rotate: -2deg; }
+.scrapFoot { position: relative; width: 120px; rotate: -7deg; justify-self: start; }
+
+.days { margin: 72px var(--gutter) 0; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 9fr); gap: 40px; align-items: start; }
+.daysHead { font: 400 34px/1.02 var(--font-serif); text-wrap: balance; }
+.dayList { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+/* Each day on a date-due slip, stamped. */
+.dayList li {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 20px 20px 18px;
+  background: #f8f3e3;
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 12px 18px -12px rgb(40 24 10 / 0.5), 0 1px 2px rgb(40 24 10 / 0.2);
+  rotate: calc((var(--k) - 1) * 0.6deg);
+}
+.stamp {
+  justify-self: start;
+  display: flex;
+  gap: 0.35em;
+  padding: 5px 10px 4px;
+  font: 700 19px/1 var(--font-sans);
+  font-stretch: 86%;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  color: #4b3f8c;
+  border: 2px solid currentColor;
+  border-radius: 3px;
+  rotate: calc(-3deg + var(--k) * 2.4deg);
+  mix-blend-mode: multiply;
+  opacity: 0.88;
+  /* The pad never inks evenly. */
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='i'><feTurbulence type='fractalNoise' baseFrequency='.55' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -3 2.3'/></filter><rect width='100%' height='100%' filter='url(%23i)'/></svg>") 0 0 / 90px 90px;
+}
+.dayText { font: 400 16.5px/1.6 var(--font-book); text-wrap: pretty; }
+.dayMeta { font: italic 400 14.5px/1.4 var(--font-book); color: var(--muted); }
+.dayMeta a { color: var(--act); }
+.days[data-wait]:not([data-in]) li { opacity: 0; transform: translateY(14px); }
+.days[data-in] li { transition: opacity 0.6s ease calc(var(--k) * 90ms), transform 0.8s var(--ease) calc(var(--k) * 90ms); }
+
+/* ---------- Your family's story: on manila, like the folder the photos come in ---------- */
+.family {
+  --stock: #e7dab9;
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(48px, 6vw, 112px);
+  align-items: center;
+  padding: 120px var(--gutter) 112px;
+}
+.familyText h2 { font: 400 clamp(56px, 5.6vw, 96px)/0.92 var(--font-serif); letter-spacing: -0.02em; }
+.familyText > p { margin-top: 26px !important; max-width: 42ch; font: 400 19px/1.6 var(--font-book); text-wrap: pretty; }
+.familyActions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 34px; }
+.familyActions .primary { background: #2a2620; color: #f3ead6; }
+.familyActions .primary::before { background: #4a4236; }
+.recording { margin: 0; display: grid; gap: 22px; justify-items: start; }
+.snapshots { list-style: none; margin: 0; padding: 0; display: flex; }
+/* Snapshots in photo corners, overlapping a little as they would in an album. */
+.snapshots li {
+  position: relative;
+  width: clamp(140px, 13vw, 210px);
+  padding: 8px 8px 26px;
+  background: #fbf8f0;
+  box-shadow: 0 14px 20px -12px rgb(40 24 10 / 0.55), 0 1px 2px rgb(40 24 10 / 0.25);
+  rotate: calc(-4deg + var(--k) * 4deg);
+  margin-left: calc(var(--k) * -18px);
+}
+.snapshots img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.heard { margin: 0; max-width: 40ch; }
+.heard p { font: italic 400 clamp(22px, 1.9vw, 28px)/1.4 var(--font-book); text-wrap: pretty; }
+.recording figcaption { font: 400 15px/1.5 var(--font-book); color: var(--muted); max-width: 52ch; }
+.recording figcaption a { color: var(--act); }
+.familyText[data-wait]:not([data-in]) > :not(h2) { opacity: 0; transform: translateY(16px); }
+.familyText[data-in] > :not(h2) { transition: opacity 0.8s ease 0.3s, transform 0.9s var(--ease) 0.3s; }
+
 /* ---------- Narrow screens: one column ---------- */
 @media (max-width: 980px) {
-  .hero, .sectionHead, .makingFoot, .make, .footer { grid-template-columns: minmax(0, 1fr); }
+  .hero, .sectionHead, .makingFoot, .make, .footer, .family, .days { grid-template-columns: minmax(0, 1fr); }
+  .dayList { grid-template-columns: minmax(0, 1fr); }
+  .scrapCentury { display: none; }
   .masthead nav { gap: 18px; }
   .stages { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 48px; }
 }

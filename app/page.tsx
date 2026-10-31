@@ -7,16 +7,21 @@ import type { Scene, Story } from "@/lib/schema";
 import type { Job } from "@/pipeline/create/types";
 import { PRICES } from "@/pipeline/budget";
 import { lifeCost } from "@/lib/cost";
-import { allStories, lifespan } from "@/lib/stories";
+import { allStories, getStory, lifespan } from "@/lib/stories";
 import { portraitCredit } from "@/lib/portraits";
 import { eraFor } from "@/lib/eras";
 import { LoopFilm } from "@/components/home/LoopFilm";
 import { clothFor } from "@/components/book/Cover";
-import { pagesFor, roman } from "@/components/book/pagination";
+import { pagesOf, plan, roman } from "@/components/book/pagination";
 import { HeroPlate, type HeroScene } from "@/components/home/HeroPlate";
 import { Masked } from "@/components/home/Masked";
-import { Shelf, type ShelfBook } from "@/components/home/Shelf";
+import { Shelf, type ShelfBook, type ShelfGroup } from "@/components/home/Shelf";
+import type { StandBook } from "@/components/home/Stand";
 import { Reveal } from "@/components/home/Reveal";
+import { Threads, type Thread } from "@/components/home/Threads";
+import { Deckle, Fleuron } from "@/components/home/Paper";
+import { chapterHref, datedFor, grouped, linesFor, monthName, nearestDays, standLines } from "@/components/home/lines";
+import { deepChapters, deepFacts, familySample } from "@/components/home/homeData";
 import { directionsFor } from "@/components/book/direction.server";
 import s from "./home.module.css";
 
@@ -98,6 +103,9 @@ function showcase(stories: Story[]) {
 export default function Home() {
   const stories = allStories();
   const first = stories[0];
+  const lengths = stories.map((st) => st.scenes.length);
+  const [fewest, most] = [Math.min(7, ...lengths), Math.max(7, ...lengths)];
+  const chapters = fewest === most ? lower(most) : `${lower(fewest)} to ${lower(most)}`;
   const hero = stories.map(heroScene).filter((h): h is HeroScene => Boolean(h));
   const demo = showcase(stories);
   const plates = stories.reduce((a, st) => a + st.scenes.filter((sc) => sc.plate).length, 0);
@@ -115,6 +123,85 @@ export default function Home() {
   }));
   const nameSize = `${Math.min(14, 74 / (longest * 0.46)).toFixed(2)}cqw`;
 
+  // Lines from inside the books: sourced quotations and details from the research where a
+  // chapter has them, else the chapter's own first sentence. The stand starts somewhere new each minute.
+  const perBook = stories.map((st) => linesFor(st, deepChapters(st.slug)));
+  const lines = standLines(perBook, 3, Math.floor(Date.now() / 60_000));
+  const cloths = stories.map((st, i) => clothFor(eraFor(st.scenes[0].year), i));
+  // The picture set into a book's spine and cover: its first painted plate.
+  const firstPlate = (st: Story) => st.scenes.find((sc) => sc.plate)?.plate;
+  const covers = Object.fromEntries(
+    stories.map((st, i): [string, StandBook] => [st.slug, { name: st.name, lifespan: lifespan(st), cloth: cloths[i], plate: firstPlate(st) }]),
+  );
+
+  const books = stories.map((st, i): ShelfBook => ({
+    slug: st.slug,
+    href: `/${st.slug}`,
+    name: st.name,
+    lifespan: lifespan(st),
+    tagline: st.tagline,
+    meta: `${count(st.scenes.length)} chapters, ${st.scenes[0].year}–${st.scenes.at(-1)!.year}`,
+    pages: pagesOf(plan(st)),
+    cloth: cloths[i],
+    plate: firstPlate(st),
+    excerpt: perBook[i][0],
+  }));
+  const groups: ShelfGroup[] = [
+    ...grouped(books).map((g) => ({ id: g.id, name: g.name, books: g.lives })),
+    {
+      id: "yours",
+      name: "To be written",
+      books: [
+        {
+          slug: "new",
+          href: "/create",
+          name: "A new life",
+          lifespan: "",
+          tagline: "Type a Singaporean’s name; the book is researched, painted and bound here.",
+          meta: made ? `About ${minutes(made.job)} minutes` : "Seven chapters",
+          pages: 17,
+          cloth: "#d6ccb6",
+          blank: "new",
+        },
+        {
+          slug: "family",
+          href: "/family",
+          name: "Your family’s story",
+          spine: "Family story",
+          lifespan: "",
+          tagline: "A grandparent’s recording and the family photos, made into a private book.",
+          meta: "For your family only",
+          pages: 13,
+          cloth: "#cbc4b0",
+          blank: "family",
+        },
+      ],
+    },
+  ];
+
+  // The lives across the century, and the dated days in them nearest today's date (Singapore time).
+  const today = new Date(Date.now() + 8 * 3600_000);
+  const threads = stories.map((st, i): Thread => ({
+    slug: st.slug,
+    name: st.name,
+    born: Number(st.born),
+    died: st.died ? Number(st.died.slice(0, 4)) : null,
+    cloth: cloths[i],
+    chapters: st.scenes.map((sc, j) => ({ year: Number(sc.year), title: sc.title, chapter: `Chapter ${roman(j + 1)}`, href: chapterHref(st, j) })),
+  }));
+  const days = nearestDays(stories.flatMap((st) => datedFor(st, deepFacts(st.slug))), today, 3);
+  const span = threads.length ? today.getUTCFullYear() - Math.min(...threads.map((t) => t.born)) : 0;
+
+  // Cut-outs from the plates, pasted in as ornaments: the largest from each of a few lives.
+  const scraps = stories
+    .map((st) => st.scenes.flatMap((sc) => cuts(sc).map((l) => ({ src: l.src, concept: l.concept, w: l.w, name: st.name }))).sort((a, b) => b.w - a.w)[0])
+    .filter(Boolean)
+    .slice(0, 3);
+
+  const family = familySample();
+  const familyBook = family ? getStory(family.slug) : undefined;
+  const familyPlates = familyBook?.scenes.filter((sc) => sc.plate).slice(0, 3) ?? [];
+
   // Costs for the making section: the job's own record where there is one, list price otherwise.
   const demoCuts = demo ? cuts(demo.scene) : [];
   const jobScene = demo?.job?.scenes.find((x) => x.id === demo.scene.id);
@@ -129,6 +216,13 @@ export default function Home() {
 
   return (
     <Reveal className={s.site}>
+      <svg className={s.defs} aria-hidden>
+        {/* Letterpress: the type bites into the sheet, its edge spread a hair by the ink. */}
+        <filter id="ink" x="-2%" y="-10%" width="104%" height="120%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5" result="n" />
+          <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
       {/* ---------- Hero: the desk where the books are made ---------- */}
       <div className={s.desk}>
         <header className={s.masthead}>
@@ -137,6 +231,7 @@ export default function Home() {
           </Link>
           <nav aria-label="Site">
             <a href="#shelf">The shelf</a>
+            <a href="#century">Across the century</a>
             <a href="#making">How a page is made</a>
             <Link href="/create">Make a new life</Link>
             <Link href="/family">Your family’s story</Link>
@@ -149,7 +244,7 @@ export default function Home() {
               <Masked text="Lives you read as illustrated books that move." />
             </h1>
             <p className={s.pitch}>
-              Each book is a Singaporean life in seven chapters. Every fact is researched and cited, every chapter is painted in the print
+              Each book is a Singaporean life in {chapters} chapters. Every fact is researched and cited, every chapter is painted in the print
               style of its decade, and each picture comes apart into layers that Muse Wonder sets moving. All of it made with Meta’s models.
             </p>
             {first && (
@@ -177,60 +272,72 @@ export default function Home() {
 
       <main>
         {/* ---------- The shelf ---------- */}
-        <section id="shelf" className={s.shelfSection} aria-labelledby="shelf-title">
+        <section id="shelf" className={`${s.sheet} ${s.shelfSection}`} aria-labelledby="shelf-title">
+          <Deckle />
           <div className={s.sectionHead} data-reveal>
             <h2 id="shelf-title">
               <Masked text="On the shelf" />
             </h2>
             <p>
-              {count(stories.length)} {stories.length === 1 ? "life" : "lives"} so far, each bound in the colours of the decade it starts
-              in. Pull one out to read it; finish a book and the next comes off the shelf.
+              {count(stories.length)} {stories.length === 1 ? "life" : "lives"} so far, shelved by what they did and bound in the colours of
+              the decade each starts in. Pull one out to read it; finish a book and the next comes off the shelf.
             </p>
           </div>
-          <Shelf
-            nameSize={nameSize}
-            books={[
-              ...stories.map((st, i): ShelfBook => ({
-                slug: st.slug,
-                href: `/${st.slug}`,
-                name: st.name,
-                lifespan: lifespan(st),
-                tagline: st.tagline,
-                meta: `${count(st.scenes.length)} chapters, ${st.scenes[0].year}–${st.scenes.at(-1)!.year}`,
-                pages: pagesFor(st.scenes.length),
-                cloth: clothFor(eraFor(st.scenes[0].year), i),
-                plate: st.scenes[0].plate,
-              })),
-              {
-                slug: "new",
-                href: "/create",
-                name: "A new life",
-                lifespan: "",
-                tagline: "Type a Singaporean’s name; the book is researched, painted and bound here.",
-                meta: made ? `About ${minutes(made.job)} minutes` : "Seven chapters",
-                pages: 17,
-                cloth: "#d6ccb6",
-                blank: "new",
-              },
-              {
-                slug: "family",
-                href: "/family",
-                name: "Your family’s story",
-                spine: "Family story",
-                lifespan: "",
-                tagline: "A grandparent’s recording and the family photos, made into a private book.",
-                meta: "For your family only",
-                pages: 13,
-                cloth: "#cbc4b0",
-                blank: "family",
-              },
-            ]}
-          />
+          <Shelf groups={groups} nameSize={nameSize} lines={lines} covers={covers} />
         </section>
+
+        {/* ---------- Across the century ---------- */}
+        {threads.length > 1 && (
+          <section id="century" className={`${s.sheet} ${s.century}`} aria-labelledby="century-title">
+            <Deckle alt shift={420} />
+            <div className={s.sectionHead} data-reveal>
+              <h2 id="century-title">
+                <Masked text="Across the century" />
+              </h2>
+              <p>
+                {count(threads.length)} lives over {span} years. Each thread is a life and each mark a chapter: point at one to see who else
+                was living then, and open the book right there.
+              </p>
+            </div>
+            {scraps[0] && (
+              <figure className={s.scrapCentury} aria-hidden>
+                <img className={s.scrap} src={scraps[0].src} alt="" loading="lazy" />
+                <figcaption>
+                  The {scraps[0].concept}, cut from a plate in {scraps[0].name}’s book by SAM 3.1
+                </figcaption>
+              </figure>
+            )}
+            <div data-reveal className={s.threadsWrap}>
+              <Threads threads={threads} now={today.getUTCFullYear()} />
+            </div>
+            {days.length > 0 && (
+              <div className={s.days} data-reveal>
+                <h3 className={s.daysHead}>
+                  Closest to today, {today.getUTCDate()} {monthName(today.getUTCMonth())}
+                </h3>
+                <ol className={s.dayList}>
+                  {days.map((d, k) => (
+                    <li key={d.slug} style={{ "--k": k } as CSSProperties}>
+                      <p className={s.stamp}>
+                        <span>{d.day}</span> <span>{monthName(d.month).slice(0, 3)}</span> <span>{d.year}</span>
+                      </p>
+                      <p className={s.dayText}>{d.text}</p>
+                      <p className={s.dayMeta}>
+                        {d.away === 0 ? "Today’s date" : d.away < 0 ? `${count(-d.away)} ${d.away === -1 ? "day" : "days"} ago` : `In ${lower(d.away)} ${d.away === 1 ? "day" : "days"}`},{" "}
+                        <Link href={d.href}>in {d.name}’s book</Link>
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </section>
+        )}
 
         {/* ---------- How a page is made ---------- */}
         {demo && (
-          <section id="making" className={s.making} aria-labelledby="making-title">
+          <section id="making" className={`${s.sheet} ${s.making}`} aria-labelledby="making-title">
+            <Deckle shift={900} />
             <div className={s.sectionHead} data-reveal>
               <h2 id="making-title">
                 <Masked text="How a page is made" />
@@ -401,10 +508,56 @@ export default function Home() {
             </figure>
           )}
         </section>
+        {/* ---------- Your family's story ---------- */}
+        <section id="family" className={`${s.sheet} ${s.family}`} aria-labelledby="family-title">
+          <Deckle alt shift={1200} />
+          <div className={s.familyText} data-reveal>
+            <h2 id="family-title">
+              <Masked text="Your family’s story" />
+            </h2>
+            <p>
+              Record a grandparent telling their life, add the family photos, and it becomes a book only your family can open: their own
+              words set as the chapters, every line linked back to the moment in the recording it came from.
+            </p>
+            <div className={s.familyActions}>
+              <Link href="/family" className={s.primary}>
+                <span>Record a grandparent</span>
+              </Link>
+              {familyBook && (
+                <Link href={`/${familyBook.slug}`} className={s.textLink}>
+                  Read the sample book
+                </Link>
+              )}
+            </div>
+          </div>
+          {family && (
+            <figure className={s.recording} data-reveal>
+              <ul className={s.snapshots}>
+                {familyPlates.map((sc, k) => (
+                  <li key={sc.id} style={{ "--k": k } as CSSProperties}>
+                    <img src={sc.plate} alt={`${sc.year}: ${sc.title}`} loading="lazy" />
+                  </li>
+                ))}
+              </ul>
+              <blockquote className={s.heard}>
+                <p>“{family.line}”</p>
+              </blockquote>
+              <figcaption>
+                {familyBook?.name ?? "The sample"}, at{" "}
+                <Link href={`/family/${family.slug}/audio#t=${family.at}`}>
+                  {Math.floor(family.at / 60)}:{String(family.at % 60).padStart(2, "0")} in the recording
+                </Link>
+                . {family.label}.
+              </figcaption>
+            </figure>
+          )}
+        </section>
       </main>
 
       {/* ---------- Colophon ---------- */}
-      <footer className={s.footer}>
+      <footer className={`${s.sheet} ${s.footer}`}>
+        <Deckle shift={300} />
+        <div className={s.epiCol}>
         <blockquote className={s.epigraph}>
           <p>
             A biography is considered complete if it merely accounts for six or seven selves, whereas a person may well have as many
@@ -414,7 +567,10 @@ export default function Home() {
             Virginia Woolf, <cite>Orlando</cite> (1928)
           </footer>
         </blockquote>
+        {scraps[1] && <img className={`${s.scrap} ${s.scrapFoot}`} src={scraps[1].src} alt="" aria-hidden loading="lazy" />}
+        </div>
         <div className={s.colophon}>
+          <Fleuron className={s.colophonRule} />
           <h2>Colophon</h2>
           <p>
             <i>Lives in Motion</i> was made for the Meta Global AI Developer Hackathon, 2026. Research and fact-checks by Muse Spark with web
