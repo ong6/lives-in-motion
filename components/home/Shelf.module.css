@@ -282,7 +282,7 @@
   color: #231e17;
   transition: background-color 0.3s ease;
 }
-.ticketName { font: 400 clamp(11.5px, calc(var(--t) * 0.2), 14.5px)/1.1 var(--font-book); letter-spacing: -0.01em; text-wrap: balance; }
+.ticketName { font: 400 clamp(10px, calc(var(--t) * 0.19), 14px)/1.08 var(--font-book); letter-spacing: -0.02em; font-stretch: 90%; text-wrap: balance; }
 
 /* ---------- The bookplate beside a pulled book ---------- */
 .plate {
