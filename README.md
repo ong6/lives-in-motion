@@ -33,10 +33,11 @@ More in [`docs/shots/`](docs/shots/) (`pnpm shoot http://localhost:3000 docs/sho
 
 ```sh
 pnpm install
-cp .env.example .env    # MODEL_API_KEY: one key covers Muse Spark, Muse Image, SAM 3.1 and Muse Wonder
-pnpm dev                # shelf at /, a book at /jack-sim, the workbench at /create
+cp .env.example .env    # MODEL_API_KEY: one key covers Muse Spark, Muse Image, SAM 3.1, Muse Wonder and Muse Voice Transcribe
+pnpm dev                # shelf at /, a book at /jack-sim, the workbenches at /create and /family
 pnpm test               # schema, sources, eras, SAM decoding, budget guard, /create guard rails, subject screen, Wonder plans, cost of a life
 pnpm typecheck
+pnpm check              # typecheck, tests and a production build
 ```
 
 ## The book
@@ -49,7 +50,7 @@ scene's plate; when the page opens, its film plays through once (the camera and 
 Wonder directed) and its last frame holds while you read. Press **L** (or the Layers button) to
 take the plate apart into the Muse Image clean background and its SAM 3.1 cut-outs. Notes and
 picture credits close each book, and the last page closes the book, slides it out and opens the
-next life. Desktop only for now. The code is in `components/book/` and `components/StoryPlayer.tsx`.
+next life. Desktop only for now. The code is in `components/book/`.
 
 ## How a life is made
 
@@ -57,7 +58,7 @@ next life. Desktop only for now. The code is in `components/book/` and `componen
 name ─▶ screen ─▶ research ─▶ storyboard ─▶ illustrate ─▶ segment ─▶ films ─▶ direct
         Muse      Muse Spark    Muse Spark    Muse Image    SAM 3.1     local    Muse Wonder
         Spark     + web search  json_schema   era style,    cut-outs +  sharp +  plans each move,
-        (JSON)    cited facts   7 scenes      plate 1 as    Muse Image  ffmpeg   watches 6 frames,
+        + search  cited facts   7 scenes      plate 1 as    Muse Image  ffmpeg   watches 6 frames,
                                               reference     clean plate          revises; flags plates
                        verify: Muse Spark + web search re-checks every caption
 ```
@@ -161,8 +162,9 @@ Guard rails, because a public page that spends real money is a risk:
 - Photos ≤ 8 MB, JPEG, PNG or WebP checked by their bytes, re-encoded (EXIF and GPS dropped), and
   accepted only with the rights box ticked.
 
-Code: `pipeline/create/` (runner, guard rails, subject screen, job types), `app/api/create/`
-(routes, including Server-Sent Events) and `app/create/` with `components/create/` (the page).
+Code: `pipeline/create/` (runner, rehearsal, subject screen, job types) on the job runner and
+guard rails shared with family mode in `pipeline/jobs/`, `app/api/create/` (routes, including
+Server-Sent Events) and `app/create/` with `components/create/` (the page).
 
 ## Budget
 
@@ -179,7 +181,7 @@ prints the totals.
 | Muse Image | Scene plates, clean plates (edit), the frontispiece emblem, plate re-rolls | Era print styles with plate 1 as a style reference, and "remove this, change nothing else" edits |
 | SAM 3.1 | Scene cut-outs, portrait and emblem masks | Text-prompted segmentation ("globe", "person") that gives the layers and the pen-line masks |
 | Muse Wonder | Film director and critic, plate critic | Reads several images at once (plate, clean plate, cut-outs, a contact sheet of its own film) and answers in a strict schema |
-| Muse Voice Transcribe | Family mode | TODO (being built) |
+| Muse Voice Transcribe | Family mode: the recording, as timed turns with speaker labels | Turn-level timestamps, so every fact in a family book cites the second it was said; English, Malay, Mandarin and Tamil, code-switched |
 
 ## Built during the hackathon
 
@@ -250,11 +252,11 @@ person is generated.
 |---|---|
 | `stories/<slug>/story.json` | The life: scenes, captions, sources, layers, fact-check verdicts, `listed` |
 | `stories/<slug>/verify.json` | Muse Spark's fact-check of every caption, with cited URLs |
-| `app/` | Next.js pages: home and shelf, one book per life, `/create` and its API |
-| `components/` | The book, scene art, films, line drawings, the `/create` workbench |
+| `app/` | Next.js pages: home and shelf, one book per life, `/create`, `/family` and their APIs |
+| `components/` | The book, scene art, films, line drawings, the `/create` and `/family` workbenches |
 | `lib/schema.ts` | Story schema (zod), the contract between pipeline and site |
 | `lib/stories.ts` | `allStories()` (the shelf), `getStory()`, `readingOrder()` (drafts open by URL) |
-| `pipeline/` | Meta Model API client, budget guard, prompts, stages, SAM cut-outs, portraits, films, CLI |
+| `pipeline/` | Meta Model API client, budget guard, prompts, stages, SAM cut-outs, portraits, films (`pipeline/film/`), the `/create` and `/family` runners, CLIs |
 | `spend.jsonl` | Ledger of every paid Meta call |
 
 ## Licence
