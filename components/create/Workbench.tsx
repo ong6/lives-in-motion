@@ -2,14 +2,11 @@
 
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type FormEvent } from "react";
 import Link from "next/link";
-import { LineDrawing } from "@/components/shared/LineDrawing";
 import { Cover } from "@/components/book/Cover";
+import { FrontispieceSection, Log, Masthead, Meter, Plates, Problem, Steps, WhatYouGet, mins, usd, useJobStream, workbenchStyles as s, type StepInfo } from "@/components/shared/workbench";
 import type { CreateInfo, Job, StepId } from "@/pipeline/create/types";
-import type { Budget, JobScene } from "@/pipeline/jobs/types";
-import { explain } from "@/components/shared/explain";
-import s from "./create.module.css";
 
-const STEPS: { id: StepId; name: string; model: string; does: string }[] = [
+const STEPS: StepInfo<StepId>[] = [
   { id: "screen", name: "Subject check", model: "Muse Spark + web search", does: "confirms a real, documented Singaporean in 2+ sources; declines the rest" },
   { id: "research", name: "Research", model: "Muse Spark + web search", does: "finds dated facts, each with its sources" },
   { id: "storyboard", name: "Storyboard", model: "Muse Spark", does: "turns the facts into seven scenes" },
@@ -31,14 +28,10 @@ const EXAMPLES = [
   { name: "Lee Kong Chian", hint: "rubber industrialist and philanthropist, the Lee Foundation" },
 ];
 
-const MODEL_NAME: Record<string, string> = { spark: "Muse Spark", search: "Muse Spark search", image: "Muse Image", sam: "SAM 3.1", wonder: "Muse Wonder", manual: "Other" };
-
 /** A step an older job.json doesn't have yet. */
 const NO_STEP = { status: "skipped", usd: 0 } as const;
 const stepOf = (job: Job, id: StepId): Job["steps"][StepId] => job.steps[id] ?? NO_STEP;
 
-const usd = (v: number, digits = 2) => `$${v.toFixed(v > 0 && v < 0.01 ? 4 : digits)}`;
-const mins = (sec: number) => (sec < 90 ? `${Math.max(1, Math.round(sec / 10) * 10)} s` : `${Math.round(sec / 60)} min`);
 const host = (url: string) => {
   try {
     return new URL(url).hostname.replace(/^www\./, "");
@@ -73,37 +66,15 @@ function timeRange(info: CreateInfo) {
   return `${lo}–${hi} minutes`;
 }
 
-/** An error line in plain words; the raw text, if any, behind a disclosure. */
-function Problem({ raw, className }: { raw?: string | null; className?: string }) {
-  const e = explain(raw);
-  if (!e.text) return null;
-  return (
-    <span className={`${s.problem} ${className ?? ""}`}>
-      {e.text}
-      {e.detail && (
-        <details className={s.detail}>
-          <summary>Details</summary>
-          <code>{e.detail}</code>
-        </details>
-      )}
-    </span>
-  );
-}
-
 export function Workbench({ initial }: { initial: CreateInfo }) {
   const [info, setInfo] = useState(initial);
-  const [job, setJob] = useState<Job | null>(initial.job?.status === "running" ? initial.job : null);
-  const [budget, setBudget] = useState<Budget>(initial.budget);
+  const { job, setJob, budget, link, now, follow } = useJobStream<Job>("/api/create", initial.job, initial.budget);
   const [error, setError] = useState<string | null>(null);
   const [sending, setSending] = useState(false);
-  const [link, setLink] = useState<"live" | "reconnecting" | "closed">("closed");
-  // 0 until mounted: the server and the first client render must print the same clock.
-  const [now, setNow] = useState(0);
   const [preview, setPreview] = useState<string | null>(null);
   const [another, setAnother] = useState(false);
   const [name, setName] = useState("");
   const [hint, setHint] = useState("");
-  const es = useRef<EventSource | null>(null);
   const nameRef = useRef<HTMLInputElement>(null);
 
   const refreshInfo = useCallback(() => {
@@ -111,47 +82,6 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
       .then((r) => r.json())
       .then(setInfo, () => {});
   }, []);
-
-  const follow = useCallback((slug: string) => {
-    es.current?.close();
-    const src = new EventSource(`/api/create/${slug}/stream`);
-    es.current = src;
-    src.onopen = () => setLink("live");
-    src.onmessage = (m) => {
-      const d = JSON.parse(m.data) as { job: Job; budget: Budget };
-      setJob(d.job);
-      setBudget(d.budget);
-      setLink("live");
-      if (d.job.status !== "running") {
-        src.close();
-        setLink("closed");
-      }
-    };
-    // EventSource retries by itself; say so rather than going quiet.
-    src.onerror = () => setLink(src.readyState === EventSource.CLOSED ? "closed" : "reconnecting");
-  }, []);
-
-  // Reconnect after a refresh: ?job=<slug>, else the job running on the server.
-  useEffect(() => {
-    const slug = new URLSearchParams(location.search).get("job") ?? (initial.job?.status === "running" ? initial.job.slug : null);
-    if (!slug) return;
-    fetch(`/api/create/${slug}`)
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (!d) return;
-        setJob(d.job);
-        setBudget(d.budget);
-        if (d.job.status === "running") follow(slug);
-      });
-    return () => es.current?.close();
-  }, [follow, initial.job]);
-
-  useEffect(() => {
-    setNow(Date.now());
-    if (job?.status !== "running") return;
-    const t = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(t);
-  }, [job?.status]);
 
   // A finished life is on the shelf now: fetch the shelf again so its cover can be drawn.
   const finished = job && job.status !== "running";
@@ -197,7 +127,7 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
   if (!job || another)
     return (
       <div className={s.page}>
-        <Masthead />
+        <CreateMasthead />
         <div className={s.intake}>
           <form className={s.form} onSubmit={onSubmit}>
             <h1 className={s.formTitle}>Make a new life</h1>
@@ -313,7 +243,18 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
             <p className={s.hint}>A new life goes straight onto the shelf. Only real, documented Singaporeans are made: Muse Spark checks the name against the web first, and declines unverifiable or private people, minors, politicians, heads of state and lives defined by war or crime.</p>
           </form>
 
-          <WhatYouGet info={info} />
+          <WhatYouGet
+            lede="A book of seven illustrated scenes you read by scrolling, each painted in the print style of its decade, cut into layers that move, and footnoted with its sources."
+            sample={info.sample}
+            caption={info.sample && (
+              <>
+                The seven plates of <Link href={`/${info.sample.slug}`}>{info.sample.name}’s book</Link>, made this way.
+              </>
+            )}
+            steps={STEPS}
+            estimate={info.estimate}
+            foot="Plates, cut-outs and the frontispiece run side by side, so the whole is shorter than the sum."
+          />
         </div>
       </div>
     );
@@ -325,7 +266,7 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
 
   return (
     <div className={s.page}>
-      <Masthead />
+      <CreateMasthead />
       <div className={s.bench}>
         <aside className={s.ticket} aria-label="Order and progress">
           <div className={s.order}>
@@ -336,8 +277,12 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
             {job.hint && <p className={s.orderHint}>{job.hint}</p>}
           </div>
 
-          <Steps job={job} est={est} now={now} />
-          <Meter job={job} budget={budget} />
+          <Steps steps={STEPS} job={job} est={est} now={now} />
+          <Meter
+            job={job}
+            words={{ mock: "Would have cost", live: "This life so far", unit: "life" }}
+            note={`${job.mock ? "Rehearsal: nothing is charged. " : ""}Today’s new lives ${usd(budget.today)} of ${usd(budget.dailyCap)}; event budget ${usd(budget.spent)} of ${usd(budget.stop, 0)}.`}
+          />
 
           {!running && (
             <div className={s.ending} role="status">
@@ -371,120 +316,22 @@ export function Workbench({ initial }: { initial: CreateInfo }) {
         </main>
 
         <aside className={s.margin} aria-label="What the models are doing">
-          <Log job={job} />
+          <Log job={job} clock={clock} />
         </aside>
       </div>
     </div>
   );
 }
 
-function Masthead() {
+function CreateMasthead() {
   return (
-    <header className={s.masthead}>
-      <Link href="/" className={s.wordmark}>
-        Lives in Motion
+    <Masthead>
+      <Link href="/#shelf">The shelf</Link>
+      <Link href="/#making">How a page is made</Link>
+      <Link href="/create" aria-current="page">
+        Make a new life
       </Link>
-      <nav aria-label="Site">
-        <Link href="/#shelf">The shelf</Link>
-        <Link href="/#making">How a page is made</Link>
-        <Link href="/create" aria-current="page">
-          Make a new life
-        </Link>
-      </nav>
-    </header>
-  );
-}
-
-/** The empty page's other half: what a run makes, shown with a real one, and the steps it takes. */
-function WhatYouGet({ info }: { info: CreateInfo }) {
-  const sample = info.sample;
-  return (
-    <section className={s.promise} aria-labelledby="promise">
-      <h2 id="promise" className={s.promiseTitle}>
-        What you get
-      </h2>
-      <p className={s.promiseLede}>A book of seven illustrated scenes you read by scrolling, each painted in the print style of its decade, cut into layers that move, and footnoted with its sources.</p>
-      {sample && sample.plates.length > 0 && (
-        <figure className={s.contact}>
-          <div className={s.contactRow}>
-            {sample.plates.slice(0, 7).map((p) => (
-              <div key={p.src} className={s.contactPlate}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={`${p.year}: ${p.title}`} loading="lazy" />
-                <span>{p.year}</span>
-              </div>
-            ))}
-          </div>
-          <figcaption>
-            The seven plates of <Link href={`/${sample.slug}`}>{sample.name}’s book</Link>, made this way.
-          </figcaption>
-        </figure>
-      )}
-      <ol className={s.plan}>
-        {STEPS.map((st) => (
-          <li key={st.id}>
-            <span className={s.planName}>{st.name}</span>
-            <span className={s.planDoes}>
-              {st.does}
-              <span className={s.planModel}>{st.model}</span>
-            </span>
-            <span className={s.planTime}>~{mins(info.estimate[st.id])}</span>
-          </li>
-        ))}
-      </ol>
-      <p className={s.promiseFoot}>Plates, cut-outs and the frontispiece run side by side, so the whole is shorter than the sum.</p>
-    </section>
-  );
-}
-
-function Steps({ job, est, now }: { job: Job; est: CreateInfo["estimate"]; now: number }) {
-  return (
-    <ol className={s.steps}>
-      {STEPS.map((st) => {
-        const x = stepOf(job, st.id);
-        const took = x.startedAt ? ((x.endedAt ? Date.parse(x.endedAt) : now) - Date.parse(x.startedAt)) / 1000 : 0;
-        return (
-          <li key={st.id} className={s.step} data-status={x.status}>
-            <span className={s.stepMark} aria-hidden />
-            <span className={s.stepName}>{st.name}</span>
-            <span className={s.stepFig}>{x.status === "waiting" ? `~${mins(est[st.id])}` : x.status === "skipped" ? "skipped" : x.status === "declined" ? "declined" : mins(Math.max(1, took))}</span>
-            <span className={s.stepModel}>{st.model}</span>
-            <span className={s.stepCost}>{x.usd > 0 ? usd(x.usd, 3) : ""}</span>
-            {x.note && (x.status === "failed" || x.status === "declined" ? <Problem raw={x.note} className={s.stepErr} /> : <span className={s.stepNote}>{x.note}</span>)}
-          </li>
-        );
-      })}
-    </ol>
-  );
-}
-
-function Meter({ job, budget }: { job: Job; budget: Budget }) {
-  const pct = Math.min(100, (job.usd / job.ceiling) * 100);
-  const parts = Object.entries(job.spend).filter(([, v]) => (v ?? 0) > 0);
-  return (
-    <div className={s.meter}>
-      <div className={s.meterRow}>
-        <span>{job.mock ? "Would have cost" : "This life so far"}</span>
-        <strong>{usd(job.usd, 3)}</strong>
-      </div>
-      <div className={s.bar} role="meter" aria-valuemin={0} aria-valuemax={job.ceiling} aria-valuenow={job.usd} aria-label="Spend against this life's ceiling">
-        <span style={{ width: `${pct}%` }} />
-      </div>
-      <p className={s.meterNote}>of the {usd(job.ceiling)} ceiling for one life</p>
-      {parts.length > 0 && (
-        <dl className={s.split}>
-          {parts.map(([k, v]) => (
-            <div key={k}>
-              <dt>{MODEL_NAME[k] ?? k}</dt>
-              <dd>{usd(v ?? 0, 3)}</dd>
-            </div>
-          ))}
-        </dl>
-      )}
-      <p className={s.meterNote}>
-        {job.mock ? "Rehearsal: nothing is charged. " : ""}Today’s new lives {usd(budget.today)} of {usd(budget.dailyCap)}; event budget {usd(budget.spent)} of {usd(budget.stop, 0)}.
-      </p>
-    </div>
+    </Masthead>
   );
 }
 
@@ -609,46 +456,23 @@ function Proof({
         )}
       </section>
 
-      <section className={s.platesSec} aria-labelledby="plates">
-        <h3 id="plates" className={s.sectionTitle}>
-          Seven scenes <span>Muse Image paints, SAM 3.1 cuts out{job.status === "done" ? "; hover a plate to play its film" : ""}</span>
-        </h3>
-        <div className={s.plates}>
-          {(job.scenes.length ? job.scenes : Array.from({ length: 7 }, () => null)).map((sc, i) => (sc ? <Plate key={sc.id} scene={sc} n={i + 1} /> : <div key={i} className={s.slot} data-status="pending" />))}
-        </div>
-      </section>
+      <Plates job={job} />
 
       {job.scenes.some((x) => x.wonder) && <Directed job={job} />}
 
       {job.frontispiece && (
-        <section className={s.frontSec} aria-labelledby="front">
-          <h3 id="front" className={s.sectionTitle}>
-            Frontispiece{" "}
-            <span>
-              {job.frontispiece.kind === "emblem"
-                ? "an emblem by Muse Image, SAM 3.1 mask, traced in pen lines"
-                : job.frontispiece.credit
-                  ? "a credited portrait photo, SAM 3.1 person mask, traced in pen lines"
-                  : "your photo, SAM 3.1 person mask, traced in pen lines"}
-            </span>
-          </h3>
-          <div className={s.front}>
-            <figure className={s.frontFig}>
-              {job.frontispiece.image ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={job.frontispiece.image} alt={job.frontispiece.kind === "emblem" ? "The emblem Muse Image painted" : job.frontispiece.credit ? `Portrait photo of ${job.name}` : "The photo supplied"} />
-              ) : (
-                <div className={s.frontWait}>{job.steps.frontispiece.status === "failed" ? "No picture" : "Painting…"}</div>
-              )}
-              <figcaption>{job.frontispiece.credit ?? (job.frontispiece.kind === "photo" ? "Supplied by the reader" : "Muse Image")}</figcaption>
-            </figure>
-            <figure className={s.frontFig}>
-              {job.frontispiece.lines ? <LineDrawing src={job.frontispiece.lines} loop label={`${job.name}, frontispiece in pen strokes`} className={s.frontLines} /> : <div className={s.frontWait}>{job.steps.frontispiece.status === "failed" ? "Not traced" : "Tracing comes next"}</div>}
-              <figcaption>{job.frontispiece.strokes ? `${job.frontispiece.strokes.toLocaleString()} pen strokes` : "Pen lines"}</figcaption>
-            </figure>
-            {job.frontispiece.note && <Problem raw={job.frontispiece.note} className={job.steps.frontispiece.status === "failed" ? s.error : s.frontNote} />}
-          </div>
-        </section>
+        <FrontispieceSection
+          job={job}
+          kind={
+            job.frontispiece.kind === "emblem"
+              ? "an emblem by Muse Image, SAM 3.1 mask, traced in pen lines"
+              : job.frontispiece.credit
+                ? "a credited portrait photo, SAM 3.1 person mask, traced in pen lines"
+                : "your photo, SAM 3.1 person mask, traced in pen lines"
+          }
+          alt={job.frontispiece.kind === "emblem" ? "The emblem Muse Image painted" : job.frontispiece.credit ? `Portrait photo of ${job.name}` : "The photo supplied"}
+          caption={job.frontispiece.credit ?? (job.frontispiece.kind === "photo" ? "Supplied by the reader" : "Muse Image")}
+        />
       )}
       </>
       )}
@@ -689,13 +513,6 @@ function Bound({ job, book, sources, onAnother }: { job: Job; book?: NonNullable
     </header>
   );
 }
-
-const spendLine = (sc: JobScene) =>
-  [
-    sc.spend.image ? `Muse Image ${usd(sc.spend.image, 3)}` : null,
-    sc.spend.sam ? `SAM 3.1 ${usd(sc.spend.sam, 4)}${sc.cuts.length ? `: ${sc.cuts.map((c) => c.concept).join(", ")}` : ""}` : null,
-    sc.spend.wonder ? `Muse Wonder ${usd(sc.spend.wonder, 3)}` : null,
-  ].filter(Boolean) as string[];
 
 /** What the subject check found: its decision, the reason, and every source it cited. */
 function CheckFound({ check, ok }: { check: NonNullable<NonNullable<Job["screen"]>["check"]>; ok: boolean }) {
@@ -768,116 +585,5 @@ function Directed({ job }: { job: Job }) {
         })}
       </ol>
     </section>
-  );
-}
-
-function Plate({ scene, n }: { scene: JobScene; n: number }) {
-  const [hover, setHover] = useState(false);
-  const base = scene.background ?? scene.plate;
-  const status = scene.status;
-  return (
-    <figure className={s.slot} data-status={status} data-treatment={scene.treatment} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-      <div className={s.art}>
-        {base ? (
-          <>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img key={base} className={s.plateImg} src={base} alt={`${scene.year}: ${scene.title}`} />
-            {scene.background &&
-              scene.cuts.map((c) => (
-                // The cut-out sits on the clean background where SAM found it, lifted a little.
-                // eslint-disable-next-line @next/next/no-img-element
-                <img key={c.src} className={s.cut} src={c.src} alt="" style={{ left: `${c.x - c.w / 2}%`, bottom: `${100 - c.y}%`, width: `${c.w}%` }} />
-              ))}
-            {!scene.background &&
-              scene.cuts.map((c) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img key={c.src} className={`${s.cut} ${s.cutFound}`} src={c.src} alt="" style={{ left: `${c.x - c.w / 2}%`, bottom: `${100 - c.y}%`, width: `${c.w}%` }} />
-              ))}
-            {hover && scene.video && <video className={s.film} src={scene.video} autoPlay muted loop playsInline poster={scene.poster} />}
-          </>
-        ) : (
-          <div className={s.blank}>
-            <span className={s.blankYear}>{scene.year}</span>
-            <span className={s.blankState}>
-              {status === "painting" ? "Muse Image is painting" : status === "refused" ? "Declined" : status === "failed" ? "Failed" : "Waiting"}
-            </span>
-          </div>
-        )}
-        {status === "cutting" && <span className={s.scan} aria-hidden />}
-      </div>
-      <figcaption className={s.plateCap}>
-        <span className={s.plateNo}>{n}</span>
-        <span className={s.plateTitle}>
-          <span className={s.plateYear}>{scene.year}</span> {scene.title}
-        </span>
-        <span className={s.plateModels}>
-          {spendLine(scene).map((t) => (
-            <span key={t}>{t}</span>
-          ))}
-          {status === "cutting" && <span>SAM 3.1 cutting</span>}
-          {scene.video && <span>film</span>}
-          {scene.line && <span>pen line</span>}
-        </span>
-        {scene.note && (status === "refused" || status === "failed" ? <Problem raw={scene.note} className={s.plateErr} /> : <span className={s.plateNote}>{scene.note}</span>)}
-      </figcaption>
-    </figure>
-  );
-}
-
-const prettyModel = (id: string) => (id.startsWith("muse-spark") ? "Muse Spark" : id.startsWith("muse-image") ? "Muse Image" : id.startsWith("muse-wonder") ? "Muse Wonder" : id.startsWith("sam") ? "SAM 3.1" : id);
-
-function Log({ job }: { job: Job }) {
-  const box = useRef<HTMLOListElement>(null);
-  const [pinned, setPinned] = useState(true);
-  useEffect(() => {
-    if (pinned && box.current) box.current.scrollTop = box.current.scrollHeight;
-  }, [job.log.length, pinned]);
-  const calls = job.log.filter((l) => l.model).length;
-  return (
-    <>
-      <div className={s.logHead}>
-        <h2 className={s.marginTitle}>Press log</h2>
-        <span>{calls ? `${calls} model events` : "waiting for the first call"}</span>
-      </div>
-      <ol
-        className={s.log}
-        ref={box}
-        onScroll={(e) => {
-          const el = e.currentTarget;
-          setPinned(el.scrollHeight - el.scrollTop - el.clientHeight < 24);
-        }}
-        aria-live="polite"
-        aria-relevant="additions"
-      >
-        {job.log.map((l, i) => {
-          const who = [l.scene ? `Scene ${l.scene.slice(1)}` : "", l.model ? prettyModel(l.model) : ""].filter(Boolean).join(", ");
-          const bad = l.kind === "error" || l.kind === "refused";
-          return (
-            <li key={i} className={s.logLine} data-kind={l.kind}>
-              <span className={s.logAt}>{clock(job.startedAt, l.at)}</span>
-              <span className={s.logBody}>
-                {who && <span className={s.logWho}>{who}</span>}
-                {bad ? <Problem raw={l.message} /> : <span className={s.logMsg}>{l.message}</span>}
-              </span>
-              {l.url && /\.(webp|png|jpg)/.test(l.url) ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img className={s.logThumb} src={l.url} alt="" loading="lazy" />
-              ) : null}
-            </li>
-          );
-        })}
-      </ol>
-      {!pinned && (
-        <button
-          className={s.latest}
-          onClick={() => {
-            setPinned(true);
-            if (box.current) box.current.scrollTop = box.current.scrollHeight;
-          }}
-        >
-          Jump to latest
-        </button>
-      )}
-    </>
   );
 }

@@ -7,9 +7,9 @@
  */
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import s from "@/components/create/create.module.css";
+import { workbenchStyles as s } from "@/components/shared/workbench";
 import type { FamilyFact, FamilyTurn } from "@/pipeline/family/types";
-import { Masthead } from "./FamilyBench";
+import { FamilyMasthead } from "./FamilyBench";
 import { Privacy } from "./Privacy";
 import { Recording, clockOf, turnAt } from "./Recording";
 import f from "./family.module.css";
@@ -70,7 +70,7 @@ export function RecordView(p: RecordProps) {
   if (gone)
     return (
       <div className={s.page}>
-        <Masthead />
+        <FamilyMasthead />
         <div className={f.record}>
           <h1 className={f.recordName}>Deleted</h1>
           <p className={s.formLede}>{p.name}’s book, the recording, its transcript and every picture made from them have been removed from this server.</p>
@@ -83,7 +83,7 @@ export function RecordView(p: RecordProps) {
 
   return (
     <div className={s.page}>
-      <Masthead />
+      <FamilyMasthead />
       <div className={f.record}>
         <header className={f.recordHead}>
           <div>
