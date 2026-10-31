@@ -204,6 +204,8 @@ const sceneOf = (story: StoryT, id: string) => {
   if (!s) throw new Error(`${story.slug} has no scene ${id}`);
   return s;
 };
+/** The first scene with an illustration (a deep-edition book may open on a photograph). */
+const firstPlated = (story: StoryT) => (story.scenes.find((s) => s.treatment !== "photo") ?? story.scenes[0]).id;
 const ids = (story: StoryT, only?: string[]) => story.scenes.map((s) => s.id).filter((id) => !only || only.includes(id));
 
 /**
@@ -213,6 +215,8 @@ const ids = (story: StoryT, only?: string[]) => story.scenes.map((s) => s.id).fi
 export async function illustrateScene(slug: string, id: string, on: OnEvent = print, force = false): Promise<boolean> {
   const story = await loadStory(slug);
   const scene = sceneOf(story, id);
+  // A photo scene shows a real photograph, never a generated one.
+  if (scene.treatment === "photo") return true;
   const done = asset(slug, id, "plate.png");
   const web = asset(slug, id, "plate.webp");
   if (!force && existsSync(done.file)) {
@@ -221,8 +225,9 @@ export async function illustrateScene(slug: string, id: string, on: OnEvent = pr
     return true;
   }
   // The story's first plate is the style reference for the rest, so the series reads as one hand.
-  const first = asset(slug, story.scenes[0].id, "plate.png");
-  const refs = id !== story.scenes[0].id && existsSync(first.file) ? [await readFile(first.file)] : [];
+  const lead = firstPlated(story);
+  const first = asset(slug, lead, "plate.png");
+  const refs = id !== lead && existsSync(first.file) ? [await readFile(first.file)] : [];
   on({ stage: "illustrate", scene: id, kind: "info", model: MODELS.image, message: `painting ${scene.year}, ${eraFor(scene.year).label.toLowerCase()} style${refs.length ? ", plate 1 as reference" : ""}` });
   let png: Buffer;
   try {
@@ -243,10 +248,10 @@ export async function illustrateScene(slug: string, id: string, on: OnEvent = pr
 
 export async function illustrate(slug: string, { only, on = print, parallel = 1 }: StageOptions = {}) {
   const story = await loadStory(slug);
-  const todo = ids(story, only);
+  const todo = ids(story, only).filter((id) => sceneOf(story, id).treatment !== "photo");
   const force = Boolean(only);
   // Plate 1 first: it is the style reference for every other plate.
-  if (todo[0] === story.scenes[0].id) await illustrateScene(slug, todo.shift()!, on, force);
+  if (todo[0] === firstPlated(story)) await illustrateScene(slug, todo.shift()!, on, force);
   await pool(todo, parallel, (id) => illustrateScene(slug, id, on, force));
 }
 
@@ -254,6 +259,7 @@ export async function illustrate(slug: string, { only, on = print, parallel = 1 
 export async function segmentScene(slug: string, id: string, on: OnEvent = print, force = false) {
   const story = await loadStory(slug);
   const scene = sceneOf(story, id);
+  if (scene.treatment === "photo") return;
   const platePng = asset(slug, id, "plate.png").file;
   if (!existsSync(platePng)) {
     on({ stage: "segment", scene: id, kind: "warn", message: "no plate, so nothing to cut" });

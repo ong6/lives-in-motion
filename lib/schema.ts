@@ -43,19 +43,80 @@ export const Checked = z.object({
   sources: z.array(z.string()).default([]),
 });
 
-/** How a scene's art is presented; the page around it stays the same. */
-export const TREATMENTS = ["theatre", "archive", "line"] as const;
+/** How a scene's art is presented. A photo scene shows a real, openly licensed photograph. */
+export const TREATMENTS = ["theatre", "archive", "line", "photo"] as const;
+
+const words = (t: string) => t.trim().split(/\s+/).filter(Boolean).length;
+
+/** Who took a real photograph and under what licence; shown on its page and in the notes. */
+export const PhotoCredit = z.object({
+  artist: z.string().min(1),
+  license: z.string().min(1),
+  licenseUrl: z.string().url().nullable().optional(),
+  /** The file's page (Wikimedia Commons, Flickr). */
+  page: z.string().url(),
+});
+
+/**
+ * A real photograph on a deep-edition page, with SAM 3.1's mask of its subject and the pen trace
+ * drawn over it. `kind: "place"` photos (a building, an object, an event) carry a visible label so
+ * they are never read as the person.
+ */
+export const Photo = z.object({
+  src: z.string().min(1),
+  /** height / width */
+  aspect: z.number().positive(),
+  kind: z.enum(["person", "place"]),
+  /** What SAM 3.1 looked for ("person", "toilet"). */
+  concept: z.string().min(1),
+  /** The page's label for it, with its own year ("World Toilet Day at the UN, 2015"). */
+  label: z.string().min(1),
+  /** "Place", "Object", "Event": printed on a photo that does not show the person. */
+  tag: z.string().optional(),
+  year: z.string().min(1),
+  /** The subject's centre in the frame (fractions), so a cropped photo keeps it in view. */
+  focus: z.tuple([z.number(), z.number()]).optional(),
+  /** Small or poor originals are shown as a mounted print rather than full-bleed. */
+  mounted: z.boolean().optional(),
+  /** SAM 3.1's cut-out of the subject (the photo with the mask as alpha), and the pen trace (a line file). */
+  cutout: z.string().optional(),
+  trace: z.string().optional(),
+  credit: PhotoCredit,
+});
+
+/** A quotation used verbatim from the research, with where it was said. */
+export const Quote = z.object({
+  text: z.string().min(1),
+  speaker: z.string().min(1),
+  source: Source,
+});
 
 export const Scene = z.object({
   id: z.string().regex(/^s\d+$/),
   treatment: z.enum(TREATMENTS).default("theatre"),
   year: z.string().regex(/^\d{4}$/),
+  /** The year as printed when it is approximate ("1960s", "mid-1990s"); `year` still places it. */
+  when: z.string().optional(),
   title: z.string().min(1),
   caption: z
     .string()
     .min(1)
     .refine((c) => c.split(/\s+/).length <= 32, { message: "caption over 32 words" }),
-  /** Art direction for Muse Image. People only as silhouettes or from behind. */
+  /**
+   * Deep edition: the chapter told as a story by Muse Spark from the numbered facts. `body` opens
+   * on a concrete moment; `voice` is the pull-quote line; `turn` is the teaser at the foot of the
+   * page; `age` is the person's age at that moment; `quote` is the one quotation it uses, if any.
+   */
+  body: z
+    .string()
+    .refine((b) => words(b) <= 175, { message: "body over 175 words" })
+    .optional(),
+  voice: z.string().optional(),
+  turn: z.string().optional(),
+  age: z.number().int().min(0).max(130).optional(),
+  quote: Quote.optional(),
+  photo: Photo.optional(),
+  /** Art direction for Muse Image (or, for a photo scene, what the photo shows). People only as silhouettes or from behind. */
   visual: z.string().min(1),
   /** Objects SAM 3.1 cuts out of the plate so they can move on their own. */
   cut: z.array(z.string().min(1)).max(3).default([]),
@@ -84,7 +145,13 @@ export const Story = z.object({
    * (a /create draft awaiting `pnpm approve`, or a life withdrawn) while its URL still opens.
    */
   listed: z.boolean().optional(),
-  scenes: z.array(Scene).min(3).max(10),
+  /** "deep": twelve chapters told as a story, with real photographs among the plates. */
+  edition: z.literal("deep").optional(),
+  /** Where the sources disagreed, and the reading the book follows (printed in the notes). */
+  conflicts: z.array(z.object({ topic: z.string().min(1), choice: z.string().min(1) })).optional(),
+  /** Full-spread photographs between chapters, for pacing: shown after the scene `after`. */
+  breaks: z.array(z.object({ after: z.string().regex(/^s\d+$/), photo: Photo })).optional(),
+  scenes: z.array(Scene).min(3).max(14),
 });
 
 export type Source = z.infer<typeof Source>;
@@ -92,4 +159,6 @@ export type Checked = z.infer<typeof Checked>;
 export type Layer = z.infer<typeof Layer>;
 export type Scene = z.infer<typeof Scene>;
 export type Story = z.infer<typeof Story>;
+export type Photo = z.infer<typeof Photo>;
+export type Quote = z.infer<typeof Quote>;
 export type Overlay = (typeof OVERLAYS)[number];

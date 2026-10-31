@@ -28,7 +28,7 @@ describe("research", () => {
 
 describe("plate prompt", () => {
   it("carries the era's print style and forbids faces, flags and text", () => {
-    const scene = allStories()[0].scenes[3];
+    const scene = allStories()[0].scenes.find((s) => eraFor(s.year).id === "global-city")!;
     const p = platePrompt(scene, eraFor(scene.year));
     expect(p).toContain("risograph");
     expect(p).toContain("no faces");

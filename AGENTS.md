@@ -28,6 +28,7 @@ humans and judges; `DESIGN.md` is the design doc; this file is how to work in th
 | `pnpm typecheck` / `pnpm test` / `pnpm build` | The parts of `check` |
 | `pnpm shoot http://localhost:3100 <dir> [shot,shot]` | Screenshots (`scripts/shoot.ts`); compare before and after a UI change |
 | `pnpm make <slug> --stages …` | The stages for a life (`pipeline/cli.ts`); paid |
+| `pnpm make <slug> --deep [--stages …] [--scenes s3] [--force]` | The deep edition, every stage, resumable (`pipeline/deep/`); paid |
 | `pnpm video <slug> [--scenes s1] [--dry]` | Render films locally; free |
 | `pnpm wonder <slug> [--dry]` | Muse Wonder directs and critiques films; paid (`--dry` is free) |
 | `pnpm portrait <slug> [--sam]` | Trace a credited photo into a line drawing |
@@ -59,6 +60,14 @@ pipeline/            everything that makes a book (Node only)
   film/              the local film renderer: camera, matte, frame (compositor, ffmpeg),
                      layers, motion (Wonder plans: sanitize, fit), line, render
   video.ts           CLI over film/          wonder.ts  Muse Wonder director/critic + CLI
+  deep/              the deep edition (12 chapters, real photos among the plates):
+    index.ts         write → assemble → verify → fix → photos → frontispiece → illustrate →
+                     segment → line → films; makeDeep() runs them under one spend scope
+    check.ts         pure checks on Muse Spark's chapters (verbatim quotes, sources from fact
+                     numbers, word counts, praise and war/politics words, repetition, age)
+    prompts.ts       the writer's system prompt, schema and repair/verify prompts
+    config.ts        the editor's hand per life: photo labels and SAM concepts, banned photos
+                     and their replacement plates, art fixes, notes to Spark, breaks, frontispiece
   cli.ts, approve.ts CLIs
   jobs/              the job-runner framework both workbenches share
     runner.ts        createRunner: live state on globalThis, job file, batched updates,
@@ -75,7 +84,9 @@ app/                 routes: / (home), /[slug] (a book), /create, /family, /fami
   api/create, api/family   start (POST), info (GET), job (GET), stream (SSE), audio, delete
 components/
   book/              the reader: StoryPlayer (state), Book (leaves), pages, usePageInput,
-                     bookChange, paging, pagination, SceneArt, LayerStack, Direction, Cover, Page
+                     bookChange, paging, pagination (the spread plan, breaks included),
+                     SceneArt, PhotoArt (photo + SAM cut-out + pen trace, cropped alike),
+                     LayerStack, Direction, Cover, Page
   home/              shelf, hero plate, reveals, loop film
   create/, family/   the two workbenches (family also: Recorder, Recording, RecordView)
   shared/            workbench.tsx (Masthead, Steps, Meter, Plates, Log, …, useJobStream),
@@ -86,7 +97,9 @@ scripts/shoot.ts     screenshots          tests/   vitest, one file per area
 ## Data model
 
 - `stories/<slug>/story.json`: the life, validated by `Story` in `lib/schema.ts` (7 scenes from
-  the pipeline, 3–10 allowed). Every write goes through `edit()` in `pipeline/stages.ts`
+  the pipeline, 12 in a deep edition, 3–14 allowed). A deep edition (`edition: "deep"`) adds per
+  scene `body`, `voice`, `turn`, `age`, `when`, `quote` and, for `treatment: "photo"`, `photo`
+  (src, SAM cut-out, pen trace, label, tag, credit); per story `conflicts` and `breaks`. Every write goes through `edit()` in `pipeline/stages.ts`
   (serialised, atomic). `listed: false` keeps a life off the shelf; its URL still opens.
 - Beside it: `research.json` (cited facts), `research.raw.json` (the paid answer, re-parseable),
   `verify.json` (Muse Spark's caption fact-checks), `emblem.json`, `credit.json` (the
@@ -99,6 +112,11 @@ scripts/shoot.ts     screenshots          tests/   vitest, one file per area
   the frontispiece. Asset URLs carry `?v=<hash>` so a re-render busts caches.
 - A family book is unlisted, under an unguessable slug, and its sources point at
   `/family/<slug>/audio#t=<s>`; `lib/provenance.ts` reads that to tell it apart.
+- Deep edition outputs beside story.json: `written.json` (Muse Spark's chapters and any open
+  problems), `verify.json`, `source/photos/` (clean re-downloads of originals that were committed
+  truncated in `pipeline/photos/`; they win) and `source/frontis.*`. Photo assets go to
+  `public/stories/<slug>/<sN>/` (`photo.webp`, `mask.png`, `cutout.webp`, `trace.json`) and
+  `break-<n>/` for full-spread breaks.
 - `stories/*/deep/` and `pipeline/photos/` belong to a separate research agent: don't edit or commit them.
 
 ## Adding a model or a stage

@@ -115,8 +115,8 @@ export async function sparkSearch(prompt: string, opts: { context?: "low" | "med
 }
 
 /** Muse Spark structured output (Chat Completions, json_schema). */
-export async function sparkJson<T>(system: string, user: string, name: string, schema: object): Promise<T> {
-  const maxTokens = 16000;
+export async function sparkJson<T>(system: string, user: string, name: string, schema: object, opts: { maxTokens?: number; effort?: "low" | "medium" | "high" } = {}): Promise<T> {
+  const maxTokens = opts.maxTokens ?? 16000;
   const r = await guard(
     "spark",
     sparkWorst(system.length + user.length + JSON.stringify(schema).length, maxTokens),
@@ -124,6 +124,7 @@ export async function sparkJson<T>(system: string, user: string, name: string, s
       post("/chat/completions", {
         model: MODELS.spark,
         max_tokens: maxTokens,
+        ...(opts.effort ? { reasoning_effort: opts.effort } : {}),
         messages: [
           { role: "system", content: system },
           { role: "user", content: user },
@@ -133,7 +134,12 @@ export async function sparkJson<T>(system: string, user: string, name: string, s
     (r: any) => sparkCost(r.usage),
     name,
   );
-  return JSON.parse(r.choices[0].message.content) as T;
+  const msg = r.choices?.[0]?.message;
+  // Paid either way: say why there is no answer rather than parsing nothing.
+  if (!msg?.content) throw new Error(`Muse Spark returned no content for ${name} (finish_reason ${r.choices?.[0]?.finish_reason ?? "?"}${msg?.refusal ? `, refusal: ${String(msg.refusal).slice(0, 200)}` : ""}; usage ${JSON.stringify(r.usage ?? {})})`);
+  const value = JSON.parse(msg.content);
+  if (value == null) throw new Error(`Muse Spark answered ${name} with null (finish_reason ${r.choices?.[0]?.finish_reason ?? "?"}; usage ${JSON.stringify(r.usage ?? {})})`);
+  return value as T;
 }
 
 /** Muse Image bills per image returned, so a response with no image costs nothing. */
