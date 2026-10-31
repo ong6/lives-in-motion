@@ -268,6 +268,29 @@
 }
 .apart .aside { opacity: 1; translate: 0 0; pointer-events: auto; transition: opacity 0.7s ease calc(var(--done) + 0.2s), translate 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) calc(var(--done) + 0.2s); }
 
+/*
+ * A photograph taken apart: its sheets fill the photo's own frame (not the plate's square), and,
+ * since the photo is on the verso, the stack lifts toward the recto, which dims instead; the
+ * labels face out from each sheet's right corner and the card sits on the recto.
+ */
+.framed .stack { width: 100%; height: 100%; aspect-ratio: auto; }
+.mirror .veil { inset: 0 0 0 50%; }
+.mirror.apart .stack {
+  transform: translate(-50%, -50%) translate(90px, -150px) scale(var(--S)) rotateX(var(--A)) rotateZ(var(--B)) translateZ(var(--sink));
+}
+.mirror .sheetLabel {
+  left: 100%;
+  padding-right: 0;
+  padding-left: 46px;
+  justify-items: start;
+  text-align: left;
+  transform: rotateZ(calc(-1 * var(--B))) rotateX(calc(-1 * var(--A))) scale(calc(1 / var(--S))) translate(0, -50%);
+}
+.mirror .sheetLabel::after { right: auto; left: 6px; }
+.mirror .sheetLabel::before { right: auto; left: 0; }
+.mirror .aside { left: auto; top: auto; right: 56px; bottom: 70px; }
+.clear { background: transparent !important; }
+
 @media (prefers-reduced-motion: reduce) {
   .idle .box, .idle .layer { animation: none; translate: none; transition: none; }
   .stack, .sheet, .stackBox, .veil, .aside, .sheetLabel, .plane::before { transition: none !important; }

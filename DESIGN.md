@@ -101,6 +101,34 @@ interface agree.
 - **Recording.** `?record` on any URL (sticky for the tab; `?record=0` ends it) sets
   `data-recording` on `<html>`, hiding the Next dev badge and anything marked `data-record-hide`.
 
+## The deep edition
+
+Twelve chapters told as a story, with real photographs between the plates (`edition: "deep"`).
+
+- **Text page.** The year (or "c. 1963") and "aged 44", the chapter number, the title, a body of
+  90–150 words with a drop cap, and the voice line set large as a pull-quote (with its speaker
+  and source when it is the chapter's quotation). Muse Spark's check mark sits under it. Sized so
+  150 words fit at full size; the `--fit` guard is a backstop.
+- **The turn.** The last line on the page you turn (the text recto of a photo chapter, or under
+  the plate of a plate chapter), with a rule above and an arrow: one sentence that pulls into the
+  next chapter.
+- **Photo chapter.** The photo is on the verso, the text on the recto. A good, large photo bleeds
+  off the page, cropped around SAM 3.1's mask of its subject; a small or poor one is mounted as a
+  print with a mat and a slight tilt. On the entrance the pen trace draws over a pale wash of the
+  photo, the photo develops underneath, and the trace settles to a light overlay. Its label and
+  credit (artist, licence, source; "Pen trace shared under CC BY-SA" where the photo is
+  share-alike) sit on the page; a photo that is not the person carries a boxed **Place** /
+  **Object** tag.
+- **Breaks.** An occasional photograph printed across both pages between two chapters, for
+  pacing; both halves draw nearer together as the leaf lands.
+- **Layers on a photo.** The photo's place empties to paper; the photo, SAM 3.1's cut-out and the
+  pen trace lift off toward the recto (which dims), labels facing out from the right corners, and
+  a card on the recto says where the photo came from and what each sheet is.
+- **Notes.** Two spreads: the chapters' sources and checks, then *Where the sources differ* (the
+  reading the book follows); every photograph with its page, maker and licence, then *On the
+  pictures*.
+- **Rail.** Twelve years; a dot marks the chapters that open on a photograph.
+
 ## Motion rules
 
 - The story book: see *The book stage* above.

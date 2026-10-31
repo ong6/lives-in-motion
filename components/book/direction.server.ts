@@ -29,7 +29,7 @@ export function directionsFor(slug: string): Record<string, Direction> {
   if (!/^[a-z0-9-]+$/.test(slug)) return {};
   const life = read(join(PUBLIC, slug, "wonder.json"));
   const ids = new Set<string>(Object.keys(life?.scenes ?? {}));
-  for (let i = 1; i <= 10; i++) if (existsSync(join(PUBLIC, slug, `s${i}`, "motion.json"))) ids.add(`s${i}`);
+  for (let i = 1; i <= 14; i++) if (existsSync(join(PUBLIC, slug, `s${i}`, "motion.json"))) ids.add(`s${i}`);
   const out: Record<string, Direction> = {};
   for (const id of ids) {
     const m = read(join(PUBLIC, slug, id, "motion.json"));

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useRef, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { Story } from "@/lib/schema";
@@ -9,7 +9,7 @@ import { Book } from "./Book";
 import { SEQ, TITLE_ENTRANCE, bookChangeAt } from "./bookChange";
 import type { Direction } from "./Direction";
 import { bookStyles as b } from "./Page";
-import { FIRST_CHAPTER, TITLE, eraAt, plan } from "./pagination";
+import { TITLE, eraAt, plan } from "./pagination";
 import { RIFFLE_MAX, RIFFLE_MS, TURN_MS, clamp, handoff, playAt, turnEase, wheel, type Plays } from "./paging";
 import { usePageInput } from "./usePageInput";
 import { easeInOut } from "./useTimeline";
@@ -32,6 +32,8 @@ export interface Life {
   credit: string;
   /** The frontispiece is traced from a hand-curated, credited photograph (not one the life's maker supplied, or an emblem). */
   curated: boolean;
+  /** What the frontispiece shows when it is not the person ("the Sound Blaster 1.0 card (1989)"). */
+  depicts?: string;
   /** 0-based position in the reading order (neighbouring books alternate their cloth). */
   index: number;
   /** What Muse Wonder did for each scene's film, by scene id. */
@@ -41,10 +43,10 @@ export interface Life {
 export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?: Life; arrive?: boolean }) {
   const router = useRouter();
   const { story } = life;
-  const n = story.scenes.length;
-  const { NOTES, CLOSED } = plan(n);
+  const P = useMemo(() => plan(story), [story]);
+  const { END, CLOSED } = P;
   /** The last spread a reader can turn to; for every life but the last, turning past the notes changes books. */
-  const lastSpread = next ? NOTES : CLOSED;
+  const lastSpread = next ? END : CLOSED;
 
   const [pos, setPos] = useState(arrive ? TITLE : 0);
   /** The spread being turned to (the ribbon and the desk follow it at once) and the one last at rest. */
@@ -76,10 +78,12 @@ export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?:
       if (h?.slug === story.slug && !reduced.current) setPlays({ [TITLE]: playAt(h.start) });
       history.replaceState(null, "", `${location.pathname}#p=${TITLE}`);
     } else {
-      // Back, forward and refresh reopen the book at the spread it was left at.
+      // Back, forward and refresh reopen the book at the spread it was left at; #c=N opens chapter N.
       const m = /p=(\d+)/.exec(location.hash);
-      if (m) {
-        const sp = clamp(Number(m[1]), 0, lastSpread);
+      const c = /c=(\d+)/.exec(location.hash);
+      const want = m ? Number(m[1]) : c ? P.spreadOf[Number(c[1]) - 1] : undefined;
+      if (want != null) {
+        const sp = clamp(want, 0, lastSpread);
         setPos(sp);
         setTarget(sp);
         setSettled(sp);
@@ -194,8 +198,8 @@ export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?:
   }, [goTo]);
 
   useEffect(() => {
-    if (next && settled >= NOTES - 1) router.prefetch(`/${next.story.slug}?from=turn`);
-  }, [settled, NOTES, next, router]);
+    if (next && settled >= END - 1) router.prefetch(`/${next.story.slug}?from=turn`);
+  }, [settled, END, next, router]);
 
   // ---------- Input ----------
 
@@ -203,10 +207,10 @@ export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?:
   const toggleLayers = useCallback((open?: boolean) => setLayersOpen((o) => open ?? !o), []);
   const hasPlate = useCallback(
     (spread: number) => {
-      const j = spread - FIRST_CHAPTER;
-      return j >= 0 && j < n && Boolean(story.scenes[j].plate);
+      const sc = P.kinds[spread] === "chapter" ? story.scenes[P.scene[spread]] : undefined;
+      return Boolean(sc?.plate || sc?.photo);
     },
-    [n, story.scenes],
+    [P, story.scenes],
   );
   usePageInput({ forward, backward, goTo, run, setPos, toggleLayers, lastSpread, hasNext: Boolean(next), settled: settledRef, busy, changing, hasPlate, anim, stage });
 
@@ -226,9 +230,9 @@ export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?:
 
   const inSeq = seqT != null && next != null;
   const change = inSeq ? bookChangeAt(seqT) : null;
-  const era = change?.nextEra && next ? eraFor(next.story.scenes[0].year) : eraAt(story, target);
-  const cur = target - FIRST_CHAPTER;
-  const rail = !inSeq && cur >= 0 && cur < n ? cur : null;
+  const era = change?.nextEra && next ? eraFor(next.story.scenes[0].year) : eraAt(story, target, P);
+  const cur = P.scene[target] ?? -1;
+  const rail = !inSeq && cur >= 0 ? cur : null;
   // The next book's title spread plays its entrance from the moment its cover starts to open.
   const nextPlay = useRef<Plays>({});
   if (!change?.opening) nextPlay.current = {};
@@ -269,7 +273,7 @@ export function StoryPlayer({ life, next, arrive = false }: { life: Life; next?:
             Scroll, or press →, to open the book
           </p>
           {next && (
-            <p className={`${s.cue} ${s.onward}`} data-show={(settled === NOTES && !inSeq) || undefined}>
+            <p className={`${s.cue} ${s.onward}`} data-show={(settled === END && !inSeq) || undefined}>
               Turn the page, or{" "}
               <button type="button" onClick={changeBooks}>
                 next on the shelf: {next.story.name}

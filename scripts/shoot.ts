@@ -7,7 +7,8 @@
  * or click a button, and wait before the picture is taken.
  */
 import { chromium, type Page } from "playwright-core";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readFile } from "node:fs/promises";
+import { plan } from "../components/book/pagination";
 
 const base = process.argv[2] ?? "http://localhost:3000";
 const out = process.argv[3] ?? "docs/shots";
@@ -65,9 +66,32 @@ const SHOTS: Shot[] = [
   },
 ];
 
+/**
+ * `book:<slug>` as the shot list: every spread of that life's book, named by spread and kind
+ * (chapter spreads add the chapter's treatment), plus the Layers view on its first photo and plate.
+ */
+async function bookShots(slug: string): Promise<Shot[]> {
+  const story = JSON.parse(await readFile(`stories/${slug}/story.json`, "utf8"));
+  const p = plan(story);
+  const shots: Shot[] = [];
+  p.kinds.forEach((kind, sp) => {
+    if (kind === "cover" || kind === "endpapers" || kind === "endpapersBack" || kind === "closed") return;
+    const sc = p.scene[sp] >= 0 && kind === "chapter" ? story.scenes[p.scene[sp]] : undefined;
+    const name = `${slug}-${String(sp).padStart(2, "0")}-${kind}${sc ? `-${sc.treatment}` : ""}`;
+    shots.push({ name, path: `/${slug}#p=${sp}`, wait: 5000 });
+  });
+  for (const t of ["photo", "theatre"]) {
+    const j = story.scenes.findIndex((s: { treatment: string; plate?: string; photo?: unknown }) => s.treatment === t && (s.plate || s.photo));
+    if (j >= 0) shots.push({ name: `${slug}-layers-${t}`, path: `/${slug}#p=${p.spreadOf[j]}`, wait: 5000, act: async (pg) => (await pg.keyboard.press("l"), await pg.waitForTimeout(3200)) });
+  }
+  return shots;
+}
+
 await mkdir(out, { recursive: true });
 const browser = await chromium.launch({ channel: "chrome" });
-const only = process.argv[4]?.split(",");
+const book = process.argv[4]?.startsWith("book:") ? process.argv[4].slice(5) : undefined;
+if (book) SHOTS.splice(0, SHOTS.length, ...(await bookShots(book)));
+const only = book ? undefined : process.argv[4]?.split(",");
 for (const shot of SHOTS) {
   if (only && !only.includes(shot.name)) continue;
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });

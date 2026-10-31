@@ -36,6 +36,7 @@ export function LineDrawing({
   label,
   className,
   fallback = null,
+  viewBox,
 }: {
   /** A line file; a life made on /create may not have one yet. */
   src?: string;
@@ -45,6 +46,8 @@ export function LineDrawing({
   className?: string;
   /** Shown instead when there is no line file or it fails to load. */
   fallback?: ReactNode;
+  /** Show only this part of the drawing (in its 1000-wide units), filling the box: a trace laid over a cropped photo. */
+  viewBox?: string;
 }) {
   const svg = useRef<SVGSVGElement>(null);
   const vivus = useRef<{ setFrameProgress(p: number): unknown; destroy(): void } | null>(null);
@@ -129,8 +132,8 @@ export function LineDrawing({
         key={src}
         ref={svg}
         style={{ ...box, opacity: 1 - reveal * 0.55, transition: loop ? "opacity 1.6s ease" : undefined }}
-        viewBox={`0 0 ${U} ${Math.round((data?.aspect ?? 1) * U)}`}
-        preserveAspectRatio="xMidYMid meet"
+        viewBox={viewBox ?? `0 0 ${U} ${Math.round((data?.aspect ?? 1) * U)}`}
+        preserveAspectRatio={viewBox ? "xMidYMid slice" : "xMidYMid meet"}
         role="img"
         aria-label={label}
         fill="none"

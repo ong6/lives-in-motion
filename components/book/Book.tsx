@@ -6,8 +6,8 @@ import { Cover, clothFor } from "./Cover";
 import { DirectionCard } from "./Direction";
 import { LayerStack } from "./LayerStack";
 import { Endpaper, Page, bookStyles as b } from "./Page";
-import { BackCover, ChapterText, Credits, Frontispiece, Notes, ScenePlate, TitlePage, technique } from "./pages";
-import { FIRST_CHAPTER, TITLE, pagesFor, plan, roman } from "./pagination";
+import { BackCover, BreakHalf, ChapterText, Conflicts, Credits, Frontispiece, Notes, PhotoCard, PhotoPage, Photographs, ScenePlate, TitlePage, Turn, technique } from "./pages";
+import { TITLE, pagesOf, plan, rectoFolio, roman, versoFolio } from "./pagination";
 import { clamp, type Plays } from "./paging";
 import type { Life } from "./StoryPlayer";
 import s from "./StoryPlayer.module.css";
@@ -48,30 +48,20 @@ export function Book({
 }) {
   const { story, index } = life;
   const scenes = story.scenes;
-  const n = scenes.length;
-  const { kinds, NOTES, CLOSED } = plan(n);
+  const P = plan(story);
+  const { kinds, NOTES, END, CLOSED } = P;
   const leaves = kinds.length - 1;
   const backLeaf = leaves - 1;
 
   /** How far leaf k has turned, 0 (lying right) to 1 (lying left). */
-  const turns = Array.from({ length: leaves }, (_, k) => (closing != null && k >= NOTES ? closing : clamp(pos - k)));
+  const turns = Array.from({ length: leaves }, (_, k) => (closing != null && k >= END ? closing : clamp(pos - k)));
   const open = turns[0];
   const shut = turns[backLeaf];
   const closed = open === 0;
 
   // This book's own folios: the title page is page 1, so the frontispiece and title spread is at 0.
-  const folio = (offset: number) => offset;
-  const lastPage = pagesFor(n);
-  const folioOf = (i: number) =>
-    ({
-      cover: 0,
-      endpapers: 0,
-      title: 0,
-      chapter: 2 + 2 * (i - FIRST_CHAPTER),
-      notes: 2 * n + 2,
-      endpapersBack: lastPage,
-      closed: lastPage,
-    })[kinds[i]];
+  const lastPage = pagesOf(P);
+  const folioOf = (i: number) => (i <= TITLE ? 0 : i > END ? lastPage : versoFolio(i));
   const at = Math.floor(clamp(pos, 0, CLOSED));
   const read = clamp((folioOf(at) + (folioOf(Math.min(CLOSED, at + 1)) - folioOf(at)) * (pos - at)) / lastPage);
 
@@ -79,58 +69,125 @@ export function Book({
   const first = eraFor(scenes[0].year);
   const playOf = (spread: number) => plays[spread]?.start ?? null;
   /** A face playing its spread's entrance: the class starts the CSS choreography, delayed to its start time. */
-  const faceProps = (spread: number, style?: CSSProperties) => {
+  const faceProps = (spread: number, style?: CSSProperties, extra = "") => {
     const p = plays[spread];
     return {
-      className: p ? s.play : "",
+      className: `${p ? s.play : ""} ${extra}`,
       style: (p ? { ...style, ["--delay" as string]: `${p.delay}ms` } : style) as CSSProperties,
     };
   };
-  const near = (j: number) => Math.abs(FIRST_CHAPTER + j - pos) < 1.6 || plays[FIRST_CHAPTER + j] != null;
+  const near = (sp: number) => Math.abs(sp - pos) < 1.6 || plays[sp] != null;
+  const shown = (sp: number) => Math.abs(sp - pos) < 1;
+  const deep = story.edition === "deep";
+  const toNotes = () => onGo(NOTES);
 
-  const plateFace = (j: number) => {
+  const layersButton = (sp: number, light = false) =>
+    onLayers && (
+      <button type="button" className={`${s.layersBtn} ${light ? s.layersLight : ""}`} aria-pressed={layersAt === sp} onClick={onLayers} title="Take the picture apart (L)">
+        {layersAt === sp ? "Put it back together" : "Layers"}
+      </button>
+    );
+
+  /** A plate chapter's recto: the print in its plate mark, its caption, and the turn at the foot. */
+  const plateFace = (sp: number) => {
+    const j = P.scene[sp];
     const sc = scenes[j];
-    const sp = FIRST_CHAPTER + j;
-    const shows = turns[sp - 1] > 0 && turns[sp] < 0.5;
     return (
-      <Page key="f" side="recto" head={sc.title} folio={folio(3 + 2 * j)} {...faceProps(sp, eraVars(eraFor(sc.year)) as CSSProperties)}>
-        <figure className={s.plateFig}>
+      <Page key="f" side="recto" head={sc.title} folio={rectoFolio(sp)} {...faceProps(sp, eraVars(eraFor(sc.year)) as CSSProperties)}>
+        <figure className={`${s.plateFig} ${sc.turn ? s.withTurn : ""}`}>
           <div className={s.plateMark}>
-            <div className={s.plate} data-layers={layersAt === sp || undefined}>{near(j) && <ScenePlate scene={sc} start={playOf(sp)} shown={shows} layers={layersAt === sp} />}</div>
+            <div className={s.plate} data-layers={layersAt === sp || undefined}>
+              {near(sp) && <ScenePlate scene={sc} start={playOf(sp)} shown={shown(sp)} layers={layersAt === sp} />}
+            </div>
           </div>
           <figcaption>
             <span>
               <span className={s.plateNo}>Plate {roman(j + 1)}</span>
-              {sc.plate
-                ? `${sc.year}, in the manner of a ${technique(sc.year)}. Painted with Muse Image.`
-                : `${sc.year}. The illustration is still being made.`}
+              {sc.plate ? `${sc.when ?? sc.year}, in the manner of a ${technique(sc.year)}. Painted with Muse Image.` : `${sc.year}. The illustration is still being made.`}
             </span>
-            {sc.plate && onLayers && (
-              <button type="button" className={s.layersBtn} aria-pressed={layersAt === sp} onClick={onLayers} title="Take the plate apart (L)">
-                {layersAt === sp ? "Put it back together" : "Layers"}
-              </button>
-            )}
+            {sc.plate && layersButton(sp)}
           </figcaption>
+          {sc.turn && <Turn text={sc.turn} />}
         </figure>
       </Page>
     );
   };
 
-  const chapterFace = (j: number) => {
+  /** A photo chapter's verso: the real photograph, its pen trace drawing over it as the page lands. */
+  const photoFace = (sp: number) => {
+    const j = P.scene[sp];
     const sc = scenes[j];
-    const e = eraFor(sc.year);
     return (
-      <Page key="b" side="verso" head={story.name} folio={folio(2 + 2 * j)} {...faceProps(FIRST_CHAPTER + j, eraVars(e) as CSSProperties)}>
-        <ChapterText scene={sc} j={j} era={e} onNote={() => onGo(NOTES)} />
+      <Page key="b" side="verso" folio={sc.photo?.mounted ? versoFolio(sp) : undefined} {...faceProps(sp, eraVars(eraFor(sc.year)) as CSSProperties, sc.photo?.mounted ? "" : s.bleed)}>
+        {sc.photo && <PhotoPage scene={sc} start={playOf(sp)} near={near(sp)} layers={layersAt === sp} button={layersButton(sp, !sc.photo.mounted)} />}
       </Page>
     );
   };
 
-  const creditsFace = (
-    <Page key="f" side="recto" head="Notes" folio={folio(2 * n + 3)} {...faceProps(NOTES, eraVars(first) as CSSProperties)}>
+  const textFace = (sp: number, side: "verso" | "recto") => {
+    const j = P.scene[sp];
+    const sc = scenes[j];
+    const e = eraFor(sc.year);
+    return (
+      <Page key={side === "recto" ? "f" : "b"} side={side} head={side === "verso" ? story.name : sc.title} folio={side === "verso" ? versoFolio(sp) : rectoFolio(sp)} {...faceProps(sp, eraVars(e) as CSSProperties)}>
+        <ChapterText scene={sc} j={j} era={e} onNote={toNotes} turn={side === "recto"} />
+      </Page>
+    );
+  };
+
+  /** One half of a photograph printed across the spread. */
+  const breakFace = (sp: number, side: "verso" | "recto") => {
+    const b = story.breaks![P.brk[sp]];
+    const e = eraFor(scenes[P.scene[sp]].year);
+    return (
+      <Page key={side === "recto" ? "f" : "b"} side={side} {...faceProps(sp, eraVars(e) as CSSProperties, s.bleed)}>
+        {near(sp) && <BreakHalf photo={b.photo} side={side} />}
+      </Page>
+    );
+  };
+
+  const versoOf = (sp: number): ReactNode => {
+    const kind = kinds[sp];
+    if (kind === "title")
+      return (
+        <Page key="b" side="verso" {...faceProps(TITLE)}>
+          <Frontispiece name={story.name} portrait={life.portrait} credit={life.credit} depicts={life.depicts} plate={scenes.find((x) => x.plate)?.plate} start={playOf(TITLE)} />
+        </Page>
+      );
+    if (kind === "chapter") return scenes[P.scene[sp]].treatment === "photo" ? photoFace(sp) : textFace(sp, "verso");
+    if (kind === "break") return breakFace(sp, "verso");
+    if (kind === "notes" || kind === "notes2")
+      return (
+        <Page key="b" side="verso" head={story.name} folio={versoFolio(sp)} {...faceProps(sp, eraVars(first) as CSSProperties)}>
+          {kind === "notes" ? <Notes story={story} folioOf={(j) => versoFolio(P.spreadOf[j])} /> : <Photographs story={story} folioOf={(j) => versoFolio(P.spreadOf[j])} breakFolio={(i) => versoFolio(P.brk.indexOf(i))} />}
+        </Page>
+      );
+    return (
+      <Page key="b" side="verso">
+        <Endpaper years={years} />
+      </Page>
+    );
+  };
+
+  const rectoOf = (sp: number): ReactNode => {
+    const kind = kinds[sp];
+    if (kind === "title")
+      return (
+        <Page key="f" side="recto" {...faceProps(TITLE)}>
+          <TitlePage chapters={scenes.length} name={story.name} lifespan={life.lifespan} tagline={story.tagline} main={main} />
+        </Page>
+      );
+    if (kind === "chapter") return scenes[P.scene[sp]].treatment === "photo" ? textFace(sp, "recto") : plateFace(sp);
+    if (kind === "break") return breakFace(sp, "recto");
+    const credits = (
       <Credits story={story} credit={life.credit} curated={life.curated} directed={Object.keys(life.directions ?? {}).length > 0} last={last} />
-    </Page>
-  );
+    );
+    return (
+      <Page key="f" side="recto" head="Notes" folio={rectoFolio(sp)} {...faceProps(sp, eraVars(first) as CSSProperties)}>
+        {kind === "notes" && deep ? <Conflicts story={story} /> : credits}
+      </Page>
+    );
+  };
 
   /** Front and back face of leaf k. */
   const faces = (k: number): [ReactNode, ReactNode] => {
@@ -155,32 +212,9 @@ export function Book({
         <Page key="f" side="recto">
           <Endpaper years={years} />
         </Page>,
-        <Page key="b" side="verso" {...faceProps(TITLE)}>
-          <Frontispiece name={story.name} portrait={life.portrait} credit={life.credit} plate={scenes[0].plate} start={playOf(TITLE)} />
-        </Page>,
+        versoOf(TITLE),
       ];
-    if (k === TITLE)
-      return [
-        <Page key="f" side="recto" {...faceProps(TITLE)}>
-          <TitlePage chapters={n} name={story.name} lifespan={life.lifespan} tagline={story.tagline} main={main} />
-        </Page>,
-        chapterFace(0),
-      ];
-    if (k < NOTES - 1) return [plateFace(k - FIRST_CHAPTER), chapterFace(k - FIRST_CHAPTER + 1)];
-    if (k === NOTES - 1)
-      return [
-        plateFace(n - 1),
-        <Page key="b" side="verso" head={story.name} folio={folio(2 * n + 2)} {...faceProps(NOTES, eraVars(first) as CSSProperties)}>
-          <Notes story={story} folio={folio} />
-        </Page>,
-      ];
-    if (k === NOTES)
-      return [
-        creditsFace,
-        <Page key="b" side="verso">
-          <Endpaper years={years} />
-        </Page>,
-      ];
+    if (k < backLeaf) return [rectoOf(k), versoOf(k + 1)];
     // The back board: its pastedown, then the back cover once it has closed over the book.
     return [
       <div key="f" className={`${s.pastedown} ${s.pastedownBack}`}>
@@ -197,7 +231,7 @@ export function Book({
   // The plate last taken apart: its stack stays mounted while it lays itself back down, but goes at once if the page turns.
   const stackAt = useRef<number | null>(null);
   if (layersAt != null) stackAt.current = layersAt;
-  const stackScene = stackAt.current != null ? scenes[stackAt.current - FIRST_CHAPTER] : undefined;
+  const stackScene = stackAt.current != null && kinds[stackAt.current] === "chapter" ? scenes[P.scene[stackAt.current]] : undefined;
   const stackStill = stackAt.current != null && Math.abs(pos - stackAt.current) < 0.001 && closing == null;
   const stackDir = stackScene && life.directions?.[stackScene.id];
 
@@ -273,12 +307,12 @@ export function Book({
         );
       })}
 
-      {main && stackScene?.plate && stackStill && (
+      {main && (stackScene?.plate || stackScene?.photo) && stackStill && (
         <LayerStack
           key={stackScene.id}
           scene={stackScene}
           open={layersAt === stackAt.current}
-          aside={stackDir && <DirectionCard dir={stackDir} plate={stackScene.plate} />}
+          aside={stackScene.photo ? <PhotoCard photo={stackScene.photo} /> : stackDir && stackScene.plate && <DirectionCard dir={stackDir} plate={stackScene.plate} />}
         />
       )}
 
@@ -289,13 +323,14 @@ export function Book({
             <button
               key={sc.id}
               className={i === rail ? s.on : ""}
-              onClick={() => onGo(FIRST_CHAPTER + i)}
+              onClick={() => onGo(P.spreadOf[i])}
               aria-current={i === rail ? "page" : undefined}
               aria-label={`Chapter ${roman(i + 1)}, ${sc.year}: ${sc.title}`}
               title={sc.title}
               tabIndex={rail == null ? -1 : undefined}
             >
               {sc.year}
+              {sc.treatment === "photo" && <span className={s.railPhoto} aria-hidden />}
             </button>
           ))}
         </nav>

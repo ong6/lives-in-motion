@@ -4,6 +4,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type CSSProperties, type 
 import type { Scene } from "@/lib/schema";
 import { LineDrawing } from "../shared/LineDrawing";
 import { Overlay } from "./Overlay";
+import { PhotoFrame } from "./PhotoArt";
 import { place } from "./SceneArt";
 import s from "./SceneArt.module.css";
 
@@ -55,17 +56,32 @@ export function LayerStack({ scene, open, aside }: { scene: Scene; open: boolean
     let raf = requestAnimationFrame(() => (raf = requestAnimationFrame(() => setApart(true))));
     return () => cancelAnimationFrame(raf);
   }, [open, mounted]);
-  if (!mounted || !scene.plate) return null;
+  if (!mounted || !(scene.plate || scene.photo)) return null;
 
   const cuts = scene.layers.filter((l) => l.src).sort((a, b) => a.depth - b.depth);
   const drawn = scene.layers.filter((l) => l.overlay);
   type Sheet = { key: string; name: string; by: string; body: ReactNode; plane?: boolean };
-  const sheets: Sheet[] = [
+  // A photograph on the verso: the real photo, SAM 3.1's mask of its subject, and the pen trace,
+  // cropped exactly as on the page. The stack lifts toward the recto, which dims instead.
+  const photo = scene.treatment === "photo" ? scene.photo : undefined;
+  const box = rect ? rect.height / rect.width : (photo?.aspect ?? 1);
+  const photoSheets: Sheet[] = photo
+    ? [
+        { key: "photo", name: "Photograph", by: `${photo.credit.artist}, ${photo.credit.license}`, body: <PhotoFrame photo={photo} boxAspect={box} show={["photo"]} /> },
+        ...(photo.cutout
+          ? [{ key: "mask", name: photo.concept, by: "Masked by SAM 3.1", plane: true, body: <PhotoFrame photo={photo} boxAspect={box} show={["cutout"]} className={s.clear} /> }]
+          : []),
+        ...(photo.trace
+          ? [{ key: "trace", name: "Pen trace", by: "Traced with linedraw", plane: true, body: <PhotoFrame photo={photo} boxAspect={box} show={["trace"]} settled={false} className={s.clear} /> }]
+          : []),
+      ]
+    : [];
+  const sheets: Sheet[] = photo ? photoSheets : [
     {
       key: "bg",
       name: scene.background ? "Clean plate" : "Plate",
       by: scene.background ? "Cleared by Muse Image" : "Painted by Muse Image",
-      body: <img className={s.sheetFill} src={scene.background ?? scene.plate} alt="" />,
+      body: <img className={s.sheetFill} src={scene.background ?? scene.plate!} alt="" />,
     },
     ...cuts.map((l) => ({
       key: l.id,
@@ -104,15 +120,16 @@ export function LayerStack({ scene, open, aside }: { scene: Scene; open: boolean
   const n = sheets.length;
   const gap = n > 1 ? Math.min(GAP_MAX, SPREAD / (n - 1)) : 0;
   const vars = {
-    ["--S" as string]: POSE.scale,
+    // A photo page is larger than a plate: it comes apart a little smaller.
+    ["--S" as string]: photo ? POSE.scale * 0.78 : POSE.scale,
     ["--A" as string]: `${POSE.tiltX}deg`,
-    ["--B" as string]: `${POSE.turnZ}deg`,
+    ["--B" as string]: `${photo ? -POSE.turnZ : POSE.turnZ}deg`,
     ["--sink" as string]: `${(-(n - 1) * gap) / 2}px`,
     ["--done" as string]: `${LIFT_AT + (n - 1) * LIFT_EACH}ms`,
   } as CSSProperties;
 
   return (
-    <div ref={root} className={`${s.stackView} ${apart ? s.apart : ""}`} style={vars} aria-hidden={!open}>
+    <div ref={root} className={`${s.stackView} ${apart ? s.apart : ""} ${photo ? `${s.framed} ${s.mirror}` : ""}`} style={vars} aria-hidden={!open}>
       <div className={s.veil} />
       {rect && (
         <div className={s.stackBox} style={{ left: rect.left, top: rect.top, width: rect.width, height: rect.height }}>

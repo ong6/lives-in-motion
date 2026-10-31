@@ -6,6 +6,8 @@ interface Credit {
   page: string;
   license: string;
   artist: string;
+  /** When the frontispiece is not the person: what it shows ("his statue at Hwa Chong Institution"). */
+  depicts?: string;
 }
 
 /** Hand-curated photo credits for the original lives. */
@@ -30,8 +32,11 @@ export function portraitCredit(slug: string): string {
   const c = credits[slug];
   if (!c) return generatedCredit(slug);
   const terms = c.license.includes("SA") ? ` Drawing shared under ${c.license}.` : "";
-  return `Traced from a photo by ${c.artist} (${c.license}).${terms}`;
+  return `Traced from a photo${c.depicts ? ` of ${c.depicts}` : ""} by ${c.artist} (${c.license}).${terms}`;
 }
+
+/** What a curated frontispiece shows when it is not the person, if anything. */
+export const portraitDepicts = (slug: string): string | undefined => credits[slug]?.depicts;
 
 /**
  * Whether the frontispiece is traced from a hand-curated, credited photograph. A life made on
