@@ -16,7 +16,7 @@ function contrast(a: string, b: string) {
 }
 
 describe("stories", () => {
-  it("open the shelf in gallery order, with Lee Kuan Yew withdrawn", () => {
+  it("open the shelf in gallery order", () => {
     expect(stories.slice(0, 3).map((s) => s.slug)).toEqual(["jack-sim", "joseph-schooling", "tan-howe-liang"]);
   });
   for (const s of stories) {

@@ -17,9 +17,6 @@ On the shelf:
 | Joseph Schooling (b. 1995) | Hand-curated from cited sources; every caption checked by Muse Spark | Muse Image + SAM 3.1, films directed by Muse Wonder |
 | Tan Howe Liang (1933–2024) | Researched and storyboarded by Muse Spark on `/create`; checked by Muse Spark | Muse Image + SAM 3.1, films directed by Muse Wonder |
 
-Lee Kuan Yew's book is withdrawn from the shelf (`"listed": false`). Its files are kept and the
-withdrawal is reversible (`pnpm approve lee-kuan-yew`).
-
 | | |
 |---|---|
 | ![Jack Sim, 2001: the plate Muse Image re-rolled after Muse Wonder flagged it](docs/shots/book-jack-sim-2001.jpg) | ![Layers: the clean plate and SAM 3.1 cut-outs, with Muse Wonder's direction and score](docs/shots/layers-jack-sim-2001.jpg) |
@@ -191,7 +188,7 @@ it.
 - **First commit:** `f8d2754`, 2026-10-30 00:13 JST (2026-10-29 15:13 UTC). The full timeline is
   in `git log --reverse`.
 - **First paid Meta call:** 2026-10-30 01:25 UTC (`spend.jsonl`, line 1).
-- **Hand-curated text:** the first commit's lives (Jack Sim, Joseph Schooling, Lee Kuan Yew) were
+- **Hand-curated text:** the first commit's lives (Jack Sim, Joseph Schooling and a third, since removed) were
   written from cited sources (NLB Infopedia, the Straits Times, the UN, Wikipedia) before any Meta
   call. Their captions have since been fact-checked by Muse Spark. Tan Howe Liang's text is
   entirely model-made.
@@ -213,7 +210,7 @@ What each Meta model made, counted from the files and the ledger (2026-10-30):
 | Muse Wonder (plate critic) | Plate defects flagged while critiquing; judging the re-rolled 2001 plate (6/10 before, 9/10 after) | 1 plate re-rolled, 4 judgements |
 
 Muse Wonder made 146 calls for $5.23 in all (44 director, 98 critic, 4 plate judge), over two
-rounds of direction. The 4 lives include Lee Kuan Yew, who is withdrawn. Made locally with no
+rounds of direction. The 4 lives include one since removed from the repo. Made locally with no
 model: 28 films (sharp + ffmpeg), 8 pen-line scene drawings and 4 frontispiece line drawings
 (linedraw).
 
@@ -233,7 +230,6 @@ shows the live total.
 | Fonts: Archivo, Instrument Serif, Newsreader, IBM Plex Mono | SIL OFL 1.1 | `next/font/google` |
 | Jack Sim photo, by Clorox Toilet Products | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0) | [Commons](https://commons.wikimedia.org/wiki/File:Jack_Sim_(WTO,_2010)_-_2.jpg) |
 | Joseph Schooling photo, by Oleg Bkhambri (Voltmetro) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons](https://commons.wikimedia.org/wiki/File:Joseph_Schooling_Kazan_2015.jpg). The traced drawing, its mask and its WebP are shared under CC BY-SA 4.0 too. |
-| Lee Kuan Yew photo, by the Australian News and Information Bureau | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Lee_Kuan_Yew_at_the_1969_Five_Power_Defence_Conference_(5).jpg) (life withdrawn) |
 
 The photo credits are also in `pipeline/portraits/credits.json` and in each book's picture
 credits. Figures in the plates are silhouettes or seen from behind, so no likeness of a real

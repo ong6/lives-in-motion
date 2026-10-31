@@ -6,14 +6,14 @@ describe("listed lives", () => {
   it("keeps unlisted lives off the shelf and out of the reading order", () => {
     const shelf = allStories();
     expect(shelf.every(isListed)).toBe(true);
-    expect(shelf.map((s) => s.slug)).not.toContain("lee-kuan-yew");
-    expect(everyStory().map((s) => s.slug)).toContain("lee-kuan-yew");
+    expect(shelf.map((s) => s.slug)).not.toContain("ah-ma-sample");
+    expect(everyStory().map((s) => s.slug)).toContain("ah-ma-sample");
   });
   it("still opens an unlisted life by its URL, alone after the shelf", () => {
-    expect(getStory("lee-kuan-yew")?.listed).toBe(false);
-    const o = readingOrder("lee-kuan-yew")!;
+    expect(getStory("ah-ma-sample")?.listed).toBe(false);
+    const o = readingOrder("ah-ma-sample")!;
     expect(o.index).toBe(allStories().length);
-    expect(o.stories[o.index].slug).toBe("lee-kuan-yew");
+    expect(o.stories[o.index].slug).toBe("ah-ma-sample");
     expect(readingOrder("jack-sim")!.stories).toEqual(allStories());
     expect(readingOrder("no-such-life")).toBeUndefined();
     expect(getStory("../etc")).toBeUndefined();
