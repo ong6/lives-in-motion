@@ -1,0 +1,127 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T01:59:54.895Z",
+  "usd": 0.0574,
+  "rationale": "A quiet beginning before lessons: a Reveal opens tight on the broom and the woman's back, then pulls out to discover the whole classroom she serves but does not yet belong to, while both layers settle slowly together.",
+  "plan": {
+    "focusX": 0.6,
+    "focusY": 0.58,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.35,
+        "panX": 0.07,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.15,
+        "panX": 0.02,
+        "panY": 0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "linear"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.65,
+        "driftX": 0,
+        "driftY": 0.02,
+        "scale": 0.98,
+        "enter": "settle",
+        "enterAt": 0,
+        "enterFor": 0.5
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": 0,
+        "driftY": 0.02,
+        "scale": 0.98,
+        "enter": "settle",
+        "enterAt": 0,
+        "enterFor": 0.5
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "A quiet beginning before lessons: a Reveal opens tight on the broom and the woman's back, then pulls out to discover the whole classroom she serves but does not yet belong to, while both layers settle slowly together."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "A purposeful pull-back that opens tight on the woman's back and broom and settles on the full classroom, expressing her service at its margins; the woman and broom stay coherent together, nothing clips awkwardly, and both the opening and final full-plate frames read well. Dust is a fitting, subtle ambient for a swept morning room and the engraved print style is preserved.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "A purposeful pull-back that opens tight on the woman's back and broom and settles on the full classroom, expressing her service at its margins; the woman and broom stay coherent together, nothing clips awkwardly, and both the opening and final full-plate frames read well. Dust is a fitting, subtle ambient for a swept morning room and the engraved print style is preserved.",
+      "filmIssues": [],
+      "fixes": [
+        "cut-1.enterFor 0.850 → 0.500",
+        "cut-2.enterFor 0.850 → 0.500"
+      ],
+      "plan": {
+        "focusX": 0.6,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.35,
+            "panX": 0.07,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.15,
+            "panX": 0.02,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.65,
+            "driftX": 0,
+            "driftY": 0.02,
+            "scale": 0.98,
+            "enter": "settle",
+            "enterAt": 0,
+            "enterFor": 0.5
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0.02,
+            "scale": 0.98,
+            "enter": "settle",
+            "enterAt": 0,
+            "enterFor": 0.5
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A quiet beginning before lessons: a Reveal opens tight on the broom and the woman's back, then pulls out to discover the whole classroom she serves but does not yet belong to, while both layers settle slowly together."
+      }
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:06:42.297Z",
+  "usd": 0.1562,
+  "rationale": "Bolder reveal matching the story: open genuinely tight on the man seen from behind holding the sheet to the light, let man and sheet rise together as one (identical settings keep the shared-box cut-outs locked, no tearing), then pull back decisively to disclose the rows of rubber sheets, drifting smoke, river and stilt smoke-house for the final dwell. Haze echoes the smoke-house smoke without obsc",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.64,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2137499999999999,
+        "panX": 0.0225,
+        "panY": 0.028125,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.10125,
+        "panX": 0.01125,
+        "panY": 0.0140625,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "linear"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.95,
+        "driftX": 0,
+        "driftY": -0.0309375,
+        "scale": 1.03375,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.95,
+        "driftX": 0,
+        "driftY": -0.0309375,
+        "scale": 1.03375,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "haze",
+    "rationale": "Bolder reveal matching the story: open genuinely tight on the man seen from behind holding the sheet to the light, let man and sheet rise together as one (identical settings keep the shared-box cut-outs locked, no tearing), then pull back decisively to disclose the rows of rubber sheets, drifting smoke, river and stilt smoke-house for the final dwell. Haze echoes the smoke-house smoke without obsc"
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Coherent and publishable in technique, but the intended tight-to-wide reveal is too timid to earn a high score — the opening already shows the whole scene.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Technically clean but dramatically inert: a barely perceptible pull-back that never expresses the lift-and-inspect action or reveals the wider smoke-house scene.",
+      "filmIssues": [
+        "The pull-back is too timid: across all six frames the framing barely changes, reading as a plain centred push-in in reverse rather than a purposeful reveal.",
+        "The man lifting the sheet does not visibly lift — his driftY of about -0.02 is cancelled by the camera pull-back, so the inspection gesture at the heart of the scene is lost.",
+        "cut-1 and cut-2 share the identical box and are given identical settings, so no parallax separates the man/sheet from the drying rows; the scene stays flat.",
+        "First frame is not a distinct tight opening on the man and held sheet, and the last frame arrives with no sense of disclosure of house, river and rows."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-2 16% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0.016875,
+            "panY": 0.03375,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.0084375,
+            "panY": 0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.019687500000000004,
+            "scale": 1.0225,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": -0.019687500000000004,
+            "scale": 1.0225,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "haze",
+        "rationale": "A quiet beginning of work and inspection — the camera reveals the scene by opening tight on the man lifting the rubber sheet to the light, then travels out to disclose the rows of sheets, smoke, river and stilt smoke-house around him, while the man and sheet lift together as one."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Coherent and publishable in technique, but the intended tight-to-wide reveal is too timid to earn a high score — the opening already shows the whole scene.",
+      "filmIssues": [
+        "The pull-back is legible but timid: at t=0 the zoom is only about 1.21, so the stilt smoke-house, river and both rows of rubber sheets are already fully visible; there is no real reveal as the camera falls back to 1.0.",
+        "Because the opening is not genuinely tight on the man and the sheet he is holding to the light, the first frame is essentially the same wide plate as the final frame, only slightly cropped, rather than a distinct opening picture.",
+        "The final frame is a good dwell picture — full rows, river and smoke-house are readable — but it is reached by a small, generic widening rather than a purposeful disclosure of the workplace around the man.",
+        "No tearing, doubled edges, halo or ghosting is visible: cut-1 and cut-2 share the same box and were given identical depth, drift and scale, so the man and the lifted sheet stay locked together throughout.",
+        "No layer clips the frame edge awkwardly, the haze ambient is fitting and subtle for a smoke-house, and the sepia hand-coloured engraving style is preserved."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-2 19% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.64,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0.0225,
+            "panY": 0.028125,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.01125,
+            "panY": 0.0140625,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.95,
+            "driftX": 0,
+            "driftY": -0.0309375,
+            "scale": 1.03375,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": 0,
+            "driftY": -0.0309375,
+            "scale": 1.03375,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "haze",
+        "rationale": "Bolder reveal matching the story: open genuinely tight on the man seen from behind holding the sheet to the light, let man and sheet rise together as one (identical settings keep the shared-box cut-outs locked, no tearing), then pull back decisively to disclose the rows of rubber sheets, drifting smoke, river and stilt smoke-house for the final dwell. Haze echoes the smoke-house smoke without obsc"
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Do not publish as-is: the film is coherent and the ending frame works, but the clamped pull-back is barely perceptible and no better than a plain centred zoom, so the promised reveal of the Muar smoke-house never really happens.",
+      "filmIssues": [
+        "The pull-back is damped and timid: although the rationale promises 1.45 to 1.0, the rendered camera only moves from about 1.19 to 1.0, so across the six frames the composition barely widens and reads as a plain, slow zoom rather than a decisive reveal.",
+        "The intended story — tight on the man lifting a sheet to the light, then disclosing the rows of rubber sheets, river and stilt smoke-house — is only weakly visible; the smoke-house and sheet rows are already legible in frame 1 and gain little new information by frame 6.",
+        "cut-1 'man' and cut-2 'rubber sheets' have the identical box, so they are effectively the same man-and-held-sheet cut-out duplicated. Locking them to identical depth, drift and scale correctly prevents tearing or doubled edges, but it also means there is no real parallax separation between foreground worker and the drying rows.",
+        "No tearing, ghosting or halo is visible and no layer clips the frame edge awkwardly, and the final full-plate frame is a good dwell picture, but the first frame is neither the promised tight opening nor materially different from the last."
+      ],
+      "fixes": [
+        "move damped to 42% (cut-2 22% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.67,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.18984375,
+            "panX": 0,
+            "panY": 0.012656249999999999,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0928125,
+            "panX": 0,
+            "panY": 0.0063281249999999995,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.95,
+            "driftX": 0,
+            "driftY": -0.0084375,
+            "scale": 1.0084375,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": 0,
+            "driftY": -0.0084375,
+            "scale": 1.0084375,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "haze",
+        "rationale": "Make the reveal decisive: open truly tight, focused on the man from behind and the sheet he lifts to the light at zoom 1.45, then pull back steadily through 1.22 to the full 1.0 plate, disclosing the rows of rubber sheets, drifting smoke, river and stilt smoke-house for the final dwell. cut-1 and cut-2 keep identical depth, drift and scale so the shared-box man and sheet rise slightly together as "
+      }
+    }
+  ]
+}

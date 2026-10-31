@@ -1,0 +1,110 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:06:35.324Z",
+  "usd": 0.0628,
+  "rationale": "A quiet beginning of freedom to paint: a Reveal opens tight on the woman at her canvas then travels out and across the Paris studio as she settles low into her work, discovering the casts, skylight, easel rows and Montparnasse rooftops around her.",
+  "plan": {
+    "focusX": 0.47,
+    "focusY": 0.58,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.38,
+        "panX": -0.03,
+        "panY": 0.04,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.17,
+        "panX": 0.01,
+        "panY": 0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0.05,
+        "panY": -0.02,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.9,
+        "driftX": -0.01,
+        "driftY": 0.025,
+        "scale": 0.97,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A quiet beginning of freedom to paint: a Reveal opens tight on the woman at her canvas then travels out and across the Paris studio as she settles low into her work, discovering the casts, skylight, easel rows and Montparnasse rooftops around her."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publish: a clear pull-back reveal that is distinctly better than a plain centred push-in, opening on the painter and resolving on the full studio she is free to work in.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publish: a clear pull-back reveal that is distinctly better than a plain centred push-in, opening on the painter and resolving on the full studio she is free to work in.",
+      "filmIssues": [
+        "Effective pull-back reveal: the film opens tight on the woman from behind at her canvas and steadily widens to discover the full Paris studio — skylight, plaster casts, stove, easel rows and Montparnasse rooftops — which directly expresses the scene's new freedom to paint. Movement is visible and purposeful in every interval of the contact sheet, with no stall.",
+        "Subject coherence is good throughout: the woman stays intact with no tearing, doubled edges, halos or ghosting, and her brush/hand relationship to the canvas remains believable as she settles slightly. The rows of easels stay together and read as one receding studio row.",
+        "First frame is a strong opening picture centred on the painter; last frame is the best dwell image, a balanced wide view of the whole studio. No layer clips the frame edge awkwardly, and the warm light-sweep is fitting and subtle for the hand-coloured print style, which is preserved."
+      ],
+      "fixes": [
+        "unknown layer cut-2 dropped"
+      ],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": -0.03,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.17,
+            "panX": 0.01,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.05,
+            "panY": -0.02,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.01,
+            "driftY": 0.025,
+            "scale": 0.97,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet beginning of freedom to paint: a Reveal opens tight on the woman at her canvas then travels out and across the Paris studio as she settles low into her work, discovering the casts, skylight, easel rows and Montparnasse rooftops around her."
+      }
+    }
+  ]
+}

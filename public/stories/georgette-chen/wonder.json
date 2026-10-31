@@ -1,0 +1,85 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-31T02:10:05.773Z",
+  "usd": 0.4757,
+  "passMark": 8,
+  "scenes": {
+    "s3": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "Publish: a clear pull-back reveal that is distinctly better than a plain centred push-in, opening on the painter and resolving on the full studio she is free to work in.",
+      "rationale": "A quiet beginning of freedom to paint: a Reveal opens tight on the woman at her canvas then travels out and across the Paris studio as she settles low into her work, discovering the casts, skylight, easel rows and Montparnasse rooftops around her.",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.0628,
+      "seconds": 33,
+      "filmIssues": [
+        "Effective pull-back reveal: the film opens tight on the woman from behind at her canvas and steadily widens to discover the full Paris studio — skylight, plaster casts, stove, easel rows and Montparnasse rooftops — which directly expresses the scene's new freedom to paint. Movement is visible and purposeful in every interval of the contact sheet, with no stall.",
+        "Subject coherence is good throughout: the woman stays intact with no tearing, doubled edges, halos or ghosting, and her brush/hand relationship to the canvas remains believable as she settles slightly. The rows of easels stay together and read as one receding studio row.",
+        "First frame is a strong opening picture centred on the painter; last frame is the best dwell image, a balanced wide view of the whole studio. No layer clips the frame edge awkwardly, and the warm light-sweep is fitting and subtle for the hand-coloured print style, which is preserved."
+      ],
+      "plateDefects": [],
+      "video": "/stories/georgette-chen/s3/scene.mp4?v=b49185a2",
+      "poster": "/stories/georgette-chen/s3/scene.jpg?v=b49185a2"
+    },
+    "s6": {
+      "status": "kept-fixed-move",
+      "score": 4,
+      "ok": false,
+      "passed": false,
+      "verdict": "Do not publish: the story move is sound, but the easel/painter separation and lost canvas are immediately visible.",
+      "rationale": "A safer but still purposeful reveal: open moderately tight on the open-doored Fiat, then pull back and pan gently right across the road to the full Provence view with the painter at her easel. Keeping the easel at minimum depth with no drift or scale keeps it locked to the woman painted in the background, avoiding the tearing and ghosting, while the car retains modest parallax. The clip ends on th",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1671,
+      "seconds": 87,
+      "filmIssues": [
+        "The easel cut-out tears away from the woman, who remains in the background plate: across all six frames the canvas is effectively lost and the easel reads as a broken, floating tripod/sticks beside her hand, with a visible ghost/painted-over area where the canvas should be.",
+        "Because the easel and painter belong together, their separation breaks subject coherence on every frame; the woman appears to paint on empty air.",
+        "The intended pull-back from the Fiat to the full Provence view is legible and the final full view is a good holding frame, but the damaged easel makes it worse than a plain centred push-in on the intact plate.",
+        "The opening at zoom 1.18 is acceptably tight on the car, though the final dwell frame is stronger than the first; light-sweep is fitting and subtle for noon Provence and the print style is retained."
+      ],
+      "plateDefects": [],
+      "note": "best round scored 4, no better than a plain push-in"
+    },
+    "s8": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "Do not publish: the story idea is right, but visible ghosting, a missing foreground at the opening and a timid damped finish keep it below the publishable threshold.",
+      "rationale": "An arrival of excited discovery: the camera opens tight on the woman with her sketchbook and reveals outward across the waterfront, the stilt huts scaling in early as the cause of her 'My Tahiti' shout, until the whole Penang scene and foreground durian are discovered.",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1756,
+      "seconds": 85,
+      "filmIssues": [
+        "The pull-back reveal is a suitable idea for an arrival and discovery, but the opening frame is not publishable as the page-opening picture: at t=0 the camera is too tight, the foreground durian/board are missing or displaced, and the woman's legs dissolve into a painted-over splash/ghost where a layer has moved off its background.",
+        "cut-1's scale-in entrance leaves the right-hand huts pale, grey and semi-transparent at t=0.2-0.4 rather than reading as solid printed cut-outs; it looks like a fading ghost, not a purposeful entrance.",
+        "The durian appears abruptly after the first frame instead of being present in a coherent foreground throughout, breaking the foreground/background relationship.",
+        "By t=0.6-1 the frames are almost identical to the original plate, so the dwell picture is good, but the move is largely a timid, damped pull-back once the faulty entrances finish; the excitement of the reveal is undermined by the incoherent start and does not clearly outperform a clean centred move enough to publish."
+      ],
+      "plateDefects": [],
+      "video": "/stories/georgette-chen/s8/scene.mp4?v=b694889a",
+      "poster": "/stories/georgette-chen/s8/scene.jpg?v=b694889a"
+    },
+    "s10": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "The pull-back clearly serves the scene: it opens tight on the silhouetted woman at the lamp-lit desk before dawn, then steadily reveals the easels, dining table and orderly studio around her, ending on the full plate as a calm picture to dwell on. The woman and desk stay coherent and together with no visible tearing, doubled edges, halo or ghosting, no layer is awkwardly pushed out of frame, and the warm light-sweep fits the dawn/lamp mood while keeping the 1950s lithograph print character. The plate itself shows the woman correctly from behind as a silhouette, with no stray text, anachronism or mangled anatomy.",
+      "rationale": "A quiet beginning before dawn: a reveal opens tight on the woman at her lit desk and slowly travels out as she settles, discovering the whole clean, orderly studio around her.",
+      "ambient": "light-sweep",
+      "rounds": 1,
+      "usd": 0.0702,
+      "seconds": 38,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/georgette-chen/s10/scene.mp4?v=b882a29a",
+      "poster": "/stories/georgette-chen/s10/scene.jpg?v=b882a29a"
+    }
+  }
+}

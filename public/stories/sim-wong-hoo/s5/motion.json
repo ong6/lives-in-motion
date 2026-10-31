@@ -1,0 +1,188 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:05:58.686Z",
+  "usd": 0.1206,
+  "rationale": "Keep the story — start tight on the open computer and pull back to reveal the whole cramped shop — but make it bolder and cleaner: a larger 1.45 to 1.0 pull-back with no layer entrances, and both cut-outs locked at the same depth with no independent drift or scale so the figures and the computer they lean over move as one group and cannot tear, separate, or ghost over the background. First frame i",
+  "plan": {
+    "focusX": 0.47,
+    "focusY": 0.68,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.45,
+        "panX": 0.04,
+        "panY": 0.08,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.22,
+        "panX": 0.02,
+        "panY": 0.04,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.8,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.8,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Keep the story — start tight on the open computer and pull back to reveal the whole cramped shop — but make it bolder and cleaner: a larger 1.45 to 1.0 pull-back with no layer entrances, and both cut-outs locked at the same depth with no independent drift or scale so the figures and the computer they lean over move as one group and cannot tear, separate, or ghost over the background. First frame i"
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "The pull-back clearly serves the story: it opens tight on the open computer and the two figures bent over it, then reveals the whole crowded 440-square-foot shop for the final dwell frame. Movement is visible and purposeful across all frames, the figures and computer remain locked together with no tearing, ghosting, doubled edges or awkward layer clipping, and the halftone-shimmer suits the silkscreen print style. Both the opening and final compositions read well. The plate shows no stray text, facial detail, anachronism or mangled subject.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A sensible pull-back reveal for the tiny shop, undermined by the two figures splitting apart and a settling entrance that makes the opening unstable — lock the layers together and let the camera alone do the reveal.",
+      "filmIssues": [
+        "The pull-back idea is right — tight on the circuit board, then out to the whole 440 sq ft shop — and the widening is visible across the sheet, but the move does not hold the subjects together.",
+        "cut-1 is described as 'two figures', yet its box (left 0.493) only covers the right-hand figure; the left-hand figure stays with the background. As the camera pulls back and cut-1 parallaxes and settles, the two heads visibly drift apart and the pair separates — in t=0 they lean in together, by t=1 there is a clear gap and the left figure sits lower against the shelves.",
+        "Both layers use a 'settle' entrance at t=0 for 0.35 on top of the camera pull-back, so the figures and computer sink/shrink in the opening third while the camera is also moving. The start therefore never reads as a stable opening picture, and the right figure/computer edge slides over the painted-over background, giving a faint doubled/ghost edge around the figure's shoulder and the computer lid.",
+        "Because of that double movement the first frame is a cramped crop that cuts the fluorescent tube and door frame awkwardly, rather than a clean tight detail of the open computer, and the purposeful reveal is softened into a general shrink.",
+        "halftone-shimmer is fitting and subtle for the 1970s silkscreen print style and does not damage the era look."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.7,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.4,
+            "panX": 0.03,
+            "panY": 0.07,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.01,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.7,
+            "driftX": 0,
+            "driftY": 0.01,
+            "scale": 0.96,
+            "enter": "settle",
+            "enterAt": 0,
+            "enterFor": 0.35
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0.01,
+            "scale": 0.96,
+            "enter": "settle",
+            "enterAt": 0,
+            "enterFor": 0.35
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "A quiet beginning: reveal by opening tight on the open circuit-board computer, then pulling back through the bending figures to disclose the whole cramped 440-square-foot Chinatown shop."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "The pull-back clearly serves the story: it opens tight on the open computer and the two figures bent over it, then reveals the whole crowded 440-square-foot shop for the final dwell frame. Movement is visible and purposeful across all frames, the figures and computer remain locked together with no tearing, ghosting, doubled edges or awkward layer clipping, and the halftone-shimmer suits the silkscreen print style. Both the opening and final compositions read well. The plate shows no stray text, facial detail, anachronism or mangled subject.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.45,
+            "panX": 0.04,
+            "panY": 0.08,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0.02,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Keep the story — start tight on the open computer and pull back to reveal the whole cramped shop — but make it bolder and cleaner: a larger 1.45 to 1.0 pull-back with no layer entrances, and both cut-outs locked at the same depth with no independent drift or scale so the figures and the computer they lean over move as one group and cannot tear, separate, or ghost over the background. First frame i"
+      }
+    }
+  ]
+}

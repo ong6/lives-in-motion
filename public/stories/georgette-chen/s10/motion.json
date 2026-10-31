@@ -1,0 +1,124 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:10:05.771Z",
+  "usd": 0.0702,
+  "rationale": "A quiet beginning before dawn: a reveal opens tight on the woman at her lit desk and slowly travels out as she settles, discovering the whole clean, orderly studio around her.",
+  "plan": {
+    "focusX": 0.52,
+    "focusY": 0.64,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.38,
+        "panX": 0.07,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.18,
+        "panX": 0.03,
+        "panY": 0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.8,
+        "driftX": 0,
+        "driftY": 0.015,
+        "scale": 0.98,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.8,
+        "driftX": 0,
+        "driftY": 0.015,
+        "scale": 0.98,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A quiet beginning before dawn: a reveal opens tight on the woman at her lit desk and slowly travels out as she settles, discovering the whole clean, orderly studio around her."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "The pull-back clearly serves the scene: it opens tight on the silhouetted woman at the lamp-lit desk before dawn, then steadily reveals the easels, dining table and orderly studio around her, ending on the full plate as a calm picture to dwell on. The woman and desk stay coherent and together with no visible tearing, doubled edges, halo or ghosting, no layer is awkwardly pushed out of frame, and the warm light-sweep fits the dawn/lamp mood while keeping the 1950s lithograph print character. The plate itself shows the woman correctly from behind as a silhouette, with no stray text, anachronism or mangled anatomy.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "The pull-back clearly serves the scene: it opens tight on the silhouetted woman at the lamp-lit desk before dawn, then steadily reveals the easels, dining table and orderly studio around her, ending on the full plate as a calm picture to dwell on. The woman and desk stay coherent and together with no visible tearing, doubled edges, halo or ghosting, no layer is awkwardly pushed out of frame, and the warm light-sweep fits the dawn/lamp mood while keeping the 1950s lithograph print character. The plate itself shows the woman correctly from behind as a silhouette, with no stray text, anachronism or mangled anatomy.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.52,
+        "focusY": 0.64,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0.07,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.03,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": 0.015,
+            "scale": 0.98,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": 0.015,
+            "scale": 0.98,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet beginning before dawn: a reveal opens tight on the woman at her lit desk and slowly travels out as she settles, discovering the whole clean, orderly studio around her."
+      }
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:05:23.818Z",
+  "usd": 0.1989,
+  "rationale": "Make the class-contrast reveal real and reversible: open genuinely tight, focused on the lone man from behind in third class (zoom 1.3, panned right and down toward him), then pull back steadily through a mid frame to a near-full wide at t=1 so the waiting rickshaw at the kerb and the shophouses are discovered around him and the final, dwell frame shows the complete street. The nearer rickshaw get",
+  "plan": {
+    "focusX": 0.54,
+    "focusY": 0.56,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.094921875,
+        "panX": 0.01740234375,
+        "panY": 0.008859375000000001,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.0474609375,
+        "panX": 0.00759375,
+        "panY": 0.003796875,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.006328125,
+        "panX": 0,
+        "panY": 0,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.65,
+        "driftX": -0.00253125,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.95,
+        "driftX": -0.006328125,
+        "driftY": 0,
+        "scale": 1.006328125,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "Make the class-contrast reveal real and reversible: open genuinely tight, focused on the lone man from behind in third class (zoom 1.3, panned right and down toward him), then pull back steadily through a mid frame to a near-full wide at t=1 so the waiting rickshaw at the kerb and the shophouses are discovered around him and the final, dwell frame shows the complete street. The nearer rickshaw get"
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "A coherent but timid pull-back: the subject holds together and the final wide frame works well for dwelling, but the clamped move is barely larger than a plain centred push-in in reverse, the opening frame clips the rickshaw awkwardly, and the reveal of the street around the third-class passenger never becomes a clear, visible story beat.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "A coherent but timid near-still: the intended tight-to-wide reveal of the third-class passenger and his surroundings is so damped that it offers nothing over a plain centred move, and the opening frame clips the rickshaw without ever isolating the man.",
+      "filmIssues": [
+        "The pull-back is barely visible: over six frames the framing only widens slightly (zoom 1.09 to 1.0, a few thousandths of pan), so it reads as a plain, timid push-in in reverse rather than a purposeful reveal.",
+        "The stated story — open tight on the lone man in third class, then discover the rickshaw and shophouses — never happens. At t=0 the whole tram, the man small in frame, and most of the rickshaw are already visible, so nothing is discovered as the camera drifts.",
+        "The rickshaw is awkwardly clipped by the left frame edge in the opening frames and only fully enters by t=1, which makes the first frame a weaker opening picture than the last and draws attention to the crop rather than to the man.",
+        "There is no visible class-contrast focus: the man in the white suit, the subject of the caption, is never isolated or emphasised by focus, drift or scale; the tram and rickshaw move almost as one flat plane despite their different depths.",
+        "The subject itself stays coherent — no tearing, doubling, halo or ghosting where layers moved, and the dust ambient is subtle and period-appropriate — but coherence alone does not lift it above a neutral centred move."
+      ],
+      "fixes": [
+        "move damped to 24% (cut-2 59% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.58,
+        "focusY": 0.55,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.09017578125,
+            "panX": 0.018984375,
+            "panY": 0.0094921875,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.04271484375,
+            "panX": 0.007119140625,
+            "panY": 0.002373046875,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": -0.00474609375,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.65,
+            "driftX": 0.0059326171875,
+            "driftY": 0,
+            "scale": 0.99525390625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.0035595703125,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A quiet class contrast: reveal opens tight on the lone man in third class, then the camera pulls back and travels left across the tram to discover the waiting rickshaw and shophouses around him."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent but timid pull-back: the subject holds together and the final wide frame works well for dwelling, but the clamped move is barely larger than a plain centred push-in in reverse, the opening frame clips the rickshaw awkwardly, and the reveal of the street around the third-class passenger never becomes a clear, visible story beat.",
+      "filmIssues": [
+        "The pull-back reveal is real but timid after clamping: zoom only falls from about 1.09 to 1.01, so the six frames read as a near-static plate rather than a purposeful discovery of the street around the man in third class.",
+        "In the opening frame the rickshaw at the left edge is awkwardly clipped - its front wheel and handlebar area are cut by the frame - even though the rickshaw is meant to be discovered by the move, not presented as a cropped fragment at t=0.",
+        "The class-contrast story in the caption is not clearly expressed: the camera never gets genuinely close to the lone man seen from behind, so opening tight on him and then revealing the wider tram, kerb and shophouses does not register strongly.",
+        "Subject coherence is otherwise good: the tram and the man inside it stay together with no visible tearing, doubled edges, halo or ghost, and the rickshaw stays coherent as a separate nearer layer.",
+        "The final frame is a good dwell picture - full tram, complete rickshaw and shophouses are all legible - and the dust ambient is subtle and fitting for the sepia hand-coloured engraving style, which is preserved throughout."
+      ],
+      "fixes": [
+        "move damped to 32% (cut-2 46% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.54,
+        "focusY": 0.56,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.094921875,
+            "panX": 0.01740234375,
+            "panY": 0.008859375000000001,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0474609375,
+            "panX": 0.00759375,
+            "panY": 0.003796875,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.006328125,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.65,
+            "driftX": -0.00253125,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.006328125,
+            "driftY": 0,
+            "scale": 1.006328125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Make the class-contrast reveal real and reversible: open genuinely tight, focused on the lone man from behind in third class (zoom 1.3, panned right and down toward him), then pull back steadily through a mid frame to a near-full wide at t=1 so the waiting rickshaw at the kerb and the shophouses are discovered around him and the final, dwell frame shows the complete street. The nearer rickshaw get"
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent but timid pull-back that does not yet make the man-to-street reveal or the tram's journey legible.",
+      "filmIssues": [
+        "The pull-back is very timid: zoom only moves 1.18 to 1.0 with almost no pan, so across the six frames the composition barely changes and reads as a plain centred zoom rather than a purposeful reveal.",
+        "The opening frame is not tight enough on the young man in third class — the caption's subject — so the intended pull-back from him to the full tram, rickshaw and shophouses never really registers.",
+        "Neither cut-out has any purposeful motion of its own: the tram does not suggest a departure/journey and the nearer rickshaw provides almost no foreground parallax, wasting the depth separation between them.",
+        "The rickshaw sits hard against the left frame edge in the opening frames, making that side feel slightly cramped/clipped compared with the more settled final frame.",
+        "No obvious tearing, doubled edges, halos or ghosting is visible; the man stays coherent inside the tram and the layers remain registered. Dust is fitting and subtle for the print style."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.46,
+        "focusY": 0.54,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.18,
+            "panX": -0.01,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.09,
+            "panX": -0.005,
+            "panY": 0.005,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.65,
+            "driftX": -0.012,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.028,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Make the pull-back bolder but keep every layer inside the frame along the whole path: start at zoom 1.18 focused at x=0.46, centred between tram and rickshaw so neither the rickshaw's left edge (0.039) nor the tram's right edge (0.879) clips, with the man in third class still prominent in the opening composition. Pull steadily back through 1.09 to a full 1.0 wide for the dwell frame, so the ricksh"
+      }
+    }
+  ]
+}

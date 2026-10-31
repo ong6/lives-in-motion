@@ -1,0 +1,256 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:09:27.911Z",
+  "usd": 0.1756,
+  "rationale": "An arrival of excited discovery: the camera opens tight on the woman with her sketchbook and reveals outward across the waterfront, the stilt huts scaling in early as the cause of her 'My Tahiti' shout, until the whole Penang scene and foreground durian are discovered.",
+  "plan": {
+    "focusX": 0.57,
+    "focusY": 0.52,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.4,
+        "panX": -0.05,
+        "panY": 0.03,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.18,
+        "panX": 0,
+        "panY": 0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0.05,
+        "panY": 0,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.6,
+        "driftX": 0.025,
+        "driftY": 0,
+        "scale": 1.05,
+        "enter": "scale-in",
+        "enterAt": 0.1,
+        "enterFor": 0.35
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": -0.02,
+        "driftY": -0.015,
+        "scale": 1.03,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "An arrival of excited discovery: the camera opens tight on the woman with her sketchbook and reveals outward across the waterfront, the stilt huts scaling in early as the cause of her 'My Tahiti' shout, until the whole Penang scene and foreground durian are discovered."
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Do not publish: the story idea is right, but visible ghosting, a missing foreground at the opening and a timid damped finish keep it below the publishable threshold.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish: the story idea is right, but visible ghosting, a missing foreground at the opening and a timid damped finish keep it below the publishable threshold.",
+      "filmIssues": [
+        "The pull-back reveal is a suitable idea for an arrival and discovery, but the opening frame is not publishable as the page-opening picture: at t=0 the camera is too tight, the foreground durian/board are missing or displaced, and the woman's legs dissolve into a painted-over splash/ghost where a layer has moved off its background.",
+        "cut-1's scale-in entrance leaves the right-hand huts pale, grey and semi-transparent at t=0.2-0.4 rather than reading as solid printed cut-outs; it looks like a fading ghost, not a purposeful entrance.",
+        "The durian appears abruptly after the first frame instead of being present in a coherent foreground throughout, breaking the foreground/background relationship.",
+        "By t=0.6-1 the frames are almost identical to the original plate, so the dwell picture is good, but the move is largely a timid, damped pull-back once the faulty entrances finish; the excitement of the reveal is undermined by the incoherent start and does not clearly outperform a clean centred move enough to publish."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.57,
+        "focusY": 0.52,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.4,
+            "panX": -0.05,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.05,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0.025,
+            "driftY": 0,
+            "scale": 1.05,
+            "enter": "scale-in",
+            "enterAt": 0.1,
+            "enterFor": 0.35
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.02,
+            "driftY": -0.015,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "An arrival of excited discovery: the camera opens tight on the woman with her sketchbook and reveals outward across the waterfront, the stilt huts scaling in early as the cause of her 'My Tahiti' shout, until the whole Penang scene and foreground durian are discovered."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent and clean pull-back, but too timid to publish as-is: the opening and closing frames are nearly interchangeable and the waterfront reveal does not read with visible purpose.",
+      "filmIssues": [
+        "The pull-back in principle suits the arrival/reveal story — opening close on the woman from behind and widening to disclose the Penang waterfront — but in the rendered contact sheet the move is very timid: t=0 and t=1 differ only by a slight shrink and drift, barely more expressive than a plain centred push-in in reverse.",
+        "Because the zoom range (1.28 to 1) is applied around the empty paper margins, the first frame is not a distinctly composed opening picture and the last frame is only a slightly smaller copy of it; the 'reveal' of huts, walkway and boats is not clearly felt across the six frames.",
+        "No tearing, doubled edges, halo or painted-over ghost is visible, and no layer clips the frame edge awkwardly; the woman and foreground durian stay together and the print/halftone texture is preserved. The halftone-shimmer is fitting for 1950s offset lithograph and stays subtle.",
+        "The final unzoomed plate is a good dwell image, but the motion needs a bigger, more purposeful pull-back to earn an 8."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.55,
+        "focusY": 0.55,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.28,
+            "panX": -0.03,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.14,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.03,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0.012,
+            "driftY": 0,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.01,
+            "driftY": -0.006,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "A clean, bolder arrival reveal without entrances or ghosts: open in a composed closer view centred on the woman from behind with the durian still legible in the foreground, then pull back steadily with parallax between woman/durian and huts to disclose the whole Penang waterfront. The final unzoomed plate is the dwell image, the move reads equally well in reverse on page-turn back, and the subtle "
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Pull-back idea is right for an arrival, but rendered too timid after damping to beat a plain push-in by the required margin.",
+      "filmIssues": [
+        "The intended 1.48-to-1.0 pull-back is heavily damped in the rendered frames: across the six frames the scene only shrinks slightly, so the arrival/reveal is readable but timid and barely more expressive than a plain centred move.",
+        "The opening frame is not opened tight on the woman from behind as the rationale claims - it is already a near-full plate, and the last frame differs from it only modestly, so the disclosure of huts, walkway and boats is weak.",
+        "No obvious tearing, doubled edges or ghosting: the right-hand huts (cut-1) and the tall foreground figure layer (cut-2) stay coherent and inside frame, and cut-outs that belong together stay together. No awkward frame-edge clipping.",
+        "First frame is a serviceable opening picture and the final full plate is a good dwell image; the halftone-shimmer is fitting and subtle for 1950s offset litho and does not fight the print style.",
+        "Note the plan's layer naming does not match the boxes (cut-2's tall box is the woman, not the durian on its board, which stays with the background), so drifting cut-2 harder risks separating the woman from the durian/board she stands behind - keep her drift modest."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.56,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.48,
+            "panX": 0.05,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0.02,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.5,
+            "driftX": 0.02,
+            "driftY": 0.005,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.025,
+            "driftY": -0.012,
+            "scale": 1.06,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Bolder arrival reveal: open at zoom 1.48 focused on the woman from behind with the foreground durian large in frame, then pull back in two eased stages to the full unzoomed plate, disclosing the huts, walkway and boats. Stronger depth separation (huts 0.5, foreground woman/durian 0.95) with modest counter-drift gives clear parallax while keeping every layer inside the frame and avoiding entrances "
+      }
+    }
+  ]
+}

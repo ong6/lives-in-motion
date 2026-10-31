@@ -1,0 +1,186 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:03:16.759Z",
+  "usd": 0.0975,
+  "rationale": "Bolder Reveal: open genuinely tight on the umbrella and the outstretched hand at the focus point, then pull back steadily through the rain to reveal the second diner, the lamplit awning and finally the full eatery and factory chimney for the dwell frame. Umbrella and figures share depth, drift and scale 1.0 so the handover stays locked together with no ghosting, while the stronger camera travel gi",
+  "plan": {
+    "focusX": 0.47,
+    "focusY": 0.52,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.5,
+        "panX": 0.06,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.24,
+        "panX": 0.03,
+        "panY": 0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "rain",
+    "rationale": "Bolder Reveal: open genuinely tight on the umbrella and the outstretched hand at the focus point, then pull back steadily through the rain to reveal the second diner, the lamplit awning and finally the full eatery and factory chimney for the dwell frame. Umbrella and figures share depth, drift and scale 1.0 so the handover stays locked together with no ghosting, while the stronger camera travel gi"
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publishable pull-back reveal: the film opens closer on the umbrella handover between the two figures and steadily pulls back through fitting rain to the full lamplit eatery, awning and factory chimney. The umbrella and figures share depth with no drift or scale change, so the handover stays locked together with no tearing, doubled edges or ghosting. No layer clips the frame awkwardly, the print style is preserved, the first frame is a clear opening on the exchange and the final full-plate frame is a strong picture to dwell on.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish as-is: a coherent, era-true pull-back with fitting rain, but too close to a plain zoom-out to express the borrowed-umbrella reveal.",
+      "filmIssues": [
+        "The pull-back is visible but timid: even at t=0 with zoom 1.38 the whole eatery, both figures and much of the background are already readable, so the umbrella handover is not really revealed — it plays as a plain slow zoom-out, no better in storytelling than a centred move on the plate.",
+        "Both cut-outs are set to scale 0.96 at the same depth with no drift, so there is no parallax or layer life to separate the handover from the stall; the shrink also risks a faint ghost/halo where the figures and umbrella sit over their painted-over spots.",
+        "The last frame is a good full-plate dwell picture and the rain ambient is fitting and subtle, and no layer tears, doubles or clips the frame edge awkwardly — the umbrella stays with the outstretched hand throughout — but the opening frame does not earn its tight framing."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.48,
+        "focusY": 0.53,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0.05,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.02,
+            "panY": 0.015,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "rain",
+        "rationale": "A quiet act of kindness is told as a Reveal, opening tight on the offered umbrella and its holder's outstretched hand before pulling back through the rain to the lamplit eatery and the second diner."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publishable pull-back reveal: the film opens closer on the umbrella handover between the two figures and steadily pulls back through fitting rain to the full lamplit eatery, awning and factory chimney. The umbrella and figures share depth with no drift or scale change, so the handover stays locked together with no tearing, doubled edges or ghosting. No layer clips the frame awkwardly, the print style is preserved, the first frame is a clear opening on the exchange and the final full-plate frame is a strong picture to dwell on.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.52,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.5,
+            "panX": 0.06,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.24,
+            "panX": 0.03,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "rain",
+        "rationale": "Bolder Reveal: open genuinely tight on the umbrella and the outstretched hand at the focus point, then pull back steadily through the rain to reveal the second diner, the lamplit awning and finally the full eatery and factory chimney for the dwell frame. Umbrella and figures share depth, drift and scale 1.0 so the handover stays locked together with no ghosting, while the stronger camera travel gi"
+      }
+    }
+  ]
+}

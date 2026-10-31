@@ -1,0 +1,161 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-31T02:09:50.279Z",
+  "usd": 0.9959,
+  "passMark": 8,
+  "scenes": {
+    "s1": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "Publish. The pull-back is a clear, purposeful journey-out reveal: the film opens close on the boy and buffalo on the dyke, then widens and travels left to disclose the terraced hills, village houses and distant schoolhouse cited in the caption. The boy and buffalo share depth, drift and scale, so they stay together with the lead intact and no visible tearing, doubling, halo or ghosting. Neither subject clips the frame edge awkwardly, and the layered parallax preserves the hand-coloured engraving style. The first frame is a strong opening on the pair, while the final full view is a balanced picture to dwell on; the haze is subtle and appropriate for dawn in the Fujian terraces. The plate itself is clean: no stray text, the boy is correctly seen from behind, and there are no evident anachronisms or mangled forms.",
+      "rationale": "A quiet beginning becomes a journey out of Furong: opening tight on the boy and buffalo, the camera pulls back and travels left across the terraces to reveal the village and schoolhouse waiting behind them, while boy and buffalo move together as one along the path.",
+      "ambient": "haze",
+      "rounds": 1,
+      "usd": 0.0639,
+      "seconds": 31,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s1/scene.mp4?v=46cd8225",
+      "poster": "/stories/lee-kong-chian/s1/scene.jpg?v=46cd8225"
+    },
+    "s3": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "The pull-back clearly serves the scene: it opens tight on the student from behind and his long braided queue, then steadily widens to reveal the blackboard diagrams and empty lecture hall, making the final full plate a strong image to dwell on. The student remains coherent with no visible tearing, doubled edges, halo or ghosting, the blackboard stays fixed to the wall, and the layers retain the sepia hand-coloured engraving character. Dust is subtle and period-fitting. This is meaningfully better than a plain centred push-in.",
+      "rationale": "Bolder Reveal: open genuinely tight on the braided false queue at the centre of the student's back, then pull back steadily to disclose the blackboard diagrams and the empty lecture hall around him. The student stays locked at scale 1 with no drift so no painted-over ghost is uncovered; the blackboard is kept near background depth so it stays fixed to the wall, while the nearer student supplies cl",
+      "ambient": "dust",
+      "rounds": 2,
+      "usd": 0.0984,
+      "seconds": 47,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s3/scene.mp4?v=60fcf14f",
+      "poster": "/stories/lee-kong-chian/s3/scene.jpg?v=60fcf14f"
+    },
+    "s5": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "Publishable pull-back reveal: the film opens closer on the umbrella handover between the two figures and steadily pulls back through fitting rain to the full lamplit eatery, awning and factory chimney. The umbrella and figures share depth with no drift or scale change, so the handover stays locked together with no tearing, doubled edges or ghosting. No layer clips the frame awkwardly, the print style is preserved, the first frame is a clear opening on the exchange and the final full-plate frame is a strong picture to dwell on.",
+      "rationale": "Bolder Reveal: open genuinely tight on the umbrella and the outstretched hand at the focus point, then pull back steadily through the rain to reveal the second diner, the lamplit awning and finally the full eatery and factory chimney for the dwell frame. Umbrella and figures share depth, drift and scale 1.0 so the handover stays locked together with no ghosting, while the stronger camera travel gi",
+      "ambient": "rain",
+      "rounds": 2,
+      "usd": 0.0975,
+      "seconds": 48,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s5/scene.mp4?v=80266a7d",
+      "poster": "/stories/lee-kong-chian/s5/scene.jpg?v=80266a7d"
+    },
+    "s6": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "A coherent but timid pull-back: the subject holds together and the final wide frame works well for dwelling, but the clamped move is barely larger than a plain centred push-in in reverse, the opening frame clips the rickshaw awkwardly, and the reveal of the street around the third-class passenger never becomes a clear, visible story beat.",
+      "rationale": "Make the class-contrast reveal real and reversible: open genuinely tight, focused on the lone man from behind in third class (zoom 1.3, panned right and down toward him), then pull back steadily through a mid frame to a near-full wide at t=1 so the waiting rickshaw at the kerb and the shophouses are discovered around him and the final, dwell frame shows the complete street. The nearer rickshaw get",
+      "ambient": "dust",
+      "rounds": 3,
+      "usd": 0.1989,
+      "seconds": 127,
+      "filmIssues": [
+        "The pull-back reveal is real but timid after clamping: zoom only falls from about 1.09 to 1.01, so the six frames read as a near-static plate rather than a purposeful discovery of the street around the man in third class.",
+        "In the opening frame the rickshaw at the left edge is awkwardly clipped - its front wheel and handlebar area are cut by the frame - even though the rickshaw is meant to be discovered by the move, not presented as a cropped fragment at t=0.",
+        "The class-contrast story in the caption is not clearly expressed: the camera never gets genuinely close to the lone man seen from behind, so opening tight on him and then revealing the wider tram, kerb and shophouses does not register strongly.",
+        "Subject coherence is otherwise good: the tram and the man inside it stay together with no visible tearing, doubled edges, halo or ghost, and the rickshaw stays coherent as a separate nearer layer.",
+        "The final frame is a good dwell picture - full tram, complete rickshaw and shophouses are all legible - and the dust ambient is subtle and fitting for the sepia hand-coloured engraving style, which is preserved throughout."
+      ],
+      "plateDefects": [
+        {
+          "detail": "The vehicle at the kerb is drawn as a bicycle/trishaw — a pedal cycle with a front wheel and handlebars coupled to a passenger carriage — which postdates a 1920 Singapore street scene, where a hand-pulled rickshaw would be expected; it is an anachronistic form for the stated year.",
+          "type": "off-era"
+        },
+        {
+          "detail": "The waiting vehicle at lower left is drawn as a bicycle / cycle-rickshaw with a pedal bicycle front, an anachronistic form for a 1920 Singapore street scene where a hand-pulled rickshaw would be expected.",
+          "type": "off-era"
+        }
+      ],
+      "video": "/stories/lee-kong-chian/s6/scene.mp4?v=7e980664",
+      "poster": "/stories/lee-kong-chian/s6/scene.jpg?v=7e980664"
+    },
+    "s7": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "Coherent and publishable in technique, but the intended tight-to-wide reveal is too timid to earn a high score — the opening already shows the whole scene.",
+      "rationale": "Bolder reveal matching the story: open genuinely tight on the man seen from behind holding the sheet to the light, let man and sheet rise together as one (identical settings keep the shared-box cut-outs locked, no tearing), then pull back decisively to disclose the rows of rubber sheets, drifting smoke, river and stilt smoke-house for the final dwell. Haze echoes the smoke-house smoke without obsc",
+      "ambient": "haze",
+      "rounds": 3,
+      "usd": 0.1562,
+      "seconds": 78,
+      "filmIssues": [
+        "The pull-back is legible but timid: at t=0 the zoom is only about 1.21, so the stilt smoke-house, river and both rows of rubber sheets are already fully visible; there is no real reveal as the camera falls back to 1.0.",
+        "Because the opening is not genuinely tight on the man and the sheet he is holding to the light, the first frame is essentially the same wide plate as the final frame, only slightly cropped, rather than a distinct opening picture.",
+        "The final frame is a good dwell picture — full rows, river and smoke-house are readable — but it is reached by a small, generic widening rather than a purposeful disclosure of the workplace around the man.",
+        "No tearing, doubled edges, halo or ghosting is visible: cut-1 and cut-2 share the same box and were given identical depth, drift and scale, so the man and the lifted sheet stay locked together throughout.",
+        "No layer clips the frame edge awkwardly, the haze ambient is fitting and subtle for a smoke-house, and the sepia hand-coloured engraving style is preserved."
+      ],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s7/scene.mp4?v=d839ba78",
+      "poster": "/stories/lee-kong-chian/s7/scene.jpg?v=d839ba78"
+    },
+    "s9": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "publish",
+      "rationale": "A departure and impending loss: the camera opens tight on the suited man paused at the mill gate, then pulls back and travels across to reveal the rebuilt smoke-house, workers and waiting lorry he is about to leave for four years.",
+      "ambient": "dust",
+      "rounds": 1,
+      "usd": 0.0553,
+      "seconds": 27,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s9/scene.mp4?v=fe9f65e9",
+      "poster": "/stories/lee-kong-chian/s9/scene.jpg?v=fe9f65e9"
+    },
+    "s10": {
+      "status": "directed",
+      "score": 7,
+      "ok": false,
+      "passed": false,
+      "verdict": "A coherent, clean pull-back to a good final plate, but the opening is not tight or specific enough for the reveal to carry the story at publishable level.",
+      "rationale": "Bolder, purposeful reveal: start genuinely tight and low on the children/doorway/blank-plaque axis at zoom 1.5, then pull back in two eased stages to the complete bordered plate at zoom 1.0 for the dwell frame, reading in reverse as a gentle push toward the door. Both tiny fragment cut-outs are pinned to near-background depth with zero drift and scale 1.0 so they stay glued to the plate with no te",
+      "ambient": "dust",
+      "rounds": 3,
+      "usd": 0.1793,
+      "seconds": 86,
+      "filmIssues": [
+        "The pull-back is visible but timid in execution: the t=0 frame already shows the whole building, children and trishaws, so it never reads as genuinely tight on the doorway/children/plaque axis and the reveal to the full plate feels like a plain centred zoom-out rather than a purposeful story move.",
+        "Because the first and last frames are compositionally very similar, the opening picture does not create a distinct starting point and the final dwell frame gains little from the journey; the move expresses 'showing the building' more than 'a library door open to anyone' with its waiting queue.",
+        "Dust is barely perceptible in the frames and adds little archive atmosphere; no tearing, doubled edges or obvious ghosting is visible from the pinned fragment layers, and no layer clips the frame awkwardly."
+      ],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s10/scene.mp4?v=2317283c",
+      "poster": "/stories/lee-kong-chian/s10/scene.jpg?v=2317283c"
+    },
+    "s11": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "A clear, purposeful pull-back: it opens tight on the robed figure and lectern, then steadily reveals the graduate silhouettes and full Victoria Theatre stage, ending on the complete plate as a strong dwell image. The figure and lectern remain locked together with no visible tearing, doubled edges, ghosting or awkward frame clipping, and the halftone-shimmer suits the 1950s lithograph style. The plate itself is clean: silhouettes and back view as directed, no stray text, anachronism or mangled anatomy.",
+      "rationale": "Keep the bold, story-led pull-back: open tight on the waiting robed figure at the lectern, then reveal the silhouetted graduates and the crimson-and-gold Victoria Theatre stage, ending on the full plate for reading. Keep both identically boxed layers locked to exactly the same depth with zero drift and no end-scale change so the figure and lectern cannot separate, double, or expose a painted-over ",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1464,
+      "seconds": 75,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/lee-kong-chian/s11/scene.mp4?v=09ad5486",
+      "poster": "/stories/lee-kong-chian/s11/scene.jpg?v=09ad5486"
+    }
+  }
+}

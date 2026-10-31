@@ -416,3 +416,705 @@
 {"at":"2026-10-30T15:21:33.351Z","kind":"search","usd":0.577763,"note":"deep research teresa-hsu 2","job":"deep-research-batch2"}
 {"at":"2026-10-30T15:21:33.890Z","kind":"search","usd":0.733758,"note":"deep research georgette-chen 2","job":"deep-research-batch2"}
 {"at":"2026-10-30T15:21:42.624Z","kind":"search","usd":0.585837,"note":"deep research lee-kong-chian 2","job":"deep-research-batch2"}
+{"at":"2026-10-31T01:17:51.364Z","kind":"spark","usd":0.075259,"note":"deep-write-jack-sim","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:20:39.333Z","kind":"spark","usd":0.122494,"note":"deep-write-jack-sim","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:24:49.706Z","kind":"spark","usd":0.119098,"note":"deep-write-jack-sim","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:26:21.004Z","kind":"spark","usd":0.079382,"note":"deep-repair-jack-sim-1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:27:50.566Z","kind":"search","usd":0.031954,"note":"deep verify jack-sim s2","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:27:51.347Z","kind":"search","usd":0.053738,"note":"deep verify jack-sim s3","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:15.744Z","kind":"search","usd":0.191544,"note":"deep verify jack-sim s1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:16.984Z","kind":"search","usd":0.066322,"note":"deep verify jack-sim s5","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:20.869Z","kind":"search","usd":0.077007,"note":"deep verify jack-sim s4","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:30.175Z","kind":"search","usd":0.030736,"note":"deep verify jack-sim s6","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:36.307Z","kind":"search","usd":0.065796,"note":"deep verify jack-sim s7","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:39.204Z","kind":"search","usd":0.050105,"note":"deep verify jack-sim s8","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:28:52.107Z","kind":"search","usd":0.089369,"note":"deep verify jack-sim s9","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:29:05.685Z","kind":"search","usd":0.064327,"note":"deep verify jack-sim s11","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:29:11.334Z","kind":"search","usd":0.082623,"note":"deep verify jack-sim s12","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:29:12.676Z","kind":"search","usd":0.170103,"note":"deep verify jack-sim s10","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:29:40.390Z","kind":"spark","usd":0.034649,"note":"deep-fix-jack-sim","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:04.486Z","kind":"search","usd":0.056855,"note":"deep verify jack-sim s5","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:10.152Z","kind":"spark","usd":0.129526,"note":"deep-write-joseph-schooling","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:30:10.786Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:16.561Z","kind":"sam","usd":0.0025,"note":"toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:21.564Z","kind":"sam","usd":0.0025,"note":"plunger","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:31.063Z","kind":"sam","usd":0.0025,"note":"inflatable toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:37.655Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:30:43.285Z","kind":"sam","usd":0.0025,"note":"toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:31:14.969Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1957.\nStyle: 1950s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:31:40.049Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1963.\nStyle: 1950s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:31:44.849Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1984.\nStyle: 1970s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:31:48.341Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1973.\nStyle: 1970s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:11.236Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1998.\nStyle: 1990s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:15.562Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1995.\nStyle: 1990s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:23.263Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2008.\nStyle: 1990s","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:39.080Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2019.\nStyle: conte","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:50.167Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2025.\nStyle: conte","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:55.005Z","kind":"sam","usd":0.0025,"note":"children","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:32:59.288Z","kind":"sam","usd":0.0025,"note":"exercise books","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:10.575Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:13.490Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:15.351Z","kind":"sam","usd":0.0025,"note":"bucket","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:16.139Z","kind":"spark","usd":0.143033,"note":"deep-write-tan-howe-liang","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:33:16.832Z","kind":"sam","usd":0.0025,"note":"books","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:19.245Z","kind":"sam","usd":0.0025,"note":"door","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:34.282Z","kind":"image","usd":0.01,"note":"edit: Remove the children and the exercise books from this i","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:35.603Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the bucket from this illustration a","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:42.092Z","kind":"sam","usd":0.0025,"note":"boxes","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:42.303Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:45.407Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the door from this illustration and","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:50.373Z","kind":"sam","usd":0.0025,"note":"lorry","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:51.222Z","kind":"sam","usd":0.0025,"note":"tender","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:52.592Z","kind":"sam","usd":0.0025,"note":"houses","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:58.482Z","kind":"sam","usd":0.0025,"note":"sign","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:33:59.933Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:16.735Z","kind":"image","usd":0.01,"note":"edit: Remove the houses and the sign from this illustration ","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:20.983Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:23.273Z","kind":"image","usd":0.01,"note":"edit: Remove the boxes and the lorry from this illustration ","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:25.507Z","kind":"sam","usd":0.0025,"note":"folder","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:30.105Z","kind":"sam","usd":0.0025,"note":"scooter","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:30.552Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:36.625Z","kind":"sam","usd":0.0025,"note":"toilet brush","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:37.581Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the tender from this illustration a","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:41.554Z","kind":"sam","usd":0.0025,"note":"brush","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:44.179Z","kind":"sam","usd":0.0025,"note":"building","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:49.087Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:34:58.556Z","kind":"sam","usd":0.0025,"note":"kitchen","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:35:03.076Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the folder from this illustration a","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:35:03.567Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:35:08.186Z","kind":"image","usd":0.01,"note":"edit: Remove the scooter and the toilet brush from this illu","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:35:22.678Z","kind":"image","usd":0.01,"note":"edit: Remove the building and the kitchen from this illustra","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:35:38.702Z","kind":"wonder","usd":0.033608,"note":"direct-jack-sim-s1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:36:07.182Z","kind":"wonder","usd":0.045908,"note":"critic-jack-sim-s1-r0","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:36:23.116Z","kind":"spark","usd":0.143865,"note":"deep-write-georgette-chen","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:36:38.617Z","kind":"wonder","usd":0.025744,"note":"critic-jack-sim-s1-r1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:36:53.603Z","kind":"wonder","usd":0.03872,"note":"direct-jack-sim-s3","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:37:14.815Z","kind":"wonder","usd":0.039648,"note":"critic-jack-sim-s3-r0","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:37:39.843Z","kind":"wonder","usd":0.03592,"note":"critic-jack-sim-s3-r1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:37:51.533Z","kind":"wonder","usd":0.036832,"note":"direct-jack-sim-s4","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:38:09.654Z","kind":"spark","usd":0.095712,"note":"deep-write-sim-wong-hoo","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:38:17.072Z","kind":"wonder","usd":0.035808,"note":"critic-jack-sim-s4-r0","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:38:27.484Z","kind":"wonder","usd":0.032716,"note":"direct-jack-sim-s6","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:38:53.373Z","kind":"wonder","usd":0.042727,"note":"critic-jack-sim-s6-r0","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:39:02.245Z","kind":"spark","usd":0.054945,"note":"deep-repair-sim-wong-hoo-1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:39:17.747Z","kind":"wonder","usd":0.038571,"note":"critic-jack-sim-s6-r1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:39:46.658Z","kind":"wonder","usd":0.041402,"note":"critic-jack-sim-s6-r2","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:39:58.378Z","kind":"wonder","usd":0.031544,"note":"direct-jack-sim-s8","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:40:26.577Z","kind":"wonder","usd":0.051496,"note":"critic-jack-sim-s8-r0","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:40:50.140Z","kind":"spark","usd":0.100785,"note":"deep-write-c-kunalan","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:40:55.061Z","kind":"wonder","usd":0.046419,"note":"critic-jack-sim-s8-r1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:41:21.640Z","kind":"spark","usd":0.04382,"note":"deep-repair-c-kunalan-1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:41:25.374Z","kind":"wonder","usd":0.0514,"note":"critic-jack-sim-s8-r2","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:41:36.871Z","kind":"wonder","usd":0.033116,"note":"direct-jack-sim-s12","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:41:43.063Z","kind":"spark","usd":0.089818,"note":"deep-write-tan-howe-liang","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:42:02.315Z","kind":"wonder","usd":0.04656,"note":"critic-jack-sim-s12-r0","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:42:26.915Z","kind":"spark","usd":0.071222,"note":"deep-write-lee-kong-chian","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:42:28.007Z","kind":"wonder","usd":0.044512,"note":"critic-jack-sim-s12-r1","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:42:30.948Z","kind":"spark","usd":0.054174,"note":"deep-repair-tan-howe-liang-1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:42:50.069Z","kind":"wonder","usd":0.042596,"note":"critic-jack-sim-s12-r2","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:42:55.104Z","kind":"search","usd":0.032524,"note":"deep verify tan-howe-liang s3","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:42:55.236Z","kind":"search","usd":0.037251,"note":"deep verify sim-wong-hoo s2","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:42:56.752Z","kind":"spark","usd":0.040084,"note":"deep-repair-lee-kong-chian-1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:43:01.694Z","kind":"search","usd":0.054236,"note":"deep verify tan-howe-liang s1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:02.179Z","kind":"search","usd":0.03726,"note":"deep verify tan-howe-liang s2","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:02.973Z","kind":"search","usd":0.091969,"note":"deep verify joseph-schooling s3","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:06.292Z","kind":"search","usd":0.14395,"note":"deep verify joseph-schooling s2","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:09.313Z","kind":"search","usd":0.033656,"note":"deep verify tan-howe-liang s4","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:12.182Z","kind":"search","usd":0.148465,"note":"deep verify joseph-schooling s1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:16.809Z","kind":"search","usd":0.065749,"note":"deep verify sim-wong-hoo s4","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:43:17.559Z","kind":"search","usd":0.04357,"note":"deep verify tan-howe-liang s5","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:17.559Z","kind":"search","usd":0.127222,"note":"deep verify sim-wong-hoo s1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:43:19.063Z","kind":"search","usd":0.03275,"note":"deep verify tan-howe-liang s6","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:20.313Z","kind":"sam","usd":0.0025,"note":"inflatable toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:43:24.401Z","kind":"sam","usd":0.0025,"note":"toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:43:28.791Z","kind":"search","usd":0.166432,"note":"deep verify sim-wong-hoo s3","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:43:31.829Z","kind":"search","usd":0.023172,"note":"deep verify tan-howe-liang s9","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:32.924Z","kind":"search","usd":0.132795,"note":"deep verify joseph-schooling s4","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:35.271Z","kind":"search","usd":0.065194,"note":"deep verify joseph-schooling s6","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:36.384Z","kind":"search","usd":0.098815,"note":"deep verify tan-howe-liang s7","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:36.693Z","kind":"search","usd":0.054503,"note":"deep verify sim-wong-hoo s6","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:43:36.710Z","kind":"search","usd":0.097851,"note":"deep verify joseph-schooling s5","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:39.344Z","kind":"sam","usd":0.0025,"note":"inflatable toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:43:43.684Z","kind":"sam","usd":0.0025,"note":"toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:43:44.880Z","kind":"search","usd":0.118982,"note":"deep verify sim-wong-hoo s5","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:43:56.284Z","kind":"search","usd":0.215301,"note":"deep verify tan-howe-liang s8","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:57.367Z","kind":"search","usd":0.077888,"note":"deep verify joseph-schooling s9","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:43:59.273Z","kind":"search","usd":0.077432,"note":"deep verify tan-howe-liang s11","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:43:59.842Z","kind":"search","usd":0.073766,"note":"deep verify tan-howe-liang s10","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:44:01.221Z","kind":"search","usd":0.1481,"note":"deep verify joseph-schooling s8","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:44:02.468Z","kind":"search","usd":0.080387,"note":"deep verify joseph-schooling s7","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:44:08.879Z","kind":"search","usd":0.082759,"note":"deep verify sim-wong-hoo s9","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:44:11.432Z","kind":"search","usd":0.216197,"note":"deep verify sim-wong-hoo s7","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:44:13.593Z","kind":"sam","usd":0.0025,"note":"inflatable toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:44:13.817Z","kind":"search","usd":0.155172,"note":"deep verify sim-wong-hoo s8","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:44:17.942Z","kind":"sam","usd":0.0025,"note":"toilet","job":"deep:jack-sim"}
+{"at":"2026-10-31T01:44:20.681Z","kind":"search","usd":0.031289,"note":"deep verify joseph-schooling s12","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:44:23.105Z","kind":"search","usd":0.053277,"note":"deep verify joseph-schooling s11","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:44:24.498Z","kind":"search","usd":0.156592,"note":"deep verify tan-howe-liang s12","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:44:33.976Z","kind":"spark","usd":0.086379,"note":"deep-write-teresa-hsu","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:44:34.196Z","kind":"search","usd":0.172572,"note":"deep verify joseph-schooling s10","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:44:40.603Z","kind":"search","usd":0.144931,"note":"deep verify sim-wong-hoo s12","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:44:40.692Z","kind":"spark","usd":0.107387,"note":"deep-write-georgette-chen","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:44:44.277Z","kind":"search","usd":0.15168,"note":"deep verify sim-wong-hoo s11","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:44:55.254Z","kind":"search","usd":0.087551,"note":"deep verify sim-wong-hoo s10","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:44:58.379Z","kind":"search","usd":0.045299,"note":"deep verify c-kunalan s2","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:44:59.136Z","kind":"search","usd":0.054923,"note":"deep verify c-kunalan s3","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:00.884Z","kind":"search","usd":0.067324,"note":"deep verify lee-kong-chian s1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:02.499Z","kind":"spark","usd":0.035529,"note":"deep-fix-joseph-schooling","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:45:04.170Z","kind":"search","usd":0.121473,"note":"deep verify teresa-hsu s1","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:45:07.109Z","kind":"search","usd":0.060547,"note":"deep verify lee-kong-chian s3","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:07.620Z","kind":"spark","usd":0.051917,"note":"deep-fix-tan-howe-liang","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:45:12.042Z","kind":"search","usd":0.032283,"note":"deep verify c-kunalan s4","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:16.702Z","kind":"search","usd":0.122342,"note":"deep verify c-kunalan s1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:19.010Z","kind":"search","usd":0.057409,"note":"deep verify lee-kong-chian s4","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:19.819Z","kind":"search","usd":0.123506,"note":"deep verify lee-kong-chian s2","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:19.946Z","kind":"search","usd":0.068254,"note":"deep verify c-kunalan s5","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:21.514Z","kind":"search","usd":0.067586,"note":"deep verify teresa-hsu s4","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:45:22.946Z","kind":"search","usd":0.172734,"note":"deep verify teresa-hsu s2","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:45:24.413Z","kind":"search","usd":0.202586,"note":"deep verify teresa-hsu s3","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:45:27.720Z","kind":"search","usd":0.058894,"note":"deep verify lee-kong-chian s5","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:33.878Z","kind":"search","usd":0.035217,"note":"deep verify c-kunalan s6","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:34.421Z","kind":"search","usd":0.11904,"note":"deep verify joseph-schooling s2","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:45:35.711Z","kind":"spark","usd":0.04966,"note":"deep-fix-sim-wong-hoo","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:45:38.022Z","kind":"search","usd":0.042601,"note":"deep verify teresa-hsu s6","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:45:38.209Z","kind":"search","usd":0.055056,"note":"deep verify c-kunalan s8","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:40.278Z","kind":"search","usd":0.034165,"note":"deep verify c-kunalan s7","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:45:40.529Z","kind":"search","usd":0.119922,"note":"deep verify lee-kong-chian s6","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:41.899Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:45:42.025Z","kind":"search","usd":0.114654,"note":"deep verify tan-howe-liang s8","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:45:42.902Z","kind":"search","usd":0.090919,"note":"deep verify lee-kong-chian s7","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:45:45.445Z","kind":"search","usd":0.154494,"note":"deep verify tan-howe-liang s10","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:45:46.489Z","kind":"sam","usd":0.0025,"note":"swimming pool","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:45:47.071Z","kind":"search","usd":0.089376,"note":"deep verify tan-howe-liang s11","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:46:38.172Z","kind":"search","usd":0.037338,"note":"deep verify lee-kong-chian s9","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:46:39.515Z","kind":"search","usd":0.087004,"note":"deep verify lee-kong-chian s8","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:46:41.289Z","kind":"search","usd":0.087801,"note":"deep verify teresa-hsu s7","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:46:41.804Z","kind":"search","usd":0.086322,"note":"deep verify tan-howe-liang s11","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:46:42.562Z","kind":"search","usd":0.056177,"note":"deep verify c-kunalan s9","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:46:44.139Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1995.\nStyle: 1990s","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:46:44.854Z","kind":"search","usd":0.101283,"note":"deep verify sim-wong-hoo s1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:46:45.353Z","kind":"sam","usd":0.0025,"note":"dome","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:46:45.502Z","kind":"search","usd":0.043656,"note":"deep verify teresa-hsu s5","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:46:48.130Z","kind":"search","usd":0.127451,"note":"deep verify sim-wong-hoo s3","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:46:51.011Z","kind":"search","usd":0.077908,"note":"deep verify lee-kong-chian s10","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:46:56.068Z","kind":"sam","usd":0.0025,"note":"stadium","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:46:57.584Z","kind":"search","usd":0.168841,"note":"deep verify sim-wong-hoo s8","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:46:58.403Z","kind":"search","usd":0.073535,"note":"deep verify lee-kong-chian s12","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:47:02.970Z","kind":"search","usd":0.117912,"note":"deep verify c-kunalan s11","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:47:07.937Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:47:08.361Z","kind":"search","usd":0.07481,"note":"deep verify teresa-hsu s9","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:47:08.797Z","kind":"search","usd":0.115865,"note":"deep verify c-kunalan s12","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:47:08.873Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2001.\nStyle: 1990s","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:47:09.070Z","kind":"search","usd":0.129265,"note":"deep verify lee-kong-chian s11","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:47:12.208Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:47:12.256Z","kind":"search","usd":0.053504,"note":"deep verify sim-wong-hoo s10","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:47:12.497Z","kind":"search","usd":0.133018,"note":"deep verify teresa-hsu s8","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:47:15.100Z","kind":"search","usd":0.23529,"note":"deep verify c-kunalan s10","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:47:24.150Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2008.\nStyle: 1990s","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:47:28.174Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1998.\nStyle: 1990s","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:47:34.821Z","kind":"search","usd":0.170883,"note":"deep verify teresa-hsu s10","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:47:39.772Z","kind":"spark","usd":0.03875,"note":"deep-fix-lee-kong-chian","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:47:42.322Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2009.\nStyle: 1990s","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:47:45.798Z","kind":"search","usd":0.08081,"note":"deep verify teresa-hsu s8 again","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:47:49.042Z","kind":"search","usd":0.155409,"note":"deep verify teresa-hsu s11","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:47:49.725Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2012.\nStyle: conte","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:47:52.068Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1937.\nStyle: hand-","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:47:57.537Z","kind":"search","usd":0.329298,"note":"deep verify sim-wong-hoo s11","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:47:57.840Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2016.\nStyle: conte","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:48:07.748Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2021.\nStyle: conte","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:48:09.880Z","kind":"search","usd":0.109155,"note":"deep verify teresa-hsu s12","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:48:15.095Z","kind":"search","usd":0.247755,"note":"deep verify c-kunalan s10 again","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:48:18.268Z","kind":"spark","usd":0.05008,"note":"deep-fix-repair-lee-kong-chian-0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:48:19.882Z","kind":"sam","usd":0.0025,"note":"tower","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:48:25.929Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2019.\nStyle: conte","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:48:30.583Z","kind":"sam","usd":0.0025,"note":"stadium","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:48:33.219Z","kind":"spark","usd":0.033995,"note":"deep-fix-teresa-hsu","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:48:36.477Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1956.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:48:37.037Z","kind":"sam","usd":0.0025,"note":"stadium roof","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:48:37.136Z","kind":"search","usd":0.181319,"note":"deep verify sim-wong-hoo s11 again","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:48:38.867Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1947.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:48:39.732Z","kind":"search","usd":0.105619,"note":"deep verify lee-kong-chian s11","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:48:45.302Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2024.\nStyle: conte","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:48:45.446Z","kind":"sam","usd":0.0025,"note":"statue","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:48:49.234Z","kind":"sam","usd":0.0025,"note":"players","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:48:53.448Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1952.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:48:55.309Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:01.749Z","kind":"sam","usd":0.0025,"note":"mitt","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:02.489Z","kind":"spark","usd":0.11869,"note":"deep-write-georgette-chen","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:49:06.900Z","kind":"sam","usd":0.0025,"note":"small boy","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:11.464Z","kind":"sam","usd":0.0025,"note":"swimmer","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:12.513Z","kind":"sam","usd":0.0025,"note":"tall boy","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:13.068Z","kind":"sam","usd":0.0025,"note":"roof","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:49:14.229Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1958.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:49:15.856Z","kind":"spark","usd":0.040296,"note":"deep-fix-repair-teresa-hsu-0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:49:18.926Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:49:21.246Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:49:22.907Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1960.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:49:30.212Z","kind":"sam","usd":0.0025,"note":"towel","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:30.503Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1960.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:49:31.195Z","kind":"image","usd":0.01,"note":"edit: Remove the players and the mitt from this illustration","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:35.918Z","kind":"sam","usd":0.0025,"note":"monkeys","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:39.475Z","kind":"image","usd":0.01,"note":"edit: Remove the small boy and the tall boy from this illust","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:40.791Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:43.604Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1960.\nStyle: 1950s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:49:45.455Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:46.238Z","kind":"search","usd":0.197044,"note":"deep verify georgette-chen s3","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:49:48.778Z","kind":"search","usd":0.103813,"note":"deep verify teresa-hsu s8","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:49:50.775Z","kind":"sam","usd":0.0025,"note":"swim bag","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:49:50.879Z","kind":"spark","usd":0.045176,"note":"deep-fix-sim-wong-hoo","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:49:55.125Z","kind":"search","usd":0.165515,"note":"deep verify georgette-chen s2","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:49:56.180Z","kind":"sam","usd":0.0025,"note":"statue","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:50:00.687Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1984.\nStyle: 1970s","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:00.700Z","kind":"sam","usd":0.0025,"note":"bag","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:05.295Z","kind":"sam","usd":0.0025,"note":"ship","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:50:06.315Z","kind":"search","usd":0.208612,"note":"deep verify georgette-chen s1","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:50:06.974Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:13.370Z","kind":"sam","usd":0.0025,"note":"wok","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:13.531Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1955.\nStyle: 1950s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:50:14.067Z","kind":"image","usd":0.01,"note":"edit: Remove the swimmer and the towel from this illustratio","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:14.393Z","kind":"spark","usd":0.033286,"note":"deep-fix-repair-sim-wong-hoo-0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:50:16.245Z","kind":"sam","usd":0.0025,"note":"building","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:50:16.635Z","kind":"search","usd":0.065184,"note":"deep verify georgette-chen s5","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:50:16.764Z","kind":"image","usd":0.01,"note":"edit: Remove the monkeys and the boy from this illustration ","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:21.755Z","kind":"sam","usd":0.0025,"note":"building","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:50:22.976Z","kind":"sam","usd":0.0025,"note":"young man","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:27.415Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the swim bag from this illustration","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:28.413Z","kind":"search","usd":0.10495,"note":"deep verify georgette-chen s4","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:50:29.355Z","kind":"sam","usd":0.0025,"note":"cap","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:29.769Z","kind":"sam","usd":0.0025,"note":"medal","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:33.512Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:50:33.669Z","kind":"sam","usd":0.0025,"note":"swimmer","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:37.221Z","kind":"search","usd":0.118884,"note":"deep verify georgette-chen s6","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:50:38.389Z","kind":"search","usd":0.052746,"note":"deep verify georgette-chen s7","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:50:38.873Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the wok from this illustration and ","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:43.959Z","kind":"sam","usd":0.0025,"note":"goggles","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:44.881Z","kind":"sam","usd":0.0025,"note":"barbell","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:46.866Z","kind":"sam","usd":0.0025,"note":"banner","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:50:47.147Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:49.778Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:50:49.789Z","kind":"sam","usd":0.0025,"note":"official","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:56.889Z","kind":"sam","usd":0.0025,"note":"lantern","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:50:57.111Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1959.\nStyle: 1950s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:51:01.363Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1963.\nStyle: 1950s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:51:05.501Z","kind":"sam","usd":0.0025,"note":"young man","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:05.667Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:07.165Z","kind":"search","usd":0.21352,"note":"deep verify georgette-chen s8","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:51:09.307Z","kind":"search","usd":0.201292,"note":"deep verify georgette-chen s9","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:51:10.817Z","kind":"search","usd":0.168633,"note":"deep verify georgette-chen s10","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:51:12.438Z","kind":"image","usd":0.01,"note":"edit: Remove the young man and the medal from this illustrat","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:13.186Z","kind":"image","usd":0.01,"note":"edit: Remove the barbell and the official from this illustra","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:18.128Z","kind":"image","usd":0.01,"note":"edit: Remove the cap and the goggles from this illustration ","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:18.597Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1962.\nStyle: 1950s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:51:19.219Z","kind":"sam","usd":0.0025,"note":"barbell","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:19.698Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:19.749Z","kind":"sam","usd":0.0025,"note":"weightlifter","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:25.268Z","kind":"sam","usd":0.0025,"note":"barbell","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:27.137Z","kind":"sam","usd":0.0025,"note":"young man","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:28.621Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:28.636Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1905.\nStyle: hand-","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:51:31.608Z","kind":"search","usd":0.07845,"note":"deep verify sim-wong-hoo s10","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:51:34.904Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the lantern from this illustration ","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:36.822Z","kind":"search","usd":0.091122,"note":"deep verify georgette-chen s11","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:51:42.694Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1964.\nStyle: 1950s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:51:43.264Z","kind":"sam","usd":0.0025,"note":"young man","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:44.069Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1964.\nStyle: 1950s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:51:44.943Z","kind":"sam","usd":0.0025,"note":"softball","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:45.080Z","kind":"image","usd":0.01,"note":"edit: Remove the swimmer and the banner from this illustrati","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:51:48.026Z","kind":"sam","usd":0.0025,"note":"circuit board","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:51:50.645Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1893.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:51:51.190Z","kind":"sam","usd":0.0025,"note":"bunting","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:51:52.313Z","kind":"sam","usd":0.0025,"note":"music player","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:51:54.917Z","kind":"search","usd":0.194714,"note":"deep verify georgette-chen s12","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:51:59.122Z","kind":"image","usd":0.01,"note":"edit: Remove the weightlifter and the barbell from this illu","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:02.398Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the boy from this illustration and ","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:52:05.899Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1966.\nStyle: 1970s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:52:08.764Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:52:09.697Z","kind":"sam","usd":0.0025,"note":"player","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:52:13.727Z","kind":"image","usd":0.01,"note":"edit: Remove the young man and the barbell from this illustr","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:14.341Z","kind":"sam","usd":0.0025,"note":"lifter","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:14.860Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1925.\nStyle: hand-","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:52:16.058Z","kind":"sam","usd":0.0025,"note":"booth","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:52:20.421Z","kind":"image","usd":0.01,"note":"edit: Remove the young man and the bunting from this illustr","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:23.253Z","kind":"sam","usd":0.0025,"note":"podium","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:26.086Z","kind":"sam","usd":0.0025,"note":"circuit board","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:52:28.337Z","kind":"sam","usd":0.0025,"note":"older man","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:29.159Z","kind":"spark","usd":0.041652,"note":"deep-fix-georgette-chen","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:52:30.396Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1979.\nStyle: 1970s","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:52:31.874Z","kind":"sam","usd":0.0025,"note":"official","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:37.052Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1903.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:52:37.562Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:37.620Z","kind":"sam","usd":0.0025,"note":"boys","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:52:40.411Z","kind":"sam","usd":0.0025,"note":"barbell","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:52:45.293Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1908.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:52:45.303Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1912.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:52:46.314Z","kind":"sam","usd":0.0025,"note":"football","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:52:55.422Z","kind":"image","usd":0.01,"note":"edit: Remove the young man and the softball from this illust","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:52:58.583Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1945.\nStyle: warti","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:53:07.976Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:53:10.240Z","kind":"sam","usd":0.0025,"note":"teacher","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:10.430Z","kind":"image","usd":0.01,"note":"edit: Remove the lifter and the barbell from this illustrati","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:53:12.744Z","kind":"search","usd":0.10074,"note":"deep verify georgette-chen s7","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:53:13.079Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1963.\nStyle: 1950s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:53:14.473Z","kind":"sam","usd":0.0025,"note":"young lifter","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:53:14.780Z","kind":"sam","usd":0.0025,"note":"boys","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:17.693Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:19.137Z","kind":"sam","usd":0.0025,"note":"carousel","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:53:25.737Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1916.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:53:27.123Z","kind":"sam","usd":0.0025,"note":"children","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:33.882Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1945.\nStyle: warti","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:53:37.469Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1920.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:53:38.690Z","kind":"image","usd":0.01,"note":"edit: Remove the boys and the football from this illustratio","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:41.314Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:georgette-chen"}
+{"at":"2026-10-31T01:53:44.307Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1927.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:53:45.841Z","kind":"wonder","usd":0.039504,"note":"direct-joseph-schooling-s1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:53:47.257Z","kind":"sam","usd":0.0025,"note":"tree","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:54.128Z","kind":"sam","usd":0.0025,"note":"barbell","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:53:55.296Z","kind":"sam","usd":0.0025,"note":"lifter","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:53:56.320Z","kind":"sam","usd":0.0025,"note":"clipboard","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:00.753Z","kind":"image","usd":0.01,"note":"edit: Remove the teacher and the children from this illustra","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:02.002Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1932.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:54:08.011Z","kind":"sam","usd":0.0025,"note":"newspaper","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:09.776Z","kind":"wonder","usd":0.045796,"note":"critic-joseph-schooling-s1-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:54:10.717Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1953.\nStyle: 1950s","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:54:12.582Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1941.\nStyle: hand-","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:54:19.995Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1966.\nStyle: 1970s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:54:21.145Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:23.446Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1952.\nStyle: 1950s","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:54:24.771Z","kind":"image","usd":0.01,"note":"edit: Remove the tree and the barbell from this illustration","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:30.295Z","kind":"image","usd":0.01,"note":"edit: Remove the boys and the clipboard from this illustrati","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:30.329Z","kind":"wonder","usd":0.037684,"note":"critic-joseph-schooling-s1-r1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:54:31.297Z","kind":"sam","usd":0.0025,"note":"young man","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:37.476Z","kind":"image","usd":0.01,"note":"edit: Remove the older man and the young lifter from this il","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:54:39.317Z","kind":"sam","usd":0.0025,"note":"staircase","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:40.215Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1962.\nStyle: 1950s","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:54:40.946Z","kind":"sam","usd":0.0025,"note":"runners","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:44.456Z","kind":"wonder","usd":0.04808,"note":"direct-joseph-schooling-s3","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:54:45.171Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:54:48.353Z","kind":"sam","usd":0.0025,"note":"tape","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:54:51.455Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1981.\nStyle: 1970s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:54:51.631Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:54:59.679Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1970.\nStyle: 1970s","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:55:05.735Z","kind":"sam","usd":0.0025,"note":"student","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:55:12.738Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1944.\nStyle: warti","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:55:13.605Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:55:13.921Z","kind":"image","usd":0.01,"note":"edit: Remove the young man and the staircase from this illus","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:55:16.669Z","kind":"sam","usd":0.0025,"note":"blackboard","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:55:27.947Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1933.\nStyle: hand-","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:55:28.080Z","kind":"sam","usd":0.0025,"note":"skeleton","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:55:28.610Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1988.\nStyle: 1970s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:55:35.656Z","kind":"sam","usd":0.0025,"note":"woman","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:55:36.228Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:55:42.183Z","kind":"sam","usd":0.0025,"note":"typewriter","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:55:46.895Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1975.\nStyle: 1970s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:55:50.582Z","kind":"sam","usd":0.0025,"note":"students","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:55:51.273Z","kind":"sam","usd":0.0025,"note":"woman","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:55:59.174Z","kind":"sam","usd":0.0025,"note":"buffalo","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:56:02.235Z","kind":"sam","usd":0.0025,"note":"bed","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:56:02.983Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1979.\nStyle: 1970s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:56:08.295Z","kind":"image","usd":0.01,"note":"edit: Remove the runners and the tape from this illustration","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:56:08.297Z","kind":"image","usd":0.01,"note":"edit: Remove the podium and the official from this illustrat","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:56:11.118Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the typewriter from this illustra","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:12.365Z","kind":"sam","usd":0.0025,"note":"pot","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:19.151Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2007.\nStyle: 1990s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:56:20.171Z","kind":"sam","usd":0.0025,"note":"dancers","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:23.848Z","kind":"sam","usd":0.0025,"note":"broom","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:27.308Z","kind":"wonder","usd":0.036608,"note":"direct-tan-howe-liang-s1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:56:33.155Z","kind":"sam","usd":0.0025,"note":"doorway","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:39.008Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:41.373Z","kind":"image","usd":0.01,"note":"edit: Remove the skeleton and the students from this illustr","job":"deep:c-kunalan"}
+{"at":"2026-10-31T01:56:42.480Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:56:48.379Z","kind":"image","usd":0.01,"note":"edit: Remove the student and the blackboard from this illust","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:56:49.603Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 2023.\nStyle: conte","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:56:52.030Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the buffalo from this illustration ","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:56:53.248Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1999.\nStyle: 1990s","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:56:55.699Z","kind":"wonder","usd":0.052484,"note":"critic-joseph-schooling-s3-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:56:58.085Z","kind":"sam","usd":0.0025,"note":"young man","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:56:58.290Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the bed from this illustration and ","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:00.401Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:57:01.734Z","kind":"sam","usd":0.0025,"note":"umbrella","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:07.355Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the broom from this illustration ","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:08.005Z","kind":"sam","usd":0.0025,"note":"tram","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:08.284Z","kind":"wonder","usd":0.05768,"note":"critic-tan-howe-liang-s1-r0","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T01:57:08.506Z","kind":"sam","usd":0.0025,"note":"theodolite","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:10.821Z","kind":"sam","usd":0.0025,"note":"two figures","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:15.977Z","kind":"sam","usd":0.0025,"note":"egg basket","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:57:17.230Z","kind":"sam","usd":0.0025,"note":"rickshaw","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:18.690Z","kind":"image","usd":0.01,"note":"edit: Remove the pot and the doorway from this illustration ","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:21.174Z","kind":"sam","usd":0.0025,"note":"woman","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:21.839Z","kind":"sam","usd":0.0025,"note":"figures","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:27.962Z","kind":"sam","usd":0.0025,"note":"letter","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:28.633Z","kind":"sam","usd":0.0025,"note":"players","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:57:29.934Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:34.477Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:35.749Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:38.271Z","kind":"wonder","usd":0.048388,"note":"critic-joseph-schooling-s3-r1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:57:41.282Z","kind":"sam","usd":0.0025,"note":"pen","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:43.608Z","kind":"sam","usd":0.0025,"note":"bulb","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:51.194Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the man from this illustration an","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:57:51.896Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:57:52.923Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:57:54.564Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the egg basket from this illustrati","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:58:00.740Z","kind":"sam","usd":0.0025,"note":"woman","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:04.518Z","kind":"image","usd":0.01,"note":"edit: Remove the tram and the rickshaw from this illustratio","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:10.765Z","kind":"image","usd":0.01,"note":"edit: Remove the letter and the pen from this illustration a","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:11.167Z","kind":"sam","usd":0.0025,"note":"envelope","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:11.636Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:16.580Z","kind":"wonder","usd":0.050996,"note":"critic-joseph-schooling-s3-r2","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:58:19.278Z","kind":"image","usd":0.01,"note":"edit: Remove the dancers and the bulb from this illustration","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:19.381Z","kind":"sam","usd":0.0025,"note":"bungalow","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:21.599Z","kind":"sam","usd":0.0025,"note":"rubber sheets","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:25.414Z","kind":"sam","usd":0.0025,"note":"coconuts","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:25.791Z","kind":"image","usd":0.01,"note":"edit: Remove the young man and the theodolite from this illu","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:28.749Z","kind":"sam","usd":0.0025,"note":"figure","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:58:30.350Z","kind":"wonder","usd":0.040624,"note":"direct-joseph-schooling-s4","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:58:33.262Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the envelope from this illustrati","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:39.433Z","kind":"image","usd":0.01,"note":"edit: Remove the umbrella and the two figures from this illu","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:42.474Z","kind":"sam","usd":0.0025,"note":"paper cup","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:58:42.702Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:58:43.040Z","kind":"sam","usd":0.0025,"note":"accordion","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:58:45.338Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:46.058Z","kind":"sam","usd":0.0025,"note":"boy","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:58:51.375Z","kind":"sam","usd":0.0025,"note":"lorry","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:53.007Z","kind":"sam","usd":0.0025,"note":"cup","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:58:53.903Z","kind":"sam","usd":0.0025,"note":"crates","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:58:55.903Z","kind":"wonder","usd":0.050948,"note":"critic-joseph-schooling-s4-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T01:59:00.380Z","kind":"sam","usd":0.0025,"note":"sheets","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:03.835Z","kind":"sam","usd":0.0025,"note":"bales","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:04.868Z","kind":"sam","usd":0.0025,"note":"harmonica","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:06.607Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:09.099Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:12.648Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:23.500Z","kind":"image","usd":0.01,"note":"edit: Remove the bungalow and the coconuts from this illustr","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:59:23.569Z","kind":"image","usd":0.01,"note":"edit: Remove the players and the accordion from this illustr","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:24.594Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the lorry from this illustration an","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:25.061Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:33.028Z","kind":"sam","usd":0.0025,"note":"two figures","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:33.845Z","kind":"sam","usd":0.0025,"note":"library","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:39.413Z","kind":"image","usd":0.01,"note":"edit: Remove the boy and the harmonica from this illustratio","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:39.438Z","kind":"wonder","usd":0.032944,"note":"direct-teresa-hsu-s3","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:59:39.645Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:46.840Z","kind":"image","usd":0.01,"note":"edit: Remove the crates and the bales from this illustration","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:47.062Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T01:59:48.800Z","kind":"sam","usd":0.0025,"note":"children","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:54.884Z","kind":"wonder","usd":0.024496,"note":"critic-teresa-hsu-s3-r0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T01:59:55.458Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the rubber sheets from this illustr","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T01:59:56.568Z","kind":"sam","usd":0.0025,"note":"boxes","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:04.061Z","kind":"image","usd":0.01,"note":"edit: Remove the figure and the paper cup from this illustra","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:04.288Z","kind":"sam","usd":0.0025,"note":"robed figure","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:00:06.663Z","kind":"wonder","usd":0.03634,"note":"direct-teresa-hsu-s4","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:00:06.781Z","kind":"search","usd":0.114547,"note":"deep verify c-kunalan s10","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:00:09.554Z","kind":"sam","usd":0.0025,"note":"figures","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:09.932Z","kind":"sam","usd":0.0025,"note":"man","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:12.885Z","kind":"sam","usd":0.0025,"note":"lectern","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:00:13.189Z","kind":"sam","usd":0.0025,"note":"newspaper","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:00:16.838Z","kind":"sam","usd":0.0025,"note":"piano","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:18.779Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the boxes from this illustration an","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:24.200Z","kind":"sam","usd":0.0025,"note":"runner","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:26.817Z","kind":"image","usd":0.01,"note":"edit: Remove the library and the children from this illustra","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:00:27.934Z","kind":"wonder","usd":0.032112,"note":"critic-teresa-hsu-s4-r0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:00:32.645Z","kind":"sam","usd":0.0025,"note":"streetlamps","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:32.771Z","kind":"wonder","usd":0.03366,"note":"direct-tan-howe-liang-s2","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:00:32.984Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:00:35.037Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:00:39.736Z","kind":"wonder","usd":0.034836,"note":"direct-teresa-hsu-s6","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:00:40.693Z","kind":"image","usd":0.01,"note":"edit: Remove the man and the piano from this illustration an","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:45.733Z","kind":"sam","usd":0.0025,"note":"baton","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:00:46.085Z","kind":"sam","usd":0.0025,"note":"headphones","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:50.471Z","kind":"sam","usd":0.0025,"note":"harmonica","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:00:56.922Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:01:01.863Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:01:02.527Z","kind":"image","usd":0.01,"note":"edit: Remove the robed figure and the lectern from this illu","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:01:02.599Z","kind":"wonder","usd":0.049812,"note":"critic-joseph-schooling-s4-r1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:01:03.657Z","kind":"image","usd":0.01,"note":"edit: Remove the runner and the streetlamps from this illust","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:01:11.305Z","kind":"sam","usd":0.0025,"note":"computer","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:01:11.825Z","kind":"image","usd":0.01,"note":"edit: Remove the newspaper and the baton from this illustrat","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:01:18.914Z","kind":"image","usd":0.01,"note":"edit: Remove the headphones and the harmonica from this illu","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:01:19.615Z","kind":"wonder","usd":0.045344,"note":"critic-teresa-hsu-s6-r0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:01:20.998Z","kind":"wonder","usd":0.035852,"note":"direct-lee-kong-chian-s1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:01:29.094Z","kind":"wonder","usd":0.037324,"note":"direct-c-kunalan-s1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:01:32.936Z","kind":"wonder","usd":0.056516,"note":"critic-joseph-schooling-s4-r2","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:01:35.493Z","kind":"image","usd":0.01,"note":"edit: Remove the two figures and the computer from this illu","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:01:41.090Z","kind":"wonder","usd":0.028075,"note":"critic-lee-kong-chian-s1-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:01:41.523Z","kind":"wonder","usd":0.042908,"note":"critic-teresa-hsu-s6-r1","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:01:42.216Z","kind":"wonder","usd":0.036204,"note":"direct-joseph-schooling-s6","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:01:44.195Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:01:50.125Z","kind":"sam","usd":0.0025,"note":"building","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:01:50.472Z","kind":"wonder","usd":0.035012,"note":"direct-lee-kong-chian-s3","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:01:56.815Z","kind":"wonder","usd":0.054868,"note":"critic-c-kunalan-s1-r0","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:02:01.635Z","kind":"sam","usd":0.0025,"note":"typewriter","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:02:03.622Z","kind":"wonder","usd":0.043768,"note":"critic-teresa-hsu-s6-r2","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:02:03.622Z","kind":"wonder","usd":0.045524,"note":"critic-joseph-schooling-s6-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:02:06.598Z","kind":"sam","usd":0.0025,"note":"boat","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:02:06.861Z","kind":"wonder","usd":0.039268,"note":"direct-sim-wong-hoo-s1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:02:11.494Z","kind":"wonder","usd":0.042331,"note":"critic-lee-kong-chian-s3-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:02:13.632Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:02:17.194Z","kind":"wonder","usd":0.032635,"note":"critic-c-kunalan-s1-r1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:02:17.638Z","kind":"wonder","usd":0.04326,"note":"direct-teresa-hsu-s7","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:02:24.823Z","kind":"wonder","usd":0.025911,"note":"critic-sim-wong-hoo-s1-r0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:02:25.614Z","kind":"wonder","usd":0.042143,"note":"critic-joseph-schooling-s6-r1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:02:28.570Z","kind":"wonder","usd":0.021095,"note":"critic-lee-kong-chian-s3-r1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:02:29.501Z","kind":"wonder","usd":0.035426,"note":"direct-c-kunalan-s3","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:02:34.804Z","kind":"wonder","usd":0.029458,"note":"direct-sim-wong-hoo-s3","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:02:34.812Z","kind":"wonder","usd":0.032356,"note":"critic-tan-howe-liang-s2-r0","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:02:38.362Z","kind":"wonder","usd":0.03594,"note":"direct-lee-kong-chian-s5","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:02:44.372Z","kind":"wonder","usd":0.033744,"note":"direct-tan-howe-liang-s4","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:02:45.103Z","kind":"wonder","usd":0.05396,"note":"critic-teresa-hsu-s7-r0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:02:49.505Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1918.\nStyle: hand-","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:02:50.156Z","kind":"wonder","usd":0.042548,"note":"critic-joseph-schooling-s6-r2","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:02:54.615Z","kind":"wonder","usd":0.044783,"note":"critic-c-kunalan-s3-r0","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:02:59.967Z","kind":"wonder","usd":0.038907,"note":"critic-lee-kong-chian-s5-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:03:00.586Z","kind":"wonder","usd":0.032594,"note":"direct-joseph-schooling-s9","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:03:02.546Z","kind":"wonder","usd":0.047876,"note":"critic-sim-wong-hoo-s3-r0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:03:16.667Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1927.\nStyle: hand-","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:03:16.754Z","kind":"wonder","usd":0.022623,"note":"critic-lee-kong-chian-s5-r1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:03:17.724Z","kind":"wonder","usd":0.025583,"note":"critic-joseph-schooling-s9-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:03:18.826Z","kind":"wonder","usd":0.048611,"note":"critic-c-kunalan-s3-r1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:03:24.785Z","kind":"wonder","usd":0.052708,"note":"critic-tan-howe-liang-s4-r0","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:03:24.995Z","kind":"wonder","usd":0.027954,"note":"direct-joseph-schooling-s11","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:03:26.838Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1935.\nStyle: hand-","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:03:26.932Z","kind":"wonder","usd":0.040431,"note":"critic-sim-wong-hoo-s3-r1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:03:27.215Z","kind":"wonder","usd":0.03582,"note":"direct-lee-kong-chian-s6","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:03:27.594Z","kind":"wonder","usd":0.055395,"note":"critic-teresa-hsu-s7-r1","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:03:40.403Z","kind":"wonder","usd":0.022619,"note":"critic-joseph-schooling-s11-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:03:40.980Z","kind":"wonder","usd":0.046656,"note":"critic-c-kunalan-s3-r2","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:03:48.728Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1951.\nStyle: 1950s","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:03:49.409Z","kind":"wonder","usd":0.03237,"note":"direct-joseph-schooling-s12","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:03:49.423Z","kind":"wonder","usd":0.047707,"note":"critic-tan-howe-liang-s4-r1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:03:49.556Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1982.\nStyle: 1970s","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:03:54.355Z","kind":"wonder","usd":0.035694,"note":"direct-c-kunalan-s5","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:03:54.874Z","kind":"image","usd":0.01,"note":"Square illustration for a biography, year 1955.\nStyle: 1950s","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:00.130Z","kind":"sam","usd":0.0025,"note":"easels","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:04.776Z","kind":"sam","usd":0.0025,"note":"potato","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:09.192Z","kind":"wonder","usd":0.042843,"note":"critic-joseph-schooling-s12-r0","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:04:12.139Z","kind":"wonder","usd":0.050903,"note":"critic-lee-kong-chian-s6-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:04:15.582Z","kind":"wonder","usd":0.054687,"note":"critic-teresa-hsu-s7-r2","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:04:19.457Z","kind":"wonder","usd":0.044259,"note":"critic-c-kunalan-s5-r0","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:04:19.754Z","kind":"sam","usd":0.0025,"note":"car","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:21.085Z","kind":"sam","usd":0.0025,"note":"woman","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:24.357Z","kind":"sam","usd":0.0025,"note":"easel","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:24.655Z","kind":"wonder","usd":0.03414,"note":"direct-teresa-hsu-s10","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:04:31.351Z","kind":"wonder","usd":0.049816,"note":"critic-joseph-schooling-s12-r1","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:04:32.300Z","kind":"sam","usd":0.0025,"note":"easel","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:41.091Z","kind":"wonder","usd":0.031343,"note":"critic-tan-howe-liang-s4-r2","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:04:42.574Z","kind":"wonder","usd":0.043911,"note":"critic-c-kunalan-s5-r1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:04:44.391Z","kind":"image","usd":0.01,"note":"edit: Remove the easels and the potato from this illustratio","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:51.054Z","kind":"wonder","usd":0.036116,"note":"direct-tan-howe-liang-s5","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:04:51.661Z","kind":"wonder","usd":0.047695,"note":"critic-teresa-hsu-s10-r0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:04:53.044Z","kind":"sam","usd":0.0025,"note":"huts","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:04:53.807Z","kind":"wonder","usd":0.052503,"note":"critic-lee-kong-chian-s6-r1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:04:57.322Z","kind":"wonder","usd":0.052712,"note":"critic-sim-wong-hoo-s3-r2","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:04:57.708Z","kind":"wonder","usd":0.045471,"note":"critic-joseph-schooling-s12-r2","job":"deep:joseph-schooling"}
+{"at":"2026-10-31T02:04:59.408Z","kind":"sam","usd":0.0025,"note":"durian","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:05.527Z","kind":"image","usd":0.01,"note":"edit: Remove the car and the easel from this illustration an","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:06.898Z","kind":"wonder","usd":0.043523,"note":"critic-c-kunalan-s5-r2","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:05:07.184Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:08.506Z","kind":"wonder","usd":0.043628,"note":"direct-sim-wong-hoo-s5","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:05:13.076Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the easel from this illustration ","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:14.316Z","kind":"sam","usd":0.0025,"note":"woman","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:17.979Z","kind":"wonder","usd":0.03331,"note":"direct-c-kunalan-s6","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:05:18.388Z","kind":"sam","usd":0.0025,"note":"canvases","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:22.073Z","kind":"sam","usd":0.0025,"note":"desk","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:23.810Z","kind":"wonder","usd":0.059656,"note":"critic-lee-kong-chian-s6-r2","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:05:24.326Z","kind":"sam","usd":0.0025,"note":"person","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:27.437Z","kind":"wonder","usd":0.038911,"note":"critic-tan-howe-liang-s5-r0","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:05:32.051Z","kind":"sam","usd":0.0025,"note":"easel","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:32.892Z","kind":"image","usd":0.01,"note":"edit: Remove the huts and the durian from this illustration ","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:34.521Z","kind":"wonder","usd":0.037972,"note":"direct-lee-kong-chian-s7","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:05:37.654Z","kind":"wonder","usd":0.049159,"note":"critic-sim-wong-hoo-s5-r0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:05:41.986Z","kind":"wonder","usd":0.042671,"note":"critic-c-kunalan-s6-r0","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:05:43.036Z","kind":"image","usd":0.01,"note":"edit: Remove the woman and the desk from this illustration a","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:54.090Z","kind":"wonder","usd":0.033423,"note":"critic-lee-kong-chian-s7-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:05:55.837Z","kind":"image","usd":0.01,"note":"edit: Remove the canvases and the easel from this illustrati","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:05:58.683Z","kind":"wonder","usd":0.027819,"note":"critic-sim-wong-hoo-s5-r1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:06:03.409Z","kind":"wonder","usd":0.039711,"note":"critic-tan-howe-liang-s5-r1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:06:06.815Z","kind":"wonder","usd":0.047315,"note":"critic-c-kunalan-s6-r1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:06:08.732Z","kind":"wonder","usd":0.030062,"note":"direct-sim-wong-hoo-s6","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:06:15.660Z","kind":"wonder","usd":0.034918,"note":"direct-georgette-chen-s3","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:06:16.645Z","kind":"wonder","usd":0.044063,"note":"critic-teresa-hsu-s10-r1","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:06:20.588Z","kind":"wonder","usd":0.044419,"note":"critic-lee-kong-chian-s7-r1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:06:26.453Z","kind":"wonder","usd":0.040711,"note":"critic-c-kunalan-s6-r2","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:06:28.266Z","kind":"wonder","usd":0.044051,"note":"critic-tan-howe-liang-s5-r2","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:06:35.320Z","kind":"wonder","usd":0.027855,"note":"critic-georgette-chen-s3-r0","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:06:38.129Z","kind":"wonder","usd":0.040144,"note":"direct-tan-howe-liang-s6","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:06:38.710Z","kind":"wonder","usd":0.041231,"note":"critic-teresa-hsu-s10-r2","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:06:42.292Z","kind":"wonder","usd":0.040343,"note":"critic-lee-kong-chian-s7-r2","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:06:44.319Z","kind":"wonder","usd":0.028934,"note":"direct-georgette-chen-s6","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:06:44.889Z","kind":"wonder","usd":0.044987,"note":"critic-sim-wong-hoo-s6-r0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:06:51.138Z","kind":"wonder","usd":0.03415,"note":"direct-lee-kong-chian-s9","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:07:01.529Z","kind":"wonder","usd":0.043239,"note":"critic-tan-howe-liang-s6-r0","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:07:08.326Z","kind":"wonder","usd":0.042547,"note":"critic-georgette-chen-s6-r0","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:07:09.687Z","kind":"wonder","usd":0.021107,"note":"critic-lee-kong-chian-s9-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:07:11.267Z","kind":"wonder","usd":0.045367,"note":"critic-sim-wong-hoo-s6-r1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:07:23.215Z","kind":"wonder","usd":0.040618,"note":"direct-lee-kong-chian-s10","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:07:24.535Z","kind":"wonder","usd":0.042839,"note":"critic-tan-howe-liang-s6-r1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:07:30.126Z","kind":"wonder","usd":0.023799,"note":"critic-sim-wong-hoo-s6-r2","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:07:33.075Z","kind":"sam","usd":0.0025,"note":"temple","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:07:37.180Z","kind":"wonder","usd":0.047799,"note":"critic-georgette-chen-s6-r1","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:07:40.561Z","kind":"wonder","usd":0.031898,"note":"direct-sim-wong-hoo-s8","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:07:43.435Z","kind":"sam","usd":0.0025,"note":"stadium","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:07:45.453Z","kind":"wonder","usd":0.038215,"note":"critic-tan-howe-liang-s6-r2","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:07:49.316Z","kind":"wonder","usd":0.050919,"note":"critic-lee-kong-chian-s10-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:07:53.107Z","kind":"sam","usd":0.0025,"note":"building","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:07:55.366Z","kind":"wonder","usd":0.038208,"note":"direct-tan-howe-liang-s8","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:08:02.683Z","kind":"wonder","usd":0.047855,"note":"critic-georgette-chen-s6-r2","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:08:05.300Z","kind":"wonder","usd":0.049403,"note":"critic-sim-wong-hoo-s8-r0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:08:11.854Z","kind":"wonder","usd":0.042575,"note":"critic-lee-kong-chian-s10-r1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:08:13.966Z","kind":"wonder","usd":0.03789,"note":"direct-georgette-chen-s8","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:08:15.853Z","kind":"wonder","usd":0.042371,"note":"critic-tan-howe-liang-s8-r0","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:08:31.107Z","kind":"sam","usd":0.0025,"note":"sculpture","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:08:35.398Z","kind":"wonder","usd":0.054319,"note":"critic-sim-wong-hoo-s8-r1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:08:35.465Z","kind":"wonder","usd":0.042579,"note":"critic-georgette-chen-s8-r0","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:08:35.754Z","kind":"wonder","usd":0.045199,"note":"critic-lee-kong-chian-s10-r2","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:08:37.106Z","kind":"wonder","usd":0.041715,"note":"critic-tan-howe-liang-s8-r1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:08:44.856Z","kind":"wonder","usd":0.031098,"note":"direct-lee-kong-chian-s11","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:08:50.709Z","kind":"sam","usd":0.0025,"note":"gate","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:08:57.145Z","kind":"wonder","usd":0.038703,"note":"critic-tan-howe-liang-s8-r2","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:08:58.886Z","kind":"wonder","usd":0.040439,"note":"critic-sim-wong-hoo-s8-r2","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:09:01.025Z","kind":"wonder","usd":0.047836,"note":"critic-georgette-chen-s8-r1","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:09:07.988Z","kind":"wonder","usd":0.043443,"note":"critic-lee-kong-chian-s11-r0","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:09:10.155Z","kind":"wonder","usd":0.030982,"note":"direct-sim-wong-hoo-s12","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:09:27.907Z","kind":"wonder","usd":0.047295,"note":"critic-georgette-chen-s8-r2","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:09:30.967Z","kind":"wonder","usd":0.043471,"note":"critic-sim-wong-hoo-s12-r0","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:09:31.240Z","kind":"wonder","usd":0.042551,"note":"critic-lee-kong-chian-s11-r1","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:09:46.052Z","kind":"wonder","usd":0.03568,"note":"direct-georgette-chen-s10","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:09:50.272Z","kind":"wonder","usd":0.029332,"note":"critic-lee-kong-chian-s11-r2","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:09:53.499Z","kind":"wonder","usd":0.042747,"note":"critic-sim-wong-hoo-s12-r1","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:10:05.769Z","kind":"wonder","usd":0.034512,"note":"critic-georgette-chen-s10-r0","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:10:14.116Z","kind":"wonder","usd":0.042895,"note":"critic-sim-wong-hoo-s12-r2","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:10:22.952Z","kind":"search","usd":0.099743,"note":"deep verify c-kunalan s1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:10:51.688Z","kind":"spark","usd":0.036899,"note":"deep-fix-c-kunalan","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:11:17.187Z","kind":"spark","usd":0.037711,"note":"deep-fix-repair-c-kunalan-0","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:11:40.194Z","kind":"search","usd":0.058212,"note":"deep verify c-kunalan s1","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:12:24.524Z","kind":"search","usd":0.168959,"note":"deep verify teresa-hsu s3","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:12:37.776Z","kind":"search","usd":0.193814,"note":"deep verify teresa-hsu s2","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:13:18.703Z","kind":"spark","usd":0.045536,"note":"deep-fix-teresa-hsu","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:13:45.516Z","kind":"spark","usd":0.038589,"note":"deep-fix-repair-teresa-hsu-0","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:14:24.382Z","kind":"search","usd":0.150627,"note":"deep verify teresa-hsu s8","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:14:28.615Z","kind":"search","usd":0.182918,"note":"deep verify teresa-hsu s2","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:15:20.066Z","kind":"spark","usd":0.047287,"note":"deep-fix-sim-wong-hoo","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:15:38.624Z","kind":"search","usd":0.046445,"note":"deep verify sim-wong-hoo s10","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:15:47.962Z","kind":"sam","usd":0.0025,"note":"music player","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:15:50.746Z","kind":"sam","usd":0.0025,"note":"player","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:15:55.004Z","kind":"sam","usd":0.0025,"note":"booth","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:31.692Z","kind":"sam","usd":0.0025,"note":"mp3 player","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:35.568Z","kind":"sam","usd":0.0025,"note":"device","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:38.727Z","kind":"sam","usd":0.0025,"note":"ipod","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:43.707Z","kind":"sam","usd":0.0025,"note":"phone","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:48.219Z","kind":"sam","usd":0.0025,"note":"sign","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:52.032Z","kind":"sam","usd":0.0025,"note":"screen","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:16:55.626Z","kind":"sam","usd":0.0025,"note":"display","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:17:06.886Z","kind":"sam","usd":0.0025,"note":"mp3 player","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:17:11.986Z","kind":"sam","usd":0.0025,"note":"sign","job":"deep:sim-wong-hoo"}
+{"at":"2026-10-31T02:21:34.115Z","kind":"spark","usd":0.032145,"note":"deep-fix-teresa-hsu","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:21:35.104Z","kind":"spark","usd":0.030875,"note":"deep-fix-tan-howe-liang","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:21:35.130Z","kind":"spark","usd":0.031281,"note":"deep-fix-jack-sim","job":"deep:jack-sim"}
+{"at":"2026-10-31T02:21:35.387Z","kind":"spark","usd":0.031671,"note":"deep-fix-c-kunalan","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:21:36.233Z","kind":"spark","usd":0.032038,"note":"deep-fix-lee-kong-chian","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:21:49.559Z","kind":"search","usd":0.027431,"note":"deep verify teresa-hsu s5","job":"deep:teresa-hsu"}
+{"at":"2026-10-31T02:21:50.187Z","kind":"search","usd":0.027148,"note":"deep verify lee-kong-chian s4","job":"deep:lee-kong-chian"}
+{"at":"2026-10-31T02:21:51.009Z","kind":"search","usd":0.053042,"note":"deep verify jack-sim s12","job":"deep:jack-sim"}
+{"at":"2026-10-31T02:21:52.362Z","kind":"search","usd":0.0243,"note":"deep verify c-kunalan s7","job":"deep:c-kunalan"}
+{"at":"2026-10-31T02:21:52.779Z","kind":"search","usd":0.0674,"note":"deep verify tan-howe-liang s4","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:21:53.183Z","kind":"spark","usd":0.052107,"note":"deep-fix-georgette-chen","job":"deep:georgette-chen"}
+{"at":"2026-10-31T02:21:55.034Z","kind":"search","usd":0.051807,"note":"deep verify tan-howe-liang s1","job":"deep:tan-howe-liang"}
+{"at":"2026-10-31T02:22:13.433Z","kind":"search","usd":0.067295,"note":"deep verify georgette-chen s7","job":"deep:georgette-chen"}

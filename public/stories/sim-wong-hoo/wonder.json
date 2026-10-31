@@ -1,0 +1,129 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-31T02:10:14.118Z",
+  "usd": 0.8367,
+  "passMark": 8,
+  "scenes": {
+    "s1": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "Publishable pull-back: opens tight on the boy and egg basket and steadily reveals the whole dawn kampung as he shrinks and drifts up the red-earth path, clearly expressing his walk away to market. The boy and basket share identical depth, drift and scale so they stay together with no tearing, doubling, halo or ghost, no layer is awkwardly clipped, and the final full-plate frame is a strong image to dwell on. The haze suits the misty dawn and the flat lithograph style is preserved throughout.",
+      "rationale": "A quiet beginning and journey: the film opens tight on the boy and his egg basket, then pulls back to reveal the dawn kampong as he drifts up the red-earth path and shrinks slightly, walking away to market before school.",
+      "ambient": "haze",
+      "rounds": 1,
+      "usd": 0.0652,
+      "seconds": 45,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/sim-wong-hoo/s1/scene.mp4?v=f2bfa906",
+      "poster": "/stories/sim-wong-hoo/s1/scene.jpg?v=f2bfa906"
+    },
+    "s3": {
+      "status": "directed",
+      "score": 7,
+      "ok": false,
+      "passed": false,
+      "verdict": "Film is coherent and era-appropriate but its reveal is too timid to publish; plate itself is clean.",
+      "rationale": "Keep the expressive reveal — start tight on the vivid accordion and pull back to discover the whole harmonica troupe — but make it coherent: reduce the opening zoom from 1.45 to 1.30 and lock both cut-outs at minimum depth 0.3 with no drift, scale or entrance, so the single player stays locked in the painted row and the accordion stays locked on its chair throughout. The move is still a clear, pur",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1705,
+      "seconds": 152,
+      "filmIssues": [
+        "The intended pull-back reveal is legible but timid: at t=0 the 1.30 zoom already shows all five players and most of the room, so there is little discovery as it settles to the full plate — it reads close to a plain slow zoom rather than a story-telling reveal.",
+        "The opening frame clips the side folding chairs awkwardly at both edges without being tight enough on the accordion to justify the crop; the final full-plate frame is, by contrast, a good dwell picture.",
+        "Subject coherence is good: the cut-out player stays locked in the painted row and the accordion stays on its front chair, with no tearing, doubling, halo or visible ghost in the frames, and the halftone-shimmer is fitting and subtle for the 1970s silkscreen style."
+      ],
+      "plateDefects": [],
+      "video": "/stories/sim-wong-hoo/s3/scene.mp4?v=2103f6d8",
+      "poster": "/stories/sim-wong-hoo/s3/scene.jpg?v=2103f6d8"
+    },
+    "s5": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "The pull-back clearly serves the story: it opens tight on the open computer and the two figures bent over it, then reveals the whole crowded 440-square-foot shop for the final dwell frame. Movement is visible and purposeful across all frames, the figures and computer remain locked together with no tearing, ghosting, doubled edges or awkward layer clipping, and the halftone-shimmer suits the silkscreen print style. Both the opening and final compositions read well. The plate shows no stray text, facial detail, anachronism or mangled subject.",
+      "rationale": "Keep the story — start tight on the open computer and pull back to reveal the whole cramped shop — but make it bolder and cleaner: a larger 1.45 to 1.0 pull-back with no layer entrances, and both cut-outs locked at the same depth with no independent drift or scale so the figures and the computer they lean over move as one group and cannot tear, separate, or ghost over the background. First frame i",
+      "ambient": "halftone-shimmer",
+      "rounds": 2,
+      "usd": 0.1206,
+      "seconds": 61,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/sim-wong-hoo/s5/scene.mp4?v=1c2d511e",
+      "poster": "/stories/sim-wong-hoo/s5/scene.jpg?v=1c2d511e"
+    },
+    "s6": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "The pull-back clearly serves the story: it opens tight on the man from behind and the freeway, then travels left and out to reveal the motel room, California map, lamp, bed and stacked circuit-board boxes that define his stake, ending on the complete plate which is a strong picture to dwell on. The man and boxes stay coherent through all six frames with no tearing, doubled edges, halo or ghost, nothing clips awkwardly, the halftone-shimmer suits the 1970s silkscreen print style, and the move reverses cleanly. The plate independently is clean: no stray text, the man is correctly seen from behind, no anachronism or mangled anatomy.",
+      "rationale": "Make the intended story unmistakable and coherent: open decisively tight on the man from behind and the glowing freeway, then pull back in a smooth leftward travel to reveal the full motel room, map, lamp, bed and his stacked circuit-board stake, ending on the complete wide plate to dwell on. Remove the man's mid-film entrance so he is solid throughout in both directions, and keep the single cut-o",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1442,
+      "seconds": 91,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/sim-wong-hoo/s6/scene.mp4?v=cb838bbb",
+      "poster": "/stories/sim-wong-hoo/s6/scene.jpg?v=cb838bbb"
+    },
+    "s8": {
+      "status": "directed",
+      "score": 7,
+      "ok": false,
+      "passed": false,
+      "verdict": "A readable pull-back for loss, but the opening frame awkwardly clips the piano and the man's extra shrink looks unnatural, so it does not yet clear the publish bar.",
+      "rationale": "Make the loss readable without pushing the piano out of frame: open closer on the man and blue player, then execute a clear pull-back to the full lobby while the near man additionally shrinks to 0.88 and recedes slightly, and the farther piano drifts inward into full view. The final wide, empty glass lobby becomes the dwell image, and the reverse move on turning back reads as a return to the man.",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1761,
+      "seconds": 89,
+      "filmIssues": [
+        "The intended pull-back for loss is legible, but the t=0 opening is not a good page-opening picture: at zoom 1.22 the piano at the left is awkwardly half-clipped by the frame edge, so the first held composition reads as a crop error rather than a deliberate close view of the man and blue player.",
+        "Shrinking the man to 0.88 while the camera pulls back makes him recede unnaturally against the fixed plinth and blue box; his stature drops noticeably across the sheet without a corresponding grounding movement, weakening the silhouette's coherence as a standing figure.",
+        "The movement is only a modest centred pull-back (1.22 to 1.0). The widening does reveal the lobby, but the blue box — the title object the man is contemplating — is never compositionally privileged, so the story beat is less purposeful than the rationale claims."
+      ],
+      "plateDefects": [
+        {
+          "detail": "The man is drawn as a black side-profile silhouette with visible nose, chin and ear, whereas the art direction specifies a man in a T-shirt seen from behind.",
+          "type": "face"
+        },
+        {
+          "detail": "The man is drawn as a side/profile silhouette facing right, not as a man seen from behind as directed; his head profile is clearly readable.",
+          "type": "face"
+        },
+        {
+          "detail": "The man is shown as a right-facing profile silhouette with nose/ear profile visible, not as a man seen from behind as directed.",
+          "type": "face"
+        }
+      ],
+      "video": "/stories/sim-wong-hoo/s8/scene.mp4?v=7ea85251",
+      "poster": "/stories/sim-wong-hoo/s8/scene.jpg?v=7ea85251"
+    },
+    "s12": {
+      "status": "kept-fixed-move",
+      "score": 5,
+      "ok": false,
+      "passed": false,
+      "verdict": "film",
+      "rationale": "A loss foreshadowed: open tight on the headphones from his last long night with his engineers, then pull back to reveal the empty chair and dark Jurong window, the headphones shrinking into the still, unoccupied room.",
+      "ambient": "dust",
+      "rounds": 3,
+      "usd": 0.1601,
+      "seconds": 75,
+      "filmIssues": [
+        "The stated reveal does not read: frame t=0 is already a wide view showing the empty chair, window, shoes and desk, so the empty-chair reveal is spoiled from the opening frame.",
+        "The pull-back from the claimed tight headphone framing is very slight across the six frames — little more than a plain slow zoom-out and no better in storytelling than a centred move.",
+        "The headphones cut-out itself stays coherent, with no visible tearing, doubling, halo or ghost, and nothing clips the frame awkwardly.",
+        "The final frame is a good dwelling picture: the complete, balanced still life is clear. The dust ambient is subtle and fitting for the lamp-lit night desk, and the cut-paper print style is preserved."
+      ],
+      "plateDefects": [],
+      "note": "best round scored 5, no better than a plain push-in"
+    }
+  }
+}

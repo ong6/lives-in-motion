@@ -1,0 +1,257 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:06:26.455Z",
+  "usd": 0.164,
+  "rationale": "A turning-point reveal: the camera opens tight on the young man and his folded document at the stair-top, then travels down and pulls back to discover the staircase and his parents waiting in the lit doorway below.",
+  "plan": {
+    "focusX": 0.51,
+    "focusY": 0.2,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.285,
+        "panX": 0.0225,
+        "panY": -0.06,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.135,
+        "panX": 0,
+        "panY": -0.0075,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": -0.0075,
+        "panY": 0.045,
+        "ease": "linear"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.7,
+        "driftX": 0,
+        "driftY": -0.015,
+        "scale": 1.0225,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.7,
+        "driftX": 0,
+        "driftY": -0.015,
+        "scale": 1.0225,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "A turning-point reveal: the camera opens tight on the young man and his folded document at the stair-top, then travels down and pulls back to discover the staircase and his parents waiting in the lit doorway below."
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Good reveal idea, ruined by a visible ghost halo around the young man and a clumsily clipped opening frame — do not publish this render.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Good reveal idea, ruined by a visible ghost halo around the young man and a clumsily clipped opening frame — do not publish this render.",
+      "filmIssues": [
+        "The pull-back concept is right — tight on the young man at the stair-top, then revealing the parents in the lit doorway below — but the execution is not publishable.",
+        "cut-1, the young man, has a conspicuous pale ghost outline / doubled halo around his head, shoulders and body in every frame, growing into dark hooked lines at his shoulders by t=0.6–1. This is the painted-over background showing where the layer has moved off its spot, and it destroys subject coherence.",
+        "cut-1 and cut-2 are given identical depth, drift and scale, yet the man still separates visibly from the clean plate; with the staircase also lifted as a layer, his feet and the stair treads risk sliding against the background rather than reading as one locked stair-top group.",
+        "At t=0 the 1.285 zoom clips the lower staircase awkwardly at the left and bottom edges, so the opening picture feels cropped rather than composed, while the last frame is the strongest, fullest picture to dwell on.",
+        "Ambient dust is suitably subtle and era-appropriate, and the 1950s offset-lithograph flat-ink style is otherwise retained."
+      ],
+      "fixes": [
+        "move damped to 75% (cut-1 10% off-frame at t=0.95)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.2,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.285,
+            "panX": 0.0225,
+            "panY": -0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.135,
+            "panX": 0,
+            "panY": -0.0075,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": -0.0075,
+            "panY": 0.045,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.7,
+            "driftX": 0,
+            "driftY": -0.015,
+            "scale": 1.0225,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.7,
+            "driftX": 0,
+            "driftY": -0.015,
+            "scale": 1.0225,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A turning-point reveal: the camera opens tight on the young man and his folded document at the stair-top, then travels down and pulls back to discover the staircase and his parents waiting in the lit doorway below."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish: a purposeful pull-back reveal in intent, but the parents are visible from the first frame and a growing black ghost halo around the young man breaks subject coherence throughout.",
+      "filmIssues": [
+        "The pull-back idea is right — tight on the man and document at the stair-top, widening to discover the parents in the lit doorway — but the reveal is weak: even at t=0 the parents and doorway are already fully visible, so nothing is actually discovered.",
+        "Severe ghosting around cut-1: from t=0.2 onward black curved doubled edges / halo arcs grow around the young man's head and shoulders, the visible painted-over spot where the cut-out has moved off the clean background. He does not stay coherent against the paper.",
+        "The 1.04 end scale on both layers lifts the man slightly off his painted step contact, compounding the floating / torn look at his feet where he meets cut-2, despite both layers nominally sharing depth 0.3.",
+        "Movement is otherwise a slow, timid zoom-out only — no stronger framing change between the stair-top opening and the full-plate dwell, and the parallax shift is what produces the ghost without adding legibility."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.32,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.3,
+            "panX": 0.015,
+            "panY": -0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.14,
+            "panX": 0.005,
+            "panY": -0.015,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1.04,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1.04,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Keep the bold turning-point reveal — open tight at 1.3 on the man and his document at the stair-top, travel down and pull back through the mid key to the full plate with the parents discovered in the doorway for the dwell frame — but lock cut-1 and cut-2 together as one stair-top group: both at minimum depth 0.3 so they track the clean background closely, zero independent drift, and identical 1.04"
+      }
+    },
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Not publishable: the intended reveal never happens and the young man carries a persistent pale ghost halo, while the plate itself is clean with no stray text, faces or anachronisms.",
+      "filmIssues": [
+        "The pull-back reveal does not read: the parents in the lit doorway are already fully visible in the first frame, and all six frames are almost the same full-plate composition, so there is no discovery between t=0 and t=1.",
+        "A pale halo/ghost outline is visible around the young man at the top of the stairs in every frame, showing where the cut-out has separated from its painted-over background spot.",
+        "The end frame is a good dwell picture, but because the opening is nearly identical to it, the film is no more expressive than a plain centred push-in/pull-out."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.28,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.35,
+            "panX": 0.01,
+            "panY": -0.07,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.15,
+            "panX": 0.005,
+            "panY": -0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Make the reveal actually read and remove the ghost's causes: open higher and tighter (1.35, focus raised to 0.28, panY -0.07) so the opening frames the man, document and stair-top and crops the lit doorway largely out, then pull back through 1.15 to the full 1.0 plate where the parents are discovered for the dwell frame. Lock cut-1 and cut-2 as one inseparable stair-top group — identical minimum d"
+      }
+    }
+  ]
+}

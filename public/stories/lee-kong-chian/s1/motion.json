@@ -1,0 +1,124 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:01:41.099Z",
+  "usd": 0.0639,
+  "rationale": "A quiet beginning becomes a journey out of Furong: opening tight on the boy and buffalo, the camera pulls back and travels left across the terraces to reveal the village and schoolhouse waiting behind them, while boy and buffalo move together as one along the path.",
+  "plan": {
+    "focusX": 0.62,
+    "focusY": 0.69,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.38,
+        "panX": 0.08,
+        "panY": 0.06,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.18,
+        "panX": 0.02,
+        "panY": 0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": -0.05,
+        "panY": -0.02,
+        "ease": "linear"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.85,
+        "driftX": 0.035,
+        "driftY": -0.01,
+        "scale": 1.04,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": 0.035,
+        "driftY": -0.01,
+        "scale": 1.04,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "haze",
+    "rationale": "A quiet beginning becomes a journey out of Furong: opening tight on the boy and buffalo, the camera pulls back and travels left across the terraces to reveal the village and schoolhouse waiting behind them, while boy and buffalo move together as one along the path."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publish. The pull-back is a clear, purposeful journey-out reveal: the film opens close on the boy and buffalo on the dyke, then widens and travels left to disclose the terraced hills, village houses and distant schoolhouse cited in the caption. The boy and buffalo share depth, drift and scale, so they stay together with the lead intact and no visible tearing, doubling, halo or ghosting. Neither subject clips the frame edge awkwardly, and the layered parallax preserves the hand-coloured engraving style. The first frame is a strong opening on the pair, while the final full view is a balanced picture to dwell on; the haze is subtle and appropriate for dawn in the Fujian terraces. The plate itself is clean: no stray text, the boy is correctly seen from behind, and there are no evident anachronisms or mangled forms.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publish. The pull-back is a clear, purposeful journey-out reveal: the film opens close on the boy and buffalo on the dyke, then widens and travels left to disclose the terraced hills, village houses and distant schoolhouse cited in the caption. The boy and buffalo share depth, drift and scale, so they stay together with the lead intact and no visible tearing, doubling, halo or ghosting. Neither subject clips the frame edge awkwardly, and the layered parallax preserves the hand-coloured engraving style. The first frame is a strong opening on the pair, while the final full view is a balanced picture to dwell on; the haze is subtle and appropriate for dawn in the Fujian terraces. The plate itself is clean: no stray text, the boy is correctly seen from behind, and there are no evident anachronisms or mangled forms.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.62,
+        "focusY": 0.69,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0.08,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.02,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": -0.05,
+            "panY": -0.02,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0.035,
+            "driftY": -0.01,
+            "scale": 1.04,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0.035,
+            "driftY": -0.01,
+            "scale": 1.04,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "haze",
+        "rationale": "A quiet beginning becomes a journey out of Furong: opening tight on the boy and buffalo, the camera pulls back and travels left across the terraces to reveal the village and schoolhouse waiting behind them, while boy and buffalo move together as one along the path."
+      }
+    }
+  ]
+}

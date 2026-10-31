@@ -1,0 +1,890 @@
+{
+  "slug": "lee-kong-chian",
+  "name": "Lee Kong Chian",
+  "born": "1893",
+  "died": "1967",
+  "tagline": "The cattle boy from Furong who became the Rubber and Pineapple King, then kept his name off what he gave.",
+  "edition": "deep",
+  "conflicts": [
+    {
+      "topic": "Age at death",
+      "choice": "Book follows dates 18 Oct 1893 to 2 Jun 1967, age 73 at death."
+    },
+    {
+      "topic": "Who paid off government bond",
+      "choice": "Book follows Cheng Hee Chuan paid compensation in 1914."
+    },
+    {
+      "topic": "Joining Tan Kah Kee and becoming manager",
+      "choice": "Book follows joined Tan in 1916 to run rubber exports; avoids differing manager promotion years."
+    },
+    {
+      "topic": "Founding own firm and Lee Rubber",
+      "choice": "Book follows smoke-house in Muar in 1927 and Lee Rubber Co. in 1931."
+    },
+    {
+      "topic": "End of OCBC chairmanship",
+      "choice": "Book follows vice-chairman 1932 and chairman 1938, omits end date."
+    },
+    {
+      "topic": "Scholarship place and sponsor",
+      "choice": "Book follows Qing scholarship to Nanjing in 1908."
+    },
+    {
+      "topic": "Correspondence course completion",
+      "choice": "Book says he took survey and correspondence courses, omits whether completed."
+    },
+    {
+      "topic": "National Library gift",
+      "choice": "Book follows $375,000 in 1953 conditional on free public library."
+    },
+    {
+      "topic": "Chinese High School chairmanship",
+      "choice": "Book omits Chinese High School chairmanship dates entirely."
+    },
+    {
+      "topic": "Wife's name",
+      "choice": "Book follows spelling Tan Ai Leh."
+    },
+    {
+      "topic": "Whether rice-and-seeds line was a pre-existing Malay saying",
+      "choice": "Book says he said the rice-and-seeds line in his inaugural address, without calling it a Malay saying."
+    }
+  ],
+  "breaks": [
+    {
+      "after": "s12",
+      "photo": {
+        "src": "/stories/lee-kong-chian/break-12/photo.webp",
+        "aspect": 0.75,
+        "kind": "place",
+        "concept": "building",
+        "label": "The Lee Kong Chian Natural History Museum, National University of Singapore, 2015",
+        "tag": "Place",
+        "year": "2015",
+        "credit": {
+          "artist": "KennethTan1971",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Lee_Kong_Chian_Natural_History_Museum,_NUS,_Singapore.jpg"
+        }
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "treatment": "theatre",
+      "year": "1893",
+      "title": "Cattle in Furong",
+      "caption": "Cattle moved ahead of him on the path out of Furong village, and lessons waited when he came back.",
+      "body": "Cattle moved ahead of him on the path out of Furong village, and lessons waited when he came back. Lee Kong Chian was born on 18 October 1893 in Furong village, Nan'an county, Fujian, and was also known as Geok Kun. He had his first schooling at the traditional private Chinese school in his home village, and while he studied he reared cattle to add to the family's income. His father, Lee Kuo Chuan, made ends meet in China by teaching, tailoring and hair-dressing. When the boy was about eight his mother died, and soon after he left Furong.",
+      "voice": "Between lessons he walked cattle to keep his family going.",
+      "turn": "Soon a ship would carry him far from Furong.",
+      "age": 0,
+      "visual": "Layered paper cut-out in misty greens and ochre: terraced hills of southern Fujian, a cluster of tiled village houses, a small boy seen from behind leading a water buffalo along a dyke at dawn, a schoolhouse roof in the distance.",
+      "cut": [
+        "boy",
+        "buffalo"
+      ],
+      "sources": [
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        },
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s1/plate.webp",
+      "background": "/stories/lee-kong-chian/s1/background.webp",
+      "video": "/stories/lee-kong-chian/s1/scene.mp4?v=46cd8225",
+      "poster": "/stories/lee-kong-chian/s1/scene.jpg?v=46cd8225",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boy",
+          "depth": 0.6,
+          "x": 47.16,
+          "y": 86,
+          "w": 10.81,
+          "src": "/stories/lee-kong-chian/s1/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "buffalo",
+          "depth": 0.8,
+          "x": 68.84,
+          "y": 81.94,
+          "w": 26.56,
+          "src": "/stories/lee-kong-chian/s1/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:00.888Z",
+        "note": "All names, dates and events match: born 18 Oct 1893 alias Geok Kun, Furong Nan'an schooling cattle-rearing and father Lee Kuo Chuan teaching/tailoring/hair-dressing, mother died age 8 and moved 1903 age 10 to join father soon after mother passed",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    },
+    {
+      "id": "s2",
+      "treatment": "line",
+      "year": "1903",
+      "title": "A bed in Lim Loh's shophouse",
+      "caption": "At ten he sailed to Singapore to join his father, in search of a better living.",
+      "body": "At ten he sailed to Singapore to join his father, in search of a better living. To save money, father and son lodged in a shophouse belonging to fellow villager Lim Loh. Unlike many boys who arrived to work as coolies, he was sent to school with money from a family friend, and that kindness later inspired his own giving to education. His first school was the Anglo-Tamil School on Serangoon Road, where he learnt English, with Chinese in the afternoons or at weekends at Chong Cheng School. He went on to St Joseph's Institution and Tao Nan School, attending English and Chinese schools in the same day.",
+      "voice": "Two schools a day, paid for by a friend's kindness.",
+      "turn": "A scholarship would soon take him back across the sea.",
+      "age": 10,
+      "visual": "Pen drawing on cream paper: the upper floor of a 1900s shophouse, a camp bed under shuttered windows, a cloth bundle and slate on the floor; a boy seen from behind at the window looking down at a busy five-foot way.",
+      "cut": [
+        "boy",
+        "bed"
+      ],
+      "sources": [
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        },
+        {
+          "label": "NUS, 'Our Chancellors: Lee Kong Chian 1962-1965' (biographical sheet, PDF)",
+          "url": "https://www.nus.edu.sg/docs/default-source/corporate-files/about/community/chancellors/lee-kong-chian.pdf"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s2/plate.webp",
+      "background": "/stories/lee-kong-chian/s2/background.webp",
+      "line": "/stories/lee-kong-chian/s2/line.json",
+      "video": "/stories/lee-kong-chian/s2/scene.mp4?v=a96e5a76",
+      "poster": "/stories/lee-kong-chian/s2/scene.jpg?v=a96e5a76",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boy",
+          "depth": 0.6,
+          "x": 52.5,
+          "y": 82.44,
+          "w": 11.63,
+          "src": "/stories/lee-kong-chian/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "bed",
+          "depth": 0.8,
+          "x": 22.59,
+          "y": 82.88,
+          "w": 37.31,
+          "src": "/stories/lee-kong-chian/s2/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:19.820Z",
+        "note": "1903 age-10 arrival to join father, Lim Loh shophouse to save money, coolies vs family-friend schooling inspiring education giving, Anglo-Tamil Serangoon + Chongzheng afternoons and dual-day SJI/Tao Nan schooling matching weekends/Chong Cheng and transfer",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lee_Kong_Chian",
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "treatment": "archive",
+      "year": "1908",
+      "title": "The false queue",
+      "caption": "A false queue hid the hair he had cut in class in China.",
+      "body": "A false queue hid the hair he had cut in class in China. At 15 he won a Qing government scholarship to study in Nanjing, recommended by the Chinese Chamber of Commerce. He excelled in mathematics, physics and chemistry and graduated as the top student two years later. He enrolled at Tsinghua in Beijing, then moved to the railway and mining college at Tangshan to study engineering. Pressed by older students, he cut off his queue and reportedly wore a false queue in class. When his Manchu scholarship ended abruptly, he was sent back to Singapore in 1912 without a degree.",
+      "voice": "He cut off his queue, then wore a false one to class.",
+      "turn": "Home held four jobs in a single day.",
+      "age": 15,
+      "visual": "Archive-print plate, sepia halftone with a deckled border and typed caption strip: a 1910 college lecture hall with wooden benches, a blackboard of equations, one student seen from behind with a long braided queue down his back.",
+      "cut": [
+        "student",
+        "blackboard"
+      ],
+      "sources": [
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s3/plate.webp",
+      "background": "/stories/lee-kong-chian/s3/background.webp",
+      "video": "/stories/lee-kong-chian/s3/scene.mp4?v=60fcf14f",
+      "poster": "/stories/lee-kong-chian/s3/scene.jpg?v=60fcf14f",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "student",
+          "depth": 0.6,
+          "x": 49.69,
+          "y": 87.5,
+          "w": 18.25,
+          "src": "/stories/lee-kong-chian/s3/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "blackboard",
+          "depth": 0.8,
+          "x": 50.34,
+          "y": 58.5,
+          "w": 59.19,
+          "src": "/stories/lee-kong-chian/s3/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:07.109Z",
+        "note": "Matches sources: 1908 Qing scholarship age 15 to Jinan in Nanjing on Chamber recommendation; excelled maths/physics/chemistry top honours; 1911 Tsinghua then Tangshan railway/mining engineering; coerced queue-cut, false queue in class; 1912 return when Manchurian scholarship ended.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "treatment": "line",
+      "year": "1912",
+      "title": "Up at five",
+      "caption": "At five in the morning he was already awake in Singapore.",
+      "body": "At five in the morning he was already awake in Singapore. Starting at six he worked as an assistant in the Survey Department, translated English articles for the Chinese daily Lat Pau in the afternoon, and taught at Tao Nan and Chong Cheng schools at night. He took a survey and geodesy class and an American correspondence course in civil engineering. In the civil service General Orders he found that only men of pure European descent could hold top posts, and this colour bar pushed him to leave government work. Cheng Hee Chuan paid the government compensation so Lee could break his five-year bond, but their venture importing Chinese goods failed because the goods were poor.",
+      "voice": "Four jobs, two courses, and one sentence in a rulebook.",
+      "turn": "An umbrella waited at a streetside eatery.",
+      "age": 19,
+      "visual": "Pen drawing with grey wash: a narrow desk under a kerosene lamp, a theodolite case, a stack of Lat Pau newsprint and a correspondence-course booklet; through the window, a pre-dawn street. A young man seen from behind pulling on his jacket.",
+      "cut": [
+        "young man",
+        "theodolite"
+      ],
+      "sources": [
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s4/plate.webp",
+      "background": "/stories/lee-kong-chian/s4/background.webp",
+      "line": "/stories/lee-kong-chian/s4/line.json",
+      "video": "/stories/lee-kong-chian/s4/scene.mp4?v=d187db1e",
+      "poster": "/stories/lee-kong-chian/s4/scene.jpg?v=d187db1e",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "young man",
+          "depth": 0.6,
+          "x": 63.47,
+          "y": 96.31,
+          "w": 46.06,
+          "src": "/stories/lee-kong-chian/s4/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "theodolite",
+          "depth": 0.8,
+          "x": 63.47,
+          "y": 96.38,
+          "w": 46.19,
+          "src": "/stories/lee-kong-chian/s4/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T02:21:50.188Z",
+        "note": "5am rise/6am Survey assistant, Lat Pau translation, Tao Nan/Chong Cheng night teaching and both engineering courses match, as do pure-European-descent bar, 5-year-bond payoff and inferior-Chinese-goods failure",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "treatment": "theatre",
+      "year": "1916",
+      "title": "The borrowed umbrella",
+      "caption": "Rain was falling at a streetside eatery when he offered his umbrella to another diner.",
+      "body": "Rain was falling at a streetside eatery when he offered his umbrella to another diner. The story goes that he met Tan Kah Kee one rainy evening at a streetside eatery and lent him an umbrella, and collecting it at Tan's factory, he translated English papers for Tan's first American clients. Before he married he had slept in simple places, the office of his first employer, Cheng Hee Chuan, and the teachers' quarters at Tao Nan School. He was reluctant to take Tan's job, because it meant giving up his plan to study engineering in Hong Kong. He joined Tan Kah Kee's Khiam Aik company to run its rubber exports to America and Europe, prized for his English and Chinese.",
+      "voice": "An umbrella lent in the rain, collected at the right moment.",
+      "turn": "Soon he would ride third class as a manager.",
+      "age": 23,
+      "visual": "Paper-cut night scene in indigo and wet lamplight: a streetside eatery under a canvas awning, rain lines, two figures seen from behind at a marble table; one passes a black umbrella to the other. A rubber factory chimney in the background.",
+      "cut": [
+        "umbrella",
+        "two figures"
+      ],
+      "sources": [
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s5/plate.webp",
+      "background": "/stories/lee-kong-chian/s5/background.webp",
+      "video": "/stories/lee-kong-chian/s5/scene.mp4?v=80266a7d",
+      "poster": "/stories/lee-kong-chian/s5/scene.jpg?v=80266a7d",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "umbrella",
+          "depth": 0.6,
+          "x": 48.03,
+          "y": 57.38,
+          "w": 4.06,
+          "src": "/stories/lee-kong-chian/s5/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "two figures",
+          "depth": 0.8,
+          "x": 40.97,
+          "y": 80.44,
+          "w": 15.56,
+          "src": "/stories/lee-kong-chian/s5/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:27.721Z",
+        "note": "Umbrella meeting, quarters, HK-engineering plan and reluctance, 1916 Khiam Aik role to expand to America/Europe for bilingual ability all match.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        ]
+      }
+    },
+    {
+      "id": "s6",
+      "treatment": "theatre",
+      "year": "1920",
+      "title": "The eldest daughter",
+      "caption": "Already a manager at Tan's company, he rode the tram in third class, while his school friend Tan Ee Leong, still a student, sat in second.",
+      "body": "Already a manager at Tan's company, he rode the tram in third class, while his school friend Tan Ee Leong, still a student, sat in second. Tan Ee Leong remembers, \"I felt so embarrassed, because he was already working, (and) I was still a student\". In 1920 he married Tan Kah Kee's eldest daughter, Tan Ai Leh. His bride was 17 and about to sit her final exams, and she gave them up to marry him. Many read the marriage as Tan's way of keeping a gifted manager from becoming a rival. Tan also sold him 100 Chinese Commercial Bank shares for $10,000, and he joined its board in 1923. Even after he bought a large house on Chancery Lane, he reportedly ate with 1-cent nickel spoons.",
+      "voice": "I felt so embarrassed, because he was already working, (and) I was still a student",
+      "turn": "It took seven years to earn his own smoke-house.",
+      "age": 27,
+      "quote": {
+        "text": "I felt so embarrassed, because he was already working, (and) I was still a student",
+        "speaker": "Tan Ee Leong",
+        "source": {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        }
+      },
+      "visual": "A 1920s Singapore electric tram at a stop beside shophouses, its open carriages seen from the side; in the third-class carriage a young man in a white suit seen from behind; a rickshaw waits at the kerb.",
+      "cut": [
+        "tram",
+        "rickshaw"
+      ],
+      "sources": [
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s6/plate.webp",
+      "background": "/stories/lee-kong-chian/s6/background.webp",
+      "video": "/stories/lee-kong-chian/s6/scene.mp4?v=7e980664",
+      "poster": "/stories/lee-kong-chian/s6/scene.jpg?v=7e980664",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "tram",
+          "depth": 0.6,
+          "x": 53.44,
+          "y": 81,
+          "w": 69,
+          "src": "/stories/lee-kong-chian/s6/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "rickshaw",
+          "depth": 0.8,
+          "x": 16.13,
+          "y": 88.5,
+          "w": 24.5,
+          "src": "/stories/lee-kong-chian/s6/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:40.530Z",
+        "note": "Tram quote, 1920 marriage to 17-year-old Tan Ai Leh, rival-motive reading, 100 shares/$10,000/1923 board and Chancery Lane spoons all match sources",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    },
+    {
+      "id": "s7",
+      "treatment": "theatre",
+      "year": "1927",
+      "title": "A smoke-house in Muar",
+      "caption": "Smoke hung over sheets of raw rubber in a small smoke-house in Muar, Johor.",
+      "body": "Smoke hung over sheets of raw rubber in a small smoke-house in Muar, Johor. Seven years after the wedding he opened it, only with his father-in-law's approval and a promise not to compete with him. He bought a rubber plantation, named it Furong Garden after his home village, and set up Nam Aik, where Nam stood for Nan'an and Aik for Tan's Khiam Aik, in gratitude to his mentor. He persuaded the Hongkong and Shanghai Bank to settle his friend Lim Nee Soon's large debt, and in thanks Lim leased him his rubber factory in Nee Soon village, which Lee named Lam Aik.",
+      "voice": "A company named for home, and for gratitude.",
+      "turn": "Then prices began to fall everywhere.",
+      "age": 34,
+      "visual": "Layered paper cut-out in smoky amber: a timber smoke-house on stilts, rows of brown rubber sheets hanging on bamboo poles in drifting smoke, a river behind; a man seen from behind lifting one sheet to the light.",
+      "cut": [
+        "man",
+        "rubber sheets"
+      ],
+      "sources": [
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s7/plate.webp",
+      "background": "/stories/lee-kong-chian/s7/background.webp",
+      "video": "/stories/lee-kong-chian/s7/scene.mp4?v=d839ba78",
+      "poster": "/stories/lee-kong-chian/s7/scene.jpg?v=d839ba78",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "man",
+          "depth": 0.6,
+          "x": 50.59,
+          "y": 92.25,
+          "w": 22.44,
+          "src": "/stories/lee-kong-chian/s7/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "rubber sheets",
+          "depth": 0.8,
+          "x": 50.59,
+          "y": 92.31,
+          "w": 22.44,
+          "src": "/stories/lee-kong-chian/s7/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:42.902Z",
+        "note": "1920 wedding to 1927 Muar smoke-house with approval/non-compete, Furong Garden/Nam Aik in 1928 with Nam=Nan'an/Aik=Khiam Aik gratitude, and Lim Nee Soon HSBC debt-lease as Lam Aik all correct.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+          "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        ]
+      }
+    },
+    {
+      "id": "s8",
+      "treatment": "line",
+      "year": "1932",
+      "title": "Buy today, sell today",
+      "caption": "A lot of rubber was sold almost as soon as it was bought.",
+      "body": "A lot of rubber was sold almost as soon as it was bought. Through the Depression he bought rubber and sold it at once instead of stockpiling, and by 1932 his was one of only two or three big Chinese rubber firms still standing. Tan Kah Kee's company was forced to wind up. He set up Lee Rubber Co. along with Lee Pineapple, Lee Produce, Lee Sawmills, Lee Printing and Lee Biscuits, and became known as the Rubber and Pineapple King. He brokered the merger of three Chinese banks into OCBC at the end of 1932, served as vice-chairman, and became chairman in 1938. He paid low salaries but large bonuses in every profitable year, put qualified managers rather than relatives in charge, and kept modern accounts.",
+      "voice": "His father-in-law's empire fell; his own held.",
+      "turn": "A meeting in America would keep him away.",
+      "age": 39,
+      "visual": "Loose pen drawing like a ledger page come to life: a falling price line inked across the page, crates of canned pineapple and bales of rubber on a godown floor, an abacus; a figure from behind at a high desk.",
+      "cut": [
+        "crates",
+        "bales"
+      ],
+      "sources": [
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s8/plate.webp",
+      "background": "/stories/lee-kong-chian/s8/background.webp",
+      "line": "/stories/lee-kong-chian/s8/line.json",
+      "video": "/stories/lee-kong-chian/s8/scene.mp4?v=8c12e007",
+      "poster": "/stories/lee-kong-chian/s8/scene.jpg?v=8c12e007",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "crates",
+          "depth": 0.6,
+          "x": 35.66,
+          "y": 82.56,
+          "w": 23.19,
+          "src": "/stories/lee-kong-chian/s8/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "bales",
+          "depth": 0.8,
+          "x": 71.13,
+          "y": 65.94,
+          "w": 9.63,
+          "src": "/stories/lee-kong-chian/s8/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:46:39.516Z",
+        "note": "Chapter matches sources: immediate resale/no stockpile and 2-3 firms left by 1932, Tan Kah Kee Co wound up, 1931 Lee companies list, Rubber and Pineapple King, OCBC end-1932 vice-chairman/chairman 1938, low salaries/extravagant bonuses, qualified managers/modern accounting",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        ]
+      }
+    },
+    {
+      "id": "s9",
+      "treatment": "theatre",
+      "year": "1941",
+      "title": "Four years away from home",
+      "caption": "A suitcase was packed for a rubber meeting in the United States.",
+      "body": "A suitcase was packed for a rubber meeting in the United States. In late 1941 Lee left with his wife and three of their children, and he could not get home for almost four years. While waiting there he lectured at Columbia University. Back at the end of 1945, he rebuilt his factories with a loan from the Hongkong and Shanghai Bank. When rubber prices rose in the early 1950s his mills were ready, and Lee Rubber became the world's largest rubber exporter. He introduced management shares, built homes for his own workers with a salary-deduction purchase scheme, and brought in IBM machines.",
+      "voice": "He left for a meeting and could not come home for four years.",
+      "turn": "Home again, he began to give things away.",
+      "age": 48,
+      "visual": "A rubber mill being rebuilt: new timber roof trusses over smoke-house racks hung with brown rubber sheets, a lorry at the loading bay, workers seen from behind carrying sheets; a man in a light suit seen from behind at the mill gate.",
+      "cut": [
+        "man",
+        "lorry"
+      ],
+      "sources": [
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s9/plate.webp",
+      "background": "/stories/lee-kong-chian/s9/background.webp",
+      "video": "/stories/lee-kong-chian/s9/scene.mp4?v=fe9f65e9",
+      "poster": "/stories/lee-kong-chian/s9/scene.jpg?v=fe9f65e9",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "man",
+          "depth": 0.6,
+          "x": 77.66,
+          "y": 93.69,
+          "w": 10.81,
+          "src": "/stories/lee-kong-chian/s9/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "lorry",
+          "depth": 0.8,
+          "x": 27.22,
+          "y": 90.69,
+          "w": 48.44,
+          "src": "/stories/lee-kong-chian/s9/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:46:38.186Z",
+        "note": "Washington meeting with wife+3 children weeks before invasion, Columbia lectures, end-1945 return on HSBC loan for 1950s Korean-War boom to world's largest exporter, 1950 shares/1951 salary-deduction homes and 1954 IBM machines all match.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    },
+    {
+      "id": "s10",
+      "treatment": "archive",
+      "year": "1952",
+      "title": "Name it after my father",
+      "caption": "A library door in Singapore was meant to stay open to anyone.",
+      "body": "A library door in Singapore was meant to stay open to anyone. He gave $375,000 for the National Library on Stamford Road on condition that it be a free public library, and laid its foundation stone on 16 August 1957. He had set up the Lee Foundation with $3.5 million in 1952. He asked that his name not be used on the institutions he funded, and many took his father's name, Lee Kuo Chuan, instead. He retired in 1954 after grooming his sons to take over, having watched Tan Kah Kee's giving hurt his business, and only then took up charity work full time. He gave $25,000 to the victims of the Bukit Ho Swee fire, after helping victims of many earlier kampong fires.",
+      "voice": "He paid for the buildings and asked them to carry his father's name.",
+      "turn": "At seventy he was still learning new words.",
+      "age": 59,
+      "visual": "Archive-print plate framed like a 1960 newspaper photo: the red-brick National Library on Stamford Road on opening day, a queue of schoolchildren and trishaws outside; a brass plaque by the door left deliberately blank.",
+      "cut": [
+        "library",
+        "children"
+      ],
+      "sources": [
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s10/plate.webp",
+      "background": "/stories/lee-kong-chian/s10/background.webp",
+      "video": "/stories/lee-kong-chian/s10/scene.mp4?v=2317283c",
+      "poster": "/stories/lee-kong-chian/s10/scene.jpg?v=2317283c",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "library",
+          "depth": 0.6,
+          "x": 33.5,
+          "y": 87.56,
+          "w": 5,
+          "src": "/stories/lee-kong-chian/s10/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "children",
+          "depth": 0.8,
+          "x": 53.94,
+          "y": 83.63,
+          "w": 3.5,
+          "src": "/stories/lee-kong-chian/s10/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:46:51.011Z",
+        "note": "All checks match: $375k free-library gift & 16 Aug 1957 stone, Lee Foundation $3.5m in 1952, no-name request/father Lee Kuo Chuan, 1954 retirement after Tan Kah Kee business cost, $25k Bukit Ho Swee + earlier kampong fires",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    },
+    {
+      "id": "s11",
+      "treatment": "theatre",
+      "year": "1962",
+      "title": "Plant good seeds",
+      "caption": "Robes waited for him at the Victoria Theatre on 12 June 1962.",
+      "body": "Robes waited for him at the Victoria Theatre on 12 June 1962. He was installed as the first chancellor of the University of Singapore and its first Asian chancellor. He told the audience at his inaugural address about rice and seed: \"Whoever wants to harvest good rice, must also plant good seeds.\" At about 70 he studied Malay with a teacher and by listening to Malay radio, and after retiring he also picked up French and German. He was treated for liver cancer at Queen Mary Hospital in Hong Kong in 1964, went to Shanghai to see doctors in 1965, and resigned as chancellor in 1965 because of ill health.",
+      "voice": "Whoever wants to harvest good rice, must also plant good seeds.",
+      "turn": "Two years later he would say goodbye.",
+      "age": 68,
+      "quote": {
+        "text": "Whoever wants to harvest good rice, must also plant good seeds.",
+        "speaker": "Lee Kong Chian",
+        "source": {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        }
+      },
+      "visual": "Paper-cut theatre interior in deep crimson and gold: the Victoria Theatre stage from the back of the hall, rows of graduates' mortarboards in silhouette, a robed figure seen from behind at the lectern under a pool of light; a sheaf of rice tied with ribbon on the lectern.",
+      "cut": [
+        "robed figure",
+        "lectern"
+      ],
+      "sources": [
+        {
+          "label": "UTAR Lee Kong Chian Faculty of Engineering and Science, 'Tan Sri Dato' Lee Kong Chian: Entrepreneur, Educator and Philanthropist'",
+          "url": "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+        },
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        },
+        {
+          "label": "NUS, 'Our Chancellors: Lee Kong Chian 1962-1965' (biographical sheet, PDF)",
+          "url": "https://www.nus.edu.sg/docs/default-source/corporate-files/about/community/chancellors/lee-kong-chian.pdf"
+        }
+      ],
+      "plate": "/stories/lee-kong-chian/s11/plate.webp",
+      "background": "/stories/lee-kong-chian/s11/background.webp",
+      "video": "/stories/lee-kong-chian/s11/scene.mp4?v=09ad5486",
+      "poster": "/stories/lee-kong-chian/s11/scene.jpg?v=09ad5486",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "robed figure",
+          "depth": 0.6,
+          "x": 50.38,
+          "y": 68.38,
+          "w": 20.25,
+          "src": "/stories/lee-kong-chian/s11/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "lectern",
+          "depth": 0.8,
+          "x": 50.34,
+          "y": 68.44,
+          "w": 20.31,
+          "src": "/stories/lee-kong-chian/s11/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-31T01:48:39.732Z",
+        "note": "It was not a pre-existing Malay saying but a quote he made himself in his inaugural speech as Chancellor → Rewritten from the research and checked again: Installation, titles, quote, languages and illness/resignation all match: first Chancellor 12 June 1962 Victoria Theatre, first Asian Chancellor, rice/seeds quote, Malay at 70 via teacher/radio, French/German after retirement, 1964 Queen Mary Hong Kong liver treatment and 1965 Shanghai exam, installed 1962 resigned 1965 ill health",
+        "sources": [
+          "https://www.nus.edu.sg/docs/default-source/corporate-files/about/community/chancellors/lee-kong-chian.pdf",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+          "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/",
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        ]
+      }
+    },
+    {
+      "id": "s12",
+      "treatment": "photo",
+      "year": "1967",
+      "title": "The name comes back",
+      "caption": "Morning came to the house on Mount Rosie on 2 June 1967.",
+      "body": "Morning came to the house on Mount Rosie on 2 June 1967. He died peacefully there, and the funeral was at Mount Vernon Crematorium. He left a wife, three sons, three daughters and grandchildren. He left half his fortune to the Lee Foundation, which had already given $10 million by March 1967. It later gave S$60 million to the National Library and S$150 million to NTU's medical school. He had asked that his name not be used on the institutions he funded, and many had taken his father's name, Lee Kuo Chuan, instead. After his death his name went up on the buildings, from the Lee Kong Chian Reference Library to the medical school.",
+      "voice": "His name went up only after he was gone.",
+      "turn": "His father's name was there first.",
+      "age": 73,
+      "photo": {
+        "src": "/stories/lee-kong-chian/s12/photo.webp",
+        "aspect": 1.3333,
+        "kind": "place",
+        "concept": "statue",
+        "label": "His statue at Hwa Chong Institution, Singapore, 2009",
+        "tag": "Place",
+        "year": "2009",
+        "focus": [
+          0.488,
+          0.328
+        ],
+        "cutout": "/stories/lee-kong-chian/s12/cutout.webp",
+        "trace": "/stories/lee-kong-chian/s12/trace.json",
+        "credit": {
+          "artist": "Mh",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Lee_Kong_Chian_Statue_Side_View.jpg"
+        }
+      },
+      "visual": "His statue at Hwa Chong Institution, Singapore, 2009",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Bonny Tan, 'Destined to be an Entrepreneur and a Philanthropist to be Remembered', BiblioAsia vol 4 issue 2 (7 Jan 2008)",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        },
+        {
+          "label": "Wikipedia: Lee Kong Chian",
+          "url": "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+        },
+        {
+          "label": "NLB Singapore Infopedia, 'Lee Kong Chian' (Nor-Afidah Abd Rahman and Jane Wee)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:46:58.403Z",
+        "note": "Death 2 June 1967 at Mount Rosie, funeral at Mount Vernon survived by wife/3 sons/3 daughters/grandchildren, half fortune to Foundation and $10m by March 1967, $60m library and $150m medical school named for him, requested name not used with father Lee Kuo Chuan used instead.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+        ]
+      }
+    }
+  ]
+}

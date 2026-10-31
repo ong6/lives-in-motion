@@ -1,0 +1,102 @@
+{
+  "model": "muse-wonder-1.0",
+  "updated": "2026-10-31T02:06:26.457Z",
+  "usd": 0.6317,
+  "passMark": 8,
+  "scenes": {
+    "s1": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "Publishable pull-back reveal: the film opens tight on the running pack and front boy, then tracks right and pulls back to disclose the school, field, angsana trees and chimney for a clear, legible dwell frame. The front boy and football stay coherent with no visible ghosting, tearing, halo or awkward edge clipping, their relative drift suggests the chase, and the subtle dust fits the dry afternoon field while retaining the flat offset-print look.",
+      "rationale": "Bolder chase: open tight on the pack and front boy, then track right and pull back only to a settled medium-wide so the field, school and trees are revealed while the front boy (faster drift) visibly gains on the slower ball. Ending at zoom 1.06 with restrained ball drift keeps the football well inside the right edge for the dwell frame, and warm dust suits a dry afternoon school field better than",
+      "ambient": "dust",
+      "rounds": 2,
+      "usd": 0.1248,
+      "seconds": 59,
+      "filmIssues": [],
+      "plateDefects": [
+        {
+          "detail": "The ball is drawn as an oval American-football/rugby ball with laces, not the round association football the caption and 1955 Singapore school scene call for.",
+          "type": "mangled-subject"
+        }
+      ],
+      "video": "/stories/c-kunalan/s1/scene.mp4?v=3e25cbc5",
+      "poster": "/stories/c-kunalan/s1/scene.jpg?v=3e25cbc5"
+    },
+    "s3": {
+      "status": "kept-fixed-move",
+      "score": 5,
+      "ok": false,
+      "passed": false,
+      "verdict": "Do not publish: a coherent, era-appropriate pull-back, but it is effectively a plain camera move with no realised tick-to-courtyard-to-gate reveal and no purposeful layer storytelling.",
+      "rationale": "A quiet beginning at a new school: the camera reveals the courtyard by opening tight on the nine chalk ticks and pulling back across to the whole game, while the child cut-out travels left toward the ball and teacher to join them.",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1755,
+      "seconds": 84,
+      "filmIssues": [
+        "The pull-back is visible but timid and generic: frames t=0 to t=1 differ mainly by a modest widening and rightward pan, little more expressive than a plain centred push-in played in reverse.",
+        "The opening is not tight on the nine chalk ticks as the rationale claims — at t=0 the whole courtyard, ball, children and gate are already readable, so there is no real reveal of the game or of the waiting man at the gate.",
+        "Layer motion does not tell the story: only cut-1 is given a drift, cut-2 is absent from the plan, and in the frames the teacher/children barely separate from the background. The rationale also misattributes the moving cut-out to a child when cut-1 is listed as the teacher.",
+        "The first frame clips the composition awkwardly at the left orange wall and right gate compared with the final frame, rather than being a deliberate close opening picture; the last frame is the only strong, balanced dwell image.",
+        "Halftone-shimmer is fitting for the 1950s lithograph style and remains subtle, with no obvious tearing, doubled edges or ghosting visible in the frames."
+      ],
+      "plateDefects": [
+        {
+          "detail": "The chalk marks on the orange wall are rendered as two rows of repeated letter-like 'H' glyphs and number far more than the nine small chalk ticks specified — they read as stray lettering rather than nine tally ticks.",
+          "type": "stray-text"
+        },
+        {
+          "detail": "The chalk ticks on the left wall are rendered as repeated 'H'-like letterforms and number well over nine, rather than nine small chalk tally ticks — stray letter-like marks that contradict the 'Nine visits' motif.",
+          "type": "stray-text"
+        }
+      ],
+      "note": "best round scored 5, no better than a plain push-in"
+    },
+    "s5": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "Right story, timid execution: a claimed 1.4-to-1.0 pull-back for isolation was clamped to about 1.22-to-1.0, so the runner never dominates and the reveal of the foreground evidence barely registers. Do not publish as-is; re-render bolder with the foreground layer made less depth-sensitive so the big opening zoom survives.",
+      "rationale": "Make the pull-back for isolation unmistakable: open at zoom 1.4 centred on the runner's silhouette so he dominates the window, then pull back steadily through 1.19 to the full plate at 1.0. The runner visibly shrinks into the empty stadium while the bag, baton and newspaper are progressively discovered on the table below, ending on the complete plate for the reader to dwell on. Keep the baton near",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1674,
+      "seconds": 86,
+      "filmIssues": [
+        "The pull-back idea is right for isolation — opening on the runner and revealing the empty stadium and the disputed-selection objects below — but the rendered move is timid: after clamping the camera only goes from about 1.22 to 1.0, so in the contact sheet the six frames are nearly identical and the runner never dominates the opening frame.",
+        "The first frame is therefore not a strong opening picture: the runner is already small in the window and the bag, baton and newspaper are all already visible, so there is little discovery as the film proceeds and little sense of him shrinking into isolation.",
+        "The last frame is a good dwell picture — the full plate with window, track and table legible — but the journey to it is too small to read as a purposeful pull-back rather than a plain slight zoom-out, especially played in reverse.",
+        "No tearing, doubled edges, ghosting or awkward frame-edge clipping is visible; the baton stays coherent with the table. The halftone-shimmer is fitting and subtle for the offset-print style and does not damage coherence."
+      ],
+      "plateDefects": [],
+      "video": "/stories/c-kunalan/s5/scene.mp4?v=dd0120f6",
+      "poster": "/stories/c-kunalan/s5/scene.jpg?v=dd0120f6"
+    },
+    "s6": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "Good reveal idea, ruined by a visible ghost halo around the young man and a clumsily clipped opening frame — do not publish this render.",
+      "rationale": "A turning-point reveal: the camera opens tight on the young man and his folded document at the stair-top, then travels down and pulls back to discover the staircase and his parents waiting in the lit doorway below.",
+      "ambient": "dust",
+      "rounds": 3,
+      "usd": 0.164,
+      "seconds": 80,
+      "filmIssues": [
+        "The pull-back concept is right — tight on the young man at the stair-top, then revealing the parents in the lit doorway below — but the execution is not publishable.",
+        "cut-1, the young man, has a conspicuous pale ghost outline / doubled halo around his head, shoulders and body in every frame, growing into dark hooked lines at his shoulders by t=0.6–1. This is the painted-over background showing where the layer has moved off its spot, and it destroys subject coherence.",
+        "cut-1 and cut-2 are given identical depth, drift and scale, yet the man still separates visibly from the clean plate; with the staircase also lifted as a layer, his feet and the stair treads risk sliding against the background rather than reading as one locked stair-top group.",
+        "At t=0 the 1.285 zoom clips the lower staircase awkwardly at the left and bottom edges, so the opening picture feels cropped rather than composed, while the last frame is the strongest, fullest picture to dwell on.",
+        "Ambient dust is suitably subtle and era-appropriate, and the 1950s offset-lithograph flat-ink style is otherwise retained."
+      ],
+      "plateDefects": [],
+      "video": "/stories/c-kunalan/s6/scene.mp4?v=b2c30b2b",
+      "poster": "/stories/c-kunalan/s6/scene.jpg?v=b2c30b2b"
+    }
+  }
+}

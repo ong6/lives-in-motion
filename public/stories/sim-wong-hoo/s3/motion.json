@@ -1,0 +1,256 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:04:57.329Z",
+  "usd": 0.1705,
+  "rationale": "Keep the expressive reveal — start tight on the vivid accordion and pull back to discover the whole harmonica troupe — but make it coherent: reduce the opening zoom from 1.45 to 1.30 and lock both cut-outs at minimum depth 0.3 with no drift, scale or entrance, so the single player stays locked in the painted row and the accordion stays locked on its chair throughout. The move is still a clear, pur",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.6,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.3,
+        "panX": 0,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.15,
+        "panX": 0,
+        "panY": 0.025,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.3
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.3
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Keep the expressive reveal — start tight on the vivid accordion and pull back to discover the whole harmonica troupe — but make it coherent: reduce the opening zoom from 1.45 to 1.30 and lock both cut-outs at minimum depth 0.3 with no drift, scale or entrance, so the single player stays locked in the painted row and the accordion stays locked on its chair throughout. The move is still a clear, pur"
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "Film is coherent and era-appropriate but its reveal is too timid to publish; plate itself is clean.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Do not publish as rendered: the reveal concept fits the scene, but a single-player cut-out breaking from the row and an accordion floating off its chair make the motion incoherent, and neither end frame is a clean plate.",
+      "filmIssues": [
+        "The pull-back reveal is the right idea but reads timidly in the sheet: t=0 is not convincingly tight on the accordion and t=1 still feels cropped rather than arriving on the full printed plate, so neither the opening nor the held final picture is strong.",
+        "cut-1 ('players') is only one figure from the right-hand part of the row, not the whole row. With depth 0.6 and drift it separates from the painted players beside it, appearing conspicuously smaller / out of register with its neighbours and breaking the united line of the troupe in every frame.",
+        "cut-2 is the accordion alone, but the chair it rests on stays in the background. Its drift, 1.02 scale and higher depth let it slide and grow against that fixed chair, creating a doubled / floating edge and making the accordion detach from its support.",
+        "Side folding chairs and music stands are awkwardly clipped at the frame edges throughout, especially at t=0 and t=1, and the final frame is not a clean, centred full-plate picture to dwell on while reading.",
+        "Halftone-shimmer is fitting and subtle for the 1970s silkscreen style, and the era's print texture is otherwise preserved."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0,
+            "panY": 0.07,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": -0.015,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.3
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0.01,
+            "driftY": -0.01,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.3
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "A quiet beginning at college is told as a Reveal: open tight on the vivid accordion in the foreground and travel out to discover the harmonica troupe and rehearsal room around it, ending on the full printed plate."
+      }
+    },
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Do not publish: the pull-back concept suits the accordion-to-troupe reveal, but the current parallax detaches the accordion from its chair and doubles chairs/players.",
+      "filmIssues": [
+        "The pull-back idea is legible, but the separation breaks the picture: at t=0-0.4 the accordion is displaced well to the left of the foreground chair it rests on, sliding back into place only as the camera reaches 1.0x",
+        "The single cut-out player and the foreground furniture tear against the painted row — doubled / ghost chair backs and duplicated chairs appear in the middle of the top-row frames, so the harmonica row does not stay coherent",
+        "The first frame is not a good opening picture: at 1.45x it is awkwardly cropped, the accordion is off its chair, and the artefacts are most visible there",
+        "The last frame at t=1 is clean and is a good dwell picture — the untouched full plate — but the journey to it reads as a layer re-registering rather than a purposeful reveal",
+        "Halftone-shimmer is fitting and subtle for the 1970s silkscreen style and does not distract"
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.45,
+            "panX": 0,
+            "panY": 0.08,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.3
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.55,
+            "driftX": 0,
+            "driftY": -0.005,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.3
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Bolder, cleaner reveal: start genuinely tight on the vivid accordion at 1.45x, then pull steadily back to the untouched full plate at 1.0x to discover the whole harmonica troupe and rehearsal room. Keep the single cut-out player locked to the painted row (minimum depth, no drift, no scale change) and keep the accordion locked to its chair (no lateral drift or growth, only a tiny lift from modest p"
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "Film is coherent and era-appropriate but its reveal is too timid to publish; plate itself is clean.",
+      "filmIssues": [
+        "The intended pull-back reveal is legible but timid: at t=0 the 1.30 zoom already shows all five players and most of the room, so there is little discovery as it settles to the full plate — it reads close to a plain slow zoom rather than a story-telling reveal.",
+        "The opening frame clips the side folding chairs awkwardly at both edges without being tight enough on the accordion to justify the crop; the final full-plate frame is, by contrast, a good dwell picture.",
+        "Subject coherence is good: the cut-out player stays locked in the painted row and the accordion stays on its front chair, with no tearing, doubling, halo or visible ghost in the frames, and the halftone-shimmer is fitting and subtle for the 1970s silkscreen style."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.6,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.3,
+            "panX": 0,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.15,
+            "panX": 0,
+            "panY": 0.025,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.3
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.3
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Keep the expressive reveal — start tight on the vivid accordion and pull back to discover the whole harmonica troupe — but make it coherent: reduce the opening zoom from 1.45 to 1.30 and lock both cut-outs at minimum depth 0.3 with no drift, scale or entrance, so the single player stays locked in the painted row and the accordion stays locked on its chair throughout. The move is still a clear, pur"
+      }
+    }
+  ]
+}

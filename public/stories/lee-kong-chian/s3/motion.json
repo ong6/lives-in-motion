@@ -1,0 +1,186 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:02:28.573Z",
+  "usd": 0.0984,
+  "rationale": "Bolder Reveal: open genuinely tight on the braided false queue at the centre of the student's back, then pull back steadily to disclose the blackboard diagrams and the empty lecture hall around him. The student stays locked at scale 1 with no drift so no painted-over ghost is uncovered; the blackboard is kept near background depth so it stays fixed to the wall, while the nearer student supplies cl",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.62,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.5,
+        "panX": 0,
+        "panY": 0.09,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.22,
+        "panX": 0,
+        "panY": 0.04,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "Bolder Reveal: open genuinely tight on the braided false queue at the centre of the student's back, then pull back steadily to disclose the blackboard diagrams and the empty lecture hall around him. The student stays locked at scale 1 with no drift so no painted-over ghost is uncovered; the blackboard is kept near background depth so it stays fixed to the wall, while the nearer student supplies cl"
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "The pull-back clearly serves the scene: it opens tight on the student from behind and his long braided queue, then steadily widens to reveal the blackboard diagrams and empty lecture hall, making the final full plate a strong image to dwell on. The student remains coherent with no visible tearing, doubled edges, halo or ghosting, the blackboard stays fixed to the wall, and the layers retain the sepia hand-coloured engraving character. Dust is subtle and period-fitting. This is meaningfully better than a plain centred push-in.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A sound pull-back idea that matches the secret-queue story, but the opening is not tight enough to read as a reveal and the student develops a pale halo at the end, so it is no more than a modest improvement on a plain push-in and should not be published as-is. The plate itself is clean: student correctly seen from behind with a long queue, no stray text, no faces, no anachronism or mangled anatomy visible.",
+      "filmIssues": [
+        "The pull-back is legible but timid: at t=0 the framing is still a wide classroom view, not a tight opening on the long queue that is the subject of the caption, so the intended reveal of the blackboard and empty hall is weak.",
+        "The student shrinks/drifts away from his painted-over spot (scale 0.97, driftY 0.01 at depth 0.9); by t=0.8-1.0 a pale halo/ghost is visible around the head and braid against the blackboard.",
+        "The blackboard is given its own mid depth (0.4) although it is flat on the wall, so it separates slightly from the wall panelling during the move instead of staying locked to the background."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.4,
+            "panX": 0,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0.01,
+            "scale": 0.97,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.4,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A quiet turning point told as a Reveal: open tight on the long false queue down the student's back, then travel out to disclose the blackboard and empty lecture hall that explain the secret it hides."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "The pull-back clearly serves the scene: it opens tight on the student from behind and his long braided queue, then steadily widens to reveal the blackboard diagrams and empty lecture hall, making the final full plate a strong image to dwell on. The student remains coherent with no visible tearing, doubled edges, halo or ghosting, the blackboard stays fixed to the wall, and the layers retain the sepia hand-coloured engraving character. Dust is subtle and period-fitting. This is meaningfully better than a plain centred push-in.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.5,
+            "panX": 0,
+            "panY": 0.09,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Bolder Reveal: open genuinely tight on the braided false queue at the centre of the student's back, then pull back steadily to disclose the blackboard diagrams and the empty lecture hall around him. The student stays locked at scale 1 with no drift so no painted-over ghost is uncovered; the blackboard is kept near background depth so it stays fixed to the wall, while the nearer student supplies cl"
+      }
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+[
+  {
+    "id": "s1",
+    "year": "1955",
+    "title": "Football before the bell",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:11:40.196Z",
+    "verdict": "ok",
+    "reason": "Name/birth Canagasabai Kunalan 23 Oct 1942; Johor house/father medical-officer/brewery clinic, three sisters/Alexandra/Pasir Panjang, early football before bell and quote from Vintage Radio interview.",
+    "raw": "I'll fact-check the Kunalan chapter against web sources.I found matches on the key facts and quote. Now I'll open the original sources to verify the details directly.OK | Name/birth Canagasabai Kunalan 23 Oct 1942; Johor house/father medical-officer/brewery clinic, three sisters/Alexandra/Pasir Panjang, early football before bell and quote from Vintage Radio interview.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/C._Kunalan",
+      "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+    ]
+  },
+  {
+    "id": "s2",
+    "year": "1959",
+    "title": "The One Mile Open",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:44:58.383Z",
+    "verdict": "ok",
+    "reason": "All details match: trial/One Mile Open and 3rd then 1st untrained, O-Levels/night school/Gillman teaching, 3x-day football and Indian Youth Football Team",
+    "raw": "OK | All details match: trial/One Mile Open and 3rd then 1st untrained, O-Levels/night school/Gillman teaching, 3x-day football and Indian Youth Football Team",
+    "sources": [
+      "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+    ]
+  },
+  {
+    "id": "s3",
+    "year": "1962",
+    "title": "Nine visits to Tiong Bahru",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:44:59.137Z",
+    "verdict": "ok",
+    "reason": "Matches sources: chance teacher/Tiong Bahru/relay/Farrer Park, primary 1961-1966, 6-month gap and “potential” quote recalled from Tan with ninth-visit decision.",
+    "raw": "OK | Matches sources: chance teacher/Tiong Bahru/relay/Farrer Park, primary 1961-1966, 6-month gap and “potential” quote recalled from Tan with ninth-visit decision.",
+    "sources": [
+      "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/",
+      "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan"
+    ]
+  },
+  {
+    "id": "s4",
+    "year": "1963",
+    "title": "Weights in the ladies' toilet",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:12.043Z",
+    "verdict": "ok",
+    "reason": "Started 1963 aged 20, MacRitchie/friend's/Farrer Park toilet training and “We had all the basic equipment and facilities,”, 10.9/22.3/50.9 after five months and Tan most-improved comment, KL relay with Monteiro/Wong/Low 42.0 Singapore record",
+    "raw": "OK | Started 1963 aged 20, MacRitchie/friend's/Farrer Park toilet training and “We had all the basic equipment and facilities,”, 10.9/22.3/50.9 after five months and Tan most-improved comment, KL relay with Monteiro/Wong/Low 42.0 Singapore record",
+    "sources": [
+      "https://en.wikipedia.org/wiki/C._Kunalan",
+      "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan",
+      "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm"
+    ]
+  },
+  {
+    "id": "s5",
+    "year": "1964",
+    "title": "A place he never asked for",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:19.947Z",
+    "verdict": "ok",
+    "reason": "All details match: Wong's press challenge quote, \"saddest moments\"/merit/wished Wong chosen, Malaysia 4x100 relay with Jegathesan, last in round-one heat 3 days before 22nd birthday with birth 23 Oct 1942, heats 20 Oct where Malaysia 6th.",
+    "raw": "OK | All details match: Wong's press challenge quote, \"saddest moments\"/merit/wished Wong chosen, Malaysia 4x100 relay with Jegathesan, last in round-one heat 3 days before 22nd birthday with birth 23 Oct 1942, heats 20 Oct where Malaysia 6th.",
+    "sources": [
+      "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/",
+      "https://en.wikipedia.org/wiki/Athletics_at_the_1964_Summer_Olympics_–_Men's_4_×_100_metres_relay"
+    ]
+  },
+  {
+    "id": "s6",
+    "year": "1964",
+    "title": "The birth certificate",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:33.879Z",
+    "verdict": "ok",
+    "reason": "All names, ages, dates, amounts and events match — 1964 meeting aged 22, Wilson David ultimatum, birth-certificate quote by Kunalan, colleague lodging and S$30 room, uncle/father ultimatum and estranged mother age 12, Raffles champion and joining mother.",
+    "raw": "OK | All names, ages, dates, amounts and events match — 1964 meeting aged 22, Wilson David ultimatum, birth-certificate quote by Kunalan, colleague lodging and S$30 room, uncle/father ultimatum and estranged mother age 12, Raffles champion and joining mother.",
+    "sources": [
+      "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports",
+      "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/",
+      "https://theolympians.co/2017/09/10/canagasabai-kunalan-singapores-fastest-man-part-2-out-of-the-frying-pan-of-the-race-riots-and-into-the-fire-of-the-olympics/"
+    ]
+  },
+  {
+    "id": "s7",
+    "year": "1966",
+    "title": "Married three times",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:21:52.363Z",
+    "verdict": "ok",
+    "reason": "Engagement Oct 1965, Sunday knock/blessing, Rajeshwari conversion, 17 Apr 1966 match, temple/tea/banquet and Kunalan quote verified",
+    "raw": "Fact-checking the Kunalan chapter — verifying every name, date and quote against the cited sources.OK | Engagement Oct 1965, Sunday knock/blessing, Rajeshwari conversion, 17 Apr 1966 match, temple/tea/banquet and Kunalan quote verified",
+    "sources": [
+      "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports"
+    ]
+  },
+  {
+    "id": "s8",
+    "year": "1966",
+    "title": "One hundredth of a second",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:38.210Z",
+    "verdict": "ok",
+    "reason": "Bangkok 10–15 Dec 1966, 100m Jegathesan-Kunalan-Iijima all 10.5 with gold/silver/bronze in that order, 0.01-sec photo-finish, Singapore 4×400 bronze incl. Kunalan.",
+    "raw": "OK | Bangkok 10–15 Dec 1966, 100m Jegathesan-Kunalan-Iijima all 10.5 with gold/silver/bronze in that order, 0.01-sec photo-finish, Singapore 4×400 bronze incl. Kunalan.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Athletics_at_the_1966_Asian_Games",
+      "https://www.buletinmutiara.com/never-be-afraid-to-dream-says-flying-doctor/"
+    ]
+  },
+  {
+    "id": "s9",
+    "year": "1968",
+    "title": "Arms and legs big",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:42.564Z",
+    "verdict": "ok",
+    "reason": "Funds, 10.38/33-year record, first-round advance, Wright masseurs, Robinson 20m advice, post-competition viewing of Fosbury/Beamon, and exact wife-letter quote all match source",
+    "raw": "Fact-checking the Kunalan chapter — verifying every name, number, and quote.Initial searches check out — now opening the main cited source to confirm the exact details.OK | Funds, 10.38/33-year record, first-round advance, Wright masseurs, Robinson 20m advice, post-competition viewing of Fosbury/Beamon, and exact wife-letter quote all match source",
+    "sources": [
+      "https://theolympians.co/2017/09/09/canagasabai-kunalan-singapores-fastest-man-part-1-defying-the-odds-in-mexico-city/"
+    ]
+  },
+  {
+    "id": "s10",
+    "year": "1973",
+    "title": "The flame at the top",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:00:06.783Z",
+    "verdict": "ok",
+    "reason": "Awards 1968-69, 1969 100m/200m/4x400m golds, 1970 10.5 three-way tie bronze and 1970 retirement/comeback to 1979, 1 Sept 1973 opening in all-white lighting torch at highest point as first lighter, 1975 4x400 anchor to gold, V-formation helm final cauldron lighting all match.",
+    "raw": "I'll verify every name, date, and result in the chapter against web sources.Early signs look consistent, but I need to dig into the retirement and later relays before passing judgment.Most details check out so far; now I'll inspect the cited sources directly for any hidden errors.OK | Awards 1968-69, 1969 100m/200m/4x400m golds, 1970 10.5 three-way tie bronze and 1970 retirement/comeback to 1979, 1 Sept 1973 opening in all-white lighting torch at highest point as first lighter, 1975 4x400 anchor to gold, V-formation helm final cauldron lighting all match.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/C._Kunalan",
+      "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm",
+      "https://biblioasia.nlb.gov.sg/vol-19/issue-4/jan-mar-2024/seventh-seap-games-1973/"
+    ]
+  },
+  {
+    "id": "s11",
+    "year": "1979",
+    "title": "Mr K",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:47:02.971Z",
+    "verdict": "ok",
+    "reason": "All names/dates/numbers match, including quoted rule as his thought, Dunearn 13yrs/1967-1980, heel-retirement 1979, Perth/W.Germany/Loughborough, Mr K, 48.8 at 39 Swifts, coach 1993-96 record 1994/1974.",
+    "raw": "Fact-checking the Kunalan chapter — verifying every name, date and number against the sources.I've corroborated most of the timeline — now opening the ActiveSG profile to verify the quoted rule.The quote checks out — now investigating a possible date conflict around his teaching appointment.OK | All names/dates/numbers match, including quoted rule as his thought, Dunearn 13yrs/1967-1980, heel-retirement 1979, Perth/W.Germany/Loughborough, Mr K, 48.8 at 39 Swifts, coach 1993-96 record 1994/1974.",
+    "sources": [
+      "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan",
+      "https://en.wikipedia.org/wiki/C._Kunalan",
+      "https://connectedtoindia.com/c-kunalan-sprint-legend-of-singapore/"
+    ]
+  },
+  {
+    "id": "s12",
+    "year": "2008",
+    "title": "Still running",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:47:08.797Z",
+    "verdict": "ok",
+    "reason": "100m record broken 2001 by 0.01s by mentee, Hall of Fame 11 Jan 2002 at Fullerton Hotel singling out wife, wife stopped for pregnancy/protein three daughters/tumour effects, NIE to June 2010 SSC Aug age 67 for past Olympians, retired 2022 for wife keeps running, quote “As a couple…” by Mr Kunalan.",
+    "raw": "Fact-checking the Kunalan chapter — verifying every date, name, and that 2026 quote.Early checks line up on the sprint record — now digging into the Hall of Fame, marriage, and career details.Most details are confirming so far — now tracking down the 2022 retirement claim.OK | 100m record broken 2001 by 0.01s by mentee, Hall of Fame 11 Jan 2002 at Fullerton Hotel singling out wife, wife stopped for pregnancy/protein three daughters/tumour effects, NIE to June 2010 SSC Aug age 67 for past Olympians, retired 2022 for wife keeps running, quote “As a couple…” by Mr Kunalan.",
+    "sources": [
+      "https://www.tabla.com.sg/lifestyle/sports-fitness/kunalans-six-decade-long-interracial-marriage-shaped-sports",
+      "https://web.archive.org/web/20140825014638/http://www.dunearntech.com/ckunalan.htm",
+      "https://www.activesgcircle.gov.sg/read/beyond-the-finish-line-c-kunalan",
+      "https://silverstreak.sg/c-kunalan-legendary-sprinter-marathon-life/"
+    ]
+  }
+]

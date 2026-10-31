@@ -1,0 +1,187 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:02:17.196Z",
+  "usd": 0.1248,
+  "rationale": "Bolder chase: open tight on the pack and front boy, then track right and pull back only to a settled medium-wide so the field, school and trees are revealed while the front boy (faster drift) visibly gains on the slower ball. Ending at zoom 1.06 with restrained ball drift keeps the football well inside the right edge for the dwell frame, and warm dust suits a dry afternoon school field better than",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.68,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.4,
+        "panX": -0.07,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.22,
+        "panX": 0,
+        "panY": 0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.06,
+        "panX": 0.04,
+        "panY": 0,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.95,
+        "driftX": 0.07,
+        "driftY": -0.015,
+        "scale": 1.07,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": 0.03,
+        "driftY": -0.005,
+        "scale": 1.03,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "Bolder chase: open tight on the pack and front boy, then track right and pull back only to a settled medium-wide so the field, school and trees are revealed while the front boy (faster drift) visibly gains on the slower ball. Ending at zoom 1.06 with restrained ball drift keeps the football well inside the right edge for the dwell frame, and warm dust suits a dry afternoon school field better than"
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publishable pull-back reveal: the film opens tight on the running pack and front boy, then tracks right and pulls back to disclose the school, field, angsana trees and chimney for a clear, legible dwell frame. The front boy and football stay coherent with no visible ghosting, tearing, halo or awkward edge clipping, their relative drift suggests the chase, and the subtle dust fits the dry afternoon field while retaining the flat offset-print look.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Film is coherent and publishable in technique, but its motion is little better than a plain centred push-in/pull-back and it mishandles the ball at the final frame. It does not reach the 8+ bar for purposeful, story-expressing movement.",
+      "filmIssues": [
+        "The pull-back is readable but timid: across the six frames the composition changes only slightly, and the chase is not clearly expressed — the boys and ball drift in the same direction at almost the same rate, so the gap never meaningfully closes.",
+        "The football ends the film hard against the right edge of the final frame (bottom-right), clipped/awkward on the very picture the reader dwells on; the opening frame is also cropped tight on the left tree.",
+        "No tearing, doubled edges, halo or visible ghost where the front boy or ball moved off their painted-over spots; the front boy stays acceptably with the pack despite being a separate layer. The cut-outs remain coherent and the 1950s flat-ink paper style is preserved.",
+        "The light-sweep reads mostly as a darkened vignette in the stills and adds little afternoon-field atmosphere; the final frame is not a satisfying settled wide shot because the ball is leaving it."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.46,
+        "focusY": 0.72,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.35,
+            "panX": -0.05,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.16,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.06,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.95,
+            "driftX": 0.06,
+            "driftY": -0.02,
+            "scale": 1.08,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.75,
+            "driftX": 0.04,
+            "driftY": -0.01,
+            "scale": 1.05,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A joyful quiet beginning before the school bell: a tight reveal on the front boy opens out while a rightward journey carries him in pursuit of the football across the field, the ball staying just ahead of the chase."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publishable pull-back reveal: the film opens tight on the running pack and front boy, then tracks right and pulls back to disclose the school, field, angsana trees and chimney for a clear, legible dwell frame. The front boy and football stay coherent with no visible ghosting, tearing, halo or awkward edge clipping, their relative drift suggests the chase, and the subtle dust fits the dry afternoon field while retaining the flat offset-print look.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.4,
+            "panX": -0.07,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.06,
+            "panX": 0.04,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.95,
+            "driftX": 0.07,
+            "driftY": -0.015,
+            "scale": 1.07,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0.03,
+            "driftY": -0.005,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Bolder chase: open tight on the pack and front boy, then track right and pull back only to a settled medium-wide so the field, school and trees are revealed while the front boy (faster drift) visibly gains on the slower ball. Ending at zoom 1.06 with restrained ball drift keeps the football well inside the right edge for the dwell frame, and warm dust suits a dry afternoon school field better than"
+      }
+    }
+  ]
+}

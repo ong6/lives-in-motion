@@ -1,0 +1,124 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:00:27.951Z",
+  "usd": 0.0685,
+  "rationale": "A quiet beginning of study becomes a turning point: a Reveal opens tight on the typewriter and shorthand desk, then travels out and right across the harbour window to the woman walking toward the hills and ambulance beyond.",
+  "plan": {
+    "focusX": 0.24,
+    "focusY": 0.68,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.42,
+        "panX": -0.09,
+        "panY": 0.07,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.18,
+        "panX": -0.02,
+        "panY": 0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0.05,
+        "panY": -0.02,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.7,
+        "driftX": 0.06,
+        "driftY": -0.01,
+        "scale": 1.02,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A quiet beginning of study becomes a turning point: a Reveal opens tight on the typewriter and shorthand desk, then travels out and right across the harbour window to the woman walking toward the hills and ambulance beyond."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publishable. The pull-back from the lamplit typewriter and shorthand pad at t=0 to the full two-half composition at t=1 clearly enacts the turning point: study on the left gives way to the woman, seen from behind, walking toward the harbour window, hills and canvas ambulance on the right. Her rightward drift reinforces that crossing without separating her from the ground, the typewriter remains seated on the desk, no doubled edges, ghosts or awkward frame clipping are visible, and the final wide frame is a strong dwell image preserving the hand-coloured engraving style. The light-sweep is fitting for the lamplight subject.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publishable. The pull-back from the lamplit typewriter and shorthand pad at t=0 to the full two-half composition at t=1 clearly enacts the turning point: study on the left gives way to the woman, seen from behind, walking toward the harbour window, hills and canvas ambulance on the right. Her rightward drift reinforces that crossing without separating her from the ground, the typewriter remains seated on the desk, no doubled edges, ghosts or awkward frame clipping are visible, and the final wide frame is a strong dwell image preserving the hand-coloured engraving style. The light-sweep is fitting for the lamplight subject.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.24,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.42,
+            "panX": -0.09,
+            "panY": 0.07,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": -0.02,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.05,
+            "panY": -0.02,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.7,
+            "driftX": 0.06,
+            "driftY": -0.01,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet beginning of study becomes a turning point: a Reveal opens tight on the typewriter and shorthand desk, then travels out and right across the harbour window to the woman walking toward the hills and ambulance beyond."
+      }
+    }
+  ]
+}

@@ -1,0 +1,909 @@
+{
+  "slug": "georgette-chen",
+  "name": "Georgette Chen",
+  "born": "1906",
+  "died": "1993",
+  "tagline": "From Paris salons to a Siglap studio: the painter who made the tropics her home.",
+  "edition": "deep",
+  "conflicts": [
+    {
+      "topic": "Birth date and place",
+      "choice": "The book follows October 1906, Zhejiang, China."
+    },
+    {
+      "topic": "Salon d'Automne 1930 number of works",
+      "choice": "The book says her work was accepted, without giving a number."
+    },
+    {
+      "topic": "Eugene Chen's age and cause of death",
+      "choice": "The book gives May 1944 in Shanghai and her age 38, without age or cause for him."
+    },
+    {
+      "topic": "Her age at death",
+      "choice": "The book does not state an age at death, giving date and place only."
+    },
+    {
+      "topic": "Start of final illness",
+      "choice": "The book follows a serious fall in 1981 followed by care."
+    },
+    {
+      "topic": "NAFA teaching years and move to Singapore",
+      "choice": "The book follows teaching 1954 to 1980 and move in 1953."
+    },
+    {
+      "topic": "Diary 'Poses so badly' date",
+      "choice": "The book uses it as an undated 1930s diary entry."
+    }
+  ],
+  "breaks": [
+    {
+      "after": "s2",
+      "photo": {
+        "src": "/stories/georgette-chen/break-2/photo.webp",
+        "aspect": 0.6667,
+        "kind": "place",
+        "concept": "beach",
+        "label": "Saint-Enogat beach, Dinard, where she spent childhood summers, today (2021)",
+        "tag": "Place",
+        "year": "2021",
+        "credit": {
+          "artist": "Pymouss",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Dinard_-_Plage_Saint-%C3%89nogat_20210517.jpg"
+        }
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "treatment": "photo",
+      "year": "1914",
+      "when": "1910s",
+      "title": "Swans in the Tuileries",
+      "caption": "Bread broke in small hands over the pond in the Tuileries as Zhang Liying fed her favourite swans.",
+      "body": "Bread broke in small hands over the pond in the Tuileries as Zhang Liying fed her favourite swans. She was born Zhang Liying in October 1906 in Zhejiang, the fourth of twelve children of the wealthy merchant Zhang Jingjiang, an antiques dealer with businesses in Paris, New York and London. At home her mother allowed the children to speak only Shanghainese, and her father carried the family with him on his trips to China so they would not forget where they came from. In Paris her haunts were the Tuileries and Parc Monceau, with its merry-go-round, and summers passed in St Enogat, a village near Dinard in Brittany. France was, in a way, her home.",
+      "voice": "Decades later she still remembered feeding her favourite swans.",
+      "turn": "A tutor waited with easels for father and daughter.",
+      "age": 7,
+      "photo": {
+        "src": "/stories/georgette-chen/s1/photo.webp",
+        "aspect": 0.6813,
+        "kind": "place",
+        "concept": "carousel",
+        "label": "The carousel in the Tuileries garden, Paris, today (2012)",
+        "tag": "Place",
+        "year": "2012",
+        "focus": [
+          0.549,
+          0.663
+        ],
+        "cutout": "/stories/georgette-chen/s1/cutout.webp",
+        "trace": "/stories/georgette-chen/s1/trace.json",
+        "credit": {
+          "artist": "Guillaume Baviere",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Carousel,_Jardin_des_Tuileries,_Paris_2012.jpg"
+        }
+      },
+      "visual": "The carousel in the Tuileries garden, Paris, today (2012)",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        },
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:50:06.316Z",
+        "note": "Birth Oct 1906 Zhejiang as Zhang Liying fourth of 12 to Zhang Jingjiang antiques dealer Paris/NY/London, Shanghainese-only and China trips, Tuileries swans/Parc Monceau merry-go-round, St Enogat near Dinard and France-home quote all verified",
+        "sources": [
+          "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        ]
+      }
+    },
+    {
+      "id": "s2",
+      "treatment": "line",
+      "year": "1918",
+      "when": "1910s",
+      "title": "The Foreign Potato",
+      "caption": "On a quiet afternoon Victor Podgorsky came to give the private lesson, and father and daughter took their places together at side-by-side easels.",
+      "body": "On a quiet afternoon Victor Podgorsky came to give the private lesson, and father and daughter took their places together at side-by-side easels. Zhang Jingjiang wanted his daughter to study Chinese painting. She insisted on oils, so she could paint everything around her, down to salted ducks and potatoes. He listed the Chinese vegetables she could paint instead, wanting to know why she clung to the foreign potato. Years later she summed up the split in a radio interview: \"My father expected me to study Chinese painting, but I had a different idea.\" Her parents paid for her art education but never fully accepted that she would be a full-time artist, fearing she could not make a living.",
+      "voice": "Why, her father asked, the foreign potato?",
+      "turn": "Loose Paris classrooms waited across the ocean.",
+      "age": 11,
+      "quote": {
+        "text": "My father expected me to study Chinese painting, but I had a different idea.",
+        "speaker": "Georgette Chen (Radio Malaya interview transcript, 7 Sep 1953, quoted in BiblioAsia)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "visual": "Single pen line on cream paper: two easels side by side in a high-windowed Paris room; a tall man and a girl, both seen from behind; on the table between them a bowl holding one potato beside a bok choy.",
+      "cut": [
+        "easels",
+        "potato"
+      ],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        }
+      ],
+      "plate": "/stories/georgette-chen/s2/plate.webp",
+      "background": "/stories/georgette-chen/s2/background.webp",
+      "line": "/stories/georgette-chen/s2/line.json",
+      "video": "/stories/georgette-chen/s2/scene.mp4?v=485b5d8e",
+      "poster": "/stories/georgette-chen/s2/scene.jpg?v=485b5d8e",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "easels",
+          "depth": 0.6,
+          "x": 34.91,
+          "y": 77.69,
+          "w": 18.19,
+          "src": "/stories/georgette-chen/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "potato",
+          "depth": 0.8,
+          "x": 47.25,
+          "y": 59.5,
+          "w": 3.5,
+          "src": "/stories/georgette-chen/s2/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:49:55.126Z",
+        "note": "Podgorsky lessons with father-daughter together, Zhang Jingjiang’s daughter born Oct 1906, “different idea” quote from 7 Sep 1953 Radio Malaya transcript, salted-ducks/potatoes list and “foreign potato” rebuke, parents financially supportive but unconvinced all match.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+          "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "treatment": "theatre",
+      "year": "1927",
+      "title": "Freedom to Paint",
+      "caption": "A 1923 class photograph showed her seated at the end of the front row at the Horace Mann School in New York.",
+      "body": "A 1923 class photograph showed her seated at the end of the front row at the Horace Mann School in New York. She had also studied at the Lycee Jules-Ferry in Paris and the McTyeire School for Girls in Shanghai, and in 1926 formal training began with a year at the Art Students League of New York. Back in Paris she enrolled at the loosely run Academie Colarossi and Academie Biloul and roamed the city for subjects, relishing what she later called \"the freedom of painting whatever you like.\" The loose schools suited her. In 1930 the Salon d'Automne in Paris accepted her work for the first time, and she was twenty-four and watched over by a new companion.",
+      "voice": "The Salon d'Automne said yes in 1930.",
+      "turn": "A widowed friend waited for an introduction.",
+      "age": 20,
+      "quote": {
+        "text": "the freedom of painting whatever you like",
+        "speaker": "Georgette Chen (oral history with Constance Sheares, 1988)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "visual": "Layered paper cut-out of a 1920s Paris academy studio: skylight, plaster casts, a stove, rows of easels; one young woman seen from behind at a canvas turned away from us, a paint box open at her feet. Rooftops of Montparnasse through the glass.",
+      "cut": [
+        "woman",
+        "easel"
+      ],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        }
+      ],
+      "plate": "/stories/georgette-chen/s3/plate.webp",
+      "background": "/stories/georgette-chen/s3/background.webp",
+      "video": "/stories/georgette-chen/s3/scene.mp4?v=b49185a2",
+      "poster": "/stories/georgette-chen/s3/scene.jpg?v=b49185a2",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 49.06,
+          "y": 87.69,
+          "w": 18.88,
+          "src": "/stories/georgette-chen/s3/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "easel",
+          "depth": 0.8,
+          "x": 83.22,
+          "y": 62.81,
+          "w": 6.56,
+          "src": "/stories/georgette-chen/s3/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:49:46.241Z",
+        "note": "Photo rightmost front row 1923, Jules-Ferry/McTyeire/ASL schools, formal 1926 year ASL, less-structured Biloul/Colarossi roaming + “freedom\" quote sourced to Sheares 2 Nov 1988 Reel1 p6, 1930 Salon acceptance at age 24 after meeting Eugene 1927 marrying 1930.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+          "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "treatment": "photo",
+      "year": "1927",
+      "title": "He Always Posed",
+      "caption": "At twenty-one she met Eugene Chen in Paris, introduced by a friend.",
+      "body": "At twenty-one she met Eugene Chen in Paris, introduced by a friend. He was fifty-two, a widower with two sons and two daughters whose wife had died of cancer two years before. Thirty years separated them and her father at first disapproved, yet they grew deeply attached. They married in 1930 at the Chinese Consular Office in Paris, and she took his surname and kept it for the rest of her life. He loved art, music and French literature, sat willingly for her, and urged her to leave sewing to tailors and keep to her easel. Her diary kept small joys, haircuts she gave him and walks to hunt pineapples and avocados to paint, alongside one grumble: \"Poses so badly & talks all the time.\"",
+      "voice": "A model who talked all the time.",
+      "turn": "A ship waited at Marseilles with new faces.",
+      "age": 21,
+      "quote": {
+        "text": "Poses so badly & talks all the time.",
+        "speaker": "Georgette Chen (diary, quoted in BiblioAsia)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "photo": {
+        "src": "/stories/georgette-chen/s4/photo.webp",
+        "aspect": 1.345,
+        "kind": "person",
+        "concept": "person",
+        "label": "Eugene Chen, photographed before 1944",
+        "year": "before 1944",
+        "focus": [
+          0.5,
+          0.507
+        ],
+        "mounted": true,
+        "cutout": "/stories/georgette-chen/s4/cutout.webp",
+        "trace": "/stories/georgette-chen/s4/trace.json",
+        "credit": {
+          "artist": "Unknown photographer",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "page": "https://commons.wikimedia.org/wiki/File:%E9%99%88%E5%8F%8B%E4%BB%81.jpg"
+        }
+      },
+      "visual": "Eugene Chen, photographed before 1944",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:50:28.414Z",
+        "note": "Meeting at 21 in 1927 via Soong Ching-ling, Eugene 52 widower with 2 sons 2 daughters wife died of cancer 2 years earlier, 30-year gap/father disapproval/married Paris 1930 kept surname at Chinese Consular Office, loved art/music/French/posing/sew-easel, haircut/pineapples/avocados diary “Poses so badly & talks all the time”",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+          "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "treatment": "photo",
+      "year": "1931",
+      "title": "Ship from Marseilles",
+      "caption": "The ship from Marseilles to Singapore carried the couple from Paris to Shanghai in 1931.",
+      "body": "The ship from Marseilles to Singapore carried the couple from Paris to Shanghai in 1931. She was twenty-four that year. Aboard, they met Tunku Abdul Rahman. He kept a vivid memory of her presence, which he recalled as \"beautiful and charming,\" and they became lifelong friends. Twenty-five years later, in June 1956, she painted him in Kuala Lumpur. The voyage marked her shift east, from student studios to a married life on the move, with new harbours, new sitters, and a friendship that followed her work for decades after the landing.",
+      "voice": "She had not yet learned to drive.",
+      "turn": "A shipboard friendship would last for decades.",
+      "age": 24,
+      "quote": {
+        "text": "beautiful and charming",
+        "speaker": "Tunku Abdul Rahman (quoted in BiblioAsia)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "photo": {
+        "src": "/stories/georgette-chen/s5/photo.webp",
+        "aspect": 1.288,
+        "kind": "person",
+        "concept": "person",
+        "label": "Georgette Chen on the cover of Liangyou, 1931",
+        "year": "1931",
+        "focus": [
+          0.508,
+          0.527
+        ],
+        "cutout": "/stories/georgette-chen/s5/cutout.webp",
+        "trace": "/stories/georgette-chen/s5/trace.json",
+        "credit": {
+          "artist": "Liangyou magazine",
+          "license": "Public domain",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-China",
+          "page": "https://commons.wikimedia.org/wiki/File:Liangyou_057_cover_Zhang_Liying.jpg"
+        }
+      },
+      "visual": "Georgette Chen on the cover of Liangyou, 1931",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:50:16.635Z",
+        "note": "1931 Marseilles-to-Singapore meeting, Shanghai-via-Malaya route, June 1956 Kuala Lumpur portrait and “beautiful and charming” note all match.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+          "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        ]
+      }
+    },
+    {
+      "id": "s6",
+      "treatment": "theatre",
+      "year": "1935",
+      "title": "A Second-Hand Fiat",
+      "caption": "On 7 June 1935 she took her first driving lesson.",
+      "body": "On 7 June 1935 she took her first driving lesson. By 29 June she had passed her test, bought a second-hand Fiat, and began driving around France to paint outdoors. In July and August she drove to Aix-en-Provence and set up her easel beside Cezanne's atelier, beside Cezanne's rocks at Chateau Noir and beside his millstone, noting each spot in her diary in French. Two years later her work hung in the Palace of Painting and Sculpture at the Paris World Fair and in Les Femmes Artistes d'Europe at the Jeu de Paume. The car had given her a new range.",
+      "voice": "A small car carried her easel south.",
+      "turn": "The road south would not stay open.",
+      "age": 28,
+      "visual": "Paper-cut Provence landscape at noon: ochre road, umbrella pines, Mont Sainte-Victoire in the distance; a small rounded 1930s Fiat parked on the verge, door open, and a woman seen from behind at a folding easel among the rocks.",
+      "cut": [
+        "car",
+        "easel"
+      ],
+      "sources": [
+        {
+          "label": "Michelle Tay, 'The World of Georgette Chen Archive', National Gallery Singapore magazine (2020)",
+          "url": "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html"
+        },
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      ],
+      "plate": "/stories/georgette-chen/s6/plate.webp",
+      "background": "/stories/georgette-chen/s6/background.webp",
+      "video": "/stories/georgette-chen/s6/scene.mp4?v=038af3f2",
+      "poster": "/stories/georgette-chen/s6/scene.jpg?v=038af3f2",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "car",
+          "depth": 0.6,
+          "x": 24.25,
+          "y": 79.88,
+          "w": 37.5,
+          "src": "/stories/georgette-chen/s6/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "easel",
+          "depth": 0.8,
+          "x": 56.47,
+          "y": 85.25,
+          "w": 17.31,
+          "src": "/stories/georgette-chen/s6/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:50:37.222Z",
+        "note": "Driving dates/Fiat and Cézanne sites match diary archive and 1937 Fair/Jeu de Paume match BiblioAsia.",
+        "sources": [
+          "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        ]
+      }
+    },
+    {
+      "id": "s7",
+      "treatment": "photo",
+      "year": "1941",
+      "title": "From Hong Kong to Shanghai",
+      "caption": "After 1941 she stayed beside Eugene in Hong Kong, then in Shanghai, where for years they could not get home.",
+      "body": "After 1941 she stayed beside Eugene in Hong Kong, then in Shanghai, where for years they could not get home. She was thirty-four then. Fearing for her safety, Eugene insisted on taking her everywhere he went, keeping her close beside him through the long months in the city. Time passed slowly and his strength gave way. He died in Shanghai in May 1944, still far from home. She was thirty-eight and a widow. The companionship that had carried them through those closed-in years now left her alone to face what came next.",
+      "voice": "He kept her beside him always.",
+      "turn": "Shanghai closed in for three long years.",
+      "age": 34,
+      "photo": {
+        "src": "/stories/georgette-chen/s7/photo.webp",
+        "aspect": 1.642,
+        "kind": "place",
+        "concept": "building",
+        "label": "The Bund, Shanghai, c. 1935",
+        "tag": "Place",
+        "year": "c. 1935",
+        "focus": [
+          0.117,
+          0.36
+        ],
+        "mounted": true,
+        "cutout": "/stories/georgette-chen/s7/cutout.webp",
+        "trace": "/stories/georgette-chen/s7/trace.json",
+        "credit": {
+          "artist": "Anonymous",
+          "license": "Public domain",
+          "licenseUrl": null,
+          "page": "https://commons.wikimedia.org/wiki/File:Shanghai._The_Bund,_circa_1935.jpg"
+        }
+      },
+      "visual": "The Bund, Shanghai, c. 1935",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T02:22:13.435Z",
+        "note": "1941 Hong Kong detention then Shanghai internment, took her everywhere fearing for safety, May 1944 death widowing 38-year-old, born Oct 1906 fits 34 in 1941.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+          "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        ]
+      }
+    },
+    {
+      "id": "s8",
+      "treatment": "theatre",
+      "year": "1951",
+      "title": "My Tahiti",
+      "caption": "Rows of waterfront huts made her shout with excitement a few months after she reached Penang in 1951.",
+      "body": "Rows of waterfront huts made her shout with excitement a few months after she reached Penang in 1951. She had held a solo show of some seventy-seven works in Shanghai in 1947, then left for New York to marry Ho Yung Chi, Eugene's former aide and an old friend. The couple took teaching posts at Han Chiang High School in Penang, which she called a beautiful tropical island she thought of as her Tahiti. She met the durian there and wrote home: \"I have been introduced to the Durian fruit and consider that my life has been enriched by it!\" The marriage soured in bitter arguments over money and her continued use of Eugene's surname, and after a long, draining process they divorced in 1953, after six years.",
+      "voice": "She packed for Singapore.",
+      "turn": "Tahiti could not hold the marriage.",
+      "age": 44,
+      "quote": {
+        "text": "I have been introduced to the Durian fruit and consider that my life has been enriched by it!",
+        "speaker": "Georgette Chen (letter, 4 Jul 1951)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "visual": "Layered paper cut-out of a 1950s Penang waterfront: straw-roofed huts on stilts over green-violet water, a plank walk, fishing boats; in the foreground a single split durian on a wooden board. A woman seen from behind, sketchbook under her arm. Fruit drawn generically, never as a copy of one of her still lifes.",
+      "cut": [
+        "huts",
+        "durian"
+      ],
+      "sources": [
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        },
+        {
+          "label": "Christie's, Georgette Chen, Still Life with Big Durian, lot essay (lot 6430010)",
+          "url": "https://www.christies.com/en/lot/lot-6430010"
+        }
+      ],
+      "plate": "/stories/georgette-chen/s8/plate.webp",
+      "background": "/stories/georgette-chen/s8/background.webp",
+      "video": "/stories/georgette-chen/s8/scene.mp4?v=b694889a",
+      "poster": "/stories/georgette-chen/s8/scene.jpg?v=b694889a",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "huts",
+          "depth": 0.6,
+          "x": 76.97,
+          "y": 61.19,
+          "w": 23.94,
+          "src": "/stories/georgette-chen/s8/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "durian",
+          "depth": 0.8,
+          "x": 56.31,
+          "y": 74,
+          "w": 15.25,
+          "src": "/stories/georgette-chen/s8/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:51:07.167Z",
+        "note": "All names, numbers, dates and durian/huts quotes match sources",
+        "sources": [
+          "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        ]
+      }
+    },
+    {
+      "id": "s9",
+      "treatment": "photo",
+      "year": "1953",
+      "title": "Bread Without Butter",
+      "caption": "The little Hermes Baby clacked as she typed and kept a carbon of every letter.",
+      "body": "The little Hermes Baby clacked as she typed and kept a carbon of every letter. In September 1953 she held her first solo exhibition in Singapore, at the Chinese Chamber of Commerce, and moved to Singapore the same year. Early in 1954, from a rented house in Sennett Estate, she wrote to friends of regained liberty and a simple, useful and creative existence ahead. She taught part-time at the Nanyang Academy of Fine Arts from 1954 to 1980, one of only two women teachers in its early years. She called the life bread without butter, adding: \"I don't like butter much anyway, too fattening!\"",
+      "voice": "Some 1,000 carbon copies would survive her.",
+      "turn": "A rented house held her new liberty.",
+      "age": 46,
+      "quote": {
+        "text": "I don't like butter much anyway, too fattening!",
+        "speaker": "Georgette Chen (letter, 6 Feb 1961)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "photo": {
+        "src": "/stories/georgette-chen/s9/photo.webp",
+        "aspect": 0.7919,
+        "kind": "place",
+        "concept": "typewriter",
+        "label": "A 1948 Hermes Baby, the model she typed on",
+        "tag": "Object",
+        "year": "2021",
+        "focus": [
+          0.513,
+          0.496
+        ],
+        "cutout": "/stories/georgette-chen/s9/cutout.webp",
+        "trace": "/stories/georgette-chen/s9/trace.json",
+        "credit": {
+          "artist": "Draemmli (Roland Rytz)",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Hermes_Baby_1948.jpg"
+        }
+      },
+      "visual": "A 1948 Hermes Baby, the model she typed on",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Michelle Tay, 'The World of Georgette Chen Archive', National Gallery Singapore magazine (2020)",
+          "url": "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        },
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:51:09.308Z",
+        "note": "Hermes Baby/carbons, Sept 1953 Chamber solo, 1953 move, early-1954 Sennett “regained liberty” letter, 1954-1980 part-time NAFA, 1 of 2 women teachers, and 6 Feb 1961 butter quote all verified",
+        "sources": [
+          "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html"
+        ]
+      }
+    },
+    {
+      "id": "s10",
+      "treatment": "theatre",
+      "year": "1955",
+      "title": "Chendana",
+      "caption": "She built a house on Siglap Plain and kept her studio clean and orderly.",
+      "body": "She built a house on Siglap Plain and kept her studio clean and orderly. She already called herself Singaporean and settled there by 1955. Malay artist friends hunted for a Malay name containing Chen, and she chose Chendana, fragrant sandalwood. She cooked for friends, oyster soup, fillet mignon and Crepes Georgette, gave cooking demonstrations for the YWCA in 1960 and 1961, and left a banana cake recipe. The Chen family of Penang, friends not relatives, posed across several holiday visits, the father only painted in later, and she thanked them: \"Every minute of your stay was enjoyable for me including the tantrums\"",
+      "voice": "Chendana meant fragrant sandalwood.",
+      "turn": "The tidy studio welcomed hungry friends.",
+      "age": 48,
+      "quote": {
+        "text": "Every minute of your stay was enjoyable for me including the tantrums",
+        "speaker": "Georgette Chen (letter to the Chen family, 1955)",
+        "source": {
+          "label": "Michelle Tay, 'The World of Georgette Chen Archive', National Gallery Singapore magazine (2020)",
+          "url": "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html"
+        }
+      },
+      "visual": "Paper-cut cutaway of a 1950s single-storey house on Siglap Plain: a neat studio with easels turned to the wall, a dining table with a soup tureen, a desk lit by a lamp with a Malay dictionary open. A woman seen from behind at the desk before dawn, a blue sky just starting at the window.",
+      "cut": [
+        "woman",
+        "desk"
+      ],
+      "sources": [
+        {
+          "label": "Michelle Tay, 'The World of Georgette Chen Archive', National Gallery Singapore magazine (2020)",
+          "url": "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        },
+        {
+          "label": "Christie's, Georgette Chen, Cattleya Orchid, lot essay (lot 5638044)",
+          "url": "https://www.christies.com/en/lot/lot-5638044"
+        },
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      ],
+      "plate": "/stories/georgette-chen/s10/plate.webp",
+      "background": "/stories/georgette-chen/s10/background.webp",
+      "video": "/stories/georgette-chen/s10/scene.mp4?v=b882a29a",
+      "poster": "/stories/georgette-chen/s10/scene.jpg?v=b882a29a",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 50.47,
+          "y": 86.94,
+          "w": 27.19,
+          "src": "/stories/georgette-chen/s10/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "desk",
+          "depth": 0.8,
+          "x": 29.97,
+          "y": 83.56,
+          "w": 34.56,
+          "src": "/stories/georgette-chen/s10/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:51:10.818Z",
+        "note": "House, 1955 self-identification, Chendana, cooking, YWCA, recipe, family and quote all match",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Georgette_Chen"
+        ]
+      }
+    },
+    {
+      "id": "s11",
+      "treatment": "photo",
+      "year": "1967",
+      "when": "1960s",
+      "title": "Patraque",
+      "caption": "A stick steadied her for months and months after one attack of rheumatoid arthritis, which had begun in her forties and had afflicted her father too.",
+      "body": "A stick steadied her for months and months after one attack of rheumatoid arthritis, which had begun in her forties and had afflicted her father too. She joked to her former student Patricia Kennison that she sometimes felt quite PATRAQUE, like an old machine that ran badly. At the Nanyang Academy she remained an excellent but strict teacher, elegant and methodical, and according to Liu Kang, she taught not just technique but the ethics of making art. In 1967 she summed up her life to Eugene's cousin Dorothy Lee, promised her pictures to Singapore and Malaysia, and wrote: \"I have continued to be myself seeking neither fame nor riches.\"",
+      "voice": "She promised her pictures to this island.",
+      "turn": "A stick could not stop the teaching.",
+      "age": 60,
+      "quote": {
+        "text": "I have continued to be myself seeking neither fame nor riches.",
+        "speaker": "Georgette Chen (letter to Dorothy Lee, 17 May 1967)",
+        "source": {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        }
+      },
+      "photo": {
+        "src": "/stories/georgette-chen/s11/photo.webp",
+        "aspect": 0.637,
+        "kind": "place",
+        "concept": "boat",
+        "label": "Bumboats on the Singapore River, September 1960",
+        "tag": "Place",
+        "year": "1960",
+        "focus": [
+          0.736,
+          0.791
+        ],
+        "mounted": true,
+        "cutout": "/stories/georgette-chen/s11/cutout.webp",
+        "trace": "/stories/georgette-chen/s11/trace.json",
+        "credit": {
+          "artist": "Peter Forster",
+          "license": "CC BY-SA 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "page": "https://commons.wikimedia.org/wiki/File:SingaporeRiver-bumboats-196009.jpg"
+        }
+      },
+      "visual": "Bumboats on the Singapore River, September 1960",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:51:36.822Z",
+        "note": "Arthritis/father/stick, PATRAQUE/Kennison joke, NAFA/Liu Kang teaching and 1967 Dorothy Lee quote all verified",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        ]
+      }
+    },
+    {
+      "id": "s12",
+      "treatment": "line",
+      "year": "1982",
+      "title": "Two Rooms of Canvases",
+      "caption": "Ng Eng Teng walked up to collect the Cultural Medallion for her in 1982.",
+      "body": "Ng Eng Teng walked up to collect the Cultural Medallion for her in 1982. A serious fall in 1981 had put her in hospital and she needed care for the rest of her life, so she was too ill to attend as the first woman visual artist to receive the award. In oral-history interviews with Constance Sheares she insisted an artist had to be prepared to starve, but loved the work too much to stop – in her words, \"An artist, I tell you, has to be prepared to starve.\" She died on 15 March 1993 at Mount Alvernia Hospital from complications of rheumatoid arthritis. Afterwards her executor found fifty-three paintings stowed in two rooms of her Siglap Plain house and gave them to the Singapore Art Museum. The house sold for S$2.8 million to fund an arts scholarship.",
+      "voice": "Fifty-three canvases, facing the wall.",
+      "turn": "Fifty-three paintings stayed to teach.",
+      "age": 75,
+      "quote": {
+        "text": "An artist, I tell you, has to be prepared to starve.",
+        "speaker": "Georgette Chen (interview with Constance Sheares, 1988-89)",
+        "source": {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        }
+      },
+      "visual": "Single pen drawing: a quiet room in a tropical house, shutters half open, rows of canvases stacked with their backs to us, a dust sheet, an empty easel. A man seen from behind in the doorway with a ring of keys. No painting surfaces visible.",
+      "cut": [
+        "canvases",
+        "easel"
+      ],
+      "sources": [
+        {
+          "label": "Sara Siew, 'Georgette Chen: The Artist Speaks', BiblioAsia vol. 15 issue 2 (Jul-Sep 2019), National Library Board",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+        },
+        {
+          "label": "Culturepaedia (Singapore Chinese Cultural Centre), 'Pioneer artist: Georgette Chen'",
+          "url": "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+        },
+        {
+          "label": "Esplanade Offstage, TributeSG: 'Georgette Chen Liying' (12 Oct 2016, updated 27 Nov 2025)",
+          "url": "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        },
+        {
+          "label": "Wikipedia: Georgette Chen",
+          "url": "https://en.wikipedia.org/wiki/Georgette_Chen"
+        }
+      ],
+      "plate": "/stories/georgette-chen/s12/plate.webp",
+      "background": "/stories/georgette-chen/s12/background.webp",
+      "line": "/stories/georgette-chen/s12/line.json",
+      "video": "/stories/georgette-chen/s12/scene.mp4?v=327d8adb",
+      "poster": "/stories/georgette-chen/s12/scene.jpg?v=327d8adb",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "canvases",
+          "depth": 0.6,
+          "x": 50.31,
+          "y": 84.19,
+          "w": 17,
+          "src": "/stories/georgette-chen/s12/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "easel",
+          "depth": 0.8,
+          "x": 82.16,
+          "y": 97.38,
+          "w": 22.94,
+          "src": "/stories/georgette-chen/s12/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:51:54.918Z",
+        "note": "Ng Eng Teng received medallion for her, 1981 fall led to hospital/hospice till 1993, first woman award 1982, starve quote from Sheares 1989 interview, death 15 Mar 1993 at Mount Alvernia from rheumatoid, 53 paintings from two rooms to SAM and S$2.8m house to scholarship.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Georgette_Chen",
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+          "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen",
+          "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+        ]
+      }
+    }
+  ]
+}

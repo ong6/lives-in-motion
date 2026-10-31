@@ -1,0 +1,226 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:04:15.589Z",
+  "usd": 0.2073,
+  "rationale": "A turning-point application: a Reveal opens tight on the fountain pen that wrote her request, then travels up and out to the hospital while the caped woman rises up its steps, undeterred at 47.",
+  "plan": {
+    "focusX": 0.55,
+    "focusY": 0.62,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2137499999999999,
+        "panX": -0.01125,
+        "panY": 0.045,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.10125,
+        "panX": 0.01125,
+        "panY": -0.01125,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0.0225,
+        "panY": -0.03375,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-2",
+        "depth": 0.95,
+        "driftX": -0.01125,
+        "driftY": 0.01125,
+        "scale": 0.9606250000000001,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "A turning-point application: a Reveal opens tight on the fountain pen that wrote her request, then travels up and out to the hospital while the caped woman rises up its steps, undeterred at 47."
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "rework",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "rework",
+      "filmIssues": [
+        "The claimed reveal barely happens: at t=0 zoom is only about 1.21, so the pen, envelope and hospital are all already fully readable; the move is a gentle pull-back rather than a tight-on-the-pen opening travelling up to the hospital.",
+        "The woman does not rise up the steps. She has no cut-out layer, so she stays fixed to the hospital background in every frame; the rationale's central action is not visible.",
+        "Only cut-2 (pen) is given layer motion, and it is very small (drift about 0.011, scale 0.96). The pen stays coherent on the envelope with no obvious tearing, doubled edge or ghost, but its movement is near-imperceptible.",
+        "The letter/envelope (cut-1) is absent from the motion plan, so foreground letter and background hospital separate only through the modest camera move; parallax between the application and the institution is weak.",
+        "First frame is serviceable but crops the envelope awkwardly at the left/right edges without being a true pen close-up; the last frame is the strongest picture — full plate, clear margins, good to dwell on.",
+        "Dust ambient is subtle and era-appropriate, and the woodcut/newsprint style is preserved; no layer clips badly at the end, but the overall film is only slightly more expressive than a plain centred move."
+      ],
+      "fixes": [
+        "unknown layer cut-1 dropped",
+        "move damped to 56% (cut-2 16% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.55,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": -0.01125,
+            "panY": 0.045,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.01125,
+            "panY": -0.01125,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.0225,
+            "panY": -0.03375,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.01125,
+            "driftY": 0.01125,
+            "scale": 0.9606250000000001,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A turning-point application: a Reveal opens tight on the fountain pen that wrote her request, then travels up and out to the hospital while the caped woman rises up its steps, undeterred at 47."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent and era-appropriate pull-back, but too timid and with an awkwardly cropped opening frame; the reveal does not yet clearly outperform a plain centred move.",
+      "filmIssues": [
+        "The pull-back idea is right — pen/airmail application in the foreground to the hospital and caped woman behind — but after clamping it reads as only a modest 1.24 to 1.0 loosening, not a genuinely tight opening on the pen. All six frames are essentially the same centred view.",
+        "At t=0 the foreground envelope/pen combination is awkwardly cropped at the left edge and the pen nearly reaches the right edge, so the opening frame feels like a cropped version of the final frame rather than a composed close picture.",
+        "The woman on the steps, who is the story's subject, receives no purposeful emphasis or movement; she is simply revealed slightly smaller as the camera pulls back.",
+        "No obvious tearing, doubled edges or ghosting is visible, and the pen stays planted on the envelope, but the movement is too timid to earn more than a competent push-in/pull-back."
+      ],
+      "fixes": [
+        "unknown layer cut-1 dropped",
+        "move damped to 56% (cut-2 20% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.56,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.23625,
+            "panX": 0.016875,
+            "panY": 0.050624999999999996,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.005625,
+            "panY": 0.01125,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": -0.005625,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-2",
+            "depth": 1,
+            "driftX": -0.0140625,
+            "driftY": -0.0084375,
+            "scale": 0.983125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Make the reveal real and reversible: open genuinely tight on the fountain pen and airmail envelope that made the application (zoom 1.42 focused low on the pen), then pull back and rise in one continuous in-out move to the full hospital front and the caped woman on the steps for the dwell frame. The pen, as the nearest layer, gets strong parallax and a small settling drift/scale so it stays planted"
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish: the pull-back concept suits the caption (application in foreground, institution behind), but the execution is timid and the foreground layer drifts off its painted spot, breaking the plate apart. The revised plan makes the opening truly tight, gives the woman a purposeful climb, and keeps pen and envelope seated on the scene through to a full, integrated final frame.",
+      "filmIssues": [
+        "The pull-back is readable but timid: the six frames differ mainly in overall scale, so it reads little better than a plain camera move.",
+        "The near pen/envelope layer separates progressively from the hospital steps, opening a blank newsprint gap and making the final composition feel like two pasted illustrations rather than one plate; at t=1 the envelope sits low and loose, a weaker dwell picture than the integrated original.",
+        "The stated story beat — the woman climbing toward the entrance — does not happen: the figure layer (cut-1, the small central box on the steps) has no layer entry in the plan, so she stays static while only the pen drifts slightly.",
+        "First frame at zoom ~1.21 is not genuinely tight on the pen/application; the whole scene is already visible, so the reveal has little to reveal."
+      ],
+      "fixes": [
+        "unknown layer cut-1 dropped",
+        "move damped to 56% (cut-2 17% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.57,
+        "focusY": 0.66,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0.019687500000000004,
+            "panY": 0.042187499999999996,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.00675,
+            "panY": 0.0140625,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-2",
+            "depth": 1,
+            "driftX": -0.005625,
+            "driftY": -0.003375,
+            "scale": 0.983125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Make the intended reveal visible and reversible: open genuinely tight, low on the fountain pen and airmail envelope that made the application, then pull back and rise continuously to the full hospital front for the dwell frame. Give the foreground pen strong near-layer parallax with a small settling drift, and give the figure layer a slight upward drift toward the entrance so the pull-back also be"
+      }
+    }
+  ]
+}

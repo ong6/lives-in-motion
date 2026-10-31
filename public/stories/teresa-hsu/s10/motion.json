@@ -1,0 +1,262 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:06:38.716Z",
+  "usd": 0.1671,
+  "rationale": "A quiet turning point — a home become a ward — told as a Reveal: open tight on the bungalow's lined-up beds, then pull back and down to discover the woman with her tray climbing the steps and the coconut and banana slope around her.",
+  "plan": {
+    "focusX": 0.42,
+    "focusY": 0.47,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2249999999999999,
+        "panX": 0.028125,
+        "panY": -0.016875,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.10125,
+        "panX": 0.005625,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": -0.016875,
+        "panY": 0.016875,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.55,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": -0.0084375,
+        "driftY": -0.025312499999999998,
+        "scale": 1.028125,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A quiet turning point — a home become a ward — told as a Reveal: open tight on the bungalow's lined-up beds, then pull back and down to discover the woman with her tray climbing the steps and the coconut and banana slope around her."
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Timid pull-back that never actually conceals then reveals its subject — the woman is present from the first frame and her climb does not read.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Timid pull-back that never actually conceals then reveals its subject — the woman is present from the first frame and her climb does not read.",
+      "filmIssues": [
+        "The pull-back is too timid to perform the stated reveal: at t=0 the woman, tray, steps, basket, palms and banana plants are already fully visible, so nothing is discovered as the camera eases from zoom 1.22 to 1.0.",
+        "The woman (cut-2, the central figure on the steps despite its 'coconuts' label) barely climbs — its small up-drift reads as parallax, not as a purposeful ascent carrying the tray toward the ward.",
+        "First frame is not a tight opening on the lined-up beds and last frame is only a marginally wider version of the same picture, so the move feels close to a plain centred push-in in reverse and would not read clearly in either direction.",
+        "No obvious tearing, doubled edges, halo or ghosting is visible in the contact sheet, and no layer clips the frame edge awkwardly; the light-sweep is subtle and does not disturb the 1970s silkscreen print style."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-1 15% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.42,
+        "focusY": 0.47,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2249999999999999,
+            "panX": 0.028125,
+            "panY": -0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.005625,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": -0.016875,
+            "panY": 0.016875,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.55,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.0084375,
+            "driftY": -0.025312499999999998,
+            "scale": 1.028125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet turning point — a home become a ward — told as a Reveal: open tight on the bungalow's lined-up beds, then pull back and down to discover the woman with her tray climbing the steps and the coconut and banana slope around her."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "film",
+      "filmIssues": [
+        "Pull-back reveal is legible but timid in the contact sheet: frames from t=0 to t=1 change only slightly in framing, despite a 1.25 to 1.0 zoom, so it reads close to a plain centred push-in in reverse.",
+        "Serious coherence defect on cut-2 (the woman on the steps): at t=0.8, bottom-middle frame, there is a visible white doubled/ghost silhouette beside her where the layer has moved off its painted-over background spot. The same edge-doubling begins at t=0.6-1.0.",
+        "The woman's upward drift is too large for the clean background underneath her, exposing the inpainted patch and breaking the flat silkscreen figure.",
+        "First frame is acceptable as an opening, and the last wide frame is a good dwell picture showing bungalow, steps, palms and coconut basket, but the ghost prevents publication.",
+        "Light-sweep ambient is fitting and subtle for the tropical 1970s silkscreen poster and does not damage the print style."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-1 16% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.4,
+        "focusY": 0.44,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.253125,
+            "panX": 0.03937500000000001,
+            "panY": -0.028125,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.1125,
+            "panX": 0.0140625,
+            "panY": -0.0084375,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": -0.005625,
+            "panY": 0.01125,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.5,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.010124999999999999,
+            "driftY": -0.03375,
+            "scale": 1.028125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Bolder Reveal: open genuinely tight on the bungalow cutaway and its lined-up beds, then pull back and down to the full slope — palms, banana plants, basket and, crucially, the woman revealed on the steps, drifting clearly up the steps with her tray toward the ward as the house settles into its wider setting. The final wide frame is the dwell picture; reversed, the same move tightens onto the ward."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent but timid pull-back: subject and print style hold together with no obvious ghosting or edge clipping, yet the reveal and the woman's ascent are too small to read as purposeful story motion.",
+      "filmIssues": [
+        "The pull-back barely reads: all six frames show essentially the same wide composition, with the bungalow, palms, steps and basket already fully visible at t=0, so there is no clear reveal or journey by t=1.",
+        "The woman's movement is imperceptible — drift of -0.003/-0.0105 and scale 1.0075 produce no purposeful step up the stairs; she appears static while the camera very slowly shrinks the scene.",
+        "The claimed opening on the cutaway and lined-up beds is not achieved in frame: t=0 is not tight on the ward interior, and t=1 is only a slightly looser version of the same picture, so neither opening nor dwelling frame is distinct.",
+        "The light-sweep is not visibly distinguishable across the contact sheet and does not add narrative or period-print information; the motion as rendered is close to a plain slow pull-out, only in reverse of a push-in."
+      ],
+      "fixes": [
+        "move damped to 75% (cut-1 10% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.44,
+        "focusY": 0.46,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2550000000000001,
+            "panX": 0.026250000000000002,
+            "panY": -0.018750000000000003,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.1275,
+            "panX": 0.009000000000000001,
+            "panY": -0.00375,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.0150000000000001,
+            "panX": -0.006,
+            "panY": 0.009000000000000001,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.45,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": -0.003,
+            "driftY": -0.0105,
+            "scale": 1.0075,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Bolder, cleaner reveal: open tighter on the bungalow cutaway and lined-up beds, then pull back further and pan down to reveal the full slope, steps, banana plants, palms and coconut basket, with the woman making only a short, purposeful step upward toward the ward. Halving cut-2's drift and lowering its depth/scale keeps her silhouette inside its painted area and prevents the doubled ghost edge, w"
+      }
+    }
+  ]
+}

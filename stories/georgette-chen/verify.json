@@ -1,0 +1,167 @@
+[
+  {
+    "id": "s1",
+    "year": "1914",
+    "title": "Swans in the Tuileries",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:50:06.316Z",
+    "verdict": "ok",
+    "reason": "Birth Oct 1906 Zhejiang as Zhang Liying fourth of 12 to Zhang Jingjiang antiques dealer Paris/NY/London, Shanghainese-only and China trips, Tuileries swans/Parc Monceau merry-go-round, St Enogat near Dinard and France-home quote all verified",
+    "raw": "Fact-checking the Georgette Chen passage — verifying each name, date, and detail.The main childhood details check out so far — now opening the source articles to confirm the exact wording.All passages align with the cited biographies — now checking for any conflicting records on her birthplace.OK | Birth Oct 1906 Zhejiang as Zhang Liying fourth of 12 to Zhang Jingjiang antiques dealer Paris/NY/London, Shanghainese-only and China trips, Tuileries swans/Parc Monceau merry-go-round, St Enogat near Dinard and France-home quote all verified",
+    "sources": [
+      "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+    ]
+  },
+  {
+    "id": "s2",
+    "year": "1918",
+    "title": "The Foreign Potato",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:49:55.126Z",
+    "verdict": "ok",
+    "reason": "Podgorsky lessons with father-daughter together, Zhang Jingjiang’s daughter born Oct 1906, “different idea” quote from 7 Sep 1953 Radio Malaya transcript, salted-ducks/potatoes list and “foreign potato” rebuke, parents financially supportive but unconvinced all match.",
+    "raw": "I'll fact-check this Chen chapter against the cited sources, starting with searches for the interview quote.The quote appears in several results. I'll open the BiblioAsia article to verify the full context.The main narrative checks out so far. I'll verify the remaining claims about her parents and the chapter date.Most details match, but the 1918 date needs checking. I'll search for when the Podgorsky lessons occurred.OK | Podgorsky lessons with father-daughter together, Zhang Jingjiang’s daughter born Oct 1906, “different idea” quote from 7 Sep 1953 Radio Malaya transcript, salted-ducks/potatoes list and “foreign potato” rebuke, parents financially supportive but unconvinced all match.",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+      "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+    ]
+  },
+  {
+    "id": "s3",
+    "year": "1927",
+    "title": "Freedom to Paint",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:49:46.241Z",
+    "verdict": "ok",
+    "reason": "Photo rightmost front row 1923, Jules-Ferry/McTyeire/ASL schools, formal 1926 year ASL, less-structured Biloul/Colarossi roaming + “freedom\" quote sourced to Sheares 2 Nov 1988 Reel1 p6, 1930 Salon acceptance at age 24 after meeting Eugene 1927 marrying 1930.",
+    "raw": "Checking Chen's schools, dates, and quoted words against the cited sources.Early results line up on several facts — now opening the source pages to confirm the exact wording.Most details check out — now tracking down whether that freedom quote is really Chen's own words.OK | Photo rightmost front row 1923, Jules-Ferry/McTyeire/ASL schools, formal 1926 year ASL, less-structured Biloul/Colarossi roaming + “freedom\" quote sourced to Sheares 2 Nov 1988 Reel1 p6, 1930 Salon acceptance at age 24 after meeting Eugene 1927 marrying 1930.",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+      "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+    ]
+  },
+  {
+    "id": "s4",
+    "year": "1927",
+    "title": "He Always Posed",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:50:28.414Z",
+    "verdict": "ok",
+    "reason": "Meeting at 21 in 1927 via Soong Ching-ling, Eugene 52 widower with 2 sons 2 daughters wife died of cancer 2 years earlier, 30-year gap/father disapproval/married Paris 1930 kept surname at Chinese Consular Office, loved art/music/French/posing/sew-easel, haircut/pineapples/avocados diary “Poses so badly & talks all the time”",
+    "raw": "I'll verify this biography chapter against the cited sources, searching for records of the meeting, marriage, and diary quotation.The initial searches show promising matches. I'll open the full source pages to confirm the details.The core facts check out so far. I'll investigate the conflicting birth years for Eugene Chen to verify the stated age gap.OK | Meeting at 21 in 1927 via Soong Ching-ling, Eugene 52 widower with 2 sons 2 daughters wife died of cancer 2 years earlier, 30-year gap/father disapproval/married Paris 1930 kept surname at Chinese Consular Office, loved art/music/French/posing/sew-easel, haircut/pineapples/avocados diary “Poses so badly & talks all the time”",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+      "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+    ]
+  },
+  {
+    "id": "s5",
+    "year": "1931",
+    "title": "Ship from Marseilles",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:50:16.635Z",
+    "verdict": "ok",
+    "reason": "1931 Marseilles-to-Singapore meeting, Shanghai-via-Malaya route, June 1956 Kuala Lumpur portrait and “beautiful and charming” note all match.",
+    "raw": "Fact-checking that 1931 voyage — opening the cited sources to verify dates and quotes.The main article didn't surface the shipboard meeting, so I'll search within it for Tunku Abdul Rahman.I found Tunku mentions in the article — pulling the full caption to check the exact wording.OK | 1931 Marseilles-to-Singapore meeting, Shanghai-via-Malaya route, June 1956 Kuala Lumpur portrait and “beautiful and charming” note all match.",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+      "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+    ]
+  },
+  {
+    "id": "s6",
+    "year": "1935",
+    "title": "A Second-Hand Fiat",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:50:37.222Z",
+    "verdict": "ok",
+    "reason": "Driving dates/Fiat and Cézanne sites match diary archive and 1937 Fair/Jeu de Paume match BiblioAsia.",
+    "raw": "Fact-checking the 1935 chapter — opening its cited sources.The early details match the archive — now verifying the 1937 exhibition claims.Exhibition titles are checking out — confirming the Palace name for the final verdict.OK | Driving dates/Fiat and Cézanne sites match diary archive and 1937 Fair/Jeu de Paume match BiblioAsia.",
+    "sources": [
+      "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+    ]
+  },
+  {
+    "id": "s7",
+    "year": "1941",
+    "title": "From Hong Kong to Shanghai",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:22:13.435Z",
+    "verdict": "ok",
+    "reason": "1941 Hong Kong detention then Shanghai internment, took her everywhere fearing for safety, May 1944 death widowing 38-year-old, born Oct 1906 fits 34 in 1941.",
+    "raw": "I'll fact-check this biography chapter against web sources.The dates look close so far — now I'll open the cited sources to verify the remaining details.OK | 1941 Hong Kong detention then Shanghai internment, took her everywhere fearing for safety, May 1944 death widowing 38-year-old, born Oct 1906 fits 34 in 1941.",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+      "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+    ]
+  },
+  {
+    "id": "s8",
+    "year": "1951",
+    "title": "My Tahiti",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:51:07.167Z",
+    "verdict": "ok",
+    "reason": "All names, numbers, dates and durian/huts quotes match sources",
+    "raw": "I'll fact-check this Chen chapter against the cited sources, starting with searches on her biography, marriage, and Penang years.Early findings look consistent, so I'll open the key articles directly to verify the dates, quotes, and details for citation.The main narrative checks out; now I'll verify the remaining detail about teaching posts at Han Chiang High School.OK | All names, numbers, dates and durian/huts quotes match sources",
+    "sources": [
+      "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen"
+    ]
+  },
+  {
+    "id": "s9",
+    "year": "1953",
+    "title": "Bread Without Butter",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:51:09.308Z",
+    "verdict": "ok",
+    "reason": "Hermes Baby/carbons, Sept 1953 Chamber solo, 1953 move, early-1954 Sennett “regained liberty” letter, 1954-1980 part-time NAFA, 1 of 2 women teachers, and 6 Feb 1961 butter quote all verified",
+    "raw": "Fact-checking the Georgette Chen claims — verifying dates, places, and the quote.Early findings look consistent — now digging into the cited sources to confirm the exact quote wording.Confirmed the biography details — now checking the letter citation for the butter quote.OK | Hermes Baby/carbons, Sept 1953 Chamber solo, 1953 move, early-1954 Sennett “regained liberty” letter, 1954-1980 part-time NAFA, 1 of 2 women teachers, and 6 Feb 1961 butter quote all verified",
+    "sources": [
+      "https://www.nationalgallery.sg/sg/en/learn-about-art/magazine/the-world-of-georgette-chen-archive.html"
+    ]
+  },
+  {
+    "id": "s10",
+    "year": "1955",
+    "title": "Chendana",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:51:10.818Z",
+    "verdict": "ok",
+    "reason": "House, 1955 self-identification, Chendana, cooking, YWCA, recipe, family and quote all match",
+    "raw": "Fact-checking the chapter line-by-line — verifying names, dates, dishes, and that quote.First checks look consistent — now digging into the cited sources for the cooking, studio, and family details.I've confirmed the house, name origin, and cooking demos — now tracking down the family portrait and exact letter wording.OK | House, 1955 self-identification, Chendana, cooking, YWCA, recipe, family and quote all match",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Georgette_Chen"
+    ]
+  },
+  {
+    "id": "s11",
+    "year": "1967",
+    "title": "Patraque",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:51:36.822Z",
+    "verdict": "ok",
+    "reason": "Arthritis/father/stick, PATRAQUE/Kennison joke, NAFA/Liu Kang teaching and 1967 Dorothy Lee quote all verified",
+    "raw": "Checking names, dates, and that 1967 quote — one line verdict coming.First clues look consistent — now I'll open the cited sources to verify each detail.The main claims check out so far — now I'll dig into the remaining specifics to confirm or catch any error.OK | Arthritis/father/stick, PATRAQUE/Kennison joke, NAFA/Liu Kang teaching and 1967 Dorothy Lee quote all verified",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/"
+    ]
+  },
+  {
+    "id": "s12",
+    "year": "1982",
+    "title": "Two Rooms of Canvases",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:51:54.918Z",
+    "verdict": "ok",
+    "reason": "Ng Eng Teng received medallion for her, 1981 fall led to hospital/hospice till 1993, first woman award 1982, starve quote from Sheares 1989 interview, death 15 Mar 1993 at Mount Alvernia from rheumatoid, 53 paintings from two rooms to SAM and S$2.8m house to scholarship.",
+    "raw": "Fact-checking the Georgette Chen chapter — verifying every name, date, and number.Most details check out so far — now digging into the remaining claims about her historic first and final years.OK | Ng Eng Teng received medallion for her, 1981 fall led to hospital/hospice till 1993, first woman award 1982, starve quote from Sheares 1989 interview, death 15 Mar 1993 at Mount Alvernia from rheumatoid, 53 paintings from two rooms to SAM and S$2.8m house to scholarship.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Georgette_Chen",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-15-issue-2-jul-sep-2019-georgette-chen/",
+      "https://culturepaedia.singaporeccc.org.sg/en/culture-related-topics/art/pioneer-artist-georgette-chen",
+      "https://www.esplanade.com/offstage/arts/georgette-chen-liying"
+    ]
+  }
+]

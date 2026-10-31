@@ -1,0 +1,250 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:09:50.276Z",
+  "usd": 0.1464,
+  "rationale": "Keep the bold, story-led pull-back: open tight on the waiting robed figure at the lectern, then reveal the silhouetted graduates and the crimson-and-gold Victoria Theatre stage, ending on the full plate for reading. Keep both identically boxed layers locked to exactly the same depth with zero drift and no end-scale change so the figure and lectern cannot separate, double, or expose a painted-over ",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.55,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.42,
+        "panX": 0,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.2,
+        "panX": 0,
+        "panY": 0.022,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.85,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Keep the bold, story-led pull-back: open tight on the waiting robed figure at the lectern, then reveal the silhouetted graduates and the crimson-and-gold Victoria Theatre stage, ending on the full plate for reading. Keep both identically boxed layers locked to exactly the same depth with zero drift and no end-scale change so the figure and lectern cannot separate, double, or expose a painted-over "
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "A clear, purposeful pull-back: it opens tight on the robed figure and lectern, then steadily reveals the graduate silhouettes and full Victoria Theatre stage, ending on the complete plate as a strong dwell image. The figure and lectern remain locked together with no visible tearing, doubled edges, ghosting or awkward frame clipping, and the halftone-shimmer suits the 1950s lithograph style. The plate itself is clean: silhouettes and back view as directed, no stray text, anachronism or mangled anatomy.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish: the pull-back idea suits the awaited ceremony, but the empty ghostly entrance and weak opening frame undermine it.",
+      "filmIssues": [
+        "The opening frame is not a publishable picture: both cut-outs are absent, leaving a large empty orange disc, no lectern and no robed figure, which reads as a missing-layer error rather than an intentionally waiting stage.",
+        "The two layers share the same box and appear to contain the combined figure-and-lectern group; during the rise entrance the group is a faint ghost at t=0.2, so the awaited arrival looks like a fade-in artefact.",
+        "The pull-back is legible but modest after clamping, and because figure and lectern enter together the lectern does not read as already waiting for the speaker.",
+        "The final frame is the strongest, most complete composition and is good to dwell on, but the journey from an empty, tightly cropped opening to it is not clear enough to beat a simple push-in by the required margin."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.56,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0,
+            "panY": 0.045,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": -0.015,
+            "scale": 1.07,
+            "enter": "rise",
+            "enterAt": 0.1,
+            "enterFor": 0.35
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": -0.015,
+            "scale": 1.07,
+            "enter": "rise",
+            "enterAt": 0.1,
+            "enterFor": 0.35
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "An awaited arrival at the Victoria Theatre: the camera reveals the empty lit circle and waiting graduates in a wide pull-back while the robed figure rises early into the light and settles, slightly larger, at the lectern."
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "Good reveal, spoiled by foreground ghosting/light artifact",
+      "filmIssues": [
+        "The pull-back idea is right — tight on the robed figure and lectern at t=0, revealing the graduate rows and Victoria Theatre stage by t=1 — and the final full composition is a strong dwell frame.",
+        "The robed figure does not stay coherent during the move: sharp gold scratch-like streaks and doubled marks appear across the robe from the middle frames onward and are most visible at t=0.6-1. That reads as layer tearing/ghosting, not as a soft theatrical light.",
+        "The light-sweep is not subtle or fitting in this render: instead of a broad warm pool of light it produces the hard gold lines isolated on the foreground figure, breaking the flat 1950s lithograph surface.",
+        "Because of that artifact the otherwise purposeful reveal cannot be published as-is, despite being clearly better in conception than a plain centred push-in."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.45,
+            "panX": 0,
+            "panY": 0.055,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0.025,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.02,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": -0.005,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": -0.005,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Make the robed figure and lectern present from the first frame in a strong tight opening, then execute a clear, bold pull-back that reveals the waiting graduates and Victoria Theatre stage. Keeping both identically-boxed layers locked to identical depth, drift and scale prevents the figure and lectern separating or ghosting, while the light-sweep retains the theatrical pool-of-light feeling."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "A clear, purposeful pull-back: it opens tight on the robed figure and lectern, then steadily reveals the graduate silhouettes and full Victoria Theatre stage, ending on the complete plate as a strong dwell image. The figure and lectern remain locked together with no visible tearing, doubled edges, ghosting or awkward frame clipping, and the halftone-shimmer suits the 1950s lithograph style. The plate itself is clean: silhouettes and back view as directed, no stray text, anachronism or mangled anatomy.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.55,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.42,
+            "panX": 0,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.2,
+            "panX": 0,
+            "panY": 0.022,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Keep the bold, story-led pull-back: open tight on the waiting robed figure at the lectern, then reveal the silhouetted graduates and the crimson-and-gold Victoria Theatre stage, ending on the full plate for reading. Keep both identically boxed layers locked to exactly the same depth with zero drift and no end-scale change so the figure and lectern cannot separate, double, or expose a painted-over "
+      }
+    }
+  ]
+}

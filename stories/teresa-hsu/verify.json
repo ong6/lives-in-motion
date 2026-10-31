@@ -1,0 +1,170 @@
+[
+  {
+    "id": "s1",
+    "year": "1898",
+    "title": "Beggars below the window",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:04.174Z",
+    "verdict": "ok",
+    "reason": "All names, dates and events match sources: born 1898 in Swatow-Kak Chioh, second of four, ate grass, 4am pine-needle/laundry baskets, too small for window and beggars quote verbatim hers",
+    "raw": "OK | All names, dates and events match sources: born 1898 in Swatow-Kak Chioh, second of four, ate grass, 4am pine-needle/laundry baskets, too small for window and beggars quote verbatim hers",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/",
+      "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+    ]
+  },
+  {
+    "id": "s2",
+    "year": "1906",
+    "title": "The pot of potatoes",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:14:28.616Z",
+    "verdict": "ok",
+    "reason": "Pot-tale and blessing-quote verbatim match, abusive father left for another woman, Anthony+Lucy+Ursula = four children with abusive-father abandonment and illiterate mother fending singlehandedly, 1898–2011 aged 113 supports 100+ years.",
+    "raw": "Fact-checking the potato story against its sources — one line verdict to come.The family details look consistent — now I'm verifying the birth year and final particulars.I've confirmed the family account and the blessing quote — now checking whether the 1906 date holds up.OK | Pot-tale and blessing-quote verbatim match, abusive father left for another woman, Anthony+Lucy+Ursula = four children with abusive-father abandonment and illiterate mother fending singlehandedly, 1898–2011 aged 113 supports 100+ years.",
+    "sources": [
+      "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html",
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+    ]
+  },
+  {
+    "id": "s3",
+    "year": "1925",
+    "title": "Sweeping for lessons",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:12:24.528Z",
+    "verdict": "ok",
+    "reason": "1925 age-27 sit-in and 3.5-yr Senior Cambridge pass, grandmother/mother/3-siblings boat trip, lace-for-ticket cleaners deal and exact quote all match.",
+    "raw": "I'll fact-check this Teresa Hsu chapter against the cited web sources.I've found some initial leads, so now I'll open the cited sources for detailed verification.The main timeline checks out; I'll now verify the remaining details like the sweeping and book quotes.OK | 1925 age-27 sit-in and 3.5-yr Senior Cambridge pass, grandmother/mother/3-siblings boat trip, lace-for-ticket cleaners deal and exact quote all match.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+    ]
+  },
+  {
+    "id": "s4",
+    "year": "1933",
+    "title": "Shorthand by night",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:21.515Z",
+    "verdict": "ok",
+    "reason": "1933 Hong Kong cleaner-by-day/shorthand-by-night to stenographer, 1939 Chongqing German-agency secretary/bookkeeper, quit high-paying job for Friends’ Ambulance Unit, quote verbatim “The poor can at least beg, but the others, you either go to them, or they die”",
+    "raw": "OK | 1933 Hong Kong cleaner-by-day/shorthand-by-night to stenographer, 1939 Chongqing German-agency secretary/bookkeeper, quit high-paying job for Friends’ Ambulance Unit, quote verbatim “The poor can at least beg, but the others, you either go to them, or they die”",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+    ]
+  },
+  {
+    "id": "s5",
+    "year": "1944",
+    "title": "The foxtrot",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:21:49.559Z",
+    "verdict": "ok",
+    "reason": "Name, age, quote and crash match source: boyfriend Brian Sorenson, 24-year-old blonde blue-eyed volunteer, “foxtrot” line and plane crash 3 years later flying to London",
+    "raw": "Checking the foxtrot line against the cited source — one-line verdict next.The search snippet looks promising — opening the Her World article to verify the exact wording.OK | Name, age, quote and crash match source: boyfriend Brian Sorenson, 24-year-old blonde blue-eyed volunteer, “foxtrot” line and plane crash 3 years later flying to London",
+    "sources": [
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+    ]
+  },
+  {
+    "id": "s6",
+    "year": "1945",
+    "title": "Lipstick in the bin",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:38.023Z",
+    "verdict": "ok",
+    "reason": "1945 posh-hotel man asking few cents, British-friends meal and gate encounter, discarding lipstick/rouge/nail polish and quote “I'll never touch a cent...After that, I was free” all match.",
+    "raw": "OK | 1945 posh-hotel man asking few cents, British-friends meal and gate encounter, discarding lipstick/rouge/nail polish and quote “I'll never touch a cent...After that, I was free” all match.",
+    "sources": [
+      "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+    ]
+  },
+  {
+    "id": "s7",
+    "year": "1945",
+    "title": "Grossly overaged",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:41.291Z",
+    "verdict": "ok",
+    "reason": "Wording matches Hsu's quoted letter and 1945, age 47, free Royal Free training, 8 years in England and IVSP Europe work all verified",
+    "raw": "Fact-checking that 1945 claim — verifying every name, date, and quoted word.Early findings match the chapter's version — now pulling the full texts to confirm the dates and wording.OK | Wording matches Hsu's quoted letter and 1945, age 47, free Royal Free training, 8 years in England and IVSP Europe work all verified",
+    "sources": [
+      "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+    ]
+  },
+  {
+    "id": "s8",
+    "year": "1953",
+    "title": "Only one mother",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:14:24.383Z",
+    "verdict": "ok",
+    "reason": "1953 Bruderhof 8-year stay and 1961 Penang return match, only nurse/midwife role matches, river-fish conscious vegetarian matches, mother quote verbatim as Teresa recalling mother, forgave father matches.",
+    "raw": "Fact-checking that Teresa Hsu chapter — verifying dates, names, and the mother quote.I've found early leads on the Paraguay timeline and family details — now digging into the cited sources to check the exact wording of that quote.The quote matches and the timeline mostly checks out — now probing the remaining details for any discrepancy.OK | 1953 Bruderhof 8-year stay and 1961 Penang return match, only nurse/midwife role matches, river-fish conscious vegetarian matches, mother quote verbatim as Teresa recalling mother, forgave father matches.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+      "https://www.scwo.org.sg/profiles/teresa-hsu-chih",
+      "https://ivu.org/news/online/interviews/teresa.html",
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+    ]
+  },
+  {
+    "id": "s9",
+    "year": "1963",
+    "title": "The matron without a salary",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:47:08.361Z",
+    "verdict": "ok",
+    "reason": "0.6-ha Jalan Payoh Lai plot, 1963 Kwong Wai Shiu matron unsalaried, 1965 Home one of first, Ursula elder-sister funder CHIJ Bukit Timah principal, land-with-bungalow purchase, quote verbatim from Teresa, 100 beds soon filled.",
+    "raw": "Fact-checking the Teresa Hsu chapter claim by claim.Sources so far corroborate the chapter — now I'll check the remaining reference.OK | 0.6-ha Jalan Payoh Lai plot, 1963 Kwong Wai Shiu matron unsalaried, 1965 Home one of first, Ursula elder-sister funder CHIJ Bukit Timah principal, land-with-bungalow purchase, quote verbatim from Teresa, 100 beds soon filled.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/",
+      "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+    ]
+  },
+  {
+    "id": "s10",
+    "year": "1970",
+    "title": "Ten coconut trees",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:47:34.822Z",
+    "verdict": "ok",
+    "reason": "10 coconut/dozen banana with Ursula pay/Hsu manage matches, ~100 patients in 1970 and handover to Rotary-formed Society building 3 blocks/matron till 1980 matches, Ursula died 1973 leaving fortune for homeless flats, 5 in Singapore/2 in Malaysia, Lucy/Anthony died weeks apart leaving without family.",
+    "raw": "Fact-checking the passage — verifying each name, number, and date.Most details match so far — now digging into the family timeline to verify the final claims.The main sources check out — now hunting for the origin of the coconut and fruit details.OK | 10 coconut/dozen banana with Ursula pay/Hsu manage matches, ~100 patients in 1970 and handover to Rotary-formed Society building 3 blocks/matron till 1980 matches, Ursula died 1973 leaving fortune for homeless flats, 5 in Singapore/2 in Malaysia, Lucy/Anthony died weeks apart leaving without family.",
+    "sources": [
+      "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+    ]
+  },
+  {
+    "id": "s11",
+    "year": "1983",
+    "title": "Heart to Heart",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:47:49.043Z",
+    "verdict": "ok",
+    "reason": "1983/1980 retirement and annexe flat, S$20–S$180 rice/sugar/biscuit aid, Rao co-worker, Friends-to-Heart rename, plant quote and barefoot self-cleaned flat all verified",
+    "raw": "Fact-checking that Teresa Hsu chapter — verifying names, dates, and the quote.Early sources confirm the quote and some timeline details — now tracking down the remaining specifics.Most details check out — now verifying the co-worker’s name spelling.The evidence points to approval — gathering final citations to certify the chapter.OK | 1983/1980 retirement and annexe flat, S$20–S$180 rice/sugar/biscuit aid, Rao co-worker, Friends-to-Heart rename, plant quote and barefoot self-cleaned flat all verified",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+    ]
+  },
+  {
+    "id": "s12",
+    "year": "2010",
+    "title": "The sick demons forgot",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:48:09.881Z",
+    "verdict": "ok",
+    "reason": "200 in Penang in stitches, 4am yoga from age 69 book, taught temples/hospitals/schools, German/Cantonese songs and reading no glasses, quip verbatim, died Wed 7 Dec 2011 home aged 113, same-day cremation per no-media/no-ritual wish with no ash claim.",
+    "raw": "Biography check in progress — verifying Teresa Hsu's life details against sources.Early signs point to accurate reporting — now digging into the cited articles to confirm each event.OK | 200 in Penang in stitches, 4am yoga from age 69 book, taught temples/hospitals/schools, German/Cantonese songs and reading no glasses, quip verbatim, died Wed 7 Dec 2011 home aged 113, same-day cremation per no-media/no-ritual wish with no ash claim.",
+    "sources": [
+      "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html",
+      "https://www.seniorsaloud.com/2008/12/meet-angel-of-compassion-teresa-hsu.html"
+    ]
+  }
+]

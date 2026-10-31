@@ -1,0 +1,263 @@
+{
+  "model": "muse-spark-1.3",
+  "at": "2026-10-31T02:15:20.071Z",
+  "rounds": 2,
+  "problems": [],
+  "chapters": [
+    {
+      "age": 8,
+      "body": "Before school he sold eggs at the market in Bukit Panjang. Sim Wong Hoo was born in 1955, the tenth child in a Zhao'an Hokkien family of five boys and seven girls. He grew up in a kampung in Bukit Panjang called End of Coconut Hill (Ye Shan Wei), where Fajar Road is today. His father, Sim Chye Thiam, worked as a factory labourer and later as a provision-shop attendant. His mother, Tan Siok Kee, reared chickens, ducks, pigs and rabbits, grew fruit and herbs, and sold eggs door to door. Several children shared beds of wooden planks laid on bricks; he later slept on two benches topped with a single plank. At home he cleared weeds, cut grass for the rabbits and prepared coconuts. Unable to afford toys, he made his own toys and board games.",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "n": 1,
+      "quote": null,
+      "title": "End of Coconut Hill",
+      "turn": "Then music found him.",
+      "voice": "A boy who could not buy toys, so he built them.",
+      "when": "1960s",
+      "year": "1963"
+    },
+    {
+      "age": 11,
+      "body": "He took up the harmonica at about eleven and regarded it as his first love. In 1969 his father died, leaving his mother to raise the family alone. His mother, Tan Siok Kee, reared chickens, ducks, pigs and rabbits, grew fruit and herbs, and sold eggs door to door. In the years that followed she carried the household by that daily work, and he kept the small instrument with him through the same years, holding to the music he had found then as his own still through all that change.",
+      "facts": [
+        8,
+        9,
+        4
+      ],
+      "n": 2,
+      "quote": null,
+      "title": "A Harmonica for First Love",
+      "turn": "School would soon give him a troupe.",
+      "voice": "He found his first love at eleven.",
+      "when": "",
+      "year": "1966"
+    },
+    {
+      "age": 20,
+      "body": "At Ngee Ann Technical College he studied electrical and electronic engineering and graduated in 1975. He joined the harmonica troupe and arranged its scores. To accompany the troupe he learned the accordion at playwright Kuo Pao Kun's Practice Theatre School. He only heard how his arrangements sounded at the troupe's weekly practice, so the music lived on paper between rehearsals. He dreamed of a computer synthesiser that would play them exactly as written. In his 1999 book he looked back at those practice nights and summed up the debt: \"The (Ngee Ann) Harmonica Club planted the first seed of Creative in me.\"",
+      "facts": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "n": 3,
+      "quote": {
+        "fact": 13,
+        "text": "The (Ngee Ann) Harmonica Club planted the first seed of Creative in me."
+      },
+      "title": "The Troupe and the Accordion",
+      "turn": "He wanted a machine that could play it back.",
+      "voice": "A score he could hear only once a week.",
+      "when": "",
+      "year": "1975"
+    },
+    {
+      "age": 24,
+      "body": "At the finish line there was no line left to cross. During National Service he tried a half-marathon with friends unprepared. He walked the second half and reached the finish after everyone had gone and the street was swept. \"When I got to the end, there was nobody there. There was nothing left, even the street was cleaned up.\" Around 1980 he opened a computer tuition centre at Coronation Plaza with an acquaintance, who absconded with the tuition fees. From that loss he concluded he must be directly in control of any business.",
+      "facts": [
+        14,
+        15
+      ],
+      "n": 4,
+      "quote": {
+        "fact": 14,
+        "text": "When I got to the end, there was nobody there. There was nothing left, even the street was cleaned up."
+      },
+      "title": "Nobody at the Finish",
+      "turn": "He still wanted to teach computers his own way.",
+      "voice": "He kept walking after everyone else had gone.",
+      "when": "late 1970s",
+      "year": "1979"
+    },
+    {
+      "age": 26,
+      "body": "The shop measured 440 square feet. In July 1981 he opened the computer shop at Pearl's Centre in Chinatown with childhood friend and schoolmate Ng Kai Wa, and this was the start of Creative Technology. It started on his savings of S$10,000. He taught computer classes to keep it going and, when business was poor, taught part-time at a private school. \"In the early days, I survived on $200 a month.\" In 1984 Creative launched the Cubic 99, the first PC designed and made in Singapore. The Cubic CT followed in 1986, a multilingual multimedia PC, but it was not a commercial success. He turned to its sound technology instead, and accordion classmate Chay Kwong Soon joined as co-founder that year.",
+      "facts": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "n": 5,
+      "quote": {
+        "fact": 18,
+        "text": "In the early days, I survived on $200 a month."
+      },
+      "title": "440 Square Feet in Chinatown",
+      "turn": "Inside the failed computer hummed its future.",
+      "voice": "Ten thousand dollars and a room in Chinatown.",
+      "when": "",
+      "year": "1981"
+    },
+    {
+      "age": 33,
+      "body": "He lifted the sound out of the failure. The sound work became the Creative Music System in 1987, renamed Game Blaster for the US market. Creative gave game developers free support and collected their wish lists for what a sound card should do. In 1988 he moved to the US and vowed not to return until he had sold 20,000 units. Month by month the sales added up. He reached the target. The lists he had gathered from developers now pointed beyond the Game Blaster to something they wanted even more.",
+      "facts": [
+        21,
+        22
+      ],
+      "n": 6,
+      "quote": null,
+      "title": "Twenty Thousand or Nothing",
+      "turn": "Las Vegas would hear what he had built.",
+      "voice": "He would not come home until he had sold 20,000.",
+      "when": "",
+      "year": "1988"
+    },
+    {
+      "age": 34,
+      "body": "Sound Blaster launched at Comdex in Las Vegas in November 1989 and took 600 orders at the show. According to the Wall Street Journal, Michael Jackson turned up unannounced at the crowded Comdex booth and stayed nearly half an hour. By the end of 1990 Sound Blaster was the world's top-selling PC add-on, and revenue rose from US$5.4m in 1989 to US$658m in 1994. In August 1992 Creative became the first Singapore company to list on Nasdaq, when Sound Blaster held 72% of the world market. He was named Businessman of the Year for 1992, and again for 1997, the first person to win it twice; he wore a suit perhaps only for those two awards.",
+      "facts": [
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "n": 7,
+      "quote": null,
+      "title": "The Card That Gave Voice",
+      "turn": "Success would soon test him another way.",
+      "voice": "Until then, most PCs could only beep.",
+      "when": "",
+      "year": "1989"
+    },
+    {
+      "age": 44,
+      "body": "In 1996 an oversupply of CD-ROM drives forced massive inventory write-downs. Sim refocused the company on audio, and the turnaround won him his second Businessman of the Year award. In February 1999 the Creative Resources building opened at International Business Park; he put a childcare centre, an auditorium and a grand piano in its foyer. That year the Nomad MP3 player launched, about two years before Apple's iPod. By 2000, aged 45, he was Singapore's youngest billionaire, with SGX shares peaking at $64 in March 2000. He was stubborn: he rejected a white Zen in a white box and chose blue, and threw out a US$1 million Frog Design packaging concept.",
+      "facts": [
+        28,
+        29,
+        30,
+        32,
+        33
+      ],
+      "n": 8,
+      "quote": null,
+      "title": "A Blue Box, Not White",
+      "turn": "The contest for ears was only starting.",
+      "voice": "He chose blue. Then Apple launched a white iPod.",
+      "when": "",
+      "year": "1999"
+    },
+    {
+      "age": 51,
+      "body": "In August 2006 Apple paid Creative US$100 million for a licence to its Zen user-interface patent, ending five lawsuits, as he noted in the Apple press release: \"We're very pleased to have reached an amicable settlement with Apple.\" Creative still lost out in MP3 players; it reported a S$187m full-year loss in August 2006 and turned to cost-cutting. In 2007 Creative voluntarily delisted from Nasdaq, and its SGX shares later fell to around $1 by 2017. That same year, 2006, his mother died, and the foundation he had started that year was renamed the Sim-Tan Siok Kee Foundation in her memory.",
+      "facts": [
+        34,
+        35,
+        36,
+        38
+      ],
+      "n": 9,
+      "quote": {
+        "fact": 34,
+        "text": "We're very pleased to have reached an amicable settlement with Apple."
+      },
+      "title": "The iPod Settlement",
+      "turn": "He looked for comfort on the road.",
+      "voice": "A hundred million could not buy back the lead.",
+      "when": "",
+      "year": "2006"
+    },
+    {
+      "age": 52,
+      "body": "He came to the start line in December 2007 without being ready. He ran his first marathon that month and finished in just under seven hours. The preparation had not been there. Then, instead of resting, he signed up for an 84 km ultramarathon, far longer still. \"I always do things when I am not prepared.\" The line explained both decisions at once, the first finish and the second start. He had not waited to be ready. He had gone, he had finished, and then he had chosen a harder road still.",
+      "facts": [
+        39
+      ],
+      "n": 10,
+      "quote": {
+        "fact": 39,
+        "text": "I always do things when I am not prepared."
+      },
+      "title": "First Marathon, Next Ultramarathon",
+      "turn": "Another obsession was already twenty years old.",
+      "voice": "Unready, he finished, then chose harder.",
+      "when": "",
+      "year": "2007"
+    },
+    {
+      "age": 64,
+      "body": "He had stopped using headphones because they fatigued him, throwing them away after five minutes. He wanted headphones that sounded like real speakers in a real room, so he set his engineers to build it and kept funding the work. It took twenty years and over US$100 million before Super X-Fi launched in 2019. A lifelong bachelor, he told Yahoo in 2019 that entrepreneurs should not marry. Having no family, he said, let him take the risks such long work required: \"I can take risks because I have no family.\"",
+      "facts": [
+        42,
+        43
+      ],
+      "n": 11,
+      "quote": {
+        "fact": 42,
+        "text": "I can take risks because I have no family."
+      },
+      "title": "Headphones He Couldn't Stand",
+      "turn": "He explained survival as squeezing through cracks.",
+      "voice": "Twenty years to make headphones feel like speakers.",
+      "when": "",
+      "year": "2019"
+    },
+    {
+      "age": 67,
+      "body": "On the night of 3 January 2023 he talked long with his engineers. He died suddenly on 4 January 2023, aged 67, due to meet the online sales team the next day. Employees remembered him handing round a bag of hongbao of different amounts at Chinese New Year for staff to draw, and holding durian feasts. He gave more than S$49 million to charity in his lifetime, including S$30 million of Creative shares for two foundations, one honouring his mentor Kuo Pao Kun. Explaining how Creative survived, he had said of walls he could not break: \"So, I looked for cracks. So, there was a crack there, I squeezed through the crack and I managed it.\"",
+      "facts": [
+        44,
+        45,
+        46,
+        37
+      ],
+      "n": 12,
+      "quote": {
+        "fact": 44,
+        "text": "So, I looked for cracks. So, there was a crack there, I squeezed through the crack and I managed it."
+      },
+      "title": "The Meeting Set for Tomorrow",
+      "turn": "The music played on exactly as written.",
+      "voice": "He squeezed through where others saw only wall.",
+      "when": "",
+      "year": "2023"
+    }
+  ],
+  "conflicts": [
+    {
+      "choice": "10th of 12 children in a family of five boys and seven girls, not the youngest",
+      "topic": "Birth order"
+    },
+    {
+      "choice": "Omit age at father's death; born 1955 with no exact birth date, so 12 or 13 both possible",
+      "topic": "Age when father died in 1969"
+    },
+    {
+      "choice": "Omit mother's age at death; sources say 94 or 97",
+      "topic": "Mother's age at death in 2006"
+    },
+    {
+      "choice": "Singapore's youngest billionaire in 2000, aged 45",
+      "topic": "Year became youngest billionaire"
+    },
+    {
+      "choice": "Avoid award count; say Super X-Fi won awards in 2019 and 2020",
+      "topic": "Super X-Fi CES awards"
+    },
+    {
+      "choice": "Use Ng Kai Wa, add Chay Kwong Soon as co-founder from 1986, capital S$10,000",
+      "topic": "Co-founder name and starting capital"
+    },
+    {
+      "choice": "Avoid naming giver; say he took it up at about 11",
+      "topic": "Who gave him the harmonica"
+    },
+    {
+      "choice": "Aged 67 at death on 4 January 2023",
+      "topic": "Age at death"
+    }
+  ]
+}

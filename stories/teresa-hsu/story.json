@@ -1,0 +1,974 @@
+{
+  "slug": "teresa-hsu",
+  "name": "Teresa Hsu",
+  "born": "1898",
+  "died": "2011",
+  "tagline": "She ate grass as a child in Swatow and spent the next century making sure no one else had to.",
+  "edition": "deep",
+  "conflicts": [
+    {
+      "topic": "Birth year",
+      "choice": "The book uses 1898, the corroborated date, and notes it was never independently verified."
+    },
+    {
+      "topic": "Age and year of the move to Penang",
+      "choice": "The book gives no age or year for the move to Penang and follows the 1925 dating for schooling."
+    },
+    {
+      "topic": "Arranged marriage",
+      "choice": "The book leaves out the arranged-marriage escape rather than fixing it to a year."
+    },
+    {
+      "topic": "Move to Chongqing",
+      "choice": "The book follows 1939 for the move to Chongqing."
+    },
+    {
+      "topic": "Going to London",
+      "choice": "The book follows 1945, aged 47, for writing to London."
+    },
+    {
+      "topic": "Arrival in Singapore",
+      "choice": "The book follows 1963 for becoming matron in Singapore."
+    },
+    {
+      "topic": "Retirement as matron",
+      "choice": "The book says early 1980s for retirement and gives no single year."
+    },
+    {
+      "topic": "Assunta location",
+      "choice": "The book leaves out the claim she set up Assunta Hospital with Anthony and says only she returned to Penang."
+    },
+    {
+      "topic": "Caring for her father",
+      "choice": "The book keeps only that she had forgiven her father and omits when and where she nursed him."
+    },
+    {
+      "topic": "Heart to Heart founding",
+      "choice": "The book follows Friends of the Poor renamed Heart to Heart Service around 1983."
+    }
+  ],
+  "breaks": [
+    {
+      "after": "s10",
+      "photo": {
+        "src": "/stories/teresa-hsu/break-10/photo.webp",
+        "aspect": 0.75,
+        "kind": "place",
+        "concept": "building",
+        "label": "The Society for the Aged Sick, Hougang, successor to the 1965 home, 2007",
+        "tag": "Place",
+        "year": "2007",
+        "credit": {
+          "artist": "Aldwin Teo",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Society_For_The_Aged_Sick%E2%80%94Singapore.jpg"
+        }
+      }
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "treatment": "photo",
+      "year": "1898",
+      "title": "Beggars below the window",
+      "caption": "Too small to see out of the window, she listened to the beggars in the street below.",
+      "body": "Too small to see out of the window, she listened to the beggars in the street below. Teresa Hsu was born in 1898 in Kak Chioh, a village of Swatow, the second of four children. By the time she was five or six, the voices outside told her that people suffered, and she wanted to know why. Her own family was so poor that at times she ate grass. Before light the children rose to fill bamboo baskets with pine needles for fuel in the Swatow hills, then carried laundry in the same baskets to wash in the streams. As she told it decades later, \"I may have been a girl of five or six when I heard beggars telling their sad tales along the street.\"",
+      "voice": "She listened because she was too small to look away.",
+      "turn": "Her mother would show her what to do with empty hands.",
+      "age": 0,
+      "quote": {
+        "text": "I may have been a girl of five or six when I heard beggars telling their sad tales along the street.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "Khng Eu Meng, 'Teresa Hsu: Never too old to care for others', Singapore's Extraordinary People (1995), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        }
+      },
+      "photo": {
+        "src": "/stories/teresa-hsu/s1/photo.webp",
+        "aspect": 0.7232,
+        "kind": "place",
+        "concept": "ship",
+        "label": "Swatow harbour, c. 1869, about thirty years before she was born",
+        "tag": "Place",
+        "year": "c.1869",
+        "focus": [
+          0.887,
+          0.423
+        ],
+        "cutout": "/stories/teresa-hsu/s1/cutout.webp",
+        "trace": "/stories/teresa-hsu/s1/trace.json",
+        "credit": {
+          "artist": "John Thomson (Metropolitan Museum of Art Open Access)",
+          "license": "CC0",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "page": "https://commons.wikimedia.org/wiki/File:View_of_Swatow_Harbour_MET_DP165632.jpg"
+        }
+      },
+      "visual": "Swatow harbour, c. 1869, about thirty years before she was born",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Heart to Heart Service, 'About Founder' and Sharana Rao's announcement (Wayback, 2012)",
+          "url": "https://web.archive.org/web/2012/http://www.hearttoheartservice.org/"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "Singapore Women's Hall of Fame (SCWO), 'Teresa Hsu Chih' (inducted 2014)",
+          "url": "https://www.scwo.org.sg/profiles/teresa-hsu-chih"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:04.174Z",
+        "note": "All names, dates and events match sources: born 1898 in Swatow-Kak Chioh, second of four, ate grass, 4am pine-needle/laundry baskets, too small for window and beggars quote verbatim hers",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/",
+          "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        ]
+      }
+    },
+    {
+      "id": "s2",
+      "treatment": "line",
+      "year": "1906",
+      "when": "1900s",
+      "title": "The pot of potatoes",
+      "caption": "The pot held the family's whole dinner.",
+      "body": "The pot held the family's whole dinner. Her mother had dug up potatoes and set them to cook when a knock came at the door. A starving beggar stood there with a child. Her mother gave them the entire pot. Teresa's father had left the family for another woman after beating them, and her illiterate mother was raising four children alone. There was nothing left for their own evening meal. Teresa watched the food go out of the door and never forgot it. She kept the lesson for more than a hundred years, that as she later put it, \"That was the day I learnt that to give what you have in your hand to others is a great blessing.\"",
+      "voice": "An empty pot taught her more than a full one ever could.",
+      "turn": "A boat to Penang would lead her to a classroom door.",
+      "age": 8,
+      "quote": {
+        "text": "That was the day I learnt that to give what you have in your hand to others is a great blessing.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "K. Kasturi Dewi, 'The Power of Laughter', The Star (26 Jan 2010), reprinted on tsemrinpoche.com",
+          "url": "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html"
+        }
+      },
+      "visual": "Single pen line drawing on cream paper: a low doorway at night, a clay cooking pot passing from one pair of hands to another; a woman's silhouette holding a small child outside; inside, four children seen from behind on a bench.",
+      "cut": [
+        "pot",
+        "doorway"
+      ],
+      "sources": [
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "K. Kasturi Dewi, 'The Power of Laughter', The Star (26 Jan 2010), reprinted on tsemrinpoche.com",
+          "url": "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html"
+        },
+        {
+          "label": "SeniorsAloud, 'Meet Angel of Compassion - Teresa Hsu' (Dec 2008; author met her 20 Oct 2008)",
+          "url": "https://www.seniorsaloud.com/2008/12/meet-angel-of-compassion-teresa-hsu.html"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s2/plate.webp",
+      "background": "/stories/teresa-hsu/s2/background.webp",
+      "line": "/stories/teresa-hsu/s2/line.json",
+      "video": "/stories/teresa-hsu/s2/scene.mp4?v=d5e32723",
+      "poster": "/stories/teresa-hsu/s2/scene.jpg?v=d5e32723",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "pot",
+          "depth": 0.6,
+          "x": 44.16,
+          "y": 59.06,
+          "w": 8.19,
+          "src": "/stories/teresa-hsu/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "doorway",
+          "depth": 0.8,
+          "x": 76.22,
+          "y": 71.19,
+          "w": 6.56,
+          "src": "/stories/teresa-hsu/s2/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-31T02:14:28.616Z",
+        "note": "1905 is wrong — Hsu was b. 1898, reportedly 7 July 1898; the potato-beggar-with-child story and quote “That was the day I learnt that to give what you have in your hand to others is a great blessing,” → Rewritten from the research and checked again: Pot-tale and blessing-quote verbatim match, abusive father left for another woman, Anthony+Lucy+Ursula = four children with abusive-father abandonment and illiterate mother fending singlehandedly, 1898–2011 aged 113 supports 100+ years.",
+        "sources": [
+          "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html",
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        ]
+      }
+    },
+    {
+      "id": "s3",
+      "treatment": "archive",
+      "year": "1925",
+      "title": "Sweeping for lessons",
+      "caption": "She swept the convent corridors each morning before the lessons began.",
+      "body": "She swept the convent corridors each morning before the lessons began. When the last uncle who supported them left, the family had sold their lace to pay for a boat passage to Penang, and Teresa arrived with her grandmother, her mother and her three siblings. In Penang she and her mother worked as cleaners at a Catholic convent. Unschooled at 27, she persuaded the nuns in 1925 to let her sit in on the children's classes. She studied from books the nuns had found for her, for as she remembered, \"The nuns got us free books from rich former pupils.\" About three and a half years later she passed the Senior Cambridge examination.",
+      "voice": "A cleaner at the back of the class learned to read.",
+      "turn": "Reading would take her much farther than Penang.",
+      "age": 27,
+      "quote": {
+        "text": "The nuns got us free books from rich former pupils.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        }
+      },
+      "visual": "Archive-print plate, sepia halftone with a deckled edge and a typed caption strip: a 1920s convent classroom with wooden desks and louvred shutters; small girls in rows, and at the back a grown woman seen from behind, a broom leaning against the wall beside her.",
+      "cut": [
+        "woman",
+        "broom"
+      ],
+      "sources": [
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "Singapore Women's Hall of Fame (SCWO), 'Teresa Hsu Chih' (inducted 2014)",
+          "url": "https://www.scwo.org.sg/profiles/teresa-hsu-chih"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "K. Kasturi Dewi, 'The Power of Laughter', The Star (26 Jan 2010), reprinted on tsemrinpoche.com",
+          "url": "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s3/plate.webp",
+      "background": "/stories/teresa-hsu/s3/background.webp",
+      "video": "/stories/teresa-hsu/s3/scene.mp4?v=9c5efed3",
+      "poster": "/stories/teresa-hsu/s3/scene.jpg?v=9c5efed3",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 58.56,
+          "y": 83.19,
+          "w": 16.13,
+          "src": "/stories/teresa-hsu/s3/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "broom",
+          "depth": 0.8,
+          "x": 67.47,
+          "y": 85.38,
+          "w": 15.94,
+          "src": "/stories/teresa-hsu/s3/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T02:12:24.528Z",
+        "note": "1925 age-27 sit-in and 3.5-yr Senior Cambridge pass, grandmother/mother/3-siblings boat trip, lace-for-ticket cleaners deal and exact quote all match.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        ]
+      }
+    },
+    {
+      "id": "s4",
+      "treatment": "theatre",
+      "year": "1933",
+      "title": "Shorthand by night",
+      "caption": "By lamplight she copied shorthand strokes into an exercise book.",
+      "body": "By lamplight she copied shorthand strokes into an exercise book. Teresa had left Penang for Hong Kong in 1933, cleaning by day and learning English, shorthand and typing by night until she was hired as a stenographer. In 1939 she moved to Chongqing as secretary and bookkeeper at a German news agency. When the city became unsafe, she gave up the well-paid job and volunteered with the Friends' Ambulance Unit. She faced the dying and saw that no one there knew how to save them. She decided her vocation was to nurse the sick and destitute, for as she later explained, \"The poor can at least beg, but the others, you either go to them, or they die.\"",
+      "voice": "She traded a salary for a way to help.",
+      "turn": "In that work she met someone she would not forget.",
+      "age": 35,
+      "quote": {
+        "text": "The poor can at least beg, but the others, you either go to them, or they die.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      },
+      "visual": "Layered paper cut-out in two halves: on the left a night window over Victoria Harbour, a desk lamp, a typewriter and a shorthand pad; on the right a misty Chongqing hillside with a canvas ambulance. A woman seen from behind walks from one half to the other.",
+      "cut": [
+        "woman",
+        "typewriter"
+      ],
+      "sources": [
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "The Straits Times, Friday Interview and timeline (31 Dec 1999), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s4/plate.webp",
+      "background": "/stories/teresa-hsu/s4/background.webp",
+      "video": "/stories/teresa-hsu/s4/scene.mp4?v=a0b9b757",
+      "poster": "/stories/teresa-hsu/s4/scene.jpg?v=a0b9b757",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 50.72,
+          "y": 85.75,
+          "w": 18.94,
+          "src": "/stories/teresa-hsu/s4/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "typewriter",
+          "depth": 0.8,
+          "x": 24.44,
+          "y": 76.88,
+          "w": 23.63,
+          "src": "/stories/teresa-hsu/s4/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:21.515Z",
+        "note": "1933 Hong Kong cleaner-by-day/shorthand-by-night to stenographer, 1939 Chongqing German-agency secretary/bookkeeper, quit high-paying job for Friends’ Ambulance Unit, quote verbatim “The poor can at least beg, but the others, you either go to them, or they die”",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        ]
+      }
+    },
+    {
+      "id": "s5",
+      "treatment": "line",
+      "year": "1944",
+      "when": "1940s",
+      "title": "The foxtrot",
+      "caption": "He danced the foxtrot and made the whole room laugh.",
+      "body": "He danced the foxtrot and made the whole room laugh. In the ambulance service Teresa met Brian Sorenson, a 24-year-old blond, blue-eyed volunteer. She said it was the only time she came close to having her own family. About three years later, after she had left for London, he boarded a plane to join her and was killed when it crashed. She spoke of him half a century later without bitterness, remembering only the brightness. She kept his memory beside her work. As she recalled, \"He was so cheerful—and so good at dancing the foxtrot.\" She never married.",
+      "voice": "For once she imagined a family of her own.",
+      "turn": "A hungry stranger waited at a Shanghai hotel gate.",
+      "age": 46,
+      "quote": {
+        "text": "He was so cheerful—and so good at dancing the foxtrot.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      },
+      "visual": "Loose pen drawing with a grey wash: two silhouettes mid-foxtrot under a single hanging bulb in a canvas mess tent; in the corner, a small propeller plane drawn very faintly, as if already a memory.",
+      "cut": [
+        "dancers",
+        "bulb"
+      ],
+      "sources": [
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s5/plate.webp",
+      "background": "/stories/teresa-hsu/s5/background.webp",
+      "line": "/stories/teresa-hsu/s5/line.json",
+      "video": "/stories/teresa-hsu/s5/scene.mp4?v=a11d41f9",
+      "poster": "/stories/teresa-hsu/s5/scene.jpg?v=a11d41f9",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "dancers",
+          "depth": 0.6,
+          "x": 59.22,
+          "y": 100,
+          "w": 23.81,
+          "src": "/stories/teresa-hsu/s5/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "bulb",
+          "depth": 0.8,
+          "x": 49.38,
+          "y": 28.5,
+          "w": 8.13,
+          "src": "/stories/teresa-hsu/s5/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T02:21:49.559Z",
+        "note": "Name, age, quote and crash match source: boyfriend Brian Sorenson, 24-year-old blonde blue-eyed volunteer, “foxtrot” line and plane crash 3 years later flying to London",
+        "sources": [
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        ]
+      }
+    },
+    {
+      "id": "s6",
+      "treatment": "theatre",
+      "year": "1945",
+      "title": "Lipstick in the bin",
+      "caption": "At the gate of the grand Shanghai hotel a starving man asked her for a few cents.",
+      "body": "At the gate of the grand Shanghai hotel a starving man asked her for a few cents. Teresa had just finished a meal inside with British friends in 1945. She went home and threw out her lipstick, her rouge and her nail polish. She kept nothing for display after that. The meeting at the gate stayed with her as the point when her life narrowed to one purpose. As she later described it, \"I'll never touch a cent that belongs to the poor person. That was the start. After that, I was free.\"",
+      "voice": "She left vanity at the hotel gate.",
+      "turn": "She was 47 and needed a new skill.",
+      "age": 47,
+      "quote": {
+        "text": "I'll never touch a cent that belongs to the poor person. That was the start. After that, I was free.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "Khng Eu Meng, 'Teresa Hsu: Never too old to care for others', Singapore's Extraordinary People (1995), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        }
+      },
+      "visual": "Paper-cut night scene: a lit hotel entrance with a revolving door and potted palms, warm gold inside; at the gate a thin man's silhouette against the wall; a woman seen from behind stops on the steps between the light and the dark.",
+      "cut": [
+        "woman",
+        "man"
+      ],
+      "sources": [
+        {
+          "label": "Khng Eu Meng, 'Teresa Hsu: Never too old to care for others', Singapore's Extraordinary People (1995), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s6/plate.webp",
+      "background": "/stories/teresa-hsu/s6/background.webp",
+      "video": "/stories/teresa-hsu/s6/scene.mp4?v=92bc60f3",
+      "poster": "/stories/teresa-hsu/s6/scene.jpg?v=92bc60f3",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 61.78,
+          "y": 86.38,
+          "w": 8.81,
+          "src": "/stories/teresa-hsu/s6/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "man",
+          "depth": 0.8,
+          "x": 17.66,
+          "y": 80.19,
+          "w": 6.31,
+          "src": "/stories/teresa-hsu/s6/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:45:38.023Z",
+        "note": "1945 posh-hotel man asking few cents, British-friends meal and gate encounter, discarding lipstick/rouge/nail polish and quote “I'll never touch a cent...After that, I was free” all match.",
+        "sources": [
+          "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        ]
+      }
+    },
+    {
+      "id": "s7",
+      "treatment": "archive",
+      "year": "1945",
+      "title": "Grossly overaged",
+      "caption": "She was 47 and asking for a place meant for the young.",
+      "body": "She was 47 and asking for a place meant for the young. Far past the age limit, Teresa wrote to the Nursing Council in London in 1945, and the matron replied that they were touched and would train her. She had told them, \"I'm grossly overaged, but for me, it's a dedication, not a livelihood.\" She trained without fees at the Royal Free Hospital in London. She remained eight years in England. She nursed in hospitals and she travelled across Europe with the International Voluntary Service for Peace, taking work where help was needed.",
+      "voice": "Too old for school, she went to school.",
+      "turn": "A river and a letter would call her away.",
+      "age": 47,
+      "quote": {
+        "text": "I'm grossly overaged, but for me, it's a dedication, not a livelihood.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "Khng Eu Meng, 'Teresa Hsu: Never too old to care for others', Singapore's Extraordinary People (1995), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        }
+      },
+      "visual": "Archive plate styled as a 1940s letter: a sheet of blue airmail paper with a fountain pen resting on it (no legible text); behind it, sepia, the brick front of a London hospital with a woman seen from behind climbing the steps in a nurse's cape.",
+      "cut": [
+        "letter",
+        "pen"
+      ],
+      "sources": [
+        {
+          "label": "Khng Eu Meng, 'Teresa Hsu: Never too old to care for others', Singapore's Extraordinary People (1995), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "Singapore Women's Hall of Fame (SCWO), 'Teresa Hsu Chih' (inducted 2014)",
+          "url": "https://www.scwo.org.sg/profiles/teresa-hsu-chih"
+        },
+        {
+          "label": "SeniorsAloud, 'Meet Angel of Compassion - Teresa Hsu' (Dec 2008; author met her 20 Oct 2008)",
+          "url": "https://www.seniorsaloud.com/2008/12/meet-angel-of-compassion-teresa-hsu.html"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s7/plate.webp",
+      "background": "/stories/teresa-hsu/s7/background.webp",
+      "video": "/stories/teresa-hsu/s7/scene.mp4?v=fd193b99",
+      "poster": "/stories/teresa-hsu/s7/scene.jpg?v=fd193b99",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "letter",
+          "depth": 0.6,
+          "x": 53.09,
+          "y": 48.5,
+          "w": 12.31,
+          "src": "/stories/teresa-hsu/s7/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "pen",
+          "depth": 0.8,
+          "x": 59.5,
+          "y": 84,
+          "w": 58.88,
+          "src": "/stories/teresa-hsu/s7/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:46:41.291Z",
+        "note": "Wording matches Hsu's quoted letter and 1945, age 47, free Royal Free training, 8 years in England and IVSP Europe work all verified",
+        "sources": [
+          "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        ]
+      }
+    },
+    {
+      "id": "s8",
+      "treatment": "line",
+      "year": "1953",
+      "title": "Only one mother",
+      "caption": "She watched fish playing in a river and decided she would eat no more living things.",
+      "body": "She watched fish playing in a river and decided she would eat no more living things. Teresa had sailed to Paraguay in 1953 with the Bruderhof, the Society of Brothers, and stayed eight years, often the only trained nurse and midwife at a small hospital. While there she became a conscious vegetarian. A letter from home then called her back to her ageing mother in Penang. Her mother told her, as Teresa repeated all her life, \"Poor people you get everywhere, but you have only one mother.\" She returned to Penang to be with her mother. She had forgiven her father.",
+      "voice": "Duty pulled her home across an ocean.",
+      "turn": "Singapore would give her work for decades.",
+      "age": 55,
+      "quote": {
+        "text": "Poor people you get everywhere, but you have only one mother.",
+        "speaker": "her mother, as Teresa recalled it (Her World, 1999)",
+        "source": {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      },
+      "visual": "Pen drawing with a pale green wash: a slow river under tall trees, small fish drawn as quick strokes in the water; a woman seen from behind sitting on the bank, an opened envelope on her knee.",
+      "cut": [
+        "woman",
+        "envelope"
+      ],
+      "sources": [
+        {
+          "label": "International Vegetarian Union, 'Interview with 110-year-old vegetarian' (c. 2008)",
+          "url": "https://ivu.org/news/online/interviews/teresa.html"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "Singapore Women's Hall of Fame (SCWO), 'Teresa Hsu Chih' (inducted 2014)",
+          "url": "https://www.scwo.org.sg/profiles/teresa-hsu-chih"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s8/plate.webp",
+      "background": "/stories/teresa-hsu/s8/background.webp",
+      "line": "/stories/teresa-hsu/s8/line.json",
+      "video": "/stories/teresa-hsu/s8/scene.mp4?v=5bef51b8",
+      "poster": "/stories/teresa-hsu/s8/scene.jpg?v=5bef51b8",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "woman",
+          "depth": 0.6,
+          "x": 50.94,
+          "y": 76,
+          "w": 29.25,
+          "src": "/stories/teresa-hsu/s8/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "envelope",
+          "depth": 0.8,
+          "x": 59.03,
+          "y": 67.5,
+          "w": 9.69,
+          "src": "/stories/teresa-hsu/s8/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-31T02:14:24.383Z",
+        "note": "She did not co-found Assunta Hospital with Anthony — Assunta Hospital was founded in Petaling Jaya by the Franciscan Missionaries of Mary in 1954 while Hsu was in Paraguay 1953-1961, where NLB says sh → Rewritten from the research and checked again: 1953 Bruderhof 8-year stay and 1961 Penang return match, only nurse/midwife role matches, river-fish conscious vegetarian matches, mother quote verbatim as Teresa recalling mother, forgave father matches.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+          "https://www.scwo.org.sg/profiles/teresa-hsu-chih",
+          "https://ivu.org/news/online/interviews/teresa.html",
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        ]
+      }
+    },
+    {
+      "id": "s9",
+      "treatment": "photo",
+      "year": "1963",
+      "title": "The matron without a salary",
+      "caption": "The bungalow at Jalan Payoh Lai stood on 0.6 hectares of land.",
+      "body": "The bungalow at Jalan Payoh Lai stood on 0.6 hectares of land. In 1963 Teresa had become the unsalaried matron of Kwong Wai Shiu Hospital in Singapore. With her elder sister Ursula, principal of CHIJ Bukit Timah, who paid for it, she opened the Home for the Aged Sick in 1965, one of Singapore's first homes for the elderly sick. Ursula bought the plot with its bungalow, and Teresa always credited her, saying, \"My sister supported me, she was the one who bought this land for me.\" The beds filled almost at once.",
+      "voice": "Two sisters built a home for strangers.",
+      "turn": "Fruit trees would have to pay for medicine.",
+      "age": 65,
+      "quote": {
+        "text": "My sister supported me, she was the one who bought this land for me.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        }
+      },
+      "photo": {
+        "src": "/stories/teresa-hsu/s9/photo.webp",
+        "aspect": 0.8001,
+        "kind": "place",
+        "concept": "building",
+        "label": "Kwong Wai Shiu Hospital, Singapore, today (2026)",
+        "tag": "Place",
+        "year": "2026",
+        "focus": [
+          0.5,
+          0.45
+        ],
+        "cutout": "/stories/teresa-hsu/s9/cutout.webp",
+        "trace": "/stories/teresa-hsu/s9/trace.json",
+        "credit": {
+          "artist": "S5A-0043",
+          "license": "CC BY 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Kwong_Wai_Shiu_Hospital_2026-03-31.jpg"
+        }
+      },
+      "visual": "Kwong Wai Shiu Hospital, Singapore, today (2026)",
+      "cut": [],
+      "sources": [
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "Singapore Women's Hall of Fame (SCWO), 'Teresa Hsu Chih' (inducted 2014)",
+          "url": "https://www.scwo.org.sg/profiles/teresa-hsu-chih"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "The Straits Times, Friday Interview and timeline (31 Dec 1999), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:47:08.361Z",
+        "note": "0.6-ha Jalan Payoh Lai plot, 1963 Kwong Wai Shiu matron unsalaried, 1965 Home one of first, Ursula elder-sister funder CHIJ Bukit Timah principal, land-with-bungalow purchase, quote verbatim from Teresa, 100 beds soon filled.",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1",
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/",
+          "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        ]
+      }
+    },
+    {
+      "id": "s10",
+      "treatment": "theatre",
+      "year": "1970",
+      "title": "Ten coconut trees",
+      "caption": "Ten coconut trees and a dozen banana trees grew behind the bungalow.",
+      "body": "Ten coconut trees and a dozen banana trees grew behind the bungalow. Teresa sold their fruit to help buy medicine after she and Ursula turned the bungalow and servants' quarters into wards. Ursula paid from her salary while Teresa ran the home. By 1970 there were about 100 patients and no money to cope, so they handed the deeds to the Society for the Aged Sick, formed by Rotary Club members, which built three blocks. She stayed on as matron. Ursula died in 1973 and left Teresa a small fortune. She used it to buy flats for people with nowhere to go, five in Singapore and two in Malaysia. Within a few years Lucy and Anthony died within weeks of each other, leaving her without family.",
+      "voice": "She turned fruit into shelter for a hundred people.",
+      "turn": "Retirement would not slow her rounds.",
+      "age": 72,
+      "visual": "Paper-layered cutaway of a 1960s bungalow on a slope: beds lined up in what was a living room, a servants' block turned ward; out back, coconut palms and banana plants, a basket of green coconuts by the steps. A woman seen from behind carries a tray.",
+      "cut": [
+        "bungalow",
+        "coconuts"
+      ],
+      "sources": [
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "SeniorsAloud, 'Meet Angel of Compassion - Teresa Hsu' (Dec 2008; author met her 20 Oct 2008)",
+          "url": "https://www.seniorsaloud.com/2008/12/meet-angel-of-compassion-teresa-hsu.html"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "Khng Eu Meng, 'Teresa Hsu: Never too old to care for others', Singapore's Extraordinary People (1995), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        }
+      ],
+      "plate": "/stories/teresa-hsu/s10/plate.webp",
+      "background": "/stories/teresa-hsu/s10/background.webp",
+      "video": "/stories/teresa-hsu/s10/scene.mp4?v=de839ffc",
+      "poster": "/stories/teresa-hsu/s10/scene.jpg?v=de839ffc",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "bungalow",
+          "depth": 0.6,
+          "x": 47.22,
+          "y": 76.63,
+          "w": 63.31,
+          "src": "/stories/teresa-hsu/s10/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "coconuts",
+          "depth": 0.8,
+          "x": 52.63,
+          "y": 87.81,
+          "w": 10,
+          "src": "/stories/teresa-hsu/s10/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:47:34.822Z",
+        "note": "10 coconut/dozen banana with Ursula pay/Hsu manage matches, ~100 patients in 1970 and handover to Rotary-formed Society building 3 blocks/matron till 1980 matches, Ursula died 1973 leaving fortune for homeless flats, 5 in Singapore/2 in Malaysia, Lucy/Anthony died weeks apart leaving without family.",
+        "sources": [
+          "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        ]
+      }
+    },
+    {
+      "id": "s11",
+      "treatment": "photo",
+      "year": "1983",
+      "when": "c.1983",
+      "title": "Heart to Heart",
+      "caption": "After she retired as the home's matron in the early 1980s, she moved into a small flat attached to it.",
+      "body": "After she retired as the home's matron in the early 1980s, she moved into a small flat attached to it. Each month she climbed out of a volunteer's car with bags of rice, sugar and biscuits and envelopes holding S$20 to S$180 for elderly people on public assistance. With co-worker Sharana Rao and volunteer drivers she ran Heart to Heart Service, the new name for her old Friends of the Poor. Outside her flat an orange plant someone had thrown away carried her handwritten tag with its date of rebirth, as she told visitors, \"A live thing should never be left alone to die.\" A visitor found her barefoot in a spotless flat she cleaned herself.",
+      "voice": "No one was too small to be carried home.",
+      "turn": "At 110 she still sang for her guests.",
+      "age": 85,
+      "quote": {
+        "text": "A live thing should never be left alone to die.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        }
+      },
+      "photo": {
+        "src": "/stories/teresa-hsu/s11/photo.webp",
+        "aspect": 0.75,
+        "kind": "place",
+        "concept": "gate",
+        "label": "The Heart to Heart Service centre, Hougang, 2007",
+        "tag": "Place",
+        "year": "2007",
+        "focus": [
+          0.391,
+          0.452
+        ],
+        "mounted": true,
+        "cutout": "/stories/teresa-hsu/s11/cutout.webp",
+        "trace": "/stories/teresa-hsu/s11/trace.json",
+        "credit": {
+          "artist": "Aldwin Teo",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Heart_to_Heart_Centre%E2%80%94Singapore.jpg"
+        }
+      },
+      "visual": "The Heart to Heart Service centre, Hougang, 2007",
+      "cut": [],
+      "sources": [
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "Her World, 'Her World Special Award 1999: Teresa Hsu' (interview at her flat, 1999)",
+          "url": "https://www.herworld.com/pov/people/teresa-hsu-special-award-1999/"
+        },
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "Mary Kogan, letter, The Straits Times Forum (5 Feb 2000), reprinted on cme4all wiki",
+          "url": "http://cme4all.pbworks.com/w/page/51292667/Teresa%20Hsu"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:47:49.043Z",
+        "note": "1983/1980 retirement and annexe flat, S$20–S$180 rice/sugar/biscuit aid, Rao co-worker, Friends-to-Heart rename, plant quote and barefoot self-cleaned flat all verified",
+        "sources": [
+          "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        ]
+      }
+    },
+    {
+      "id": "s12",
+      "treatment": "photo",
+      "year": "2010",
+      "title": "The sick demons forgot",
+      "caption": "She stood before about 200 people in Penang and made them laugh.",
+      "body": "She stood before about 200 people in Penang and made them laugh. At 112 Teresa still rose at 4 am for yoga, which she had taken up at 69 after buying a book called Forever Young, Forever Healthy, and later taught at temples, hospitals and schools. At 110 she had sung visitors a German song and a Cantonese nursery rhyme and read without glasses. Asked in Penang whether she had ever been ill, as she told them, \"The sick demons forgot to visit me.\" On Wednesday 7 December 2011 she died peacefully at home, aged 113. By her instruction she was cremated the same day, with no rituals or announcement, and no one claimed her ashes.",
+      "voice": "She laughed at illness and shared everything else.",
+      "turn": "She left nothing behind but full plates.",
+      "age": 112,
+      "quote": {
+        "text": "The sick demons forgot to visit me.",
+        "speaker": "Teresa Hsu",
+        "source": {
+          "label": "K. Kasturi Dewi, 'The Power of Laughter', The Star (26 Jan 2010), reprinted on tsemrinpoche.com",
+          "url": "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html"
+        }
+      },
+      "photo": {
+        "src": "/stories/teresa-hsu/s12/photo.webp",
+        "aspect": 1.5056,
+        "kind": "person",
+        "concept": "person",
+        "label": "Teresa Hsu at 112, Singapore, 2010",
+        "year": "2010",
+        "focus": [
+          0.488,
+          0.631
+        ],
+        "cutout": "/stories/teresa-hsu/s12/cutout.webp",
+        "trace": "/stories/teresa-hsu/s12/trace.json",
+        "credit": {
+          "artist": "Ibtzen",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Copy_(2)_of_Teresa_Hsu_20100926_155104.jpg"
+        }
+      },
+      "visual": "Teresa Hsu at 112, Singapore, 2010",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Wikipedia: Teresa Hsu Chih",
+          "url": "https://en.wikipedia.org/wiki/Teresa_Hsu_Chih"
+        },
+        {
+          "label": "NLB Infopedia, 'Teresa Hsu Chih' (valid as at 2016; read via Wayback copy of SIP_1590)",
+          "url": "https://www.nlb.gov.sg/main/article-detail?cmsuuid=34f34870-22b0-4aad-b296-a68c5df117d1"
+        },
+        {
+          "label": "SeniorsAloud, 'Meet Angel of Compassion - Teresa Hsu' (Dec 2008; author met her 20 Oct 2008)",
+          "url": "https://www.seniorsaloud.com/2008/12/meet-angel-of-compassion-teresa-hsu.html"
+        },
+        {
+          "label": "K. Kasturi Dewi, 'The Power of Laughter', The Star (26 Jan 2010), reprinted on tsemrinpoche.com",
+          "url": "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html"
+        },
+        {
+          "label": "Heart to Heart Service, 'About Founder' and Sharana Rao's announcement (Wayback, 2012)",
+          "url": "https://web.archive.org/web/2012/http://www.hearttoheartservice.org/"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:48:09.881Z",
+        "note": "200 in Penang in stitches, 4am yoga from age 69 book, taught temples/hospitals/schools, German/Cantonese songs and reading no glasses, quip verbatim, died Wed 7 Dec 2011 home aged 113, same-day cremation per no-media/no-ritual wish with no ash claim.",
+        "sources": [
+          "https://www.tsemrinpoche.com/tsem-tulku-rinpoche/inspiration-worthy-words/heart-to-heart-with-teresa-hsu-112.html",
+          "https://www.seniorsaloud.com/2008/12/meet-angel-of-compassion-teresa-hsu.html"
+        ]
+      }
+    }
+  ]
+}

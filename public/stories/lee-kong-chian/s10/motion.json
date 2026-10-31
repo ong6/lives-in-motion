@@ -1,0 +1,256 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:08:35.759Z",
+  "usd": 0.1793,
+  "rationale": "Bolder, purposeful reveal: start genuinely tight and low on the children/doorway/blank-plaque axis at zoom 1.5, then pull back in two eased stages to the complete bordered plate at zoom 1.0 for the dwell frame, reading in reverse as a gentle push toward the door. Both tiny fragment cut-outs are pinned to near-background depth with zero drift and scale 1.0 so they stay glued to the plate with no te",
+  "plan": {
+    "focusX": 0.49,
+    "focusY": 0.64,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.5,
+        "panX": 0.05,
+        "panY": 0.07,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.22,
+        "panX": 0.02,
+        "panY": 0.03,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "Bolder, purposeful reveal: start genuinely tight and low on the children/doorway/blank-plaque axis at zoom 1.5, then pull back in two eased stages to the complete bordered plate at zoom 1.0 for the dwell frame, reading in reverse as a gentle push toward the door. Both tiny fragment cut-outs are pinned to near-background depth with zero drift and scale 1.0 so they stay glued to the plate with no te"
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "A coherent, clean pull-back to a good final plate, but the opening is not tight or specific enough for the reveal to carry the story at publishable level.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A sound pull-back reveal concept, undermined by mis-cut fragment layers and no purposeful layer story — do not publish as-is.",
+      "filmIssues": [
+        "The pull-back idea is right for the scene — tight on the waiting children, then revealing the whole library and its open door as their destination — but in execution it reads as little more than a plain centred zoom-out, no better in storytelling than the baseline move it is scored against.",
+        "The cut-outs do not match their names: cut-1 'library' is a tiny 0.050 x 0.161 slice at lower-left foreground, and cut-2 'children' is a single narrow 0.035-wide child, not the building or the whole queue. The remaining children and the building stay on the painted background.",
+        "Because those two fragments share driftY -0.03 and scale 0.96 at different depths, individual children are pulled slightly away from the queue they belong to. At contact-sheet size the group still holds together broadly, but the split is conceptually wrong and risks doubled edges / a ghost on the painted-over spots behind the moved fragments.",
+        "The t=0 frame at zoom 1.4 is an awkward opening picture: the foreground is pushed toward the bottom edge, the right-hand trishaws crowd the frame edge, and the library — the subject of the caption — is not yet readable as a whole. The t=1 full-plate frame is a good dwell picture, with the border, building, children and trishaws all comfortably inside.",
+        "No entrance or layer journey carries the 'arrival' story: the children never advance toward the door, the trishaws do not arrive, and the blank plaque / doorway is never specifically discovered. Dust is fitting and subtle for an archive print and does not disturb the 1950s lithograph style."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.44,
+        "focusY": 0.78,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.4,
+            "panX": -0.04,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.04,
+            "panY": -0.04,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0.01,
+            "driftY": -0.03,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0.01,
+            "driftY": -0.03,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A quiet beginning of arrival: the camera opens tight on the waiting schoolchildren and reveals outward and upward to the whole red-brick library, so the open door is discovered as their destination."
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Do not publish as-is: a timid generic pull-back that does not clearly express the opening-day reveal, despite a good final dwell frame.",
+      "filmIssues": [
+        "The rendered move is effectively a plain centred pull-back: the six frames differ only by a slight scale change, with no clear staged reveal from the children/queue to the library as a whole.",
+        "The opening at nominal zoom 1.38 is damped/timid in the render - the building already reads almost complete at t=0, so the intended tight start on the children-doorway axis is not felt, and the poster border is awkwardly clipped without a purposeful close-up to justify it.",
+        "The two cut-outs are tiny mis-cut fragments (cut-1 and cut-2 are narrow slivers, not the whole library or children group); at depths 0.6/0.8 camera parallax can separate them from the painted plate and produce doubled edges/ghosting around the doorway/children.",
+        "No layer entrance or drift gives the queue a sense of arrival or directs attention to the blank plaque/door; the story 'a door open to anyone' is not expressed by the motion.",
+        "The final full-plate frame is a good dwell image and dust is fitting and subtle for the archive print, but that alone does not lift it above a generic move."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.48,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": -0.02,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.16,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.02,
+            "panY": -0.02,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Keep the story as a single clear reveal, but make it read purposefully and keep the mis-cut fragments glued to the plate: start tight and low on the children/doorway axis (focus raised toward the door so the destination is in the opening frame), pull back steadily through a mid frame to the full bordered plate for the dwell. Zero drift and scale 1.0 on both tiny fragment layers prevents individual"
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "A coherent, clean pull-back to a good final plate, but the opening is not tight or specific enough for the reveal to carry the story at publishable level.",
+      "filmIssues": [
+        "The pull-back is visible but timid in execution: the t=0 frame already shows the whole building, children and trishaws, so it never reads as genuinely tight on the doorway/children/plaque axis and the reveal to the full plate feels like a plain centred zoom-out rather than a purposeful story move.",
+        "Because the first and last frames are compositionally very similar, the opening picture does not create a distinct starting point and the final dwell frame gains little from the journey; the move expresses 'showing the building' more than 'a library door open to anyone' with its waiting queue.",
+        "Dust is barely perceptible in the frames and adds little archive atmosphere; no tearing, doubled edges or obvious ghosting is visible from the pinned fragment layers, and no layer clips the frame awkwardly."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.64,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.5,
+            "panX": 0.05,
+            "panY": 0.07,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0.02,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Bolder, purposeful reveal: start genuinely tight and low on the children/doorway/blank-plaque axis at zoom 1.5, then pull back in two eased stages to the complete bordered plate at zoom 1.0 for the dwell frame, reading in reverse as a gentle push toward the door. Both tiny fragment cut-outs are pinned to near-background depth with zero drift and scale 1.0 so they stay glued to the plate with no te"
+      }
+    }
+  ]
+}

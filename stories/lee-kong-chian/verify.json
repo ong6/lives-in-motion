@@ -1,0 +1,174 @@
+[
+  {
+    "id": "s1",
+    "year": "1893",
+    "title": "Cattle in Furong",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:00.888Z",
+    "verdict": "ok",
+    "reason": "All names, dates and events match: born 18 Oct 1893 alias Geok Kun, Furong Nan'an schooling cattle-rearing and father Lee Kuo Chuan teaching/tailoring/hair-dressing, mother died age 8 and moved 1903 age 10 to join father soon after mother passed",
+    "raw": "OK | All names, dates and events match: born 18 Oct 1893 alias Geok Kun, Furong Nan'an schooling cattle-rearing and father Lee Kuo Chuan teaching/tailoring/hair-dressing, mother died age 8 and moved 1903 age 10 to join father soon after mother passed",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  },
+  {
+    "id": "s2",
+    "year": "1903",
+    "title": "A bed in Lim Loh's shophouse",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:19.820Z",
+    "verdict": "ok",
+    "reason": "1903 age-10 arrival to join father, Lim Loh shophouse to save money, coolies vs family-friend schooling inspiring education giving, Anglo-Tamil Serangoon + Chongzheng afternoons and dual-day SJI/Tao Nan schooling matching weekends/Chong Cheng and transfer",
+    "raw": "OK | 1903 age-10 arrival to join father, Lim Loh shophouse to save money, coolies vs family-friend schooling inspiring education giving, Anglo-Tamil Serangoon + Chongzheng afternoons and dual-day SJI/Tao Nan schooling matching weekends/Chong Cheng and transfer",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Lee_Kong_Chian",
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  },
+  {
+    "id": "s3",
+    "year": "1908",
+    "title": "The false queue",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:07.109Z",
+    "verdict": "ok",
+    "reason": "Matches sources: 1908 Qing scholarship age 15 to Jinan in Nanjing on Chamber recommendation; excelled maths/physics/chemistry top honours; 1911 Tsinghua then Tangshan railway/mining engineering; coerced queue-cut, false queue in class; 1912 return when Manchurian scholarship ended.",
+    "raw": "OK | Matches sources: 1908 Qing scholarship age 15 to Jinan in Nanjing on Chamber recommendation; excelled maths/physics/chemistry top honours; 1911 Tsinghua then Tangshan railway/mining engineering; coerced queue-cut, false queue in class; 1912 return when Manchurian scholarship ended.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  },
+  {
+    "id": "s4",
+    "year": "1912",
+    "title": "Up at five",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T02:21:50.188Z",
+    "verdict": "ok",
+    "reason": "5am rise/6am Survey assistant, Lat Pau translation, Tao Nan/Chong Cheng night teaching and both engineering courses match, as do pure-European-descent bar, 5-year-bond payoff and inferior-Chinese-goods failure",
+    "raw": "Checking each claim against sources — now verifying the details.OK | 5am rise/6am Survey assistant, Lat Pau translation, Tao Nan/Chong Cheng night teaching and both engineering courses match, as do pure-European-descent bar, 5-year-bond payoff and inferior-Chinese-goods failure",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+    ]
+  },
+  {
+    "id": "s5",
+    "year": "1916",
+    "title": "The borrowed umbrella",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:27.721Z",
+    "verdict": "ok",
+    "reason": "Umbrella meeting, quarters, HK-engineering plan and reluctance, 1916 Khiam Aik role to expand to America/Europe for bilingual ability all match.",
+    "raw": "OK | Umbrella meeting, quarters, HK-engineering plan and reluctance, 1916 Khiam Aik role to expand to America/Europe for bilingual ability all match.",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+    ]
+  },
+  {
+    "id": "s6",
+    "year": "1920",
+    "title": "The eldest daughter",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:40.530Z",
+    "verdict": "ok",
+    "reason": "Tram quote, 1920 marriage to 17-year-old Tan Ai Leh, rival-motive reading, 100 shares/$10,000/1923 board and Chancery Lane spoons all match sources",
+    "raw": "OK | Tram quote, 1920 marriage to 17-year-old Tan Ai Leh, rival-motive reading, 100 shares/$10,000/1923 board and Chancery Lane spoons all match sources",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  },
+  {
+    "id": "s7",
+    "year": "1927",
+    "title": "A smoke-house in Muar",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:42.902Z",
+    "verdict": "ok",
+    "reason": "1920 wedding to 1927 Muar smoke-house with approval/non-compete, Furong Garden/Nam Aik in 1928 with Nam=Nan'an/Aik=Khiam Aik gratitude, and Lim Nee Soon HSBC debt-lease as Lam Aik all correct.",
+    "raw": "OK | 1920 wedding to 1927 Muar smoke-house with approval/non-compete, Furong Garden/Nam Aik in 1928 with Nam=Nan'an/Aik=Khiam Aik gratitude, and Lim Nee Soon HSBC debt-lease as Lam Aik all correct.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+      "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/"
+    ]
+  },
+  {
+    "id": "s8",
+    "year": "1932",
+    "title": "Buy today, sell today",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:39.516Z",
+    "verdict": "ok",
+    "reason": "Chapter matches sources: immediate resale/no stockpile and 2-3 firms left by 1932, Tan Kah Kee Co wound up, 1931 Lee companies list, Rubber and Pineapple King, OCBC end-1932 vice-chairman/chairman 1938, low salaries/extravagant bonuses, qualified managers/modern accounting",
+    "raw": "Checking each claim against sources — now searching.I've confirmed the Pineapple King title and OCBC dates — now digging into the business details.OK | Chapter matches sources: immediate resale/no stockpile and 2-3 firms left by 1932, Tan Kah Kee Co wound up, 1931 Lee companies list, Rubber and Pineapple King, OCBC end-1932 vice-chairman/chairman 1938, low salaries/extravagant bonuses, qualified managers/modern accounting",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://en.wikipedia.org/wiki/Lee_Kong_Chian"
+    ]
+  },
+  {
+    "id": "s9",
+    "year": "1941",
+    "title": "Four years away from home",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:38.186Z",
+    "verdict": "ok",
+    "reason": "Washington meeting with wife+3 children weeks before invasion, Columbia lectures, end-1945 return on HSBC loan for 1950s Korean-War boom to world's largest exporter, 1950 shares/1951 salary-deduction homes and 1954 IBM machines all match.",
+    "raw": "I'll verify this chapter's claims against the web, starting with searches on his wartime travels and business history.Early findings support several details. I'll open the BiblioAsia article to confirm the full context.OK | Washington meeting with wife+3 children weeks before invasion, Columbia lectures, end-1945 return on HSBC loan for 1950s Korean-War boom to world's largest exporter, 1950 shares/1951 salary-deduction homes and 1954 IBM machines all match.",
+    "sources": [
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  },
+  {
+    "id": "s10",
+    "year": "1952",
+    "title": "Name it after my father",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:51.011Z",
+    "verdict": "ok",
+    "reason": "All checks match: $375k free-library gift & 16 Aug 1957 stone, Lee Foundation $3.5m in 1952, no-name request/father Lee Kuo Chuan, 1954 retirement after Tan Kah Kee business cost, $25k Bukit Ho Swee + earlier kampong fires",
+    "raw": "I'll verify each name, number, date and event in this biography chapter.My initial checks suggest the chapter's key claims match the sources; now I'll open the cited pages to confirm the finer details.OK | All checks match: $375k free-library gift & 16 Aug 1957 stone, Lee Foundation $3.5m in 1952, no-name request/father Lee Kuo Chuan, 1954 retirement after Tan Kah Kee business cost, $25k Bukit Ho Swee + earlier kampong fires",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  },
+  {
+    "id": "s11",
+    "year": "1962",
+    "title": "Plant good seeds",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:48:39.732Z",
+    "verdict": "ok",
+    "reason": "Installation, titles, quote, languages and illness/resignation all match: first Chancellor 12 June 1962 Victoria Theatre, first Asian Chancellor, rice/seeds quote, Malay at 70 via teacher/radio, French/German after retirement, 1964 Queen Mary Hong Kong liver treatment and 1965 Shanghai exam, installed 1962 resigned 1965 ill health",
+    "raw": "I'll fact-check this biography chapter against web sources.Initial checks confirm the installation and quotation. Now I'll verify the remaining claims about his background and resignation.Most chapter details check out so far. I'll locate the exact source passages to confirm the quote and language studies.OK | Installation, titles, quote, languages and illness/resignation all match: first Chancellor 12 June 1962 Victoria Theatre, first Asian Chancellor, rice/seeds quote, Malay at 70 via teacher/radio, French/German after retirement, 1964 Queen Mary Hong Kong liver treatment and 1965 Shanghai exam, installed 1962 resigned 1965 ill health",
+    "sources": [
+      "https://www.nus.edu.sg/docs/default-source/corporate-files/about/community/chancellors/lee-kong-chian.pdf",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/",
+      "https://lkcfes.utar.edu.my/about-us/tan-sri-dato-lee-kong-chian/",
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86"
+    ]
+  },
+  {
+    "id": "s12",
+    "year": "1967",
+    "title": "The name comes back",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:58.403Z",
+    "verdict": "ok",
+    "reason": "Death 2 June 1967 at Mount Rosie, funeral at Mount Vernon survived by wife/3 sons/3 daughters/grandchildren, half fortune to Foundation and $10m by March 1967, $60m library and $150m medical school named for him, requested name not used with father Lee Kuo Chuan used instead.",
+    "raw": "I'll verify the chapter's names, dates, and figures against web sources.Initial checks show the claims align, so I'll open the cited sources for final confirmation.OK | Death 2 June 1967 at Mount Rosie, funeral at Mount Vernon survived by wife/3 sons/3 daughters/grandchildren, half fortune to Foundation and $10m by March 1967, $60m library and $150m medical school named for him, requested name not used with father Lee Kuo Chuan used instead.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=513ccc41-7bb1-43fb-a9cc-bb8c2257db86",
+      "https://biblioasia.nlb.gov.sg/all-sections/vol-4-issue2-jul-2008-entrepreneur-philanthropist-remembered/"
+    ]
+  }
+]

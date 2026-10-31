@@ -1,0 +1,219 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:05:06.904Z",
+  "usd": 0.1674,
+  "rationale": "Make the pull-back for isolation unmistakable: open at zoom 1.4 centred on the runner's silhouette so he dominates the window, then pull back steadily through 1.19 to the full plate at 1.0. The runner visibly shrinks into the empty stadium while the bag, baton and newspaper are progressively discovered on the table below, ending on the complete plate for the reader to dwell on. Keep the baton near",
+  "plan": {
+    "focusX": 0.51,
+    "focusY": 0.38,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2249999999999999,
+        "panX": 0.01125,
+        "panY": -0.0225,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.106875,
+        "panX": 0.005625,
+        "panY": -0.0084375,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0.005625,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-2",
+        "depth": 0.95,
+        "driftX": -0.0140625,
+        "driftY": 0.005625,
+        "scale": 0.98875,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Make the pull-back for isolation unmistakable: open at zoom 1.4 centred on the runner's silhouette so he dominates the window, then pull back steadily through 1.19 to the full plate at 1.0. The runner visibly shrinks into the empty stadium while the bag, baton and newspaper are progressively discovered on the table below, ending on the complete plate for the reader to dwell on. Keep the baton near"
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Right story, timid execution: a claimed 1.4-to-1.0 pull-back for isolation was clamped to about 1.22-to-1.0, so the runner never dominates and the reveal of the foreground evidence barely registers. Do not publish as-is; re-render bolder with the foreground layer made less depth-sensitive so the big opening zoom survives.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "The pull-back idea is right, but as rendered it is barely perceptible and the foreground reveal never happens. Across the six frames the composition is almost unchanged: t=0 is not tight on the runner as intended, it already shows the full window, bag, newspaper and baton, and t=1 is only marginally wider. The subject stays coherent with no tearing, doubled edges, ghosting or awkward frame clipping, the halftone-shimmer suits the 1950s offset-lithograph print style, and the final full plate is a good image to dwell on. However a plain centred move would look much the same, so the motion does not yet express the isolation or the discovery of the disputed place.",
+      "filmIssues": [],
+      "fixes": [
+        "unknown layer cut-1 dropped",
+        "move damped to 75% (cut-2 26% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.43,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.285,
+            "panX": 0.015,
+            "panY": -0.037500000000000006,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.135,
+            "panX": 0.0075,
+            "panY": -0.0075,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.0225,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.01125,
+            "driftY": 0.0075,
+            "scale": 0.9775,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "An unwanted turning point told as Reveal plus pull-back for isolation: open tight on the runner's lone silhouette, then draw away to 1.0 so he shrinks in the empty stadium while the foreground baton and Olympic bag are discovered as the disputed place waiting for him."
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Timid pull-back that does not deliver its intended reveal; the subject stays coherent and the final full-plate hold works, but the motion is no better than a plain centred move and the opening is not tight on the runner.",
+      "filmIssues": [
+        "Pull-back is present in the plan but reads as barely perceptible across the six frames: the opening is not genuinely tight on the runner and the foreground newspaper, baton and bag are already fully visible, so there is no decisive reveal or discovery.",
+        "The intended story — a lone silhouette shrinking in the empty stadium as the disputed Olympic place waits in the foreground — is not expressed more clearly than a plain centred move; the runner's relative scale and isolation hardly change.",
+        "First frame is a good full-plate picture but fails as the planned tight opening; the last frame is a good dwell image, with the whole window and table legible.",
+        "No tearing, doubled edges, ghosting or awkward frame-edge clipping is visible in the baton layer, and the newspaper stays coherent with the background.",
+        "Halftone-shimmer is fitting for the offset-lithograph treatment and remains subtle, though it cannot compensate for the timid camera move."
+      ],
+      "fixes": [
+        "unknown layer cut-1 dropped",
+        "move damped to 56% (cut-2 51% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.36,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.253125,
+            "panX": 0.005625,
+            "panY": -0.03375,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0,
+            "panY": -0.01125,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.01125,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.0140625,
+            "driftY": 0.00675,
+            "scale": 0.9775,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Bolder reveal plus pull-back for isolation: open genuinely tight on the runner's silhouette in the window, then pull back decisively to the full plate so the runner shrinks in the empty stadium and the foreground baton, bag and newspaper are discovered as the disputed Olympic place waiting for him. Keep cut-1 near the background with no drift to avoid separating or ghosting its cut-out, while the "
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Right story, timid execution: a claimed 1.4-to-1.0 pull-back for isolation was clamped to about 1.22-to-1.0, so the runner never dominates and the reveal of the foreground evidence barely registers. Do not publish as-is; re-render bolder with the foreground layer made less depth-sensitive so the big opening zoom survives.",
+      "filmIssues": [
+        "The pull-back idea is right for isolation — opening on the runner and revealing the empty stadium and the disputed-selection objects below — but the rendered move is timid: after clamping the camera only goes from about 1.22 to 1.0, so in the contact sheet the six frames are nearly identical and the runner never dominates the opening frame.",
+        "The first frame is therefore not a strong opening picture: the runner is already small in the window and the bag, baton and newspaper are all already visible, so there is little discovery as the film proceeds and little sense of him shrinking into isolation.",
+        "The last frame is a good dwell picture — the full plate with window, track and table legible — but the journey to it is too small to read as a purposeful pull-back rather than a plain slight zoom-out, especially played in reverse.",
+        "No tearing, doubled edges, ghosting or awkward frame-edge clipping is visible; the baton stays coherent with the table. The halftone-shimmer is fitting and subtle for the offset-print style and does not damage coherence."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-2 36% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.51,
+        "focusY": 0.38,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2249999999999999,
+            "panX": 0.01125,
+            "panY": -0.0225,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.106875,
+            "panX": 0.005625,
+            "panY": -0.0084375,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.005625,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-2",
+            "depth": 0.95,
+            "driftX": -0.0140625,
+            "driftY": 0.005625,
+            "scale": 0.98875,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Make the pull-back for isolation unmistakable: open at zoom 1.4 centred on the runner's silhouette so he dominates the window, then pull back steadily through 1.19 to the full plate at 1.0. The runner visibly shrinks into the empty stadium while the bag, baton and newspaper are progressively discovered on the table below, ending on the complete plate for the reader to dwell on. Keep the baton near"
+      }
+    }
+  ]
+}

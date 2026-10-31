@@ -1,0 +1,124 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:02:24.920Z",
+  "usd": 0.0652,
+  "rationale": "A quiet beginning and journey: the film opens tight on the boy and his egg basket, then pulls back to reveal the dawn kampong as he drifts up the red-earth path and shrinks slightly, walking away to market before school.",
+  "plan": {
+    "focusX": 0.49,
+    "focusY": 0.7,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.38,
+        "panX": -0.02,
+        "panY": 0.08,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.18,
+        "panX": -0.01,
+        "panY": 0.04,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.85,
+        "driftX": -0.025,
+        "driftY": -0.055,
+        "scale": 0.88,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": -0.025,
+        "driftY": -0.055,
+        "scale": 0.88,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "haze",
+    "rationale": "A quiet beginning and journey: the film opens tight on the boy and his egg basket, then pulls back to reveal the dawn kampong as he drifts up the red-earth path and shrinks slightly, walking away to market before school."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publishable pull-back: opens tight on the boy and egg basket and steadily reveals the whole dawn kampung as he shrinks and drifts up the red-earth path, clearly expressing his walk away to market. The boy and basket share identical depth, drift and scale so they stay together with no tearing, doubling, halo or ghost, no layer is awkwardly clipped, and the final full-plate frame is a strong image to dwell on. The haze suits the misty dawn and the flat lithograph style is preserved throughout.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publishable pull-back: opens tight on the boy and egg basket and steadily reveals the whole dawn kampung as he shrinks and drifts up the red-earth path, clearly expressing his walk away to market. The boy and basket share identical depth, drift and scale so they stay together with no tearing, doubling, halo or ghost, no layer is awkwardly clipped, and the final full-plate frame is a strong image to dwell on. The haze suits the misty dawn and the flat lithograph style is preserved throughout.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.49,
+        "focusY": 0.7,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": -0.02,
+            "panY": 0.08,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": -0.01,
+            "panY": 0.04,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": -0.025,
+            "driftY": -0.055,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": -0.025,
+            "driftY": -0.055,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "haze",
+        "rationale": "A quiet beginning and journey: the film opens tight on the boy and his egg basket, then pulls back to reveal the dawn kampong as he drifts up the red-earth path and shrinks slightly, walking away to market before school."
+      }
+    }
+  ]
+}

@@ -58,5 +58,49 @@
       0.45,
       0.52
     ]
+  },
+  "tan-howe-liang": {
+    "title": "File:Tan Howe Liang at the opening of the YOG Learning Centre, Singapore - 20081030.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tan_Howe_Liang_at_the_opening_of_the_YOG_Learning_Centre,_Singapore_-_20081030.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "whyohgee singapore 2010."
+  },
+  "lee-kong-chian": {
+    "title": "File:Statue of Dr Lee Kong Chian.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Statue_of_Dr_Lee_Kong_Chian.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Mh",
+    "depicts": "his statue at Hwa Chong Institution"
+  },
+  "teresa-hsu": {
+    "title": "File:Copy (2) of Teresa Hsu 20100926 155104.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Copy_(2)_of_Teresa_Hsu_20100926_155104.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "artist": "Ibtzen"
+  },
+  "sim-wong-hoo": {
+    "title": "File:Soundblaster-1.0-ct1320.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Soundblaster-1.0-ct1320.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "artist": "Wdwd",
+    "depicts": "the Sound Blaster 1.0 card (1989)"
+  },
+  "c-kunalan": {
+    "title": "File:CKunalan-SingaporeOlympicAcademyYouthSession-20081103-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CKunalan-SingaporeOlympicAcademyYouthSession-20081103-01.jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "artist": "whyohgee singapore 2010 (Flickr)"
+  },
+  "georgette-chen": {
+    "title": "File:Liangyou 057 cover Zhang Liying.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Liangyou_057_cover_Zhang_Liying.jpg",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/Template:PD-China",
+    "artist": "Liangyou magazine"
   }
 }

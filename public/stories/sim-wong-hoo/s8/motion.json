@@ -1,0 +1,257 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:08:58.892Z",
+  "usd": 0.1761,
+  "rationale": "Make the loss readable without pushing the piano out of frame: open closer on the man and blue player, then execute a clear pull-back to the full lobby while the near man additionally shrinks to 0.88 and recedes slightly, and the farther piano drifts inward into full view. The final wide, empty glass lobby becomes the dwell image, and the reverse move on turning back reads as a return to the man.",
+  "plan": {
+    "focusX": 0.52,
+    "focusY": 0.62,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.22,
+        "panX": 0.02,
+        "panY": 0.025,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.1,
+        "panX": 0.01,
+        "panY": 0.012,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 1,
+        "driftX": -0.015,
+        "driftY": -0.01,
+        "scale": 0.88,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.5,
+        "driftX": 0.025,
+        "driftY": 0.002,
+        "scale": 0.98,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Make the loss readable without pushing the piano out of frame: open closer on the man and blue player, then execute a clear pull-back to the full lobby while the near man additionally shrinks to 0.88 and recedes slightly, and the farther piano drifts inward into full view. The final wide, empty glass lobby becomes the dwell image, and the reverse move on turning back reads as a return to the man."
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "A readable pull-back for loss, but the opening frame awkwardly clips the piano and the man's extra shrink looks unnatural, so it does not yet clear the publish bar.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Do not publish as-is: a correct pull-back idea executed so timidly that it is no better than a plain centred move, with persistent awkward clipping of the piano.",
+      "filmIssues": [
+        "The intended pull-back for loss is barely legible: zoom only falls from about 1.13 to 1.0, layer drift is under 0.01, and all six contact frames read as the same centred picture.",
+        "The piano cut-out is awkwardly clipped by the left frame edge in every frame, including the opening frame, so the pull-back never cleanly reveals it as part of the empty lobby.",
+        "The opening is not clearly tight on the man and the small blue player, and the final frame is not a materially wider, more desolate composition; neither dwell image gains from the move.",
+        "No tearing, doubled edges, ghosting or separation of grouped objects is visible, and the man and piano stay coherent.",
+        "The halftone-shimmer is fitting and subtle for the 1990s risograph style, and the print texture is preserved."
+      ],
+      "fixes": [
+        "move damped to 32% (cut-2 29% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.58,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.1265625,
+            "panX": 0.018984374999999998,
+            "panY": 0.0158203125,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.056953125,
+            "panX": 0.006328125,
+            "panY": 0.006328125,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.0031640625,
+            "driftY": 0.006328125,
+            "scale": 0.9746875,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.6,
+            "driftX": 0.0047460937499999994,
+            "driftY": 0.00158203125,
+            "scale": 0.9905078125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "A quiet loss and turning point after the 1996 write-down: open tight on the man and the small blue player, then pull back so he shrinks as the piano and empty glass lobby are revealed around him."
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "A readable pull-back for loss, but the opening frame awkwardly clips the piano and the man's extra shrink looks unnatural, so it does not yet clear the publish bar.",
+      "filmIssues": [
+        "The intended pull-back for loss is legible, but the t=0 opening is not a good page-opening picture: at zoom 1.22 the piano at the left is awkwardly half-clipped by the frame edge, so the first held composition reads as a crop error rather than a deliberate close view of the man and blue player.",
+        "Shrinking the man to 0.88 while the camera pulls back makes him recede unnaturally against the fixed plinth and blue box; his stature drops noticeably across the sheet without a corresponding grounding movement, weakening the silhouette's coherence as a standing figure.",
+        "The movement is only a modest centred pull-back (1.22 to 1.0). The widening does reveal the lobby, but the blue box — the title object the man is contemplating — is never compositionally privileged, so the story beat is less purposeful than the rationale claims."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.52,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.22,
+            "panX": 0.02,
+            "panY": 0.025,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.1,
+            "panX": 0.01,
+            "panY": 0.012,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 1,
+            "driftX": -0.015,
+            "driftY": -0.01,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.5,
+            "driftX": 0.025,
+            "driftY": 0.002,
+            "scale": 0.98,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Make the loss readable without pushing the piano out of frame: open closer on the man and blue player, then execute a clear pull-back to the full lobby while the near man additionally shrinks to 0.88 and recedes slightly, and the farther piano drifts inward into full view. The final wide, empty glass lobby becomes the dwell image, and the reverse move on turning back reads as a return to the man."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish: a coherent but timid pull-back whose tight opening clips the piano and does not yet clearly express the scene beyond a plain zoom-out.",
+      "filmIssues": [
+        "The pull-back idea fits the loss/write-down caption and the change from t=0 to t=1 is visible, but it is only a generic wide reveal rather than a clear, story-specific move.",
+        "At t=0 and t=0.2 the piano is awkwardly clipped by the left frame edge, despite the plan intending to keep it readable; the opening frame is cramped and unbalanced rather than a good page-opening picture.",
+        "The layer depths are reversed against the plate: the piano is given depth 0.45 while the man is given 0.9, so the nearer left foreground does not get the stronger parallax it should.",
+        "The final wide frame at t=1 is clean and dwell-worthy, and no tearing, doubling, halo or ghosting is visible, but the weak opening and timid, generic pull-back keep it no better enough than a plain centred move to publish."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.56,
+        "focusY": 0.64,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.3,
+            "panX": -0.045,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.14,
+            "panX": -0.02,
+            "panY": 0.008,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.008,
+            "driftY": -0.004,
+            "scale": 0.95,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.45,
+            "driftX": 0.012,
+            "driftY": 0.002,
+            "scale": 0.99,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Make the pull-back for loss bolder but cleaner: open tighter on the man and the blue box at lower right (focus 0.56,0.64, zoom 1.3) with a leftward pan so the piano stays inside the frame as a visible foreground element instead of being half-clipped, then pull back through 1.14 to a full wide lobby at zoom 1.0. Reduce the man's end scale to 0.95 so he recedes with the camera parallax rather than v"
+      }
+    }
+  ]
+}

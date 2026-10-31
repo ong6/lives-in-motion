@@ -1,0 +1,126 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:07:09.690Z",
+  "usd": 0.0553,
+  "rationale": "A departure and impending loss: the camera opens tight on the suited man paused at the mill gate, then pulls back and travels across to reveal the rebuilt smoke-house, workers and waiting lorry he is about to leave for four years.",
+  "plan": {
+    "focusX": 0.78,
+    "focusY": 0.78,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2137499999999999,
+        "panX": 0.050624999999999996,
+        "panY": 0.045,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.0899999999999999,
+        "panX": 0.0225,
+        "panY": 0.016875,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.9,
+        "driftX": -0.0084375,
+        "driftY": -0.0045000000000000005,
+        "scale": 0.9550000000000001,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.7,
+        "driftX": 0.01125,
+        "driftY": 0,
+        "scale": 0.9775,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "A departure and impending loss: the camera opens tight on the suited man paused at the mill gate, then pulls back and travels across to reveal the rebuilt smoke-house, workers and waiting lorry he is about to leave for four years."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "publish",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "publish",
+      "filmIssues": [],
+      "fixes": [
+        "move damped to 56% (cut-2 17% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.78,
+        "focusY": 0.78,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0.050624999999999996,
+            "panY": 0.045,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0899999999999999,
+            "panX": 0.0225,
+            "panY": 0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.0084375,
+            "driftY": -0.0045000000000000005,
+            "scale": 0.9550000000000001,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.7,
+            "driftX": 0.01125,
+            "driftY": 0,
+            "scale": 0.9775,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "A departure and impending loss: the camera opens tight on the suited man paused at the mill gate, then pulls back and travels across to reveal the rebuilt smoke-house, workers and waiting lorry he is about to leave for four years."
+      }
+    }
+  ]
+}
