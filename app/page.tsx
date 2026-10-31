@@ -6,6 +6,7 @@ import { preload } from "react-dom";
 import type { Scene, Story } from "@/lib/schema";
 import type { Job } from "@/pipeline/create/types";
 import { PRICES } from "@/pipeline/budget";
+import { lifeCost } from "@/lib/cost";
 import { allStories, lifespan } from "@/lib/stories";
 import { portraitCredit } from "@/lib/portraits";
 import { eraFor } from "@/lib/eras";
@@ -123,6 +124,8 @@ export default function Home() {
   if (demo?.scene.poster) preload(demo.scene.poster, { as: "image" });
   const wonder = demo ? directionsFor(demo.story.slug)[demo.scene.id] : undefined;
   const pageCost = (researchEach ?? 0) + PRICES.image * 2 + samCost + (wonder?.usd ?? 0);
+  // What a whole life costs is one figure, quoted the same everywhere (lib/cost.ts).
+  const life = lifeCost();
 
   return (
     <Reveal className={s.site}>
@@ -136,6 +139,7 @@ export default function Home() {
             <a href="#shelf">The shelf</a>
             <a href="#making">How a page is made</a>
             <Link href="/create">Make a new life</Link>
+            <Link href="/family">Your family’s story</Link>
           </nav>
         </header>
 
@@ -324,7 +328,7 @@ export default function Home() {
                   <LoopFilm src={demo.scene.video!} poster={demo.scene.poster} label={`Scene film: ${demo.scene.visual}`} preload="auto" />
                 </div>
                 <p className={s.cost}>
-                  {wonder ? usd(wonder.usd) : "About $0.10"}
+                  {wonder ? usd(wonder.usd) : `About ${usd(life.wonderPerScene)}`}
                   {wonder && wonder.rounds > 1 ? `, ${lower(wonder.rounds)} rounds` : ""}
                 </p>
                 <p className={s.stageNote}>
@@ -341,8 +345,7 @@ export default function Home() {
               <div className={s.total}>
                 <p className={s.totalSum}>{usd(pageCost)}</p>
                 <p>
-                  for this page in Meta API calls
-                  {demo.job ? `; ${usd(demo.job.usd)} for the whole book, made in ${minutes(demo.job)} minutes.` : "."}
+                  for this page in Meta API calls; about {life.label} for a whole book{demo.job ? `, made in ${minutes(demo.job)} minutes` : ""}.
                 </p>
                 <Link href={`/${demo.story.slug}`} className={s.textLink}>
                   See it in Chapter {roman(demo.index + 1)} of {demo.story.name}’s book
@@ -392,8 +395,8 @@ export default function Home() {
                   ))}
               </ul>
               <figcaption>
-                <Link href={`/${made.story.slug}`}>{made.story.name}</Link> was made here in {minutes(made.job)} minutes, for{" "}
-                {usd(made.job.usd)} of Meta API calls. These are its {lower(made.story.scenes.length)} plates, as painted.
+                <Link href={`/${made.story.slug}`}>{made.story.name}</Link> was made here in {minutes(made.job)} minutes, for about{" "}
+                {life.label} of Meta API calls. These are its {lower(made.story.scenes.length)} plates, as painted.
               </figcaption>
             </figure>
           )}

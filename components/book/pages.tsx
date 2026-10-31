@@ -8,6 +8,7 @@ import { useLayoutEffect, useRef } from "react";
 import Link from "next/link";
 import type { Checked, Story } from "@/lib/schema";
 import { eraFor, type Era } from "@/lib/eras";
+import { isFamilyBook } from "@/lib/provenance";
 import { LineDrawing } from "../shared/LineDrawing";
 import { bookStyles as b } from "./Page";
 import { roman } from "./pagination";
@@ -204,21 +205,38 @@ export function Notes({ story, folio }: { story: Story; folio: (o: number) => nu
   );
 }
 
-/** The last page of a book: how its pictures were made, and where the next turn goes. */
-export function Credits({ credit, last }: { credit: string; last: boolean }) {
+/**
+ * The last page of a book: how its words and pictures were made, as this book was made. A family
+ * book's text is a transcribed recording, cited to the moment each fact was said; only a book
+ * whose films Muse Wonder directed says so; a frontispiece is a credited photograph only when it is.
+ */
+export function Credits({ story, credit, curated, directed, last }: { story: Story; credit: string; curated: boolean; directed: boolean; last: boolean }) {
   return (
     <div className={s.creditsPage}>
       <h2>On the pictures</h2>
-      <p>
-        The research and every caption’s sources come from Meta Muse Spark with web search, and Muse Spark checked each caption against
-        them again. The plates are painted with Meta Muse Image in the print style of each scene’s decade, and cut into layers with SAM 3.1.
-        People appear as silhouettes or from behind, by design.
-      </p>
-      <p>
-        Muse Wonder directed the films: it read each plate and its layers, planned the camera and every layer’s move, then watched six frames
-        of the render, critiqued them and revised. The films were rendered on our own machine. Press L on any plate to see it taken apart.
-      </p>
-      {credit && <p>The frontispiece is traced from a photograph. {credit}</p>}
+      {isFamilyBook(story) ? (
+        <p>
+          The text comes from a family recording. Meta Muse Voice Transcribe wrote it down turn by turn; Muse Spark found the dated facts in
+          it, each cited in the notes to the moment it was said, and checked every caption against the recording. The plates are painted with
+          Meta Muse Image in the print style of each scene’s decade, and cut into layers with SAM 3.1. People appear as silhouettes or from
+          behind, by design.
+        </p>
+      ) : (
+        <p>
+          The research and every caption’s sources come from Meta Muse Spark with web search, and Muse Spark checked each caption against
+          them again. The plates are painted with Meta Muse Image in the print style of each scene’s decade, and cut into layers with SAM 3.1.
+          People appear as silhouettes or from behind, by design.
+        </p>
+      )}
+      {directed ? (
+        <p>
+          Muse Wonder directed the films: it read each plate and its layers, planned the camera and every layer’s move, then watched six frames
+          of the render, critiqued them and revised. The films were rendered on our own machine. Press L on any plate to see it taken apart.
+        </p>
+      ) : (
+        <p>The films were rendered on our own machine, each a camera move through its plate’s layers. Press L on any plate to see it taken apart.</p>
+      )}
+      {credit && <p>{curated ? `The frontispiece is traced from a photograph. ${credit}` : credit}</p>}
       <p className={s.finis} aria-hidden>
         ⁂
       </p>
@@ -228,11 +246,15 @@ export function Credits({ credit, last }: { credit: string; last: boolean }) {
 }
 
 /** The back cover, once it has closed over the book; the last life's carries the way back. */
-export function BackCover({ last }: { last: boolean }) {
+export function BackCover({ story, last }: { story: Story; last: boolean }) {
   return (
     <div className={s.backInner}>
       <p className={b.coverSeries}>Lives in Motion</p>
-      <p className={s.blurb}>Singaporean lives, told decade by decade. Every scene is sourced; every picture is made with Meta’s AI.</p>
+      <p className={s.blurb}>
+        {isFamilyBook(story)
+          ? "A family’s story, told in their own words. Every scene is cited to the recording; every picture is made with Meta’s AI."
+          : "Singaporean lives, told decade by decade. Every scene is sourced; every picture is made with Meta’s AI."}
+      </p>
       {last && (
         <>
           <span className={s.backRule} aria-hidden />

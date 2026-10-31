@@ -33,6 +33,13 @@ export function portraitCredit(slug: string): string {
   return `Traced from a photo by ${c.artist} (${c.license}).${terms}`;
 }
 
+/**
+ * Whether the frontispiece is traced from a hand-curated, credited photograph. A life made on
+ * /create or /family records its own frontispiece (a reader's or family photo, or a Muse Image
+ * emblem) in credit.json, whose text says which.
+ */
+export const fromCuratedPhoto = (slug: string) => Boolean(credits[slug]);
+
 /** URL of the life's line-drawing frontispiece, or undefined while it has none (a new life still being made). */
 export function portraitSrc(slug: string): string | undefined {
   return existsSync(join(process.cwd(), "public/lines", `${slug}.json`)) ? `/lines/${slug}.json` : undefined;

@@ -128,7 +128,7 @@ export function Book({
 
   const creditsFace = (
     <Page key="f" side="recto" head="Notes" folio={folio(2 * n + 3)} {...faceProps(NOTES, eraVars(first) as CSSProperties)}>
-      <Credits credit={life.credit} last={last} />
+      <Credits story={story} credit={life.credit} curated={life.curated} directed={Object.keys(life.directions ?? {}).length > 0} last={last} />
     </Page>
   );
 
@@ -189,7 +189,7 @@ export function Book({
         </div>
       </div>,
       <div key="b" className={`${b.cover} ${s.backCover}`}>
-        <BackCover last={last} />
+        <BackCover story={story} last={last} />
       </div>,
     ];
   };

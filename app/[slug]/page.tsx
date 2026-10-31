@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getStory, lifespan, readingOrder } from "@/lib/stories";
-import { portraitCredit, portraitSrc } from "@/lib/portraits";
+import { fromCuratedPhoto, portraitCredit, portraitSrc } from "@/lib/portraits";
 import { StoryPlayer } from "@/components/book/StoryPlayer";
 import { directionsFor } from "@/components/book/direction.server";
 
@@ -26,6 +26,7 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
     lifespan: lifespan(stories[i]),
     portrait: portraitSrc(stories[i].slug),
     credit: portraitCredit(stories[i].slug),
+    curated: fromCuratedPhoto(stories[i].slug),
     index: i,
     directions: i === index ? directionsFor(stories[i].slug) : undefined,
   });

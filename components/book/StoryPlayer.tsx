@@ -30,6 +30,8 @@ export interface Life {
   lifespan: string;
   portrait?: string;
   credit: string;
+  /** The frontispiece is traced from a hand-curated, credited photograph (not one the life's maker supplied, or an emblem). */
+  curated: boolean;
   /** 0-based position in the reading order (neighbouring books alternate their cloth). */
   index: number;
   /** What Muse Wonder did for each scene's film, by scene id. */
