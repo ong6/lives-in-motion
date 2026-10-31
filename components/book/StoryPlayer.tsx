@@ -30,8 +30,8 @@ export interface Life {
   lifespan: string;
   portrait?: string;
   credit: string;
-  /** 0-based position on the shelf (neighbouring books alternate their cloth). */
-  part: number;
+  /** 0-based position in the reading order (neighbouring books alternate their cloth). */
+  index: number;
   /** What Muse Wonder did for each scene's film, by scene id. */
   directions?: Record<string, Direction>;
 }

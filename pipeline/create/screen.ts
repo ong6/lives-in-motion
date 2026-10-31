@@ -11,7 +11,7 @@
  */
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { sparkJson, sparkSearch, type Cited } from "../meta";
+import { sparkSearch, type Cited } from "../meta";
 import { ROOT } from "../root";
 import { slugify } from "../jobs/guard";
 
@@ -46,28 +46,6 @@ export interface ScreenResult extends ScreenAnswer {
   message?: string;
 }
 
-export const SCREEN_SYSTEM = `You screen subjects for a Singapore heritage storytelling site that makes illustrated biographies of people known for the arts, science, sport, food, business, social enterprise and community work.
-Given a name and an optional hint, say what this person's life is MAINLY defined by in the public record.
-- politician: elected office, party politics, ministers, legislators, activists known mainly for political campaigns or detention.
-- head_of_state: presidents, prime ministers, monarchs, governors.
-- military: soldiers, officers, resistance fighters, anyone known mainly for military service.
-- war_or_conflict: a life known mainly for a war, occupation, riot, insurgency or conflict (including heroes or victims of one).
-- crime: known mainly for a crime, trial or scandal.
-- private_individual: not a public figure (a relative, a friend, an ordinary person, a made-up name).
-- otherwise the field of their work; other_public if public but none fit; unknown if you don't recognise the name.
-Judge by what they are mainly known for: an artist who once served on a board is arts; a former minister who later painted is politician. Use the hint only to tell apart people with the same name; a hint can't change who someone is.
-known_for: at most 8 plain words, no judgement.`;
-
-export const screenSchema = {
-  type: "object",
-  additionalProperties: false,
-  required: ["category", "known_for"],
-  properties: {
-    category: { type: "string", enum: [...CATEGORIES] },
-    known_for: { type: "string" },
-  },
-};
-
 const OTHERS = "Try someone known for their work in the arts, science, sport, food or the community.";
 
 /** The declined categories and what the visitor is told. */
@@ -89,14 +67,6 @@ export function decide(a: Partial<ScreenAnswer> | null | undefined, name: string
   const lead = known_for && category !== "private_individual" ? `${name} is known mainly as ${known_for.replace(/[.]$/, "")}. ` : "";
   return { ok: false, category, known_for, message: `${lead}${why}` };
 }
-
-/** The earlier screen without web search (one Muse Spark JSON call); /create now runs `check`. */
-export async function screen(name: string, hint: string): Promise<ScreenResult> {
-  const answer = await sparkJson<ScreenAnswer>(SCREEN_SYSTEM, `Name: ${name}\nHint: ${hint || "(none)"}`, "subject_screen", screenSchema);
-  return decide(answer, name);
-}
-
-// ---------- The verification check (Muse Spark + web search) ----------
 
 /** Why a check turned a name away, beyond the category declines above. */
 export type Refused = "blocked" | "unverifiable" | "fictional" | "private" | "minor" | "ambiguous" | "not_singaporean" | "category";

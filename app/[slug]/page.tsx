@@ -20,21 +20,21 @@ export default async function StoryPage({ params, searchParams }: { params: Prom
   // Unlisted lives (drafts, or taken off the shelf) still open by URL, read alone after the shelf.
   const order = readingOrder(slug);
   if (!order) notFound();
-  const { stories, part } = order;
+  const { stories, index } = order;
   const lifeAt = (i: number) => ({
     story: stories[i],
     lifespan: lifespan(stories[i]),
     portrait: portraitSrc(stories[i].slug),
     credit: portraitCredit(stories[i].slug),
-    part: i,
-    directions: i === part ? directionsFor(stories[i].slug) : undefined,
+    index: i,
+    directions: i === index ? directionsFor(stories[i].slug) : undefined,
   });
   return (
     <StoryPlayer
       key={slug}
-      life={lifeAt(part)}
+      life={lifeAt(index)}
       arrive={from === "turn"}
-      next={part + 1 < stories.length && stories[part].listed !== false ? lifeAt(part + 1) : undefined}
+      next={index + 1 < stories.length && stories[index].listed !== false ? lifeAt(index + 1) : undefined}
     />
   );
 }

@@ -24,8 +24,8 @@ const toPath = (s: number[]) => {
 
 /**
  * A pen-plotter line drawing that draws itself, stroke by stroke, with vivus
- * (https://github.com/maxwellito/vivus, MIT). `progress` (0–1) comes from the scroll
- * position; with `loop` it draws on its own and starts again. The ink follows CSS `color`.
+ * (https://github.com/maxwellito/vivus, MIT). `progress` (0–1) comes from the
+ * spread's entrance clock; with `loop` it draws on its own and starts again. The ink follows CSS `color`.
  * As the last strokes land, the real photo the drawing was traced from develops underneath,
  * so the page ends on the actual person rather than an approximation of them.
  */
@@ -52,7 +52,7 @@ export function LineDrawing({
   progressRef.current = progress ?? progressRef.current;
   const [data, setData] = useState<LineData | null>(null);
   const [missing, setMissing] = useState(!src);
-  /** Photo opacity, 0–1. In scroll mode it follows the last 30% of progress; in loop mode it fades in after each draw. */
+  /** Photo opacity, 0–1. Driven by `progress`, it follows the last 30% of it; in loop mode it fades in after each draw. */
   const [reveal, setReveal] = useState(0);
 
   useEffect(() => {

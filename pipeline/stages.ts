@@ -339,7 +339,7 @@ async function swapIn(file: string, text: string) {
   await rename(tmp, file);
 }
 
-export async function writeStory(story: StoryT) {
+async function writeStory(story: StoryT) {
   await mkdir(storyDir(story.slug), { recursive: true });
   await swapIn(storyFile(story.slug), JSON.stringify(Story.parse(story), null, 2) + "\n");
 }

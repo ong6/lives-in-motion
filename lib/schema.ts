@@ -65,7 +65,7 @@ export const Scene = z.object({
   background: z.string().optional(),
   /** Pen-plotter line drawing traced from the plate, for the line treatment. */
   line: z.string().optional(),
-  /** Short 2.5D film of the scene, scrubbed by scroll (pnpm video), and its first frame. */
+  /** Short 2.5D film of the scene (pnpm video), played when its page turns open, and its first frame. */
   video: z.string().optional(),
   poster: z.string().optional(),
   layers: z.array(Layer).default([]),
@@ -80,7 +80,7 @@ export const Story = z.object({
   died: z.string().nullable(),
   tagline: z.string().min(1),
   /**
-   * On the shelf and in the Part chain. Absent means listed; false keeps a life off the shelf
+   * On the shelf and in its reading order. Absent means listed; false keeps a life off the shelf
    * (a /create draft awaiting `pnpm approve`, or a life withdrawn) while its URL still opens.
    */
   listed: z.boolean().optional(),
@@ -93,4 +93,3 @@ export type Layer = z.infer<typeof Layer>;
 export type Scene = z.infer<typeof Scene>;
 export type Story = z.infer<typeof Story>;
 export type Overlay = (typeof OVERLAYS)[number];
-export type Treatment = (typeof TREATMENTS)[number];

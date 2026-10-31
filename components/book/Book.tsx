@@ -46,7 +46,7 @@ export function Book({
   onLayers?: () => void;
   onGo: (spread: number) => void;
 }) {
-  const { story, part: partNo } = life;
+  const { story, index } = life;
   const scenes = story.scenes;
   const n = scenes.length;
   const { kinds, NOTES, CLOSED } = plan(n);
@@ -208,7 +208,7 @@ export function Book({
   const bookVars = {
     ["--bl" as string]: `${2 + 10 * read}px`,
     ["--br" as string]: `${2 + 10 * (1 - read)}px`,
-    ["--cloth" as string]: clothFor(first, partNo),
+    ["--cloth" as string]: clothFor(first, index),
     // Shut, the closed board sits centred; open, the spread moves a little left to make room for the ribbon.
     transform: `translateX(calc(var(--pw) * ${(0.5 * shut - 0.5 * (1 - open)).toFixed(4)} - var(--rail-room) * ${(open * (1 - shut)).toFixed(4)}))`,
   } as CSSProperties;

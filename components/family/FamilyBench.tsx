@@ -42,7 +42,7 @@ export function FamilyMasthead() {
 }
 
 export function FamilyBench({ initial }: { initial: FamilyInfo }) {
-  const [info, setInfo] = useState(initial);
+  const [info] = useState(initial);
   const [key, setKey] = useState<string | null>(null);
   const { job, setJob, budget, link, now, follow } = useJobStream<FamilyJob>("/api/family", initial.job, initial.budget, (slug) => setKey(localStorage.getItem(keyName(slug))));
   const [error, setError] = useState<string | null>(null);

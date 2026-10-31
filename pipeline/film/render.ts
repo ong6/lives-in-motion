@@ -16,7 +16,7 @@ import { FILM, cameraAt, easeInOutSine, lensFor, lensForPath, project, settled }
 import { draw, encodeSized, encoder, fileOf, finish, finishPlanned, load, particles, vignette, type Particle } from "./frame";
 import { separate, separateLayers } from "./layers";
 import { aimAt } from "./matte";
-import { fitPlan, focusOf, layerAt, planCamera, layerRect, moved, pathOf, rng, sanitizePlan, type Entrance, type MotionPlan } from "./motion";
+import { fitPlan, focusOf, layerAt, planCamera, layerRect, moved, pathOf, rng, sanitizePlan, type MotionPlan } from "./motion";
 import { drawnStrokes, lineAt, strokeLengths, LINE, type LineData } from "./line";
 
 /** A Muse Wonder motion plan for the scene (pnpm wonder); when present the film follows it. */

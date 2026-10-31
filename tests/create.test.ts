@@ -169,7 +169,7 @@ describe("rehearsals and per-visitor limits", () => {
     expect(preflight({ entries: [], left: 100, env: { ...prodMock, ALLOW_CREATE: "1" }, token: "nope" })?.status).toBe(401);
   });
   it("allow two real lives per visitor per day", async () => {
-    const { IpLimit, clientIp } = await import("../pipeline/jobs/guard");
+    const { IpLimit } = await import("../pipeline/jobs/guard");
     const lim = new IpLimit(() => 2);
     const day = new Date(2026, 9, 30, 10), next = new Date(2026, 9, 31, 9);
     expect(lim.check("1.2.3.4", day)).toBeNull();

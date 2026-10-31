@@ -133,7 +133,7 @@ export function child(args: string[], onLine: (line: string) => void, onError: (
   });
 }
 
-/** The scroll films, rendered locally (sharp + ffmpeg) by `pnpm video` in a child process, so the server keeps answering. */
+/** The scene films, rendered locally (sharp + ffmpeg) by `pnpm video` in a child process, so the server keeps answering. */
 export async function runFilms<S extends string, J extends BaseJob<S>>(r: Runner<S, J>, slug: string) {
   const films = "films" as S;
   if (!r.live().scenes.some((s) => s.plate && s.treatment !== "line")) return r.step(films, "skipped", "no plates to film");

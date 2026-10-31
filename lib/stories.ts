@@ -25,7 +25,7 @@ export function everyStory(): Story[] {
     .sort((a, b) => rank(a.slug) - rank(b.slug) || a.slug.localeCompare(b.slug));
 }
 
-/** The shelf: listed lives only, in order. Parts, numbering and the next-life page turn follow it. */
+/** The shelf: listed lives only, in order. The cloth colours and the next-life page turn follow it. */
 export function allStories(): Story[] {
   return everyStory().filter(isListed);
 }
@@ -38,16 +38,16 @@ export function getStory(slug: string): Story | undefined {
 }
 
 /**
- * What a book page needs to place a life: the chain of Parts it is read in and its index there.
- * A listed life sits in the shelf's chain; an unlisted one is read alone after the shelf (its own
- * Part, no next-life turn), so drafts open by URL without joining the chain.
+ * What a book page needs to place a life: the order it is read in and its index there. A listed
+ * life sits on the shelf; an unlisted one is read alone after it (no next-life turn), so drafts
+ * and family books open by URL without joining the shelf.
  */
-export function readingOrder(slug: string): { stories: Story[]; part: number } | undefined {
+export function readingOrder(slug: string): { stories: Story[]; index: number } | undefined {
   const shelf = allStories();
-  const part = shelf.findIndex((s) => s.slug === slug);
-  if (part >= 0) return { stories: shelf, part };
+  const index = shelf.findIndex((s) => s.slug === slug);
+  if (index >= 0) return { stories: shelf, index };
   const draft = getStory(slug);
-  return draft ? { stories: [...shelf, draft], part: shelf.length } : undefined;
+  return draft ? { stories: [...shelf, draft], index: shelf.length } : undefined;
 }
 
 export function lifespan(story: Story): string {

@@ -66,5 +66,5 @@ export function Cover({
  * The cloth a life is bound in: one of its first era's two inks, darkened with that era's ink.
  * Neighbouring volumes alternate between the two, so the series reads as a set on the shelf.
  */
-export const clothFor = (era: { accent: string; accent2: string; ink: string }, part: number) =>
-  `color-mix(in oklab, ${part % 2 ? era.accent2 : era.accent} 50%, ${era.ink})`;
+export const clothFor = (era: { accent: string; accent2: string; ink: string }, index: number) =>
+  `color-mix(in oklab, ${index % 2 ? era.accent2 : era.accent} 50%, ${era.ink})`;

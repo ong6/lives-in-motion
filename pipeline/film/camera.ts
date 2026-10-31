@@ -47,7 +47,7 @@ export interface Camera {
 
 /**
  * The camera at clip time t (0..1). Mostly an ease-in-out so each scene opens and closes on a
- * near-still frame, with a little linear travel mixed in so scroll never feels dead mid-scene.
+ * near-still frame, with a little linear travel mixed in so the film never stalls mid-scene.
  * `dir` is ±1, the side the camera trucks toward.
  */
 export function cameraAt(t: number, dir: 1 | -1 = 1, f = FILM): Camera {

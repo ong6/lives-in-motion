@@ -173,7 +173,7 @@ export function finishPlanned(frame: Float32Array, N: number, vig: Float32Array,
   }
 }
 
-/** An ffmpeg H.264 encoder fed raw RGB frames: every frame a keyframe, so any scroll position seeks instantly. */
+/** An ffmpeg H.264 encoder fed raw RGB frames: every frame a keyframe, so any position (a backward turn plays it back) seeks instantly. */
 export function encoder(mp4: string, N: number, f = FILM) {
   const ff = spawn(FFMPEG, [
     "-y", "-loglevel", "error",
