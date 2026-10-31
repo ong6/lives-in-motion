@@ -1,0 +1,262 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:04:57.713Z",
+  "usd": 0.1705,
+  "rationale": "Make the pull-back unmistakable while keeping the bottom-touching man layer in frame: anchor the zoom low at focusY 0.78 near his lower body, open at 1.38 tight and offset toward the silhouetted man at the blinds, then steadily pull back through 1.18 to the full 1.0 office. This reveals, in sequence, the race photos, swim inset, softball and statistics folders around him — a widening from private ",
+  "plan": {
+    "focusX": 0.68,
+    "focusY": 0.78,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2137499999999999,
+        "panX": 0.03375,
+        "panY": 0.016875,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.10125,
+        "panX": 0.016875,
+        "panY": 0.0084375,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.85,
+        "driftX": -0.0028125,
+        "driftY": -0.0011250000000000001,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": -0.0028125,
+        "driftY": -0.0011250000000000001,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "Make the pull-back unmistakable while keeping the bottom-touching man layer in frame: anchor the zoom low at focusY 0.78 near his lower body, open at 1.38 tight and offset toward the silhouetted man at the blinds, then steadily pull back through 1.18 to the full 1.0 office. This reveals, in sequence, the race photos, swim inset, softball and statistics folders around him — a widening from private "
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "A coherent, era-appropriate pull-back that fits the retirement reveal, but too damped and with an awkwardly cropped opening frame to publish as-is.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Not publishable: the story idea is right — a pull-back for loss at retirement — but the rendered move is damped to near-stillness and the duplicated cut-out produces a shifting white halo around the silhouette, so it is weaker than a clean plain push-in.",
+      "filmIssues": [
+        "The intended pull-back for retirement is barely readable: across the six frames the framing loosens only slightly, from a damped 1.12 start to 1.0, so it feels no more expressive than a plain centred move and gives little reveal of the desk, photos, softball and folders around the man.",
+        "A conspicuous white doubled edge / halo traces the young man's head, shoulder and side and shifts through the clip. cut-1 and cut-2 are listed with the identical box (left 0.547, top 0.356, width 0.345, height 0.644) despite cut-2 being labelled 'softball', so the segmentation appears duplicated; any separation between them risks tearing the silhouette off its painted-over spot.",
+        "The softball itself, on the left of the desk, does not move as an independent near object and is effectively locked to the man's layer, losing the intended foreground parallax.",
+        "The first frame is already close to the final wide composition, so the opening is not a strong tight picture on the man at the window and the last frame does not feel like an earned, settled wide to dwell on.",
+        "The light-sweep ambient is appropriate to the blind-striped afternoon light and is subtle in the stills, but it cannot carry a move this timid."
+      ],
+      "fixes": [
+        "move damped to 32% (cut-1 34% off-frame at t=0.00; cut-2 19% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.72,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.120234375,
+            "panX": 0.0253125,
+            "panY": -0.009492187499999999,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.056953125,
+            "panX": 0.01265625,
+            "panY": -0.0031640625,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.006328125,
+            "driftY": -0.0031640625,
+            "scale": 0.968359375,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.006328125,
+            "driftY": -0.0031640625,
+            "scale": 0.968359375,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet ending at retirement: a pull-back for loss starts tight on the young man at the window and draws away, shrinking him slightly as the desk, race photos, softball and folders of his career open up around him."
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Do not publish as-is: the intended retirement pull-back is too damped and near-static to read, despite a clean final frame and a fitting light-sweep.",
+      "filmIssues": [
+        "The pull-back barely reads: across the six frames the framing changes only slightly from a modest crop to the full plate, so the retirement reveal is not visibly purposeful and is no better than a plain centred move.",
+        "cut-1 and cut-2 have the identical large box for the young man despite cut-2 being labelled 'softball'; in the render they are kept coincident so no doubled edge or ghost is clearly visible, but this duplication wastes the softball as a separate foreground layer and constrains the camera because the large man layer touches the bottom edge.",
+        "The first frame is neither a strong tight portrait of the man at the window nor the full office composition; the final full-plate frame is good to dwell on, but the journey to it is too timid to express loss, reflection or revelation.",
+        "The light-sweep is thematically fitting for afternoon blinds, but at this small camera scale it does not compensate for the lack of spatial movement."
+      ],
+      "fixes": [
+        "move damped to 42% (cut-1 26% off-frame at t=0.00; cut-2 14% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.72,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.135,
+            "panX": 0.029531250000000002,
+            "panY": -0.0084375,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0675,
+            "panX": 0.014765625000000001,
+            "panY": -0.00421875,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": -0.0063281249999999995,
+            "driftY": -0.002109375,
+            "scale": 0.9915625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": -0.0063281249999999995,
+            "driftY": -0.002109375,
+            "scale": 0.9915625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Make the retirement pull-back actually read: open tight and offset toward the man at the window, then steadily draw back and centre to reveal the whole office — swim inset, race photos, softball and statistics folders — ending on the full plate to dwell on. Because cut-1 and cut-2 share the same box and appear to be a duplicated cut of the man, give them identical depth, drift and scale so they ca"
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "A coherent, era-appropriate pull-back that fits the retirement reveal, but too damped and with an awkwardly cropped opening frame to publish as-is.",
+      "filmIssues": [
+        "The pull-back is legible and thematically apt — opening tight on the silhouetted man at the blinds and widening to reveal the race photos, swim inset, softball and statistics folders for the retirement scene — but it is only a modest 1.21 to 1.0 move after clamping, so it reads closer to a gentle reframing than an unmistakable reveal.",
+        "The t=0 opening is not a clean standalone picture: the left-hand framed race photo is awkwardly halved by the left frame edge and the composition feels accidentally cropped rather than deliberately tight on the man.",
+        "cut-1 and cut-2 have identical boxes covering the young man, so they are effectively a duplicated cut-out; the current plan correctly keeps them locked together, but there is therefore no independent softball layer or parallax, and any divergence would produce a doubled/ghosted silhouette.",
+        "No purposeful layer motion or entrance reinforces the reveal; the memorabilia simply appear through camera scale alone."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-1 17% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.68,
+        "focusY": 0.78,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0.03375,
+            "panY": 0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0.016875,
+            "panY": 0.0084375,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": -0.0028125,
+            "driftY": -0.0011250000000000001,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": -0.0028125,
+            "driftY": -0.0011250000000000001,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Make the pull-back unmistakable while keeping the bottom-touching man layer in frame: anchor the zoom low at focusY 0.78 near his lower body, open at 1.38 tight and offset toward the silhouetted man at the blinds, then steadily pull back through 1.18 to the full 1.0 office. This reveals, in sequence, the race photos, swim inset, softball and statistics folders around him — a widening from private "
+      }
+    }
+  ]
+}

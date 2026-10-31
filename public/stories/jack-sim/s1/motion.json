@@ -1,110 +1,186 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T14:32:26.512Z",
-  "usd": 0.0635,
-  "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view.",
+  "at": "2026-10-31T01:36:38.635Z",
+  "usd": 0.1053,
+  "rationale": "Bolder journey and reveal: open tight on the boy and bucket low on the walkway, then track right and pull back in step with a larger shared drift up-right along the planks toward the outhouse, shrinking slightly with distance. Boy and bucket keep identical motion so they stay locked together. The move ends near full frame on the whole kampong with the outhouse as destination and the standpipe no l",
   "plan": {
-    "focusX": 0.4,
-    "focusY": 0.72,
+    "focusX": 0.5,
+    "focusY": 0.68,
     "camera": [
       {
         "t": 0,
-        "zoom": 1.38,
+        "zoom": 1.42,
         "panX": -0.05,
-        "panY": 0.09,
+        "panY": 0.06,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.18,
-        "panX": -0.02,
-        "panY": 0.04,
+        "zoom": 1.22,
+        "panX": 0,
+        "panY": 0.02,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1,
-        "panX": 0,
-        "panY": 0,
+        "zoom": 1.02,
+        "panX": 0.04,
+        "panY": -0.01,
         "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.9,
-        "driftX": 0.045,
+        "depth": 0.85,
+        "driftX": 0.08,
         "driftY": -0.055,
-        "scale": 0.92,
+        "scale": 0.88,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": 0.08,
+        "driftY": -0.055,
+        "scale": 0.88,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
-    "ambient": "dust",
-    "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view."
+    "ambient": "halftone-shimmer",
+    "rationale": "Bolder journey and reveal: open tight on the boy and bucket low on the walkway, then track right and pull back in step with a larger shared drift up-right along the planks toward the outhouse, shrinking slightly with distance. Boy and bucket keep identical motion so they stay locked together. The move ends near full frame on the whole kampong with the outhouse as destination and the standpipe no l"
   },
   "critic": {
     "score": 8,
     "ok": true,
     "passed": true,
-    "verdict": "publish",
-    "round": 0
+    "verdict": "The pull-back clearly serves the journey: it opens tight on the boy and bucket on the walkway, then reveals the full kampong and outhouse destination as the locked-together boy and bucket drift up-right and shrink slightly with distance. Both cut-outs stay coherent with no tearing, ghosting, doubled edges or awkward frame clipping, and the final near-full-frame view is a strong image to dwell on. The 1950s lithograph character is retained.",
+    "round": 1
   },
   "rounds": [
     {
-      "score": 8,
-      "ok": true,
-      "verdict": "publish",
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent, era-appropriate pull-back with the boy and bucket held together, but the travel toward the outhouse is too small to clearly tell the scene's story and the standpipe is clipped throughout, including the final hold.",
       "filmIssues": [
-        "The pull-back is clearly visible across the contact sheet: the opening frame is tight on the boy and plank walkway, while successive frames reveal the outhouse, surrounding kampung houses, palms and stream.",
-        "The movement expresses the scene's story: starting with the small boy carrying a bucket and widening to show the impoverished village and the outhouse that embody the lack of plumbing.",
-        "The boy, bucket and hand remain together with no obvious tearing, doubled edges, halo or ghost left on the walkway as he advances.",
-        "No cut-out layer clips the frame awkwardly; the boy remains fully inside the frame throughout.",
-        "The first frame works as a focused opening picture and the final frame is a balanced, complete view of the kampung that works well as the held reading image.",
-        "The dust effect is subtle and does not obscure the subject or undermine the flat-ink 1950s print appearance."
+        "The pull-back is visible but timid: across the six frames the framing, boy position and scale change only slightly, so the clip reads as little more than a slow plain pull-back rather than a purposeful journey toward the outhouse.",
+        "The boy's walk is not clearly legible. His drift right/up is small, and his 0.92 end scale combined with the camera pull-back makes him shrink without a strong sense of travelling along the plank walkway toward the teal outhouse on the right.",
+        "The foreground standpipe at left is awkwardly clipped by the frame edge in every frame, including the final dwell frame, despite being fully inside the plate; the final pan right keeps it cropped instead of settling on a clean wide kampong picture.",
+        "Boy and bucket do stay together with identical drift/scale and no visible tearing, doubled edges or ghost on the pale ground; the halftone-shimmer is fitting and subtle for the 1950s offset-lithograph style."
       ],
       "fixes": [],
       "plan": {
-        "focusX": 0.4,
+        "focusX": 0.47,
         "focusY": 0.72,
         "camera": [
           {
             "t": 0,
             "zoom": 1.38,
-            "panX": -0.05,
-            "panY": 0.09,
+            "panX": -0.04,
+            "panY": 0.05,
             "ease": "in-out"
           },
           {
             "t": 0.5,
             "zoom": 1.18,
-            "panX": -0.02,
-            "panY": 0.04,
+            "panX": 0.01,
+            "panY": 0.02,
             "ease": "in-out"
           },
           {
             "t": 1,
             "zoom": 1,
-            "panX": 0,
-            "panY": 0,
+            "panX": 0.07,
+            "panY": -0.02,
             "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.9,
-            "driftX": 0.045,
-            "driftY": -0.055,
+            "depth": 0.8,
+            "driftX": 0.04,
+            "driftY": -0.03,
+            "scale": 0.92,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.8,
+            "driftX": 0.04,
+            "driftY": -0.03,
             "scale": 0.92,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
-        "ambient": "dust",
-        "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view."
+        "ambient": "halftone-shimmer",
+        "rationale": "A quiet beginning and small journey: the camera opens tight on the boy and bucket in a Reveal, then pulls back and pans right as they drift together up the walkway toward the outhouse and the wider kampong."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "The pull-back clearly serves the journey: it opens tight on the boy and bucket on the walkway, then reveals the full kampong and outhouse destination as the locked-together boy and bucket drift up-right and shrink slightly with distance. Both cut-outs stay coherent with no tearing, ghosting, doubled edges or awkward frame clipping, and the final near-full-frame view is a strong image to dwell on. The 1950s lithograph character is retained.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.68,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.42,
+            "panX": -0.05,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.02,
+            "panX": 0.04,
+            "panY": -0.01,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0.08,
+            "driftY": -0.055,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0.08,
+            "driftY": -0.055,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Bolder journey and reveal: open tight on the boy and bucket low on the walkway, then track right and pull back in step with a larger shared drift up-right along the planks toward the outhouse, shrinking slightly with distance. Boy and bucket keep identical motion so they stay locked together. The move ends near full frame on the whole kampong with the outhouse as destination and the standpipe no l"
       }
     }
   ]

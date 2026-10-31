@@ -2,88 +2,163 @@
   {
     "id": "s1",
     "year": "1937",
-    "caption": "At around age four, he moved with his family from Swatow to Singapore and settled in Chinatown.",
+    "title": "Cramped rooms in Chinatown",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:03:47.558Z",
+    "at": "2026-10-31T02:21:55.035Z",
     "verdict": "ok",
-    "reason": "Born in Swatow 1933, emigrated at age four to settle in Chinatown, Singapore.",
-    "raw": "Fact-checking that move — now verifying the details.OK | Born in Swatow 1933, emigrated at age four to settle in Chinatown, Singapore.",
-    "sources": []
+    "reason": "Birth 5 May 1933 Swatow, one of seven, moved at 4 to cramped Chinatown quarters, Tuan Mong exit after a year to support family, and cooking quote verified as his words.",
+    "raw": "Checking the Chinatown chapter’s dates and quote — searching the sources.Early findings match the birth date and the cooking quote — now opening the cited biographies to verify the family and schooling details.OK | Birth 5 May 1933 Swatow, one of seven, moved at 4 to cramped Chinatown quarters, Tuan Mong exit after a year to support family, and cooking quote verified as his words.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff",
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    ]
   },
   {
     "id": "s2",
-    "year": "1953",
-    "caption": "He joined the Evergreen Weightlifting Party in 1952, training with a single set of barbells, and after a year won national junior and senior lightweight titles.",
+    "year": "1947",
+    "title": "A promise to a dying father",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:03:48.927Z",
+    "at": "2026-10-31T01:43:02.179Z",
     "verdict": "ok",
-    "reason": "Joined Evergreen in 1952 with only a single set of barbells, winning National Junior and Senior lightweight titles after one year",
-    "raw": "Fact-checking that 1953 caption — searching the record.Early hits back the caption — opening sources to confirm the details.OK | Joined Evergreen in 1952 with only a single set of barbells, winning National Junior and Senior lightweight titles after one year",
+    "reason": "SNOC wording matches “At 14, he was left fatherless and alone after... deathhouse... mother returned to China... granduncle and grandaunt” and vow “one of the strongest men in the world”, with born 1933 moved at 4 and IWF confirming father died at 14.",
+    "raw": "Checking that obituary wording and the 1947 events — pulling the cited sources now.The main facts line up with the obituary; now I'm verifying the dates and family details.OK | SNOC wording matches “At 14, he was left fatherless and alone after... deathhouse... mother returned to China... granduncle and grandaunt” and vow “one of the strongest men in the world”, with born 1933 moved at 4 and IWF confirming father died at 14.",
     "sources": [
-      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/",
+      "https://iwf.sport/2025/06/04/iwf120y-114-1960-tan-howe-liang-becomes-a-national-hero-in-singapore/"
     ]
   },
   {
     "id": "s3",
-    "year": "1956",
-    "caption": "He placed fourth at the 1954 Asian Games in Manila, then finished ninth at the 1956 Melbourne Olympics after losing consciousness.",
+    "year": "1952",
+    "title": "Fifty cents a month",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:03:55.790Z",
+    "at": "2026-10-31T01:42:55.105Z",
     "verdict": "ok",
-    "reason": "Placed fourth in Manila and ninth in Melbourne after losing consciousness as stated, Manila Games were in 1954.",
-    "raw": "I'll verify this caption with web searches on Tan Howe Liang's 1954 and 1956 results.The initial results support the caption, so I'll open the source page to confirm the specific details before answering.That confirms most of the caption, but I need to verify the 1954 year explicitly before giving the final verdict.OK | Placed fourth in Manila and ninth in Melbourne after losing consciousness as stated, Manila Games were in 1954.",
-    "sources": [
-      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
-    ]
+    "reason": "Gay World strongman encounter, 1952 Evergreen Party for 50 cents in dingy Boat Quay alley with single barbells/on own, self-funded training/overseas as dockworker/clerk/electrician, junior+senior lightweight at 20 after one year all verified.",
+    "raw": "Fact-checking the 1952 chapter — verifying names, dates, and details.OK | Gay World strongman encounter, 1952 Evergreen Party for 50 cents in dingy Boat Quay alley with single barbells/on own, self-funded training/overseas as dockworker/clerk/electrician, junior+senior lightweight at 20 after one year all verified.",
+    "sources": []
   },
   {
     "id": "s4",
-    "year": "1958",
-    "caption": "In 1958 he won lightweight gold at Cardiff with a 358 kg total and 157 kg clean-and-jerk, then lightweight gold at Tokyo with a 375 kg total.",
+    "year": "1956",
+    "title": "The first blackout",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:04:09.409Z",
-    "verdict": "corrected",
-    "reason": "Order is reversed — Tokyo (24 May–1 June 1958) came before Cardiff (18–26 July 1958), not after.",
-    "raw": "Fact-checking Tan Howe Liang’s 1958 record — pulling sources to verify those lifts.First results look correct on the totals — now checking the event order and dates.Timing confirms Tokyo came before Cardiff — now verifying the exact lift figures.WRONG | Order is reversed — Tokyo (24 May–1 June 1958) came before Cardiff (18–26 July 1958), not after.",
+    "at": "2026-10-31T02:21:52.780Z",
+    "verdict": "ok",
+    "reason": "Fourth Manila/blackout/ninth Melbourne, self-funded jobs, medal contender, de Castro quote verbatim",
+    "raw": "Fact-checking the 1956 blackout chapter — verifying names, dates, and that quote.Early findings match the chapter — now pinning down exact sources for a final check.OK | Fourth Manila/blackout/ninth Melbourne, self-funded jobs, medal contender, de Castro quote verbatim",
     "sources": [
-      "https://en.wikipedia.org/wiki/1958_Asian_Games"
-    ],
-    "fix": "Muse Spark found the order reversed: the Tokyo Asian Games (May–June 1958) came before Cardiff (July 1958). Reordered.",
-    "corrected": "In 1958 he won lightweight gold at the Asian Games in Tokyo with a 375 kg total, then at Cardiff’s Commonwealth Games with 358 kg and a 157 kg clean-and-jerk."
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff",
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    ]
   },
   {
     "id": "s5",
-    "year": "1960",
-    "caption": "After winning lightweight gold at the 1959 Bangkok SEAP Games with 369 kg, he took second among 33 in Rome in 1960 with 380 kg. His clean-and-jerk reached 155 kg.",
+    "year": "1958",
+    "title": "Asia's strongest lightweight",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:04:01.281Z",
+    "at": "2026-10-31T01:43:17.560Z",
     "verdict": "ok",
-    "reason": "Verified: 1959 SEAP Bangkok lightweight 369kg gold, finished second out of 33 in Rome with 155kg clean-and-jerk for 380kg total silver.",
-    "raw": "Caption check in progress — I'm pulling sources to verify the lifts.The early facts check out so far — now I'm digging into the exact competitor count.Official results show 33 competitors — I'll open the biography pages to lock in citable sources.OK | Verified: 1959 SEAP Bangkok lightweight 369kg gold, finished second out of 33 in Rome with 155kg clean-and-jerk for 380kg total silver.",
+    "reason": "All figures match NLB: 157kg first world record in 1958 and 1959 First SEAP top honours in Bangkok, plus table 358kg Cardiff, 375kg Tokyo, 369kg Bangkok golds",
+    "raw": "I'll fact-check the chapter's names, numbers, dates and events against web sources.The initial searches support the medal totals, so I'll open the cited pages to verify the exact figures.OK | All figures match NLB: 157kg first world record in 1958 and 1959 First SEAP top honours in Bangkok, plus table 358kg Cardiff, 375kg Tokyo, 369kg Bangkok golds",
     "sources": [
       "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff"
     ]
   },
   {
     "id": "s6",
-    "year": "1962",
-    "caption": "Moving to middleweight, he won silver at Rangoon in 1961, then gold at Perth in 1962 with 390 kg, and received the Pingat Jasa Gemilang.",
+    "year": "1960",
+    "title": "Too heavy a responsibility",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:04:02.588Z",
+    "at": "2026-10-31T01:43:19.063Z",
     "verdict": "ok",
-    "reason": "Rangoon 1961 middleweight silver, Perth 1962 middleweight gold 390kg, Pingat Jasa Gemilang 1962.",
-    "raw": "I'll verify each claim in this caption with a quick web search.OK | Rangoon 1961 middleweight silver, Perth 1962 middleweight gold 390kg, Pingat Jasa Gemilang 1962.",
-    "sources": []
+    "reason": "Feb Oscar State tip, May 395kg vs 390kg claim, Yusof medal promise and C.C. Tan quote all match source",
+    "raw": "Fact-checking the 1960 Tan Howe Liang claims — verifying the quote, dates, and figures.The quote checks out on first search — now opening the cited source to verify the full chapter.OK | Feb Oscar State tip, May 395kg vs 390kg claim, Yusof medal promise and C.C. Tan quote all match source",
+    "sources": [
+      "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/"
+    ]
   },
   {
     "id": "s7",
-    "year": "2024",
-    "caption": "Coach in 1968 and National Stadium gym supervisor in 1982, he earned a 1984 federation gold award, remained Singapore's lone Olympic medallist until 2008, and died in 2024 at 91.",
+    "year": "1960",
+    "title": "Eight September, morning",
     "model": "muse-spark-1.3",
-    "at": "2026-10-30T13:04:07.705Z",
+    "at": "2026-10-31T01:43:36.384Z",
     "verdict": "ok",
-    "reason": "Coach 1968, gym supervisor 1982 at National Stadium, 1984 IWF Gold Award, lone medallist until 2008, died 3 Dec 2024 aged 91",
-    "raw": "I'll fact-check this caption against web sources.OK | Coach 1968, gym supervisor 1982 at National Stadium, 1984 IWF Gold Award, lone medallist until 2008, died 3 Dec 2024 aged 91",
-    "sources": []
+    "reason": "8 Sept date, Palazzetto hall, white-leotard nerves, 115kg/120kg press faults, Chua’s 2,000-lira won protest and 10.5-hr trial all match",
+    "raw": "Fact-checking the chapter’s names, dates and numbers against its cited sources.The cited sources line up on venue and early lifts, so I’m digging into the contest’s time of day and other specifics.OK | 8 Sept date, Palazzetto hall, white-leotard nerves, 115kg/120kg press faults, Chua’s 2,000-lira won protest and 10.5-hr trial all match",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+    ]
+  },
+  {
+    "id": "s8",
+    "year": "1960",
+    "title": "Uncle, my legs hurt",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:42.026Z",
+    "verdict": "ok",
+    "reason": "“Uncle, my legs hurt” with cramps in both thighs after 90-min wait, barely able to stand and carried by Chua/Chung, Terpak ambulance + medical rest advice, wept refusal, prayer with 30-min easing, blackout dropping 150kg, 155kg for silver and 380kg tie-break over heavier Aziz confirmed as Olympic-record 155kg/total 380kg.",
+    "raw": "Fact-checking that 1960 chapter line by line — verifying names, weights, and the quote.Early results show discrepancies in the wording and details — now opening the cited sources to confirm.OK | “Uncle, my legs hurt” with cramps in both thighs after 90-min wait, barely able to stand and carried by Chua/Chung, Terpak ambulance + medical rest advice, wept refusal, prayer with 30-min easing, blackout dropping 150kg, 155kg for silver and 380kg tie-break over heavier Aziz confirmed as Olympic-record 155kg/total 380kg.",
+    "sources": [
+      "https://singaporeolympics.com/the-tiger-who-became-a-gladiator-in-rome/",
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=192ba4aa-8d0e-41ad-a474-705aef9cc324"
+    ]
+  },
+  {
+    "id": "s9",
+    "year": "1960",
+    "title": "The wrong flag",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:43:31.830Z",
+    "verdict": "ok",
+    "reason": "Flag error corrected and ceremony repeated, no parade only Istana tea and Cathay dinner, quote and 1956 Olympian attribution match Dr Tan Eng Liang.",
+    "raw": "Fact-checking the 1960 ceremony account and quote — pulling the cited sources.OK | Flag error corrected and ceremony repeated, no parade only Istana tea and Cathay dinner, quote and 1956 Olympian attribution match Dr Tan Eng Liang.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff",
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    ]
+  },
+  {
+    "id": "s10",
+    "year": "1982",
+    "title": "National Stadium supervisor",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:45:45.445Z",
+    "verdict": "ok",
+    "reason": "390kg Perth gold, 1961 Rangoon middleweight silver, PJG 1962, Tokyo 1964 11th, Edinburgh 1970 10th, proteges Chua/Tung/Teo, taxi stint, 1982 National Stadium supervisor, 1977 Peking restaurant and Chua quote all verified.",
+    "raw": "Fact-checking the Tan Howe Liang claims and quote — searching now.Most claims check out so far — now digging into the remaining dates and details.Everything lines up — pulling final confirmations to complete the verification.OK | 390kg Perth gold, 1961 Rangoon middleweight silver, PJG 1962, Tokyo 1964 11th, Edinburgh 1970 10th, proteges Chua/Tung/Teo, taxi stint, 1982 National Stadium supervisor, 1977 Peking restaurant and Chua quote all verified.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff",
+      "https://en.wikipedia.org/wiki/Weightlifting_at_the_1964_Summer_Olympics_%E2%80%93_Men%27s_75_kg",
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    ]
+  },
+  {
+    "id": "s11",
+    "year": "1984",
+    "title": "Weightlifting is in my blood",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:46:41.805Z",
+    "verdict": "ok",
+    "reason": "Bedok Jamie Wee aged 16 to 2010 YOG, 1984 Gold Award, quote as Tan's reply to tired question with “Until the last day”, 1990s obscurity/occasional appearances and 1999 No.2 by Sunday Times verified.",
+    "raw": "I'll fact-check the chapter's names, dates, and quotes against web sources.Those key claims check out so far; now I'll verify the exact wording of the quote and the surrounding details.I've confirmed the quote's attribution; now I'll do a final check on the remaining names and details.OK | Bedok Jamie Wee aged 16 to 2010 YOG, 1984 Gold Award, quote as Tan's reply to tired question with “Until the last day”, 1990s obscurity/occasional appearances and 1999 No.2 by Sunday Times verified.",
+    "sources": [
+      "https://www.nlb.gov.sg/main/article-detail?cmsuuid=378f846d-c6e9-44e1-a232-82da795800ff",
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    ]
+  },
+  {
+    "id": "s12",
+    "year": "2008",
+    "title": "Forty-eight years",
+    "model": "muse-spark-1.3",
+    "at": "2026-10-31T01:44:24.499Z",
+    "verdict": "ok",
+    "reason": "All facts match: 17 Aug 2008 silver 48yrs after 1960, Project 0812 inspiration, 2010 wife cancer/donor, three children, kit to Sports Hub 2014, FairPrice since 2011, 2016 Diploma, died 3 Dec 2024 aged 91, teeth-clenched photo, Ng quote “He’s very upright”.",
+    "raw": "Fact-checking the Tan Howe Liang chapter — verifying every date, name, and quote.Early checks confirm several facts, but that quote isn't surfacing — I'll dig deeper into the remaining claims.Most details check out so far; I'm now focusing on tracking down that Ng Ser Miang quote.OK | All facts match: 17 Aug 2008 silver 48yrs after 1960, Project 0812 inspiration, 2010 wife cancer/donor, three children, kit to Sports Hub 2014, FairPrice since 2011, 2016 Diploma, died 3 Dec 2024 aged 91, teeth-clenched photo, Ng quote “He’s very upright”.",
+    "sources": [
+      "https://singaporeolympics.com/tan-howe-liang-singapores-first-olympic-medallist-dies-at-91/"
+    ]
   }
 ]

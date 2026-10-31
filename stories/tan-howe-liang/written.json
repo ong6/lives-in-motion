@@ -1,0 +1,276 @@
+{
+  "model": "muse-spark-1.3",
+  "at": "2026-10-31T02:21:35.108Z",
+  "rounds": 2,
+  "problems": [],
+  "chapters": [
+    {
+      "age": 4,
+      "body": "The rooms in Chinatown held the family close together. Tan Howe Liang had been born on 5 May 1933 in Swatow, Guangdong, one of seven children. When he was about four, his father brought the family to Singapore in search of a livelihood, and they settled in cramped quarters in Chinatown. He was sent back to China for his early schooling, then returned to Tuan Mong Secondary School and left after a year to help support his family. He played every sport his school offered but could not keep at any, because he had to earn. What stayed with him was cooking. \"No one knows that cooking is my first love.\"",
+      "facts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "n": 1,
+      "quote": {
+        "fact": 8,
+        "text": "No one knows that cooking is my first love."
+      },
+      "title": "Cramped rooms in Chinatown",
+      "turn": "A death house waited, and a promise to make.",
+      "voice": "\"No one knows that cooking is my first love.\"",
+      "when": "c. 1937",
+      "year": "1937"
+    },
+    {
+      "age": 14,
+      "body": "At 14 he sat with his ailing father in a death house. His father died there, and soon afterwards his mother returned to China. He was left with a granduncle and grandaunt. The Singapore National Olympic Council's obituary later put that time in one line: \"At 14, he was left fatherless and alone.\" Just before his father died, he had made his father a vow. He would become one of the strongest men in the world. With neither parent beside him, the promise gave the boy something to work toward while he earned to support himself and stayed on in Singapore.",
+      "facts": [
+        6,
+        7
+      ],
+      "n": 2,
+      "quote": {
+        "fact": 6,
+        "text": "At 14, he was left fatherless and alone"
+      },
+      "title": "A promise to a dying father",
+      "turn": "A loud amusement park would show him how.",
+      "voice": "At 14 he promised his dying father he would be one of the strongest men in the world.",
+      "when": "c. 1947",
+      "year": "1947"
+    },
+    {
+      "age": 19,
+      "body": "At the Gay World Amusement Park he stopped at a strongman competition and could not walk away. In 1952 he joined the Evergreen Weightlifting Party for 50 cents a month and trained in a dingy back alley near Boat Quay, with one set of barbells and no coach. With no funding he paid his own way, including for overseas meets, working as a dockworker, store clerk and electrician. After one year of training, at 20, he won the national junior and senior lightweight titles. The alley had given him a trade of strength.",
+      "facts": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "n": 3,
+      "quote": null,
+      "title": "Fifty cents a month",
+      "turn": "Melbourne would test more than strength.",
+      "voice": "He bought strength for fifty cents a month in a back alley.",
+      "when": "",
+      "year": "1952"
+    },
+    {
+      "age": 23,
+      "body": "In Melbourne he lost consciousness in the middle of his lifts. Two years earlier he had placed fourth at the Asian Games in Manila. He was still paying his own way, working as a dockworker, store clerk and electrician. At the 1956 Olympics he had been tipped for a medal. He came round, went back out and finished ninth. His teammate Harold de Castro later described how he lifted when nothing else mattered: \"He will just hypnotise himself and he will just go there and lift.\" The disappointment left the work unfinished.",
+      "facts": [
+        13,
+        11,
+        14,
+        15
+      ],
+      "n": 4,
+      "quote": {
+        "fact": 15,
+        "text": "He will just hypnotise himself and he will just go there and lift"
+      },
+      "title": "The first blackout",
+      "turn": "A SINGAPORE vest waited on Tokyo's top step.",
+      "voice": "\"He will just hypnotise himself and he will just go there and lift\"",
+      "when": "",
+      "year": "1956"
+    },
+    {
+      "age": 25,
+      "body": "At the 1958 Asian Games in Tokyo he won lightweight gold with a 375 kg total. Later that same year at the Commonwealth Games in Cardiff he won gold with 358 kg and set his first world record, 157 kg in the clean and jerk. The total in Cardiff was lower, but the single lift had never been done before. In 1959 he won the lightweight title at the first SEAP Games in Bangkok with 369 kg. Within two years he had taken three major titles in three cities. The boy who had promised strength had measured it against the region and the Commonwealth.",
+      "facts": [
+        16,
+        17,
+        18
+      ],
+      "n": 5,
+      "quote": null,
+      "title": "Asia's strongest lightweight",
+      "turn": "Rome was waiting, and expectation with it.",
+      "voice": "Three golds in two years, and a first world record.",
+      "when": "",
+      "year": "1958"
+    },
+    {
+      "age": 27,
+      "body": "In February 1960 the British Empire Weightlifting Federation's secretary, Oscar State, singled him out for the Rome Games. In May his manager, Chua Tian Teck, said he was lifting 395 kg in training, above the 390 kg world record, and promised head of state Yusof Ishak a medal. Not everyone welcomed the talk. Sports council president C.C. Tan worried about the weight of expectation. \"I fear he may leave with too heavy a sense of responsibility.\" The lifts were ready. The burden was growing with them. May had made the promise public.",
+      "facts": [
+        19,
+        20,
+        21
+      ],
+      "n": 6,
+      "quote": {
+        "fact": 21,
+        "text": "I fear he may leave with too heavy a sense of responsibility."
+      },
+      "title": "Too heavy a responsibility",
+      "turn": "In Rome the contest would last hours.",
+      "voice": "\"I fear he may leave with too heavy a sense of responsibility.\"",
+      "when": "",
+      "year": "1960"
+    },
+    {
+      "age": 27,
+      "body": "On 8 September 1960 he stepped up in a white leotard looking nervous. The hall was the Palazzetto dello Sport. Judges faulted his 115 kg and 120 kg presses. Chua Tian Teck paid 2,000 lire to protest and won the first call back. The contest ran about 10.5 hours. Hour followed hour, lift followed lift, and the early faults stayed with him through the long morning. He stayed in the contest through the slow passing hours. What had started with a nervous walk to the platform had become a test of waiting as much as lifting.",
+      "facts": [
+        22,
+        23
+      ],
+      "n": 7,
+      "quote": null,
+      "title": "Eight September, morning",
+      "turn": "Worse was coming before the final lifts.",
+      "voice": "Chua paid 2,000 lire to protest a judge's call.",
+      "when": "",
+      "year": "1960"
+    },
+    {
+      "age": 27,
+      "body": "About 90 minutes before the clean and jerk, cramps seized both his thighs. He could barely stand. He told his manager Chua Tian Teck \"Uncle, my legs hurt\" and Chua and Malayan lifter Chung Kum Weng carried him to the rest room. Doctors and the American lifter Johnny Terpak advised an ambulance and complete rest. He wept and refused to be taken away. He went into a trance-like prayer, and about half an hour before his turn the cramps eased. On his first clean and jerk he blacked out and dropped 150 kg. He asked what he needed for silver: 155 kg. He lifted 155 kg, an Olympic record, for silver with a 380 kg total behind Viktor Bushuev. Iraq's Abdul Wahid Aziz also totalled 380 kg but was heavier.",
+      "facts": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "n": 8,
+      "quote": {
+        "fact": 24,
+        "text": "Uncle, my legs hurt"
+      },
+      "title": "Uncle, my legs hurt",
+      "turn": "The flag on the pole was wrong.",
+      "voice": "\"Uncle, my legs hurt\"",
+      "when": "",
+      "year": "1960"
+    },
+    {
+      "age": 27,
+      "body": "At the medal ceremony organisers raised Japan's flag by mistake, assuming an Asian medallist must be Japanese. The ceremony was repeated with Singapore's flag. The mix-up was put right. There was no parade at home. There was a tea party at the Istana and a dinner from his bosses at Cathay. A fellow 1956 Olympian, Dr Tan Eng Liang, described what athletes then got for it: \"There was no incentive, except the personal commitment and pride to represent the country.\" He came home to tea and dinner, and to work again.",
+      "facts": [
+        29,
+        30,
+        31
+      ],
+      "n": 9,
+      "quote": {
+        "fact": 31,
+        "text": "There was no incentive, except the personal commitment and pride to represent the country."
+      },
+      "title": "The wrong flag",
+      "turn": "He moved up, and kept lifting.",
+      "voice": "They raised Japan's flag first, then did the ceremony again.",
+      "when": "",
+      "year": "1960"
+    },
+    {
+      "age": 49,
+      "body": "In Perth he totalled 390 kg for gold. He had moved up to middleweight and taken silver at the SEAP Games in Rangoon in 1961. In 1962 he won middleweight gold with 390 kg at the Commonwealth Games in Perth, and received the Pingat Jasa Gemilang. At the Tokyo Olympics in 1964 he placed 11th. At the 1970 Commonwealth Games in Edinburgh he was 10th. He was appointed national weightlifting coach and coached Chua Koon Siong, Tung Chye Hong and Teo Yong Joo to regional medals. In 1977 he opened a Peking-cuisine restaurant, which closed, and drove a taxi for a short time. In 1982 he became a gymnasium supervisor at the National Stadium. Chua Koon Siong later said of those years: \"If you wanted to succeed as a weightlifter back in the day, you had to go find him.\"",
+      "facts": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "n": 10,
+      "quote": {
+        "fact": 35,
+        "text": "If you wanted to succeed as a weightlifter back in the day, you had to go find him."
+      },
+      "title": "National Stadium supervisor",
+      "turn": "The sport faded, but he stayed.",
+      "voice": "He opened a Peking-cuisine restaurant in 1977; it closed.",
+      "when": "",
+      "year": "1982"
+    },
+    {
+      "age": 51,
+      "body": "In Bedok he spotted a 16-year-old, Jamie Wee, who went on to the 2010 Youth Olympics. In 1984 the International Weightlifting Federation gave him its Gold Award. Asked if he was tired of weightlifting, he answered: \"Weightlifting is in my blood. How can I give it up?\" He said he would keep going as long as he lived. By the 1990s weightlifting had faded in Singapore and so had his fame; he appeared only occasionally at events. In 1999 The Sunday Times ranked him the second-greatest Singaporean athlete. He stayed around the gym all the same.",
+      "facts": [
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "n": 11,
+      "quote": {
+        "fact": 39,
+        "text": "Weightlifting is in my blood. How can I give it up?"
+      },
+      "title": "Weightlifting is in my blood",
+      "turn": "For decades he was the only one.",
+      "voice": "He would keep going as long as he lived.",
+      "when": "",
+      "year": "1984"
+    },
+    {
+      "age": 75,
+      "body": "In August 2008 the women's table-tennis team won silver in Beijing. It ended his 48 years as Singapore's only Olympic medallist; the Project 0812 programme behind it was inspired by his medal. In 2010 his wife was being treated for cancer, and an anonymous donor helped the family with the costs. The couple have three children. His 1960 leotard, belt and silver medal were shown at the SSC Museum and moved to the Sports Hub in 2014. He became NTUC FairPrice's Ambassador for Active Ageing in 2011. The IOC gave him its Diploma of Merit in 2016. He died on 3 December 2024, aged 91. He is remembered through one photograph from Rome: teeth clenched, arms straining, the bar overhead. IOC member Ng Ser Miang said of him: \"He's very upright.\"",
+      "facts": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "n": 12,
+      "quote": {
+        "fact": 48,
+        "text": "He's very upright."
+      },
+      "title": "Forty-eight years",
+      "turn": "The bar stays overhead, arms straining.",
+      "voice": "Forty-eight years as the only one, remembered in one photograph.",
+      "when": "",
+      "year": "2008"
+    }
+  ],
+  "conflicts": [
+    {
+      "choice": "Book follows NLB/SNOC: one of seven children, third of seven.",
+      "topic": "Number of siblings"
+    },
+    {
+      "choice": "Book follows NLB: born 5 May 1933.",
+      "topic": "Date of birth"
+    },
+    {
+      "choice": "Book follows NLB/SNOC dating: joined in 1952 aged 19, titles at 20; does not use his later memory of starting at 21.",
+      "topic": "Age he began lifting"
+    },
+    {
+      "choice": "Book follows NLB: 157 kg clean and jerk; omits lb conversion.",
+      "topic": "1958 world record figure"
+    },
+    {
+      "choice": "Book omits winning total and field size to stay true either way.",
+      "topic": "Rome field size and Bushuev winning total"
+    },
+    {
+      "choice": "Book says appointed national weightlifting coach with no year.",
+      "topic": "Year he became national coach"
+    },
+    {
+      "choice": "Book follows NLB listing of later meets through Edinburgh 1970.",
+      "topic": "When he retired"
+    },
+    {
+      "choice": "Both left out entirely.",
+      "topic": "Medical costs and death-house location"
+    }
+  ]
+}

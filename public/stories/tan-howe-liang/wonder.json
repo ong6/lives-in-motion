@@ -1,131 +1,105 @@
 {
   "model": "muse-wonder-1.0",
-  "updated": "2026-10-30T14:31:01.444Z",
-  "usd": 0.759,
+  "updated": "2026-10-31T02:08:57.152Z",
+  "usd": 0.7157,
   "passMark": 8,
   "scenes": {
-    "s1": {
-      "status": "directed",
-      "score": 8,
-      "ok": true,
-      "passed": true,
-      "verdict": "film: The pull-back works — it opens tight on the boy's small silhouette at t=0 and, over the six frames, visibly widens to reveal the full lantern-lit shophouse street, with the boy shrinking into the scene and settling at scale 0.94. That reads as an arrival/reveal for 'Arrival in Chinatown' and is clearly better than a plain centred push-in. The boy stays a coherent solid silhouette throughout (no tearing, doubled edges, halo or painted-over ghost at his original spot), his bundle stays with him, and no layer clips the frame edge awkwardly beyond the intentional initial camera crop. First frame is a legible tight opening picture; last frame (t=1, zoom 1) is a balanced wide street view good to dwell on while reading. Light-sweep is subtle and fits dusk lanterns; the sepia copperplate/cross-hatch print style is preserved.  \nplate: No stray text, letters or numbers; the boy is correctly a silhouette from behind with a cloth bundle and no drawn face; rickshaws, paper lanterns and shophouses are period-correct for 1930s Singapore; no broken anatomy or melted objects visible.",
-      "rationale": "A quiet arrival: the camera opens tight on the small boy's silhouette and slowly reveals outward to the whole lantern-lit Chinatown street as he settles to rest in his new home.",
-      "ambient": "light-sweep",
-      "rounds": 1,
-      "usd": 0.0614,
-      "seconds": 279,
-      "filmIssues": [],
-      "plateDefects": [],
-      "video": "/stories/tan-howe-liang/s1/scene.mp4?v=7582a936",
-      "poster": "/stories/tan-howe-liang/s1/scene.jpg?v=7582a936"
-    },
     "s2": {
       "status": "directed",
-      "score": 6,
-      "ok": false,
-      "passed": false,
-      "verdict": "Coherent and clean, but essentially a timid centred push-in; the rise is not yet a visible, purposeful triumph and the final frame is over-cropped.",
-      "rationale": "A first national triumph after a year with one shared barbell: lifter and barbell rise together, growing as the camera tilts up and closes in on them.",
-      "ambient": "dust",
-      "rounds": 3,
-      "usd": 0.1651,
-      "seconds": 352,
-      "filmIssues": [
-        "The move reads as a plain centred push-in: camera zoom from about 1.04 to 1.29 with only a small shared upward drift, so the 'rise for triumph' idea is barely legible and no better in story terms than a standard push-in.",
-        "Lifter and barbell correctly stay locked together (same depth, drift and scale) with no visible tearing, doubled edges or ghosting, and the dust is subtle and era-appropriate — but there is no distinct foreground/background parallax moment or reveal to lift it above the baseline.",
-        "At t=1 the push-in crops the side benches and the foreground plate stacks hard against the left/right/bottom edges and the barbell discs nearly touch the frame, making the dwell frame feel cramped rather than triumphant.",
-        "Because the whole lifter+barbell layer drifts up, the feet lift with the bar instead of the bar rising in the hands, so it does not read as a lift."
-      ],
-      "plateDefects": [],
-      "video": "/stories/tan-howe-liang/s2/scene.mp4?v=64d3fdd0",
-      "poster": "/stories/tan-howe-liang/s2/scene.jpg?v=64d3fdd0"
-    },
-    "s3": {
-      "status": "directed",
       "score": 8,
       "ok": true,
       "passed": true,
-      "verdict": "Publishable. The visible pull-back from an intimate view of the defeated lifter to the wide, empty stadium gives the motion a clear narrative purpose beyond a plain centred push-in.",
-      "rationale": "A loss and setback: a close pull-back starts tight on the slumped lifter and draws away to zoom 1, shrinking him to 0.88 against the vast empty stadium and untouched barbell.",
+      "verdict": "The pull-back clearly reads as loss and abandonment: the boy starts large in the lane and is left smaller and isolated beneath the lanterns as the empty street widens around him. Both end frames are strong, the cut-outs remain coherent with no visible ghosting or tearing, and the subtle dust suits the 1950s offset-print treatment.",
+      "rationale": "A loss and turning point at his father's deathbed: the shot opens tight on the boy's back then pulls back as he shrinks, leaving him alone beneath the lanterns in the widening empty Chinatown lane.",
       "ambient": "dust",
       "rounds": 1,
-      "usd": 0.0742,
-      "seconds": 66,
-      "filmIssues": [
-        "The pull-back reads clearly and purposefully: the film opens tight on the slumped lifter, with the barbell partly obscured behind him, then draws back to reveal the untouched barbell, the empty platform and the vast stadium. That shrinking isolation directly expresses the setback described in the caption.",
-        "The lifter remains coherent throughout, with no visible tearing, doubled edges, halo or ghost of his original position. His contact with the bench remains believable despite the separate end scale.",
-        "No layer clips the frame edge awkwardly. The tighter opening crop is intentional and still retains the bench, platform and stadium context.",
-        "The first frame is a strong intimate opening; the final frame, holding the small lifter against the empty arena, is a good picture to dwell on while reading.",
-        "The dust ambient is subtle and compatible with the warm, aged 1950s offset-lithograph print style, which is preserved throughout."
-      ],
+      "usd": 0.066,
+      "seconds": 132,
+      "filmIssues": [],
       "plateDefects": [],
-      "video": "/stories/tan-howe-liang/s3/scene.mp4?v=dc6d18f2",
-      "poster": "/stories/tan-howe-liang/s3/scene.jpg?v=dc6d18f2"
+      "video": "/stories/tan-howe-liang/s2/scene.mp4?v=eda1339b",
+      "poster": "/stories/tan-howe-liang/s2/scene.jpg?v=eda1339b"
     },
     "s4": {
       "status": "directed",
-      "score": 7,
-      "ok": false,
-      "passed": false,
-      "verdict": "A coherent and attractive push-in, but not yet bold or purposeful enough to publish: the rise is too close to a standard magnification and the final frame crowds the platform and feet at the bottom edge.",
-      "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "Publish. The pull-back clearly serves the loss in the story: it opens tight on the official bending over the fallen lifter, then visibly widens to the final full-hall dwell frame revealing the dropped barbell, silent paper crowd and hard overhead lights. Both first and last frames are strong still pictures that work in either direction, the light-sweep is subtle, and the 1950s offset-lithograph style is preserved. The plate itself has no stray text, no drawn faces where silhouettes/from-behind figures were directed, no anachronism, and no mangled anatomy or objects.",
+      "rationale": "Make the pull-back for loss decisive: open genuinely tight on the official bending over the fallen lifter, then widen through the platform to reveal the dropped barbell, silent paper crowd and hard overhead lights in the full hall for the dwell frame. Keep the official locked to the background lifter by using a background-near depth, no drift and no end-scale change, so the hand contact and feet o",
       "ambient": "light-sweep",
       "rounds": 3,
-      "usd": 0.15,
-      "seconds": 169,
+      "usd": 0.1655,
+      "seconds": 126,
       "filmIssues": [
-        "The lifter and barbell stay locked together with no visible tearing, doubled edges, halo or ghosting, and the bar remains convincingly in the hands throughout.",
-        "The movement is legible but remains close to a plain centred push-in: the upward drift is modest and does not quite sell a distinct 'rise for triumph' rather than ordinary magnification.",
-        "By t=1 the push-in crops the competition platform awkwardly at the bottom and brings the lifter's feet very close to the lower frame edge, making the final dwell frame less composed than the opening frame.",
-        "The first frame is a strong, complete opening picture, but the last frame feels incidentally tight rather than deliberately heroic.",
-        "The light-sweep is subtle and period-appropriate, and the 1950s offset-lithograph texture remains intact."
+        "Barbell's left plate touches the left frame edge in the opening frames, but it resolves cleanly as the pull-back reveals it — acceptable as part of the reveal rather than awkward clipping.",
+        "No visible tearing, doubling, halo or ghosting: the official remains locked to the fallen lifter at the hand contact and feet throughout, and the barbell stays coherent as a single foreground object."
       ],
       "plateDefects": [],
-      "video": "/stories/tan-howe-liang/s4/scene.mp4?v=e977bbe9",
-      "poster": "/stories/tan-howe-liang/s4/scene.jpg?v=e977bbe9"
+      "video": "/stories/tan-howe-liang/s4/scene.mp4?v=7d78bdd4",
+      "poster": "/stories/tan-howe-liang/s4/scene.jpg?v=7d78bdd4"
     },
     "s5": {
       "status": "directed",
       "score": 7,
       "ok": false,
       "passed": false,
-      "verdict": "Coherent and publishable in technique, but too close to a plain push-in and the floating rise undercuts the planted lift; needs the bolder, staged rise-and-push-in above.",
-      "rationale": "Make the triumph a visible, even rise rather than a late push-in: start wide and low including the full platform, then move steadily up and in with the focus lowered to 0.45 so the platform and feet stay in frame at the end. Lifter and barbell remain locked together at identical depth, drift and scale so the hands never leave the bar, but their -0.07 upward drift against the slower background now ",
+      "verdict": "Judgement on both the film and the plate follows in the structured argument below.",
+      "rationale": "Make the triumph itself the movement: the locked-together lifter and barbell rise into full lockout in the first third (identical depth, drift, scale and rise entrance on both layers so the hand-to-bar join can never break), while the camera pushes in from the full arena and tilts its focus upward toward the bar and lamps. The slightly lower final zoom of 1.28 keeps the platform and feet inside th",
       "ambient": "light-sweep",
       "rounds": 3,
-      "usd": 0.1474,
-      "seconds": 214,
+      "usd": 0.1588,
+      "seconds": 107,
       "filmIssues": [
-        "The move reads mainly as a steady centred push-in: the -0.07 rise of lifter and barbell is synchronous and coherent, but it is too even and slight to clearly stage the clean-and-jerk / triumph, so it is only marginally better than a plain push-in.",
-        "Because both figure and barbell drift up against the background platform, the feet begin to unweight/float from the platform rather than the lift feeling planted and powerful.",
-        "By t=1 the barbell plates are very close to the left and right frame edges, making the final dwell feel tight rather than heroic and composed.",
-        "Lifter and barbell correctly stay locked together with no visible ghost, doubled edge or tearing, and the light-sweep is subtle and era-appropriate."
+        "The t=0 opening frame is an empty platform: the rise entrance hides the weightlifter and barbell, the subject of the scene, so the page opens without its hero.",
+        "Once the lifter appears the rise plus push-in does read as a triumph, and cut-1/cut-2 stay locked together with no visible tearing, doubled edges or ghost at the hand-to-bar join.",
+        "The final frame is a strong hold — lifter large, centred, bar overhead, platform and feet in frame — but the opening failure and the entrance pop keep it below publishable.",
+        "Light-sweep is fitting and subtle for the 1950s lithograph style, which is otherwise preserved."
       ],
       "plateDefects": [],
-      "video": "/stories/tan-howe-liang/s5/scene.mp4?v=5568fe12",
-      "poster": "/stories/tan-howe-liang/s5/scene.jpg?v=5568fe12"
+      "video": "/stories/tan-howe-liang/s5/scene.mp4?v=3d8b6a4c",
+      "poster": "/stories/tan-howe-liang/s5/scene.jpg?v=3d8b6a4c"
     },
     "s6": {
       "status": "directed",
       "score": 6,
       "ok": false,
       "passed": false,
-      "verdict": "Do not publish as-is: coherent and clean, but the motion is essentially a timid push-in and does not make the triumph-rise legible enough to beat a plain push-in.",
-      "rationale": "A triumph — the Perth gold and medal — told as a Rise: the lifter on his podium lifts and grows as one while the camera tilts up and closes in, ending elevated for the reader to dwell on.",
-      "ambient": "light-sweep",
+      "verdict": "A sound pull-back idea for being singled out, undermined by an over-tight, clipped opening and a visible slice through the foreground figure; do not publish in this form.",
+      "rationale": "The turning point of being singled out for Rome is told as a reveal: the camera opens tight at zoom 1.38 on the handshake that seals the selection, then travels out to the full farewell table and bunting while the young man settles slightly under the weight of the responsibility.",
+      "ambient": "halftone-shimmer",
       "rounds": 3,
-      "usd": 0.1609,
-      "seconds": 107,
+      "usd": 0.1644,
+      "seconds": 77,
       "filmIssues": [
-        "The move reads as a plain centred push-in: zoom 1.02 to 1.32 with only a -0.035 layer drift, so the claimed 'rise for triumph' is barely perceptible against the camera move itself.",
-        "First frame is a weak opening: wide, low subject in a large expanse of empty paper above the tiled wall. The last frame is better and holds well, with the lifter and barbell still inside the frame.",
-        "The lifter and podium stay correctly locked together (same depth, drift and scale), with no visible tearing, doubled edges, ghosting from the painted-over background, or awkward edge clipping in the sampled frames.",
-        "The light-sweep is subtle and fitting for the offset-lithograph poster style, and the print texture/misregistration is preserved."
+        "The pull-back idea is legible, but the opening frame is awkwardly over-tight: at t=0-0.4 the young man's silhouette is clipped at the left and bottom edges and the bunting and headline bars are cropped, so the page does not open on a composed picture.",
+        "The foreground man shows a visible horizontal slice/tear at table height in the early frames, with his torso, extended arm and lower body misaligning across the table edge; the settle entrance plus strong parallax makes the cut-out read as separated from its painted-over spot.",
+        "Because the move is damped/clamped by the tight first framing, the handshake that is meant to be the reveal is not cleanly centred or readable — the hand sits at the table edge amid the slice, while the four officials remain small in the distance.",
+        "The final full-plate frame at t=1 is a good dwelling picture and the halftone-shimmer suits the 1950s lithograph style, but the faulty opening and tearing outweigh that."
       ],
       "plateDefects": [],
-      "video": "/stories/tan-howe-liang/s6/scene.mp4?v=7f1c2e4a",
-      "poster": "/stories/tan-howe-liang/s6/scene.jpg?v=7f1c2e4a"
+      "video": "/stories/tan-howe-liang/s6/scene.mp4?v=247fa393",
+      "poster": "/stories/tan-howe-liang/s6/scene.jpg?v=247fa393"
+    },
+    "s8": {
+      "status": "directed",
+      "score": 7,
+      "ok": false,
+      "passed": false,
+      "verdict": "Good journey idea, but the visible halo around the lifter and the clipped spotlight in the final held frame keep it below publishable quality; the revised plan keeps the walk bold while easing the camera back.",
+      "rationale": "Make the journey, not the zoom, the story: open slightly left to include the watcher in the wings, then push in more moderately toward the platform while the lifter makes the maximum safe up-right drift toward the barbell and shrinks to 0.85, so he visibly travels away from the viewer into the spotlight. The barbell stays stable as the destination. The reduced final zoom and lower focus keep the m",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.161,
+      "seconds": 71,
+      "filmIssues": [
+        "The lifter's walk toward the barbell is legible, but a bright white halo / doubled edge is visible around his head and shoulders in every frame after t=0, betraying the cut-out as it moves off its painted-over spot.",
+        "The final push-in to 1.26 crops the top of the spotlight lamp and squeezes the red wing curtain at the left edge, so the held final frame is awkwardly clipped compared with the clean opening.",
+        "The journey is purposeful but partly undermined by the halo and by the excessive final zoom; the destination barbell is reached visually less by the lifter than by the camera."
+      ],
+      "plateDefects": [],
+      "video": "/stories/tan-howe-liang/s8/scene.mp4?v=284ff027",
+      "poster": "/stories/tan-howe-liang/s8/scene.jpg?v=284ff027"
     }
   }
 }

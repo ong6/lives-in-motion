@@ -1,259 +1,254 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T14:31:01.439Z",
-  "usd": 0.1609,
-  "rationale": "A triumph — the Perth gold and medal — told as a Rise: the lifter on his podium lifts and grows as one while the camera tilts up and closes in, ending elevated for the reader to dwell on.",
+  "at": "2026-10-31T02:07:45.576Z",
+  "usd": 0.1644,
+  "rationale": "The turning point of being singled out for Rome is told as a reveal: the camera opens tight at zoom 1.38 on the handshake that seals the selection, then travels out to the full farewell table and bunting while the young man settles slightly under the weight of the responsibility.",
   "plan": {
-    "focusX": 0.47,
-    "focusY": 0.58,
+    "focusX": 0.62,
+    "focusY": 0.73,
     "camera": [
       {
         "t": 0,
-        "zoom": 1.02,
-        "panX": 0,
-        "panY": 0.04,
+        "zoom": 1.38,
+        "panX": 0.07,
+        "panY": 0.05,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.17,
-        "panX": 0.005,
-        "panY": -0.01,
+        "zoom": 1.18,
+        "panX": 0.03,
+        "panY": 0.02,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.32,
-        "panX": 0.01,
-        "panY": -0.06,
-        "ease": "out"
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.75,
-        "driftX": 0,
-        "driftY": -0.035,
-        "scale": 1.1,
-        "enter": "none",
+        "depth": 0.95,
+        "driftX": 0.01,
+        "driftY": 0.015,
+        "scale": 0.98,
+        "enter": "settle",
         "enterAt": 0,
-        "enterFor": 0.1
+        "enterFor": 0.35
       },
       {
         "id": "cut-2",
-        "depth": 0.75,
-        "driftX": 0,
-        "driftY": -0.035,
-        "scale": 1.1,
+        "depth": 0.4,
+        "driftX": -0.015,
+        "driftY": 0,
+        "scale": 1,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
-    "ambient": "light-sweep",
-    "rationale": "A triumph — the Perth gold and medal — told as a Rise: the lifter on his podium lifts and grows as one while the camera tilts up and closes in, ending elevated for the reader to dwell on."
+    "ambient": "halftone-shimmer",
+    "rationale": "The turning point of being singled out for Rome is told as a reveal: the camera opens tight at zoom 1.38 on the handshake that seals the selection, then travels out to the full farewell table and bunting while the young man settles slightly under the weight of the responsibility."
   },
   "critic": {
     "score": 6,
     "ok": false,
     "passed": false,
-    "verdict": "Do not publish as-is: coherent and clean, but the motion is essentially a timid push-in and does not make the triumph-rise legible enough to beat a plain push-in.",
+    "verdict": "A sound pull-back idea for being singled out, undermined by an over-tight, clipped opening and a visible slice through the foreground figure; do not publish in this form.",
     "round": 0
   },
   "rounds": [
     {
       "score": 6,
       "ok": false,
-      "verdict": "Do not publish as-is: coherent and clean, but the motion is essentially a timid push-in and does not make the triumph-rise legible enough to beat a plain push-in.",
+      "verdict": "A sound pull-back idea for being singled out, undermined by an over-tight, clipped opening and a visible slice through the foreground figure; do not publish in this form.",
       "filmIssues": [
-        "The move reads as a plain centred push-in: zoom 1.02 to 1.32 with only a -0.035 layer drift, so the claimed 'rise for triumph' is barely perceptible against the camera move itself.",
-        "First frame is a weak opening: wide, low subject in a large expanse of empty paper above the tiled wall. The last frame is better and holds well, with the lifter and barbell still inside the frame.",
-        "The lifter and podium stay correctly locked together (same depth, drift and scale), with no visible tearing, doubled edges, ghosting from the painted-over background, or awkward edge clipping in the sampled frames.",
-        "The light-sweep is subtle and fitting for the offset-lithograph poster style, and the print texture/misregistration is preserved."
+        "The pull-back idea is legible, but the opening frame is awkwardly over-tight: at t=0-0.4 the young man's silhouette is clipped at the left and bottom edges and the bunting and headline bars are cropped, so the page does not open on a composed picture.",
+        "The foreground man shows a visible horizontal slice/tear at table height in the early frames, with his torso, extended arm and lower body misaligning across the table edge; the settle entrance plus strong parallax makes the cut-out read as separated from its painted-over spot.",
+        "Because the move is damped/clamped by the tight first framing, the handshake that is meant to be the reveal is not cleanly centred or readable — the hand sits at the table edge amid the slice, while the four officials remain small in the distance.",
+        "The final full-plate frame at t=1 is a good dwelling picture and the halftone-shimmer suits the 1950s lithograph style, but the faulty opening and tearing outweigh that."
       ],
       "fixes": [],
       "plan": {
-        "focusX": 0.47,
-        "focusY": 0.58,
+        "focusX": 0.62,
+        "focusY": 0.73,
         "camera": [
           {
             "t": 0,
-            "zoom": 1.02,
-            "panX": 0,
-            "panY": 0.04,
+            "zoom": 1.38,
+            "panX": 0.07,
+            "panY": 0.05,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.17,
-            "panX": 0.005,
-            "panY": -0.01,
+            "zoom": 1.18,
+            "panX": 0.03,
+            "panY": 0.02,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.32,
-            "panX": 0.01,
-            "panY": -0.06,
-            "ease": "out"
-          }
-        ],
-        "layers": [
-          {
-            "id": "cut-1",
-            "depth": 0.75,
-            "driftX": 0,
-            "driftY": -0.035,
-            "scale": 1.1,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          },
-          {
-            "id": "cut-2",
-            "depth": 0.75,
-            "driftX": 0,
-            "driftY": -0.035,
-            "scale": 1.1,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          }
-        ],
-        "ambient": "light-sweep",
-        "rationale": "A triumph — the Perth gold and medal — told as a Rise: the lifter on his podium lifts and grows as one while the camera tilts up and closes in, ending elevated for the reader to dwell on."
-      }
-    },
-    {
-      "score": 6,
-      "ok": false,
-      "verdict": "A coherent but timid push-in - the locked lifter and podium stay clean, yet the intended rise for triumph is barely visible, so it is little better than a plain centred zoom.",
-      "filmIssues": [
-        "The move reads as a plain centred push-in: zoom 1.0 to 1.3 with a small upward pan, only slightly more expressive than the baseline push-in.",
-        "The intended triumph rise is timid after damping - the lifter and podium drift only -0.045 and scale 1.105, so they barely lift relative to the tiled hall and barbell.",
-        "Lifter and podium correctly stay locked together at identical depth, drift and scale, so the feet remain on the podium with no tearing, doubled edges or ghosting visible.",
-        "No layer clips the frame awkwardly; the first frame is a clean full plate and the last frame is a larger, dwellable portrait of the lifter, but the story of elevation to champion is not clearly told.",
-        "The light-sweep ambient is fitting and subtle for the 1950s offset-lithograph print style and does not distract."
-      ],
-      "fixes": [
-        "move damped to 75% (cut-2 12% off-frame at t=0.70)"
-      ],
-      "plan": {
-        "focusX": 0.47,
-        "focusY": 0.56,
-        "camera": [
-          {
-            "t": 0,
             "zoom": 1,
             "panX": 0,
-            "panY": 0.037500000000000006,
-            "ease": "in-out"
-          },
-          {
-            "t": 0.5,
-            "zoom": 1.15,
-            "panX": 0.00375,
             "panY": 0,
             "ease": "in-out"
-          },
-          {
-            "t": 1,
-            "zoom": 1.2999999999999998,
-            "panX": 0.0075,
-            "panY": -0.052500000000000005,
-            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.8,
-            "driftX": 0,
-            "driftY": -0.045,
-            "scale": 1.105,
-            "enter": "none",
+            "depth": 0.95,
+            "driftX": 0.01,
+            "driftY": 0.015,
+            "scale": 0.98,
+            "enter": "settle",
             "enterAt": 0,
-            "enterFor": 0.1
+            "enterFor": 0.35
           },
           {
             "id": "cut-2",
-            "depth": 0.8,
-            "driftX": 0,
-            "driftY": -0.045,
-            "scale": 1.105,
+            "depth": 0.4,
+            "driftX": -0.015,
+            "driftY": 0,
+            "scale": 1,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "A bolder Rise for the Perth triumph: start at the full plate, then tilt up and push in decisively while lifter-plus-podium, locked together at identical depth/drift/scale so the feet never leave the podium top, visibly lift and grow by -0.06 drift and 1.14 scale. The stronger upward camera arc and end zoom make the elevation purposeful rather than a generic push-in, ending on a larger, elevated ch"
+        "ambient": "halftone-shimmer",
+        "rationale": "The turning point of being singled out for Rome is told as a reveal: the camera opens tight at zoom 1.38 on the handshake that seals the selection, then travels out to the full farewell table and bunting while the young man settles slightly under the weight of the responsibility."
       }
     },
     {
       "score": 6,
       "ok": false,
-      "verdict": "Coherent and clean, but essentially a timid push-in — the podium rise that should express the Perth triumph is not visibly legible against the background.",
+      "verdict": "Do not publish as-is: the film is coherent and era-appropriate, but its damped pull-back is too timid to earn its place over a plain zoom — it needs the bolder tight-handshake-to-full-party reveal in the revised plan.",
       "filmIssues": [
-        "The move reads as a plain centred push-in: across all six frames the lifter only gets gradually larger, with no clearly legible rise of the lifter-and-podium group against the tiled hall.",
-        "The claimed triumph rise is masked by the camera pan and zoom — the podium drifts toward the lower frame rather than visibly elevating, so the story beat (podium triumph at Perth) is not expressed beyond magnification.",
-        "Lifter and podium are correctly locked together (same depth, drift and scale) and the feet stay planted with no tearing, doubled edges, halo or painted-over ghost, but that also means there is almost no parallax storytelling within the group.",
-        "First frame is a clean full-plate opening and the last frame is a usable closer dwell image, neither clips awkwardly, and the light-sweep is subtle and era-appropriate — the problem is purpose, not coherence."
+        "The pull-back is legible but timid and generic: zoom falls only 1.24 to 1.0 with tiny pans, so across the six frames it reads as little more than a plain centred zoom in reverse, not as a purposeful widening from the singled-out handshake to the farewell party and the weight of responsibility.",
+        "Parallax is almost absent: the young man (depth 0.85) and bunting (depth 0.45) barely separate, and with near-zero drifts there is no visible foreground/background layering to justify the cut-outs.",
+        "No subject incoherence is visible — the man's arm stays joined to his torso and over the table, there is no doubled edge, halo or ghost, and no layer clips the frame edge awkwardly; the seated row and table correctly stay together in the background.",
+        "The first frame is a serviceable, slightly tight opening on the man and handshake and the last frame is a good full-plate picture to dwell on, but the intervening move is too small and even to feel good as a reveal in either direction.",
+        "Halftone-shimmer is fitting and subtle for the 1950s offset-lithograph print style and does not damage the flat inks."
       ],
-      "fixes": [
-        "move damped to 75% (cut-2 10% off-frame at t=0.78)"
-      ],
+      "fixes": [],
       "plan": {
-        "focusX": 0.47,
-        "focusY": 0.55,
+        "focusX": 0.6,
+        "focusY": 0.66,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
-            "panX": 0,
-            "panY": 0.0225,
+            "zoom": 1.24,
+            "panX": 0.03,
+            "panY": 0.03,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.135,
-            "panX": 0.0075,
-            "panY": -0.0075,
+            "zoom": 1.12,
+            "panX": 0.015,
+            "panY": 0.015,
             "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.285,
-            "panX": 0.01125,
-            "panY": -0.037500000000000006,
-            "ease": "out"
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.9,
-            "driftX": 0,
-            "driftY": -0.06,
-            "scale": 1.1124999999999998,
+            "depth": 0.85,
+            "driftX": 0.004,
+            "driftY": 0.005,
+            "scale": 1,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           },
           {
             "id": "cut-2",
-            "depth": 0.9,
-            "driftX": 0,
-            "driftY": -0.06,
-            "scale": 1.1124999999999998,
+            "depth": 0.45,
+            "driftX": -0.008,
+            "driftY": -0.003,
+            "scale": 1,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "A decisive rise for the Perth triumph: open on the full plate, then push in strongly to 1.38 while the lifter-plus-podium group - locked at identical depth 0.9, drift -0.08 and scale 1.15 so the feet never leave the podium top - visibly lifts and grows against the tiled hall and barbell background. The larger upward drift, stronger parallax and end zoom make the elevation purposeful rather than a "
+        "ambient": "halftone-shimmer",
+        "rationale": "Keep the intended reveal — open on the handshake/selection, then pull back to the full farewell table as the weight of responsibility widens — but start at a safer 1.24 zoom centred on the handshake so the young man, bunting and bars stay inside the frame. Remove the settle entrance and near-zero the man's drift so his arm and torso cannot tear away from the table, and use gentler parallax between"
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A clear pull-back concept with a good final frame, but the over-tight, edge-clipped opening and the figure sliding against the table make it unpublishable as rendered.",
+      "filmIssues": [
+        "The pull-back idea is legible — tight on the young man and his outstretched hand, then widening to the full farewell party — but the opening at zoom 1.38 is awkwardly cropped: the young man, table and bunting are all clipped at the left/top edges in t=0, so the page does not open on a good picture.",
+        "Because cut-1 is at depth 0.9 against the background table, the foreground figure slides noticeably against the table edge as the camera pulls back. The table line cuts across his torso/arm and his lower body reads as detached in the early frames, weakening the handshake gesture rather than clarifying it.",
+        "The move is essentially a single damped pull-back, close to a reverse push-in: no entrance, reveal or layer action makes the 'singled out' moment land. The final full-plate frame is good to dwell on and the halftone-shimmer/print texture is fitting and subtle, but the start framing and layer separation keep it below publishable."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.63,
+        "focusY": 0.72,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0.06,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.03,
+            "panY": 0.025,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.012,
+            "driftY": 0.006,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.4,
+            "driftX": 0.008,
+            "driftY": -0.006,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Make the intended story unmistakable: open much tighter on the young man's extended hand over the table (the moment of being singled out), then pull back decisively to the full farewell party, bunting and headline bars so the responsibility visibly widens around him. Keep entrances off and the man's drift small so his arm cannot tear from the table, but use a stronger depth split (0.9 vs 0.4) and "
       }
     }
   ]

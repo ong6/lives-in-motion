@@ -1,0 +1,254 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T01:41:25.384Z",
+  "usd": 0.1809,
+  "rationale": "Bolder, story-first version of the same loss pull-back: start genuinely tight on the man-from-behind at zoom 1.45 focused on him, then pull back to the full empty boardroom at 1.0, while the locked cut-1/cut-2 figure itself walks away - drifting up the corridor (-0.055) and shrinking to 0.87 so he recedes toward the glass boardroom as the room is revealed empty around him. Both layers keep identic",
+  "plan": {
+    "focusX": 0.496,
+    "focusY": 0.58,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.45,
+        "panX": 0,
+        "panY": 0.03,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.2,
+        "panX": 0,
+        "panY": 0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.9,
+        "driftX": -0.005,
+        "driftY": -0.055,
+        "scale": 0.87,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": -0.005,
+        "driftY": -0.055,
+        "scale": 0.87,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Bolder, story-first version of the same loss pull-back: start genuinely tight on the man-from-behind at zoom 1.45 focused on him, then pull back to the full empty boardroom at 1.0, while the locked cut-1/cut-2 figure itself walks away - drifting up the corridor (-0.055) and shrinking to 0.87 so he recedes toward the glass boardroom as the room is revealed empty around him. Both layers keep identic"
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "A purposeful pull-back for loss that is undermined by a visible ghost patch on the figure and an over-recession that leaves the final frame too empty.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A fitting pull-back for loss undermined by a white halo and peeling patch on the man — the duplicated layers ghost as they shrink, so the walk-away does not stay coherent.",
+      "filmIssues": [
+        "The pull-back idea fits a rejection, but in the frames the moving man develops a bright white halo around his head/shoulders and a growing pale patch on his back from t=0.6 to t=1 — a visible ghost/doubled cut-out where the duplicated layers separate from their painted-over spot.",
+        "cut-1 and cut-2 share the same box and are moved identically, yet they still do not stay perfectly registered as one subject; the light shape on the man's torso reads as a second layer peeling off him rather than as print texture.",
+        "The man's own shrink (scale 0.88, driftY -0.04) on top of the 1.35-to-1.0 camera pull-back is what exposes the ghost, while the overall move still reads as a slow, timid zoom-out rather than a clear walk-away — the boardroom, table and foreground folder barely change in emphasis.",
+        "The first frame at zoom 1.35 is uncomfortably tight on the boardroom block and the last frame is good to dwell on, but the flawed intermediate registration makes the film unpublishable in reverse as well."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.496,
+        "focusY": 0.6,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.35,
+            "panX": 0,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": -0.04,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": -0.04,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "A rejection and loss: the camera starts tight on the man from behind and pulls back as he shrinks walking away from the boardroom, leaving the empty table behind him."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish as-is: coherent and clean, but the motion is too timid to clearly express the walking-away / pull-back-for-loss story over a plain push-in. Publish the revised, bolder pull-back with the figure visibly receding.",
+      "filmIssues": [
+        "The pull-back is directionally right for a rejection / walking-away story, but in the rendered frames it is timid: t=0 to t=1 changes scale only slightly, so all six frames read as near-identical full-plate views rather than a clear tight-to-wide loss reveal.",
+        "The man does not visibly travel: with only -0.015 drift and 0.96 end scale he stays essentially planted while the camera retreats, so the 'walking away down the corridor' action in the art direction is not expressed.",
+        "That said, the subject stays coherent - no tearing, doubled edges, halo or painted-over ghost is visible, cut-1 and cut-2 (identical boxes) correctly stay locked together, nothing clips the frame edge awkwardly, and both the opening and final full-plate frames are legible and good to dwell on. The halftone-shimmer is fitting and subtle for the risograph style."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.496,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.42,
+            "panX": 0,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.2,
+            "panX": 0,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": -0.015,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": -0.015,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Make the camera do the loss story, not the cut-out shrink: a bolder 1.42-to-1.0 pull-back from tight on the man-from-behind to the full empty boardroom, while locking cut-1 and cut-2 together with identical depth and only a tiny -0.015 rise / 0.96 scale so they register as one figure walking up the corridor and never peel apart or expose a painted-over ghost. Both layers stay well inside the frame"
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "A purposeful pull-back for loss that is undermined by a visible ghost patch on the figure and an over-recession that leaves the final frame too empty.",
+      "filmIssues": [
+        "The pull-back / walk-away idea is clear and visible, but the man recedes twice over — camera zoom-out plus a -0.055 upward drift and 0.87 shrink — so by t=1 he is too small to hold the final, dwell-on frame.",
+        "A pale, toilet-shaped ghost patch appears on the man's back in the lower-row frames, indicating the identically-boxed cut-1/cut-2 layers are separating / showing through as they move. The figure does not stay fully coherent.",
+        "The t=0 frame at zoom 1.45 flattens the man against the table and chairs; his legs overlap the boardroom furniture and the entrance/walk-away reads confusingly before the pull-back clarifies it.",
+        "Halftone-shimmer is appropriate for the risograph print and is not distracting in the frames shown."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.496,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.45,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.2,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": -0.005,
+            "driftY": -0.055,
+            "scale": 0.87,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.005,
+            "driftY": -0.055,
+            "scale": 0.87,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Bolder, story-first version of the same loss pull-back: start genuinely tight on the man-from-behind at zoom 1.45 focused on him, then pull back to the full empty boardroom at 1.0, while the locked cut-1/cut-2 figure itself walks away - drifting up the corridor (-0.055) and shrinking to 0.87 so he recedes toward the glass boardroom as the room is revealed empty around him. Both layers keep identic"
+      }
+    }
+  ]
+}

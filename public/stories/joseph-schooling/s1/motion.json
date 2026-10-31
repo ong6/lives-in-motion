@@ -1,11 +1,11 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T14:29:25.164Z",
-  "usd": 0.0616,
-  "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins.",
+  "at": "2026-10-31T01:54:30.332Z",
+  "usd": 0.123,
+  "rationale": "Keep the bold, purposeful pull-back for a first meeting — start tight on the mitt between the players and reveal the whole Penang diamond — but lock both cut-outs to near-background depth with zero drift and no scale change, so the right player stays glued to the left player, bench and bat and the mitt stays on the bench. All separation is removed; the movement is carried entirely by the shared ca",
   "plan": {
-    "focusX": 0.508,
-    "focusY": 0.567,
+    "focusX": 0.5,
+    "focusY": 0.68,
     "camera": [
       {
         "t": 0,
@@ -17,52 +17,123 @@
       {
         "t": 0.5,
         "zoom": 1.18,
-        "panX": -0.01,
-        "panY": 0.02,
+        "panX": 0.01,
+        "panY": 0.01,
         "ease": "in-out"
       },
       {
         "t": 1,
         "zoom": 1,
-        "panX": 0,
-        "panY": 0,
-        "ease": "in-out"
+        "panX": 0.02,
+        "panY": -0.03,
+        "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.9,
+        "depth": 0.3,
         "driftX": 0,
-        "driftY": 0.02,
-        "scale": 0.98,
-        "enter": "settle",
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
         "enterAt": 0,
-        "enterFor": 0.5
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
       }
     ],
     "ambient": "light-sweep",
-    "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins."
+    "rationale": "Keep the bold, purposeful pull-back for a first meeting — start tight on the mitt between the players and reveal the whole Penang diamond — but lock both cut-outs to near-background depth with zero drift and no scale change, so the right player stays glued to the left player, bench and bat and the mitt stays on the bench. All separation is removed; the movement is carried entirely by the shared ca"
   },
   "critic": {
     "score": 8,
     "ok": true,
     "passed": true,
-    "verdict": "A purposeful pull-back: it opens tight on the small boy from behind, then reveals the pool edge, palms and HDB neighbourhood as the lasting wide picture. The boy and kickboard stay coherent with no tearing, ghosting or awkward edge clipping, the reversed move reads naturally, and the warm light-sweep suits the sunny 1990s risograph print without overpowering it.",
-    "round": 0
+    "verdict": "Publish. The pull-back is clearly visible across the contact sheet and purposefully serves the first-meeting story: it opens tight on the two players and the mitt/bat between them, then reveals the full Penang diamond, palms, floodlights and moon. The final wide frame is a strong, balanced picture to dwell on, with the complete bench and field held inside generous margins. The players, mitt, bench and bat remain coherent throughout, with no obvious tearing, doubled edges, ghosting or awkward frame clipping. The light-sweep is subtle and fits the dusk floodlit scene without disturbing the risograph grain and orange/teal print style.",
+    "round": 1
   },
   "rounds": [
     {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish: a good pull-back reveal idea is undermined by the right player and mitt drifting apart from the left player and bench they belong with.",
+      "filmIssues": [
+        "The pull-back is readable — tight on the bench at t=0 opening out to the whole diamond, palms and floodlights at t=1 — but the two bench-mates do not stay together: only the right-hand player is a cut-out (cut-1), the left player is in the clean background, so parallax progressively opens a gap between them and shifts the right player's feet/legs against the bench.",
+        "The mitt (cut-2, same 0.85 depth and downward drift as cut-1) sinks and separates from its painted position on the bench as the camera pulls back, reading as a floating/detached prop rather than an object resting between the players.",
+        "Because of those splits the subject tears as a group: the pair, bench, mitt and bat belong together in the foreground, but foreground parallax is applied to only half of the group, giving a doubled/detached-leg effect in the later frames.",
+        "The intended story is otherwise well served — first frame is a strong intimate opening, last frame is a good wide dwell picture, light-sweep suits floodlit dusk and the risograph grain is preserved — but the incoherent foreground outweighs the expressive camera move."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.48,
+        "focusY": 0.72,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.32,
+            "panX": -0.04,
+            "panY": 0.06,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.16,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.03,
+            "panY": -0.04,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0.018,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0.018,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet beginning where two opponents first meet: the camera reveals the scene from the orange mitt between them on the bench, travelling out and up to the whole Penang diamond under the floodlights."
+      }
+    },
+    {
       "score": 8,
       "ok": true,
-      "verdict": "A purposeful pull-back: it opens tight on the small boy from behind, then reveals the pool edge, palms and HDB neighbourhood as the lasting wide picture. The boy and kickboard stay coherent with no tearing, ghosting or awkward edge clipping, the reversed move reads naturally, and the warm light-sweep suits the sunny 1990s risograph print without overpowering it.",
+      "verdict": "Publish. The pull-back is clearly visible across the contact sheet and purposefully serves the first-meeting story: it opens tight on the two players and the mitt/bat between them, then reveals the full Penang diamond, palms, floodlights and moon. The final wide frame is a strong, balanced picture to dwell on, with the complete bench and field held inside generous margins. The players, mitt, bench and bat remain coherent throughout, with no obvious tearing, doubled edges, ghosting or awkward frame clipping. The light-sweep is subtle and fits the dusk floodlit scene without disturbing the risograph grain and orange/teal print style.",
       "filmIssues": [],
-      "fixes": [
-        "cut-1.enterFor 0.600 → 0.500"
-      ],
+      "fixes": [],
       "plan": {
-        "focusX": 0.508,
-        "focusY": 0.567,
+        "focusX": 0.5,
+        "focusY": 0.68,
         "camera": [
           {
             "t": 0,
@@ -74,32 +145,42 @@
           {
             "t": 0.5,
             "zoom": 1.18,
-            "panX": -0.01,
-            "panY": 0.02,
+            "panX": 0.01,
+            "panY": 0.01,
             "ease": "in-out"
           },
           {
             "t": 1,
             "zoom": 1,
-            "panX": 0,
-            "panY": 0,
-            "ease": "in-out"
+            "panX": 0.02,
+            "panY": -0.03,
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.9,
+            "depth": 0.3,
             "driftX": 0,
-            "driftY": 0.02,
-            "scale": 0.98,
-            "enter": "settle",
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
             "enterAt": 0,
-            "enterFor": 0.5
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
           }
         ],
         "ambient": "light-sweep",
-        "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins."
+        "rationale": "Keep the bold, purposeful pull-back for a first meeting — start tight on the mitt between the players and reveal the whole Penang diamond — but lock both cut-outs to near-background depth with zero drift and no scale change, so the right player stays glued to the left player, bench and bat and the mitt stays on the bench. All separation is removed; the movement is carried entirely by the shared ca"
       }
     }
   ]

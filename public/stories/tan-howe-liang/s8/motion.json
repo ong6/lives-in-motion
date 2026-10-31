@@ -1,0 +1,256 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:08:57.149Z",
+  "usd": 0.161,
+  "rationale": "Make the journey, not the zoom, the story: open slightly left to include the watcher in the wings, then push in more moderately toward the platform while the lifter makes the maximum safe up-right drift toward the barbell and shrinks to 0.85, so he visibly travels away from the viewer into the spotlight. The barbell stays stable as the destination. The reduced final zoom and lower focus keep the m",
+  "plan": {
+    "focusX": 0.55,
+    "focusY": 0.64,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1,
+        "panX": -0.03,
+        "panY": -0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.13,
+        "panX": 0.01,
+        "panY": 0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1.26,
+        "panX": 0.04,
+        "panY": 0.03,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.95,
+        "driftX": 0.08,
+        "driftY": -0.075,
+        "scale": 0.85,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.2
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.4,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1.03,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.2
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "Make the journey, not the zoom, the story: open slightly left to include the watcher in the wings, then push in more moderately toward the platform while the lifter makes the maximum safe up-right drift toward the barbell and shrinks to 0.85, so he visibly travels away from the viewer into the spotlight. The barbell stays stable as the destination. The reduced final zoom and lower focus keep the m"
+  },
+  "critic": {
+    "score": 7,
+    "ok": false,
+    "passed": false,
+    "verdict": "Good journey idea, but the visible halo around the lifter and the clipped spotlight in the final held frame keep it below publishable quality; the revised plan keeps the walk bold while easing the camera back.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "The plate is strong, but the film's pull-back makes the lifter retreat and shrink away from the barbell, with a visible white halo around his cut-out, so it should not be published in this form.",
+      "filmIssues": [
+        "The pull-back reads backwards for the story: the lifter starts large and overlapping the platform, then shrinks and sinks toward the bottom of the frame, so he appears to retreat from the barbell rather than walk toward it under the spotlight.",
+        "A bright white halo / doubled cut-out edge is visible around the lifter's head, shoulders and arms in every frame, separating him from the clean background and breaking the flat lithograph print style.",
+        "At t=1 the lifter is small, stranded low in the frame with his feet almost touching the bottom edge, which is a weak and awkward picture to dwell on while reading; the wide final framing also loses the tension of the waiting barbell.",
+        "The light-sweep is barely legible and does not compensate for the contradictory layer movement; overall the move is no clearer than a plain centred push-in."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.3,
+        "focusY": 0.8,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": -0.08,
+            "panY": 0.09,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": -0.02,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.04,
+            "panY": -0.02,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0.06,
+            "driftY": -0.03,
+            "scale": 0.94,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.55,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A struggle told as a reveal: open tight on the lifter's cramped legs, then travel out and across as he walks toward the waiting barbell under the spotlight."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Timid push-in with a weak, partly cancelled walking-away drift, a visible cut-out halo on the lifter and a clipped lamp in the final frame — not publishable as an 8+ story-expressing film.",
+      "filmIssues": [
+        "The move reads mostly as a plain centred push-in: the camera zoom from 1.0 to 1.28 dominates, while the lifter's journey is weak.",
+        "Despite scale 0.88, the camera magnification makes the lifter end at roughly the same size, so he does not read as walking away from the viewer into the spotlight.",
+        "His rightward/upward drift is too small to close the visual gap to the barbell; at t=1 he is still well short of the platform and the story beat — approaching the loaded bar for the clean and jerk despite cramp — is not clearly expressed.",
+        "A pale/white halo is visible around the lifter's head and shoulders in the moved frames, betraying the cut-out edge against the stage.",
+        "By t=0.6-1 the spotlight lamp at the top is awkwardly clipped by the frame edge, spoiling the final dwell picture compared with the clean establishing opening frame.",
+        "The light-sweep ambient is fitting for the theatre spotlight and the print texture is preserved, but it cannot carry the timid layer motion."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.52,
+        "focusY": 0.66,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.14,
+            "panX": 0.02,
+            "panY": 0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.28,
+            "panX": 0.04,
+            "panY": 0.03,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0.055,
+            "driftY": -0.045,
+            "scale": 0.88,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.45,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1.02,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Reverse the direction into a purposeful journey: open on the full stage as a good establishing picture, then push in toward the spotlight and platform while the lifter drifts up and right toward the barbell and scales down slightly, as if walking away from the viewer into the light. The barbell stays comparatively stable as the destination, so the final tighter frame dwells on lifter approaching t"
+      }
+    },
+    {
+      "score": 7,
+      "ok": false,
+      "verdict": "Good journey idea, but the visible halo around the lifter and the clipped spotlight in the final held frame keep it below publishable quality; the revised plan keeps the walk bold while easing the camera back.",
+      "filmIssues": [
+        "The lifter's walk toward the barbell is legible, but a bright white halo / doubled edge is visible around his head and shoulders in every frame after t=0, betraying the cut-out as it moves off its painted-over spot.",
+        "The final push-in to 1.26 crops the top of the spotlight lamp and squeezes the red wing curtain at the left edge, so the held final frame is awkwardly clipped compared with the clean opening.",
+        "The journey is purposeful but partly undermined by the halo and by the excessive final zoom; the destination barbell is reached visually less by the lifter than by the camera."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.55,
+        "focusY": 0.64,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1,
+            "panX": -0.03,
+            "panY": -0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.13,
+            "panX": 0.01,
+            "panY": 0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.26,
+            "panX": 0.04,
+            "panY": 0.03,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.95,
+            "driftX": 0.08,
+            "driftY": -0.075,
+            "scale": 0.85,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.4,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1.03,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Make the journey, not the zoom, the story: open slightly left to include the watcher in the wings, then push in more moderately toward the platform while the lifter makes the maximum safe up-right drift toward the barbell and shrinks to 0.85, so he visibly travels away from the viewer into the spotlight. The barbell stays stable as the destination. The reduced final zoom and lower focus keep the m"
+      }
+    }
+  ]
+}

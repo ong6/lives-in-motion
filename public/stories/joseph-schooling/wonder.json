@@ -1,7 +1,7 @@
 {
   "model": "muse-wonder-1.0",
-  "updated": "2026-10-30T14:31:14.364Z",
-  "usd": 0.4463,
+  "updated": "2026-10-31T02:04:57.716Z",
+  "usd": 0.9665,
   "passMark": 8,
   "scenes": {
     "s1": {
@@ -9,74 +9,147 @@
       "score": 8,
       "ok": true,
       "passed": true,
-      "verdict": "A purposeful pull-back: it opens tight on the small boy from behind, then reveals the pool edge, palms and HDB neighbourhood as the lasting wide picture. The boy and kickboard stay coherent with no tearing, ghosting or awkward edge clipping, the reversed move reads naturally, and the warm light-sweep suits the sunny 1990s risograph print without overpowering it.",
-      "rationale": "A quiet beginning: open tight on the small boy and his goggles, then slowly settle and pull out to reveal the neighbourhood pool, palms and HDB blocks where his life begins.",
+      "verdict": "Publish. The pull-back is clearly visible across the contact sheet and purposefully serves the first-meeting story: it opens tight on the two players and the mitt/bat between them, then reveals the full Penang diamond, palms, floodlights and moon. The final wide frame is a strong, balanced picture to dwell on, with the complete bench and field held inside generous margins. The players, mitt, bench and bat remain coherent throughout, with no obvious tearing, doubled edges, ghosting or awkward frame clipping. The light-sweep is subtle and fits the dusk floodlit scene without disturbing the risograph grain and orange/teal print style.",
+      "rationale": "Keep the bold, purposeful pull-back for a first meeting — start tight on the mitt between the players and reveal the whole Penang diamond — but lock both cut-outs to near-background depth with zero drift and no scale change, so the right player stays glued to the left player, bench and bat and the mitt stays on the bench. All separation is removed; the movement is carried entirely by the shared ca",
       "ambient": "light-sweep",
-      "rounds": 1,
-      "usd": 0.0616,
-      "seconds": 46,
+      "rounds": 2,
+      "usd": 0.123,
+      "seconds": 90,
       "filmIssues": [],
       "plateDefects": [],
-      "video": "/stories/joseph-schooling/s1/scene.mp4?v=2c33c08c",
-      "poster": "/stories/joseph-schooling/s1/scene.jpg?v=2c33c08c"
+      "video": "/stories/joseph-schooling/s1/scene.mp4?v=90129663",
+      "poster": "/stories/joseph-schooling/s1/scene.jpg?v=90129663"
     },
     "s3": {
       "status": "directed",
       "score": 6,
       "ok": false,
       "passed": false,
-      "verdict": "Do not publish: the pull-back reveal tells the departure story, but the foreground suitcase visibly slides away from the boy and crowds the bottom-left edge, breaking subject coherence in the final held frame.",
-      "rationale": "A quiet turning-point departure: the camera opens tight on the packed orange suitcase and pulls back to reveal the boy, sunrise window and waiting jet, the suitcase settling slightly smaller as his Singapore life recedes.",
-      "ambient": "light-sweep",
+      "verdict": "Do not publish: right story idea (pull-back reveal of the waiting towel), but timid/clumsy execution and a poor cropped opening; revised plan fixes framing and layer-locking while making the reveal legible.",
+      "rationale": "A quiet 5am beginning: the camera opens tight on the small swimmer in the steaming pool and slowly pulls back with a long in-out ease to reveal the whole Ipoh pool and the waiting orange towel, while the swimmer drifts slightly deeper into the water and shrinks.",
+      "ambient": "haze",
       "rounds": 3,
-      "usd": 0.1678,
-      "seconds": 113,
+      "usd": 0.1999,
+      "seconds": 226,
       "filmIssues": [
-        "The pull-back concept is right — tight on the suitcase at t=0 opening, then revealing the boy, window, sunrise and jet by t=1 — and both end frames are readable compositions.",
-        "The suitcase layer breaks coherence: at depth 0.9 with drift -0.015/0.012 and end scale 0.93 it slides down-left away from the boy across the frames, increasingly detached from the legs it should stand beside, as if rolling unattended across the floor.",
-        "By t=0.8-1 the drifting suitcase is pushed to the bottom-left corner and sits awkwardly against / slightly clipped by the frame edge, spoiling the final dwell picture compared with the plate where it rests firmly next to the boy.",
-        "Apart from the suitcase slide there is no obvious tearing, doubled edge or painted-over ghost, the light-sweep is fitting for sunrise and subtle, and the risograph grain is preserved — the fault is the layer separation, not the camera idea."
+        "The pull-back idea is right for the scene, but the opening at zoom 1.38 is too tight: the scalloped archive border is cropped away and the woman holding the towel is awkwardly clipped at the left edge, so t=0 is not a good opening picture and the key figure intended for the reveal is already half lost.",
+        "The movement is only a modest centred pull-back; the swimmer is too small at the start for the tight opening to read as 'on the small swimmer', so it reads little better than a plain push-in in reverse.",
+        "cut-2 is only the towel, but the woman holding it remains in the background plate. Giving the towel depth 0.9 makes it parallax separately from her arm/body and risks a visible slide/doubled edge against her silhouette as the camera pulls back.",
+        "cut-1 swimmer scale 0.92 with driftY -0.02 lifts and shrinks him away from his painted ripples/reflection, risking a ghost/halo in the water and reading as sinking rather than swimming deeper."
       ],
       "plateDefects": [],
-      "video": "/stories/joseph-schooling/s3/scene.mp4?v=2336cea8",
-      "poster": "/stories/joseph-schooling/s3/scene.jpg?v=2336cea8"
+      "video": "/stories/joseph-schooling/s3/scene.mp4?v=65bd40f5",
+      "poster": "/stories/joseph-schooling/s3/scene.jpg?v=65bd40f5"
     },
-    "s5": {
+    "s4": {
+      "status": "kept-fixed-move",
+      "score": 5,
+      "ok": false,
+      "passed": false,
+      "verdict": "Coherent and print-faithful, but the film is no better than a plain centred move: the promised cooler-to-monkeys reveal and the monkeys' escape are both too timid to read, so it should not be published as planned.",
+      "rationale": "A cheeky theft in motion: the camera opens tight on the raided cooler at lower left, then travels right and pulls back to reveal the fleeing macaque, the watching boy, swimmer and foreground camera in the full pool-deck scene.",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1979,
+      "seconds": 196,
+      "filmIssues": [
+        "The move is barely legible across the six frames: a small damped pull-back from about 1.15 to 1.0 with a slight rightward pan reads as a plain slow zoom-out, not as a theft or escape.",
+        "The stated opening — tight on the raided cooler at lower left — never happens. The first frame already shows the whole pool deck, the swimmer, boy, monkeys and foreground camera, so there is no reveal in either direction.",
+        "The monkeys, the scene's actors, have almost no purposeful motion. Their tiny drift does not sell running off to the right with the wrappers; the boy likewise barely registers, so no relationship between witness and fleeing thieves is created.",
+        "First and last frames are essentially the same competent wide picture. The last frame is fine to dwell on, but because so little changes it does not feel earned by the film, and the motion would play almost identically in reverse.",
+        "No obvious tearing, doubled edges, halo or painted-over ghost is visible around the monkey or boy cut-outs, and neither layer clips the frame awkwardly; coherence is not the problem, timidity is.",
+        "The light-sweep is subtle and does not damage the risograph grain, but sparingly used it cannot carry a story the camera and layers are not telling."
+      ],
+      "plateDefects": [
+        {
+          "detail": "The small boy is shown in side profile with a visible eye/glasses and facial features, although the art direction asks for the tall swimmer and small bespectacled boy both to be seen from behind. The swimmer is correctly back-on; the boy is turned sideways.",
+          "type": "face"
+        },
+        {
+          "detail": "The small boy is not cleanly seen from behind as directed: his head is turned into a visible side profile with spectacles and facial features showing, unlike the swimmer's clear back view.",
+          "type": "face"
+        },
+        {
+          "detail": "The small boy's head is turned into left profile with glasses and facial features visible, although the art direction asks for the boy and swimmer both to be seen from behind.",
+          "type": "face"
+        }
+      ],
+      "note": "best round scored 5, no better than a plain push-in"
+    },
+    "s6": {
       "status": "directed",
       "score": 6,
       "ok": false,
       "passed": false,
-      "verdict": "A clear triumphant push-in in intent, but the swimmer lifts out of his splash and reveals dark ghost fragments in the water, and the end frame is over-enlarged — not publishable as is.",
-      "rationale": "A triumph — Singapore's first Olympic gold — told as a rise: the swimmer lifts and grows while the camera tilts up and closes in, lifting his raised arms toward the scoreboard above the pool.",
-      "ambient": "light-sweep",
+      "verdict": "A coherent but too-timid pull-back; the reveal the caption needs is planned but not visibly delivered in the opening frame.",
+      "rationale": "A moment of rejection and loss: the camera opens tight on the condemned cap and goggles on the bench, then pulls back and up to reveal the official's pointing hand and Schooling alone with his hands on his head, the kit shrinking slightly as the start slips away.",
+      "ambient": "none",
       "rounds": 3,
-      "usd": 0.1478,
-      "seconds": 92,
+      "usd": 0.1664,
+      "seconds": 77,
       "filmIssues": [
-        "The rise separates the swimmer from the white splash that belongs with him: the splash stays on the clean background while the cut-out lifts and grows, so by t=0.6-1 the burst reads detached around his waist.",
-        "A visible ghost is revealed in the blue water below the swimmer as he moves up and scales to 1.12 — dark black shards/fragments appear in the waves at the spot he vacated, clearest in the bottom row of frames.",
-        "The final frame is over-tight rather than triumphant: the swimmer balloons toward the scoreboard, his hands crowd the black board and the composition loses the pool, lane ropes and stadium context that make the win read. The opening at zoom 1.05 is also already cropped in, so the move is mostly a plain push-in plus layer growth.",
-        "The light-sweep is not objectionable and suits a gold-medal moment, but it does not compensate for the splash/ghost separation; overall the film is only a little above a centred push-in in storytelling clarity."
+        "The intended pull-back reveal barely registers: across the six frames the framing changes only modestly, and the t=0 frame is already a wide view showing the swimmer, the pointing hand and the whole bench, so the cap and goggles are never truly isolated as the condemned kit.",
+        "Because the opening is not tight on the bench, the later reveal of Schooling alone with his hands on his head and the official's hand has little story payoff — it reads as a slow, plain zoom-out rather than a purposeful reveal.",
+        "Subject coherence is good: no tearing, doubled edges, halo or ghosting is visible, and the cap and goggles stay together on the bench.",
+        "No awkward new frame-edge clipping is introduced; the hand cut by the left edge is part of the original plate. The final t=1 frame is the full plate and is a good dwell image.",
+        "Ambient is set to none, which is safe but misses a subtle chance to reinforce the archive-print style."
       ],
       "plateDefects": [],
-      "video": "/stories/joseph-schooling/s5/scene.mp4?v=113a665e",
-      "poster": "/stories/joseph-schooling/s5/scene.jpg?v=113a665e"
+      "video": "/stories/joseph-schooling/s6/scene.mp4?v=23d6ec5b",
+      "poster": "/stories/joseph-schooling/s6/scene.jpg?v=23d6ec5b"
     },
-    "s6": {
+    "s9": {
       "status": "directed",
       "score": 8,
       "ok": true,
       "passed": true,
-      "verdict": "The film is a clear, purposeful triumph move: from a wide street view it rises and pushes in toward Schooling on the open top deck, ending on a strong held frame with the raised medal prominent. The bus and figure stay coherent together with no tearing, ghosting, doubled edges or awkward frame clipping, the first frame reads as a complete celebration scene, and the final frame is a good dwell image. The light-sweep suits the sunny contemporary cut-paper style without overwhelming it.",
-      "rationale": "A hero's triumph: the camera rises and closes in from the full street parade toward Schooling's raised medal, while the bus lifts and grows slightly with him so the celebration ends held aloft.",
+      "verdict": "The pull-back serves the story: it opens tight on the headphoned swimmer seen from behind, then steadily widens to reveal the medal on the table, the empty dining hall and the sunrise windows. Movement is visible and purposeful across all frames, the man and medal stay coherent with no tearing, doubling, halo or ghosting, and no layer clips awkwardly. The first frame is a strong intimate opening and the last frame is a calm, complete composition to dwell on while reading. The light-sweep is subtle and fits the dawn setting without breaking the cut-paper print style.",
+      "rationale": "A quiet turning point after triumph: a Reveal begins tight on the headphoned swimmer and slowly pulls back to disclose the medal, empty dining hall and sunrise, letting the solitary stillness settle.",
       "ambient": "light-sweep",
       "rounds": 1,
-      "usd": 0.0691,
-      "seconds": 42,
+      "usd": 0.0582,
+      "seconds": 28,
       "filmIssues": [],
       "plateDefects": [],
-      "video": "/stories/joseph-schooling/s6/scene.mp4?v=5feb012c",
-      "poster": "/stories/joseph-schooling/s6/scene.jpg?v=5feb012c"
+      "video": "/stories/joseph-schooling/s9/scene.mp4?v=b853f83c",
+      "poster": "/stories/joseph-schooling/s9/scene.jpg?v=b853f83c"
+    },
+    "s11": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "A clear pull-back for loss: opening tight on the man and boy together, then steadily widening to the empty pool and ribbon board for a quiet, dwellable final frame. The pair share depth, drift and scale so the man's hand stays locked on the boy's shoulder with no tearing, ghosting or edge clipping; dust is subtle and the cut-paper print style holds throughout.",
+      "rationale": "A loss and quiet ending: the camera pulls back from the man and boy together, both shrinking as one locked pair as the empty pool and ribbons open around them.",
+      "ambient": "dust",
+      "rounds": 1,
+      "usd": 0.0506,
+      "seconds": 23,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/joseph-schooling/s11/scene.mp4?v=696daebd",
+      "poster": "/stories/joseph-schooling/s11/scene.jpg?v=696daebd"
+    },
+    "s12": {
+      "status": "directed",
+      "score": 7,
+      "ok": false,
+      "passed": false,
+      "verdict": "A coherent, era-appropriate pull-back that fits the retirement reveal, but too damped and with an awkwardly cropped opening frame to publish as-is.",
+      "rationale": "Make the pull-back unmistakable while keeping the bottom-touching man layer in frame: anchor the zoom low at focusY 0.78 near his lower body, open at 1.38 tight and offset toward the silhouetted man at the blinds, then steadily pull back through 1.18 to the full 1.0 office. This reveals, in sequence, the race photos, swim inset, softball and statistics folders around him — a widening from private ",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1705,
+      "seconds": 77,
+      "filmIssues": [
+        "The pull-back is legible and thematically apt — opening tight on the silhouetted man at the blinds and widening to reveal the race photos, swim inset, softball and statistics folders for the retirement scene — but it is only a modest 1.21 to 1.0 move after clamping, so it reads closer to a gentle reframing than an unmistakable reveal.",
+        "The t=0 opening is not a clean standalone picture: the left-hand framed race photo is awkwardly halved by the left frame edge and the composition feels accidentally cropped rather than deliberately tight on the man.",
+        "cut-1 and cut-2 have identical boxes covering the young man, so they are effectively a duplicated cut-out; the current plan correctly keeps them locked together, but there is therefore no independent softball layer or parallax, and any divergence would produce a doubled/ghosted silhouette.",
+        "No purposeful layer motion or entrance reinforces the reveal; the memorabilia simply appear through camera scale alone."
+      ],
+      "plateDefects": [],
+      "video": "/stories/joseph-schooling/s12/scene.mp4?v=8502284e",
+      "poster": "/stories/joseph-schooling/s12/scene.jpg?v=8502284e"
     }
   }
 }

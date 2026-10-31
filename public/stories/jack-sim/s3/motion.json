@@ -1,0 +1,190 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T01:37:39.850Z",
+  "usd": 0.1143,
+  "rationale": "Keep the purposeful pull-back for loss, but lock both cut-outs to their painted positions: the door sits at near-background depth with no drift or shrink so it stays fused to the wall, and the boy keeps scale 1.0 and no drift so his feet stay planted. All isolation comes from the bold camera move opening tight on boy and red door at zoom 1.42, then revealing the long empty louvred corridor as it p",
+  "plan": {
+    "focusX": 0.57,
+    "focusY": 0.62,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.42,
+        "panX": 0.055,
+        "panY": -0.02,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.2,
+        "panX": 0.028,
+        "panY": -0.01,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.6,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.3,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "dust",
+    "rationale": "Keep the purposeful pull-back for loss, but lock both cut-outs to their painted positions: the door sits at near-background depth with no drift or shrink so it stays fused to the wall, and the boy keeps scale 1.0 and no drift so his feet stay planted. All isolation comes from the bold camera move opening tight on boy and red door at zoom 1.42, then revealing the long empty louvred corridor as it p"
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "A purposeful pull-back for loss whose isolation is clear in both directions; the final empty-corridor composition holds well while reading.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Good pull-back intention for isolation, but the shrinking, drifting door and boy tear against the wall and expose painted-over ghosts above the boy and door, so it is not publishable as rendered.",
+      "filmIssues": [
+        "The pull-back idea is right for exclusion/loss, but the boy and the closed door are both given depth 0.75, driftY 0.01 and end scale 0.92, so they shrink and slide against the wall they belong to.",
+        "A visible pale arc/ghost appears above the boy's head in the later frames and a dark painted-over strip is exposed above the door/windows as the layers move off their original spots — classic layer-ghost tearing, worst at t=0.6-1, the dwell frame.",
+        "The door is part of the corridor wall; making it a near foreground layer makes it detach, shrink and leave a gap against its frame instead of staying locked to the architecture.",
+        "The boy also shrinks independently of the camera pull-back, so his feet lose contact with the floor line and he reads as a cut-out sliding rather than a figure standing in the corridor.",
+        "Movement is visible and the final wide frame is a good dwelling picture of the empty corridor, but the artefacts undermine the quiet stillness the scene needs."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.57,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0.06,
+            "panY": -0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.18,
+            "panX": 0.03,
+            "panY": -0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": 0.01,
+            "scale": 0.92,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": 0.01,
+            "scale": 0.92,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Quiet exclusion and loss: the camera opens tight on the small boy beside the shut red door, then slowly pulls back to reveal the long, empty louvred corridor stretching around him as he shrinks into his isolation while the lesson goes on without him."
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "A purposeful pull-back for loss whose isolation is clear in both directions; the final empty-corridor composition holds well while reading.",
+      "filmIssues": [
+        "The pull-back is clearly visible and purposeful: it opens tight on the boy and red door, then steadily reveals the long, empty louvred corridor, expressing his exclusion and isolation. Both cut-outs remain coherent, with feet and door staying planted and no obvious tearing, doubled edges, or frame-edge clipping. The first frame is a strong close opening and the final wider frame is a good dwelling image. The dust is subtle and appropriate to the archive-print treatment."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.57,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.42,
+            "panX": 0.055,
+            "panY": -0.02,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.2,
+            "panX": 0.028,
+            "panY": -0.01,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.3,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "dust",
+        "rationale": "Keep the purposeful pull-back for loss, but lock both cut-outs to their painted positions: the door sits at near-background depth with no drift or shrink so it stays fused to the wall, and the boy keeps scale 1.0 and no drift so his feet stay planted. All isolation comes from the bold camera move opening tight on boy and red door at zoom 1.42, then revealing the long empty louvred corridor as it p"
+      }
+    }
+  ]
+}

@@ -1,149 +1,121 @@
 {
   "model": "muse-wonder-1.0",
-  "updated": "2026-10-30T14:45:21.440Z",
-  "usd": 0.669,
+  "updated": "2026-10-31T01:42:50.083Z",
+  "usd": 0.7953,
   "passMark": 8,
   "scenes": {
-    "s4": {
-      "status": "directed",
-      "score": 8,
-      "ok": true,
-      "passed": true,
-      "verdict": "Publishable. The film improves clearly on a plain centred push-in: it opens on the empty, lit stage, then the globe and toilet seat rise together as one locked Saturn-like unit into the spotlights, followed by a moderate push-in to a balanced final tableau. The two cut-outs share depth, drift, scale and entrance timing, so they stay together with no visible tearing, doubling, halo or ghosting against the painted-over background. The first frame reads as a deliberate theatrical opening, and the final frame at zoom 1.18 retains the full seat ring, globe, stage and audience silhouettes as a good held image. The light-sweep suits the stage spotlights and the risograph print treatment is preserved.",
-      "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject.",
-      "ambient": "light-sweep",
-      "rounds": 2,
-      "usd": 0.1138,
-      "seconds": 70,
-      "filmIssues": [],
-      "plateDefects": [],
-      "video": "/stories/jack-sim/s4/scene.mp4?v=51e3c68f",
-      "poster": "/stories/jack-sim/s4/scene.jpg?v=51e3c68f",
-      "plateFix": {
-        "at": "2026-10-30T14:23:22.262Z",
-        "attempts": [
-          {
-            "n": 1,
-            "score": 8,
-            "defects": [
-              {
-                "detail": "The white toilet seat is drawn as a near-vertical hoop facing the viewer, framing the globe through its hole, rather than as a flat Saturn-like ring circling around the globe. The lower half of the globe bulges below it, so the combined object partly reads as a toilet bowl.",
-                "type": "mangled-subject"
-              },
-              {
-                "detail": "Several audience figures at the bottom are turned in profile with visible noses, open mouths and facial outlines, instead of being featureless silhouettes seen from behind as directed.",
-                "type": "face"
-              },
-              {
-                "detail": "The globe's continents and latitude/longitude lines are vague and smeared, particularly on the orange half, so the landmasses do not clearly read as a world map.",
-                "type": "mangled-subject"
-              }
-            ],
-            "visual": "1990s risograph print in fluorescent orange and teal on warm cream paper, visible print grain and slight overprint misregistration. Centre stage: a low, flat, rectangular wooden theatre platform, seen from the front. Standing on the platform is one large spherical globe — a perfect round ball with simple black continent outlines and a few latitude/longitude grid lines, half coloured orange and half teal. Encircling the globe's middle, tilted slightly like a halo in three-quarter perspective, is ONE single chunky toilet seat and nothing else: a thick, solid off-white oval donut-shaped ring with a smooth rounded front, a straighter flattened back edge with two small hinge bumps, visible thickness/side wall, and a large oval hole in its centre through which the globe passes. The seat is a solid object casting a slight shadow on the globe; it must not be thin, flat, double, or made of concentric planetary bands. At the top left and top right corners, one black theatre spotlight fixture each, angled inward, casting two wide triangular cones of light — fluorescent orange from the left, teal from the right — crossing behind the globe. Dark teal stage curtains frame only the far left and far right edges. Across the entire bottom foreground, a row of solid-black audience silhouettes seen from behind: backs of heads, shoulders and raised arms with open hands, some heads tilted back in laughter, with no facial features, no eyes or mouths, and no individual clothing detail. No text, letters, numbers, logos or signage anywhere."
-          },
-          {
-            "n": 2,
-            "score": 6,
-            "defects": [
-              {
-                "detail": "The key metaphor does not read: the object around the globe is a thin, flat, elliptical Saturn-style ring with small clasps at the sides. It has no thick toilet-seat rim, no recognisable oval seat shape, hinge, or lid, so it reads as a planet ring rather than a white toilet seat.",
-                "type": "mangled-subject"
-              }
-            ],
-            "visual": "1990s risograph print in fluorescent orange and teal on cream paper, visible grain and slight overprint, matching the style of the first plate. Theatre scene, no text. Centre stage: a large spherical globe, a round ball with clearly drawn, recognisable continent outlines and thin latitude and longitude curves on its surface, sitting upright on a low rectangular wooden stage platform made of horizontal planks. Circling the globe like the rings of Saturn: one separate white toilet seat, a flat thick oval ring with a smaller oval hole in its centre, a straight hinge bar with two small hinges at its back edge, tilted about 20 degrees from horizontal so it passes in front of the globe below its centre and disappears behind the globe above its centre; the globe remains a complete sphere in front of and behind the ring, not sitting inside a bowl. Top left and top right: two black theatre spotlights, each a short cylindrical can with a bright circular lens, hanging beside dark teal stage curtains at the left and right edges, casting one orange cone of light and one teal cone of light down onto the globe. Bottom edge, in the front rows: a row of solid black audience silhouettes seen strictly from behind, only the backs of round heads, shoulders and raised arms with open hands, no profiles, no eyes, noses, mouths or any facial features. Square composition."
-          },
-          {
-            "n": 3,
-            "score": 9,
-            "defects": [],
-            "visual": "1990s risograph print in fluorescent orange and teal on cream paper, visible grain, halftone dots and slight overprint misregistration, matching the first plate. A theatre scene viewed from the audience: at centre stage on a low rectangular wooden platform with horizontal planks stands a large perfect sphere globe, about half the height of the image, showing solid dark-teal continents of the Americas, Africa and Europe and thin orange and teal latitude and longitude lines. Tilted diagonally around the middle of the globe, encircling it like Saturn's rings, is one unmistakable white toilet seat and nothing else: a thick, chunky, rounded oval donut-shaped plastic rim, much thicker and narrower than a planet ring, with a large oval opening in its centre through which the globe passes, a straighter hinge bar with two small raised hinge blocks at its upper-right rear edge, and a smooth glossy white front curve at the lower-left. The seat must be clearly readable as a toilet seat, not a thin flat ring, belt or halo. Above left and right hang two black cylindrical stage spotlights with round lenses, angled inward, casting one solid orange cone of light from the left and one solid teal cone from the right onto the globe. Heavy dark-teal stage curtains with vertical folds frame the extreme left and right edges. Across the bottom edge, seen strictly from behind, is a row of solid black audience silhouettes: only the backs of heads, shoulders and curved theatre seat-backs, with several arms raised with open hands, heads tilted back in laughter, no faces, facial features or profiles visible. No text, letters, numbers, signs or logos anywhere."
-          }
-        ],
-        "kept": 3,
-        "before": 6,
-        "after": 9,
-        "usd": 0.1085
-      }
-    },
     "s1": {
       "status": "directed",
       "score": 8,
       "ok": true,
       "passed": true,
-      "verdict": "publish",
-      "rationale": "A quiet beginning: the camera opens tight on the small boy from behind and reveals outward to the whole kampung while he walks up the plank walkway toward the outhouse, carrying the village's lack of plumbing into view.",
-      "ambient": "dust",
-      "rounds": 1,
-      "usd": 0.0635,
-      "seconds": 69,
-      "filmIssues": [
-        "The pull-back is clearly visible across the contact sheet: the opening frame is tight on the boy and plank walkway, while successive frames reveal the outhouse, surrounding kampung houses, palms and stream.",
-        "The movement expresses the scene's story: starting with the small boy carrying a bucket and widening to show the impoverished village and the outhouse that embody the lack of plumbing.",
-        "The boy, bucket and hand remain together with no obvious tearing, doubled edges, halo or ghost left on the walkway as he advances.",
-        "No cut-out layer clips the frame awkwardly; the boy remains fully inside the frame throughout.",
-        "The first frame works as a focused opening picture and the final frame is a balanced, complete view of the kampung that works well as the held reading image.",
-        "The dust effect is subtle and does not obscure the subject or undermine the flat-ink 1950s print appearance."
-      ],
-      "plateDefects": [],
-      "video": "/stories/jack-sim/s1/scene.mp4?v=4e387009",
-      "poster": "/stories/jack-sim/s1/scene.jpg?v=4e387009"
-    },
-    "s2": {
-      "status": "directed",
-      "score": 8,
-      "ok": true,
-      "passed": true,
-      "verdict": "A purposeful pull-back: it opens tight on the man at the drafting table and steadily reveals the crane, shophouses, crates and cement bags, expressing the scale of the business he is building. The man stays coherent against the table, no tearing, ghosting or awkward edge clipping is visible, the dusty ambient is subtle, and both the tight opening and the full-plate final frame read well in the period silkscreen style.",
-      "rationale": "Make the pull-back unmistakable while keeping the man's box in frame: open genuinely tight on his back and the drafting table at zoom 1.45 focused at his centre, then pull steadily back through a mid wide to the full plate at zoom 1.0, revealing crane, shophouses, crates and cement bags as the scale of the business he is building. Higher depth gives the man clear parallax against the painted backg",
-      "ambient": "dust",
-      "rounds": 3,
-      "usd": 0.1368,
-      "seconds": 120,
+      "verdict": "The pull-back clearly serves the journey: it opens tight on the boy and bucket on the walkway, then reveals the full kampong and outhouse destination as the locked-together boy and bucket drift up-right and shrink slightly with distance. Both cut-outs stay coherent with no tearing, ghosting, doubled edges or awkward frame clipping, and the final near-full-frame view is a strong image to dwell on. The 1950s lithograph character is retained.",
+      "rationale": "Bolder journey and reveal: open tight on the boy and bucket low on the walkway, then track right and pull back in step with a larger shared drift up-right along the planks toward the outhouse, shrinking slightly with distance. Boy and bucket keep identical motion so they stay locked together. The move ends near full frame on the whole kampong with the outhouse as destination and the standpipe no l",
+      "ambient": "halftone-shimmer",
+      "rounds": 2,
+      "usd": 0.1053,
+      "seconds": 72,
       "filmIssues": [],
       "plateDefects": [],
-      "video": "/stories/jack-sim/s2/scene.mp4?v=bf753283",
-      "poster": "/stories/jack-sim/s2/scene.jpg?v=bf753283"
+      "video": "/stories/jack-sim/s1/scene.mp4?v=fb9d124c",
+      "poster": "/stories/jack-sim/s1/scene.jpg?v=fb9d124c"
     },
-    "s6": {
-      "status": "kept-fixed-move",
-      "score": 5,
-      "ok": false,
-      "passed": false,
-      "verdict": "Do not publish as-is: the film is coherent and era-appropriate, but no better than a plain push-in — it needs the bolder rising move in the revised plan to express the scene's story.",
-      "rationale": "A historic triumph — Singapore's first UN resolution — told by a Rise: the camera tilts up and closes in toward the golden wall and emblem while the foreground delegate lifts and grows with it.",
-      "ambient": "light-sweep",
-      "rounds": 3,
-      "usd": 0.1318,
-      "seconds": 201,
-      "filmIssues": [
-        "Motion is essentially a plain centred push-in: zoom only ~1.01 to 1.10 across the clip, with negligible pan, so the frames from t=0 to t=1 are almost identical.",
-        "The claimed 'Rise' for a historic triumph is not readable — the camera does not visibly lift toward the golden wall and emblem, and the single cut-out delegate barely drifts or grows.",
-        "No subject tearing, doubled edges, halo or ghosting is visible, and no layer clips the frame edge awkwardly, but this is because the move is too timid to create meaningful parallax.",
-        "The first and last frames are both good, well-composed pictures, but they do not differ enough to express a journey, reveal or triumph; the light-sweep is fitting in principle but imperceptible at this scale."
-      ],
-      "plateDefects": [],
-      "note": "best round scored 5, no better than a plain push-in"
-    },
-    "s7": {
+    "s3": {
       "status": "directed",
       "score": 8,
       "ok": true,
       "passed": true,
-      "verdict": "A clear premiere reveal: starting on the film-within-the-film and pulling back to the laughing audience gives the motion a story purpose beyond a plain push-in, with a clean final hold.",
-      "rationale": "Bolder, cleaner premiere reveal: open closer on the duck and screen with the duck locked to the toilet (minimum depth, no drift, no settle, slight end scale only), then pull back steadily and tilt down to reveal the projector beam, full screen and laughing audience rows for the final dwell frame. Keeping the duck near background depth prevents parallax from pulling it off the seat, while the 1.30 ",
-      "ambient": "light-sweep",
+      "verdict": "A purposeful pull-back for loss whose isolation is clear in both directions; the final empty-corridor composition holds well while reading.",
+      "rationale": "Keep the purposeful pull-back for loss, but lock both cut-outs to their painted positions: the door sits at near-background depth with no drift or shrink so it stays fused to the wall, and the boy keeps scale 1.0 and no drift so his feet stay planted. All isolation comes from the bold camera move opening tight on boy and red door at zoom 1.42, then revealing the long empty louvred corridor as it p",
+      "ambient": "dust",
       "rounds": 2,
-      "usd": 0.1146,
-      "seconds": 109,
+      "usd": 0.1143,
+      "seconds": 61,
       "filmIssues": [
-        "The pull-back is clear and purposeful: it opens tight on the duck on the toilet inside the screen, then steadily widens and pans down to reveal the projector beam, full screen and audience rows, ending on the complete premiere picture.",
-        "The duck stays coherent and locked to the toilet seat throughout, with no tearing, doubled edges, halo or ghost from its painted-over spot. Its low depth and lack of drift keep cut-outs that belong together together.",
-        "The first frame is a strong close opening on the screen/duck and the last frame is the best dwell image — the full cinema composition with screen, beam and audience visible and in frame.",
-        "The light-sweep ambient is fitting for a projector/cinema scene and remains subtle in the stills; the cut-paper print style is preserved."
+        "The pull-back is clearly visible and purposeful: it opens tight on the boy and red door, then steadily reveals the long, empty louvred corridor, expressing his exclusion and isolation. Both cut-outs remain coherent, with feet and door staying planted and no obvious tearing, doubled edges, or frame-edge clipping. The first frame is a strong close opening and the final wider frame is a good dwelling image. The dust is subtle and appropriate to the archive-print treatment."
       ],
       "plateDefects": [],
-      "video": "/stories/jack-sim/s7/scene.mp4?v=c93ffc15",
-      "poster": "/stories/jack-sim/s7/scene.jpg?v=c93ffc15"
+      "video": "/stories/jack-sim/s3/scene.mp4?v=1117e148",
+      "poster": "/stories/jack-sim/s3/scene.jpg?v=1117e148"
+    },
+    "s4": {
+      "status": "directed",
+      "score": 8,
+      "ok": true,
+      "passed": true,
+      "verdict": "A clear, purposeful pull-back for loss. It opens tight on the man from behind, head in hands, then eases back to reveal the lamp-lit desk, rotary phone, tender files and the crane-filled window around him, leaving him smaller and isolated in the office. The subject stays coherent through the move with no visible tearing, doubled edges, halo or painted-over ghost, layers that belong together stay together, and no layer clips the frame awkwardly; both the tight first frame and the full final frame are strong still pictures to open and dwell on. The dust is subtle and the flat halftone silkscreen print character is preserved throughout.",
+      "rationale": "A loss after the bank's call: start tight on the man with his head in his hands and pull back, shrinking him slightly, to reveal the lamp-lit desk, phone, tender files and cranes of the unfinished city around him.",
+      "ambient": "dust",
+      "rounds": 1,
+      "usd": 0.0726,
+      "seconds": 37,
+      "filmIssues": [],
+      "plateDefects": [],
+      "video": "/stories/jack-sim/s4/scene.mp4?v=3a6309fe",
+      "poster": "/stories/jack-sim/s4/scene.jpg?v=3a6309fe"
+    },
+    "s6": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "Do not publish as-is: the concept fits the caption but the executed motion is too timid to clearly express the halving in value.",
+      "rationale": "Bolder pull-back for loss: start tight on the terrace row, board and lit toilet doorway, then pull back to the full plate while both houses and sign shrink to the minimum 0.85 scale and sink slightly, visibly diminished in the empty foreground. Small, centred drifts keep the very wide houses layer and the left-hand sign inside frame to avoid the white inpaint wedge and edge clipping, and halftone-",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1554,
+      "seconds": 90,
+      "filmIssues": [
+        "The pull-back idea is appropriate for loss/devaluation, but in the frames the change from t=0 to t=1 is very small and reads as a slow, timid zoom-out rather than a clear diminishment.",
+        "The houses and sign shrink too little to visibly express 'worth half'; the terrace row, board and toilet doorway remain at nearly the same visual weight throughout.",
+        "Both the opening and final frames are serviceable, but the final held frame retains the same centred composition as the opening, so the loss reveal does not land as a distinct final picture.",
+        "No obvious tearing, doubled edges, ghosting or awkward frame-edge clipping is visible, and the halftone-shimmer is subtle and era-appropriate."
+      ],
+      "plateDefects": [],
+      "video": "/stories/jack-sim/s6/scene.mp4?v=f9e146bc",
+      "poster": "/stories/jack-sim/s6/scene.jpg?v=f9e146bc"
+    },
+    "s8": {
+      "status": "directed",
+      "score": 7,
+      "ok": false,
+      "passed": false,
+      "verdict": "A purposeful pull-back for loss that is undermined by a visible ghost patch on the figure and an over-recession that leaves the final frame too empty.",
+      "rationale": "Bolder, story-first version of the same loss pull-back: start genuinely tight on the man-from-behind at zoom 1.45 focused on him, then pull back to the full empty boardroom at 1.0, while the locked cut-1/cut-2 figure itself walks away - drifting up the corridor (-0.055) and shrinking to 0.87 so he recedes toward the glass boardroom as the room is revealed empty around him. Both layers keep identic",
+      "ambient": "halftone-shimmer",
+      "rounds": 3,
+      "usd": 0.1809,
+      "seconds": 99,
+      "filmIssues": [
+        "The pull-back / walk-away idea is clear and visible, but the man recedes twice over — camera zoom-out plus a -0.055 upward drift and 0.87 shrink — so by t=1 he is too small to hold the final, dwell-on frame.",
+        "A pale, toilet-shaped ghost patch appears on the man's back in the lower-row frames, indicating the identically-boxed cut-1/cut-2 layers are separating / showing through as they move. The figure does not stay fully coherent.",
+        "The t=0 frame at zoom 1.45 flattens the man against the table and chairs; his legs overlap the boardroom furniture and the entrance/walk-away reads confusingly before the pull-back clarifies it.",
+        "Halftone-shimmer is appropriate for the risograph print and is not distracting in the frames shown."
+      ],
+      "plateDefects": [],
+      "video": "/stories/jack-sim/s8/scene.mp4?v=f91ae41f",
+      "poster": "/stories/jack-sim/s8/scene.jpg?v=f91ae41f"
+    },
+    "s12": {
+      "status": "directed",
+      "score": 6,
+      "ok": false,
+      "passed": false,
+      "verdict": "A coherent, publishable-looking pull-back in stills, but the film is timid: the entrance close-up and floor-by-floor reveal the brief calls for never visibly happen, and there is no purposeful parallax.",
+      "rationale": "Bolder, undamped arrival-and-reveal: keep the maximum 1.5-to-1.0 pull-back but cut the large panY that was forcing the renderer to damp the whole move, and move the zoom focus down to the man/door (0.47, 0.84) so frame 0 is genuinely tight on the entrance in morning light. Pull back and rise steadily through office, kitchen and hall to the full Kampong Ubi centre at zoom 1.0 for the dwell. Both id",
+      "ambient": "light-sweep",
+      "rounds": 3,
+      "usd": 0.1668,
+      "seconds": 85,
+      "filmIssues": [
+        "The intended 1.5-to-1.0 pull-back from the entrance is heavily muted in the contact sheet: all six frames already show the whole cutaway building, so frame 0 is not genuinely tight on the man and open door and the reveal of office, kitchen and hall barely registers.",
+        "There is almost no parallax or layer motion — the single listed layer has no drift, no scale change and depth 0.35, and cut-2 is absent from the plan — so the move reads as a plain, slow zoom-out rather than an arrival-and-reveal.",
+        "The light-sweep ambient is not legible in any frame; the morning light at the door does not strengthen or pass across the building.",
+        "First and last frames are both good, coherent pictures with no tearing, ghosting, doubled edges or awkward edge clipping, and the final full-building view is a strong dwell image — but the journey between them is too timid to express the scene's story."
+      ],
+      "plateDefects": [],
+      "video": "/stories/jack-sim/s12/scene.mp4?v=ef47ced9",
+      "poster": "/stories/jack-sim/s12/scene.jpg?v=ef47ced9"
     }
   }
 }

@@ -1,0 +1,226 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T01:42:50.077Z",
+  "usd": 0.1668,
+  "rationale": "Bolder, undamped arrival-and-reveal: keep the maximum 1.5-to-1.0 pull-back but cut the large panY that was forcing the renderer to damp the whole move, and move the zoom focus down to the man/door (0.47, 0.84) so frame 0 is genuinely tight on the entrance in morning light. Pull back and rise steadily through office, kitchen and hall to the full Kampong Ubi centre at zoom 1.0 for the dwell. Both id",
+  "plan": {
+    "focusX": 0.47,
+    "focusY": 0.8,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.5,
+        "panX": 0,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.22,
+        "panX": 0,
+        "panY": 0,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": -0.01,
+        "ease": "out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.35,
+        "driftX": 0,
+        "driftY": 0,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.2
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "Bolder, undamped arrival-and-reveal: keep the maximum 1.5-to-1.0 pull-back but cut the large panY that was forcing the renderer to damp the whole move, and move the zoom focus down to the man/door (0.47, 0.84) so frame 0 is genuinely tight on the entrance in morning light. Pull back and rise steadily through office, kitchen and hall to the full Kampong Ubi centre at zoom 1.0 for the dwell. Both id"
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "A coherent, publishable-looking pull-back in stills, but the film is timid: the entrance close-up and floor-by-floor reveal the brief calls for never visibly happen, and there is no purposeful parallax.",
+    "round": 2
+  },
+  "rounds": [
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Do not publish: Plate is clean — silhouette from behind as directed, no stray text, no anachronism or mangled anatomy, and the contemporary cut-paper style is consistent — but the film is no better than a plain centred move and distorts the subject.",
+      "filmIssues": [
+        "The intended tight arrival on the man and orange door never reads: even at t=0 the whole building is already visible, small and vertically squashed.",
+        "The pull-back/upward reveal is weak and muddled rather than floor-by-floor; the move is no clearer than a plain centred push-in, only in reverse.",
+        "The cut-paper building warps and wobbles through the contact sheet, especially the torn floor edges and top floor, breaking the crisp cut-paper coherence.",
+        "cut-1 is a tiny box around the ground-floor door area despite being labelled 'building'; its 0.85 depth, upward drift and 0.97 scale risk a visible ghost / doubled edge exactly at the man-door focal point.",
+        "First frame is not a good opening picture (distorted, cropped-feeling top) and the last frame, while cleaner, is a small distant building rather than a strong dwell image.",
+        "Light-sweep is thematically apt for morning light but cannot rescue the incoherent camera move."
+      ],
+      "fixes": [
+        "unknown layer cut-2 dropped",
+        "move damped to 75% (cut-1 13% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.46,
+        "focusY": 0.8,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2999999999999998,
+            "panX": -0.015,
+            "panY": 0.07500000000000001,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.135,
+            "panX": 0,
+            "panY": 0.015,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0.015,
+            "panY": -0.037500000000000006,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0.015,
+            "scale": 0.97,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "An arrival and opening: the camera reveals the scene tight on the man holding the orange door in morning light, then pulls back and tilts up floor by floor until the whole Kampong Ubi centre is discovered."
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Do not publish: a sound but timid pull-back that reads as a static full-building view, not as an arrival at the door followed by a reveal of the centre floor by floor.",
+      "filmIssues": [
+        "The pull-back is barely readable: across all six frames the building stays at almost the same size and position, with only a slight shrink from t=0 to t=1 — no better than a plain centred move, and not the claimed tight arrival on the man at the door.",
+        "The opening frame does not open tight on the silhouetted man holding the orange door as intended; the whole cutaway is already visible, so there is no reveal of the floors above as the camera rises.",
+        "Subject coherence is fine — no tearing, doubled edges, halos or ghosting around the door/man area, and nothing clips the frame edge awkwardly — but that safety is bought with timidity.",
+        "The ambient light-sweep is fitting for the morning-light door and subtle in the frames, and the cut-paper print style is preserved throughout.",
+        "The final frame is a good dwell picture (complete building, man and door at the base), but because the start looks nearly the same, the journey from entrance to full centre is not expressed."
+      ],
+      "fixes": [
+        "focusY 0.820 → 0.800"
+      ],
+      "plan": {
+        "focusX": 0.44,
+        "focusY": 0.8,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.45,
+            "panX": -0.01,
+            "panY": 0.08,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.2,
+            "panX": 0,
+            "panY": 0.03,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1.02,
+            "panX": 0,
+            "panY": -0.01,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.35,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A bolder, cleaner arrival-and-reveal: start genuinely tight on the silhouetted man holding the orange door in morning light, then pull back and rise steadily through office, kitchen and hall floors to settle on the complete Kampong Ubi centre for the final dwell. The tiny, mis-boxed door-area layer is locked to the background (low depth, no drift, no scale change) so the door and man cannot tear, "
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "A coherent, publishable-looking pull-back in stills, but the film is timid: the entrance close-up and floor-by-floor reveal the brief calls for never visibly happen, and there is no purposeful parallax.",
+      "filmIssues": [
+        "The intended 1.5-to-1.0 pull-back from the entrance is heavily muted in the contact sheet: all six frames already show the whole cutaway building, so frame 0 is not genuinely tight on the man and open door and the reveal of office, kitchen and hall barely registers.",
+        "There is almost no parallax or layer motion — the single listed layer has no drift, no scale change and depth 0.35, and cut-2 is absent from the plan — so the move reads as a plain, slow zoom-out rather than an arrival-and-reveal.",
+        "The light-sweep ambient is not legible in any frame; the morning light at the door does not strengthen or pass across the building.",
+        "First and last frames are both good, coherent pictures with no tearing, ghosting, doubled edges or awkward edge clipping, and the final full-building view is a strong dwell image — but the journey between them is too timid to express the scene's story."
+      ],
+      "fixes": [
+        "unknown layer cut-2 dropped",
+        "focusY 0.840 → 0.800"
+      ],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.8,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.5,
+            "panX": 0,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.22,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": -0.01,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.35,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.2
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Bolder, undamped arrival-and-reveal: keep the maximum 1.5-to-1.0 pull-back but cut the large panY that was forcing the renderer to damp the whole move, and move the zoom focus down to the man/door (0.47, 0.84) so frame 0 is genuinely tight on the entrance in morning light. Pull back and rise steadily through office, kitchen and hall to the full Kampong Ubi centre at zoom 1.0 for the dwell. Both id"
+      }
+    }
+  ]
+}

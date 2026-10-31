@@ -1,24 +1,24 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T14:30:32.589Z",
-  "usd": 0.1678,
-  "rationale": "A quiet turning-point departure: the camera opens tight on the packed orange suitcase and pulls back to reveal the boy, sunrise window and waiting jet, the suitcase settling slightly smaller as his Singapore life recedes.",
+  "at": "2026-10-31T01:58:16.602Z",
+  "usd": 0.1999,
+  "rationale": "A quiet 5am beginning: the camera opens tight on the small swimmer in the steaming pool and slowly pulls back with a long in-out ease to reveal the whole Ipoh pool and the waiting orange towel, while the swimmer drifts slightly deeper into the water and shrinks.",
   "plan": {
-    "focusX": 0.3,
-    "focusY": 0.8,
+    "focusX": 0.53,
+    "focusY": 0.76,
     "camera": [
       {
         "t": 0,
         "zoom": 1.38,
-        "panX": -0.09,
-        "panY": 0.09,
+        "panX": 0.03,
+        "panY": -0.07,
         "ease": "in-out"
       },
       {
         "t": 0.5,
         "zoom": 1.18,
-        "panX": -0.04,
-        "panY": 0.04,
+        "panX": 0.01,
+        "panY": -0.03,
         "ease": "in-out"
       },
       {
@@ -26,61 +26,69 @@
         "zoom": 1,
         "panX": 0,
         "panY": 0,
-        "ease": "in-out"
+        "ease": "out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 0.9,
-        "driftX": -0.015,
-        "driftY": 0.012,
-        "scale": 0.93,
+        "depth": 0.6,
+        "driftX": 0,
+        "driftY": -0.02,
+        "scale": 0.92,
         "enter": "none",
         "enterAt": 0,
-        "enterFor": 0.2
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": 0.005,
+        "scale": 1,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
       }
     ],
-    "ambient": "light-sweep",
-    "rationale": "A quiet turning-point departure: the camera opens tight on the packed orange suitcase and pulls back to reveal the boy, sunrise window and waiting jet, the suitcase settling slightly smaller as his Singapore life recedes."
+    "ambient": "haze",
+    "rationale": "A quiet 5am beginning: the camera opens tight on the small swimmer in the steaming pool and slowly pulls back with a long in-out ease to reveal the whole Ipoh pool and the waiting orange towel, while the swimmer drifts slightly deeper into the water and shrinks."
   },
   "critic": {
     "score": 6,
     "ok": false,
     "passed": false,
-    "verdict": "Do not publish: the pull-back reveal tells the departure story, but the foreground suitcase visibly slides away from the boy and crowds the bottom-left edge, breaking subject coherence in the final held frame.",
+    "verdict": "Do not publish: right story idea (pull-back reveal of the waiting towel), but timid/clumsy execution and a poor cropped opening; revised plan fixes framing and layer-locking while making the reveal legible.",
     "round": 0
   },
   "rounds": [
     {
       "score": 6,
       "ok": false,
-      "verdict": "Do not publish: the pull-back reveal tells the departure story, but the foreground suitcase visibly slides away from the boy and crowds the bottom-left edge, breaking subject coherence in the final held frame.",
+      "verdict": "Do not publish: right story idea (pull-back reveal of the waiting towel), but timid/clumsy execution and a poor cropped opening; revised plan fixes framing and layer-locking while making the reveal legible.",
       "filmIssues": [
-        "The pull-back concept is right — tight on the suitcase at t=0 opening, then revealing the boy, window, sunrise and jet by t=1 — and both end frames are readable compositions.",
-        "The suitcase layer breaks coherence: at depth 0.9 with drift -0.015/0.012 and end scale 0.93 it slides down-left away from the boy across the frames, increasingly detached from the legs it should stand beside, as if rolling unattended across the floor.",
-        "By t=0.8-1 the drifting suitcase is pushed to the bottom-left corner and sits awkwardly against / slightly clipped by the frame edge, spoiling the final dwell picture compared with the plate where it rests firmly next to the boy.",
-        "Apart from the suitcase slide there is no obvious tearing, doubled edge or painted-over ghost, the light-sweep is fitting for sunrise and subtle, and the risograph grain is preserved — the fault is the layer separation, not the camera idea."
+        "The pull-back idea is right for the scene, but the opening at zoom 1.38 is too tight: the scalloped archive border is cropped away and the woman holding the towel is awkwardly clipped at the left edge, so t=0 is not a good opening picture and the key figure intended for the reveal is already half lost.",
+        "The movement is only a modest centred pull-back; the swimmer is too small at the start for the tight opening to read as 'on the small swimmer', so it reads little better than a plain push-in in reverse.",
+        "cut-2 is only the towel, but the woman holding it remains in the background plate. Giving the towel depth 0.9 makes it parallax separately from her arm/body and risks a visible slide/doubled edge against her silhouette as the camera pulls back.",
+        "cut-1 swimmer scale 0.92 with driftY -0.02 lifts and shrinks him away from his painted ripples/reflection, risking a ghost/halo in the water and reading as sinking rather than swimming deeper."
       ],
-      "fixes": [
-        "focusY 0.840 → 0.800"
-      ],
+      "fixes": [],
       "plan": {
-        "focusX": 0.3,
-        "focusY": 0.8,
+        "focusX": 0.53,
+        "focusY": 0.76,
         "camera": [
           {
             "t": 0,
             "zoom": 1.38,
-            "panX": -0.09,
-            "panY": 0.09,
+            "panX": 0.03,
+            "panY": -0.07,
             "ease": "in-out"
           },
           {
             "t": 0.5,
             "zoom": 1.18,
-            "panX": -0.04,
-            "panY": 0.04,
+            "panX": 0.01,
+            "panY": -0.03,
             "ease": "in-out"
           },
           {
@@ -88,52 +96,62 @@
             "zoom": 1,
             "panX": 0,
             "panY": 0,
-            "ease": "in-out"
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.9,
-            "driftX": -0.015,
-            "driftY": 0.012,
-            "scale": 0.93,
+            "depth": 0.6,
+            "driftX": 0,
+            "driftY": -0.02,
+            "scale": 0.92,
             "enter": "none",
             "enterAt": 0,
-            "enterFor": 0.2
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0.005,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "A quiet turning-point departure: the camera opens tight on the packed orange suitcase and pulls back to reveal the boy, sunrise window and waiting jet, the suitcase settling slightly smaller as his Singapore life recedes."
+        "ambient": "haze",
+        "rationale": "A quiet 5am beginning: the camera opens tight on the small swimmer in the steaming pool and slowly pulls back with a long in-out ease to reveal the whole Ipoh pool and the waiting orange towel, while the swimmer drifts slightly deeper into the water and shrinks."
       }
     },
     {
       "score": 6,
       "ok": false,
-      "verdict": "A coherent, clean pull-back ending on the full plate, but too timid and generic to publish: the suitcase-led departure reveal never really lands at the opening.",
+      "verdict": "Coherent, attractive pull-back, but too close to a plain zoom-out to publish as a story-led film; start tighter on the swimmer and make the pull-back a clearer reveal of Auntie Yolly and the full plate.",
       "filmIssues": [
-        "The pull-back is visible but timid: across the six frames the boy, window and suitcase only shrink and drift slightly, so the film reads as a plain slow zoom-out rather than a purposeful departure reveal.",
-        "The opening frame is not the claimed tight picture of the packed suitcase. At t=0 the suitcase is still small in the lower-left corner with the boy and window dominating, so the intended suitcase-to-full-scene story is not clear on either forward or reverse play.",
-        "Only the suitcase is a cut-out and it is locked at low depth with no drift, scale or entrance, so there is no layered storytelling beyond the camera move; against a plain centred move this adds little.",
-        "The subject does stay coherent — no tearing, doubled edges, halo, ghosting or awkward frame-edge clipping is visible, and the suitcase stays with the boy and floor — and the final full-plate frame is a good dwell picture. The light-sweep is subtle and fitting for sunrise, and the risograph orange/teal print style is preserved."
+        "The pull-back is coherent and legible, but it is only a modest centred zoom-out (1.26 to 1.0) with very little pan or parallax between the contact-sheet frames; it reads as only slightly more expressive than a plain push-in played in reverse.",
+        "The intended story — a lone 5am swimmer gradually revealed within the wider pool, hills, steam and waiting Auntie Yolly — is present mainly in the final full-plate reveal, not in a strong opening composition. The first frame is already close to the whole scene, so the reveal feels timid.",
+        "No obvious tearing, doubled edges, halo or ghosting is visible on the swimmer or towel, and neither layer clips awkwardly, but the towel layer barely separates in depth from the woman/background, so the 2.5D move adds little depth.",
+        "The last frame is a good dwell image — the full scalloped archive plate — and the haze is fitting and subtle for steam at dawn, preserving the risograph print look."
       ],
       "fixes": [],
       "plan": {
-        "focusX": 0.32,
-        "focusY": 0.75,
+        "focusX": 0.46,
+        "focusY": 0.7,
         "camera": [
           {
             "t": 0,
-            "zoom": 1.34,
-            "panX": -0.07,
-            "panY": 0.07,
+            "zoom": 1.26,
+            "panX": 0.05,
+            "panY": -0.05,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.16,
-            "panX": -0.03,
-            "panY": 0.03,
+            "zoom": 1.12,
+            "panX": 0.02,
+            "panY": -0.02,
             "ease": "in-out"
           },
           {
@@ -141,77 +159,96 @@
             "zoom": 1,
             "panX": 0,
             "panY": 0,
-            "ease": "in-out"
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0.005,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
             "depth": 0.35,
             "driftX": 0,
             "driftY": 0,
             "scale": 1,
             "enter": "none",
             "enterAt": 0,
-            "enterFor": 0.2
+            "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "Keep the purposeful departure reveal — open tight on the packed orange suitcase, then pull back steadily to the boy from behind, the sunrise window and the waiting jet — but lock the suitcase to the boy and floor: low depth near the background, no drift and no shrink, so boy and case stay together as one departing figure and the case never slides to or clips the frame edge. The full plate is resto"
+        "ambient": "haze",
+        "rationale": "A clearer 5am pull-back that still works in reverse: open closer on the steaming pool and swimmer, but at 1.26 with focus pulled left/down so the waiting woman and full orange towel stay inside the frame alongside him and a hint of the scalloped border remains. Pull steadily back through 1.12 to the full plate at 1.0, revealing the border, hills, steam and waiting figure for the dwell frame. Keep "
       }
     },
     {
       "score": 5,
       "ok": false,
-      "verdict": "Not publishable as an 8+ film: technically coherent, but the motion as rendered is essentially a timid wide-shot zoom-out and does not deliver the planned suitcase-to-departure reveal.",
+      "verdict": "Do not publish as-is: a well-kept but timid pull-back whose opening and closing pictures are almost identical, so the 5am reveal never happens.",
       "filmIssues": [
-        "The intended tight opening on the suitcase does not read: at t=0 the suitcase is still a small lower-left prop in a near-complete wide shot of the boy and window.",
-        "Across all six frames the pull-back is very slight and close to a plain centred zoom-out; the boy, jet, sunrise and palm trees are visible from the start, so there is no clear departure reveal.",
-        "The suitcase layer has minimum practical depth and no drift, producing almost no parallax or separation from the background during the camera move.",
-        "The light-sweep is not visibly legible in the frames, although it is thematically suitable for sunrise.",
-        "The final frame is a good full-plate dwell image, and no obvious tearing, doubled edges, haloing or ghosting is visible around the suitcase."
+        "The intended pull-back reveal barely reads: all six frames show essentially the same full plate with the scalloped border intact, so t=0 is not a tight opening on the swimmer and t=1 is not a distinct reveal of the waiting woman.",
+        "The movement is no more expressive than a plain centred zoom - the swimmer, pool edge, hills and orange towel are all visible from the first frame, so the 5am entrance/reveal story is not told.",
+        "Haze is fitting for steam at dawn and stays subtle, and no tearing, doubled edges or ghosting is visible; the towel (cut-2) does stay registered on the woman's silhouette throughout.",
+        "The final frame is a good dwell picture (full pool, swimmer, woman and towel), but because the opening frame is nearly identical it earns no reveal in either direction."
       ],
       "fixes": [],
       "plan": {
-        "focusX": 0.3,
-        "focusY": 0.78,
+        "focusX": 0.52,
+        "focusY": 0.72,
         "camera": [
           {
             "t": 0,
-            "zoom": 1.48,
-            "panX": -0.1,
-            "panY": 0.1,
+            "zoom": 1.4,
+            "panX": -0.04,
+            "panY": -0.06,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.22,
-            "panX": -0.05,
-            "panY": 0.05,
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": -0.03,
             "ease": "in-out"
           },
           {
             "t": 1,
             "zoom": 1,
-            "panX": 0,
+            "panX": 0.02,
             "panY": 0,
-            "ease": "in-out"
+            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 0.3,
+            "depth": 0.75,
+            "driftX": 0,
+            "driftY": 0.008,
+            "scale": 1.04,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.35,
             "driftX": 0,
             "driftY": 0,
             "scale": 1,
             "enter": "none",
             "enterAt": 0,
-            "enterFor": 0.2
+            "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "Make the departure reveal unmistakable: open genuinely tight and low on the packed orange suitcase at the boy's feet, then pull back steadily through a mid frame to the full plate — boy from behind, sunrise window, palm reflections and waiting jet — which holds as the dwell picture and reverses cleanly as a push-in toward the suitcase. Keep the suitcase at minimum practical depth with no drift, sc"
+        "ambient": "haze",
+        "rationale": "Make the 5am story a true reveal: open tighter at 1.40 on the steaming water and small swimmer seen from behind, with the focus low on the pool so he dominates the opening frame, then pull back steadily through 1.18 to the full plate at 1.0 while easing the pan left/up. The widening view progressively reveals the pool edge, hills and steam, and finally the waiting woman with the full orange towel "
       }
     }
   ]

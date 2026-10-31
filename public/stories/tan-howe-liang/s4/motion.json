@@ -1,254 +1,256 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T14:29:14.567Z",
-  "usd": 0.15,
-  "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate",
+  "at": "2026-10-31T02:04:41.101Z",
+  "usd": 0.1655,
+  "rationale": "Make the pull-back for loss decisive: open genuinely tight on the official bending over the fallen lifter, then widen through the platform to reveal the dropped barbell, silent paper crowd and hard overhead lights in the full hall for the dwell frame. Keep the official locked to the background lifter by using a background-near depth, no drift and no end-scale change, so the hand contact and feet o",
   "plan": {
-    "focusX": 0.5,
-    "focusY": 0.42,
+    "focusX": 0.47,
+    "focusY": 0.57,
     "camera": [
       {
         "t": 0,
-        "zoom": 1.02,
-        "panX": 0,
-        "panY": 0.03,
+        "zoom": 1.315,
+        "panX": -0.013499999999999998,
+        "panY": 0.013499999999999998,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.1,
-        "panX": 0,
-        "panY": 0,
+        "zoom": 1.135,
+        "panX": -0.006,
+        "panY": 0.006,
         "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.18,
+        "zoom": 1,
         "panX": 0,
-        "panY": -0.02,
-        "ease": "out"
+        "panY": 0,
+        "ease": "in-out"
       }
     ],
     "layers": [
       {
         "id": "cut-1",
-        "depth": 1,
+        "depth": 0.65,
         "driftX": 0,
-        "driftY": -0.05,
-        "scale": 1.06,
+        "driftY": 0.0015,
+        "scale": 0.9924999999999999,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       },
       {
         "id": "cut-2",
-        "depth": 1,
+        "depth": 0.4,
         "driftX": 0,
-        "driftY": -0.05,
-        "scale": 1.06,
+        "driftY": 0,
+        "scale": 1,
         "enter": "none",
         "enterAt": 0,
         "enterFor": 0.1
       }
     ],
     "ambient": "light-sweep",
-    "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate"
+    "rationale": "Make the pull-back for loss decisive: open genuinely tight on the official bending over the fallen lifter, then widen through the platform to reveal the dropped barbell, silent paper crowd and hard overhead lights in the full hall for the dwell frame. Keep the official locked to the background lifter by using a background-near depth, no drift and no end-scale change, so the hand contact and feet o"
   },
   "critic": {
-    "score": 7,
-    "ok": false,
-    "passed": false,
-    "verdict": "A coherent and attractive push-in, but not yet bold or purposeful enough to publish: the rise is too close to a standard magnification and the final frame crowds the platform and feet at the bottom edge.",
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "Publish. The pull-back clearly serves the loss in the story: it opens tight on the official bending over the fallen lifter, then visibly widens to the final full-hall dwell frame revealing the dropped barbell, silent paper crowd and hard overhead lights. Both first and last frames are strong still pictures that work in either direction, the light-sweep is subtle, and the 1950s offset-lithograph style is preserved. The plate itself has no stray text, no drawn faces where silhouettes/from-behind figures were directed, no anachronism, and no mangled anatomy or objects.",
     "round": 2
   },
   "rounds": [
     {
-      "score": 4,
+      "score": 6,
       "ok": false,
-      "verdict": "Not publishable: the push-in breaks the lift, separating barbell from hands by the final frames.",
+      "verdict": "Do not publish: the story idea is present, but the visual movement is too timid and the opening barbell clipping is a clear composition fault.",
       "filmIssues": [
-        "The barbell and lifter do not stay together: in the top row the hands grip the bar, but by t=0.6-1 the bar has slipped down to head/shoulder height while the empty hands rise above it — a broken hold caused by scaling each cut-out about its own centre.",
-        "Otherwise this is only a plain centred push-in; the intended 'rise for triumph' is not legible beyond generic enlargement.",
-        "The final frame is a poor dwell picture: the platform is clipped by the bottom edge, the lifter's feet sit hard on the crop, and the detached barbell reads as falling rather than held.",
-        "No obvious tearing, halo or painted-over ghost, and the warm light-sweep is subtle and era-fitting, but that cannot rescue the separated grip."
+        "The pull-back idea is right for a loss of consciousness, but the move is modest and reads largely as a slight widening and rightward settling rather than a clear dramatic reveal.",
+        "At t=0 the zoomed, off-centre framing awkwardly clips the dropped barbell at the left frame edge; it remains clipped through the early frames, weakening both the opening picture and the supposed reveal.",
+        "The official is a separate layer while the fallen lifter remains in the background, yet the official drifts down and shrinks to 0.925. That risks breaking the hand-to-lifter contact that binds the two figures together, even though no obvious tearing or ghosting is visible in the contact sheet.",
+        "The final full view is a good dwell image, but the opening frame is compromised by the barbell clipping and tight cropping of the lights/platform context."
       ],
-      "fixes": [],
+      "fixes": [
+        "move damped to 75% (cut-1 12% off-frame at t=0.00; cut-2 15% off-frame at t=0.00)"
+      ],
       "plan": {
-        "focusX": 0.5,
-        "focusY": 0.42,
+        "focusX": 0.53,
+        "focusY": 0.57,
         "camera": [
           {
             "t": 0,
-            "zoom": 1.02,
-            "panX": 0,
-            "panY": 0.02,
+            "zoom": 1.285,
+            "panX": 0.037500000000000006,
+            "panY": 0.037500000000000006,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.16,
-            "panX": 0,
-            "panY": -0.02,
-            "ease": "out"
+            "zoom": 1.135,
+            "panX": 0.018750000000000003,
+            "panY": 0.018750000000000003,
+            "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.3,
-            "panX": 0,
-            "panY": -0.055,
-            "ease": "linear"
-          }
-        ],
-        "layers": [
-          {
-            "id": "cut-1",
-            "depth": 0.85,
-            "driftX": 0,
-            "driftY": -0.045,
-            "scale": 1.12,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          },
-          {
-            "id": "cut-2",
-            "depth": 0.85,
-            "driftX": 0,
-            "driftY": -0.045,
-            "scale": 1.12,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          }
-        ],
-        "ambient": "light-sweep",
-        "rationale": "A triumph in Tokyo and Cardiff: the lifter and the barbell he holds rise together and grow as the camera tilts up and closes in, lifting the held weight toward the top of the plate."
-      }
-    },
-    {
-      "score": 5,
-      "ok": false,
-      "verdict": "A competent but plain centred push-in: lifter and barbell stay coherently locked with no ghosting or tearing and the light-sweep suits the lithograph, yet the motion does not distinctly express the triumph and the last frame uncomfortably clips the platform.",
-      "filmIssues": [
-        "The move is a plain centred push-in (zoom 1 to 1.26) with both layers sharing identical depth and drift, so it is no better than the baseline push-in it is scored against; the triumph is not expressed as a distinct rise or reveal.",
-        "The final frame crops the competition platform awkwardly at the bottom and sides and pushes the lifter's feet to the very bottom edge, making t=1 a poor picture to dwell on.",
-        "The barbell grows toward the left and right frame edges by the last frames, tightening the composition rather than lifting and opening it."
-      ],
-      "fixes": [],
-      "plan": {
-        "focusX": 0.5,
-        "focusY": 0.48,
-        "camera": [
-          {
-            "t": 0,
             "zoom": 1,
-            "panX": 0,
-            "panY": 0.01,
-            "ease": "in-out"
-          },
-          {
-            "t": 0.5,
-            "zoom": 1.14,
-            "panX": 0,
-            "panY": -0.01,
-            "ease": "in-out"
-          },
-          {
-            "t": 1,
-            "zoom": 1.26,
-            "panX": 0,
-            "panY": -0.03,
-            "ease": "out"
-          }
-        ],
-        "layers": [
-          {
-            "id": "cut-1",
-            "depth": 0.9,
-            "driftX": 0,
-            "driftY": -0.03,
-            "scale": 1,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          },
-          {
-            "id": "cut-2",
-            "depth": 0.9,
-            "driftX": 0,
-            "driftY": -0.03,
-            "scale": 1,
-            "enter": "none",
-            "enterAt": 0,
-            "enterFor": 0.1
-          }
-        ],
-        "ambient": "light-sweep",
-        "rationale": "Lock lifter and barbell as one held unit: identical depth, identical upward drift and no per-layer scale (which was pulling the bar off the hands about separate centres), so all growth comes from the camera. A fuller start-to-finish push-in with a gentle upward pan makes the triumph rise purposeful while keeping feet, platform and both plates inside the frame for a clean final dwell."
-      }
-    },
-    {
-      "score": 7,
-      "ok": false,
-      "verdict": "A coherent and attractive push-in, but not yet bold or purposeful enough to publish: the rise is too close to a standard magnification and the final frame crowds the platform and feet at the bottom edge.",
-      "filmIssues": [
-        "The lifter and barbell stay locked together with no visible tearing, doubled edges, halo or ghosting, and the bar remains convincingly in the hands throughout.",
-        "The movement is legible but remains close to a plain centred push-in: the upward drift is modest and does not quite sell a distinct 'rise for triumph' rather than ordinary magnification.",
-        "By t=1 the push-in crops the competition platform awkwardly at the bottom and brings the lifter's feet very close to the lower frame edge, making the final dwell frame less composed than the opening frame.",
-        "The first frame is a strong, complete opening picture, but the last frame feels incidentally tight rather than deliberately heroic.",
-        "The light-sweep is subtle and period-appropriate, and the 1950s offset-lithograph texture remains intact."
-      ],
-      "fixes": [],
-      "plan": {
-        "focusX": 0.5,
-        "focusY": 0.42,
-        "camera": [
-          {
-            "t": 0,
-            "zoom": 1.02,
-            "panX": 0,
-            "panY": 0.03,
-            "ease": "in-out"
-          },
-          {
-            "t": 0.5,
-            "zoom": 1.1,
             "panX": 0,
             "panY": 0,
             "ease": "in-out"
-          },
-          {
-            "t": 1,
-            "zoom": 1.18,
-            "panX": 0,
-            "panY": -0.02,
-            "ease": "out"
           }
         ],
         "layers": [
           {
             "id": "cut-1",
-            "depth": 1,
+            "depth": 0.6,
             "driftX": 0,
-            "driftY": -0.05,
-            "scale": 1.06,
+            "driftY": 0.009000000000000001,
+            "scale": 0.955,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           },
           {
             "id": "cut-2",
-            "depth": 1,
+            "depth": 0.85,
+            "driftX": -0.006,
+            "driftY": 0.0225,
+            "scale": 0.925,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "none",
+        "rationale": "A loss: the camera starts tight on the official bending over the fallen lifter and pulls back to zoom 1, the official shrinking as the dropped barbell, empty platform and silent crowd are revealed around the blackout."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "rework: the plate has no visible defects (no stray text, no unwanted face detail, no anachronism or mangled anatomy), but the film is not publishable as submitted; the revised plan keeps the same layers and light-sweep while making the loss-reveal bolder and locking the official to the fallen lifter.",
+      "filmIssues": [
+        "The pull-back idea is right for loss, but the executed move is only a modest 1.32 to 1.0 widening and reads close to a plain centred zoom-out in the contact sheet.",
+        "The t=0 frame is an awkward opening picture: the barbell is pressed against/clipped at the left edge, the hall and overhead lights are cropped, and the composition is neither a clean tight detail nor the full scene.",
+        "The official is a separate layer while the fallen lifter and platform remain in the background. With the official at high depth and slightly scaled down, his hand and feet drift subtly against the lifter/platform during the move, weakening the contact that is the emotional centre of the scene.",
+        "The light-sweep is not legible as a purposeful change in the still frames and does not compensate for the timid camera move."
+      ],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.46,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.32,
+            "panX": -0.025,
+            "panY": 0.015,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.15,
+            "panX": -0.012,
+            "panY": 0.007,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
             "driftX": 0,
-            "driftY": -0.05,
-            "scale": 1.06,
+            "driftY": 0.004,
+            "scale": 0.97,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": -0.002,
+            "driftY": 0.004,
+            "scale": 0.98,
             "enter": "none",
             "enterAt": 0,
             "enterFor": 0.1
           }
         ],
         "ambient": "light-sweep",
-        "rationale": "Turn the timid push-in into a clear rise for triumph: start slightly low and wide so the whole platform reads, then camera rises and pushes in while lifter and barbell — locked with identical depth, drift and scale so the bar never leaves the hands — drift upward and grow together as if completing the held lift. Capping zoom at 1.18 and moderating the upward pan keeps feet, platform and both plate"
+        "rationale": "A bolder pull-back for loss: start tight on the official and fallen lifter, but shift the focus and pan left/down enough to keep the dropped barbell legible inside the frame, then widen decisively to the full silent hall, crowd, platform and lights. Keep the official almost locked to the fallen lifter so their contact never separates; the camera, not the figure drift, does the work. A soft light-s"
+      }
+    },
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "Publish. The pull-back clearly serves the loss in the story: it opens tight on the official bending over the fallen lifter, then visibly widens to the final full-hall dwell frame revealing the dropped barbell, silent paper crowd and hard overhead lights. Both first and last frames are strong still pictures that work in either direction, the light-sweep is subtle, and the 1950s offset-lithograph style is preserved. The plate itself has no stray text, no drawn faces where silhouettes/from-behind figures were directed, no anachronism, and no mangled anatomy or objects.",
+      "filmIssues": [
+        "Barbell's left plate touches the left frame edge in the opening frames, but it resolves cleanly as the pull-back reveals it — acceptable as part of the reveal rather than awkward clipping.",
+        "No visible tearing, doubling, halo or ghosting: the official remains locked to the fallen lifter at the hand contact and feet throughout, and the barbell stays coherent as a single foreground object."
+      ],
+      "fixes": [
+        "move damped to 75% (cut-1 12% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.57,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.315,
+            "panX": -0.013499999999999998,
+            "panY": 0.013499999999999998,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.135,
+            "panX": -0.006,
+            "panY": 0.006,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.65,
+            "driftX": 0,
+            "driftY": 0.0015,
+            "scale": 0.9924999999999999,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.4,
+            "driftX": 0,
+            "driftY": 0,
+            "scale": 1,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "Make the pull-back for loss decisive: open genuinely tight on the official bending over the fallen lifter, then widen through the platform to reveal the dropped barbell, silent paper crowd and hard overhead lights in the full hall for the dwell frame. Keep the official locked to the background lifter by using a background-near depth, no drift and no end-scale change, so the hand contact and feet o"
       }
     }
   ]

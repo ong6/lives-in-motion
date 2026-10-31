@@ -4,341 +4,882 @@
   "born": "1957",
   "died": null,
   "tagline": "The man who made toilets a global conversation.",
+  "edition": "deep",
+  "conflicts": [
+    {
+      "topic": "Year Besco was founded",
+      "choice": "Uses 1984 per CNA; does not use 1982."
+    },
+    {
+      "topic": "UN Sanitation for All resolution",
+      "choice": "Uses adoption on 24 July 2013 with 122 co-sponsors; does not use 2012 with 120."
+    },
+    {
+      "topic": "Birth order",
+      "choice": "Uses second of three children; drops unverified youngest claim."
+    },
+    {
+      "topic": "Number of companies",
+      "choice": "Omits disputed 15 versus 16 count of companies entirely."
+    },
+    {
+      "topic": "NPR quotes",
+      "choice": "Excludes unverifiable NPR quotes."
+    }
+  ],
+  "breaks": [
+    {
+      "after": "s8",
+      "photo": {
+        "src": "/stories/jack-sim/break-8/photo.webp",
+        "aspect": 0.75,
+        "kind": "person",
+        "concept": "person",
+        "label": "Jack Sim speaking at a sanitation meeting in Kigali, Rwanda, 2011",
+        "year": "2011",
+        "credit": {
+          "artist": "SuSanA Secretariat",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Session_4-_Jack_Sim_(WTO,_Singapore)_(5961634214).jpg"
+        }
+      }
+    }
+  ],
   "scenes": [
     {
       "id": "s1",
-      "treatment": "archive",
+      "treatment": "theatre",
       "year": "1957",
-      "title": "A village with no plumbing",
-      "caption": "Jack Sim is born, the second of three children, in an impoverished village in Upper Serangoon with no plumbing. His mother is a beautician.",
-      "visual": "A 1950s kampung of zinc-roofed wooden houses on stilts among coconut palms at dusk. In the foreground a small boy, seen from behind, carries a tin bucket along a plank walkway toward a wooden outhouse on stilts over a muddy stream. Warm kerosene light in one window.",
+      "title": "The bucket in the outhouse",
+      "caption": "The bucket waited in the outhouse behind the attap house.",
+      "body": "The bucket waited in the outhouse behind the attap house. Jack Sim was born in 1957 into a poor family in Singapore, the second of three children, and grew up in an impoverished village in Upper Serangoon with no plumbing. Water came from a shared standpipe, and rationing was part of life, with cholera and typhoid moving through the kampong and intestinal worms among children. His father worked as a grocery shop assistant, and the pay could hardly feed three children, their mother and a grandmother. They often wore donated clothes they could not afford to buy. The toilet stood outside. He later summed those years for CNA in 2019: \"Life was in an attap house and … the toilet was outside.\"",
+      "voice": "An outside toilet shaped his earliest years.",
+      "turn": "His mother was about to open his first school.",
+      "age": 0,
+      "quote": {
+        "text": "Life was in an attap house and … the toilet was outside.",
+        "speaker": "Jack Sim (CNA, 2019)",
+        "source": {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        }
+      },
+      "visual": "Layered paper cut-out, dusk palette of indigo and kerosene orange. A kampong of attap-roofed houses on stilts among coconut palms; a shared standpipe in the foreground; a small wooden outhouse on a plank walkway. A small boy seen from behind carries a tin bucket toward it. One window glows.",
       "cut": [
-        "boy"
+        "boy",
+        "bucket"
       ],
       "sources": [
+        {
+          "label": "Jack Sim, 'Social Entrepreneurship in 1960s Singapore: The Story of My Mother', Skoll (29 Jun 2015)",
+          "url": "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
+        },
+        {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        },
         {
           "label": "Wikipedia: Jack Sim",
           "url": "https://en.wikipedia.org/wiki/Jack_Sim"
         },
         {
-          "label": "WEF profile",
-          "url": "https://www.weforum.org/people/jack-sim/"
-        },
-        {
-          "label": "Skoll",
-          "url": "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
         }
       ],
       "plate": "/stories/jack-sim/s1/plate.webp",
       "background": "/stories/jack-sim/s1/background.webp",
-      "video": "/stories/jack-sim/s1/scene.mp4?v=4e387009",
-      "poster": "/stories/jack-sim/s1/scene.jpg?v=4e387009",
+      "video": "/stories/jack-sim/s1/scene.mp4?v=fb9d124c",
+      "poster": "/stories/jack-sim/s1/scene.jpg?v=fb9d124c",
       "layers": [
         {
           "id": "cut-1",
           "concept": "boy",
           "depth": 0.6,
-          "x": 39.66,
-          "y": 87.31,
-          "w": 13.81,
+          "x": 45.81,
+          "y": 88.63,
+          "w": 14.37,
           "src": "/stories/jack-sim/s1/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "bucket",
+          "depth": 0.8,
+          "x": 52.34,
+          "y": 84.06,
+          "w": 6.19,
+          "src": "/stories/jack-sim/s1/cut-2.webp"
         }
       ],
       "checked": {
         "model": "muse-spark-1.3",
         "verdict": "ok",
-        "at": "2026-10-30T13:03:47.950Z",
-        "note": "Born second of three in 1957 to a beautician, family in impoverished Upper Serangoon village without plumbing",
-        "sources": [
-          "https://en.wikipedia.org/wiki/Jack_Sim"
-        ]
+        "at": "2026-10-31T01:28:15.745Z",
+        "note": "Birth",
+        "sources": []
       }
     },
     {
       "id": "s2",
-      "treatment": "theatre",
-      "year": "1982",
-      "title": "Building a business",
-      "caption": "After working as a site supervisor and salesman, he starts his own firm in his mid-twenties, Besco Building Supplies; by his early 40s he runs 15 companies.",
-      "visual": "A young businessman in a short-sleeved shirt, seen from behind, leans over a drafting table of rolled blueprints on a construction site. Stacked crates and cement bags beside him; shophouse rooftops and a tower crane behind.",
+      "treatment": "line",
+      "year": "1963",
+      "when": "c. 1963",
+      "title": "Mother's Business School",
+      "caption": "Pancakes cooled on the neighbour's fruit pushcart for three nights.",
+      "body": "Pancakes cooled on the neighbour's fruit pushcart for three nights. His mother, Tan Siam Kheng, had first tried selling pancakes through that pushcart, and when they did not sell she gave them away. With her last dollar she took a smocking-cushion class at the community centre, then taught six neighbours the same lesson for a dollar each. Jack, his brother and sister hand-copied her designs from blank exercise books bought at 10 cents into pattern books she sold for two dollars. When smocking went out of fashion she learned makeup at CK Tang, practised on Jack's sister and declared herself a wedding beautician. Over about 25 years she prepared more than 3,000 brides while his brother kept her accounts because she could not read or write. He later said: \"I was glad to begin attending “Mother's Business School” at the age of six.\"",
+      "voice": "His mother turned her last dollar into lessons for six neighbours.",
+      "turn": "School left him standing outside the door.",
+      "age": 6,
+      "quote": {
+        "text": "I was glad to begin attending “Mother's Business School” at the age of six.",
+        "speaker": "Jack Sim",
+        "source": {
+          "label": "Jack Sim, 'Social Entrepreneurship in 1960s Singapore: The Story of My Mother', Skoll (29 Jun 2015)",
+          "url": "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
+        }
+      },
+      "visual": "Single pen drawing on cream paper: a low kitchen table under a bare bulb, three children seen from behind bent over exercise books, a stack of smocked cushions and a tin of buttons; a woman's silhouette in the doorway.",
       "cut": [
-        "man"
+        "children",
+        "exercise books"
       ],
       "sources": [
         {
-          "label": "Wikipedia: Jack Sim",
-          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+          "label": "Jack Sim, 'Social Entrepreneurship in 1960s Singapore: The Story of My Mother', Skoll (29 Jun 2015)",
+          "url": "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
         },
         {
-          "label": "AsiaOne",
-          "url": "https://www.asiaone.com/health/toilet-man-jack-sim-has-last-laugh"
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
         }
       ],
       "plate": "/stories/jack-sim/s2/plate.webp",
       "background": "/stories/jack-sim/s2/background.webp",
-      "video": "/stories/jack-sim/s2/scene.mp4?v=bf753283",
-      "poster": "/stories/jack-sim/s2/scene.jpg?v=bf753283",
+      "line": "/stories/jack-sim/s2/line.json",
+      "video": "/stories/jack-sim/s2/scene.mp4?v=c28522d8",
+      "poster": "/stories/jack-sim/s2/scene.jpg?v=c28522d8",
       "layers": [
         {
           "id": "cut-1",
-          "concept": "man",
+          "concept": "children",
           "depth": 0.6,
-          "x": 48.19,
-          "y": 96.38,
-          "w": 31.5,
+          "x": 65.5,
+          "y": 88.06,
+          "w": 20.75,
           "src": "/stories/jack-sim/s2/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "exercise books",
+          "depth": 0.8,
+          "x": 31.25,
+          "y": 67.06,
+          "w": 10.25,
+          "src": "/stories/jack-sim/s2/cut-2.webp"
         }
       ],
       "checked": {
         "model": "muse-spark-1.3",
-        "verdict": "corrected",
-        "at": "2026-10-30T13:04:01.709Z",
-        "note": "Besco was founded in 1984, not 1982, while supervisor/salesman and 15 companies parts match. → Muse Spark found Besco's founding year given as 1984 as well as 1982; the caption no longer states a year.",
+        "verdict": "ok",
+        "at": "2026-10-31T01:27:50.568Z",
+        "note": "Quote is verbatim and all facts match: born 1957 so six in 1963, mother Tan Siam Kheng, pancakes/three nights, last dollar/six $1 lessons, 10c books/$2 pattern books, CK Tang/sister/beautician, 25 years/over 3,000 brides, illiterate/brother accountant, “Mother’s Business School” at six.",
         "sources": [
-          "https://localnewsingapore.com/from-o-level-failure-to-millionaire-at-29-on-a-policy-of-honesty-first/",
-          "https://en.wikipedia.org/wiki/Jack_Sim"
+          "https://skoll.org/2015/06/29/social-entrepreneurship-in-1960s-singapore-the-story-of-my-mother/"
         ]
       }
     },
     {
       "id": "s3",
-      "treatment": "line",
-      "year": "1998",
-      "title": "A change of course",
-      "caption": "Around 40, with the Asian financial crisis behind him, he sells part of his businesses and turns to social work. In December 1998 he founds the Restroom Association of Singapore.",
-      "visual": "A man seen from behind, holding a clipboard, inspects a row of spotless public toilet cubicles in a 1990s hawker centre. A five-star rating card is pinned on the tiled wall; ceiling fans overhead.",
+      "treatment": "archive",
+      "year": "1973",
+      "when": "c. 1973",
+      "title": "Outside the classroom door",
+      "caption": "He stood outside the classroom while the lesson went on inside.",
+      "body": "He stood outside the classroom while the lesson went on inside. At school Jack was talkative and restless, and teachers repeatedly sent him to stand outside the classroom, so he missed lessons. His free textbooks did not arrive until April. He failed his O-levels, then two years later, in 1975, he graduated from vocational school with a hotel-management certificate. On his brother's advice he took work in construction as a site supervisor and was bad at it. The foreman asked his boss to take him off the site. He later told CNA in 2019: \"The teacher always asked me to stand outside the classroom, so that was why I always failed.\"",
+      "voice": "He missed the lessons happening behind the door.",
+      "turn": "Selling suited him better than supervising.",
+      "age": 16,
+      "quote": {
+        "text": "The teacher always asked me to stand outside the classroom, so that was why I always failed.",
+        "speaker": "Jack Sim (CNA, 2019)",
+        "source": {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        }
+      },
+      "visual": "Archive-print plate, sepia halftone with a deckled border and a typed caption strip: a 1960s school corridor of louvred windows, one boy seen from behind standing alone beside a closed classroom door.",
       "cut": [
-        "man"
+        "boy",
+        "door"
       ],
       "sources": [
         {
-          "label": "Wikipedia: Jack Sim",
-          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
         },
         {
-          "label": "WEF profile",
-          "url": "https://www.weforum.org/people/jack-sim/"
+          "label": "Unlocking ADHD, 'ADHD Stories: Jack Sim' (2025)",
+          "url": "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        },
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
         }
       ],
       "plate": "/stories/jack-sim/s3/plate.webp",
       "background": "/stories/jack-sim/s3/background.webp",
-      "line": "/stories/jack-sim/s3/line.json",
-      "video": "/stories/jack-sim/s3/scene.mp4?v=ef422377",
-      "poster": "/stories/jack-sim/s3/scene.jpg?v=ef422377",
+      "video": "/stories/jack-sim/s3/scene.mp4?v=1117e148",
+      "poster": "/stories/jack-sim/s3/scene.jpg?v=1117e148",
       "layers": [
         {
           "id": "cut-1",
-          "concept": "man",
+          "concept": "boy",
           "depth": 0.6,
-          "x": 49.59,
-          "y": 96.63,
-          "w": 11.81,
+          "x": 54.84,
+          "y": 81.38,
+          "w": 6.94,
           "src": "/stories/jack-sim/s3/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "door",
+          "depth": 0.8,
+          "x": 62.59,
+          "y": 77.5,
+          "w": 9.56,
+          "src": "/stories/jack-sim/s3/cut-2.webp"
         }
       ],
       "checked": {
         "model": "muse-spark-1.3",
         "verdict": "ok",
-        "at": "2026-10-30T13:03:53.420Z",
-        "note": "Born 1957 (~41 in 1998), sold portion of businesses to volunteer after 1997 crisis and dedicated age 40 to founding RAS, RAS set up 8 Dec 1998.",
-        "sources": []
+        "at": "2026-10-31T01:27:51.347Z",
+        "note": "Quote matches CNA wording, and April textbooks, 1975 graduation two years after O-levels, brother's advice plus site-supervisor/foreman episode all verified; published 2019.",
+        "sources": [
+          "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        ]
       }
     },
     {
       "id": "s4",
       "treatment": "theatre",
-      "year": "2001",
-      "title": "The World Toilet Organization",
-      "caption": "On 19 November 2001 he founds the World Toilet Organization. He uses humour and shock to get people talking about a taboo subject.",
-      "visual": "A giant globe on a theatre stage, ringed by a white toilet seat like the rings of Saturn, under two spotlights. A crowd of silhouettes in the front rows raise their hands and laugh.",
+      "year": "1984",
+      "title": "The S$1.1 million mistake",
+      "caption": "The bank called about a bounced cheque.",
+      "body": "The bank called about a bounced cheque. Jack had moved into selling building materials, became his department's top salesman, and an investor persuaded him to start his own company. In 1984 he founded Besco Building Supplies. He could not read accounts and only learned cash had run out when the bank called. Soon after he under-priced a Raffles City tender by S$1.1 million. After a week of worry he kept asking himself \"just started business and immediately going bankrupt?\" Then he confessed the error to the owners, who gave him the contract at the higher price if he used a German manufacturer. In what he calls blissful ignorance he formed a consortium to buy a S$30 million brick factory across the Causeway, then built 14 terrace houses at Rosyth Terrace and a 28-unit block on Meyer Road. He was a millionaire at 29.",
+      "voice": "A costly error turned into his first break.",
+      "turn": "Then he rushed to save old voices.",
+      "age": 27,
+      "quote": {
+        "text": "just started business and immediately going bankrupt?",
+        "speaker": "Jack Sim, recalling the week",
+        "source": {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        }
+      },
+      "visual": "Paper-cut night office, 1980s: a desk lamp over a thick tender document, a rotary phone, a cheque book; through the window the construction cranes of Raffles City. A man seen from behind, head in hands.",
       "cut": [
-        "globe",
-        "toilet seat"
+        "man",
+        "tender"
       ],
       "sources": [
         {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        },
+        {
           "label": "Wikipedia: Jack Sim",
           "url": "https://en.wikipedia.org/wiki/Jack_Sim"
-        },
-        {
-          "label": "Georgetown Berkley Center",
-          "url": "https://berkleycenter.georgetown.edu/posts/a-stink-over-sanitation"
-        },
-        {
-          "label": "WSJ",
-          "url": "https://www.wsj.com/articles/ads-for-bathroom-products-flush-with-potty-humor-1423529356"
         }
       ],
       "plate": "/stories/jack-sim/s4/plate.webp",
       "background": "/stories/jack-sim/s4/background.webp",
-      "video": "/stories/jack-sim/s4/scene.mp4?v=51e3c68f",
-      "poster": "/stories/jack-sim/s4/scene.jpg?v=51e3c68f",
+      "video": "/stories/jack-sim/s4/scene.mp4?v=3a6309fe",
+      "poster": "/stories/jack-sim/s4/scene.jpg?v=3a6309fe",
       "layers": [
         {
           "id": "cut-1",
-          "concept": "globe",
+          "concept": "man",
           "depth": 0.6,
-          "x": 50.91,
-          "y": 76.56,
-          "w": 48.56,
+          "x": 52.53,
+          "y": 66,
+          "w": 32.19,
           "src": "/stories/jack-sim/s4/cut-1.webp"
         },
         {
           "id": "cut-2",
-          "concept": "toilet seat",
+          "concept": "tender",
           "depth": 0.8,
-          "x": 48.91,
-          "y": 71.19,
-          "w": 64.56,
+          "x": 52.56,
+          "y": 66.06,
+          "w": 32.25,
           "src": "/stories/jack-sim/s4/cut-2.webp"
         }
       ],
       "checked": {
         "model": "muse-spark-1.3",
         "verdict": "ok",
-        "at": "2026-10-30T13:03:57.015Z",
-        "note": "Founded 19 Nov 2001 in Singapore; uses humor and sometimes shock to get attention to break toilet taboo.",
-        "sources": []
+        "at": "2026-10-31T01:28:20.870Z",
+        "note": "Chapter matches CNA on 1984 Besco founding after top-salesman/investor approach, unread accounts/bounced-cheque call, S$1.1m Raffles City underprice with Sim's own “just started business and immediately going bankrupt?” after a week’s worry and S$1.1m-more/German-manufacturer fix, “blissful ignorance” S$30m Causeway factory, plus 14 Rosyth Terrace/28-unit Meyer Road/millionaire at 29.",
+        "sources": [
+          "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        ]
       }
     },
     {
       "id": "s5",
       "treatment": "line",
-      "year": "2008",
-      "title": "A hero of the environment",
-      "caption": "TIME names him a Hero of the Environment in 2008. In 2011 he founds the BOP Hub to back social enterprises serving the world's poorest.",
-      "visual": "A small green seedling grows out of a clean white toilet bowl in a sunlit room. A laurel-wreath award hangs on the wall above; a magazine with a blank red border lies on a stool nearby.",
+      "year": "1995",
+      "when": "mid-1990s",
+      "title": "Reels at Hillview",
+      "caption": "The reels sat at Hillview with demolition near.",
+      "body": "The reels sat at Hillview with demolition near. Jack learned that Rediffusion's dialect audio archive was still inside the building before it was demolished. A contact offered him everything for a price he later recalled as \"You can have everything you want for $2,000.\" He paid the $2,000 for the archive. He was given only a day to collect it before the building came down. He moved quickly to take away what he could in the time allowed. Years later he donated over 4,700 reels to the National Archives. What had been stored in one building before demolition survived because he acted before the deadline.",
+      "voice": "He had a day to save thousands of voices.",
+      "turn": "A crisis soon made him question his work.",
+      "age": 38,
+      "quote": {
+        "text": "You can have everything you want for $2,000.",
+        "speaker": "a Rediffusion contact, as Sim recalled in a 2012 oral history",
+        "source": {
+          "label": "BiblioAsia (NLB) Jul-Sep 2025, National Archives audio-visual collections",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-21-issue-2-jul-sep-2025-audio-visual-national-archives-singapore/"
+        }
+      },
+      "visual": "Pen drawing with grey wash: stacks of open-reel tapes in cardboard boxes under a dripping awning, a lorry backed up to a loading bay, rain lines across the page; one figure from behind carrying a box.",
       "cut": [
-        "toilet"
+        "boxes",
+        "lorry"
       ],
       "sources": [
         {
-          "label": "TIME 2008 (archived)",
+          "label": "BiblioAsia (NLB) Jul-Sep 2025, National Archives audio-visual collections",
+          "url": "https://biblioasia.nlb.gov.sg/all-sections/vol-21-issue-2-jul-sep-2025-audio-visual-national-archives-singapore/"
+        }
+      ],
+      "plate": "/stories/jack-sim/s5/plate.webp",
+      "background": "/stories/jack-sim/s5/background.webp",
+      "line": "/stories/jack-sim/s5/line.json",
+      "video": "/stories/jack-sim/s5/scene.mp4?v=e8927777",
+      "poster": "/stories/jack-sim/s5/scene.jpg?v=e8927777",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "boxes",
+          "depth": 0.6,
+          "x": 16.81,
+          "y": 95.69,
+          "w": 24.25,
+          "src": "/stories/jack-sim/s5/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "lorry",
+          "depth": 0.8,
+          "x": 86.91,
+          "y": 52.44,
+          "w": 17.06,
+          "src": "/stories/jack-sim/s5/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "corrected",
+        "at": "2026-10-31T01:30:04.486Z",
+        "note": "He did not collect everything in one day – after about half a lorry heavy rain forced them to leave to avoid damaging tapes so they “could not collect some more”, though he was given only a day before → Rewritten from the research and checked again: Words are Rediffusion contact's as recalled by Sim, with one-day deadline, rain-limited half-lorry rescue and 4,700+ reels donated all matching.",
+        "sources": [
+          "https://biblioasia.nlb.gov.sg/all-sections/vol-21-issue-2-jul-sep-2025-audio-visual-national-archives-singapore/"
+        ]
+      }
+    },
+    {
+      "id": "s6",
+      "treatment": "archive",
+      "year": "1998",
+      "title": "Fifteen houses at half price",
+      "caption": "The fifteen properties were suddenly worth half.",
+      "body": "The fifteen properties were suddenly worth half. Jack had persuaded developers with a French supplier's clay tiles that a Mediterranean look would lift house prices, and within three years the firm dominated the market. Then the Asian financial crisis forced him to retrench staff and halved the value of his 15 properties, and he held on. He felt useless at work during those months. Around then he heard a speech arguing that a society's graciousness could be measured by the cleanliness of its toilets, and the idea stayed with him. Staff and peers called the toilet idea crazy. In December 1998 he founded the Restroom Association of Singapore. He told his wife that after the recession he would quit business for social work because it felt more fulfilling, explaining at the office: \"When I come to the office, I don't feel useful. I feel like a failure.\"",
+      "voice": "Failure at the office pointed him toward toilets.",
+      "turn": "He decided to take toilets worldwide.",
+      "age": 41,
+      "quote": {
+        "text": "When I come to the office, I don't feel useful. I feel like a failure.",
+        "speaker": "Jack Sim",
+        "source": {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        }
+      },
+      "visual": "Archive-print plate framed like a 1998 newspaper photo: a row of terrace houses with orange clay roofs under a grey sky, a 'For Sale' board; in the foreground, a public toilet doorway lit from inside.",
+      "cut": [
+        "houses",
+        "sign"
+      ],
+      "sources": [
+        {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        },
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "The Pride (Singapore Kindness Movement), 11 Jan 2018",
+          "url": "https://pride.kindness.sg/singaporeans-proud-toilet/"
+        }
+      ],
+      "plate": "/stories/jack-sim/s6/plate.webp",
+      "background": "/stories/jack-sim/s6/background.webp",
+      "video": "/stories/jack-sim/s6/scene.mp4?v=f9e146bc",
+      "poster": "/stories/jack-sim/s6/scene.jpg?v=f9e146bc",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "houses",
+          "depth": 0.6,
+          "x": 49.94,
+          "y": 68.63,
+          "w": 91.75,
+          "src": "/stories/jack-sim/s6/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "sign",
+          "depth": 0.8,
+          "x": 15.84,
+          "y": 79.88,
+          "w": 16.56,
+          "src": "/stories/jack-sim/s6/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:28:30.177Z",
+        "note": "French tile Mediterranean pitch, dominant in 3 years, 1997-98 crisis retrenchment, 15 properties halved and held, Goh graciousness/toilets speech, RAS “crazy” idea, founded Dec 1998, wife/recession fulfilling quote and exact office “failure” quote",
+        "sources": [
+          "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666",
+          "https://en.wikipedia.org/wiki/Jack_Sim"
+        ]
+      }
+    },
+    {
+      "id": "s7",
+      "treatment": "photo",
+      "year": "2001",
+      "title": "Mr Toilet",
+      "caption": "Laughter greeted the word toilet.",
+      "body": "Laughter greeted the word toilet. On 19 November 2001 Jack founded the World Toilet Organization, and its founding date became World Toilet Day. Talking about toilets was taboo and people laughed at him, so he made toilet humour his brand and became known as Mr Toilet. He told audiences in figures he often repeated: \"We go to the toilet six to eight times a day and spend three full years of our lives inside the toilet\" In 2004 he stepped down as chief executive of Besco, his first company, to give the cause most of his time. The jokes opened rooms that polite language had not opened, and he kept using them.",
+      "voice": "He laughed first so others would listen.",
+      "turn": "Praise arrived before funding did.",
+      "age": 44,
+      "quote": {
+        "text": "We go to the toilet six to eight times a day and spend three full years of our lives inside the toilet",
+        "speaker": "Jack Sim (Tatler Asia, 2020)",
+        "source": {
+          "label": "Unlocking ADHD, 'ADHD Stories: Jack Sim' (2025)",
+          "url": "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        }
+      },
+      "photo": {
+        "src": "/stories/jack-sim/s7/photo.webp",
+        "aspect": 1.2729,
+        "kind": "person",
+        "concept": "person",
+        "label": "Jack Sim at a World Toilet Organization photo call, 2005",
+        "year": "2005",
+        "focus": [
+          0.385,
+          0.5
+        ],
+        "cutout": "/stories/jack-sim/s7/cutout.webp",
+        "trace": "/stories/jack-sim/s7/trace.json",
+        "credit": {
+          "artist": "SuSanA Secretariat",
+          "license": "CC BY 2.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Jack_Sim_founder_of_the_World_Toilet_Organisation_(6725637193).jpg"
+        }
+      },
+      "visual": "Jack Sim at a World Toilet Organization photo call, 2005",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "Splash Projects interview with Jack Sim (Nov 2022)",
+          "url": "https://splashprojects.com/exclusive-interview-with-jack-sim-world-toilet-organization-founder-and-splash-projects-advisory-board-member/"
+        },
+        {
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        },
+        {
+          "label": "Unlocking ADHD, 'ADHD Stories: Jack Sim' (2025)",
+          "url": "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        },
+        {
+          "label": "This Week in New York, review of 'Mr. Toilet: The World's #2 Man' (21 Nov 2019)",
+          "url": "https://twi-ny.com/2019/11/21/mr-toilet-the-worlds-2-man/"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:28:36.307Z",
+        "note": "WTO founded 19 Nov 2001, founding date adopted as World Toilet Day, Tatler quote verbatim, taboo/laugh/humour/Mr Toilet, 2004 Besco CEO exit.",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Jack_Sim",
+          "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization",
+          "https://www.unlockingadhd.org.sg/adhd-stories-jack-sim/",
+          "https://localnewsingapore.com/from-o-level-failure-to-millionaire-at-29-on-a-policy-of-honesty-first/"
+        ]
+      }
+    },
+    {
+      "id": "s8",
+      "treatment": "theatre",
+      "year": "2008",
+      "title": "The bank that said no",
+      "caption": "The award arrived in 2008.",
+      "body": "The award arrived in 2008. TIME named Jack one of its Heroes of the Environment. In 2011 he founded the BoP Hub to design businesses for the world's poorest. Donors still avoided the brown issue, and one of Asia's biggest banks told him funding him would hurt its image. He kept working without pay, and by 2022 he had worked unpaid for 21 years because donors avoided the issue. The recognition widened the rooms he could enter but did not pay a salary. He pushed faster anyway, living by the rule he gave in 2022: \"Life is short. Every day is one less, so we need to be working faster\"",
+      "voice": "A bank praised his work and turned him down.",
+      "turn": "Then the world gave toilets a day.",
+      "age": 51,
+      "quote": {
+        "text": "Life is short. Every day is one less, so we need to be working faster",
+        "speaker": "Jack Sim (Splash Projects, 2022)",
+        "source": {
+          "label": "Splash Projects interview with Jack Sim (Nov 2022)",
+          "url": "https://splashprojects.com/exclusive-interview-with-jack-sim-world-toilet-organization-founder-and-splash-projects-advisory-board-member/"
+        }
+      },
+      "visual": "Paper-cut boardroom seen through a glass wall: a long table, a bowl of untouched mints, a closed folder marked with a toilet symbol; a man seen from behind walking away down a corridor.",
+      "cut": [
+        "man",
+        "folder"
+      ],
+      "sources": [
+        {
+          "label": "TIME, Heroes of the Environment 2008: Jack Sim (archived)",
           "url": "https://web.archive.org/web/20090501144846/http://www.time.com/time/specials/packages/article/0,28804,1841778_1841781_1841822,00.html"
+        },
+        {
+          "label": "World Toilet Organization: Jack Sim profile",
+          "url": "https://worldtoilet.org/about-us/jack-sim/"
+        },
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        },
+        {
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        }
+      ],
+      "plate": "/stories/jack-sim/s8/plate.webp",
+      "background": "/stories/jack-sim/s8/background.webp",
+      "video": "/stories/jack-sim/s8/scene.mp4?v=f91ae41f",
+      "poster": "/stories/jack-sim/s8/scene.jpg?v=f91ae41f",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "man",
+          "depth": 0.6,
+          "x": 49.63,
+          "y": 76.88,
+          "w": 11,
+          "src": "/stories/jack-sim/s8/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "folder",
+          "depth": 0.8,
+          "x": 49.63,
+          "y": 76.88,
+          "w": 11,
+          "src": "/stories/jack-sim/s8/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:28:39.205Z",
+        "note": "TIME Heroes 2008, BoP Hub founded 2011, 21yrs unpaid over brown-issue donor gap, bank image rebuff, 2022 quote verified published 2022",
+        "sources": [
+          "https://splashprojects.com/exclusive-interview-with-jack-sim-world-toilet-organization-founder-and-splash-projects-advisory-board-member/"
+        ]
+      }
+    },
+    {
+      "id": "s9",
+      "treatment": "photo",
+      "year": "2013",
+      "title": "A day at the UN",
+      "caption": "The resolution passed on 24 July 2013.",
+      "body": "The resolution passed on 24 July 2013. That day the UN General Assembly adopted Singapore's Sanitation for All resolution, making 19 November UN World Toilet Day. Tatler counted 122 countries that co-sponsored it. That same year the World Toilet Organization was granted consultative status with the UN Economic and Social Council. He welcomed the decision in plain words he used that July: \"There is nothing wrong with going to the toilet.\" The date gave the cause a place on the calendar, and the status gave his group a standing that let it keep returning to the same rooms.",
+      "voice": "A local date became a world date.",
+      "turn": "Cameras soon followed him across continents.",
+      "age": 56,
+      "quote": {
+        "text": "There is nothing wrong with going to the toilet.",
+        "speaker": "Jack Sim (Eco-Business, Jul 2013)",
+        "source": {
+          "label": "Eco-Business, 'United Nations adopts Singapore's Sanitation for All resolution' (25 Jul 2013)",
+          "url": "https://www.eco-business.com/news/united-nations-adopts-singapores-sanitation-all-resolution/"
+        }
+      },
+      "photo": {
+        "src": "/stories/jack-sim/s9/photo.webp",
+        "aspect": 0.75,
+        "kind": "place",
+        "concept": "inflatable toilet",
+        "label": "World Toilet Day at the United Nations, New York, 2015",
+        "tag": "Place",
+        "year": "2015",
+        "focus": [
+          0.184,
+          0.652
+        ],
+        "cutout": "/stories/jack-sim/s9/cutout.webp",
+        "trace": "/stories/jack-sim/s9/trace.json",
+        "credit": {
+          "artist": "Kutoid",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:2015_World_Toilet_Day_at_United_Nations,_New_York.jpg"
+        }
+      },
+      "visual": "World Toilet Day at the United Nations, New York, 2015",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Eco-Business, 'United Nations adopts Singapore's Sanitation for All resolution' (25 Jul 2013)",
+          "url": "https://www.eco-business.com/news/united-nations-adopts-singapores-sanitation-all-resolution/"
+        },
+        {
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:28:52.108Z",
+        "note": "UN adopted Sanitation for All 24 July 2013 designating 19 Nov World Toilet Day, Tatler reports 122 co-sponsors and 2013 ECOSOC consultative status, and Eco-Business quotes Sim: “There is nothing wrong with going to the toilet.”",
+        "sources": [
+          "https://www.eco-business.com/news/united-nations-adopts-singapores-sanitation-all-resolution/",
+          "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        ]
+      }
+    },
+    {
+      "id": "s10",
+      "treatment": "line",
+      "year": "2019",
+      "title": "Mr. Toilet on film",
+      "caption": "The scooter rolled into frame.",
+      "body": "The scooter rolled into frame. Filmmaker Lily Zepeda followed Jack for five years across Singapore, India, China and the United States for Mr. Toilet: The World's #2 Man. On screen he rode a scooter, combed his hair with a toilet brush and swam with a poo-emoji float. The film also showed tension with some WTO board members. At home his collection of toilets appeared in CNA's Money Mind profile. The documentary premiered at Hot Docs, North America's largest documentary festival, in April 2019 and opened in New York on 22 November 2019. The humour stayed on camera, but the strain behind the work stayed there too.",
+      "voice": "He combed his hair with a toilet brush on camera.",
+      "turn": "An old report card got a new reading.",
+      "age": 62,
+      "visual": "Loose pen drawing like a storyboard page: a scooter parked by a kerb, a toilet brush and comb crossed on a shelf, a film clapperboard; a figure from behind wheeling the scooter out.",
+      "cut": [
+        "scooter",
+        "toilet brush"
+      ],
+      "sources": [
+        {
+          "label": "This Week in New York, review of 'Mr. Toilet: The World's #2 Man' (21 Nov 2019)",
+          "url": "https://twi-ny.com/2019/11/21/mr-toilet-the-worlds-2-man/"
+        },
+        {
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        },
+        {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
         },
         {
           "label": "Wikipedia: Jack Sim",
           "url": "https://en.wikipedia.org/wiki/Jack_Sim"
         }
       ],
-      "plate": "/stories/jack-sim/s5/plate.webp",
-      "background": "/stories/jack-sim/s5/background.webp",
-      "line": "/stories/jack-sim/s5/line.json",
-      "video": "/stories/jack-sim/s5/scene.mp4?v=f449abf5",
-      "poster": "/stories/jack-sim/s5/scene.jpg?v=f449abf5",
+      "plate": "/stories/jack-sim/s10/plate.webp",
+      "background": "/stories/jack-sim/s10/background.webp",
+      "line": "/stories/jack-sim/s10/line.json",
+      "video": "/stories/jack-sim/s10/scene.mp4?v=002db3d2",
+      "poster": "/stories/jack-sim/s10/scene.jpg?v=002db3d2",
       "layers": [
         {
           "id": "cut-1",
-          "concept": "toilet",
+          "concept": "scooter",
           "depth": 0.6,
-          "x": 49.97,
-          "y": 92.88,
-          "w": 27.06,
-          "src": "/stories/jack-sim/s5/cut-1.webp"
-        }
-      ],
-      "checked": {
-        "model": "muse-spark-1.3",
-        "verdict": "ok",
-        "at": "2026-10-30T13:03:58.391Z",
-        "note": "TIME Hero of the Environment in 2008 and BOP Hub founded in 2011 for poorest bottom-of-pyramid both confirmed.",
-        "sources": []
-      }
-    },
-    {
-      "id": "s6",
-      "treatment": "archive",
-      "year": "2013",
-      "title": "A day at the UN",
-      "caption": "On 24 July 2013 the UN General Assembly adopts resolution A/RES/67/291, 'Sanitation for All', making 19 November World Toilet Day. It was Singapore's first UN resolution.",
-      "visual": "The United Nations General Assembly hall seen from the back rows: tiered curved desks, delegates as silhouettes, a tall golden wall with a plain circular emblem shape. No text, no logos.",
-      "cut": [
-        "delegates"
-      ],
-      "sources": [
-        {
-          "label": "Straits Times",
-          "url": "https://www.straitstimes.com/singapore/singapores-first-un-resolution-adopted-now-every-nov-19-is-world-toilet-day"
+          "x": 19.78,
+          "y": 86.88,
+          "w": 32.69,
+          "src": "/stories/jack-sim/s10/cut-1.webp"
         },
         {
-          "label": "UN-Project vote record, res. 67/291",
-          "url": "https://un-project.org/votes/resolution/67-291/"
-        }
-      ],
-      "plate": "/stories/jack-sim/s6/plate.webp",
-      "background": "/stories/jack-sim/s6/background.webp",
-      "video": "/stories/jack-sim/s6/scene.mp4?v=92091eeb",
-      "poster": "/stories/jack-sim/s6/scene.jpg?v=92091eeb",
-      "layers": [
-        {
-          "id": "cut-1",
-          "concept": "delegates",
-          "depth": 0.6,
-          "x": 68.38,
-          "y": 89.13,
-          "w": 10.38,
-          "src": "/stories/jack-sim/s6/cut-1.webp"
-        },
-        {
-          "id": "date",
-          "concept": "calendar",
-          "depth": 0.9,
-          "x": 80,
-          "y": 91,
-          "w": 18,
-          "overlay": "calendar",
-          "text": "19 NOV"
-        }
-      ],
-      "checked": {
-        "model": "muse-spark-1.3",
-        "verdict": "ok",
-        "at": "2026-10-30T13:04:02.792Z",
-        "note": "Adopted 24 July 2013 as 67/291 “Sanitation for All” designating 19 Nov World Toilet Day, Singapore's first UN resolution",
-        "sources": []
-      }
-    },
-    {
-      "id": "s7",
-      "treatment": "theatre",
-      "year": "2019",
-      "title": "Mr. Toilet on film",
-      "caption": "The documentary 'Mr. Toilet: The World's #2 Man' premieres at Hot Docs on 27 April 2019, following his funny, relentless campaign.",
-      "visual": "Inside a cinema, seen from the back: rows of audience silhouettes laughing. On the big screen, a bright yellow rubber duck sits on a white toilet seat. A projector beam cuts through the dark.",
-      "cut": [
-        "rubber duck"
-      ],
-      "sources": [
-        {
-          "label": "Wikipedia: Mr. Toilet",
-          "url": "https://en.wikipedia.org/wiki/Mr._Toilet"
-        },
-        {
-          "label": "Straits Times",
-          "url": "https://www.straitstimes.com/lifestyle/entertainment/singapore-toilet-activists-documentary-to-premiere-at-festival"
-        }
-      ],
-      "plate": "/stories/jack-sim/s7/plate.webp",
-      "background": "/stories/jack-sim/s7/background.webp",
-      "video": "/stories/jack-sim/s7/scene.mp4?v=c93ffc15",
-      "poster": "/stories/jack-sim/s7/scene.jpg?v=c93ffc15",
-      "layers": [
-        {
-          "id": "cut-1",
-          "concept": "rubber duck",
-          "depth": 0.6,
-          "x": 49.59,
-          "y": 43.38,
+          "id": "cut-2",
+          "concept": "toilet brush",
+          "depth": 0.8,
+          "x": 21.47,
+          "y": 36.38,
           "w": 16.69,
-          "src": "/stories/jack-sim/s7/cut-1.webp"
+          "src": "/stories/jack-sim/s10/cut-2.webp"
         }
       ],
       "checked": {
         "model": "muse-spark-1.3",
         "verdict": "ok",
-        "at": "2026-10-30T13:04:04.550Z",
-        "note": "World premiere at Hot Docs on 27 April 2019 about Jack Sim's humour-driven sanitation campaign confirmed",
-        "sources": []
+        "at": "2026-10-31T01:29:12.677Z",
+        "note": "Zepeda-directed 5-year LA/India/China/Singapore shoot, scooter/brush/float gags, board rift, Money Mind toilet collection, Hot Docs Apr 27 premiere as N. America's largest doc fest, Nov 22 NY opening all verified",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Mr._Toilet"
+        ]
+      }
+    },
+    {
+      "id": "s11",
+      "treatment": "photo",
+      "year": "2022",
+      "title": "The boy outside the door, again",
+      "caption": "The suggestion came from his daughter.",
+      "body": "The suggestion came from his daughter. At about 65 Jack's daughter, a psychology student at SMU, told him she thought he had ADHD. He began to read his schoolboy restlessness differently after years of talk and restless energy at school. That same year the University of Strathclyde awarded him an honorary doctorate. He framed the lesson he would give his younger self in words he later repeated: \"his quirks were actually his strengths\" At home he lived with his wife, whom he married in 1990 after a first marriage in 1989 ended in divorce after a year, and their four children, two sons and two daughters. The restless boy and the honorary doctor were the same person.",
+      "voice": "Restlessness looked different at sixty-five.",
+      "turn": "He still kept dozens of jobs going at once.",
+      "age": 65,
+      "quote": {
+        "text": "his quirks were actually his strengths",
+        "speaker": "Jack Sim, on what he would tell his younger self",
+        "source": {
+          "label": "Unlocking ADHD, 'ADHD Stories: Jack Sim' (2025)",
+          "url": "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        }
+      },
+      "photo": {
+        "src": "/stories/jack-sim/s11/photo.webp",
+        "aspect": 1.7778,
+        "kind": "person",
+        "concept": "person",
+        "label": "Jack Sim as Rodin's Thinker, 2015",
+        "year": "2015",
+        "focus": [
+          0.567,
+          0.624
+        ],
+        "cutout": "/stories/jack-sim/s11/cutout.webp",
+        "trace": "/stories/jack-sim/s11/trace.json",
+        "credit": {
+          "artist": "Kutoid",
+          "license": "CC BY-SA 4.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "page": "https://commons.wikimedia.org/wiki/File:Jack_thinker.jpg"
+        }
+      },
+      "visual": "Jack Sim as Rodin's Thinker, 2015",
+      "cut": [],
+      "sources": [
+        {
+          "label": "Wikipedia: Jack Sim",
+          "url": "https://en.wikipedia.org/wiki/Jack_Sim"
+        },
+        {
+          "label": "Unlocking ADHD, 'ADHD Stories: Jack Sim' (2025)",
+          "url": "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        },
+        {
+          "label": "The Pride (Singapore Kindness Movement), 11 Jan 2018",
+          "url": "https://pride.kindness.sg/singaporeans-proud-toilet/"
+        }
+      ],
+      "layers": [],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T01:29:05.686Z",
+        "note": "Quote is his, daughter who studied psychology at SMU suggested ADHD at 65, born 1957 with 2022 Strathclyde honorary doctorate, first marriage 1989 ended after a year and remarried 1990 with two sons and two daughters",
+        "sources": [
+          "https://unlockingadhd.com/adhd-stories-jack-sim/",
+          "https://en.wikipedia.org/wiki/Jack_Sim"
+        ]
+      }
+    },
+    {
+      "id": "s12",
+      "treatment": "theatre",
+      "year": "2025",
+      "title": "Eighty projects at once",
+      "caption": "The centre rose in Kampong Ubi.",
+      "body": "The centre rose in Kampong Ubi. Jack built a S$10 million, 65,000 sq ft centre there, renamed the SDG Centre and financed mostly by a bank loan. Inside it held a kitchen to train single mothers. At 68 he said he ran 80 to 100 projects at once and lived with his wife and four children. The building gave his many projects one address. The kitchen gave single mothers a place to learn. The household gave the pace of those years a private shape, with work and home staying close together through long days.",
+      "voice": "Eighty projects shared one address.",
+      "turn": "The kitchen light stayed on after hours.",
+      "age": 68,
+      "visual": "Paper-layered cutaway of a big industrial-estate building, floor by floor: co-working desks, a training kitchen with ovens, an event hall. On the ground floor a man seen from behind holds a door open. Morning light.",
+      "cut": [
+        "building",
+        "kitchen"
+      ],
+      "sources": [
+        {
+          "label": "Tatler Asia, Impact List 2020 profile",
+          "url": "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization"
+        },
+        {
+          "label": "CNA Insider, 'From O-level failure to millionaire at 29, on a policy of honesty first' (2019)",
+          "url": "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666"
+        },
+        {
+          "label": "Unlocking ADHD, 'ADHD Stories: Jack Sim' (2025)",
+          "url": "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        }
+      ],
+      "plate": "/stories/jack-sim/s12/plate.webp",
+      "background": "/stories/jack-sim/s12/background.webp",
+      "video": "/stories/jack-sim/s12/scene.mp4?v=ef47ced9",
+      "poster": "/stories/jack-sim/s12/scene.jpg?v=ef47ced9",
+      "layers": [
+        {
+          "id": "cut-1",
+          "concept": "building",
+          "depth": 0.6,
+          "x": 46.97,
+          "y": 90.81,
+          "w": 9.19,
+          "src": "/stories/jack-sim/s12/cut-1.webp"
+        },
+        {
+          "id": "cut-2",
+          "concept": "kitchen",
+          "depth": 0.8,
+          "x": 46.97,
+          "y": 90.81,
+          "w": 9.19,
+          "src": "/stories/jack-sim/s12/cut-2.webp"
+        }
+      ],
+      "checked": {
+        "model": "muse-spark-1.3",
+        "verdict": "ok",
+        "at": "2026-10-31T02:21:51.009Z",
+        "note": "All details verified: S$10m centre, 65,000sqft in Kampong Ubi renamed SDG Centre with single-mothers kitchen, S$10m BoP Hub financed mostly by bank loan, 80-100 projects at once at 68 living with wife and four children.",
+        "sources": [
+          "https://www.tatlerasia.com/the-scene/people-parties/jack-sim-world-toilet-organization",
+          "https://www.channelnewsasia.com/cnainsider/how-to-become-a-millionaire-from-o-level-failure-jack-sim-toilet-1320666",
+          "https://unlockingadhd.com/adhd-stories-jack-sim/"
+        ]
       }
     }
   ]

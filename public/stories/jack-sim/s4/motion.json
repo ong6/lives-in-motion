@@ -1,32 +1,32 @@
 {
   "model": "muse-wonder-1.0",
-  "at": "2026-10-30T14:45:21.435Z",
-  "usd": 0.1138,
-  "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject.",
+  "at": "2026-10-31T01:38:17.075Z",
+  "usd": 0.0726,
+  "rationale": "A loss after the bank's call: start tight on the man with his head in his hands and pull back, shrinking him slightly, to reveal the lamp-lit desk, phone, tender files and cranes of the unfinished city around him.",
   "plan": {
-    "focusX": 0.47,
-    "focusY": 0.46,
+    "focusX": 0.525,
+    "focusY": 0.53,
     "camera": [
       {
         "t": 0,
-        "zoom": 1,
+        "zoom": 1.4,
         "panX": 0,
-        "panY": 0.03,
+        "panY": -0.03,
         "ease": "in-out"
       },
       {
         "t": 0.5,
-        "zoom": 1.09,
-        "panX": -0.01,
-        "panY": -0.01,
-        "ease": "out"
+        "zoom": 1.18,
+        "panX": 0,
+        "panY": 0.01,
+        "ease": "in-out"
       },
       {
         "t": 1,
-        "zoom": 1.18,
-        "panX": -0.01,
-        "panY": -0.03,
-        "ease": "linear"
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0.04,
+        "ease": "in-out"
       }
     ],
     "layers": [
@@ -34,126 +34,64 @@
         "id": "cut-1",
         "depth": 0.7,
         "driftX": 0,
-        "driftY": -0.02,
-        "scale": 1.04,
-        "enter": "rise",
-        "enterAt": 0.02,
-        "enterFor": 0.48
+        "driftY": 0.02,
+        "scale": 0.9,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
       },
       {
         "id": "cut-2",
         "depth": 0.7,
         "driftX": 0,
-        "driftY": -0.02,
-        "scale": 1.04,
-        "enter": "rise",
-        "enterAt": 0.02,
-        "enterFor": 0.48
+        "driftY": 0.02,
+        "scale": 0.9,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
       }
     ],
-    "ambient": "light-sweep",
-    "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject."
+    "ambient": "dust",
+    "rationale": "A loss after the bank's call: start tight on the man with his head in his hands and pull back, shrinking him slightly, to reveal the lamp-lit desk, phone, tender files and cranes of the unfinished city around him."
   },
   "critic": {
     "score": 8,
     "ok": true,
     "passed": true,
-    "verdict": "Publishable. The film improves clearly on a plain centred push-in: it opens on the empty, lit stage, then the globe and toilet seat rise together as one locked Saturn-like unit into the spotlights, followed by a moderate push-in to a balanced final tableau. The two cut-outs share depth, drift, scale and entrance timing, so they stay together with no visible tearing, doubling, halo or ghosting against the painted-over background. The first frame reads as a deliberate theatrical opening, and the final frame at zoom 1.18 retains the full seat ring, globe, stage and audience silhouettes as a good held image. The light-sweep suits the stage spotlights and the risograph print treatment is preserved.",
-    "round": 1
+    "verdict": "A clear, purposeful pull-back for loss. It opens tight on the man from behind, head in hands, then eases back to reveal the lamp-lit desk, rotary phone, tender files and the crane-filled window around him, leaving him smaller and isolated in the office. The subject stays coherent through the move with no visible tearing, doubled edges, halo or painted-over ghost, layers that belong together stay together, and no layer clips the frame awkwardly; both the tight first frame and the full final frame are strong still pictures to open and dwell on. The dust is subtle and the flat halftone silkscreen print character is preserved throughout.",
+    "round": 0
   },
   "rounds": [
     {
-      "score": 6,
-      "ok": false,
-      "verdict": "A clear theatrical-entrance idea with coherent locked layers, undermined by a front-loaded rise and an over-zoomed final frame that crops the very composition it should celebrate.",
-      "filmIssues": [
-        "The globe/toilet-seat entrance is legible and the two cut-outs correctly stay locked together with no visible tearing, ghosting or halo, but the move is front-loaded: by t=0.2 the subject is already essentially in place and the remaining 80% is a plain push-in.",
-        "The final zoom of 1.32 is too tight for the reader to dwell on — the toilet seat is driven to both side edges, the stage and audience are squeezed/cropped at the bottom and the whole Saturn-ring composition that makes the joke read is lost.",
-        "The t=0 empty stage is a defensible curtain-up opening, but combined with the over-tight ending the arc goes from too empty to too full rather than arriving at a balanced heroic tableau."
-      ],
-      "fixes": [],
-      "plan": {
-        "focusX": 0.47,
-        "focusY": 0.46,
-        "camera": [
-          {
-            "t": 0,
-            "zoom": 1.06,
-            "panX": 0,
-            "panY": 0.05,
-            "ease": "in-out"
-          },
-          {
-            "t": 0.5,
-            "zoom": 1.18,
-            "panX": -0.01,
-            "panY": 0,
-            "ease": "out"
-          },
-          {
-            "t": 1,
-            "zoom": 1.32,
-            "panX": -0.02,
-            "panY": -0.06,
-            "ease": "linear"
-          }
-        ],
-        "layers": [
-          {
-            "id": "cut-1",
-            "depth": 0.75,
-            "driftX": 0,
-            "driftY": -0.035,
-            "scale": 1.08,
-            "enter": "rise",
-            "enterAt": 0.08,
-            "enterFor": 0.38
-          },
-          {
-            "id": "cut-2",
-            "depth": 0.75,
-            "driftX": 0,
-            "driftY": -0.035,
-            "scale": 1.08,
-            "enter": "rise",
-            "enterAt": 0.08,
-            "enterFor": 0.38
-          }
-        ],
-        "ambient": "light-sweep",
-        "rationale": "The founding is a theatrical triumph, so the empty lit stage holds briefly before the globe-and-toilet-seat rises together into the spotlights as the camera tilts up and closes in."
-      }
-    },
-    {
       "score": 8,
       "ok": true,
-      "verdict": "Publishable. The film improves clearly on a plain centred push-in: it opens on the empty, lit stage, then the globe and toilet seat rise together as one locked Saturn-like unit into the spotlights, followed by a moderate push-in to a balanced final tableau. The two cut-outs share depth, drift, scale and entrance timing, so they stay together with no visible tearing, doubling, halo or ghosting against the painted-over background. The first frame reads as a deliberate theatrical opening, and the final frame at zoom 1.18 retains the full seat ring, globe, stage and audience silhouettes as a good held image. The light-sweep suits the stage spotlights and the risograph print treatment is preserved.",
+      "verdict": "A clear, purposeful pull-back for loss. It opens tight on the man from behind, head in hands, then eases back to reveal the lamp-lit desk, rotary phone, tender files and the crane-filled window around him, leaving him smaller and isolated in the office. The subject stays coherent through the move with no visible tearing, doubled edges, halo or painted-over ghost, layers that belong together stay together, and no layer clips the frame awkwardly; both the tight first frame and the full final frame are strong still pictures to open and dwell on. The dust is subtle and the flat halftone silkscreen print character is preserved throughout.",
       "filmIssues": [],
       "fixes": [],
       "plan": {
-        "focusX": 0.47,
-        "focusY": 0.46,
+        "focusX": 0.525,
+        "focusY": 0.53,
         "camera": [
           {
             "t": 0,
-            "zoom": 1,
+            "zoom": 1.4,
             "panX": 0,
-            "panY": 0.03,
+            "panY": -0.03,
             "ease": "in-out"
           },
           {
             "t": 0.5,
-            "zoom": 1.09,
-            "panX": -0.01,
-            "panY": -0.01,
-            "ease": "out"
+            "zoom": 1.18,
+            "panX": 0,
+            "panY": 0.01,
+            "ease": "in-out"
           },
           {
             "t": 1,
-            "zoom": 1.18,
-            "panX": -0.01,
-            "panY": -0.03,
-            "ease": "linear"
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0.04,
+            "ease": "in-out"
           }
         ],
         "layers": [
@@ -161,25 +99,25 @@
             "id": "cut-1",
             "depth": 0.7,
             "driftX": 0,
-            "driftY": -0.02,
-            "scale": 1.04,
-            "enter": "rise",
-            "enterAt": 0.02,
-            "enterFor": 0.48
+            "driftY": 0.02,
+            "scale": 0.9,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
           },
           {
             "id": "cut-2",
             "depth": 0.7,
             "driftX": 0,
-            "driftY": -0.02,
-            "scale": 1.04,
-            "enter": "rise",
-            "enterAt": 0.02,
-            "enterFor": 0.48
+            "driftY": 0.02,
+            "scale": 0.9,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
           }
         ],
-        "ambient": "light-sweep",
-        "rationale": "Keep the theatrical reveal — empty lit stage, then globe and toilet seat rising together as one locked Saturn unit into the spotlights — but start the rise almost immediately, give it half the clip to read, and stop the push-in at 1.18 so the final held frame keeps the full seat ring, globe, stage and cheering silhouettes in a balanced, dwell-worthy tableau instead of cropping the subject."
+        "ambient": "dust",
+        "rationale": "A loss after the bank's call: start tight on the man with his head in his hands and pull back, shrinking him slightly, to reveal the lamp-lit desk, phone, tender files and cranes of the unfinished city around him."
       }
     }
   ]

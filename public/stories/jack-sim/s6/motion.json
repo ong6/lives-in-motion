@@ -1,0 +1,261 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T01:39:46.665Z",
+  "usd": 0.1554,
+  "rationale": "Bolder pull-back for loss: start tight on the terrace row, board and lit toilet doorway, then pull back to the full plate while both houses and sign shrink to the minimum 0.85 scale and sink slightly, visibly diminished in the empty foreground. Small, centred drifts keep the very wide houses layer and the left-hand sign inside frame to avoid the white inpaint wedge and edge clipping, and halftone-",
+  "plan": {
+    "focusX": 0.5,
+    "focusY": 0.62,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.2137499999999999,
+        "panX": 0,
+        "panY": 0.016875,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.10125,
+        "panX": 0,
+        "panY": 0.0084375,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": 0,
+        "ease": "linear"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.55,
+        "driftX": 0,
+        "driftY": 0.005625,
+        "scale": 0.915625,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.9,
+        "driftX": 0.0084375,
+        "driftY": 0.01125,
+        "scale": 0.915625,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "halftone-shimmer",
+    "rationale": "Bolder pull-back for loss: start tight on the terrace row, board and lit toilet doorway, then pull back to the full plate while both houses and sign shrink to the minimum 0.85 scale and sink slightly, visibly diminished in the empty foreground. Small, centred drifts keep the very wide houses layer and the left-hand sign inside frame to avoid the white inpaint wedge and edge clipping, and halftone-"
+  },
+  "critic": {
+    "score": 6,
+    "ok": false,
+    "passed": false,
+    "verdict": "Do not publish as-is: the concept fits the caption but the executed motion is too timid to clearly express the halving in value.",
+    "round": 1
+  },
+  "rounds": [
+    {
+      "score": 4,
+      "ok": false,
+      "verdict": "Do not publish: the loss pull-back is too timid to read and reveals a white painted-over ghost, so it is no better than a plain zoom.",
+      "filmIssues": [
+        "Timid pull-back: zoom only 1.16 to 1.0 with layer scales 0.97/0.96, so the six frames are almost identical and do not visibly express houses halved in value.",
+        "Coherence tear/ghost: a bright white diagonal wedge appears between the sale board and the toilet block as the houses layer moves, revealing its painted-over background spot.",
+        "The foreground toilet and figure are not separated layers, so the intended foreground/midground parallax is weak; the move reads as a plain centred zoom-out, no better than a simple push-in in reverse.",
+        "First and last frames are essentially the same composition, so there is no clear opening-to-dwelling reveal of loss or empty foreground."
+      ],
+      "fixes": [
+        "move damped to 42% (cut-2 35% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.52,
+        "focusY": 0.58,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.1603124999999999,
+            "panX": 0.012656249999999999,
+            "panY": -0.02109375,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.0759375,
+            "panX": 0.00421875,
+            "panY": -0.0084375,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.6,
+            "driftX": 0.00421875,
+            "driftY": 0.00421875,
+            "scale": 0.96625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": -0.0063281249999999995,
+            "driftY": 0.0063281249999999995,
+            "scale": 0.9578125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "A loss: the camera starts tight on the terrace row and sale board, then pulls back to zoom 1 as the houses and sign shrink, leaving them diminished in the empty foreground."
+      }
+    },
+    {
+      "score": 6,
+      "ok": false,
+      "verdict": "Do not publish as-is: the concept fits the caption but the executed motion is too timid to clearly express the halving in value.",
+      "filmIssues": [
+        "The pull-back idea is appropriate for loss/devaluation, but in the frames the change from t=0 to t=1 is very small and reads as a slow, timid zoom-out rather than a clear diminishment.",
+        "The houses and sign shrink too little to visibly express 'worth half'; the terrace row, board and toilet doorway remain at nearly the same visual weight throughout.",
+        "Both the opening and final frames are serviceable, but the final held frame retains the same centred composition as the opening, so the loss reveal does not land as a distinct final picture.",
+        "No obvious tearing, doubled edges, ghosting or awkward frame-edge clipping is visible, and the halftone-shimmer is subtle and era-appropriate."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-2 27% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0,
+            "panY": 0.016875,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.10125,
+            "panX": 0,
+            "panY": 0.0084375,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "linear"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.55,
+            "driftX": 0,
+            "driftY": 0.005625,
+            "scale": 0.915625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": 0.0084375,
+            "driftY": 0.01125,
+            "scale": 0.915625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Bolder pull-back for loss: start tight on the terrace row, board and lit toilet doorway, then pull back to the full plate while both houses and sign shrink to the minimum 0.85 scale and sink slightly, visibly diminished in the empty foreground. Small, centred drifts keep the very wide houses layer and the left-hand sign inside frame to avoid the white inpaint wedge and edge clipping, and halftone-"
+      }
+    },
+    {
+      "score": 5,
+      "ok": false,
+      "verdict": "Do not publish: the pull-back idea fits 'worth half', but the executed move is timid and the shrunken houses layer visibly tears from the background in the later frames.",
+      "filmIssues": [
+        "The intended pull-back for loss is timid after clamping: from t=0 to t=1 the framing only widens slightly (about 1.21 to 1.0) and the houses, sign and lit doorway barely change in prominence, so it reads close to a plain centred push-in in reverse.",
+        "Shrinking both cut-outs to about 0.92 breaks coherence: in the bottom-row frames the near frame-wide houses row pulls in from its painted-over spot, leaving pale wedge gaps / doubled, torn ends at the left and right of the terrace and a visible seam where the layer no longer covers the background.",
+        "The end dwell frame is a good full plate, but because the houses have sunk and shrunk the final row looks slightly detached from the foreground rather than simply diminished by distance.",
+        "Halftone-shimmer is fitting and subtle for the 1990s risograph print and does not distract."
+      ],
+      "fixes": [
+        "move damped to 56% (cut-2 27% off-frame at t=0.00)"
+      ],
+      "plan": {
+        "focusX": 0.5,
+        "focusY": 0.62,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.2137499999999999,
+            "panX": 0,
+            "panY": 0.025312499999999998,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.095625,
+            "panX": 0,
+            "panY": 0.01125,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": 0,
+            "ease": "out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.5,
+            "driftX": 0,
+            "driftY": 0.01125,
+            "scale": 0.92125,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.9,
+            "driftX": -0.00675,
+            "driftY": 0.0140625,
+            "scale": 0.915625,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "halftone-shimmer",
+        "rationale": "Make the pull-back for loss unmistakable: open tight at 1.38 on the houses, sale board and lit toilet doorway, then steadily pull back to the full plate at 1.0. Take both cut-outs near the minimum end scale and sink them slightly so the properties visibly diminish into the empty foreground. Keep drifts small and centred because the houses layer is almost frame-wide, avoiding edge clipping and expo"
+      }
+    }
+  ]
+}

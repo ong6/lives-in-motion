@@ -1,0 +1,124 @@
+{
+  "model": "muse-wonder-1.0",
+  "at": "2026-10-31T02:03:17.730Z",
+  "usd": 0.0582,
+  "rationale": "A quiet turning point after triumph: a Reveal begins tight on the headphoned swimmer and slowly pulls back to disclose the medal, empty dining hall and sunrise, letting the solitary stillness settle.",
+  "plan": {
+    "focusX": 0.47,
+    "focusY": 0.66,
+    "camera": [
+      {
+        "t": 0,
+        "zoom": 1.38,
+        "panX": 0,
+        "panY": 0.05,
+        "ease": "in-out"
+      },
+      {
+        "t": 0.5,
+        "zoom": 1.17,
+        "panX": 0,
+        "panY": 0.015,
+        "ease": "in-out"
+      },
+      {
+        "t": 1,
+        "zoom": 1,
+        "panX": 0,
+        "panY": -0.02,
+        "ease": "in-out"
+      }
+    ],
+    "layers": [
+      {
+        "id": "cut-1",
+        "depth": 0.9,
+        "driftX": 0,
+        "driftY": 0.018,
+        "scale": 0.96,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      },
+      {
+        "id": "cut-2",
+        "depth": 0.85,
+        "driftX": 0,
+        "driftY": 0.012,
+        "scale": 0.97,
+        "enter": "none",
+        "enterAt": 0,
+        "enterFor": 0.1
+      }
+    ],
+    "ambient": "light-sweep",
+    "rationale": "A quiet turning point after triumph: a Reveal begins tight on the headphoned swimmer and slowly pulls back to disclose the medal, empty dining hall and sunrise, letting the solitary stillness settle."
+  },
+  "critic": {
+    "score": 8,
+    "ok": true,
+    "passed": true,
+    "verdict": "The pull-back serves the story: it opens tight on the headphoned swimmer seen from behind, then steadily widens to reveal the medal on the table, the empty dining hall and the sunrise windows. Movement is visible and purposeful across all frames, the man and medal stay coherent with no tearing, doubling, halo or ghosting, and no layer clips awkwardly. The first frame is a strong intimate opening and the last frame is a calm, complete composition to dwell on while reading. The light-sweep is subtle and fits the dawn setting without breaking the cut-paper print style.",
+    "round": 0
+  },
+  "rounds": [
+    {
+      "score": 8,
+      "ok": true,
+      "verdict": "The pull-back serves the story: it opens tight on the headphoned swimmer seen from behind, then steadily widens to reveal the medal on the table, the empty dining hall and the sunrise windows. Movement is visible and purposeful across all frames, the man and medal stay coherent with no tearing, doubling, halo or ghosting, and no layer clips awkwardly. The first frame is a strong intimate opening and the last frame is a calm, complete composition to dwell on while reading. The light-sweep is subtle and fits the dawn setting without breaking the cut-paper print style.",
+      "filmIssues": [],
+      "fixes": [],
+      "plan": {
+        "focusX": 0.47,
+        "focusY": 0.66,
+        "camera": [
+          {
+            "t": 0,
+            "zoom": 1.38,
+            "panX": 0,
+            "panY": 0.05,
+            "ease": "in-out"
+          },
+          {
+            "t": 0.5,
+            "zoom": 1.17,
+            "panX": 0,
+            "panY": 0.015,
+            "ease": "in-out"
+          },
+          {
+            "t": 1,
+            "zoom": 1,
+            "panX": 0,
+            "panY": -0.02,
+            "ease": "in-out"
+          }
+        ],
+        "layers": [
+          {
+            "id": "cut-1",
+            "depth": 0.9,
+            "driftX": 0,
+            "driftY": 0.018,
+            "scale": 0.96,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          },
+          {
+            "id": "cut-2",
+            "depth": 0.85,
+            "driftX": 0,
+            "driftY": 0.012,
+            "scale": 0.97,
+            "enter": "none",
+            "enterAt": 0,
+            "enterFor": 0.1
+          }
+        ],
+        "ambient": "light-sweep",
+        "rationale": "A quiet turning point after triumph: a Reveal begins tight on the headphoned swimmer and slowly pulls back to disclose the medal, empty dining hall and sunrise, letting the solitary stillness settle."
+      }
+    }
+  ]
+}
