@@ -2,7 +2,8 @@
  * Screenshots of a running server with the installed Chrome: pnpm shoot [baseUrl] [outDir]
  *
  * The book is read a page at a time, so a book shot opens its spread by URL (#p=N: 0 the cover,
- * 2 the frontispiece, 3 Chapter I, one spread per chapter, then the notes) and waits for the turn
+ * 2 the frontispiece, 3 Chapter I, one spread per chapter and break, then the notes; or #c=N for
+ * chapter N) and waits for the turn
  * and the film to settle. A shot can then press keys (L opens the Layers view, → turns a page)
  * or click a button, and wait before the picture is taken.
  */
@@ -26,12 +27,18 @@ interface Shot {
 const SHOTS: Shot[] = [
   { name: "home", path: "/" },
   { name: "home-making", path: "/#making" },
-  { name: "book-jack-sim-2001", path: "/jack-sim#p=6", wait: 4500 },
-  { name: "layers-jack-sim-2001", path: "/jack-sim#p=6", wait: 4500, act: async (p) => (await p.keyboard.press("l"), await p.waitForTimeout(2500)) },
-  { name: "book-joseph-schooling-2016", path: "/joseph-schooling#p=8", wait: 4500 },
-  // The notes spread: the notes and the "On the pictures" page, whose copy follows the book's provenance.
-  { name: "notes-jack-sim", path: "/jack-sim#p=10", wait: 3000 },
-  { name: "notes-tan-howe-liang", path: "/tan-howe-liang#p=10", wait: 3000 },
+  // Deep-edition spreads (#c=N opens chapter N): a photo chapter, a plate chapter, a full-spread break.
+  { name: "book-jack-sim-2001", path: "/jack-sim#c=7", wait: 5000 },
+  { name: "book-jack-sim-1957", path: "/jack-sim#c=1", wait: 5000 },
+  { name: "book-jack-sim-break", path: "/jack-sim#p=11", wait: 5000 },
+  { name: "layers-jack-sim-2001", path: "/jack-sim#c=7", wait: 5000, act: async (p) => (await p.keyboard.press("l"), await p.waitForTimeout(3200)) },
+  { name: "layers-jack-sim-1957", path: "/jack-sim#c=1", wait: 4500, act: async (p) => (await p.keyboard.press("l"), await p.waitForTimeout(2500)) },
+  { name: "book-georgette-chen-mounted", path: "/georgette-chen#c=4", wait: 5000 },
+  { name: "book-joseph-schooling-2016", path: "/joseph-schooling#c=8", wait: 5000 },
+  // The notes: two spreads in a deep edition (sources and conflicts; photographs and how the pictures were made).
+  { name: "notes-jack-sim", path: "/jack-sim#p=16", wait: 3000 },
+  { name: "notes2-jack-sim", path: "/jack-sim#p=17", wait: 3000 },
+  { name: "notes-tan-howe-liang", path: "/tan-howe-liang#p=15", wait: 3000 },
   { name: "book-ah-ma-sample-title", path: "/ah-ma-sample#p=2", wait: 4000 },
   { name: "notes-ah-ma-sample", path: "/ah-ma-sample#p=10", wait: 3000 },
   { name: "home-full", path: "/", wait: 2500, fullPage: true },
@@ -39,7 +46,7 @@ const SHOTS: Shot[] = [
   { name: "family-record", path: "/family/ah-ma-sample", wait: 1500, fullPage: true },
   { name: "create", path: "/create", wait: 1500, fullPage: true },
   // The book change: from Jack Sim's notes, one turn closes his book and opens the next.
-  { name: "book-change", path: "/jack-sim#p=10", wait: 3000, act: async (p) => (await p.keyboard.press("ArrowRight"), await p.waitForTimeout(1300)) },
+  { name: "book-change", path: "/jack-sim#p=17", wait: 3000, act: async (p) => (await p.keyboard.press("ArrowRight"), await p.waitForTimeout(1300)) },
   {
     name: "create-rehearsal",
     path: "/create",

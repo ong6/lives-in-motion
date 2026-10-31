@@ -65,7 +65,7 @@ export function verbatimIn(span: string, fact: ResearchFact): "quote" | "text" |
 /** Words that praise instead of tell. */
 export const PRAISE = /\b(legendary|iconic|visionary|remarkable|incredible|amazing|inspiring|inspirational|extraordinary|tireless|brilliant|genius|heroic|beloved|pioneering|trailblazing|trailblazer|illustrious|celebrated|renowned|unparalleled|unwavering|indomitable|indefatigable|towering|giant of|larger than life|true legend|selfless)\b/i;
 /** Politics and war stay out of these books; a fact about them is left out or phrased around. */
-export const OFF_LIMITS = /\b(war|wars|wartime|warfare|invasion|invaded|invade|occupation|occupied|occupying|bomb\w*|soldiers?|troops|army|military|internment|interned|prisoners? of war|kempeitai|surrender\w*|election\w*|political|politics|politician\w*|party members?|communis\w*|kuomintang|Lee Kuan Yew)\b/i;
+export const OFF_LIMITS = /\b(war|wars|wartime|warfare|invasion|invaded|invade|occupation|occupied|occupying|bomb\w*|soldiers?|troops|army|military|internment|interned|prisoners? of war|kempeitai|surrender\w*|election\w*|political|politics|politician\w*|party members?|communis\w*|kuomintang|Lee Kuan Yew|house arrest|under arrest|detained|detention|captiv\w*|interrogat\w*|were held (?:there|and|in)|was held captive)\b/i;
 
 export interface CheckResult {
   problems: string[];
@@ -135,8 +135,23 @@ export function checkChapters(chapters: Written[], facts: ResearchFact[], born: 
     }
     return fix;
   });
+  // Turns: each one specific to what comes next, never the same line twice.
+  const turns = chapters.map((c) => fold(c.turn).replace(/[^a-z0-9 ]/g, ""));
+  turns.forEach((t, i) => {
+    if (VAGUE_TURN.test(t)) problems.push(`chapter ${i + 1}: the turn "${chapters[i].turn}" is vague; hint at the next chapter's own place, object or event`);
+    const j = turns.findIndex((u, k) => k < i && overlap(t, u) >= 0.6);
+    if (j >= 0) problems.push(`chapter ${i + 1}: the turn repeats chapter ${j + 1}'s ("${chapters[j].turn}"); every turn must be different`);
+  });
   return { problems, chapters: out };
 }
+
+/** A turn that could end any chapter. */
+export const VAGUE_TURN = /\b(change|changes|changed|changing|everything|more to come|on its way)\b/;
+const overlap = (a: string, b: string) => {
+  const A = new Set(a.split(" ").filter((w) => w.length > 3)), B = new Set(b.split(" ").filter((w) => w.length > 3));
+  const shared = [...A].filter((w) => B.has(w)).length;
+  return shared / Math.max(1, Math.min(A.size, B.size));
+};
 
 /** Two sentences that share most of their words: padding, not storytelling. Returns the pair, if any. */
 export function repeats(body: string): [string, string] | null {

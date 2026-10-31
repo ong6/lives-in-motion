@@ -113,17 +113,17 @@ export const LIVES: Record<string, LifeConfig> = {
   "sim-wong-hoo": {
     photos: {
       7: { label: "A Sound Blaster 1.0 card, 1989 (photographed 2008)", tag: "Object", concept: "circuit board" },
-      9: { label: "A Creative Zen Micro beside an Apple iPod mini, 2005", tag: "Object", concept: "music player" },
-      11: { label: "Creative's booth at the E3 trade show, Los Angeles, 2011", tag: "Place", concept: "booth" },
+      9: { label: "A Creative Zen Micro beside an Apple iPod mini, 2005", tag: "Object", concept: "mp3 player" },
+      11: { label: "Creative's booth at the E3 trade show, Los Angeles, 2011", tag: "Place", concept: "sign" },
     },
     notes: { 9: "No war or battle metaphors for the business rivalry: a contest, a fight in the shops, a lawsuit." },
     frontispiece: { file: "soundblaster-1-0-ct1320.jpg", concept: "circuit board", depicts: "the Sound Blaster 1.0 card (1989)" },
   },
   "c-kunalan": {
     photos: {
-      7: { label: "Sri Mariamman Temple, Singapore, where they married, photographed 2026", tag: "Place", concept: "tower" },
+      7: { label: "Sri Mariamman Temple, Singapore, where they married, photographed 2026", tag: "Place", concept: "sculpture" },
       9: { label: "The Estadio Olímpico Universitario, Mexico City, October 1968", tag: "Place", concept: "stadium" },
-      10: { label: "The National Stadium, Kallang, May 2007", tag: "Place", concept: "stadium roof" },
+      10: { label: "The National Stadium, Kallang, May 2007", tag: "Place", concept: "stadium" },
       12: { label: "C. Kunalan at a Singapore Olympic Academy youth session, 2008", concept: "person", mounted: true },
     },
     art: {
@@ -132,7 +132,7 @@ export const LIVES: Record<string, LifeConfig> = {
           "Single pen line on cream paper: a hand-chalked oval track on a school field, a starting line of boys seen from behind, a house master's clipboard and whistle in the foreground; a small pennant in a house colour, no words.",
       },
     },
-    notes: { 1: `${NO_WAR} Say the family came to Singapore in the late 1940s.`, 2: `${NO_WAR} He taught at Gillman Barracks; leave out who he taught.` },
+    notes: { 1: `${NO_WAR} Say only that the family moved to Singapore, with no date.`, 2: `${NO_WAR} He taught at Gillman Barracks; leave out who he taught.` },
     frontispiece: { file: "ckunalan-singapore-olympic-academy-youth-session-20081103-01.jpg", concept: "person" },
   },
   "lee-kong-chian": {
@@ -164,7 +164,7 @@ export const LIVES: Record<string, LifeConfig> = {
     photos: {
       1: { label: "Swatow harbour, c. 1869, about thirty years before she was born", tag: "Place", concept: "ship" },
       9: { label: "Kwong Wai Shiu Hospital, Singapore, today (2026)", tag: "Place", concept: "building" },
-      11: { label: "The Heart to Heart Service centre, Hougang, 2007", tag: "Place", concept: "building", mounted: true },
+      11: { label: "The Heart to Heart Service centre, Hougang, 2007", tag: "Place", concept: "gate", mounted: true },
       12: { label: "Teresa Hsu at 112, Singapore, 2010", concept: "person" },
     },
     notes: {

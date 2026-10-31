@@ -195,7 +195,7 @@ export function ChapterText({ scene, j, era, onNote, turn = false }: { scene: Sc
       </p>
       {scene.voice && (
         <blockquote className={s.voice}>
-          <p>{curly(scene.voice.replace(/\s*\((?:[^)]*\d{4})\)\s*$/, ""))}</p>
+          <p>{curly(pulled && !/^["\u201C]/.test(scene.voice) ? `"${scene.voice}"` : scene.voice.replace(/\s*\((?:[^)]*\d{4})\)\s*$/, ""))}</p>
           {pulled && scene.quote && (
             <cite>
               {scene.quote.speaker.replace(/\s*\(.*\)$/, "")}, <a href={scene.quote.source.url} target="_blank" rel="noopener noreferrer">{hostOf(scene.quote.source.url)}</a>
@@ -417,8 +417,9 @@ export function Photographs({ story, folioOf, breakFolio }: { story: Story; foli
  * whose films Muse Wonder directed says so; a frontispiece is a credited photograph only when it is.
  */
 export function Credits({ story, credit, curated, directed, last }: { story: Story; credit: string; curated: boolean; directed: boolean; last: boolean }) {
+  const ref = useFit<HTMLDivElement>();
   return (
-    <div className={s.creditsPage}>
+    <div className={s.creditsPage} ref={ref}>
       <h2>On the pictures</h2>
       {isFamilyBook(story) ? (
         <p>

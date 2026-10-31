@@ -22,7 +22,7 @@ Each chapter:
 - quote: at most one quotation per chapter, copied character for character from the "quote" of one of the chapter's facts (a contiguous part is fine; never alter words). Put it in the body or the voice line in double quotes. Set "quote" to {fact, text} with the exact text, or null if the chapter quotes no one. Any other words in double quotes must be copied exactly from the chapter's facts.
 - voice: one line of at most 18 words, set large as a pull-quote: the chapter's quotation again, or a full sentence in the narrator's voice that holds the chapter's feeling (not a list of nouns).
 - age: the person's age at the chapter's moment, from the facts and the birth year (0 for the birth).
-- turn: one sentence of at most 16 words for the foot of the page that makes the reader turn to the next chapter without giving it away. For the last chapter, a quiet closing line.
+- turn: one sentence of at most 16 words for the foot of the page that makes the reader turn to the next chapter without giving it away: hint at its own place, object or person ("A borrowed umbrella would decide the rest."), never a generic "things would change". Every turn is different. For the last chapter, a quiet closing line.
 - title: at most 6 words, concrete.
 - year: four digits that place the chapter in time; when the facts give only a decade or an approximate date, also set "when" to the printed form ("1960s", "c. 1973"), else "".
 - Keep the draft's chapter order, years and treatments.`;

@@ -413,7 +413,7 @@
 .notesPage p { margin: 0; font: 400 calc(15.5px * var(--fit))/1.5 var(--font-book); text-wrap: pretty; overflow-wrap: anywhere; }
 .notesPage a { color: inherit; text-decoration-color: color-mix(in oklab, var(--ink) 35%, transparent); text-underline-offset: 2px; }
 .notesPage a:hover { color: var(--accent); }
-.creditsPage p { margin: 0 0 0.9em; font: 400 18px/1.6 var(--font-book); max-width: 36ch; text-wrap: pretty; }
+.creditsPage p { margin: 0 0 0.9em; font: 400 calc(18px * var(--fit))/1.55 var(--font-book); max-width: 36ch; text-wrap: pretty; }
 .finis { margin: 0.6em 0 0 !important; font: 400 30px/1 var(--font-serif) !important; color: var(--accent); text-align: center; max-width: none !important; }
 .overleaf { margin-top: auto !important; font-style: italic !important; color: var(--muted); }
 
@@ -625,7 +625,7 @@
 .conflicts li { display: block; text-wrap: pretty; }
 .conflicts b { font-weight: 500; }
 .photoList li { grid-template-columns: 52px 1fr !important; }
-.small { font-size: 15px !important; color: var(--muted); }
+.small { font-size: calc(15px * var(--fit)) !important; color: var(--muted); }
 
 .play .storyYear { animation: stamp 0.62s var(--delay) both cubic-bezier(0.2, 0.8, 0.25, 1); }
 .play .storyMeta { animation: fadeIn 0.5s calc(var(--delay) + 160ms) both ease-out; }

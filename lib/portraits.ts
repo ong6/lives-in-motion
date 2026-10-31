@@ -10,8 +10,8 @@ interface Credit {
   depicts?: string;
 }
 
-/** Hand-curated photo credits for the original lives. */
-const credits: Record<string, Credit> = JSON.parse(readFileSync(join(process.cwd(), "pipeline/portraits/credits.json"), "utf8"));
+/** Hand-curated photo credits, read per request: the deep pipeline adds a life's while the server runs. */
+const curated = (): Record<string, Credit> => JSON.parse(readFileSync(join(process.cwd(), "pipeline/portraits/credits.json"), "utf8"));
 
 /**
  * Credit written by /create for a life it made (stories/<slug>/credit.json): the reader's own
@@ -29,21 +29,21 @@ function generatedCredit(slug: string): string {
 
 /** One-line credit for a life's frontispiece ("" when there is none); share-alike licences carry over to the drawing. */
 export function portraitCredit(slug: string): string {
-  const c = credits[slug];
+  const c = curated()[slug];
   if (!c) return generatedCredit(slug);
   const terms = c.license.includes("SA") ? ` Drawing shared under ${c.license}.` : "";
-  return `Traced from a photo${c.depicts ? ` of ${c.depicts}` : ""} by ${c.artist} (${c.license}).${terms}`;
+  return `Traced from a photo by ${c.artist} (${c.license}).${terms}`;
 }
 
-/** What a curated frontispiece shows when it is not the person, if anything. */
-export const portraitDepicts = (slug: string): string | undefined => credits[slug]?.depicts;
+/** What a curated frontispiece shows when it is not the person, if anything (the frontispiece caption names it). */
+export const portraitDepicts = (slug: string): string | undefined => curated()[slug]?.depicts;
 
 /**
  * Whether the frontispiece is traced from a hand-curated, credited photograph. A life made on
  * /create or /family records its own frontispiece (a reader's or family photo, or a Muse Image
  * emblem) in credit.json, whose text says which.
  */
-export const fromCuratedPhoto = (slug: string) => Boolean(credits[slug]);
+export const fromCuratedPhoto = (slug: string) => Boolean(curated()[slug]);
 
 /** URL of the life's line-drawing frontispiece, or undefined while it has none (a new life still being made). */
 export function portraitSrc(slug: string): string | undefined {
